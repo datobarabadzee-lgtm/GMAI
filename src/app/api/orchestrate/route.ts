@@ -7,7 +7,7 @@ import { substanceOf } from '@/lib/patient-intake';
 import { z } from 'zod';
 import { ClinicalModeSchema, PatientContextSchema } from '@/schemas/clinical';
 import { DefectReviewModeSchema } from '@/schemas/quality';
-import { orchestrate } from '@/services/orchestrator';
+import { AiOutageError, orchestrate } from '@/services/orchestrator';
 import { PUBLIC_MODES, appTier } from '@/lib/tier';
 import { engineStatus } from '@/services/ai-provider';
 
@@ -141,6 +141,18 @@ export async function POST(req: Request) {
     if (!ownKey) spentUsd = Number(result?.usage?.estimatedCostUsd ?? 0);
     return NextResponse.json(result);
   } catch (e) {
+    // External AI outage (public tier): say which, never a template answer.
+    if (e instanceof AiOutageError) {
+      const f = e.failure;
+      const byKind = {
+        unreachable: { error: 'AI_UNAVAILABLE', status: 503, messageKa: 'AI პროვაიდერი ამჟამად მიუწვდომელია (გარე სერვისის შეფერხება). დეტერმინისტული მოდულები — კალკულატორები, მედიკამენტების შემოწმება, ლაბორატორია, მტკიცებულების ძიება — მუშაობს. სცადეთ მოგვიანებით.' },
+        rate_limited: { error: 'AI_RATE_LIMITED', status: 429, messageKa: 'AI პროვაიდერმა მოთხოვნების ლიმიტი დააფიქსირა (429). სცადეთ ერთ წუთში.' },
+        auth_rejected: { error: ownKey ? 'CALLER_KEY_REJECTED' : 'AI_AUTH_FAILED', status: ownKey ? 401 : 503, messageKa: ownKey ? 'თქვენი API გასაღები პროვაიდერმა უარყო. შეამოწმეთ გასაღები პარამეტრებში.' : 'AI სერვისის კონფიგურაციის შეცდომა. ოპერატორს ეცნობა.' },
+        budget_exhausted: { error: 'BUDGET_EXHAUSTED', status: 503, messageKa: ownKey ? 'თქვენი API ანგარიშის ბიუჯეტი ამოწურულია (პროვაიდერის პასუხი).' : 'სერვისის AI ბიუჯეტი ამოიწურა. დეტერმინისტული მოდულები კვლავ მუშაობს; AI-სთვის შეგიძლიათ მიამაგროთ საკუთარი API გასაღები.' },
+        provider_error: { error: 'AI_PROVIDER_ERROR', status: 502, messageKa: 'AI პროვაიდერმა შეცდომა დააბრუნა. პასუხი არ გამოქვეყნდა — სცადეთ ხელახლა.' },
+      }[f.kind];
+      return NextResponse.json({ error: byKind.error, messageKa: byKind.messageKa, providerStatus: f.status }, { status: byKind.status, headers: f.kind === 'rate_limited' ? { 'retry-after': '60' } : undefined });
+    }
     const message = e instanceof Error ? e.message : 'unknown';
     const status = (e as { status?: number } | null)?.status;
     const code = (e as { code?: string } | null)?.code ?? '';

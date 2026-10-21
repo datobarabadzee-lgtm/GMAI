@@ -585,6 +585,30 @@ const ENGLISH_CORRECTION_KA =
 const SCRIPT_CORRECTION_KA =
   'წინა პასუხი შეიცავდა არაქართულ დამწერლობას. დაწერე ხელახლა მხოლოდ ქართული ანბანით. ლათინური დასაშვებია მხოლოდ სამედიცინო ტერმინისთვის, აბრევიატურისთვის ან პრეპარატის სახელისთვის. სომხური, კირილიცა, ბერძნული, არაბული, ებრაული და იეროგლიფები აკრძალულია.';
 
+/**
+ * Why the AI provider produced nothing (audit: keep platform error, external
+ * outage and absence of evidence apart). Never carries a key or case text.
+ */
+export class AiOutageError extends Error {
+  constructor(public failure: AiFailure) {
+    super(`AI_${failure.kind.toUpperCase()}`);
+    this.name = 'AiOutageError';
+  }
+}
+
+export type AiFailure = { kind: 'unreachable' | 'rate_limited' | 'budget_exhausted' | 'auth_rejected' | 'provider_error'; status: number | null; cause: unknown };
+
+export function classifyAiError(e: unknown): AiFailure {
+  const err = e as { status?: number; name?: string; message?: string; code?: string } | null;
+  const status = typeof err?.status === 'number' ? err.status : null;
+  const text = `${err?.name ?? ''} ${err?.message ?? ''} ${err?.code ?? ''}`;
+  if (/insufficient_quota|spend.?limit|billing_hard_limit|credit_balance/i.test(text)) return { kind: 'budget_exhausted', status, cause: e };
+  if (status === 429 || /rate.?limit/i.test(text)) return { kind: 'rate_limited', status, cause: e };
+  if (status === 401 || status === 403 || /invalid.?api.?key|incorrect api key|unauthori[sz]ed/i.test(text)) return { kind: 'auth_rejected', status, cause: e };
+  if ((status !== null && status >= 500) || /connection|timeout|timed out|ECONN|ENOTFOUND|EAI_AGAIN|fetch failed|socket|network/i.test(text)) return { kind: 'unreachable', status, cause: e };
+  return { kind: 'provider_error', status, cause: e };
+}
+
 type Synthesis = {
   text: string | null;
   model: string;
@@ -596,6 +620,8 @@ type Synthesis = {
   costUsd: number;
   /** Every model that produced an attempt, in order. */
   models: string[];
+  /** Set when the provider call failed (outage, provider rate limit, rejected key). */
+  failure?: AiFailure;
 };
 
 async function synthesizeBottomLine(context: string, callerKey?: string | null, mode: ClinicalMode = 'quick', clinicalReference = false): Promise<Synthesis> {
@@ -681,8 +707,8 @@ async function synthesizeBottomLine(context: string, callerKey?: string | null, 
       console.warn(JSON.stringify({ evt: 'script_drift_rejected', model, attempt: attempt + 1, offending }));
     }
     return { text: best, model, usage, latencyMs, scriptRejections: rejections, costUsd, models };
-  } catch {
-    return { ...idle, model, usage, latencyMs, scriptRejections: rejections, costUsd, models };
+  } catch (e) {
+    return { ...idle, model, usage, latencyMs, scriptRejections: rejections, costUsd, models, failure: classifyAiError(e) };
   }
 }
 
@@ -1020,8 +1046,17 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     }
   }
 
+  // A provider that failed is an outage, not an answer: the public tier does not
+  // publish the deterministic template in its place (the route answers 503/429
+  // with the reason); the internal tier shows the engine output, labelled.
+  if (synthesized.failure) {
+    trace.push({ tool: 'ai_synthesis', status: synthesized.failure.kind === 'unreachable' ? 'unavailable' : 'error', ms: synthesized.latencyMs, detail: `${synthesized.failure.kind}${synthesized.failure.status ? ` HTTP ${synthesized.failure.status}` : ''}` });
+    if (appTier() === 'public') throw new AiOutageError(synthesized.failure);
+  }
   // Model calls as they happened (the retry may use the fallback model).
-  if (synthesized.models.length) synthesized.models.forEach((m, i) => trace.push({ tool: 'ai_synthesis', status: i === synthesized.models.length - 1 && !synthesized.text ? 'error' : 'ok', ms: i === synthesized.models.length - 1 ? synthesized.latencyMs : 0, detail: m }));
+  if (synthesized.failure) {
+    /* recorded above */
+  } else if (synthesized.models.length) synthesized.models.forEach((m, i) => trace.push({ tool: 'ai_synthesis', status: i === synthesized.models.length - 1 && !synthesized.text ? 'error' : 'ok', ms: i === synthesized.models.length - 1 ? synthesized.latencyMs : 0, detail: m }));
   else trace.push({ tool: 'ai_synthesis', status: 'unavailable', ms: 0, detail: 'deterministic' });
 
   /* ── A19 on the model-written text, before it is published ──────────────── */
@@ -1058,6 +1093,10 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     kb.hits.length ? packContext(kb.hits, v2Hits.length ? 32000 : 7000) : '',
   ].join('\n');
   const deterministicBottomLine = bottomLine;
+  if (synthesized.failure) {
+    const why = { unreachable: 'მიუწვდომელია', rate_limited: 'ლიმიტზეა (429)', budget_exhausted: 'ბიუჯეტი ამოწურულია', auth_rejected: 'გასაღები უარყო', provider_error: 'შეცდომა დააბრუნა' }[synthesized.failure.kind];
+    bottomLine = `AI პროვაიდერი ${why} — ქვემოთ მხოლოდ დეტერმინისტული ძრავის შედეგია, მოდელის სინთეზის გარეშე.\n\n${bottomLine}`;
+  }
   let modelNumerics: NumericClaim[] = [];
   let references: ReferenceCheck[] = [];
   let synthesisReplaced = false;
