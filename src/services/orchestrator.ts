@@ -35,7 +35,7 @@ import { screenMedicationList } from '@/knowledge/low-value-meds';
 import { drugMentions, innFromDictionary, knownDrugNames } from '@/services/drug-naming';
 import { buildMedicationGate, EMPTY_GATE } from '@/server/medications/agent-gate';
 import { unsupportedDrugNames } from '@/services/drug-name-guard';
-import { concepts, mapClaims, type ClaimMap, type Passage } from '@/services/claim-support';
+import { concepts, mapClaims, onTopic, type ClaimMap, type Passage } from '@/services/claim-support';
 import { enforcePublication, type Publication } from '@/services/release-contract';
 import { withoutNegatedRequests } from '@/services/intent-text';
 import { FOCUS_CORRECTION, focusContext, focusFallback, focusFor, focusMissed } from '@/services/confirmed-focus';
@@ -854,6 +854,24 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   const v2Hits = (v2Kb?.hits ?? [])
     .filter((h): h is ClinicalUnitHit => h.kind === 'clinical_unit')
     .filter((h) => !productNames.length || productNames.some((n) => `${h.topic_title} ${h.unit_title} ${h.snippet}`.toLowerCase().includes(n)));
+
+  // Internal clinical rules count only if they are about the question's subject;
+  // off-topic hits (matched through incidental words) are dropped, and with
+  // none left the rule base does not cover the question (F04).
+  if (clinicalKb && clinicalKb.hits.length) {
+    const hitText = (h: (typeof clinicalKb.hits)[number]) => Object.values(h).filter((v) => typeof v === 'string').join(' ');
+    const kept = clinicalKb.hits.filter((h) => onTopic(v2Query, hitText(h)));
+    if (kept.length !== clinicalKb.hits.length) {
+      trace.push({ tool: 'kb_search:clinical_rule:off_topic_dropped', status: 'ok', ms: 0, detail: String(clinicalKb.hits.length - kept.length) });
+      const ids = new Set(kept.map((h) => h.rule_id));
+      clinicalKb.hits = kept;
+      clinicalKb.ruleIds = clinicalKb.ruleIds.filter((id) => ids.has(id));
+      if (!kept.length) {
+        clinicalKb.coverage = 'NOT_COVERED';
+        clinicalKb.messageKa = 'შიდა კლინიკურ წესებში ამ კითხვის თემაზე ჩანაწერი ვერ მოიძებნა.';
+      }
+    }
+  }
 
   const baseKb: RetrievalResult = qualityMode
     ? qualityKb

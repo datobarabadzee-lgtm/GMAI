@@ -11,8 +11,25 @@ App Store არ არის საჭირო. Apple Developer ანგა�
 
 აპლიკაციას ორი რეჟიმი აქვს. მათ შორის საზღვარი არის გარემოს ერთი ცვლადი — `APP_TIER`.
 
-| | `APP_TIER=public` (ინტერნეტში) | `APP_TIER=internal` (თქვენს სერვერზე) |
+| | `public` (ნაგულისხმევი — `APP_TIER` დაუყენებელი ან უცნობი) | `internal` (მხოლოდ ცხადად: `APP_TIER=internal`) |
 |---|---|---|
+| დანიშნულება | ღია ინტერნეტი, ტელეფონში დაყენება | კლინიკის კონტროლირებადი ინფრასტრუქტურა |
+| პაციენტის AI, კალკულატორები, აკადემია, ბიბლიოთეკა | ✅ | ✅ |
+| კლინიკური AI (ყველა რეჟიმი), DDx, მედიკამენტები, ლაბორატორია, დოკუმენტები | ✅ (AI — პლატფორმის ან მომხმარებლის გასაღებით) | ✅ |
+| ხარისხი და დეფექტების ანალიზი (ავტორის კორპუსი) | ✅ | ✅ |
+| clinical-v2 (გადაუდებელი/ინტენსიური, 51 თემა / 962 ერთეული) | ✅ | ✅ |
+| Clinical Rules Master v1 (UpToDate-დან წარმოებული) | ❌ არ იტვირთება | მხოლოდ მფლობელის მიერ საკუთარი ასლიდან იმპორტის შემდეგ |
+| ადამიანური განხილვის სამუშაო პროცესი | ❌ (მხოლოდ გაფრთხილება) | ✅ `/admin/review`, `REVIEWERS` |
+| კურაციის ჩაწერა | ❌ | ✅ `OPERATOR_TOKEN`-ით |
+| `/admin/*`, `/dev/*` | ❌ | `ENABLE_DEV_TOOLS=1`-ით (`/admin/review` — ყოველთვის internal-ში) |
+
+საზღვარი სამ დონეზეა: `src/proxy.ts` (მოთხოვნა ჩერდება handler-ამდე), `/api/orchestrate`-ის რეჟიმების სია და
+`kbExists()`, რომელიც საჯარო რეჟიმში ყოველთვის `false`-ია. `.vercelignore` კრძალავს `data/`, `knowledge-source/`
+და `*.sqlite` ატვირთვას. შემოწმება: `src/tests/public-tier.test.ts`.
+
+> Vercel-ისგან დამოუკიდებელი გაშვება (Docker, ნებისმიერი Linux ჰოსტი): `docs/SETUP.md` და `docs/RUNBOOK_MIGRATION.md`.
+
+---|---|---|
 | პაციენტის AI | ✅ | ✅ |
 | კალკულატორები (18) | ✅ | ✅ |
 | სამედიცინო აკადემია | ✅ | ✅ |
@@ -63,16 +80,18 @@ Vercel კოდს GitHub-იდან იღებს, ამიტომ ჯ�
 
    | Name | Value | აუცილებელია? |
    |---|---|---|
-   | `APP_TIER` | `public` | **კი — ამის გარეშე გამოქვეყნდება სრული შიდა ვერსია** |
+   | `APP_TIER` | `public` | კი — ცხადად მიუთითეთ (დაუყენებელიც public-ია, მაგრამ ცხადი მნიშვნელობა ამოწმებს readiness-ს) |
    | `ENABLE_DEV_TOOLS` | `0` | კი |
-   | `AI_API_KEY` | თქვენი OpenAI გასაღები | არა (გარეშე მუშაობს დემო რეჟიმში) |
-   | `AI_MODEL_FAST` | `gpt-4o-mini` | არა |
-   | `AI_MODEL_REASONING` | `gpt-4o` | არა |
+   | `OPENAI_API_KEY` | პლატფორმის OpenAI გასაღები | არა — გარეშე AI მუშაობს მხოლოდ მომხმარებლის საკუთარი გასაღებით; დეტერმინისტული მოდულები ყოველთვის |
+   | `OPENFDA_API_KEY` | openFDA გასაღები | არა |
+
+   სრული სია და შემოწმება: `docs/ENVIRONMENT_SCHEMA.md`, `npm run env:check -- --hosting vercel`.
+   Vercel აყენებს lockfile-ით (`vercel.json`: `installCommand: npm ci`).
 
 5. **Deploy**. 2–3 წუთში მიიღებთ მისამართს, მაგალითად `https://gmai-aih.vercel.app`.
 
 ### გასაღები არასოდეს ჩაწეროთ კოდში
-`AI_API_KEY` მხოლოდ Vercel-ის Environment Variables-ში უნდა იყოს. ის სერვერზე რჩება და
+`OPENAI_API_KEY` მხოლოდ Vercel-ის Environment Variables-ში უნდა იყოს. ის სერვერზე რჩება და
 ბრაუზერამდე არასოდეს აღწევს.
 
 ### საკუთარი დომენი (არასავალდებულო)
@@ -118,19 +137,14 @@ Project → **Settings → Domains** → დაამატეთ თქვე�
 
 ## 6. შიდა ვერსია — თქვენი კლინიკისთვის
 
-სრული ვერსია (კლინიკური AI, ხარისხი, დეფექტები, ცოდნის ბაზა) **არ უნდა განთავსდეს Vercel-ზე**:
-ლიცენზირებული კორპუსი საჯარო ინფრასტრუქტურაზე არ იდება და 77 MB SQLite ბაზა serverless
-გარემოში არ მუშაობს.
-
-შიდა ვერსია გაუშვით კლინიკის სერვერზე ან სამუშაო კომპიუტერზე:
+შიდა ვერსია (`APP_TIER=internal`: SQLite ცოდნის ბაზა, ადამიანური განხილვა, კურაცია) განთავსდება კლინიკის
+სერვერზე Docker-ით ან Node 22-ით — `docs/SETUP.md`. მოკლედ:
 
 ```
-APP_TIER=internal
-ENABLE_DEV_TOOLS=1
-npm install
-npm run kb:import
-npm run build
-npm start
+cp .env.example .env.production      # APP_TIER=internal, PUBLIC_ORIGIN, OPERATOR_TOKEN, REVIEWERS …
+npm run env:check -- --hosting self_hosted --tier internal --env-file .env.production
+APP_TIER=internal docker compose up -d --build
+npm run smoke -- https://<თქვენი მისამართი> --expect-tier internal
 ```
 
-Windows-ზე ამას აკეთებს `GAUSHVI.bat`.
+Windows-ზე Docker Desktop-ით იგივე ბრძანებები; `GAUSHVI.bat` მხოლოდ ლოკალური განვითარებისთვისაა.

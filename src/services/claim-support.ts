@@ -78,6 +78,23 @@ export function concepts(text: string): Set<string> {
   return out;
 }
 
+/** Concepts that say what kind of statement it is, not what it is about. */
+const NON_TOPIC = new Set(['concept:dosage', 'concept:management', 'concept:diagnosis', 'concept:screening', 'concept:prevention', 'concept:treatment', 'concept:prognosis', 'concept:complication', 'concept:complications', 'concept:risk']);
+export const topicConcepts = (text: string) => new Set([...concepts(text)].filter((c) => !NON_TOPIC.has(c)));
+
+/**
+ * Whether a retrieved passage is about the question's subject: it must share
+ * at least one specific concept with the question (audit F04, internal
+ * corpus: an anticoagulation question retrieved tapeworm and brucellosis rules
+ * through incidental words and they reached the answer's steps).
+ */
+export function onTopic(question: string, passage: string): boolean {
+  const topic = [...topicConcepts(question)];
+  if (!topic.length) return false;
+  const pc = concepts(passage);
+  return topic.some((t) => pc.has(t));
+}
+
 const sentences = (text: string) =>
   text
     .split(/(?<=[.!?…])\s+|\n+/)
@@ -85,7 +102,7 @@ const sentences = (text: string) =>
     .filter((s) => s.length > 0);
 
 export function mapClaims(answer: string, question: string, passages: Passage[]): ClaimMap {
-  const topic = concepts(question);
+  const topic = topicConcepts(question);
   const pc = passages.map((p) => ({ p, c: concepts(`${p.title}\n${p.text}`) }));
   // A passage is eligible only if it is about the question's own subject.
   const eligible = pc.filter(({ c }) => [...topic].some((t) => c.has(t)));
