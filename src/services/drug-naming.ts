@@ -267,6 +267,30 @@ export type NameResolution = {
   noteKa: string;
 };
 
+const exactCache = new Map<string, string | null>();
+/**
+ * INN for a name the dictionaries know exactly (INN, Georgian INN, trade name),
+ * else null. No similarity search — cheap enough to run on every word of a text.
+ */
+export function exactInn(raw: string): string | null {
+  const name = raw.trim().toLowerCase();
+  if (!name) return null;
+  const hit = exactCache.get(name);
+  if (hit !== undefined) return hit;
+  let out: string | null = null;
+  const isKa = /[\u10A0-\u10FF]/.test(name);
+  for (const form of isKa ? stems(name) : [name]) {
+    const inn = BRAND_TO_INN.get(form) ?? CURATED.get(form) ?? DICT.get(form);
+    if (inn) {
+      out = inn;
+      break;
+    }
+  }
+  if (exactCache.size > 50_000) exactCache.clear();
+  exactCache.set(name, out);
+  return out;
+}
+
 /** How a typed name was understood — shown to the user, never hidden. */
 export function resolveDrugName(raw: string): NameResolution {
   const input = raw.trim();

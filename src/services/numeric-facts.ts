@@ -1,4 +1,4 @@
-import { resolveDrugName, knownDrugNames } from '@/services/drug-naming';
+import { exactInn, knownDrugNames } from '@/services/drug-naming';
 
 /**
  * NUMERIC FACTS WITH THEIR MEANING
@@ -197,17 +197,14 @@ export function drugsIn(text: string, extraNames: string[] = []): string[] {
       continue;
     }
     if (/^[a-z][a-z-]+$/.test(lw)) {
-      if (latinDrugs().has(lw)) {
-        const r = resolveDrugName(lw);
-        out.add((r.via === 'exact' || r.via === 'brand' ? r.inn : lw) ?? lw);
-      }
+      if (latinDrugs().has(lw)) out.add((exactInn(lw) ?? lw).toLowerCase());
       continue;
     }
     if (/[ა-ჰ]/.test(lw)) {
       for (const form of kaForms(lw)) {
-        const r = resolveDrugName(form);
-        if ((r.via === 'exact' || r.via === 'brand') && r.inn) {
-          out.add(r.inn.toLowerCase());
+        const inn = exactInn(form);
+        if (inn) {
+          out.add(inn.toLowerCase());
           break;
         }
       }
