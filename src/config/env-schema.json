@@ -1,0 +1,61 @@
+{
+  "schema": "gmai-env-schema/1",
+  "note": "Names, purpose and requirement only. Values are never printed by any check. secret=true values must be set in the host's secret store, never in a committed file.",
+  "variables": [
+    { "name": "APP_TIER", "group": "deployment", "required": "always", "secret": false, "default": "public", "values": ["public", "internal"], "ka": "განთავსების დონე. აუცილებლად მიუთითეთ ცხადად. დაუყენებელი ან უცნობი მნიშვნელობა = public (უსაფრთხო ნაგულისხმევი). internal მხოლოდ კლინიკის კონტროლირებად ინფრასტრუქტურაზე." },
+    { "name": "PUBLIC_ORIGIN", "group": "security", "required": "self_hosted", "secret": false, "default": null, "ka": "საჯარო მისამართი (მაგ. https://gmai.example.ge). ოპერატორის mutation-ების Origin/CSRF შემოწმება ამას ადარებს. reverse proxy-ის უკან აუცილებელია." },
+    { "name": "OPERATOR_TOKEN", "group": "security", "required": "internal_admin", "secret": true, "default": null, "min_length": 32, "ka": "ოპერატორის ავთენტიფიკაცია ადმინისტრაციულ ჩაწერებზე (კურაცია, წყაროების რეესტრი). ≥32 სიმბოლო. გარეშე ყველა ადმინისტრაციული ჩაწერა დახურულია." },
+    { "name": "ENABLE_DEV_TOOLS", "group": "security", "required": "optional", "secret": false, "default": "0", "ka": "1 = /admin და /dev ხელსაწყოები (მხოლოდ internal-ში). production-ში 0." },
+
+    { "name": "OPENAI_API_KEY", "group": "ai", "required": "platform_ai", "secret": true, "default": null, "ka": "პლატფორმის AI გასაღები, მხოლოდ სერვერზე. გარეშე AI პასუხები მუშაობს მხოლოდ მომხმარებლის საკუთარი გასაღებით (BYOK); დეტერმინისტული მოდულები მუშაობს ყოველთვის." },
+    { "name": "AI_API_KEY", "group": "ai", "required": "optional", "secret": true, "default": null, "ka": "OPENAI_API_KEY-ის ალტერნატიული სახელი (თავსებადი gateway)." },
+    { "name": "AI_PROVIDER", "group": "ai", "required": "optional", "secret": false, "default": "openai", "ka": "ამჟამად რეალური adapter მხოლოდ OpenAI Responses API-ა." },
+    { "name": "AI_BASE_URL", "group": "ai", "required": "optional", "secret": false, "default": "https://api.openai.com/v1", "ka": "OpenAI-თავსებადი endpoint." },
+    { "name": "OPENAI_MODEL", "group": "ai", "required": "optional", "secret": false, "default": "(კოდში მითითებული)", "ka": "მოდელი. უფრო ძვირი მოდელი ავტომატურად არ ირჩევა." },
+    { "name": "AI_MODEL_FAST", "group": "ai", "required": "optional", "secret": false, "default": "= OPENAI_MODEL", "ka": "სწრაფი დონის მოდელი (ცალკე მხოლოდ შეგნებულად)." },
+    { "name": "AI_MODEL_REASONING", "group": "ai", "required": "optional", "secret": false, "default": "= OPENAI_MODEL", "ka": "ღრმა რეჟიმის მოდელი." },
+    { "name": "AI_MODEL_FALLBACK", "group": "ai", "required": "optional", "secret": false, "default": "(კოდში)", "ka": "ხელახალი ცდის მოდელი." },
+    { "name": "OPENAI_REASONING_EFFORT", "group": "ai", "required": "optional", "secret": false, "default": "low", "ka": "minimal | low | medium | high" },
+    { "name": "OPENAI_REASONING_EFFORT_DEEP", "group": "ai", "required": "optional", "secret": false, "default": "= OPENAI_REASONING_EFFORT", "ka": "ღრმა რეჟიმისთვის." },
+    { "name": "OPENAI_MAX_OUTPUT_TOKENS", "group": "ai", "required": "optional", "secret": false, "default": "1600", "ka": "პასუხის ზომის ზღვარი (ხარჯის მთავარი ბერკეტი)." },
+    { "name": "OPENAI_MAX_OUTPUT_TOKENS_DEEP", "group": "ai", "required": "optional", "secret": false, "default": "3000", "ka": "ღრმა რეჟიმისთვის." },
+    { "name": "AI_TIMEOUT_MS", "group": "ai", "required": "optional", "secret": false, "default": "90000", "ka": "AI მოთხოვნის ვადა." },
+    { "name": "AGENT_TIMEOUT_MS", "group": "ai", "required": "optional", "secret": false, "default": "25000", "ka": "ერთი აგენტის ვადა; გადაცილება აღირიცხება timeout-ად." },
+    { "name": "MODEL_PRICING_JSON", "group": "ai", "required": "optional", "secret": false, "default": null, "ka": "ფასების სიის გადაფარვა (USD / 1M token)." },
+
+    { "name": "OPENFDA_API_KEY", "group": "medications", "required": "optional", "secret": true, "default": null, "ka": "openFDA გასაღები (მაღალი ლიმიტი). მხოლოდ სერვერზე." },
+    { "name": "MED_RECEIPT_SECRET", "group": "medications", "required": "byok_only_host", "secret": true, "default": "(პლატფორმის გასაღებიდან გამოყვანილი)", "min_length": 32, "ka": "პრეპარატის დადასტურების ქვითრის ხელმოწერა. პლატფორმის AI გასაღების გარეშე ჰოსტზე აუცილებელია, თორემ დადასტურება ვერ ხელმოიწერება." },
+    { "name": "MED_CURATED_MAP", "group": "medications", "required": "optional", "secret": false, "default": "knowledge/medications/curated-map.json", "ka": "კურირებული რუკის ფაილი (ტესტებისთვის)." },
+    { "name": "DISABLE_LIVE_SOURCES", "group": "medications", "required": "optional", "secret": false, "default": "0", "ka": "1 = openFDA/EMA/Europe PMC ცოცხალი მოთხოვნები გამორთულია (ტესტები, offline)." },
+
+    { "name": "LIMIT_STORE", "group": "limits", "required": "multi_instance", "secret": false, "default": "memory", "values": ["memory", "file", "redis"], "ka": "ლიმიტებისა და ხარჯის მრიცხველი. memory = მხოლოდ ერთი პროცესი; file = ერთი ჰოსტი/volume; redis = რამდენიმე ჰოსტი." },
+    { "name": "LIMIT_STORE_PATH", "group": "limits", "required": "optional", "secret": false, "default": "data/runtime/limits.json", "ka": "file store-ის ფაილი (მუდმივ volume-ზე)." },
+    { "name": "LIMIT_STORE_URL", "group": "limits", "required": "when_redis", "secret": true, "default": null, "ka": "redis://[:password@]host:port[/db] ან Upstash-თავსებადი https://…" },
+    { "name": "LIMIT_STORE_TOKEN", "group": "limits", "required": "optional", "secret": true, "default": null, "ka": "REST Redis-ის token." },
+    { "name": "DAILY_BUDGET_USD", "group": "limits", "required": "optional", "secret": false, "default": "5", "ka": "აპლიკაციის დღიური ხარჯის ზღვარი (პროვაიდერის ანგარიშის ბიუჯეტი რჩება ერთადერთ გარე მყარ ზღვრად)." },
+    { "name": "AI_RESERVE_USD_PER_RUN", "group": "limits", "required": "optional", "secret": false, "default": "0.03", "ka": "გაშვების წინასწარი რეზერვაცია ზღვარზე." },
+    { "name": "RATE_LIMIT_IP_PER_WINDOW", "group": "limits", "required": "optional", "secret": false, "default": "12", "ka": "" },
+    { "name": "RATE_LIMIT_WINDOW_SEC", "group": "limits", "required": "optional", "secret": false, "default": "60", "ka": "" },
+    { "name": "RATE_LIMIT_IP_PER_DAY", "group": "limits", "required": "optional", "secret": false, "default": "200", "ka": "" },
+    { "name": "RATE_LIMIT_GLOBAL_PER_MIN", "group": "limits", "required": "optional", "secret": false, "default": "120", "ka": "" },
+
+    { "name": "PROCESSING_POLICY", "group": "processing", "required": "optional", "secret": false, "default": null, "values": ["institutional"], "ka": "institutional = დაწესებულების დოკუმენტირებული სამართლებრივი საფუძველი." },
+    { "name": "PROCESSING_BASIS_REF", "group": "processing", "required": "optional", "secret": false, "default": null, "ka": "ამ საფუძვლის დოკუმენტის იდენტიფიკატორი." },
+    { "name": "NEXT_PUBLIC_UPLOAD_MAX_TOTAL_MB", "group": "processing", "required": "optional", "secret": false, "default": "4", "ka": "ატვირთვის ჯამური ზღვარი. Vercel-ზე ≤4 (პლატფორმის ლიმიტი 4.5 MB); self-hosted-ზე მხოლოდ თუ proxy-ც იღებს." },
+    { "name": "NEXT_PUBLIC_CONTACT_WHATSAPP", "group": "processing", "required": "optional", "secret": false, "default": "(კოდში)", "ka": "საკონტაქტო ნომერი UI-ში (საჯარო)." },
+    { "name": "LOG_RETRIEVAL_QUERY", "group": "processing", "required": "optional", "secret": false, "default": "0", "ka": "1 = ძიების ტექსტი ჟურნალში (ნაგულისხმევად გამორთულია)." },
+
+    { "name": "KB_DB_PATH", "group": "knowledge", "required": "internal_kb", "secret": false, "default": "data/gmai-kb.sqlite", "ka": "შიდა SQLite ცოდნის ბაზა (მხოლოდ internal)." },
+    { "name": "KB_SOURCE_DIR", "group": "knowledge", "required": "internal_kb", "secret": false, "default": "knowledge-source", "ka": "master JSON-ების საქაღალდე იმპორტისთვის." },
+    { "name": "EMBEDDING_PROVIDER", "group": "knowledge", "required": "optional", "secret": false, "default": "auto", "values": ["auto", "hash", "openai"], "ka": "შიდა ძრავის ვექტორები. hash = ლექსიკური n-gram, არა ნასწავლი სემანტიკა." },
+    { "name": "EMBEDDING_MODEL", "group": "knowledge", "required": "optional", "secret": false, "default": "text-embedding-3-small", "ka": "" },
+    { "name": "EMBEDDING_DIM", "group": "knowledge", "required": "optional", "secret": false, "default": "1536", "ka": "" },
+    { "name": "EMBEDDING_BASE_URL", "group": "knowledge", "required": "optional", "secret": false, "default": null, "ka": "" },
+    { "name": "EMBEDDING_API_KEY", "group": "knowledge", "required": "optional", "secret": true, "default": null, "ka": "" },
+    { "name": "CLINICAL_V2_PKG", "group": "knowledge", "required": "optional", "secret": false, "default": null, "ka": "clinical-v2 პაკეტის გზა იმპორტის სკრიპტისთვის." },
+    { "name": "DATABASE_URL", "group": "knowledge", "required": "optional", "secret": true, "default": null, "ka": "არასავალდებულო PostgreSQL (წყაროების რეესტრის ასლი)." },
+
+    { "name": "EVAL_TOKEN", "group": "operations", "required": "optional", "secret": true, "default": null, "ka": "/api/eval/drift-ის token; გარეშე endpoint არ არსებობს." },
+    { "name": "RELEASE_COMMIT", "group": "operations", "required": "optional", "secret": false, "default": "(git rev-parse HEAD)", "ka": "release manifest-ის commit, როცა .git არ არის ხელმისაწვდომი." }
+  ]
+}

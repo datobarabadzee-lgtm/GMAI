@@ -135,6 +135,8 @@ export function recordRun(rec: AiRunRecord): string {
         estimatedCostUsd: Number(cost.toFixed(6)),
         releaseStatus: rec.releaseStatus,
         scriptRejections: rec.scriptRejections ?? 0,
+        toolCalls: rec.toolCalls ?? 0,
+        toolsCalled: rec.toolsCalled ?? [],
         latencyMs: rec.latencyMs,
       }),
     );

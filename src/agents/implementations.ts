@@ -323,7 +323,11 @@ const challengeAgent: AgentImpl = (c) => {
 
 /** A06 — Guideline comparator. */
 const guidelineAgent: AgentImpl = (c) => {
-  const topics = findComparisonTopics(c.question || textOf(c));
+  // An empty query lists every topic (the browse page); an agent with nothing
+  // to compare must not present all of them as an answer (F14 failure matrix).
+  const q = (c.question || textOf(c)).trim();
+  if (!q) return skipped('A06', 'შესადარებელი კითხვა არ არის მოწოდებული.');
+  const topics = findComparisonTopics(q);
   if (!topics.length) return skipped('A06', 'ამ კითხვაზე შედარებადი გაიდლაინების ნაკრები რეესტრში ვერ მოიძებნა.');
   const t = topics[0];
   return ok('A06', {

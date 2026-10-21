@@ -23,7 +23,7 @@ export type AgentSpec = z.infer<typeof AgentSpecSchema>;
 
 export const AgentResultSchema = z.object({
   agentId: z.string(),
-  status: z.enum(['ok', 'skipped', 'insufficient_input', 'unavailable', 'error']),
+  status: z.enum(['ok', 'skipped', 'insufficient_input', 'unavailable', 'error', 'timeout']),
   summary: z.string().default(''),
   sections: z
     .array(z.object({ titleKa: z.string(), titleEn: z.string(), bullets: z.array(z.string()).default([]), body: z.string().default('') }))

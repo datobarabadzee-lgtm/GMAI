@@ -15,6 +15,7 @@ import type { DefectReviewMode } from '@/schemas/quality';
 import { AGENT_IMPLEMENTATIONS, detectRedFlags } from '@/agents/implementations';
 import { AGENTS } from '@/agents/registry';
 import type { AgentContext } from '@/agents/context';
+import { recordTrace } from '@/services/agent-stats';
 import { retrieveText } from './retrieval';
 import { routeModel } from './model-router';
 import { verifyClaims } from './citation-verifier';
@@ -74,6 +75,44 @@ export type VerificationBundle = {
   references: ReferenceCheck[];
 };
 
+export type TraceEvent = { tool: string; status: 'ok' | 'skipped' | 'insufficient_input' | 'unavailable' | 'error' | 'timeout'; ms: number; detail?: string };
+
+const agentTimeoutMs = () => (Number(process.env.AGENT_TIMEOUT_MS) > 0 ? Number(process.env.AGENT_TIMEOUT_MS) : 25_000);
+
+/** Runs one agent with a deadline; a slow agent is reported as timeout instead of holding the request. */
+export async function runAgent(id: string, ctx: AgentContext, trace: TraceEvent[]): Promise<AgentResult> {
+  const t0 = Date.now();
+  const limit = agentTimeoutMs();
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    const r = await Promise.race([
+      Promise.resolve(AGENT_IMPLEMENTATIONS[id](ctx)),
+      new Promise<AgentResult>((resolve) => {
+        timer = setTimeout(() => resolve({ agentId: id, status: 'timeout', summary: '', sections: [], claims: [], sourceIds: [], data: {}, humanReviewRequired: false, note: `timeout after ${limit} ms` }), limit);
+      }),
+    ]);
+    trace.push({ tool: `agent:${id}`, status: r.status, ms: Date.now() - t0 });
+    return r;
+  } catch (e) {
+    trace.push({ tool: `agent:${id}`, status: 'error', ms: Date.now() - t0, detail: e instanceof Error ? e.message.slice(0, 120) : 'unknown' });
+    return { agentId: id, status: 'error', summary: '', sections: [], claims: [], sourceIds: [], data: {}, humanReviewRequired: false, note: e instanceof Error ? e.message : 'unknown error' };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function traced<T>(trace: TraceEvent[], tool: string, fn: () => Promise<T> | T): Promise<T> {
+  const t0 = Date.now();
+  try {
+    const r = await fn();
+    trace.push({ tool, status: 'ok', ms: Date.now() - t0 });
+    return r;
+  } catch (e) {
+    trace.push({ tool, status: 'error', ms: Date.now() - t0, detail: e instanceof Error ? e.message.slice(0, 120) : 'unknown' });
+    throw e;
+  }
+}
+
 export type OrchestrateOutput = {
   runId: string;
   plan: OrchestrationPlan;
@@ -100,6 +139,12 @@ export type OrchestrateOutput = {
     /** Models that produced an attempt, in order (the retry may be the fallback model). */
     models: string[];
   };
+  /**
+   * What actually ran in this request, in order (audit F13/F14): one event per
+   * tool or agent invocation with its real outcome and duration. No clinical
+   * content. usage ledger toolsCalled/toolCalls are derived from this.
+   */
+  trace: TraceEvent[];
   /** null when the answer was withheld (release BLOCK). */
   structured: StructuredCase | null;
   core: CoreAgentOutputs | null;
@@ -711,17 +756,18 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   });
   const routing = routeModel({ risk, mode, intent, hasPatientContext: patient.narrative.length > 0 || patient.age !== null });
 
-  const hits = retrieveText(routed || question, 8);
+  const trace: TraceEvent[] = [];
+  const hits = await traced(trace, 'registry_search', () => retrieveText(routed || question, 8));
 
   // Drug identity is resolved once, server-side, before any agent runs. A
   // confirmation counts only with the server receipt for this session.
-  const medication = await buildMedicationGate({
+  const medication = await traced(trace, 'medication_identity', () => buildMedicationGate({
     text: [question, input.plan ?? ''].join(' '),
     explicit: typeof input.extras?.drug === 'string' ? (input.extras.drug as string) : '',
     medicationNames: patient.medications.map((m) => m.drug),
     session: input.medSession ?? null,
     confirmation: input.extras?.medConfirmations ?? input.extras?.medConfirmation,
-  }).catch(() => EMPTY_GATE);
+  })).catch(() => EMPTY_GATE);
   // A confirmed product attached to the question means the drug agent must
   // answer from it, even when the follow-up does not repeat the drug's name.
   // The same for a name the gate recognised (e.g. an EU-only product): the drug
@@ -746,22 +792,11 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
 
   // Sequential stage
   for (const id of plan.sequential) {
-    const impl = AGENT_IMPLEMENTATIONS[id];
-    if (!impl) continue;
-    ctx.results.set(id, await impl(ctx));
+    if (!AGENT_IMPLEMENTATIONS[id]) continue;
+    ctx.results.set(id, await runAgent(id, ctx, trace));
   }
   // Parallel stage
-  const parallelResults = await Promise.all(
-    plan.parallel
-      .filter((id) => AGENT_IMPLEMENTATIONS[id])
-      .map(async (id) => {
-        try {
-          return await AGENT_IMPLEMENTATIONS[id](ctx);
-        } catch (e) {
-          return { agentId: id, status: 'error' as const, summary: '', sections: [], claims: [], sourceIds: [], data: {}, humanReviewRequired: false, note: e instanceof Error ? e.message : 'unknown error' };
-        }
-      }),
-  );
+  const parallelResults = await Promise.all(plan.parallel.filter((id) => AGENT_IMPLEMENTATIONS[id]).map((id) => runAgent(id, ctx, trace)));
   parallelResults.forEach((r) => ctx.results.set(r.agentId, r));
 
   /* ── internal knowledge engine: retrieval → core agents ─────────────────── */
@@ -781,9 +816,9 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   const useClinicalV2 = !qualityMode && mode !== 'patient';
   const v2Query = withoutNegatedRequests([priorText, question, patient.problems.join(' ')].filter(Boolean).join(' '));
   const [clinicalKb, qualityKb, v2Kb] = await Promise.all([
-    qualityMode ? Promise.resolve(null) : retrieveRules(retrievalQuery, { kinds: ['clinical_rule'], limit: 10 }),
-    retrieveRules(retrievalQuery, { kinds: ['quality_rule', 'audit_question'], limit: qualityMode ? 14 : 4 }),
-    useClinicalV2 ? retrieveRules(v2Query, { kinds: ['clinical_unit'], limit: 6 }) : Promise.resolve(null),
+    qualityMode ? Promise.resolve(null) : traced(trace, 'kb_search:clinical_rule', () => retrieveRules(retrievalQuery, { kinds: ['clinical_rule'], limit: 10 })),
+    traced(trace, 'kb_search:quality', () => retrieveRules(retrievalQuery, { kinds: ['quality_rule', 'audit_question'], limit: qualityMode ? 14 : 4 })),
+    useClinicalV2 ? traced(trace, 'kb_search:clinical_v2', () => retrieveRules(v2Query, { kinds: ['clinical_unit'], limit: 6 })) : Promise.resolve(null),
   ]);
   // A question about a specific confirmed product is answered from that
   // product's label; emergency/ICU reference units join only if they name it.
@@ -832,17 +867,20 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   const coreNotes: string[] = [];
   const coreRuleIds = new Set<string>();
 
-  const runCore = <T>(env: { agent: string; ok: boolean; output: T | null; relevantRuleIds: string[]; notesKa: string[] }): T | null => {
+  const runCore = <T>(run: () => { agent: string; ok: boolean; output: T | null; relevantRuleIds: string[]; notesKa: string[] }): T | null => {
+    const t0 = Date.now();
+    const env = run();
+    trace.push({ tool: `core:${env.agent}`, status: env.ok ? 'ok' : 'insufficient_input', ms: Date.now() - t0 });
     env.relevantRuleIds.forEach((r) => coreRuleIds.add(r));
     env.notesKa.forEach((n) => n && coreNotes.push(n));
     return env.output;
   };
 
-  if (mode !== 'patient') core.reasoning = runCore(clinicalReasoningAgent(coreInput));
-  if (mode === 'deep' || mode === 'second-opinion' || intent === 'differential') core.differential = runCore(differentialAgent(coreInput));
-  if (mode !== 'patient') core.missing = runCore(whatAmIMissingAgent(coreInput));
-  if (mode === 'challenge') core.challenge = runCore(challengePlanAgent(coreInput));
-  if (intent === 'drug' || intent === 'medication_review' || patient.medications.length > 0) core.drug = runCore(drugSafetyAgent(coreInput));
+  if (mode !== 'patient') core.reasoning = runCore(() => clinicalReasoningAgent(coreInput));
+  if (mode === 'deep' || mode === 'second-opinion' || intent === 'differential') core.differential = runCore(() => differentialAgent(coreInput));
+  if (mode !== 'patient') core.missing = runCore(() => whatAmIMissingAgent(coreInput));
+  if (mode === 'challenge') core.challenge = runCore(() => challengePlanAgent(coreInput));
+  if (intent === 'drug' || intent === 'medication_review' || patient.medications.length > 0) core.drug = runCore(() => drugSafetyAgent(coreInput));
   if (mode === 'quality' || intent === 'defect' || intent === 'quality') core.quality = qualityGrounding(coreInput);
 
   const agentResults = [...ctx.results.values()];
@@ -981,6 +1019,10 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
       focusReplaced = true;
     }
   }
+
+  // Model calls as they happened (the retry may use the fallback model).
+  if (synthesized.models.length) synthesized.models.forEach((m, i) => trace.push({ tool: 'ai_synthesis', status: i === synthesized.models.length - 1 && !synthesized.text ? 'error' : 'ok', ms: i === synthesized.models.length - 1 ? synthesized.latencyMs : 0, detail: m }));
+  else trace.push({ tool: 'ai_synthesis', status: 'unavailable', ms: 0, detail: 'deterministic' });
 
   /* ── A19 on the model-written text, before it is published ──────────────── */
   // Agent sections are deterministic engine output. The only text a model wrote
@@ -1228,19 +1270,22 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     retrievalQuery,
     retrievedRuleIds: kb.ruleIds,
     agentsCalled: [...answer.agentsUsed, ...Object.entries(core).filter(([, v]) => v).map(([k]) => k)],
-    toolsCalled: ['hybrid_search', 'medication_review', 'calculators'],
+    // Derived from what actually ran (F13), not a fixed list.
+    toolsCalled: [...new Set(trace.filter((e) => e.status !== 'skipped').map((e) => e.tool))],
     verifierStatus: `numeric:${verification.numerics.filter((n) => n.status.startsWith('VERIFIED')).length}/${verification.numerics.length} citation:${verification.citations.fabricated.length ? 'FABRICATED_REJECTED' : 'OK'} freshness:${verification.freshness.status}`,
     releaseStatus: release.status,
     inputTokens: synthesized.usage.inputTokens,
     cachedInputTokens: synthesized.usage.cachedInputTokens,
     outputTokens: synthesized.usage.outputTokens,
     scriptRejections: synthesized.scriptRejections,
-    toolCalls: 3,
+    toolCalls: trace.filter((e) => e.status !== 'skipped' && e.status !== 'unavailable').length,
     latencyMs: Date.now() - startedAt,
   });
 
+  recordTrace(trace);
   return enforcePublication({
     runId,
+    trace,
     plan,
     answer,
     claims,

@@ -152,12 +152,15 @@ describe('direct contact channel', () => {
     expect(read('src/features/home/public-extras.tsx')).toContain('whatsappLink');
   });
 
-  it('bounds uploads on the publicly reachable parse endpoint', () => {
-    const route = fs.readFileSync(path.join(process.cwd(), 'src/app/api/parse/route.ts'), 'utf8');
-    expect(route).toContain('MAX_FILES');
-    expect(route).toContain('MAX_FILE_BYTES');
-    expect(route).toContain('MAX_TOTAL_BYTES');
-    expect(route).toContain('413');
+  // F16: the limits moved to src/lib/upload-limits.ts (shared with the
+  // browser); checked by behaviour here and in detail in upload-limits.test.ts.
+  it('bounds uploads on the publicly reachable parse endpoint', async () => {
+    const { POST } = await import('@/app/api/parse/route');
+    const { UPLOAD_MAX_TOTAL_BYTES } = await import('@/lib/upload-limits');
+    const fd = new FormData();
+    fd.append('files', new File([new Uint8Array(UPLOAD_MAX_TOTAL_BYTES + 1)], 'big.txt', { type: 'text/plain' }));
+    const res = await POST(new Request('http://localhost/api/parse', { method: 'POST', body: fd }));
+    expect(res.status).toBe(413);
   });
 
   it('refuses to answer publicly when no model is configured', () => {

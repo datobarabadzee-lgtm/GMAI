@@ -77,7 +77,7 @@ function splitMeds(text: string): string[] {
 export async function POST(req: Request) {
   // These call free upstream APIs, but an open endpoint is still ours to
   // protect: unthrottled use would get the platform blocked by the upstream.
-  const limited = checkLimit(req);
+  const limited = await checkLimit(req);
   if (!limited.ok) {
     return NextResponse.json(
       { error: 'RATE_LIMITED', messageKa: limited.messageKa },

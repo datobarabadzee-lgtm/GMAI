@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { sessionFrom } from '@/server/medications/receipts';
 import { callerKeyFrom, isPlausibleKey } from '@/services/ai-provider';
-import { checkLimit, recordSpend } from '@/services/rate-limit';
+import { LIMITS, checkLimit, recordSpend } from '@/services/rate-limit';
 import { checkProcessingBasis, hasPatientData } from '@/server/processing-policy';
 import { substanceOf } from '@/lib/patient-intake';
 import { z } from 'zod';
@@ -125,7 +125,7 @@ export async function POST(req: Request) {
   const callerKey = callerKeyFrom(req);
   const ownKey = Boolean(callerKey && isPlausibleKey(callerKey));
 
-  const verdict = checkLimit(req, { ownKey });
+  const verdict = await checkLimit(req, { ownKey, reserveUsd: LIMITS.reserveUsdPerRun });
   if (!verdict.ok) {
     return NextResponse.json(
       { error: 'RATE_LIMITED', reason: verdict.reason, messageKa: verdict.messageKa },
@@ -133,11 +133,12 @@ export async function POST(req: Request) {
     );
   }
 
+  let spentUsd = 0;
   try {
     // The medication session comes only from the httpOnly cookie.
     const result = await orchestrate({ ...parsed.data, callerKey, medSession: sessionFrom(req) });
     // Only the operator's own spend counts against the operator's cap.
-    if (!ownKey) recordSpend(Number(result?.usage?.estimatedCostUsd ?? 0));
+    if (!ownKey) spentUsd = Number(result?.usage?.estimatedCostUsd ?? 0);
     return NextResponse.json(result);
   } catch (e) {
     const message = e instanceof Error ? e.message : 'unknown';
@@ -180,5 +181,8 @@ export async function POST(req: Request) {
       },
       { status: aiDown ? 503 : 500 },
     );
+  } finally {
+    // Settle the reservation to the actual cost; a failed run releases it.
+    await recordSpend(spentUsd, verdict.reservation);
   }
 }

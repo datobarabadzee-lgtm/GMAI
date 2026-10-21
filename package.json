@@ -20,7 +20,11 @@
     "build:public": "APP_TIER=public next build && node scripts/verify-build.mjs",
     "start:public": "APP_TIER=public next start",
     "verify:build": "node scripts/verify-build.mjs",
-    "eval:prod": "node scripts/eval-production.mjs"
+    "eval:prod": "node scripts/eval-production.mjs",
+    "env:check": "tsx scripts/check-env.ts",
+    "release:manifest": "node scripts/release-manifest.mjs",
+    "release:verify": "node scripts/release-manifest.mjs --verify",
+    "prebuild": "node scripts/release-manifest.mjs"
   },
   "dependencies": {
     "@types/better-sqlite3": "^9.6.0",
@@ -54,5 +58,9 @@
     "tsx": "4.20.3",
     "typescript": "5.9.2",
     "vitest": "3.2.4"
+  },
+  "engines": {
+    "node": "22.x",
+    "npm": ">=10.9 <11"
   }
 }

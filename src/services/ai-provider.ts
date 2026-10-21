@@ -81,7 +81,7 @@ const env = () => {
   return {
     provider: process.env.AI_PROVIDER ?? 'openai',
     baseUrl: (process.env.AI_BASE_URL ?? 'https://api.openai.com/v1').replace(/\/$/, ''),
-    apiKey: process.env.OPENAI_API_KEY ?? process.env.AI_API_KEY ?? '',
+    apiKey: process.env.OPENAI_API_KEY || process.env.AI_API_KEY || '',
     model,
     fast: process.env.AI_MODEL_FAST ?? model,
     reasoning: process.env.AI_MODEL_REASONING ?? model,
@@ -229,7 +229,7 @@ export function resetProvider() {
 
 /** Safe, non-secret status for the UI engine indicator. */
 export function engineStatus(): { engine: 'mock' | 'live'; label: string } {
-  const live = Boolean(process.env.OPENAI_API_KEY ?? process.env.AI_API_KEY);
+  const live = Boolean(process.env.OPENAI_API_KEY || process.env.AI_API_KEY);
   return { engine: live ? 'live' : 'mock', label: live ? 'Live' : 'Demo' };
 }
 

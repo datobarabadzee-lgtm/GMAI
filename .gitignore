@@ -28,3 +28,4 @@ eval-report.json
 *.zip
 screenshots/
 release-out/
+release-manifest.json

@@ -16,8 +16,6 @@ knowledge-source/
 *.sqlite
 *.sqlite-wal
 *.sqlite-shm
-drizzle/
-scripts/kb-import.ts
 /mnt
 *.zip
 GAUSHVI.bat

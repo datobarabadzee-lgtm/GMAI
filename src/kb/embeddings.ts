@@ -124,8 +124,8 @@ class OpenAiEmbeddingProvider implements EmbeddingProvider {
 
 export function getEmbeddingProvider(): EmbeddingProvider {
   const wanted = (process.env.EMBEDDING_PROVIDER ?? 'auto').toLowerCase();
-  const key = process.env.EMBEDDING_API_KEY ?? process.env.AI_API_KEY ?? '';
-  const base = (process.env.EMBEDDING_BASE_URL ?? process.env.AI_BASE_URL ?? 'https://api.openai.com/v1').replace(/\/$/, '');
+  const key = (process.env.EMBEDDING_API_KEY || process.env.AI_API_KEY) ?? '';
+  const base = (process.env.EMBEDDING_BASE_URL || process.env.AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
   const model = process.env.EMBEDDING_MODEL ?? 'text-embedding-3-small';
   const dim = Number(process.env.EMBEDDING_DIM ?? 1536);
 

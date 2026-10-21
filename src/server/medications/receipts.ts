@@ -45,7 +45,7 @@ function sweep(now = Date.now()) {
 function secret(): Buffer | null {
   const own = process.env.MED_RECEIPT_SECRET;
   if (own && own.length >= 32) return Buffer.from(own);
-  const base = process.env.OPENAI_API_KEY ?? process.env.AI_API_KEY;
+  const base = process.env.OPENAI_API_KEY || process.env.AI_API_KEY;
   return base ? createHmac('sha256', base).update('gmai/medication-receipt/v1').digest() : null;
 }
 const sidHash = (sid: string) => createHash('sha256').update(`gmai-med-sid:${sid}`).digest('base64url');

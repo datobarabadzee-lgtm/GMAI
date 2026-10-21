@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { PatientContextSchema } from '@/schemas/clinical';
 import { templateById } from '@/knowledge/document-templates';
 import { callerKeyFrom, getProviderFor, isPlausibleKey } from '@/services/ai-provider';
-import { checkLimit, recordSpend } from '@/services/rate-limit';
+import { LIMITS, checkLimit, recordSpend } from '@/services/rate-limit';
 import { hasForeignScript } from '@/services/orchestrator';
 import { estimateCost, recordRun } from '@/services/metering';
 import { citationText, searchLiterature } from '@/services/literature';
@@ -88,15 +88,17 @@ export async function POST(req: Request) {
 
   const callerKey = callerKeyFrom(req);
   const ownKey = Boolean(callerKey && isPlausibleKey(callerKey));
-  const verdict = checkLimit(req, { ownKey });
+  const { provider } = getProviderFor(callerKey);
+  // A live run reserves its estimated cost against the daily cap (F13).
+  const verdict = await checkLimit(req, { ownKey, reserveUsd: provider.live ? LIMITS.reserveUsdPerRun : 0 });
   if (!verdict.ok) {
     return NextResponse.json(
       { error: 'RATE_LIMITED', messageKa: verdict.messageKa },
       { status: 429, headers: { 'retry-after': String(verdict.retryAfterSec) } },
     );
   }
+  let spentUsd = 0;
 
-  const { provider } = getProviderFor(callerKey);
   const blank = template.sections.map((heading) => ({
     heading,
     body: 'მონაცემი არ არის მოწოდებული — შესავსებია ექიმის მიერ',
@@ -244,9 +246,7 @@ export async function POST(req: Request) {
       /* malformed JSON leaves the blank structure in place */
     }
 
-    if (!ownKey) {
-      recordSpend(estimateCost(r.model, r.usage.inputTokens, r.usage.cachedInputTokens, r.usage.outputTokens));
-    }
+    if (!ownKey) spentUsd = estimateCost(r.model, r.usage.inputTokens, r.usage.cachedInputTokens, r.usage.outputTokens);
     recordRun({
       requestType: 'document',
       agent: 'A12',
@@ -283,5 +283,8 @@ export async function POST(req: Request) {
       filled: false,
       noticeKa: 'AI პროვაიდერი მიუწვდომელია — დოკუმენტი გენერირდა ცარიელი სტრუქტურით.',
     });
+  } finally {
+    // Settle the reservation to what the run actually cost (0 if it failed).
+    await recordSpend(spentUsd, verdict.reservation);
   }
 }
