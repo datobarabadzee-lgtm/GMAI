@@ -1,0 +1,20 @@
+{
+ "status": "SUCCESS",
+ "counts": {
+  "qualityRulesImported": 4482,
+  "searchItems": 4610,
+  "clinicalTopics": 0,
+  "clinicalRules": 0,
+  "qualityRules": 4482,
+  "taxonomyNodes": 160,
+  "taxonomyParentLinks": 205,
+  "taxonomyParentsUnresolved": 0,
+  "auditQuestions": 128,
+  "workflowSteps": 12,
+  "sections": 145,
+  "vectors": 4610,
+  "quarantined": 0,
+  "warnings": 0
+ },
+ "warnings": {}
+}
