@@ -50,7 +50,7 @@ export function checkRuntimeAssets(root = process.cwd()): { ok: boolean; checked
   const sizeMismatch: string[] = [];
   for (const f of required) {
     try {
-      if (fs.statSync(path.join(root, f.path)).size !== f.bytes) sizeMismatch.push(f.path);
+      if (fs.statSync(/*turbopackIgnore: true*/ path.join(root, f.path)).size !== f.bytes) sizeMismatch.push(f.path);
     } catch {
       missing.push(f.path);
     }

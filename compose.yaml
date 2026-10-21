@@ -1,0 +1,28 @@
+# GMAI on any Linux host with Docker (audit F17/F18).
+#   cp .env.example .env.production   # fill in; secrets from your secret store
+#   npm run env:check -- --hosting self_hosted --env-file .env.production
+#   docker compose up -d --build
+# Put a TLS reverse proxy (Caddy, nginx, Traefik) in front and set PUBLIC_ORIGIN
+# to its https:// address.
+services:
+  gmai:
+    build:
+      context: .
+      args:
+        APP_TIER: ${APP_TIER:-public}
+    image: gmai:release
+    env_file: .env.production
+    environment:
+      LIMIT_STORE: ${LIMIT_STORE:-file}
+      LIMIT_STORE_PATH: /app/data/runtime/limits.json
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - gmai-data:/app/data
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache
+volumes:
+  gmai-data:

@@ -27,7 +27,8 @@
     "prebuild": "node scripts/release-manifest.mjs",
     "eval:retrieval": "tsx --conditions=react-server scripts/eval-retrieval.ts",
     "med:coverage": "node scripts/medication-coverage.mjs",
-    "med:curation-diff": "node scripts/curation-diff.mjs"
+    "med:curation-diff": "node scripts/curation-diff.mjs",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@types/better-sqlite3": "^9.6.0",

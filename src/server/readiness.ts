@@ -55,12 +55,18 @@ export async function readiness(opts: { probe?: boolean } = {}) {
     detail: assets.ok ? `${assets.checked} files present with manifest sizes (medication index ${m?.counts.medicationIndexFiles ?? '?'})` : `missing ${assets.missing.length}, size mismatch ${assets.sizeMismatch.length}: ${[...assets.missing, ...assets.sizeMismatch].slice(0, 5).join(', ')}`,
   });
 
-  const authored = ['authored/quality/rules-active.json', 'authored/quality/taxonomy.json', 'authored/gmai_clinical_v2/units.json'].filter((f) => !fs.existsSync(path.join(process.cwd(), f)));
+  const corpus: [string, boolean][] = [
+    ['authored/quality/rules-active.json', fs.existsSync(path.join(process.cwd(), 'authored', 'quality', 'rules-active.json'))],
+    ['authored/quality/taxonomy.json', fs.existsSync(path.join(process.cwd(), 'authored', 'quality', 'taxonomy.json'))],
+    ['authored/gmai_clinical_v2/units.json', fs.existsSync(path.join(process.cwd(), 'authored', 'gmai_clinical_v2', 'units.json'))],
+  ];
+  const authored = corpus.filter(([, ok]) => !ok).map(([f]) => f);
   checks.push({ name: 'open_corpus', status: authored.length ? 'fail' : 'pass', detail: authored.length ? `missing: ${authored.join(', ')}` : 'quality corpus and clinical-v2 present' });
 
   if (tier === 'internal') {
     const db = process.env.KB_DB_PATH ?? path.join(process.cwd(), 'data', 'gmai-kb.sqlite');
-    checks.push({ name: 'internal_kb', status: fs.existsSync(db) ? 'pass' : 'warn', detail: fs.existsSync(db) ? 'SQLite knowledge base present' : 'internal SQLite knowledge base not built (npm run kb:import) — clinical-rule retrieval unavailable' });
+    const present = fs.existsSync(/*turbopackIgnore: true*/ db);
+    checks.push({ name: 'internal_kb', status: present ? 'pass' : 'warn', detail: present ? 'SQLite knowledge base present' : 'internal SQLite knowledge base not built (npm run kb:import) — clinical-rule retrieval unavailable' });
   }
 
   const env = checkEnv(process.env, { hosting: process.env.VERCEL ? 'vercel' : 'self_hosted' });

@@ -1,0 +1,24 @@
+# Same exclusions as .gitignore: secrets, private corpus, build output.
+.git
+node_modules
+.next
+out
+coverage
+*.tsbuildinfo
+next-env.d.ts
+eval-report.json
+release-manifest.json
+.env
+.env.*
+!.env.example
+!.env.local.template
+/data
+/knowledge-source
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.vercel
+/mnt
+*.zip
+screenshots
+release-out

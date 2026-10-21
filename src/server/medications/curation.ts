@@ -106,7 +106,7 @@ export async function loadCuratedMap(force = false) {
   if (cache && !force && Date.now() - cache.at < 60_000) return cache;
   let file: MapFile = { version: 1, entries: [] };
   try {
-    file = JSON.parse(await readFile(mapPath(), 'utf8')) as MapFile;
+    file = JSON.parse(await readFile(/*turbopackIgnore: true*/ mapPath(), 'utf8')) as MapFile;
   } catch {
     /* no file → no mappings */
   }
@@ -172,7 +172,7 @@ export async function saveDecisions(decisions: CurationDecision[]) {
   const { valid, invalid } = await validate(decisions);
   let file: MapFile = { version: 1, entries: [] };
   try {
-    file = JSON.parse(await readFile(mapPath(), 'utf8')) as MapFile;
+    file = JSON.parse(await readFile(/*turbopackIgnore: true*/ mapPath(), 'utf8')) as MapFile;
   } catch {
     /* new file */
   }
