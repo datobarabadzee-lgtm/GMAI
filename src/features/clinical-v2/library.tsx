@@ -130,7 +130,7 @@ export function ClinicalLibrary() {
         <p className="text-[12px] font-medium text-cyan">აკადემია</p>
         <h1 className="mt-0.5 text-2xl font-bold tracking-tight text-fg">კლინიკური ცოდნა</h1>
         <p className="mt-1 text-sm text-slate-400">
-          გადაუდებელი მედიცინა და ინტენსიური თერაპია{total ? ` · ${total} თემა · ${unitTotal} ერთეული` : ''}
+          გადაუდებელი მედიცინა და ინტენსიური თერაპია{total ? ` · ${total} თემა · ${unitTotal} ერთეული` : ''} · საცნობარო მასალა (არა ინტერაქტიული კურსი: ტესტი, პროგრესი და სერტიფიკატი არ არის)
         </p>
         <p className="mt-1 text-[12px] text-slate-500">{DISCLAIMER_KA}</p>
       </header>
