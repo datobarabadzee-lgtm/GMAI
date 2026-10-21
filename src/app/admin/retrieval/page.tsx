@@ -19,7 +19,7 @@ export default function RetrievalDebugPage() {
     <div className="mx-auto max-w-6xl space-y-4">
       <header>
         <h1 className="text-2xl font-bold tracking-tight text-fg">ძიების დიაგნოსტიკა</h1>
-        <p className="mt-1 text-sm text-slate-400">ჰიბრიდული მოძიების სრული კვალი: ნორმალიზაცია, ლექსიკური და სემანტიკური კანდიდატები, გაერთიანება, რერანკინგი და საბოლოო შერჩევა.</p>
+        <p className="mt-1 text-sm text-slate-400">ჰიბრიდული მოძიების სრული კვალი: ნორმალიზაცია, ლექსიკური და ვექტორული კანდიდატები (ვექტორი სემანტიკურია მხოლოდ ნასწავლი ემბედინგ-პროვაიდერით; hash = ლექსიკური n-gram), გაერთიანება, რერანკინგი და საბოლოო შერჩევა.</p>
       </header>
       <RetrievalDebugger />
     </div>

@@ -93,7 +93,7 @@ export const AGENTS: AgentSpec[] = [
     code: 'AG-05',
     name: 'Evidence Retrieval Agent',
     nameKa: 'მტკიცებულების მოძიების აგენტი',
-    description: 'ჰიბრიდული ძიება source registry-ში: სემანტიკური + ლექსიკური + ავტორიტეტი + სიახლე; აბრუნებს რანჟირებულ Evidence Card-ებს.',
+    description: 'ძიება source registry-ში: ლექსიკური + საკვანძო სიტყვების/ლექსიკონის ცნებების დამთხვევა + ავტორიტეტი + სიახლე (ნასწავლი სემანტიკური მოდელი არ გამოიყენება); აბრუნებს რანჟირებულ Evidence Card-ებს.',
     acceptedIntents: ['evidence', 'clinical_reasoning', 'differential', 'drug', 'research', 'guideline_comparison'],
     requiredInputs: ['question'],
     optionalInputs: ['filters'],

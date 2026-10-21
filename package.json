@@ -24,7 +24,8 @@
     "env:check": "tsx scripts/check-env.ts",
     "release:manifest": "node scripts/release-manifest.mjs",
     "release:verify": "node scripts/release-manifest.mjs --verify",
-    "prebuild": "node scripts/release-manifest.mjs"
+    "prebuild": "node scripts/release-manifest.mjs",
+    "eval:retrieval": "tsx --conditions=react-server scripts/eval-retrieval.ts"
   },
   "dependencies": {
     "@types/better-sqlite3": "^9.6.0",

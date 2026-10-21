@@ -3,11 +3,14 @@ import { SOURCES } from '@/knowledge/sources';
 import { expandQuery } from '@/kb/lexicon';
 
 /**
- * HYBRID RETRIEVAL — vector-ready abstraction.
+ * SOURCE-REGISTRY RETRIEVAL — lexical (audit F12).
  *
- * The scoring contract (semantic + lexical + authority + recency) matches what a
- * pgvector/BM25 backend would return, so swapping the in-memory index for a real
- * one only requires replacing `semanticScore` and `lexicalScore`.
+ * Score = term overlap + keyword/concept overlap + authority + recency. There is
+ * no learned embedding here: the field still named `semantic` in RetrievalHit
+ * (kept for API compatibility) is the KEYWORD score below, and the UI and the
+ * agent registry describe the search as lexical. A learned index would replace
+ * `keywordScore`; it is not enabled because it adds a paid call per question,
+ * which is the owner's decision.
  */
 
 const STOP = new Set(['the', 'and', 'for', 'with', 'რა', 'და', 'ის', 'თუ', 'როგორ', 'არის', 'რომელი', 'უნდა']);
@@ -45,8 +48,8 @@ function lexicalScore(tokens: string[], s: Source): { score: number; matched: st
   return { score: matched.length / tokens.length, matched: [...new Set(matched)] };
 }
 
-/** Placeholder for an embedding similarity; deterministic and explainable today. */
-function semanticScore(tokens: string[], s: Source): number {
+/** Overlap with the source's curated keywords (substring, both directions). Not an embedding similarity. */
+function keywordScore(tokens: string[], s: Source): number {
   const kw = s.keywords.map((k) => k.toLowerCase());
   let hits = 0;
   tokens.forEach((t) => {
@@ -88,7 +91,7 @@ export function retrieve(query: RetrievalQuery): RetrievalHit[] {
 
   const hits = candidates.map((s) => {
     const lex = lexicalScore(tokens, s);
-    const sem = semanticScore(tokens, s);
+    const sem = keywordScore(tokens, s);
     const auth = authorityScore(s);
     const rec = recencyScore(s);
     const score = 0.34 * sem + 0.3 * lex.score + 0.22 * auth + 0.14 * rec;

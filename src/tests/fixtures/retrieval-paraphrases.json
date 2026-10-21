@@ -1,0 +1,13 @@
+{
+  "note": "Synthetic queries, no patient data. Target = topic title of collection gmai_clinical_v2. Variants: exact Georgian term, Georgian clinical paraphrase, English term, lay Georgian description.",
+  "cases": [
+    { "target": "გულის გაჩერება - Cardiac Arrest", "exact": "გულის გაჩერება", "paraphrase": "გული გაუჩერდა, კარდიოპულმონური რეანიმაცია", "english": "cardiac arrest CPR", "lay": "ადამიანი დაეცა და არ სუნთქავს" },
+    { "target": "მასიური ტრანსფუზია", "exact": "მასიური ტრანსფუზია", "paraphrase": "დიდი მოცულობის სისხლის გადასხმა", "english": "massive transfusion protocol", "lay": "ტრავმისას ბევრი სისხლი დაკარგა" },
+    { "target": "დელირიუმის შეფასება", "exact": "დელირიუმის შეფასება", "paraphrase": "ცნობიერების მწვავე აშლილობის შეფასება ინტენსიურ თერაპიაში", "english": "delirium assessment CAM-ICU", "lay": "პაციენტი დაბნეულია და ვერ ცნობს ახლობლებს" },
+    { "target": "ვენური თრომბოემბოლიის პროფილაქტიკა", "exact": "ვენური თრომბოემბოლიის პროფილაქტიკა", "paraphrase": "ღრმა ვენების თრომბოზის თავიდან აცილება", "english": "VTE prophylaxis", "lay": "ფეხში თრომბი რომ არ გაუჩნდეს" },
+    { "target": "სწრაფი თანმიმდევრული ინტუბაცია (სთი)", "exact": "სწრაფი თანმიმდევრული ინტუბაცია", "paraphrase": "RSI ინტუბაციის მედიკამენტები", "english": "rapid sequence intubation", "lay": "სასუნთქი მილის სწრაფად ჩადგმა" },
+    { "target": "ჰიპოთერმია გულის გაჩერების შემდგომ", "exact": "ჰიპოთერმია გულის გაჩერების შემდგომ", "paraphrase": "სამიზნე ტემპერატურის მართვა რეანიმაციის შემდეგ", "english": "targeted temperature management after cardiac arrest", "lay": "გაცოცხლების შემდეგ სხეულის გაგრილება" },
+    { "target": "ნაწოლების პრევენცია", "exact": "ნაწოლების პრევენცია", "paraphrase": "წოლითი დაზიანების თავიდან აცილება", "english": "pressure ulcer prevention", "lay": "მწოლიარე ავადმყოფს კანი რომ არ დაუზიანდეს" },
+    { "target": "მწვავე კორონარული სინდრომი", "exact": "მწვავე კორონარული სინდრომი", "paraphrase": "მიოკარდიუმის მწვავე ინფარქტი", "english": "acute coronary syndrome STEMI", "lay": "გულმკერდის ძლიერი მჭიდი ტკივილი" }
+  ]
+}

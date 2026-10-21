@@ -9,10 +9,11 @@ export default function UnavailablePage() {
       <span className="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink-900">
         <Lock className="h-5 w-5 text-slate-400" />
       </span>
-      <h1 className="text-lg font-semibold text-fg">ეს მოდული საჯარო ვერსიაში არ არის</h1>
+      <h1 className="text-lg font-semibold text-fg">ეს გვერდი საჯარო ვერსიაში არ არის</h1>
       <p className="text-sm leading-relaxed text-slate-400">
-        კლინიკური მსჯელობა, ხარისხისა და დეფექტების ანალიზი და ცოდნის ბაზის ინსტრუმენტები ეყრდნობა ლიცენზირებულ და შიდა
-        კორპუსს, რომლის საჯაროდ გამოქვეყნებაც უფლებრივად დაუშვებელია. ისინი მუშაობს მხოლოდ დაწესებულების შიდა ვერსიაში.
+        საჯარო ვერსიაში დახურულია მხოლოდ ოპერატორის ხელსაწყოები (/admin, /dev): ისინი შიდა ცოდნის ბაზის, ხარჯის ჟურნალისა და
+        კურაციის სამართავადაა და მუშაობს მხოლოდ დაწესებულების შიდა ვერსიაში, ოპერატორის ავთენტიფიკაციით. კლინიკური მსჯელობა,
+        მედიკამენტები, ლაბორატორია, ხარისხისა და დეფექტების ანალიზი, აკადემია და კალკულატორები საჯარო ვერსიაშიც მუშაობს.
       </p>
       <div className="flex flex-wrap justify-center gap-2">
         <Link href="/" className="btn btn-primary text-xs">მთავარზე დაბრუნება</Link>
