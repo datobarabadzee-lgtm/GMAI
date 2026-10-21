@@ -42,7 +42,11 @@ export function isPublicPage(pathname: string): boolean {
   return !INTERNAL_ONLY_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 }
 
+/** Internal-only API trees (every path below them). */
+export const INTERNAL_ONLY_API_PREFIXES = ['/api/review'] as const;
+
 export function isPublicApi(pathname: string): boolean {
+  if (INTERNAL_ONLY_API_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`))) return false;
   return !(INTERNAL_ONLY_APIS as readonly string[]).includes(pathname);
 }
 

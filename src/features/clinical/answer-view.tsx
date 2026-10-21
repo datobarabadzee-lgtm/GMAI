@@ -11,6 +11,7 @@ import type { OrchestrationPlan, AgentResult } from '@/schemas/agent';
 import { Badge, Bullets, Collapsible, ExportBar, Panel } from '@/components/ui/primitives';
 import { AgeWarningBox, DrugSummaryCard, IdentityRequired, type AgeWarning, type IdentityMention } from '@/features/meds/drug-summary-card';
 import { AGENT_PANEL_KA, statusKa, toMarkdown } from './answer-export';
+import { SubmitForReview } from './submit-review';
 export { toMarkdown } from './answer-export';
 
 export type ProvenanceEntry = {
@@ -187,6 +188,9 @@ export function AnswerView({ result, onClear }: { result: OrchestrateResult; onC
           >
             <p className="font-semibold text-fg">{result.publication.labelKa}</p>
             {result.publication.noteKa && <p className="mt-0.5 text-slate-300">{result.publication.noteKa}</p>}
+            {result.publication.state === 'pending_human_review' && (
+              <SubmitForReview title={answer.bottomLine.slice(0, 120)} runId={result.runId ?? null} content={{ question: answer.queryId, bottomLine: answer.bottomLine, claims: result.claims, release: result.release, sources: result.sources }} />
+            )}
           </div>
         )}
         <p className="text-[15px] leading-relaxed text-slate-100">{answer.bottomLine}</p>

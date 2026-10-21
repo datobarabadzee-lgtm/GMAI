@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
       </head>
-      <body className="font-sans">
+      <body className="font-sans" data-tier={tier}>
         <ServiceWorker />
         <CaseProvider>
           <RoleProvider>
