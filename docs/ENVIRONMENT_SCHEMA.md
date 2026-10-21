@@ -62,3 +62,4 @@ npm run env:check -- --hosting vercel
 | `DATABASE_URL` | knowledge | არასავალდებულო | კი | — | არასავალდებულო PostgreSQL (წყაროების რეესტრის ასლი). |
 | `EVAL_TOKEN` | operations | არასავალდებულო | კი | — | /api/eval/drift-ის token; გარეშე endpoint არ არსებობს. |
 | `RELEASE_COMMIT` | operations | არასავალდებულო | — | `(git rev-parse HEAD)` | release manifest-ის commit, როცა .git არ არის ხელმისაწვდომი. |
+| `RELEASE_MANIFEST_DEBUG` | operations | არასავალდებულო | — | `0` | 1 = build-ისას release manifest-ი ბეჭდავს წყაროს ფაილების სიას (ზომა, hash-ის თავი) ორი ჰოსტის შესადარებლად. |

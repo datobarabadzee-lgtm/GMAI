@@ -428,6 +428,14 @@
       "secret": false,
       "default": "(git rev-parse HEAD)",
       "ka": "release manifest-ის commit, როცა .git არ არის ხელმისაწვდომი."
+    },
+    {
+      "name": "RELEASE_MANIFEST_DEBUG",
+      "group": "operations",
+      "required": "optional",
+      "secret": false,
+      "default": "0",
+      "ka": "1 = build-ისას release manifest-ი ბეჭდავს წყაროს ფაილების სიას (ზომა, hash-ის თავი) ორი ჰოსტის შესადარებლად."
     }
   ]
 }
