@@ -17,7 +17,7 @@ export function RolePicker({ onPicked }: { onPicked?: (r: Role) => void }) {
       <h1 className="font-display text-2xl font-semibold text-fg sm:text-3xl">ვინ იყენებს სისტემას?</h1>
       <p className="mt-2 text-sm leading-relaxed text-slate-400">
         აირჩიეთ — და დაინახავთ მხოლოდ იმას, რაც თქვენ გჭირდებათ. არჩევანი ნებისმიერ მომენტში იცვლება.
-        რეგისტრაცია არ არის საჭირო და არცერთი მონაცემი არ ინახება სერვერზე.
+        რეგისტრაცია არ არის საჭირო; სერვერს მონაცემთა ბაზა არ აქვს.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2">

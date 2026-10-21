@@ -24,7 +24,8 @@ const SECRET_SENTENCE = 'ეს არის შეკავებას და�
 
 async function post(body: unknown, headers: Record<string, string> = {}) {
   const { POST } = await import('@/app/api/orchestrate/route');
-  const res = await POST(new Request('http://localhost/api/orchestrate', { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify(body) }));
+  const { PROFESSIONAL_ATTESTATION_VERSION } = await import('@/knowledge/controller');
+  const res = await POST(new Request('http://localhost/api/orchestrate', { method: 'POST', headers: { 'content-type': 'application/json', 'x-processing-attestation': PROFESSIONAL_ATTESTATION_VERSION, ...headers }, body: JSON.stringify(body) }));
   return { status: res.status, json: await res.json(), raw: '' };
 }
 
@@ -128,5 +129,19 @@ describe('F19: BYOK does not depend on the operator key', () => {
       process.env.APP_TIER = prev;
       vi.doUnmock('@/services/ai-provider');
     }
+  });
+});
+
+describe('F07: processing basis enforced by the data, on the API', () => {
+  it('patient data in quick mode and in document generation need the attestation; a general question does not', async () => {
+    const { POST } = await import('@/app/api/orchestrate/route');
+    const q = (body: unknown, h: Record<string, string> = {}) => POST(new Request('http://localhost/api/orchestrate', { method: 'POST', headers: { 'content-type': 'application/json', ...h }, body: JSON.stringify(body) }));
+    modelText = 'ზოგადი პასუხი.';
+    expect((await q({ question: 'რა დოზით?', mode: 'quick', patient: { ...emptyPatientContext(), age: 70 } })).status).toBe(451);
+    expect((await q({ question: 'რა არის ანემია?', mode: 'quick' })).status).toBe(200);
+    const { POST: GEN } = await import('@/app/api/documents/generate/route');
+    const g = await GEN(new Request('http://localhost/api/documents/generate', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ templateId: 'referral', clinicalData: 'პაციენტი 64 წლის, ჰიპერტენზია' }) }));
+    expect(g.status).toBe(451);
+    expect((await g.json()).error).toBe('PROCESSING_BASIS_REQUIRED');
   });
 });

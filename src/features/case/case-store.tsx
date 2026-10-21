@@ -1,5 +1,6 @@
 'use client';
 
+import { SESSION_CLEARED_EVENT } from '@/features/settings/session-clear';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { emptyPatientContext, PatientContextSchema, type PatientContext } from '@/schemas/clinical';
 
@@ -70,6 +71,13 @@ export function CaseProvider({ children }: { children: React.ReactNode }) {
     } catch {
       /* ignore */
     }
+  }, []);
+
+  // Consent withdrawal / „clear session" (session-clear.ts) empties the case in memory too.
+  useEffect(() => {
+    const onClear = () => setPatientState(emptyPatientContext());
+    window.addEventListener(SESSION_CLEARED_EVENT, onClear);
+    return () => window.removeEventListener(SESSION_CLEARED_EVENT, onClear);
   }, []);
 
   const value = useMemo(() => ({ patient, setPatient, update, reset, loaded }), [patient, setPatient, update, reset, loaded]);

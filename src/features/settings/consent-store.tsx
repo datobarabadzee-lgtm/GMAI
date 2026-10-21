@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { CONSENT_VERSION } from '@/knowledge/controller';
+import { clearPatientSession } from './session-clear';
 
 /**
  * CONSENT RECORD
@@ -68,11 +69,12 @@ export function useConsent() {
     setRecord(null);
     try {
       window.localStorage.removeItem(KEY);
-      // Withdrawal must also clear what the browser holds from the session.
-      window.sessionStorage.removeItem('gmai.case.session.v1');
     } catch {
       /* ignore */
     }
+    // Withdrawal clears everything the browser holds from the session: case,
+    // conversation threads, confirmed products and the attestation (audit F07).
+    clearPatientSession();
   }, []);
 
   return { consent: record, granted: Boolean(record), loading, grant, withdraw };

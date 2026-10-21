@@ -1,5 +1,7 @@
 'use client';
 
+import { PROFESSIONAL_ATTESTATION_VERSION } from '@/knowledge/controller';
+import { SESSION_CLEARED_EVENT } from './session-clear';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Role } from '@/components/layout/nav';
 
@@ -27,7 +29,13 @@ type Ctx = {
   setUserKey: (k: string) => void;
   clearUserKey: () => void;
   authHeaders: () => Record<string, string>;
+  /** Professional attestation for sending patient data to the AI provider (audit F07). */
+  attested: boolean;
+  attest: () => void;
+  revokeAttestation: () => void;
 };
+
+const ATTEST_KEY = 'gmai.attestation.v1';
 
 const RoleContext = createContext<Ctx | null>(null);
 
@@ -35,6 +43,7 @@ export function RoleProvider({ children }: { children: ReactNode }) {
   const [role, setRoleState] = useState<Role | null>(null);
   const [userKey, setUserKeyState] = useState('');
   const [loading, setLoading] = useState(true);
+  const [attested, setAttested] = useState(false);
 
   useEffect(() => {
     try {
@@ -42,6 +51,7 @@ export function RoleProvider({ children }: { children: ReactNode }) {
       if (r === 'patient' || r === 'clinician' || r === 'quality' || r === 'student') setRoleState(r);
       const k = window.sessionStorage.getItem(APIKEY_KEY);
       if (k) setUserKeyState(k);
+      if (window.sessionStorage.getItem(ATTEST_KEY) === PROFESSIONAL_ATTESTATION_VERSION) setAttested(true);
     } catch {
       /* private mode or blocked storage — the app works without either */
     }
@@ -71,6 +81,29 @@ export function RoleProvider({ children }: { children: ReactNode }) {
 
   const clearUserKey = useCallback(() => setUserKey(''), [setUserKey]);
 
+  // Held for the browser session only; cleared with the session (session-clear.ts).
+  const attest = useCallback(() => {
+    setAttested(true);
+    try {
+      window.sessionStorage.setItem(ATTEST_KEY, PROFESSIONAL_ATTESTATION_VERSION);
+    } catch {
+      /* kept in memory for this page */
+    }
+  }, []);
+  const revokeAttestation = useCallback(() => {
+    setAttested(false);
+    try {
+      window.sessionStorage.removeItem(ATTEST_KEY);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+  useEffect(() => {
+    const onClear = () => setAttested(false);
+    window.addEventListener(SESSION_CLEARED_EVENT, onClear);
+    return () => window.removeEventListener(SESSION_CLEARED_EVENT, onClear);
+  }, []);
+
   const authHeaders = useCallback((): Record<string, string> => {
     const h: Record<string, string> = {};
     if (userKey) h['x-user-api-key'] = userKey;
@@ -85,12 +118,13 @@ export function RoleProvider({ children }: { children: ReactNode }) {
     } catch {
       /* blocked storage — the request is refused and the gate asks again */
     }
+    if (attested) h['x-processing-attestation'] = PROFESSIONAL_ATTESTATION_VERSION;
     return h;
-  }, [userKey]);
+  }, [userKey, attested]);
 
   const value = useMemo(
-    () => ({ role, setRole, loading, userKey, setUserKey, clearUserKey, authHeaders }),
-    [role, setRole, loading, userKey, setUserKey, clearUserKey, authHeaders],
+    () => ({ role, setRole, loading, userKey, setUserKey, clearUserKey, authHeaders, attested, attest, revokeAttestation }),
+    [role, setRole, loading, userKey, setUserKey, clearUserKey, authHeaders, attested, attest, revokeAttestation],
   );
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;

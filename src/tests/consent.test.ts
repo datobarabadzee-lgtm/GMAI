@@ -75,13 +75,21 @@ describe('consent affirmations', () => {
 });
 
 describe('server-side consent enforcement', () => {
-  it('requires the consent header for the patient mode', async () => {
-    const { readFileSync } = await import('node:fs');
-    const route = readFileSync('src/app/api/orchestrate/route.ts', 'utf8');
-    // A UI gate alone is a suggestion; the endpoint must refuse.
-    expect(route).toContain("x-consent-version");
-    expect(route).toContain('CONSENT_REQUIRED');
-    expect(route).toMatch(/mode === 'patient'/);
+  // Behavioural check of the API (was a text scan of the route file). Since
+  // F07 the basis is decided by the data in the request: processing-policy.ts.
+  it('enforces the processing basis on the API: consent for patient mode, attestation for patient data in other modes', async () => {
+    const { checkProcessingBasis, hasPatientData } = await import('@/server/processing-policy');
+    const { PROFESSIONAL_ATTESTATION_VERSION } = await import('@/knowledge/controller');
+    const r = (h: Record<string, string> = {}) => new Request('http://x/api/orchestrate', { method: 'POST', headers: h });
+    expect(checkProcessingBasis(r(), { mode: 'patient', patientData: false })).toMatchObject({ ok: false, error: 'CONSENT_REQUIRED', status: 451 });
+    expect(checkProcessingBasis(r({ 'x-consent-version': 'old' }), { mode: 'patient', patientData: false }).ok).toBe(false);
+    expect(checkProcessingBasis(r({ 'x-consent-version': CONSENT_VERSION }), { mode: 'patient', patientData: true }).ok).toBe(true);
+    const pd = hasPatientData({ question: 'პაციენტს 72 წლის, კრეატინინი 1.6 მგ/დლ — რა დოზა?' });
+    expect(pd).toBe(true);
+    expect(hasPatientData({ question: 'რა არის არტერიული ჰიპერტენზია?' })).toBe(false);
+    expect(checkProcessingBasis(r(), { mode: 'quick', patientData: pd })).toMatchObject({ ok: false, error: 'PROCESSING_BASIS_REQUIRED' });
+    expect(checkProcessingBasis(r({ 'x-processing-attestation': PROFESSIONAL_ATTESTATION_VERSION }), { mode: 'deep', patientData: pd }).ok).toBe(true);
+    expect(checkProcessingBasis(r(), { mode: 'quick', patientData: false }).ok).toBe(true);
   });
 
   it('sends the consent header from the client', async () => {

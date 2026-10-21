@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { CONSENT_POINTS, CONSENT_VERSION, CONTROLLER, DISCLOSURE, PROCESSOR, SUPERVISORY_AUTHORITY } from '@/knowledge/controller';
+import { ClearSessionButton } from '@/features/settings/clear-session-button';
+import { CONSENT_POINTS, CONSENT_VERSION, DATA_FLOWS, CONTROLLER, DISCLOSURE, PROCESSOR, SUPERVISORY_AUTHORITY } from '@/knowledge/controller';
 
 export const metadata = { title: 'კონფიდენციალობის პოლიტიკა' };
 
@@ -22,11 +23,39 @@ export default function PrivacyPage() {
         <h2 className="text-[15px] font-semibold text-clinical-low">მოკლედ</h2>
         <ul className="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-300">
           <li>— ანგარიში არ იქმნება. რეგისტრაცია, პაროლი და ელფოსტა არ ითხოვება.</li>
-          <li>— სერვერზე მონაცემთა ბაზა არ არსებობს. თქვენი ტექსტი არსად არ ინახება.</li>
+          <li>— სერვერზე მონაცემთა ბაზა არ არსებობს და აპლიკაცია ტექსტს დისკზე არ წერს. AI-პროვაიდერმა (OpenAI) შეიძლება ბოროტად გამოყენების კონტროლისთვის 30 დღემდე შეინახოს.</li>
           <li>— ქეისის მონაცემი რჩება თქვენივე ბრაუზერში და იშლება ჩანართის დახურვისას.</li>
-          <li>— სერვერის ჟურნალში არცერთი კლინიკური სიტყვა არ ფიქსირდება.</li>
-          <li>— პასუხის მისაღებად ტექსტი გადაეცემა {PROCESSOR.nameEn}-ს ({PROCESSOR.countryKa}).</li>
+          <li>— სერვერის ჟურნალში ფიქსირდება მხოლოდ ტექნიკური მაჩვენებლები, არა კლინიკური ტექსტი.</li>
+          <li>— პასუხის მისაღებად ტექსტი გადაეცემა {PROCESSOR.nameEn}-ს ({PROCESSOR.countryKa}); ძიების ტერმინები — Europe PMC-ს, პრეპარატის სახელი — openFDA-ს და EMA-ს. ზუსტი ცხრილი ქვემოთაა.</li>
         </ul>
+      </section>
+
+      <ClearSessionButton />
+
+      <section className="rounded-lg border border-line bg-ink-850/40 p-4">
+        <h2 className="text-[15px] font-semibold text-fg">სად მიდის მონაცემი — ყოველი გზა</h2>
+        <div className="mt-2 overflow-x-auto">
+          <table className="w-full min-w-[560px] text-left text-[12.5px] leading-relaxed text-slate-300">
+            <thead className="text-slate-500">
+              <tr>
+                <th className="py-1 pr-3 font-medium">მოდული</th>
+                <th className="py-1 pr-3 font-medium">რა</th>
+                <th className="py-1 pr-3 font-medium">ვის</th>
+                <th className="py-1 font-medium">საფუძველი</th>
+              </tr>
+            </thead>
+            <tbody>
+              {DATA_FLOWS.map((f) => (
+                <tr key={f.routeKa} className="border-t border-line align-top">
+                  <td className="py-1.5 pr-3">{f.routeKa}</td>
+                  <td className="py-1.5 pr-3">{f.whatKa}</td>
+                  <td className="py-1.5 pr-3">{f.toKa}</td>
+                  <td className="py-1.5">{f.basisKa}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="space-y-4">

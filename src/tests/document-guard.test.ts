@@ -59,8 +59,9 @@ describe('/api/documents/generate → /api/documents/export', () => {
     ] });
     expect(templateById(t.id)).toBeTruthy();
     const { POST } = await import('@/app/api/documents/generate/route');
+    const { PROFESSIONAL_ATTESTATION_VERSION } = await import('@/knowledge/controller');
     const res = await POST(new Request('http://localhost/api/documents/generate', {
-      method: 'POST', headers: { 'content-type': 'application/json' },
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-processing-attestation': PROFESSIONAL_ATTESTATION_VERSION },
       body: JSON.stringify({ templateId: t.id, patient: { ...emptyPatientContext(), problems: ['არტერიული ჰიპერტენზია'], medications: [{ id: 'm', drug: 'ამლოდიპინი', dose: '5 მგ', frequency: 'დღეში ერთხელ', route: '', indication: '', startDate: '', status: 'active' }] } }),
     }));
     const json = await res.json();

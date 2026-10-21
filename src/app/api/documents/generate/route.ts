@@ -8,6 +8,7 @@ import { hasForeignScript } from '@/services/orchestrator';
 import { estimateCost, recordRun } from '@/services/metering';
 import { citationText, searchLiterature } from '@/services/literature';
 import { EMPTY_MARK, guardDocument, type Removed } from '@/services/document-guard';
+import { checkProcessingBasis, hasPatientData } from '@/server/processing-policy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -76,6 +77,14 @@ export async function POST(req: Request) {
   if (!template) {
     return NextResponse.json({ error: 'UNKNOWN_TEMPLATE', messageKa: 'ასეთი დოკუმენტის შაბლონი არ არსებობს.' }, { status: 404 });
   }
+
+  // Case data go to the AI provider only with the professional attestation (audit F07).
+  const pd = parsed.data;
+  const basis = checkProcessingBasis(req, {
+    mode: 'document',
+    patientData: hasPatientData({ patient: pd.patient, texts: [pd.clinicalData, ...Object.values(pd.sectionInput), pd.insurance?.service ?? ''] }) || Boolean(pd.clinicalData.trim() || Object.values(pd.sectionInput).some((v) => v.trim())),
+  });
+  if (!basis.ok) return NextResponse.json({ error: basis.error, requiredVersion: basis.requiredVersion, messageKa: basis.messageKa }, { status: basis.status });
 
   const callerKey = callerKeyFrom(req);
   const ownKey = Boolean(callerKey && isPlausibleKey(callerKey));

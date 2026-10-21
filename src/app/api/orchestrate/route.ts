@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { sessionFrom } from '@/server/medications/receipts';
 import { callerKeyFrom, isPlausibleKey } from '@/services/ai-provider';
 import { checkLimit, recordSpend } from '@/services/rate-limit';
-import { CONSENT_VERSION } from '@/knowledge/controller';
+import { checkProcessingBasis, hasPatientData } from '@/server/processing-policy';
 import { substanceOf } from '@/lib/patient-intake';
 import { z } from 'zod';
 import { ClinicalModeSchema, PatientContextSchema } from '@/schemas/clinical';
@@ -108,24 +108,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'INSUFFICIENT_INPUT', messageKa: 'კლინიკური კითხვა ან ქეისის აღწერა აუცილებელია ანალიზის დასაწყებად.' }, { status: 400 });
   }
 
-  // Consent is enforced here, not only on screen. A UI gate can be bypassed by
-  // calling the endpoint directly, so the patient mode — the one that carries
-  // health data by definition — refuses to process without the header the
-  // consent screen sets. The header names the version of the text that was
-  // agreed to, so a changed disclosure invalidates stale affirmations.
-  if (parsed.data.mode === 'patient') {
-    const asserted = req.headers.get('x-consent-version');
-    if (asserted !== CONSENT_VERSION) {
-      return NextResponse.json(
-        {
-          error: 'CONSENT_REQUIRED',
-          requiredVersion: CONSENT_VERSION,
-          messageKa:
-            'ჯანმრთელობის მონაცემის დამუშავება შეუძლებელია ინფორმირებული თანხმობის გარეშე. გთხოვთ, გაეცნოთ ინფორმაციას და გასცეთ თანხმობა.',
-        },
-        { status: 451 },
-      );
-    }
+  // The basis for sending health data to the AI provider is enforced here, by
+  // the data in the request — not by the screen it came from (audit F07):
+  // patient mode needs the subject's consent; any other mode carrying
+  // patient-specific data needs the professional attestation.
+  const basis = checkProcessingBasis(req, {
+    mode: parsed.data.mode ?? 'quick',
+    patientData: hasPatientData({ question: parsed.data.question, patient: parsed.data.patient, extras: parsed.data.extras, texts: [parsed.data.plan ?? ''] }),
+  });
+  if (!basis.ok) {
+    return NextResponse.json({ error: basis.error, requiredVersion: basis.requiredVersion, messageKa: basis.messageKa }, { status: basis.status });
   }
 
   // The visitor may attach their own provider key, in which case the work is

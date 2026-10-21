@@ -1,5 +1,6 @@
 'use client';
 
+import { AttestationBox } from '@/features/settings/attestation-box';
 import { useState } from 'react';
 import { FileText, Upload, Wand2, Download, Loader2 } from 'lucide-react';
 import { DOC_TEMPLATES, templateById } from '@/knowledge/document-templates';
@@ -223,6 +224,9 @@ export function DocumentWorkspace() {
               <label className="label" htmlFor="doc-inst">დაწესებულება</label>
               <input id="doc-inst" className="field mt-1" value={institution} onChange={(e) => setInstitution(e.target.value)} placeholder="კლინიკის დასახელება" />
             </div>
+          </div>
+          <div className="mt-3">
+            <AttestationBox needed />
           </div>
           <button type="button" className="btn btn-primary mt-3 w-full" onClick={() => void generate()} disabled={generating}>
             <Wand2 className="h-4 w-4" /> დოკუმენტის შექმნა

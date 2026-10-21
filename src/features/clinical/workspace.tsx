@@ -1,5 +1,7 @@
 'use client';
 
+import { AttestationBox } from '@/features/settings/attestation-box';
+import { SESSION_CLEARED_EVENT } from '@/features/settings/session-clear';
 import { clearConfirmed, confirmationExtras, readConfirmedAll, regionKa, type ConfirmedRef } from '@/features/meds/confirmed-store';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -87,6 +89,15 @@ export function ClinicalWorkspace() {
       /* ignore */
     }
   }, []);
+  // Consent withdrawal / „clear session" removes the thread and confirmed products from memory too.
+  useEffect(() => {
+    const onClear = () => {
+      setTurns([]);
+      setMeds([]);
+    };
+    window.addEventListener(SESSION_CLEARED_EVENT, onClear);
+    return () => window.removeEventListener(SESSION_CLEARED_EVENT, onClear);
+  }, []);
 
   const save = (next: Turn[]) => {
     setTurns(next);
@@ -129,7 +140,7 @@ export function ClinicalWorkspace() {
       const json = await res.json();
       if (!res.ok) {
         turn.error = {
-          title: json.error === 'AI_UNAVAILABLE' ? 'AI ამჟამად მიუწვდომელია' : json.error === 'INSUFFICIENT_INPUT' ? 'არასაკმარისი მონაცემი' : 'პასუხი ვერ მომზადდა',
+          title: json.error === 'AI_UNAVAILABLE' ? 'AI ამჟამად მიუწვდომელია' : json.error === 'INSUFFICIENT_INPUT' ? 'არასაკმარისი მონაცემი' : json.error === 'PROCESSING_BASIS_REQUIRED' ? 'საჭიროა დადასტურება' : 'პასუხი ვერ მომზადდა',
           detail: json.messageKa,
         };
       } else {
@@ -269,6 +280,9 @@ export function ClinicalWorkspace() {
       {/* Composer — always at hand, above the phone tab bar. */}
       <div className="sticky bottom-[76px] z-20 mt-6 lg:bottom-4">
         <div className="rounded-3xl border border-line bg-ink-900 p-2 shadow-panel">
+          <div className="mb-2 px-1">
+            <AttestationBox needed={patientFilled} />
+          </div>
           {meds.map((med) => (
             <div key={med.region} className="mb-2 flex flex-wrap items-center gap-2 rounded-2xl bg-ink-850 px-3 py-2 text-[12.5px]">
               <span className="text-slate-400">დადასტურებული პროდუქტი · {regionKa(med.region)}:</span>
