@@ -80,6 +80,15 @@ export class KbUnavailableError extends Error {
 export function kbStats() {
   const db = openDb({ readonly: true });
   const one = (sql: string) => (db.prepare(sql).get() as { n: number }).n;
+  // A knowledge base imported before the parent-link table existed has no such
+  // table: null means „not computed — re-run kb:import", never 0.
+  const maybe = (sql: string) => {
+    try {
+      return one(sql);
+    } catch {
+      return null;
+    }
+  };
   return {
     sources: one('SELECT COUNT(*) n FROM knowledge_sources'),
     versions: one('SELECT COUNT(*) n FROM knowledge_source_versions'),
@@ -87,9 +96,9 @@ export function kbStats() {
     clinicalRules: one('SELECT COUNT(*) n FROM clinical_rules'),
     qualityRules: one('SELECT COUNT(*) n FROM quality_rules'),
     taxonomyNodes: one('SELECT COUNT(*) n FROM defect_taxonomy'),
-    taxonomyParentLinks: one("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution <> 'unresolved'"),
+    taxonomyParentLinks: maybe("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution <> 'unresolved'"),
     /** Readiness: parents that could not be linked to a stable id (audit F21). Must be 0. */
-    taxonomyParentsUnresolved: one("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution = 'unresolved'"),
+    taxonomyParentsUnresolved: maybe("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution = 'unresolved'"),
     auditQuestions: one('SELECT COUNT(*) n FROM audit_questions'),
     searchItems: one('SELECT COUNT(*) n FROM search_items'),
     vectors: one('SELECT COUNT(*) n FROM search_vectors'),
