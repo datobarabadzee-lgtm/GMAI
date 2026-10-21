@@ -31,6 +31,11 @@ const asArray = (v: unknown): string[] => {
 };
 const bool = (v: unknown) => (v ? 1 : 0);
 
+/** „A / B / C" → ["A","B","C"]; a slash inside a name („X/Y დეფექტი") is not a separator. */
+export function splitParents(raw: string): string[] {
+  return raw.split(/\s+\/\s+/).map((s) => s.trim()).filter(Boolean);
+}
+
 /** Candidate corpus files, resolved from KB_SOURCE_DIR. */
 export function discoverFiles(dir: string): { clinical?: string; quality?: string } {
   const out: { clinical?: string; quality?: string } = {};
@@ -84,11 +89,15 @@ function registerVersion(ctx: Ctx, opts: { sourceId: string; name: string; sourc
 
   // A new hash supersedes the previous active version of the same source.
   const versionId = `${opts.sourceId}@${opts.hash.slice(0, 12)}`;
-  db.prepare('UPDATE knowledge_source_versions SET active = 0, superseded_by = ? WHERE source_id = ? AND active = 1').run(versionId, opts.sourceId);
+  // The new version row must exist before older rows can point to it
+  // (superseded_by is a foreign key): importing a changed master file failed
+  // with FOREIGN KEY constraint failed when the order was reversed.
   db.prepare(
     `INSERT INTO knowledge_source_versions (version_id, source_id, version, file_name, file_hash, file_bytes, record_count, validation_status, imported_at, active)
-     VALUES (?,?,?,?,?,?,0,'PARTIAL',?,1)`,
+     VALUES (?,?,?,?,?,?,0,'PARTIAL',?,0)`,
   ).run(versionId, opts.sourceId, opts.version, path.basename(opts.file), opts.hash, opts.bytes, nowIso());
+  db.prepare('UPDATE knowledge_source_versions SET active = 0, superseded_by = ? WHERE source_id = ? AND active = 1 AND version_id <> ?').run(versionId, opts.sourceId, versionId);
+  db.prepare('UPDATE knowledge_source_versions SET active = 1 WHERE version_id = ?').run(versionId);
   return { versionId, alreadyImported: false };
 }
 
@@ -233,11 +242,31 @@ function importQuality(ctx: Ctx, file: string, report: ImportReport) {
     taxIds.add(t.taxonomy_id);
     insTax.run(t.taxonomy_id, versionId, t.taxonomy_type ?? null, t.code ?? null, t.name, t.parent ?? null, Array.isArray(t.source_heading_path) ? t.source_heading_path.join(' > ') : (t.source_heading_path ?? null), t.source ?? null);
   });
-  // Referential integrity: a parent code must exist in the taxonomy.
-  const codes = new Set((db.prepare('SELECT code FROM defect_taxonomy WHERE version_id = ?').all(versionId) as { code: string | null }[]).map((r) => r.code).filter(Boolean) as string[]);
-  (db.prepare('SELECT taxonomy_id, parent FROM defect_taxonomy WHERE version_id = ? AND parent IS NOT NULL AND parent <> \'\'').all(versionId) as { taxonomy_id: string; parent: string }[]).forEach((r) => {
-    if (!codes.has(r.parent)) warn(ctx, sourceId, r.taxonomy_id, 'BROKEN_TAXONOMY_PARENT', `parent code ${r.parent} not found`);
-  });
+  // Referential integrity (audit F21). The source writes a parent as a code
+  // („D01"), as a defect-class NAME, or as several names joined by " / ".
+  // Names can themselves contain "/" without spaces („ინფორმირების/კომუნიკაციის
+  // დეფექტი"), so only " / " separates parents. Each part is resolved to a
+  // stable node id only when it is unambiguous: an exact code, or the exact name
+  // of exactly one defect class. Anything else stays unresolved and is reported.
+  const nodes = db.prepare('SELECT taxonomy_id, taxonomy_type, code, name, parent FROM defect_taxonomy WHERE version_id = ?').all(versionId) as { taxonomy_id: string; taxonomy_type: string | null; code: string | null; name: string; parent: string | null }[];
+  const byCode = new Map(nodes.filter((n) => n.code).map((n) => [n.code!, n.taxonomy_id]));
+  const classByName = new Map<string, string[]>();
+  for (const n of nodes) if (n.taxonomy_type === 'defect_class') classByName.set(n.name, [...(classByName.get(n.name) ?? []), n.taxonomy_id]);
+  db.prepare('DELETE FROM defect_taxonomy_parents WHERE version_id = ?').run(versionId);
+  const insParent = db.prepare('INSERT OR REPLACE INTO defect_taxonomy_parents (taxonomy_id, version_id, parent_raw, parent_id, resolution) VALUES (?,?,?,?,?)');
+  for (const n of nodes) {
+    if (!n.parent?.trim()) continue;
+    for (const part of splitParents(n.parent)) {
+      const viaCode = byCode.get(part);
+      const viaName = classByName.get(part);
+      if (viaCode) insParent.run(n.taxonomy_id, versionId, part, viaCode, 'code');
+      else if (viaName?.length === 1) insParent.run(n.taxonomy_id, versionId, part, viaName[0], 'defect_class_name');
+      else {
+        insParent.run(n.taxonomy_id, versionId, part, null, 'unresolved');
+        warn(ctx, sourceId, n.taxonomy_id, 'BROKEN_TAXONOMY_PARENT', viaName && viaName.length > 1 ? `parent „${part}" matches ${viaName.length} defect classes — ambiguous, not linked` : `parent „${part}" matches no code or defect-class name`);
+      }
+    }
+  }
 
   const insQ = db.prepare('INSERT OR REPLACE INTO audit_questions (question_id, version_id, question, defect_classes, evidence_dimensions, heading_path) VALUES (?,?,?,?,?,?)');
   ((parsed.audit_question_bank as unknown[]) ?? []).forEach((raw, i) => {
@@ -512,6 +541,8 @@ export async function runImport(sourceDir: string, onProgress?: (msg: string) =>
   report.counts.clinicalRules = count('SELECT COUNT(*) n FROM clinical_rules');
   report.counts.qualityRules = count('SELECT COUNT(*) n FROM quality_rules');
   report.counts.taxonomyNodes = count('SELECT COUNT(*) n FROM defect_taxonomy');
+  report.counts.taxonomyParentLinks = count("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution <> 'unresolved'");
+  report.counts.taxonomyParentsUnresolved = count("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution = 'unresolved'");
   report.counts.auditQuestions = count('SELECT COUNT(*) n FROM audit_questions');
   report.counts.workflowSteps = count('SELECT COUNT(*) n FROM quality_workflow_steps');
   report.counts.sections = count('SELECT COUNT(*) n FROM quality_sections');

@@ -191,6 +191,17 @@ CREATE TABLE IF NOT EXISTS defect_taxonomy (
   source              TEXT
 );
 
+-- A taxonomy node may have several parents ("დიაგნოსტიკური დეფექტი / თერაპიული დეფექტი").
+-- The raw parent text stays in defect_taxonomy.parent; each resolved parent is one row here.
+CREATE TABLE IF NOT EXISTS defect_taxonomy_parents (
+  taxonomy_id   TEXT NOT NULL REFERENCES defect_taxonomy(taxonomy_id) ON DELETE CASCADE,
+  version_id    TEXT NOT NULL REFERENCES knowledge_source_versions(version_id) ON DELETE CASCADE,
+  parent_raw    TEXT NOT NULL,
+  parent_id     TEXT REFERENCES defect_taxonomy(taxonomy_id) ON DELETE CASCADE,
+  resolution    TEXT NOT NULL,          -- code | defect_class_name | unresolved
+  PRIMARY KEY (taxonomy_id, parent_raw)
+);
+
 CREATE TABLE IF NOT EXISTS audit_questions (
   question_id        TEXT PRIMARY KEY,
   version_id         TEXT NOT NULL REFERENCES knowledge_source_versions(version_id) ON DELETE CASCADE,

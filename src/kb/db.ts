@@ -87,6 +87,9 @@ export function kbStats() {
     clinicalRules: one('SELECT COUNT(*) n FROM clinical_rules'),
     qualityRules: one('SELECT COUNT(*) n FROM quality_rules'),
     taxonomyNodes: one('SELECT COUNT(*) n FROM defect_taxonomy'),
+    taxonomyParentLinks: one("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution <> 'unresolved'"),
+    /** Readiness: parents that could not be linked to a stable id (audit F21). Must be 0. */
+    taxonomyParentsUnresolved: one("SELECT COUNT(*) n FROM defect_taxonomy_parents WHERE resolution = 'unresolved'"),
     auditQuestions: one('SELECT COUNT(*) n FROM audit_questions'),
     searchItems: one('SELECT COUNT(*) n FROM search_items'),
     vectors: one('SELECT COUNT(*) n FROM search_vectors'),
