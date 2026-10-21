@@ -7,6 +7,7 @@ import { interpretLabs, parseLabText, type LabAnalysis } from '@/lib/labs';
 import { Badge, Bullets, EmptyState, ErrorState, ExportBar, Panel, Table } from '@/components/ui/primitives';
 import { uid } from '@/lib/utils';
 import type { LabValue } from '@/schemas/clinical';
+import { UPLOAD_HINT_KA, uploadForParsing } from '@/lib/upload-client';
 
 function Sparkline({ points }: { points: { date: string; value: number }[] }) {
   if (points.length < 2) return null;
@@ -58,13 +59,14 @@ export function LabWorkspace() {
   const onUpload = async (files: FileList | null) => {
     if (!files?.length) return;
     setUploadNote(null);
-    const fd = new FormData();
-    Array.from(files).forEach((f) => fd.append('files', f));
     try {
-      const res = await fetch('/api/parse', { method: 'POST', body: fd });
-      const json = await res.json();
-      const texts: string[] = (json.results ?? []).filter((r: { ok: boolean }) => r.ok).map((r: { text: string }) => r.text);
-      const failed = (json.results ?? []).filter((r: { ok: boolean }) => !r.ok);
+      const out = await uploadForParsing(files);
+      if (!out.ok) {
+        setUploadNote(out.messageKa);
+        return;
+      }
+      const texts: string[] = out.results.flatMap((r) => (r.ok ? [r.text] : []));
+      const failed = out.results.flatMap((r) => (r.ok ? [] : [r]));
       const parsed = texts.flatMap((t) => parseLabText(t));
       if (parsed.length) update('labs', [...patient.labs, ...parsed]);
       setUploadNote(
@@ -107,7 +109,7 @@ ${analysis.urgent.map((u) => `- ${u}`).join('\n') || '- არ არის'}`;
             <p className="label mb-1.5">ფაილის ატვირთვა</p>
             <label className="flex h-[120px] cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line bg-ink-850/40 text-center transition hover:border-cyan/40">
               <Upload className="h-5 w-5 text-slate-500" />
-              <span className="text-xs text-slate-400">PDF · DOCX · TXT · CSV</span>
+              <span className="text-xs text-slate-400">PDF · DOCX · TXT · CSV — {UPLOAD_HINT_KA}</span>
               <input type="file" multiple accept=".pdf,.docx,.txt,.md,.csv" className="hidden" onChange={(e) => void onUpload(e.target.files)} />
             </label>
             {uploadNote && <p className="mt-2 text-xs text-slate-400">{uploadNote}</p>}

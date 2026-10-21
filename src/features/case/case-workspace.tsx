@@ -14,6 +14,7 @@ import { AnswerView, type OrchestrateResult } from '@/features/clinical/answer-v
 import { Badge, Bullets, EmptyState, ErrorState, Panel, Skeleton } from '@/components/ui/primitives';
 import { cn, uid } from '@/lib/utils';
 import type { ClinicalMode, TimelineEvent } from '@/schemas/clinical';
+import { UPLOAD_HINT_KA, uploadForParsing } from '@/lib/upload-client';
 
 type Tab = 'timeline' | 'problems' | 'medications' | 'labs' | 'documents' | 'ai' | 'quality';
 
@@ -75,13 +76,15 @@ export function CaseWorkspace() {
   const onUpload = async (files: FileList | null) => {
     if (!files?.length) return;
     setUploadNote(null);
-    const fd = new FormData();
-    Array.from(files).forEach((f) => fd.append('files', f));
     try {
-      const res = await fetch('/api/parse', { method: 'POST', body: fd });
-      const json = await res.json();
-      const okFiles = (json.results ?? []).filter((r: { ok: boolean }) => r.ok);
-      const failed = (json.results ?? []).filter((r: { ok: boolean }) => !r.ok);
+      const out = await uploadForParsing(files);
+      if (!out.ok) {
+        setUploadNote(out.messageKa);
+        return;
+      }
+      const json = out;
+      const okFiles = json.results.flatMap((r) => (r.ok ? [r] : []));
+      const failed = json.results.flatMap((r) => (r.ok ? [] : [r]));
       if (okFiles.length) {
         update('documents', [...patient.documents, ...okFiles.map((r: { name: string; text: string }) => ({ id: uid(), name: r.name, text: r.text }))]);
       }
@@ -276,7 +279,7 @@ export function CaseWorkspace() {
               <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line bg-ink-850/40 px-4 py-8 text-center transition hover:border-cyan/40">
                 <Upload className="h-5 w-5 text-slate-500" />
                 <span className="text-sm text-slate-300">ატვირთეთ სამედიცინო დოკუმენტი</span>
-                <span className="text-xs text-slate-500">PDF · DOCX · TXT · Markdown · CSV — ფაილი მუშავდება მეხსიერებაში და არ ინახება</span>
+                <span className="text-xs text-slate-500">PDF · DOCX · TXT · Markdown · CSV — {UPLOAD_HINT_KA}</span>
                 <input type="file" multiple accept=".pdf,.docx,.txt,.md,.csv" className="hidden" onChange={(e) => void onUpload(e.target.files)} />
               </label>
               {uploadNote && <p className="text-xs text-slate-400">{uploadNote}</p>}

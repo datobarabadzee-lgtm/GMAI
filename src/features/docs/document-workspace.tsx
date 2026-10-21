@@ -8,6 +8,7 @@ import { useCase } from '@/features/case/case-store';
 import { useRole } from '@/features/settings/role-store';
 import { Badge, Bullets, EmptyState, ErrorState, ExportBar, Panel } from '@/components/ui/primitives';
 import { cn, uid } from '@/lib/utils';
+import { UPLOAD_HINT_KA, uploadForParsing } from '@/lib/upload-client';
 
 type ParsedResult = {
   ok: boolean;
@@ -168,17 +169,14 @@ export function DocumentWorkspace() {
     if (!files?.length) return;
     setBusy(true);
     setUploadError(null);
-    const fd = new FormData();
-    Array.from(files).forEach((f) => fd.append('files', f));
     try {
-      const res = await fetch('/api/parse', { method: 'POST', body: fd });
-      const json = await res.json();
-      if (!res.ok) {
-        setUploadError(json.messageKa ?? 'ფაილის დამუშავება ვერ მოხერხდა.');
+      const out = await uploadForParsing(files);
+      if (!out.ok) {
+        setUploadError(out.messageKa);
         return;
       }
-      setParsed(json.results as ParsedResult[]);
-      const good = (json.results as ParsedResult[]).filter((r) => r.ok && r.text);
+      setParsed(out.results as ParsedResult[]);
+      const good = (out.results as ParsedResult[]).filter((r) => r.ok && r.text);
       if (good.length) update('documents', [...patient.documents, ...good.map((r) => ({ id: uid(), name: r.name, text: r.text ?? '' }))]);
     } catch {
       setUploadError('სერვერთან კავშირი ვერ დამყარდა.');
@@ -254,7 +252,7 @@ export function DocumentWorkspace() {
           <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line bg-ink-850/40 px-4 py-8 text-center transition hover:border-cyan/40">
             <Upload className="h-5 w-5 text-slate-500" />
             <span className="text-sm text-slate-300">{busy ? 'მუშავდება…' : 'ატვირთეთ დოკუმენტი'}</span>
-            <span className="text-xs text-slate-500">PDF · DOCX · TXT · Markdown · CSV</span>
+            <span className="text-xs text-slate-500">PDF · DOCX · TXT · Markdown · CSV — {UPLOAD_HINT_KA}</span>
             <input type="file" multiple accept=".pdf,.docx,.txt,.md,.csv" className="hidden" onChange={(e) => void onUpload(e.target.files)} />
           </label>
           {uploadError && <div className="mt-3"><ErrorState title="ფაილი ვერ დამუშავდა" detail={uploadError} /></div>}

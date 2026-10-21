@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Database, Upload } from 'lucide-react';
 import { Badge, Bullets, ErrorState, Panel } from '@/components/ui/primitives';
+import { UPLOAD_HINT_KA, uploadForParsing } from '@/lib/upload-client';
 
 const TYPES = ['guideline', 'systematic_review', 'meta_analysis', 'rct', 'cohort', 'case_control', 'consensus', 'drug_label', 'regulatory', 'textbook', 'local_protocol', 'legal'];
 const RIGHTS = ['OPEN', 'PUBLIC_DOMAIN', 'LICENSED', 'INTERNAL_REFERENCE', 'RESTRICTED', 'UNKNOWN'];
@@ -38,11 +39,12 @@ export function IngestWorkspace({ enabled }: { enabled: boolean }) {
 
   const onFile = async (files: FileList | null) => {
     if (!files?.length) return;
-    const fd = new FormData();
-    Array.from(files).forEach((f) => fd.append('files', f));
-    const res = await fetch('/api/parse', { method: 'POST', body: fd });
-    const json = await res.json();
-    const first = (json.results ?? [])[0];
+    const out = await uploadForParsing(files);
+    if (!out.ok) {
+      setError(out.messageKa);
+      return;
+    }
+    const first = out.results[0];
     if (first?.ok) setForm((p) => ({ ...p, text: first.text, title: p.title || first.name }));
     else setError(first?.messageKa ?? 'ფაილი ვერ დამუშავდა.');
   };
@@ -52,7 +54,7 @@ export function IngestWorkspace({ enabled }: { enabled: boolean }) {
       <Panel title="ფაილის ატვირთვა" subtitle="ტექსტი ამოიღება და მზადდება ინდექსაციისთვის">
         <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line bg-ink-850/40 px-4 py-6 text-center transition hover:border-cyan/40">
           <Upload className="h-5 w-5 text-slate-500" />
-          <span className="text-xs text-slate-400">PDF · DOCX · TXT · Markdown · CSV</span>
+          <span className="text-xs text-slate-400">PDF · DOCX · TXT · Markdown · CSV — {UPLOAD_HINT_KA}</span>
           <input type="file" className="hidden" accept=".pdf,.docx,.txt,.md,.csv" onChange={(e) => void onFile(e.target.files)} />
         </label>
       </Panel>
