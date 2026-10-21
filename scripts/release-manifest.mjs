@@ -33,6 +33,7 @@ const IGNORE_FILE = (rel, base) =>
   rel === 'next-env.d.ts' ||
   rel === 'eval-report.json' ||
   rel === 'release-manifest.json' ||
+  rel === 'RELEASE_MANIFEST.json' ||
   (base === '.env' || (base.startsWith('.env.') && base !== '.env.example' && base !== '.env.local.template')) ||
   /\.sqlite(-wal|-shm)?$/.test(base) ||
   base.endsWith('.zip');
