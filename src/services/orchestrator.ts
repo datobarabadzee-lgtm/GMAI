@@ -26,7 +26,7 @@ import { clinicalV2Context, type ClinicalUnitHit } from '@/kb/clinical-v2-search
 import { CLINICAL_V2_PACKAGE, SETTING_KA, TYPE_KA } from '@/knowledge/clinical-v2';
 import { structureCase, type StructuredCase } from '@/agents/core/types';
 import { challengePlanAgent, clinicalReasoningAgent, differentialAgent, drugSafetyAgent, qualityGrounding, whatAmIMissingAgent, QUALITY_HARD_RULES_KA, type ChallengeOutput, type ClinicalReasoningOutput, type DifferentialOutput, type DrugSafetyOutput, type MissingDataOutput, type QualityGrounding } from '@/agents/core/agents';
-import { findContradictions, releaseGate, verifyCitations, verifyFreshness, verifyNumerics, type Contradiction, type CitationCheck, type FreshnessResult, type NumericClaim, type ReleaseDecision } from './verifiers';
+import { findContradictions, hitText, releaseGate, verifyCitations, verifyFreshness, verifyNumerics, type Contradiction, type CitationCheck, type FreshnessResult, type NumericClaim, type ReleaseDecision } from './verifiers';
 import { estimateCost, recordRun } from './metering';
 import { reviewMedications } from '@/lib/medication-review';
 import { DRUGS } from '@/knowledge/drugs';
@@ -34,7 +34,9 @@ import { screenMedicationList } from '@/knowledge/low-value-meds';
 import { drugMentions, innFromDictionary, knownDrugNames } from '@/services/drug-naming';
 import { buildMedicationGate, EMPTY_GATE } from '@/server/medications/agent-gate';
 import { unsupportedDrugNames } from '@/services/drug-name-guard';
-import { relevantSources } from '@/services/source-relevance';
+import { concepts, mapClaims, type ClaimMap, type Passage } from '@/services/claim-support';
+import { enforcePublication, type Publication } from '@/services/release-contract';
+import { withoutNegatedRequests } from '@/services/intent-text';
 import { FOCUS_CORRECTION, focusContext, focusFallback, focusFor, focusMissed } from '@/services/confirmed-focus';
 import { buildLedger, corpusHas, ledgerFreshness, resultText, scrubReferences, verifyReferences, type ReferenceCheck } from './run-ledger';
 import { appTier } from '@/lib/tier';
@@ -98,8 +100,9 @@ export type OrchestrateOutput = {
     /** Models that produced an attempt, in order (the retry may be the fallback model). */
     models: string[];
   };
-  structured: StructuredCase;
-  core: CoreAgentOutputs;
+  /** null when the answer was withheld (release BLOCK). */
+  structured: StructuredCase | null;
+  core: CoreAgentOutputs | null;
   provenance: ProvenanceEntry[];
   /** Drug identity as the server resolved it (no label text). */
   medication: {
@@ -112,8 +115,12 @@ export type OrchestrateOutput = {
   };
   /** Units of collection gmai_clinical_v2 that grounded this answer, with deep links. */
   clinicalKnowledge: ClinicalKnowledgeRef | null;
-  verification: VerificationBundle;
+  verification: VerificationBundle | null;
   release: ReleaseDecision;
+  /** How the answer may be shown and exported (release-contract.ts). */
+  publication: Publication;
+  /** Sentences of the published answer and the passage each one is linked to, if any. */
+  claimSupport: ClaimMap | null;
 };
 
 export type ClinicalKnowledgeRef = {
@@ -135,6 +142,8 @@ export type ClinicalKnowledgeRef = {
     typesKa: string[];
     snippet: string;
     hasMedia: boolean;
+    /** A sentence of the answer is linked to this unit (claim-support.ts); otherwise it is shown as related reference material only. */
+    linked: boolean;
   }[];
 };
 
@@ -666,7 +675,9 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   // not turn every follow-up into a new emergency.
   const conversation = conversationOf(input.extras);
   const priorText = conversation.map((t) => t.question).join('\n');
-  const routed = priorText ? `${priorText}\n${combined}` : combined;
+  // Routing reads the request without the subjects the user excluded
+  // ("დოზირების გარეშე" is not a drug question; audit F09).
+  const routed = withoutNegatedRequests(priorText ? `${priorText}\n${combined}` : combined);
 
   const redFlags = detectRedFlags(combined);
   // A danger sign the patient ticked in the intake is as real as one they typed.
@@ -757,7 +768,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   // The retrieval query is the clinical question plus the problem list and a
   // bounded slice of the narrative. Feeding the whole narrative dilutes term
   // coverage and buries the concepts that actually drive retrieval.
-  const retrievalQuery = [priorText, question, patient.problems.join(' '), input.plan ?? '', patient.narrative.slice(0, 260)].filter(Boolean).join(' ');
+  const retrievalQuery = withoutNegatedRequests([priorText, question, patient.problems.join(' '), input.plan ?? '', patient.narrative.slice(0, 260)].filter(Boolean).join(' '));
   const qualityMode = mode === 'quality' || intent === 'defect' || intent === 'quality';
 
   // Clinical and quality corpora are retrieved separately so that one can never
@@ -768,7 +779,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   // rule base out. Clinician and student modes only: it is professional
   // reference material, not patient education.
   const useClinicalV2 = !qualityMode && mode !== 'patient';
-  const v2Query = [priorText, question, patient.problems.join(' ')].filter(Boolean).join(' ');
+  const v2Query = withoutNegatedRequests([priorText, question, patient.problems.join(' ')].filter(Boolean).join(' '));
   const [clinicalKb, qualityKb, v2Kb] = await Promise.all([
     qualityMode ? Promise.resolve(null) : retrieveRules(retrievalQuery, { kinds: ['clinical_rule'], limit: 10 }),
     retrieveRules(retrievalQuery, { kinds: ['quality_rule', 'audit_question'], limit: qualityMode ? 14 : 4 }),
@@ -933,7 +944,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   // A drug question in which no name could be identified: the model must not
   // treat an unknown word as a real medicine (its existence, composition or
   // dose), only ask for the exact name or package details.
-  const drugQuestion = intent === 'drug' || /დოზ|წამალ|წამლ|პრეპარატ|მედიკამენტ|dose|drug/i.test(question);
+  const drugQuestion = intent === 'drug' || /დოზ|წამალ|წამლ|პრეპარატ|მედიკამენტ|dose|drug/i.test(withoutNegatedRequests(question));
   const unknownDrugNote =
     drugQuestion && !medication.confirmed && !medication.mentions.length
       ? 'მედიკამენტის იდენტობა: კითხვაში დასახელებული პრეპარატი ბაზაში (FDA, EMA და ქართული კატალოგი) ზუსტი დასახელებით ვერ მოიძებნა (ასევე ევროპის EMA-ს რეესტრში). არ დაადასტურო, რომ ასეთი წამალი არსებობს, და არ თქვა მისი შემადგენლობა, ჩვენება ან დოზა; სთხოვე ზუსტი სახელი (ლათინურად), მოქმედი ნივთიერება, ფორმა და სიძლიერე შეფუთვიდან.'
@@ -983,28 +994,36 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     patient.problems.join(' '),
     patient.medications.map((m) => `${m.drug} ${m.dose} ${m.frequency}`).join(' '),
     patient.labs.map((l) => `${l.analyte} ${l.value}`).join(' '),
-    [patient.age, patient.weightKg, patient.heightCm, patient.egfr, patient.creatinineMgDl].filter((v) => v !== null).join(' '),
+    // Structured values are written with their unit so that they become typed
+    // facts („81 წლის", „28 მლ/წთ"), never bare numbers.
+    [
+      patient.age !== null ? `ასაკი ${patient.age} წლის` : '',
+      patient.weightKg !== null ? `წონა ${patient.weightKg} კგ` : '',
+      patient.heightCm !== null ? `სიმაღლე ${patient.heightCm} სმ` : '',
+      patient.egfr !== null ? `eGFR ${patient.egfr} მლ/წთ` : '',
+      patient.creatinineMgDl !== null ? `კრეატინინი ${patient.creatinineMgDl} მგ/დლ` : '',
+    ].filter(Boolean).join('. '),
     JSON.stringify(input.extras ?? {}),
   ].join('\n'));
+  // A drug name the model wrote must come from the user or the agents — the
+  // model may not map a trade name to a substance from its own memory.
+  const allowedNames = [
+    question,
+    priorText,
+    input.plan ?? '',
+    patient.medications.map((m) => m.drug).join(' '),
+    ...[...ctx.results.values()].map((r) => [r.summary, ...r.sections.map((x) => `${x.titleKa} ${x.body} ${x.bullets.join(' ')}`), JSON.stringify(r.data ?? {})].join(' ')),
+    kb.hits.length ? packContext(kb.hits, v2Hits.length ? 32000 : 7000) : '',
+  ].join('\n');
   const deterministicBottomLine = bottomLine;
   let modelNumerics: NumericClaim[] = [];
   let references: ReferenceCheck[] = [];
   let synthesisReplaced = false;
   let drugNamesRejected: string[] = [];
   if (synthesized.text) {
-    modelNumerics = verifyNumerics(synthesized.text, kb.hits, ledger.numbers);
+    modelNumerics = verifyNumerics(synthesized.text, kb.hits, ledger);
     references = verifyReferences(synthesized.text, ledger);
     const risky = modelNumerics.some((n) => n.status === 'UNVERIFIED' && ['dose', 'lab_threshold', 'threshold', 'age_cutoff', 'interval'].includes(n.kind));
-    // A drug name the model wrote must come from the user or the agents — the
-    // model may not map a trade name to a substance from its own memory.
-    const allowedNames = [
-      question,
-      priorText,
-      input.plan ?? '',
-      patient.medications.map((m) => m.drug).join(' '),
-      ...[...ctx.results.values()].map((r) => [r.summary, ...r.sections.map((x) => `${x.titleKa} ${x.body} ${x.bullets.join(' ')}`), JSON.stringify(r.data ?? {})].join(' ')),
-      kb.hits.length ? packContext(kb.hits, v2Hits.length ? 32000 : 7000) : '',
-    ].join('\n');
     drugNamesRejected = unsupportedDrugNames(synthesized.text, allowedNames);
     if (risky || drugNamesRejected.length) {
       // A dose or threshold the engines never produced is not published, however fluent.
@@ -1050,23 +1069,27 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     engine,
   };
 
-  // Only sources that support what this reader is shown are published under
-  // the answer (patient: bottom line and the plain-language explanation;
-  // clinician: bottom line, answer sections and the drug/calculator output).
-  // Checklist items such as A03's omissions are not the answer's evidence.
-  const shownText = [
-    question,
-    answer.bottomLine,
-    ...(mode === 'patient'
-      ? (ctx.results.get('A16')?.sections ?? []).flatMap((x) => [x.titleKa, x.body, ...x.bullets])
-      : [
-          ...answer.sections.filter((x) => x.id !== 'missing').flatMap((x) => [x.titleKa, x.body, ...x.bullets]),
-          ...['A07', 'A09'].flatMap((id) => (ctx.results.get(id)?.sections ?? []).flatMap((x) => [x.titleKa, x.body, ...x.bullets])),
-        ]),
-  ].join('\n');
-  const publishedSources = relevantSources(sourcesByIds(allSourceIds), shownText);
-
-  const safety = runSafetyGate({ answer, claims, risk, emergency, numericVerified: routing.requireNumericVerification });
+  /* ── claims → passages (audit F04) ───────────────────────────────────────── */
+  // Every passage this run actually has: registry sources the agents cited,
+  // retrieved rules and clinical units, retrieved literature, and the
+  // deterministic output of the agents. A sentence of the published answer is
+  // linked to a passage only on shared specific concepts about the question's
+  // own topic; sources are published only for linked sentences.
+  const registry = sourcesByIds(allSourceIds);
+  const passages: Passage[] = [
+    ...registry.map((src) => ({ id: src.source_id, sourceId: src.source_id, kind: 'registry' as const, title: src.title, text: [src.key_finding, src.excerpt, src.population, src.applicability].filter(Boolean).join(' ') })),
+    ...kb.hits.map((h) => ({ id: h.rule_id, sourceId: h.rule_id, kind: (h.kind === 'clinical_unit' ? 'clinical_unit' : 'kb_rule') as Passage['kind'], title: h.rule_id, text: hitText(h) })),
+    ...ledger.citations.map((c) => ({ id: c.id, sourceId: c.pmid ? `PMID:${c.pmid}` : c.id, kind: 'literature' as const, title: c.title, text: c.abstract ?? '' })),
+    ...[...ctx.results.values()]
+      .filter((r) => r.status === 'ok' && ['A07', 'A09', 'A10', 'A16', 'A17'].includes(r.agentId))
+      .map((r) => ({ id: r.agentId, sourceId: r.agentId, kind: 'engine' as const, title: r.agentId, text: resultText(r) })),
+  ];
+  // The bottom line is the text a reader takes as the answer; deterministic
+  // sections carry their own agent provenance.
+  const claimMap = mapClaims(answer.bottomLine, withoutNegatedRequests(question), passages);
+  // A computed score shown to a clinician carries its formula's source.
+  const computedSourceIds = mode === 'patient' ? [] : ((ctx.results.get('A09')?.data as { computed?: { sourceIds: string[] }[] } | undefined)?.computed ?? []).flatMap((x) => x.sourceIds);
+  const publishedSources = registry.filter((src) => claimMap.linkedSourceIds.includes(src.source_id) || computedSourceIds.includes(src.source_id));
 
   /* ── verifiers (numeric · citation · freshness · contradiction) ─────────── */
   const answerText = [answer.bottomLine, ...answer.sections.flatMap((s) => [s.body, ...s.bullets])].join('\n');
@@ -1079,7 +1102,8 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   const verification: VerificationBundle = {
     // In the internal tier deterministic sections are also checked against KB
     // rules; in the public tier only model-written text can carry an invented number.
-    numerics: kb.hits.length ? verifyNumerics(answerText, kb.hits, ledger.numbers) : modelNumerics,
+    // Every number in what is actually published, checked in context.
+    numerics: verifyNumerics(answerText, kb.hits, ledger),
     citations: verifyCitations(citedIds, kb.hits, { known: corpusHas, returned: ledger.ruleIds }),
     freshness:
       kbFreshness.status === 'UNCERTAIN' && litFreshness.status !== 'UNCERTAIN'
@@ -1109,11 +1133,20 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     contradictions: verification.contradictions,
     qualityContext: Boolean(core.quality),
     tier: appTier(),
-    grounding: ledger.ruleIds.size + ledger.citations.length + allSourceIds.length + kb.hits.length,
+    claimSupport: { clinical: claimMap.clinicalClaims, linked: claimMap.linkedClaims },
     rejectedReferences: references.filter((r) => r.status === 'NOT_RETRIEVED').length,
     synthesisReplaced,
+    publishedUnverifiedDoses: verification.numerics.filter((n) => (n.status === 'UNVERIFIED' || n.status === 'CONFLICT') && ['dose', 'lab_threshold', 'threshold'].includes(n.kind)).length,
+    publishedUnsupportedDrugs: unsupportedDrugNames(answerText, allowedNames),
+    userProvidedDoses: verification.numerics.filter((n) => n.status === 'USER_PROVIDED' && n.kind === 'dose').length,
   });
 
+  // A20 receives the real result of the numeric check, not the router's flag
+  // saying a check was required (audit F03).
+  const numericVerified = verification.numerics.every((n) => n.status === 'VERIFIED_AGAINST_RULE' || n.status === 'VERIFIED_AGAINST_ENGINE' || n.status === 'USER_PROVIDED');
+  const safety = runSafetyGate({ answer, claims, risk, emergency, numericVerified });
+  safety.blocked = release.status === 'BLOCK';
+  safety.passed = !safety.blocked;
   answer.humanReviewRequired = safety.humanReviewRequired || release.humanReviewRequired;
 
   const gateBullets = [
@@ -1145,9 +1178,21 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
 
   const provenance = provenanceOf(kb.hits);
   let clinicalKnowledge: ClinicalKnowledgeRef | null = null;
-  if (v2Hits.length) {
+  // Reference units are shown as the answer's grounding only when a sentence of
+  // the answer is linked to them (audit F04: trauma glossary units were shown
+  // under a definition of hypertension).
+  const linkedIds = new Set(claimMap.claims.filter((c) => c.status === 'LINKED' && c.passage).map((c) => c.passage!.id));
+  // A rule the published answer cites by ID (and A19 verified as retrieved) is linked too.
+  for (const id of kb.ruleIds) if (answerText.includes(id)) linkedIds.add(id);
+  // A unit is shown when a sentence is linked to it, or when its own topic /
+  // section / unit title is about the question's subject — never on a shared
+  // word in its body (a glossary line is not the subject of a unit).
+  const qConcepts = concepts(withoutNegatedRequests(question));
+  const titled = (h: ClinicalUnitHit) => [...concepts(`${h.topic_title} ${h.section_title} ${h.unit_title}`)].some((c) => qConcepts.has(c));
+  const shownV2 = v2Hits.filter((h) => linkedIds.has(h.rule_id) || titled(h));
+  if (shownV2.length) {
     // Same budget packContext gave the clinical units (75% of 32000).
-    const v2Ctx = clinicalV2Context(v2Hits, 24000);
+    const v2Ctx = clinicalV2Context(shownV2, 24000);
     clinicalKnowledge = {
       collection: 'gmai_clinical_v2',
       package: CLINICAL_V2_PACKAGE,
@@ -1155,7 +1200,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
       contextSectionIds: v2Ctx.sectionIds,
       partialSectionIds: v2Ctx.partialSectionIds,
       omittedSectionIds: v2Ctx.omittedSectionIds,
-      units: v2Hits.map((h) => ({
+      units: shownV2.map((h) => ({
         id: h.rule_id,
         href: h.href,
         topicTitle: h.topic_title,
@@ -1166,6 +1211,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
         typesKa: h.clinical_types.filter((t) => t !== 'clinical_context').map((t) => TYPE_KA[t]),
         snippet: h.snippet,
         hasMedia: h.has_media,
+        linked: linkedIds.has(h.rule_id),
       })),
     };
   }
@@ -1192,7 +1238,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     latencyMs: Date.now() - startedAt,
   });
 
-  return {
+  return enforcePublication({
     runId,
     plan,
     answer,
@@ -1201,7 +1247,11 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     safety,
     routing,
     sources: publishedSources,
-    kb: { coverage: kb.coverage, messageKa: kb.messageKa, ruleIds: kb.ruleIds, hitCount: kb.hits.length },
+    // Coverage is reported for the ANSWER: retrieved material that no sentence
+    // of it is linked to does not make the question „covered".
+    kb: kb.hits.length && ![...linkedIds].some((id) => kb.ruleIds.includes(id)) && !shownV2.length
+      ? { coverage: 'NOT_COVERED' as const, messageKa: 'მოძიებული შიდა მასალა ამ პასუხის დებულებებს არ დაუკავშირდა.', ruleIds: kb.ruleIds, hitCount: kb.hits.length }
+      : { coverage: kb.coverage, messageKa: kb.messageKa, ruleIds: kb.ruleIds, hitCount: kb.hits.length },
     usage: {
       model: synthesized.model,
       ...synthesized.usage,
@@ -1223,7 +1273,8 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
     clinicalKnowledge,
     verification,
     release,
-  };
+    claimSupport: claimMap,
+  }, mode);
 }
 
 export const AGENT_CATALOGUE = AGENTS;

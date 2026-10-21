@@ -247,8 +247,9 @@ export function PatientWorkspace() {
     ? { ...a16Action, titleKa: 'ჯერ ნუ მისცემთ — დაუკავშირდით ექიმს დღესვე', body: 'ეს წამალი ამ ასაკში არ უნდა დაინიშნოს. თუ ბავშვი უკვე იღებს, უეცრად ნუ შეწყვეტთ — ექიმი გეტყვით, როგორ შეიცვალოს.', bullets: [] }
     : a16Action;
   const infoSections = useMemo(() => (a16?.sections ?? []).filter((s) => !s.titleEn.startsWith('Action:') && ((s.body.trim() && s.body.trim() !== '—') || s.bullets.length)), [a16]);
+  const pubLine = result?.publication && result.publication.state !== 'published' ? `**${result.publication.labelKa}**\n\n` : '';
   const md = a16
-    ? `# ${history[history.length - 1]?.question ?? ''}\n\n${result?.answer.bottomLine ?? ''}\n\n${a16.sections.map((s) => `## ${s.titleKa}\n${s.body}\n${s.bullets.map((b) => `- ${b}`).join('\n')}`).join('\n\n')}\n\n_ეს არ ცვლის ექიმთან კონსულტაციას._`
+    ? `# ${history[history.length - 1]?.question ?? ''}\n\n${pubLine}${result?.answer.bottomLine ?? ''}\n\n${a16.sections.map((s) => `## ${s.titleKa}\n${s.body}\n${s.bullets.map((b) => `- ${b}`).join('\n')}`).join('\n\n')}\n\n_ეს არ ცვლის ექიმთან კონსულტაციას._`
     : '';
   const style = URGENCY_STYLE[urgency] ?? URGENCY_STYLE.routine;
   const UrgIcon = style.icon;
@@ -447,6 +448,9 @@ export function PatientWorkspace() {
               </div>
             }
           >
+            {result.publication && (result.publication.state === 'withheld' || result.publication.state === 'pending_human_review') && (
+              <p role="status" className="mb-3 rounded-lg border border-clinical-high/50 bg-clinical-high/10 p-3 text-[13.5px] font-medium text-fg">{result.publication.labelKa}</p>
+            )}
             <p className="mb-4 whitespace-pre-line text-[15.5px] leading-relaxed text-slate-100">{result.answer.bottomLine}</p>
             <div className="space-y-2">
               {infoSections.map((s, i) => (

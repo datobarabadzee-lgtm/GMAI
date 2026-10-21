@@ -55,7 +55,7 @@ describe('run ledger', () => {
 
   it('verifies model numbers against the engines and flags invented ones', () => {
     const ledger = buildLedger([agent({ summary: 'დოზა 2.5 მგ' })], 'eGFR 28');
-    const n = verifyNumerics('დანიშნეთ 2.5 მგ; ან 10 მგ.', [], ledger.numbers);
+    const n = verifyNumerics('დანიშნეთ 2.5 მგ; ან 10 მგ.', [], ledger);
     expect(n.find((x) => x.value.startsWith('2.5'))?.status).toBe('VERIFIED_AGAINST_ENGINE');
     expect(n.find((x) => x.value.startsWith('10'))?.status).toBe('UNVERIFIED');
   });
@@ -108,7 +108,7 @@ describe('orchestrator end-to-end in the public tier (model mocked)', () => {
     const out = await orchestrate({ question: 'რა დოზით დავნიშნო აპიქსაბანი?', mode: 'quick', patient: { ...emptyPatientContext(), age: 81, egfr: 28 } });
     expect(out.answer.bottomLine).toContain('81 წლისაა');
     expect(out.answer.bottomLine).not.toContain('10.5555/invented');
-    expect(out.verification.references[0]?.status).toBe('NOT_RETRIEVED');
+    expect(out.verification!.references[0]?.status).toBe('NOT_RETRIEVED');
   });
 
   it('does not flag the author corpus IDs as fabricated in quality mode', async () => {
@@ -120,9 +120,9 @@ describe('orchestrator end-to-end in the public tier (model mocked)', () => {
       patient: { ...emptyPatientContext(), narrative: 'ისტორიაში არ არის დოკუმენტირებული ინფორმირებული თანხმობა ოპერაციაზე და ოპერაციის ოქმი არასრულია. დიაგნოზი დაგვიანდა 48 საათით.' },
       extras: { caseNarrative: 'ისტორიაში არ არის დოკუმენტირებული ინფორმირებული თანხმობა ოპერაციაზე და ოპერაციის ოქმი არასრულია. დიაგნოზი დაგვიანდა 48 საათით.' },
     });
-    expect(out.verification.citations.checks.length).toBeGreaterThan(0);
-    expect(out.verification.citations.fabricated).toEqual([]);
-    expect(out.verification.citations.checks.every((c) => c.status === 'SUPPORTED')).toBe(true);
+    expect(out.verification!.citations.checks.length).toBeGreaterThan(0);
+    expect(out.verification!.citations.fabricated).toEqual([]);
+    expect(out.verification!.citations.checks.every((c) => c.status === 'SUPPORTED')).toBe(true);
   });
 });
 

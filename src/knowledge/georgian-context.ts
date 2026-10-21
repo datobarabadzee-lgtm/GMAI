@@ -183,8 +183,9 @@ export const GEORGIAN_CONTEXT_NOTES: GeorgianContextNote[] = [
 
 export function georgianContextFor(text: string): GeorgianContextNote[] {
   const t = text.toLowerCase();
-  const hits = GEORGIAN_CONTEXT_NOTES.filter((n) => n.keywords.some((k) => t.includes(k.toLowerCase())));
-  return hits.length ? hits : GEORGIAN_CONTEXT_NOTES.filter((n) => n.category === 'documentation' || n.category === 'legal').slice(0, 2);
+  // Only notes whose keywords occur in the request. There is no default note:
+  // a fallback put the patient-rights law under unrelated answers (audit F04).
+  return GEORGIAN_CONTEXT_NOTES.filter((n) => n.keywords.some((k) => t.includes(k.toLowerCase())));
 }
 
 export function termLookup(q: string): GeorgianTerm[] {

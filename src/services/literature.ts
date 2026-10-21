@@ -62,31 +62,45 @@ const NON_EVIDENCE_TITLE = /\b(abstract book|program(me)? abstracts|abstracts (o
 const GUIDELINE_TYPES = ['guideline', 'practice guideline', 'consensus development conference'];
 const REVIEW_TYPES = ['systematic review', 'meta-analysis'];
 const RCT_TYPES = ['randomized controlled trial', 'controlled clinical trial'];
+const NON_RESEARCH_TYPES = ['editorial', 'comment', 'letter', 'news', 'erratum', 'published erratum', 'retraction', 'expression of concern'];
 
 /**
- * Europe PMC's publication-type metadata is incomplete: many Cochrane reviews
- * carry no "systematic review" type at all. Classifying on type alone throws
- * away the best evidence, so the title and journal are used as well.
+ * A study ABOUT guidelines — an audit of compliance, an adherence survey, a
+ * quality-improvement project — is not a guideline, whatever its title says
+ * (audit F05: PMID 40688888 „Improving Patient Care and Clinical Services:
+ * Compliance With … NICE Guidelines for …" was ranked as a guideline).
  */
-function classify(types: string[], isPreprint: boolean, title = '', journal = ''): EvidenceTier {
+const STUDY_OF_GUIDELINES =
+  /\b(complian\w*|adheren\w*|concordan\w*|implementation of|uptake|awareness|knowledge of|audit|re-?audit|quality improvement|improving patient care|survey|questionnaire|retrospective|cross-sectional|cohort study|case series|practice patterns?)\b/;
+const PROTOCOL = /\b(protocol|study design|rationale and design)\b/;
+
+/**
+ * Conservative classification. The rank of a publication is raised only on
+ * explicit evidence; when the evidence is mixed or missing, it stays at the
+ * lowest research tier:
+ *   · a preprint stays a preprint, even if it is a systematic review;
+ *   · editorials, comments, letters and errata are never ranked as evidence;
+ *   · „guideline" requires Europe PMC's publication-type metadata AND a title
+ *     that is not a study of guideline use — words like „guideline",
+ *     „recommendation" or „consensus" in a title are not enough;
+ *   · systematic review / RCT require metadata, the Cochrane journal or an
+ *     explicit title — a protocol is not the study.
+ */
+export function classify(types: string[], isPreprint: boolean, title = '', journal = ''): EvidenceTier {
   const lower = types.map((t) => t.toLowerCase());
   const t = title.toLowerCase();
   const j = journal.toLowerCase();
+  const has = (list: string[]) => lower.some((x) => list.some((g) => x === g || x.includes(g)));
 
-  if (lower.some((x) => GUIDELINE_TYPES.some((g) => x.includes(g)))) return 'guideline';
-  // A study OF guideline adherence is not a guideline. Only titles that
-  // present themselves as the guideline itself are classified as one.
-  const aboutGuidelines = /guideline[s]?[- ](adherence|concordance|implementation|uptake|compliance|awareness)|adherence to .*guideline/.test(t);
-  if (!aboutGuidelines && /(clinical practice guideline|\bguidelines? (for|on)\b|^.*guidelines?:|\brecommendations (for|on)\b|consensus statement|position (statement|paper)|appropriateness criteria)/.test(t)) return 'guideline';
-
-  if (lower.some((x) => REVIEW_TYPES.some((g) => x.includes(g)))) return 'systematic_review';
+  if (isPreprint || lower.includes('preprint')) return 'preprint';
+  if (has(NON_RESEARCH_TYPES) && !has(GUIDELINE_TYPES) && !has(REVIEW_TYPES) && !has(RCT_TYPES)) return 'cohort_or_other';
+  if (has(GUIDELINE_TYPES) && !STUDY_OF_GUIDELINES.test(t)) return 'guideline';
+  if (PROTOCOL.test(t)) return 'cohort_or_other';
+  if (has(REVIEW_TYPES)) return 'systematic_review';
   if (j.includes('cochrane database of systematic reviews')) return 'systematic_review';
-  if (/systematic review|meta-analys|metaanalys|umbrella review|network meta/.test(t)) return 'systematic_review';
-
-  if (lower.some((x) => RCT_TYPES.some((g) => x.includes(g)))) return 'rct';
-  if (/randomi[sz]ed (controlled )?trial|\brct\b|double.blind|placebo.controlled/.test(t)) return 'rct';
-
-  if (isPreprint) return 'preprint';
+  if (/\bsystematic review\b|meta-analys|metaanalys|umbrella review|network meta/.test(t)) return 'systematic_review';
+  if (has(RCT_TYPES)) return 'rct';
+  if (/randomi[sz]ed (controlled )?trial|\brct\b/.test(t) && !/\b(secondary|post[- ]hoc|exploratory) analys/.test(t)) return 'rct';
   return 'cohort_or_other';
 }
 

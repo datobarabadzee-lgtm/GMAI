@@ -44,6 +44,6 @@ describe('open-corpus retrieval in the public tier', () => {
     const out = await orchestrate({ question: 'ჩაატარე ხარისხის მიმოხილვა', mode: 'quality', patient: { ...emptyPatientContext(), narrative: n }, extras: { caseNarrative: n } });
     expect(out.kb.hitCount).toBeGreaterThan(0);
     expect(out.kb.coverage).toBe('COVERED');
-    expect(out.verification.citations.fabricated).toEqual([]);
+    expect(out.verification!.citations.fabricated).toEqual([]);
   });
 });

@@ -12,6 +12,19 @@ import { expandQuery } from '@/kb/lexicon';
 
 const STOP = new Set(['the', 'and', 'for', 'with', 'რა', 'და', 'ის', 'თუ', 'როგორ', 'არის', 'რომელი', 'უნდა']);
 
+/**
+ * Words present in almost every source: a match on these alone says nothing
+ * about the subject (audit F04: „dose" matched the Cockcroft-Gault paper and
+ * the EU SmPC to a question about hypertension). A source must match at
+ * least one specific term.
+ */
+const GENERIC = new Set([
+  'dose', 'doses', 'dosing', 'dosage', 'adjustment', 'management', 'treatment', 'therapy', 'patient', 'patients', 'clinical', 'adult', 'adults',
+  'guideline', 'guidelines', 'diagnosis', 'risk', 'care', 'health', 'medical', 'disease', 'drug', 'drugs', 'medicine', 'medication', 'medications',
+  'assessment', 'prevention', 'recommendation', 'recommendations', 'international', 'update', 'score', 'criteria', 'definition', 'explanation',
+  'დოზირ', 'დოზის', 'დოზა', 'მართვ', 'მკურნა', 'პაციენ', 'განმარ', 'ექიმი', 'მჭირდ', 'გარეშე',
+]);
+
 export function tokenize(text: string): string[] {
   return text
     .toLowerCase()
@@ -94,6 +107,7 @@ export function retrieve(query: RetrievalQuery): RetrievalHit[] {
    */
   const MIN_RELEVANCE = 0.12;
   return hits
+    .filter((h) => h.matched.some((t) => !GENERIC.has(t)))
     .filter((h) => (h.semantic > 0 || h.lexical > 0) && 0.5 * h.semantic + 0.5 * h.lexical >= MIN_RELEVANCE)
     .sort((a, b) => b.score - a.score)
     .slice(0, query.limit);

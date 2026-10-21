@@ -147,7 +147,7 @@ d('end-to-end grounded pipeline', () => {
     const out = await orchestrate({ question: 'dyspepsia endoscopy referral', mode: 'deep', patient: DEMO_CASES[0].patient });
     expect(out.runId).toBeTruthy();
     expect(out.provenance.length).toBeGreaterThan(0);
-    expect(out.verification.freshness.status).toBeTruthy();
+    expect(out.verification!.freshness.status).toBeTruthy();
     expect(['PASS', 'PASS_WITH_WARNING', 'HUMAN_REVIEW', 'BLOCK']).toContain(out.release.status);
   });
 

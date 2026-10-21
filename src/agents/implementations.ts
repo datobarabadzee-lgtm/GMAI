@@ -2,6 +2,7 @@ import { ok, skipped, type AgentContext, type AgentImpl } from './context';
 import { retrieveText } from '@/services/retrieval';
 import { CALCULATORS, suggestCalculators } from '@/lib/calculators';
 import { interpretLabs } from '@/lib/labs';
+import { withoutNegatedRequests } from '@/services/intent-text';
 import { reviewMedications } from '@/lib/medication-review';
 import { findDrug, DRUGS } from '@/knowledge/drugs';
 import { georgianContextFor, termLookup } from '@/knowledge/georgian-context';
@@ -29,7 +30,8 @@ const patientLine = (c: AgentContext) => {
   return bits.join(' · ') || 'პაციენტის კონტექსტი არ არის მოწოდებული';
 };
 
-const textOf = (c: AgentContext) => [c.question, c.plan, c.patient.narrative, c.patient.problems.join(' ')].join(' ');
+// Agents read the request without the subjects the user excluded (audit F09).
+const textOf = (c: AgentContext) => withoutNegatedRequests([c.question, c.plan, c.patient.narrative, c.patient.problems.join(' ')].join(' '));
 
 /** A05 — Evidence retrieval. Runs first; other agents reuse ctx.hits. */
 const evidenceAgent: AgentImpl = async (c) => {
@@ -694,7 +696,9 @@ const calcAgent: AgentImpl = (c) => {
       ...(computed.length ? [{ titleKa: 'გამოთვლილი ქულები', titleEn: 'Computed scores', bullets: computed.map((x) => `${x.nameKa}: ${x.display} — ${x.interpretationKa}`), body: '' }] : []),
       ...(suggestions.length ? [{ titleKa: 'რელევანტური კალკულატორები', titleEn: 'Relevant calculators', bullets: suggestions.map((s) => `${s.nameKa} — ${s.purposeKa}`), body: '' }] : []),
     ],
-    sourceIds: [...new Set([...computed.flatMap((x) => x.sourceIds), ...suggestions.flatMap((s) => s.sourceIds)])],
+    // A suggested calculator is not evidence for the answer: only a value that
+    // was actually computed carries its formula's source (audit F04).
+    sourceIds: [...new Set(computed.flatMap((x) => x.sourceIds))],
     data: { computed, suggested: suggestions.map((s) => ({ id: s.id, nameKa: s.nameKa })) },
   });
 };
@@ -723,13 +727,18 @@ const labAgent: AgentImpl = (c) => {
 const georgianAgent: AgentImpl = (c) => {
   const notes = georgianContextFor(textOf(c));
   const terms = termLookup(c.question).slice(0, 4);
+  // No matching note → nothing to say, and no source to attach: the patient-rights
+  // and data-protection laws are cited only under a note that is about them
+  // (audit F04: they were attached to a definition of hypertension).
+  if (!notes.length && !terms.length) return skipped('A15', 'ამ კითხვისთვის ქართული კონტექსტის შენიშვნა ან ტერმინი არ მოიძებნა.');
+  const legal = notes.some((n) => n.category === 'legal' || n.category === 'documentation');
   return ok('A15', {
     summary: 'ქართული კლინიკური კონტექსტი (ცალკე ბლოკი, გლობალურ მტკიცებულებასთან შერევის გარეშე).',
     sections: [
-      { titleKa: 'ლოკალური კონტექსტი', titleEn: 'Georgian context', bullets: notes.map((n) => `${n.topic}: ${n.note}`), body: '' },
+      ...(notes.length ? [{ titleKa: 'ლოკალური კონტექსტი', titleEn: 'Georgian context', bullets: notes.map((n) => `${n.topic}: ${n.note}`), body: '' }] : []),
       ...(terms.length ? [{ titleKa: 'ტერმინოლოგია', titleEn: 'Terminology', bullets: terms.map((t) => `${t.preferred_ka} (${t.english})${t.deprecated_ka.length ? ` — მოძველებული: ${t.deprecated_ka.join(', ')}` : ''}`), body: '' }] : []),
     ],
-    sourceIds: ['SRC-GE-PATIENT-RIGHTS', 'SRC-GE-DATA-PROTECTION'],
+    sourceIds: legal ? ['SRC-GE-PATIENT-RIGHTS', 'SRC-GE-DATA-PROTECTION'] : [],
     data: { notes, terms },
   });
 };

@@ -1,6 +1,7 @@
 import type { AgentResult } from '@/schemas/agent';
 import { AUDIT_QUESTIONS, QUALITY_RULES } from '@/knowledge/quality-corpus';
 import type { Citation } from '@/services/literature';
+import { factsFrom, type NumericFact } from '@/services/numeric-facts';
 
 /**
  * RUN LEDGER — what this run actually established, before any model wrote a word.
@@ -32,9 +33,14 @@ export type RunLedger = {
   citations: Citation[];
   dois: Set<string>;
   pmids: Set<string>;
-  /** Normalised numbers present in agent output or in the user's input. */
+  /** Normalised numbers present in agent output or in the user's input. Diagnostic only — never used to verify. */
   numbers: Set<string>;
+  /** Typed quantities with context: deterministic agent output (engine/computed) and the user's input (user). */
+  facts: NumericFact[];
 };
+
+// Agents whose numbers are formula results from the user's own inputs.
+const COMPUTING_AGENTS = new Set(['A09']);
 
 const normDoi = (d: string) => d.toLowerCase().replace(/[.,;:]+$/, '');
 export const numbersIn = (s: string) => (s.match(/\d+(?:[.,]\d+)?/g) ?? []).map((d) => String(Number(d.replace(',', '.'))));
@@ -64,10 +70,12 @@ export function buildLedger(results: Iterable<AgentResult>, inputText: string): 
   const ruleIds = new Set<string>();
   const citations: Citation[] = [];
   const numbers = new Set<string>(numbersIn(inputText));
+  const facts: NumericFact[] = factsFrom(inputText, 'user', 'input');
 
   for (const r of results) {
     if (r.status !== 'ok') continue;
     const text = resultText(r);
+    facts.push(...factsFrom(text, COMPUTING_AGENTS.has(r.agentId) ? 'computed' : 'engine', r.agentId));
     let dataText = '';
     try {
       dataText = JSON.stringify(r.data ?? {});
@@ -81,7 +89,7 @@ export function buildLedger(results: Iterable<AgentResult>, inputText: string): 
 
   const dois = new Set(citations.map((c) => c.doi).filter((d): d is string => Boolean(d)).map(normDoi));
   const pmids = new Set(citations.map((c) => c.pmid).filter((p): p is string => Boolean(p)));
-  return { ruleIds, citations, dois, pmids, numbers };
+  return { ruleIds, citations, dois, pmids, numbers, facts };
 }
 
 /* ── literature reference check ──────────────────────────────────────────── */

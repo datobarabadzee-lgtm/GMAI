@@ -3,6 +3,7 @@ import type { AgentResult } from '@/schemas/agent';
 import { analyzeImagingReport, looksLikeImagingReport, type ImagingFinding } from '@/lib/imaging-report';
 import { DOC_TEMPLATES, type DocTemplate } from '@/knowledge/document-templates';
 import { extractLabsFromProse, findRef, interpretLabs, type LabInterpretation } from '@/lib/labs';
+import { withoutNegatedRequests } from '@/services/intent-text';
 import { GEORGIAN_TERMS } from '@/knowledge/georgian-context';
 import { matchRules, matchAuditQuestions } from '@/knowledge/quality-corpus';
 import { ruleLine } from './quality-profile';
@@ -31,7 +32,7 @@ import { SETTING_KA } from '@/knowledge/clinical-v2';
  */
 
 const fullText = (c: AgentContext) =>
-  [c.question, c.plan, c.patient.narrative, c.patient.problems.join(' '), c.patient.medications.map((m) => m.drug).join(' ')].join(' ');
+  withoutNegatedRequests([c.question, c.plan, c.patient.narrative, c.patient.problems.join(' '), c.patient.medications.map((m) => m.drug).join(' ')].join(' '));
 
 const sexKa = (s: string) => (s === 'male' ? 'მამრობითი' : s === 'female' ? 'მდედრობითი' : '');
 

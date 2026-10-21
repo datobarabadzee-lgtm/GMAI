@@ -10,6 +10,8 @@ import type { Claim, Source } from '@/schemas/evidence';
 import type { OrchestrationPlan, AgentResult } from '@/schemas/agent';
 import { Badge, Bullets, Collapsible, ExportBar, Panel } from '@/components/ui/primitives';
 import { AgeWarningBox, DrugSummaryCard, IdentityRequired, type AgeWarning, type IdentityMention } from '@/features/meds/drug-summary-card';
+import { AGENT_PANEL_KA, statusKa, toMarkdown } from './answer-export';
+export { toMarkdown } from './answer-export';
 
 export type ProvenanceEntry = {
   rule_id: string;
@@ -34,7 +36,7 @@ export type ClinicalKnowledgeRef = {
   contextSectionIds: string[];
   partialSectionIds: string[];
   omittedSectionIds: string[];
-  units: { id: string; href: string; topicTitle: string; sectionTitle: string; unitTitle: string; setting: string; settingKa: string; typesKa: string[]; snippet: string; hasMedia: boolean }[];
+  units: { id: string; href: string; topicTitle: string; sectionTitle: string; unitTitle: string; setting: string; settingKa: string; typesKa: string[]; snippet: string; hasMedia: boolean; linked?: boolean }[];
 };
 
 export type OrchestrateResult = {
@@ -56,6 +58,7 @@ export type OrchestrateResult = {
     contradictions: { a: { ruleId: string; position: string }; b: { ruleId: string; position: string }; newer: string | null }[];
   };
   release?: { status: string; reasonsKa: string[]; humanReviewRequired: boolean };
+  publication?: { state: string; labelKa: string; noteKa: string };
 };
 
 const COVERAGE_KA: Record<string, string> = {
@@ -82,64 +85,6 @@ const FRESHNESS_KA: Record<string, string> = {
 type Tone = 'critical' | 'high' | 'moderate' | 'info' | 'neutral';
 const riskTone = (r: RiskClass): Tone => (r === 'R5' ? 'critical' : r === 'R4' ? 'high' : r === 'R3' ? 'moderate' : r === 'R2' ? 'info' : 'neutral');
 
-const statusKa: Record<Claim['verification_status'], string> = {
-  supported: 'დადასტურებული',
-  partially_supported: 'ნაწილობრივ დადასტურებული',
-  unsupported: 'დაუდასტურებელი',
-  conflicting: 'წინააღმდეგობრივი',
-  not_verified: 'არ შემოწმებულა',
-};
-
-export function toMarkdown(r: OrchestrateResult): string {
-  const lines: string[] = [];
-  lines.push(`# ${r.answer.mode.toUpperCase()} — კლინიკური პასუხი`);
-  lines.push(`რისკის კლასი: ${r.answer.risk} (${RISK_LABELS[r.answer.risk].ka}) · განზრახვა: ${r.answer.intent} · რეჟიმი: ${r.answer.engine}`);
-  lines.push('');
-  lines.push(`## მოკლე პასუხი\n${r.answer.bottomLine}`);
-  r.answer.sections.forEach((s) => {
-    lines.push(`\n## ${s.titleKa} / ${s.titleEn}`);
-    if (s.body) lines.push(s.body);
-    s.bullets.forEach((b) => lines.push(`- ${b}`));
-  });
-  r.agentResults
-    .filter((a) => a.status === 'ok' && a.agentId in AGENT_PANEL_KA)
-    .forEach((a) => {
-      lines.push(`\n## ${AGENT_PANEL_KA[a.agentId]}\n${a.summary}`);
-      a.sections.forEach((s) => {
-        if (!s.body && !s.bullets.length) return;
-        lines.push(`\n### ${s.titleKa}`);
-        if (s.body) lines.push(s.body);
-        s.bullets.forEach((b) => lines.push(`- ${b}`));
-      });
-    });
-  if (r.claims.length) {
-    lines.push('\n## მტკიცებების ვერიფიკაცია');
-    r.claims.forEach((c) => lines.push(`- [${statusKa[c.verification_status]}] ${c.claim_text} — წყაროები: ${c.source_ids.join(', ') || 'არ არის'}`));
-  }
-  if (r.sources.length) {
-    lines.push('\n## წყაროები');
-    r.sources.forEach((s) => lines.push(`- ${s.citation_text}${s.url ? ` — ${s.url}` : ''} [${s.rights_status} · ${s.freshness}]`));
-  }
-  if (r.clinicalKnowledge?.units.length) {
-    const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    lines.push('\n## საცნობარო მასალა');
-    r.clinicalKnowledge.units.forEach((u) => lines.push(`- ${u.topicTitle} — ${u.unitTitle} (${u.settingKa}) — ${origin}${u.href}`));
-    lines.push(`_${r.clinicalKnowledge.noteKa}_`);
-  }
-  lines.push(`\n---\nგენერირებულია: ${r.answer.generatedAt}. ეს არის კლინიკური გადაწყვეტილების მხარდაჭერა და არა დანიშნულება.`);
-  return lines.join('\n');
-}
-
-const AGENT_PANEL_KA: Record<string, string> = {
-  A07: 'წამალი (A07)',
-  A11: 'ვიზუალიზაციის დასკვნა (A11)',
-  A12: 'დოკუმენტაცია (A12)',
-  A13: 'ხარისხის აუდიტი (A13)',
-  A14: 'დეფექტის ანალიზი (A14)',
-  A16: 'ახსნა პაციენტისთვის (A16)',
-  A17: 'სასწავლო მასალა (A17)',
-  A18: 'კვლევა და ლიტერატურა (A18)',
-};
 
 const INTENT_LEAD: Record<string, string> = {
   drug: 'A07', imaging: 'A11', documentation: 'A12', quality: 'A13', defect: 'A14', patient_education: 'A16', academy: 'A17', research: 'A18',
@@ -230,6 +175,18 @@ export function AnswerView({ result, onClear }: { result: OrchestrateResult; onC
               <p className="text-sm font-semibold text-clinical-critical">გადაუდებელი ნიშნები</p>
               <Bullets items={plan.redFlags} className="mt-1" />
             </div>
+          </div>
+        )}
+        {result.publication && result.publication.state !== 'published' && (
+          <div
+            role="status"
+            className={cn(
+              'mb-3 rounded-lg border p-3 text-[13px] leading-relaxed',
+              result.publication.state === 'withheld' ? 'border-clinical-critical/50 bg-clinical-critical/10' : result.publication.state === 'pending_human_review' ? 'border-clinical-high/50 bg-clinical-high/10' : 'border-clinical-moderate/45 bg-clinical-moderate/10',
+            )}
+          >
+            <p className="font-semibold text-fg">{result.publication.labelKa}</p>
+            {result.publication.noteKa && <p className="mt-0.5 text-slate-300">{result.publication.noteKa}</p>}
           </div>
         )}
         <p className="text-[15px] leading-relaxed text-slate-100">{answer.bottomLine}</p>
@@ -439,6 +396,8 @@ function ClinicalReferencePanel({ ref_ }: { ref_: ClinicalKnowledgeRef }) {
                 <span>{u.settingKa}</span>
                 {u.typesKa.length > 0 && <span aria-hidden>·</span>}
                 {u.typesKa.length > 0 && <span>{u.typesKa.join(', ')}</span>}
+                <span aria-hidden>·</span>
+                <span>{u.linked ? 'პასუხის დებულებას უკავშირდება' : 'თემით დაკავშირებული მასალა'}</span>
               </span>
               <span className="mt-1 block text-[13px] font-medium text-fg group-hover:text-cyan">{u.unitTitle}</span>
               {u.snippet && <span className="mt-0.5 block text-[12px] leading-relaxed text-slate-400">{u.snippet}</span>}
