@@ -14,6 +14,8 @@ const BodySchema = z.object({
   author: z.string().max(200).default(''),
   institution: z.string().max(200).default(''),
   date: z.string().max(40).default(''),
+  reviewState: z.enum(['draft', 'clinician_reviewed']).default('draft'),
+  sources: z.array(z.string().max(600)).max(20).default([]),
 });
 
 /** SOP-family documents carry the registration block the clinic's standard requires. */
@@ -50,6 +52,8 @@ export async function POST(req: Request) {
       author: parsed.data.author,
       institution: parsed.data.institution,
       date,
+      reviewState: parsed.data.reviewState,
+      sources: parsed.data.sources,
       governance: GOVERNED.has(template.id)
         ? [
             { label: 'სარეგისტრაციო ნომერი', value: `${template.id.toUpperCase()}-001` },
@@ -57,7 +61,8 @@ export async function POST(req: Request) {
             { label: 'გამოცემის თარიღი', value: '01/09/2024' },
             { label: 'ძალაში შესვლის თარიღი', value: '01/09/2024' },
             { label: 'შემდეგი განხილვის თარიღი', value: '01/09/2026' },
-            { label: 'დაამტკიცა', value: parsed.data.author || 'Davit Barabadze' },
+            // A field to be signed, not a statement that approval happened.
+            { label: 'დაამტკიცა (ხელმოწერა)', value: `${parsed.data.author || 'Davit Barabadze'} ____________` },
           ]
         : undefined,
     });

@@ -70,3 +70,16 @@ describe('verifyNumerics — context is required', () => {
     expect(verifyNumerics('დოზა 45 მგ.', [], ledger)[0].status).toBe('UNVERIFIED');
   });
 });
+
+describe('drug summary lines are checked in context (F01/F08)', () => {
+  it('drops a line whose unit differs from the label or that names a drug the label does not', async () => {
+    const { parseSummary } = await import('@/services/drug-summary');
+    const label = {
+      query: 'duloxetine', brandNames: [], genericNames: ['DULOXETINE'], manufacturer: null, route: [], pharmClass: [], sections: [], hasBoxedWarning: false, sourceNoteKa: '',
+      raw: { dosage_and_administration: 'Starting dose 30 mg once daily for one week, then 60 mg once daily. Maximum 120 mg.' },
+    };
+    const s = parseSummary(JSON.stringify({ whatKa: 'ანტიდეპრესანტი.', dosingKa: ['საწყისი 30 მგ დღეში ერთხელ', 'საწყისი 30 მკგ', 'ვარფარინთან ერთად 60 მგ', 'საწყისი 30 მგ დღეში ორჯერ'] }), label as never);
+    expect(s?.dosingKa).toEqual(['საწყისი 30 მგ დღეში ერთხელ']);
+    expect(s?.droppedUnverified).toBe(3);
+  });
+});

@@ -173,6 +173,18 @@ const COMPATIBLE_POP = new Map<string, string[]>([
 let knownLatin: Set<string> | null = null;
 const latinDrugs = () => (knownLatin ??= new Set(knownDrugNames().filter((n) => /^[a-z][a-z -]+$/.test(n))));
 
+/** Georgian case forms → nominative candidates („ვარფარინთან" → „ვარფარინი"). Deterministic suffix rules only. */
+function kaForms(w: string): string[] {
+  const out = [w];
+  for (const suf of ['ისთვის', 'ისგან', 'იდან', 'ებით', 'ებს', 'ები', 'თან', 'ისა', 'ის', 'ით', 'ად', 'ზე', 'ში', 'მა', 'ს']) {
+    if (w.length > suf.length + 3 && w.endsWith(suf)) {
+      const stem = w.slice(0, -suf.length);
+      out.push(stem.endsWith('ი') ? stem : `${stem}ი`, stem);
+    }
+  }
+  return [...new Set(out)];
+}
+
 /** Drugs named in a text, as INN keys (exact dictionary and trade names only — never a look-alike). */
 export function drugsIn(text: string, extraNames: string[] = []): string[] {
   const out = new Set<string>();
@@ -192,8 +204,13 @@ export function drugsIn(text: string, extraNames: string[] = []): string[] {
       continue;
     }
     if (/[ა-ჰ]/.test(lw)) {
-      const r = resolveDrugName(lw);
-      if ((r.via === 'exact' || r.via === 'brand') && r.inn) out.add(r.inn.toLowerCase());
+      for (const form of kaForms(lw)) {
+        const r = resolveDrugName(form);
+        if ((r.via === 'exact' || r.via === 'brand') && r.inn) {
+          out.add(r.inn.toLowerCase());
+          break;
+        }
+      }
     }
   }
   return [...out];

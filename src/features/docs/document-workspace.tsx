@@ -36,7 +36,8 @@ export function DocumentWorkspace() {
   const [sectionInput, setSectionInput] = useState<Record<string, string>>({});
   const [insurancePolicy, setInsurancePolicy] = useState('');
   const [insuranceService, setInsuranceService] = useState('');
-  const [report, setReport] = useState<{ dictated: string[]; empty: string[]; sources: string[] } | null>(null);
+  const [report, setReport] = useState<{ dictated: string[]; empty: string[]; sources: string[]; removed: { heading: string; sentence: string; reasonKa: string }[] } | null>(null);
+  const [reviewed, setReviewed] = useState(false);
   const [doc, setDoc] = useState('');
   const [sections, setSections] = useState<{ heading: string; body: string }[]>([]);
   const [generating, setGenerating] = useState(false);
@@ -96,7 +97,9 @@ export function DocumentWorkspace() {
         dictated: json.dictatedSections ?? [],
         empty: json.emptySections ?? [],
         sources: json.standardSources ?? [],
+        removed: json.removed ?? [],
       });
+      setReviewed(false);
       if (json.noticeKa) setNotice(json.noticeKa);
     } catch {
       setDocError('სერვერთან კავშირი ვერ დამყარდა.');
@@ -136,6 +139,8 @@ export function DocumentWorkspace() {
           author,
           institution,
           date: new Date().toLocaleDateString('ka-GE'),
+          reviewState: reviewed ? 'clinician_reviewed' : 'draft',
+          sources: report?.sources ?? [],
         }),
       });
       if (!res.ok) {
@@ -360,6 +365,12 @@ export function DocumentWorkspace() {
                 <Bullets items={report.sources} />
               </div>
             )}
+            {report.removed.length > 0 && (
+              <div className="mt-3 rounded-lg border border-clinical-high/50 bg-clinical-high/10 p-3">
+                <p className="label mb-1">ამოღებულია ({report.removed.length}) — მოწოდებულ მონაცემებში არ არის</p>
+                <Bullets items={report.removed.map((r) => `${r.heading}: „${r.sentence}“ — ${r.reasonKa}`)} />
+              </div>
+            )}
             {report.empty.length > 0 && (
               <p className="mt-3 text-[11px] leading-relaxed text-amber-200/70">
                 ცარიელი სექცია არ არის სისტემის ხარვეზი — ეს ნიშნავს, რომ იმ სექციისთვის ფაქტი არ მოგვეწოდა.
@@ -377,7 +388,10 @@ export function DocumentWorkspace() {
                 {exporting ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Download className="h-3.5 w-3.5" />}
                 Word-ის ფაილის ჩამოტვირთვა
               </button>
-              <span className="text-[11px] text-slate-500">ლიდერმედის ბლანკზე, ხელმოწერის ველით — მზად დასაბეჭდად</span>
+              <label className="flex items-center gap-1.5 text-[11.5px] text-slate-300">
+                <input type="checkbox" checked={reviewed} onChange={(e) => setReviewed(e.target.checked)} /> ტექსტი განვიხილე და შევამოწმე (ექიმი)
+              </label>
+              <span className="text-[11px] text-slate-500">ფაილში ჩაიწერება სტატუსი: {reviewed ? 'განხილულია ექიმის მიერ — ძალაშია ხელმოწერის შემდეგ' : 'პროექტი — საჭიროებს ექიმის განხილვას'}</span>
             </div>
             {notice && <p className="mt-2 text-[11px] text-clinical-moderate">{notice}</p>}
             {docError && <p className="mt-2 text-[11px] text-clinical-critical">{docError}</p>}

@@ -39,6 +39,10 @@ export type BuildInput = {
   date: string;
   /** Shown verbatim under the title; used for the SOP-family registration block. */
   governance?: { label: string; value: string }[];
+  /** draft: AI-assisted, not reviewed; clinician_reviewed: the author marked it reviewed (still unsigned until signed by hand). */
+  reviewState?: 'draft' | 'clinician_reviewed';
+  /** References the document relies on (e.g. a cited standard), written at the end. */
+  sources?: string[];
 };
 
 function markLogo(): Buffer | null {
@@ -169,7 +173,7 @@ function signatureBlock(author: string, date: string): Paragraph[] {
 }
 
 export async function buildDocx(input: BuildInput): Promise<Buffer> {
-  const { template, patient, sections, author, institution, date, governance } = input;
+  const { template, patient, sections, author, institution, date, governance, reviewState = 'draft', sources = [] } = input;
 
   const snapshot = [
     { label: 'ქეისი', value: patient.label },
@@ -193,6 +197,19 @@ export async function buildDocx(input: BuildInput): Promise<Buffer> {
       children: [text(template.nameKa, { bold: true, size: 30, color: BRAND.blue })],
       heading: HeadingLevel.HEADING_1,
       spacing: { after: 160 },
+    }),
+    // The review state travels with the file: a generated text is not a signed
+    // or approved medical document (audit F08).
+    new Paragraph({
+      children: [
+        text(
+          reviewState === 'clinician_reviewed'
+            ? `სტატუსი: განხილულია ექიმის მიერ${author ? ` (${author})` : ''} — ძალაში შედის მხოლოდ ხელმოწერის შემდეგ.`
+            : 'სტატუსი: პროექტი — შედგენილია AI-ს დახმარებით, ექიმის განხილვასა და ხელმოწერას საჭიროებს. ხელმოწერამდე სამედიცინო დოკუმენტად არ ითვლება.',
+          { bold: true, size: 18, color: reviewState === 'clinician_reviewed' ? BRAND.blue : 'B42318' },
+        ),
+      ],
+      spacing: { after: 120 },
     }),
     kvTable(snapshot),
     new Paragraph({ children: [text('')], spacing: { after: 200 } }),
@@ -229,6 +246,13 @@ export async function buildDocx(input: BuildInput): Promise<Buffer> {
         spacing: { before: 240, after: 80 },
       }),
       kvTable(governance.map((g) => ({ label: g.label, value: g.value }))),
+    );
+  }
+
+  if (sources.length) {
+    children.push(
+      new Paragraph({ children: [text('წყაროები', { bold: true, size: 22, color: BRAND.blue })], heading: HeadingLevel.HEADING_2, spacing: { before: 240, after: 80 } }),
+      ...sources.map((src) => new Paragraph({ children: [text(src)], bullet: { level: 0 }, spacing: { after: 40 } })),
     );
   }
 

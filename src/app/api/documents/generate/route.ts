@@ -7,6 +7,7 @@ import { checkLimit, recordSpend } from '@/services/rate-limit';
 import { hasForeignScript } from '@/services/orchestrator';
 import { estimateCost, recordRun } from '@/services/metering';
 import { citationText, searchLiterature } from '@/services/literature';
+import { EMPTY_MARK, guardDocument, type Removed } from '@/services/document-guard';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -183,6 +184,21 @@ export async function POST(req: Request) {
     .filter((l) => l !== '')
     .join('\n');
 
+  // The facts the document may contain: what the clinician supplied, never the
+  // template's own instructions (audit F08).
+  const supplied = [
+    p?.age !== null && p?.age !== undefined ? `ასაკი ${p.age} წლის` : '',
+    p?.allergies.join(', ') ?? '',
+    p?.problems.join('; ') ?? '',
+    p?.medications.filter((m) => m.status === 'active').map((m) => `${m.drug} ${m.dose} ${m.frequency}`.trim()).join('; ') ?? '',
+    p?.labs.map((l) => `${l.analyte} ${l.value} ${l.unit} ${l.date}`.trim()).join('; ') ?? '',
+    p?.narrative ?? '',
+    insurance?.policy ?? '',
+    insurance?.service ?? '',
+    ...Object.values(sectionInput),
+    parsed.data.clinicalData,
+  ].join('\n');
+
   const started = Date.now();
   try {
     const r = await provider.completeDetailed({
@@ -198,6 +214,7 @@ export async function POST(req: Request) {
 
     let sections = blank;
     let filled = false;
+    let removed: Removed[] = [];
     try {
       const out = JSON.parse(r.text) as { sections?: { heading?: string; body?: string }[] };
       const byHeading = new Map((out.sections ?? []).map((s) => [String(s.heading ?? '').trim(), String(s.body ?? '').trim()]));
@@ -206,8 +223,13 @@ export async function POST(req: Request) {
       sections = template.sections.map((heading) => {
         const body = byHeading.get(heading) ?? '';
         const clean = body && !hasForeignScript(body) ? body : '';
-        return { heading, body: clean || 'მონაცემი არ არის მოწოდებული — შესავსებია ექიმის მიერ' };
+        return { heading, body: clean || EMPTY_MARK };
       });
+      // Server-side fact check: a sentence with a number, date, drug, ICD-10
+      // code or diagnosis that the supplied material does not contain is removed.
+      const guarded = guardDocument(sections, supplied, standardSources);
+      sections = guarded.sections;
+      removed = guarded.removed;
       filled = sections.some((s) => !s.body.startsWith('მონაცემი არ არის მოწოდებული'));
     } catch {
       /* malformed JSON leaves the blank structure in place */
@@ -218,7 +240,7 @@ export async function POST(req: Request) {
     }
     recordRun({
       requestType: 'document',
-      agent: 'A11',
+      agent: 'A12',
       model: r.model,
       intent: template.id,
       inputTokens: r.usage.inputTokens,
@@ -233,6 +255,12 @@ export async function POST(req: Request) {
       dictatedSections: template.sections.filter((h) => (sectionInput[h] ?? '').trim().length > 0),
       emptySections: sections.filter((x) => x.body.startsWith('მონაცემი არ არის მოწოდებული')).map((x) => x.heading),
       standardSources,
+      removed,
+      // A generated document is a draft until a clinician reviews and signs it.
+      documentState: 'draft_requires_clinician_review',
+      noticeKa: removed.length
+        ? `${removed.length} წინადადება ამოღებულია: შეიცავდა მონაცემს (რიცხვი, თარიღი, პრეპარატი, კოდი ან დიაგნოზი), რომელიც თქვენ არ მოგიწოდებიათ. შეავსეთ ხელით, თუ ეს ფაქტია.`
+        : undefined,
       usage: {
         model: r.model,
         ...r.usage,

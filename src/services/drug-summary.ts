@@ -2,6 +2,7 @@ import 'server-only';
 import { getProviderFor, EMPTY_USAGE } from '@/services/ai-provider';
 import { estimateCost, recordRun } from '@/services/metering';
 import type { DrugLabel } from '@/services/drug-labels';
+import { contextOf, drugsIn, extractQuantities, factsFrom, supports, type NumericFact } from './numeric-facts';
 
 /**
  * GEORGIAN DRUG SUMMARY — grounded on the open label.
@@ -106,8 +107,20 @@ function labelNumbers(label: DrugLabel): Set<string> {
   return out;
 }
 
-function verified(line: string, allowed: Set<string>): boolean {
-  return (line.match(NUM) ?? []).every((n) => allowed.has(n) || allowed.has(norm(n)));
+/**
+ * A line is kept only if every quantity in it is stated in the label with the
+ * same value, unit and context (numeric-facts.ts, audit F01/F08), every bare
+ * number occurs in the label, and every drug it names is named in the label.
+ */
+function verifiedTyped(line: string, allowed: Set<string>, facts: NumericFact[], labelText: string, labelDrugs: string[]): boolean {
+  if (!(line.match(NUM) ?? []).every((n) => allowed.has(n) || allowed.has(norm(n)))) return false;
+  for (const q of extractQuantities(line).filter((x) => x.unit || x.comparator)) {
+    const claim: NumericFact = { ...q, context: contextOf(line), scopeDrugs: labelDrugs, passage: line, origin: 'engine', sourceId: 'summary' };
+    if (!facts.some((f) => supports(claim, f).ok)) return false;
+  }
+  // Drug names are compared as substances (Georgian and English resolve to the same INN).
+  const named = drugsIn(line, labelDrugs);
+  return named.every((d) => labelDrugs.includes(d) || labelText.toLowerCase().includes(d));
 }
 
 /**
@@ -134,6 +147,10 @@ export function parseSummary(text: string, label: DrugLabel): Omit<DrugSummaryKa
     return null;
   }
   const allowed = labelNumbers(label);
+  const labelText = [label.query, ...label.brandNames, ...label.genericNames, ...Object.values(label.raw)].join('\n');
+  const labelDrugs = drugsIn(labelText, [...label.genericNames, ...label.brandNames].map((n) => n.toLowerCase()));
+  const facts = factsFrom(Object.values(label.raw).join('\n'), 'rule', 'label', [...label.genericNames, ...label.brandNames]).map((f) => ({ ...f, scopeDrugs: labelDrugs }));
+  const verified = (line: string, _allowed: Set<string>) => verifiedTyped(line, _allowed, facts, labelText, labelDrugs);
   let dropped = 0;
   let leaks = 0;
   const keepList = (v: unknown) =>
