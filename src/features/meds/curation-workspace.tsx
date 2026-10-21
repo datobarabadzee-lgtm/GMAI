@@ -26,7 +26,17 @@ type Decision = {
   approved_by: string;
   approved_at: string;
   note?: string;
+  substance?: string;
+  salt?: string;
+  form?: string;
+  strength?: string;
+  route?: string;
+  registration_ref?: string;
+  evidence?: { source_url: string; checked: string };
 };
+type Identity = { substance: string; salt: string; form: string; strength: string; route: string; registration_ref: string; evidenceUrl: string };
+const EMPTY_IDENTITY: Identity = { substance: '', salt: '', form: '', strength: '', route: '', registration_ref: '', evidenceUrl: '' };
+const CHECKED_KA = 'მოქმედი ნივთიერება და მარილი შემოწმდა MIS-ის ჩანაწერსა და FDA პროდუქტთან; ფორმა/სიძლიერე/ერთეული შეიძლება განსხვავდებოდეს — პროდუქტს მომხმარებელი ცალკე ადასტურებს.';
 type QueueItem = { mis_id: string; kind: string; name_ka: string; name_en: string; source_url: string; crosswalk: number; decision: Decision['decision'] | null };
 type Queue = { total: number; offset: number; limit: number; items: QueueItem[] };
 type Item = {
@@ -71,6 +81,7 @@ export function CurationWorkspace() {
   const [target, setTarget] = useState('');
   const [check, setCheck] = useState<{ loading: boolean; data: Check | null }>({ loading: false, data: null });
   const [note, setNote] = useState('');
+  const [ident, setIdent] = useState<Identity>(EMPTY_IDENTITY);
   const [verified, setVerified] = useState(false);
   const [saveMsg, setSaveMsg] = useState<string | null>(null);
 
@@ -108,6 +119,7 @@ export function CurationWorkspace() {
     const draft = pending.find((p) => p.mis_id === id) ?? data.decision;
     setTarget(draft?.target_query ?? (data.exactEnglish.ok ? data.entry.name_en : ''));
     setNote(draft?.note ?? '');
+    setIdent({ substance: draft?.substance ?? '', salt: draft?.salt ?? '', form: draft?.form ?? '', strength: draft?.strength ?? '', route: draft?.route ?? '', registration_ref: draft?.registration_ref ?? '', evidenceUrl: draft?.evidence?.source_url ?? data.entry.source_url });
     if (draft?.target_query || data.exactEnglish.ok) void runCheck(draft?.target_query ?? data.entry.name_en);
   };
 
@@ -131,6 +143,13 @@ export function CurationWorkspace() {
       approved_by: curator.trim(),
       approved_at: new Date().toISOString(),
       ...(note.trim() ? { note: note.trim() } : {}),
+      ...(decision === 'approved'
+        ? {
+            substance: ident.substance.trim(),
+            ...Object.fromEntries((['salt', 'form', 'strength', 'route', 'registration_ref'] as const).filter((k) => ident[k].trim()).map((k) => [k, ident[k].trim()])),
+            evidence: { source_url: ident.evidenceUrl.trim(), checked: CHECKED_KA },
+          }
+        : {}),
     };
     const next = [...pending.filter((p) => p.mis_id !== e.mis_id), d];
     setPending(next);
@@ -181,7 +200,7 @@ export function CurationWorkspace() {
 
   const pendingById = useMemo(() => new Map(pending.map((p) => [p.mis_id, p])), [pending]);
   const d = item.data;
-  const canApprove = Boolean(d && check.data?.ok && verified && curator.trim() && target.trim());
+  const canApprove = Boolean(d && check.data?.ok && verified && curator.trim() && target.trim() && ident.substance.trim() && /^https?:\/\//.test(ident.evidenceUrl.trim()));
 
   return (
     <div className="mx-auto max-w-6xl space-y-4">
@@ -357,6 +376,25 @@ export function CurationWorkspace() {
                   )}
                 </p>
               )}
+
+              <div className="grid gap-2 sm:grid-cols-2">
+                {(
+                  [
+                    ['substance', 'მოქმედი ნივთიერება (სავალდებულო)', 'მაგ. colistimethate sodium'],
+                    ['salt', 'მარილი', 'მაგ. sodium'],
+                    ['form', 'ფორმა', 'მაგ. ფხვნილი ინჰალაციისთვის'],
+                    ['strength', 'სიძლიერე', 'მაგ. 1 მლნ სე'],
+                    ['route', 'მიღების გზა', 'მაგ. ინჰალაცია'],
+                    ['registration_ref', 'რეგისტრაციის ნომერი / ბმული', 'MIS ან რეესტრი'],
+                    ['evidenceUrl', 'მტკიცებულების წყარო (სავალდებულო)', 'https://…'],
+                  ] as const
+                ).map(([k, label, ph]) => (
+                  <label key={k} className="block">
+                    <span className="label">{label}</span>
+                    <input className="field mt-1" value={ident[k]} onChange={(e) => setIdent((v) => ({ ...v, [k]: e.target.value }))} placeholder={ph} />
+                  </label>
+                ))}
+              </div>
 
               <label className="block">
                 <span className="label">შენიშვნა (არასავალდებულო)</span>

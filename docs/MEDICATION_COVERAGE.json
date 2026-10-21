@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-10-21T14:37:56.214Z",
+  "snapshots": {
+    "fda_mis_package": "2026-10-16",
+    "ema_index": "2026-10-20"
+  },
+  "mis_entities": 29591,
+  "classes": {
+    "curated_approved": 0,
+    "curated_rejected": 0,
+    "fda_name_match": 2050,
+    "ema_name_match": 236,
+    "catalog_only": 24074,
+    "placeholder": 3231
+  },
+  "by_kind": {
+    "ingredient": {
+      "curated_approved": 0,
+      "curated_rejected": 0,
+      "fda_name_match": 1271,
+      "ema_name_match": 95,
+      "catalog_only": 4601,
+      "placeholder": 3212
+    },
+    "trade_name": {
+      "curated_approved": 0,
+      "curated_rejected": 0,
+      "fda_name_match": 779,
+      "ema_name_match": 141,
+      "catalog_only": 19473,
+      "placeholder": 19
+    }
+  },
+  "ema_name_match_status": {
+    "authorised": 161,
+    "not_authorised": 75
+  },
+  "fda": {
+    "label_records": 262897,
+    "ndc_records": 138319,
+    "unnamed_label_records": 179225,
+    "clinical_text_bundled": false
+  },
+  "ema": {
+    "products": 2357,
+    "with_product_information": 1932,
+    "status": {
+      "Withdrawn": 370,
+      "Authorised": 1566,
+      "Lapsed": 27,
+      "Expired": 17,
+      "Refused": 65,
+      "Application withdrawn": 268,
+      "Revoked": 10,
+      "Suspended": 1,
+      "Opinion": 30,
+      "Withdrawn from rolling review": 2,
+      "Opinion under re-examination": 1
+    }
+  },
+  "curation": {
+    "revision": 0,
+    "entries": 0,
+    "entries_sha256": null
+  },
+  "retired": "MIS snapshot carries no withdrawal status: retired Georgian products cannot be identified from it. EMA statuses (Withdrawn, Lapsed, Revoked …) are listed above.",
+  "confirmed_labels_persisted": 0
+}

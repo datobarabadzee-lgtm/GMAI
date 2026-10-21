@@ -15,6 +15,13 @@ const Decision = z.object({
   approved_by: z.string().min(2).max(120),
   approved_at: z.string().max(40),
   note: z.string().max(500).optional(),
+  substance: z.string().max(200).optional(),
+  salt: z.string().max(120).optional(),
+  form: z.string().max(120).optional(),
+  strength: z.string().max(120).optional(),
+  route: z.string().max(80).optional(),
+  registration_ref: z.string().max(300).optional(),
+  evidence: z.object({ source_url: z.string().max(500), checked: z.string().max(800) }).optional(),
 });
 const Body = z.object({ decisions: z.array(Decision).min(1).max(2000) });
 

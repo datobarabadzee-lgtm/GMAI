@@ -1,7 +1,8 @@
 import 'server-only';
 import { appTier } from '@/lib/tier';
 import { operatorConfigured } from '@/server/operator-auth';
-import { readFile, writeFile, rename } from 'node:fs/promises';
+import { appendFile, readFile, writeFile, rename } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import type { MisEntry } from '../../../knowledge/medications/store.mjs';
 import { getStore, MED_ROOT } from './identity';
@@ -38,9 +39,28 @@ export type CurationDecision = {
   approved_by: string;
   approved_at: string;
   note?: string;
+  /** Required for an approval (audit F10): what the identity decision rests on. */
+  substance?: string;
+  salt?: string;
+  form?: string;
+  strength?: string;
+  route?: string;
+  /** Georgian registration reference (number or registry URL), when known. */
+  registration_ref?: string;
+  evidence?: { source_url: string; checked: string };
 };
 
-type MapFile = { version: number; description?: string; entries: CurationDecision[] };
+/**
+ * The map file is versioned (audit F10): every write increments `revision`,
+ * records `updated_at` and the SHA-256 of the entries, and appends one line to
+ * curated-map.changelog.jsonl with the hashes before/after and the ids
+ * added, changed and removed. `npm run med:curation-diff -- old new` compares
+ * two files.
+ */
+type MapFile = { version: number; revision?: number; updated_at?: string; entries_sha256?: string; description?: string; entries: CurationDecision[] };
+
+export const entriesHash = (entries: CurationDecision[]) => createHash('sha256').update(JSON.stringify([...entries].sort((a, b) => a.mis_id.localeCompare(b.mis_id)))).digest('hex');
+export const changelogPath = () => mapPath().replace(/\.json$/, '.changelog.jsonl');
 
 let cache: { at: number; valid: Map<string, CurationDecision>; invalid: { entry: CurationDecision; reasonKa: string }[] } | null = null;
 
@@ -73,6 +93,8 @@ async function validate(entries: CurationDecision[]) {
     if (!row) invalid.push({ entry: e, reasonKa: 'MIS ჩანაწერი ვერ მოიძებნა' });
     else if (row.name_ka !== e.name_ka) invalid.push({ entry: e, reasonKa: 'ქართული დასახელება კატალოგს არ ემთხვევა' });
     else if (!e.approved_by?.trim() || !e.approved_at) invalid.push({ entry: e, reasonKa: 'კურატორი ან თარიღი არ არის მითითებული' });
+    else if (e.decision === 'approved' && !e.substance?.trim()) invalid.push({ entry: e, reasonKa: 'დადასტურებისთვის მოქმედი ნივთიერება (და მარილი, თუ აქვს) სავალდებულოა' })
+    else if (e.decision === 'approved' && !(/^https?:\/\//.test(e.evidence?.source_url ?? '') && (e.evidence?.checked ?? '').trim().length >= 10)) invalid.push({ entry: e, reasonKa: 'დადასტურებისთვის მტკიცებულება სავალდებულოა: წყაროს ბმული და რა შემოწმდა' })
     else if (e.decision === 'approved' && !(await targetCheck(e.target_query ?? '')).ok) invalid.push({ entry: e, reasonKa: `სამიზნე „${e.target_query ?? ''}“ FDA-ს ინდექსში შესარჩევ პროდუქტს არ შეესაბამება` });
     else if (e.decision !== 'approved' && e.decision !== 'rejected') invalid.push({ entry: e, reasonKa: 'უცნობი გადაწყვეტილება' });
     else valid.set(e.mis_id, e);
@@ -154,14 +176,27 @@ export async function saveDecisions(decisions: CurationDecision[]) {
   } catch {
     /* new file */
   }
+  const before = entriesHash(file.entries);
   const byId = new Map(file.entries.map((x) => [x.mis_id, x]));
-  for (const d of valid.values()) byId.set(d.mis_id, d);
+  const added: string[] = [];
+  const changed: string[] = [];
+  for (const d of valid.values()) {
+    const prev = byId.get(d.mis_id);
+    if (!prev) added.push(d.mis_id);
+    else if (JSON.stringify(prev) !== JSON.stringify(d)) changed.push(d.mis_id);
+    byId.set(d.mis_id, d);
+  }
+  if (!added.length && !changed.length) return { saved: 0, rejected: invalid, revision: file.revision ?? 0, entries_sha256: before };
   file.entries = [...byId.values()].sort((a, b) => a.name_ka.localeCompare(b.name_ka, 'ka'));
+  file.revision = (file.revision ?? 0) + 1;
+  file.updated_at = new Date().toISOString();
+  file.entries_sha256 = entriesHash(file.entries);
   const tmp = `${mapPath()}.tmp`;
   await writeFile(tmp, `${JSON.stringify(file, null, 2)}\n`, 'utf8');
   await rename(tmp, mapPath());
+  await appendFile(changelogPath(), `${JSON.stringify({ revision: file.revision, at: file.updated_at, by: [...new Set([...valid.values()].map((d) => d.approved_by))], sha256_before: before, sha256_after: file.entries_sha256, added, changed, removed: [] })}\n`, 'utf8');
   cache = null;
-  return { saved: valid.size, rejected: invalid };
+  return { saved: added.length + changed.length, rejected: invalid, revision: file.revision, entries_sha256: file.entries_sha256 };
 }
 
 /**

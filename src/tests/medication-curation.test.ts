@@ -19,7 +19,12 @@ const { buildMedicationGate } = await import('@/server/medications/agent-gate');
 const { POST: savePost } = await import('@/app/api/curation/save/route');
 
 const COLOMYCIN = 'mis-trade_name-546ff2786e73996604e4';
-const base = { name_en: 'Colomycin', kind: 'trade_name', approved_by: 'Davit Barabadze', approved_at: '2026-10-19T12:00:00.000Z' };
+// F10 (audit 2026-10-21): an approval now has to name the substance and its evidence.
+const base = {
+  name_en: 'Colomycin', kind: 'trade_name', approved_by: 'Davit Barabadze', approved_at: '2026-10-19T12:00:00.000Z',
+  substance: 'colistimethate', salt: 'sodium',
+  evidence: { source_url: 'http://www.mis.ge/mis.mis?c=1&d=0&user_name=Colomycin', checked: 'synthetic test: substance and salt compared with the FDA product' },
+};
 const write = (entries: unknown[]) => fs.writeFileSync(MAP, JSON.stringify({ version: 1, entries }));
 
 afterAll(() => {
@@ -130,5 +135,27 @@ describe('curator mappings', () => {
     const it = await curationItem(COLOMYCIN);
     expect(it?.exactEnglish.ok).toBe(false);
     expect(it?.crosswalk.reasonKa).toMatch(/ეკვივალენტობას არ ადასტურებს/);
+  });
+
+  it('refuses an approval without substance or evidence, and versions every write (F10)', async () => {
+    write([]);
+    fs.rmSync(MAP.replace(/\.json$/, '.changelog.jsonl'), { force: true });
+    const bare = { mis_id: COLOMYCIN, name_ka: 'კოლომიცინი', name_en: 'Colomycin', kind: 'trade_name', decision: 'approved' as const, target_query: 'colistimethate sodium', approved_by: 'Davit Barabadze', approved_at: '2026-10-19T12:00:00.000Z' };
+    const r1 = await saveDecisions([bare]);
+    expect(r1.saved).toBe(0);
+    expect(r1.rejected[0].reasonKa).toMatch(/ნივთიერება/);
+    const r2 = await saveDecisions([{ ...bare, substance: 'colistimethate' }]);
+    expect(r2.rejected[0].reasonKa).toMatch(/მტკიცებულება/);
+
+    const ok = await saveDecisions([{ ...bare, ...base, name_ka: 'კოლომიცინი' }]);
+    expect(ok.saved).toBe(1);
+    const file = JSON.parse(fs.readFileSync(MAP, 'utf8'));
+    expect(file.revision).toBe(1);
+    expect(file.entries_sha256).toMatch(/^[0-9a-f]{64}$/);
+    // Saving the same decision again is not a new revision.
+    expect((await saveDecisions([{ ...bare, ...base, name_ka: 'კოლომიცინი' }])).saved).toBe(0);
+    const log = fs.readFileSync(MAP.replace(/\.json$/, '.changelog.jsonl'), 'utf8').trim().split('\n').map((l) => JSON.parse(l));
+    expect(log).toHaveLength(1);
+    expect(log[0]).toMatchObject({ revision: 1, added: [COLOMYCIN], sha256_after: file.entries_sha256 });
   });
 });
