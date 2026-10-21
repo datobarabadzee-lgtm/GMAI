@@ -24,7 +24,11 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 /** Mirrors .gitignore. Paths are relative, with forward slashes. */
 const IGNORE_DIR = new Set(['node_modules', '.next', 'out', 'coverage', '.vercel', 'screenshots', 'release-out', '.git']);
 const IGNORE_ROOT_DIR = new Set(['data', 'knowledge-source', 'mnt']);
+// .gitignore and .dockerignore are repository metadata that hosting uploads
+// drop (the Vercel CLI never sends them); they are not part of the release id.
+export const METADATA = new Set(['.gitignore', '.dockerignore']);
 const IGNORE_FILE = (rel, base) =>
+  METADATA.has(rel) ||
   base.endsWith('.tsbuildinfo') ||
   rel === 'next-env.d.ts' ||
   rel === 'eval-report.json' ||
