@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Curator decisions: Georgian MIS catalog name -> exact FDA name. Written only by an authorised curator (the /curation page in local mode, or an exported decisions file merged by the operator). Each approval is a clinical identity decision; product confirmation is still required before any label text or dose is shown.",
+  "entries": []
+}

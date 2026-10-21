@@ -1,0 +1,9 @@
+{
+  "offline_regression_suite": "passed",
+  "live_FDA_fetch": "passed",
+  "live_record_id": 489,
+  "live_source_id": "459c796b-4b43-354e-e063-6294a90a7dec",
+  "live_set_id": "16d8e0f4-567d-4de1-ac25-6e2527f1d58e",
+  "checked_on": "2026-10-19",
+  "app_integration_tested": false
+}

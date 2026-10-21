@@ -1,0 +1,24 @@
+# The licensed and proprietary corpus and everything derived from it must never
+# be uploaded to a public deployment. The public tier runs without a knowledge
+# base by design; these entries make that structural rather than a matter of care.
+knowledge-source/
+# Anchored to the repository root: an unanchored "data/" also matched
+# knowledge/medications/data (the medication identity index, which must ship).
+/data/
+# authored/ holds the project author's OWN material (the quality & defect
+# corpus from his manual). It is not licensed third-party content and it SHIPS.
+# Keeping it outside data/ means the deny rule above stays absolute — no
+# negation to get wrong, no way to leak the licensed corpus by reordering.
+# authored/gmai_clinical_v2 and public/clinical-v2 (emergency / ICU clinical
+# knowledge, package GMAI-CLINICAL-KNOWLEDGE-L5-v2) were provided by the owner
+# for this app and ship too. The package's train/validation files are never
+# imported (scripts/import-clinical-v2.mjs).
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+drizzle/
+scripts/kb-import.ts
+/mnt
+*.zip
+GAUSHVI.bat
+screenshots/

@@ -1,0 +1,114 @@
+{
+  "collection": "gmai_clinical_v2",
+  "package_id": "GMAI-CLINICAL-KNOWLEDGE-L5-v2",
+  "schema_version": "2.0",
+  "started_at": "2026-10-19T11:47:29.253Z",
+  "finished_at": "2026-10-19T11:47:30.340Z",
+  "dry_run": false,
+  "ok": true,
+  "counts": {
+    "topics": 51,
+    "sections": 702,
+    "units": 962,
+    "items": 8170,
+    "tables": 39,
+    "media_files": 137,
+    "numeric_mentions": 4524
+  },
+  "manifest_counts": {
+    "topics": 51,
+    "units": 962,
+    "clinical_items": 8170,
+    "training_sections": 555,
+    "validation_sections": 147
+  },
+  "units": {
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 962,
+    "retired": 0,
+    "skipped_invalid": 0
+  },
+  "media": {
+    "copied": 0,
+    "unchanged": 137,
+    "missing": []
+  },
+  "checksums": {
+    "checked": 205,
+    "mismatched": [],
+    "missing": []
+  },
+  "text_repairs": [
+    {
+      "where": "emergency-ch002-u009.title",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u009.section_title",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u009/emergency-b00317",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u009/emergency-b00326",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u010/emergency-b00346",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u010/emergency-b00346.numeric",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u011/emergency-b00352",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    },
+    {
+      "where": "emergency-ch002-u011/emergency-b00352.numeric",
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 1
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "not_imported": [
+    {
+      "file": "agents/train.jsonl",
+      "records": 555,
+      "reasonKa": "სასწავლო დემონსტრაციები — მოდელის სწავლება ამ ეტაპზე არ ტარდება; validation ნაკრები ტრენინგში არ გამოიყენება."
+    },
+    {
+      "file": "agents/validation.jsonl",
+      "records": 147,
+      "reasonKa": "სასწავლო დემონსტრაციები — მოდელის სწავლება ამ ეტაპზე არ ტარდება; validation ნაკრები ტრენინგში არ გამოიყენება."
+    },
+    {
+      "file": "agents/knowledge.sqlite",
+      "records": null,
+      "reasonKa": "იგივე მონაცემი clinical_units.jsonl-დან იტვირთება; ძიება აპლიკაციის საკუთარ ძრავშია (SQLite-ის ბინარი production-ში არ ტვირთავს)."
+    },
+    {
+      "file": "app/",
+      "records": null,
+      "reasonKa": "ვიზუალური ნიმუში — ინტერფეისი აპლიკაციაში ნატიურადაა აწყობილი; data.js არ გამოიყენება."
+    }
+  ],
+  "text_repairs_summary": [
+    {
+      "noteKa": "„ძ₾\" → „ძლ\" (ამოღების არტეფაქტი, მაგ. „შეიძ₾ება\")",
+      "count": 8
+    }
+  ]
+}

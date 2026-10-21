@@ -1,0 +1,99 @@
+/**
+ * DATA CONTROLLER IDENTITY AND PROCESSING DISCLOSURE
+ *
+ * Article 24(1) of the Law of Georgia on Personal Data Protection requires the
+ * controller to give the data subject a specific list of facts BEFORE
+ * collection begins. Those facts are declared here, in one place, so the
+ * consent screen, the privacy page and any future document all state the same
+ * thing and cannot drift apart.
+ *
+ * Confirmed by the controller (medical director) on 2026-10-17. The address
+ * and identification code are those printed on the clinic's official
+ * letterhead (see services/document-builder.ts).
+ */
+
+export const CONTROLLER = {
+  legalNameKa: 'შპს „ინ ვიტრო განაყოფიერების ცენტრი" — ლიდერმედი',
+  brandKa: 'ლიდერმედი',
+  idCodeKa: 'საიდენტიფიკაციო კოდი: 202462708',
+  phone: '(+995 32) 215 77 77',
+  addressKa: 'ნოდარ ბოხუას ქ. 21, თბილისი 0159, საქართველო',
+  email: 'info@leadermed.ge',
+  /** Article 33(1): a data protection officer is mandatory for a medical institution. */
+  dpoKa: 'მონაცემთა დაცვის ოფიცერი — ლიდერმედი',
+  dpoEmail: 'dpo@leadermed.ge',
+} as const;
+
+/** The processor the text is transmitted to in order to produce an answer. */
+export const PROCESSOR = {
+  nameEn: 'OpenAI, L.L.C.',
+  countryKa: 'ამერიკის შეერთებული შტატები',
+  roleKa: 'უფლებამოსილი პირი (პროცესორი) — ამუშავებს ტექსტს პასუხის გენერირებისთვის',
+} as const;
+
+export const SUPERVISORY_AUTHORITY = {
+  nameKa: 'საქართველოს სახელმწიფო აუდიტის სამსახური',
+  noteKa: 'პერსონალურ მონაცემთა დაცვის ზედამხედველი ორგანო 2026 წლის 2 მარტიდან',
+} as const;
+
+/**
+ * Consent text version. Any change to what the subject is told invalidates
+ * consent previously given against the old text, so the version is bumped and
+ * the subject is asked again. Never edit the disclosure without bumping this.
+ */
+export const CONSENT_VERSION = '2026-10-17.1';
+
+export type DisclosureItem = { labelKa: string; bodyKa: string };
+
+/** The Article 24(1) list, in the order the law states it. */
+export const DISCLOSURE: DisclosureItem[] = [
+  {
+    labelKa: 'ვინ ამუშავებს მონაცემს',
+    bodyKa: `${CONTROLLER.legalNameKa}, ${CONTROLLER.idCodeKa}. კონტაქტი: ${CONTROLLER.phone}, ${CONTROLLER.email}, ${CONTROLLER.addressKa}.`,
+  },
+  {
+    labelKa: 'მონაცემთა დაცვის ოფიცერი',
+    bodyKa: `${CONTROLLER.dpoKa}. კონტაქტი: ${CONTROLLER.dpoEmail}.`,
+  },
+  {
+    labelKa: 'რა მიზნით',
+    bodyKa:
+      'თქვენ მიერ შეყვანილი სამედიცინო ინფორმაციის ახსნა გასაგებ ენაზე, გადაუდებელი მიმართვის ნიშნების მითითება და ექიმისთვის დასასმელი კითხვების ჩამოყალიბება. სერვისი არ სვამს დიაგნოზს და არ ნიშნავს მკურნალობას.',
+  },
+  {
+    labelKa: 'რა სამართლებრივი საფუძვლით',
+    bodyKa:
+      'თქვენი თანხმობა. ჯანმრთელობის მონაცემი განსაკუთრებული კატეგორიის მონაცემია და მუშავდება „პერსონალურ მონაცემთა დაცვის შესახებ" საქართველოს კანონის მე-6 მუხლის პირველი პუნქტის „ა" ქვეპუნქტის საფუძველზე, ხოლო სხვა ქვეყანაში გადაცემა — იმავე კანონის 37-ე მუხლის მე-2 პუნქტის „დ" ქვეპუნქტის საფუძველზე.',
+  },
+  {
+    labelKa: 'სავალდებულოა თუ არა მონაცემის მოწოდება',
+    bodyKa:
+      'არა. მონაცემის მოწოდება სრულიად ნებაყოფლობითია. თანხმობაზე უარის შემთხვევაში თქვენ ვერ მიიღებთ ახსნას, მაგრამ სერვისის დანარჩენი ნაწილი — კალკულატორები, წამლების შემოწმება, ანალიზების ლოკალური ინტერპრეტაცია და მტკიცებულების ძიება — სრულად ხელმისაწვდომი რჩება. სერვისით სარგებლობა თანხმობაზე დამოკიდებული არ არის.',
+  },
+  {
+    labelKa: 'ვის გადაეცემა',
+    bodyKa: `${PROCESSOR.nameEn} — ${PROCESSOR.roleKa}. სხვა მიმღები არ არსებობს. მონაცემი არ გადაეცემა სადაზღვევო კომპანიას, დამსაქმებელს ან სხვა მესამე პირს.`,
+  },
+  {
+    labelKa: 'გადაეცემა თუ არა სხვა ქვეყანაში',
+    bodyKa: `დიახ. ტექსტი მუშავდება ${PROCESSOR.countryKa}-ში. საქართველოს კანონმდებლობით ამ სახელმწიფოსთვის მონაცემთა დაცვის ადეკვატურობის გადაწყვეტილება მიღებული არ არის. ეს ნიშნავს, რომ იქ მონაცემთა დაცვის სათანადო გარანტიები არ არის დადასტურებული და თეორიულად შესაძლებელია უცხო ქვეყნის კანონმდებლობით გათვალისწინებული წვდომა. თქვენ ეს ინფორმაცია მიიღეთ თანხმობის გაცემამდე.`,
+  },
+  {
+    labelKa: 'რამდენ ხანს ინახება',
+    bodyKa:
+      'ჩვენ არ ვინახავთ. სერვერზე მონაცემთა ბაზა არ არსებობს. თქვენ მიერ შეყვანილი ტექსტი ინახება მხოლოდ თქვენივე ბრაუზერში და იშლება ჩანართის დახურვისას. სერვერის ჟურნალში ფიქსირდება მხოლოდ ტექნიკური მაჩვენებლები — მოდელი, ტოკენების რაოდენობა, ხარჯი, დრო — და არცერთი კლინიკური სიტყვა. გადაცემული ტექსტი OpenAI-ს მხრიდან მოდელის გასაწვრთნელად არ გამოიყენება. ჩვენ ვთხოვთ, რომ პასუხი არ შეინახოს. OpenAI-ს პირობებით, ბოროტად გამოყენების კონტროლისთვის სერვისის ჩანაწერები შეიძლება შეინახოს მაქსიმუმ 30 დღე, თუ კანონი უფრო ხანგრძლივ ვადას არ მოითხოვს.',
+  },
+  {
+    labelKa: 'თქვენი უფლებები',
+    bodyKa:
+      'თქვენ გაქვთ უფლება: მიიღოთ ინფორმაცია დამუშავების შესახებ; მოითხოვოთ მონაცემის გასწორება, განახლება, დაბლოკვა, წაშლა ან განადგურება; ნებისმიერ დროს, განმარტების გარეშე გამოიხმოთ თანხმობა; და მიმართოთ საქართველოს სახელმწიფო აუდიტის სამსახურს ან სასამართლოს. თანხმობის გამოხმობა არ ახდენს გავლენას მის გამოხმობამდე განხორციელებული დამუშავების კანონიერებაზე.',
+  },
+];
+
+/** The sentences the subject affirms. Each is a separate, specific statement. */
+export const CONSENT_POINTS = [
+  'ვეთანხმები, რომ ჩემ მიერ შეყვანილი ჯანმრთელობის მონაცემი დამუშავდეს ახსნის მიზნით.',
+  'ინფორმირებული ვარ, რომ ტექსტი გადაეცემა ამერიკის შეერთებულ შტატებში და რომ ამ ქვეყნისთვის მონაცემთა დაცვის ადეკვატურობის გადაწყვეტილება მიღებული არ არის — ანუ სათანადო გარანტიები დადასტურებული არ არის.',
+  'ვიცი, რომ სერვისი არ სვამს დიაგნოზს, არ ნიშნავს მკურნალობას და არ ცვლის ექიმთან კონსულტაციას.',
+  'ვიცი, რომ თანხმობა ნებაყოფლობითია და მისი გამოხმობა ნებისმიერ დროს შემიძლია.',
+] as const;

@@ -1,0 +1,127 @@
+# Trimmed text layer of EMA 'Avastin : EPAR - Product Information' (EMEA/H/C/000582), sections 1-4.9, each 4.x body cut to 700 chars. Test fixture only.
+1
+ANNEX I
+SUMMARY OF PRODUCT CHARACTERISTICS
+2
+1. NAME OF THE MEDICINAL PRODUCT
+Avastin 25 mg/ml concentrate for solution for infusion
+2. QUALITATIVE AND QUANTITATIVE COMPOSITION
+Each ml of concentrate contains 25 mg of bevacizumab*.
+Each 4 ml vial contains 100 mg of bevacizumab.
+Each 16 ml vial contains 400 mg of bevacizumab.
+For dilution and other handling recommendations, see section 6.6.
+*Bevacizumab is a recombinant humanised monoclonal antibody produced by DNA technology in
+Chinese Hamster Ovary cells.
+Excipient with known effect
+Each 4 ml vial contains 1.6 mg of polysorbate 20.
+Each 16 ml vial contains 6.4 mg of polysorbate 20.
+For the full list of excipients, see section 6.1.
+3. PHARMACEUTICAL FORM
+Concentrate for solution for infusion.
+Clear to slightly opalescent, colourless to pale brown liquid.
+4. CLINICAL PARTICULARS
+4.1 Therapeutic indications
+Bevacizumab in combination with fluoropyrimidine-based chemotherapy is indicated for treatment of
+adult patients with metastatic carcinoma of the colon or rectum.
+Bevacizumab in combination with paclitaxel is indicated for first-line treatment of adult patients with
+metastatic breast cancer. For further information as to human epidermal growth factor receptor 2
+(HER2) status, please refer to section 5.1.
+Bevacizumab in combination with capecitabine is indicated for first-line treatment of adult patients
+with metastatic breast cancer in whom treatment with other chemotherapy options including taxanes or
+anthracyclines is not considered appropriate. Patients who have received taxane and anthr
+4.2 Posology and method of administration
+Do not shake the vial.
+Avastin must be administered under the supervision of a physician experienced in the use of
+antineoplastic medicinal products.
+Posology
+Metastatic carcinoma of the colon or rectum (mCRC)
+The recommended dose of Avastin, administered as an intravenous infusion, is either 5 mg/kg or
+10 mg/kg of body weight given once every 2 weeks or 7.5 mg/kg or 15 mg/kg of body weight given
+once every 3 weeks.
+It is recommended that treatment be continued until progression of the underlying disease or until
+unacceptable toxicity.
+Metastatic breast cancer (mBC)
+The recommended dose of Avastin is 10 mg/kg of body weight given once every 2 weeks or 15 mg/kg
+of body weight given once ever
+4.3 Contraindications
+● Hypersensitivity to the active substance or to any of the excipients listed in section 6.1.
+● Hypersensitivity to Chinese Hamster Ovary (CHO) cell products or other recombinant human or
+humanised antibodies.
+● Pregnancy (see section 4.6).
+4.4 Special warnings and precautions for use
+Traceability
+In order to improve the traceability of biological medicinal products, the name and the batch number
+of the administered product should be clearly recorded.
+Gastrointestinal (GI) perforations and Fistulae (see section 4.8)
+Patients may be at an increased risk for the development of gastrointestinal perforation and gall
+bladder perforation when treated with Avastin. Intra-abdominal inflammatory process may be a risk
+factor for gastrointestinal perforations in patients with metastatic carcinoma of the colon or rectum,
+therefore, caution should be exercised when treating these patients. Prior radiation is a risk factor for
+GI perforation in patients treated for persistent, recurre
+4.5 Interaction with other medicinal products and other forms of interaction
+Effect of antineoplastic agents on bevacizumab pharmacokinetics
+No clinically relevant interaction of co-administered chemotherapy on bevacizumab pharmacokinetics
+was observed based on the results of population pharmacokinetic analyses. There were neither
+statistically significant nor clinically relevant differences in bevacizumab clearance in patients
+receiving Avastin monotherapy compared to patients receiving Avastin in combination with interferon
+alfa-2a, erlotinib or chemotherapies (IFL, 5-FU/LV, carboplatin/paclitaxel, capecitabine, doxorubicin
+or cisplatin/gemcitabine).
+Effect of bevacizumab on the pharmacokinetics of other antineoplastic agents
+No clinically relevant interaction of 
+4.6 Fertility, pregnancy and lactation
+Women of childbearing potential
+Women of childbearing potential have to use effective contraception during (and up to 6 months after)
+treatment.
+Pregnancy
+There are no clinical trial data on the use of Avastin in pregnant women. Studies in animals have
+shown reproductive toxicity including malformations (see section 5.3). IgGs are known to cross the
+placenta, and Avastin is anticipated to inhibit angiogenesis in the foetus, and thus is suspected to cause
+serious birth defects when administered during pregnancy. In the post-marketing setting, cases of
+foetal abnormalities in women treated with bevacizumab alone or in combination with known
+embryotoxic chemotherapeutics have been observed (se
+4.7 Effects on ability to drive and use machines
+Avastin has no or negligible influence on the ability to drive and use machines. However, somnolence
+and syncope have been reported with Avastin use (see table 1 in section 4.8). If patients are
+experiencing symptoms that affect their vision or concentration, or their ability to react, they should be
+advised not to drive and use machines until symptoms abate.
+4.8 Undesirable effects
+Summary of the safety profile
+The overall safety profile of Avastin is based on data from over 5 700 patients with various
+malignancies, predominantly treated with Avastin in combination with chemotherapy in clinical trials.
+The most serious adverse reactions were:
+• Gastrointestinal perforations (see section 4.4).
+• Haemorrhage, including pulmonary haemorrhage/haemoptysis, which is more common in
+non-small cell lung cancer patients (see section 4.4).
+• Arterial thromboembolism (see section 4.4).
+The most frequently observed adverse reactions across clinical trials in patients receiving Avastin were
+hypertension, fatigue or asthenia, diarrhoea and abdominal pain.
+11
+Analyses of the clinical
+4.4 and Hypersensitivity reactions (including anaphylactic
+shock)/infusion reactions above).
+Anaphylactic shock (rare) (see also section 4.4).
+Nervous system
+disorders
+Hypertensive encephalopathy (very rare) (see also section 4.4 and
+Hypertension in section 4.8)
+Posterior Reversible Encephalopathy Syndrome (PRES), (rare) (see
+also section 4.4)
+Vascular disorders Renal thrombotic microangiopathy with or without concomitant
+sunitinib use, and hyaline occlusive glomerular microangiopathy
+which may be clinically manifested as proteinuria (not known). For
+further information on proteinuria see section 4.4 and Proteinuria in
+section 4.8.
+Respiratory, thoracic
+and mediastinal
+disorders
+Nasal septum perforation (not known)
+Pulmonary hypertension (not known
+4.9 Overdose
+The highest dose tested in humans (20 mg/kg of body weight, intravenous every 2 weeks) was
+associated with severe migraine in several patients.
+
+5. PHARMACOLOGICAL PROPERTIES
+5.1 Pharmacodynamic properties
+(trimmed)
+ANNEX II
+MANUFACTURER(S)

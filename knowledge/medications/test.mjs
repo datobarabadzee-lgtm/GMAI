@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {MedicationStore} from './store.mjs';
+const store=await new MedicationStore().init();
+assert.equal((await store.lookup('made-up-unknown-drug')).status,'unknown_name');
+assert.equal((await store.lookup('colchicinee')).status,'unknown_name');
+const colch=await store.lookup('colchicine',{limit:100});
+assert(colch.total>0);
+const selected=colch.candidates.find(c=>['brand_name','generic_name'].includes(c.name_type)&&c.source==='label');
+assert(selected);
+for(const query of ['Colomycin','კოლომიცინი','colchicinee','unknown-drug']){
+ await assert.rejects(()=>store.fetchCandidate(query,selected.record_id),/IDENTITY_MISMATCH/);
+}
+assert.equal((await store.lookup('კოლომიცინი')).allow_instruction_generation,false);
+assert((await store.lookup('კოლომიცინი')).mis_catalog.some(e=>e.name_en.toLowerCase()==='colomycin'));
+await assert.rejects(()=>store.context('colchicine',selected.record_id,'invented'),/PRODUCT_CONFIRMATION_REQUIRED/);
+const record={id:selected.external_id,set_id:selected.group_id,openfda:{generic_name:['colchicine']}};
+store.fetchImpl=async()=>new Response(JSON.stringify({results:[record]}));
+const preview=await store.fetchCandidate('COLCHICINE',selected.record_id);
+store.resolveConfirmation=async()=>({record_id:selected.record_id,query_normalized:'colchicine',expires_at:Date.now()+10000,content_sha256:preview.content_sha256});
+assert.equal((await store.context('colchicine',selected.record_id,'server-token')).identity_confirmed,true);
+store.fetchImpl=async()=>new Response(JSON.stringify({results:[{...record,id:'wrong-id'}]}));
+await assert.rejects(()=>store.fetchCandidate('colchicine',selected.record_id),/SOURCE_ID_MISMATCH/);
+store.fetchImpl=async()=>new Response(JSON.stringify({results:[{...record,set_id:'wrong-group'}]}));
+await assert.rejects(()=>store.fetchCandidate('colchicine',selected.record_id),/SOURCE_GROUP_MISMATCH/);
+store.fetchImpl=async()=>new Response(JSON.stringify({results:[{...record,openfda:{generic_name:['other-drug']}}]}));
+await assert.rejects(()=>store.fetchCandidate('colchicine',selected.record_id),/SOURCE_NAME_CHANGED/);
+store.fetchImpl=async()=>new Response('',{status:429});
+await assert.rejects(()=>store.fetchCandidate('colchicine',selected.record_id),/SOURCE_UNAVAILABLE/);
+store.fetchImpl=async()=>{throw Error('offline');};
+await assert.rejects(()=>store.fetchCandidate('colchicine',selected.record_id),/SOURCE_UNAVAILABLE/);
+console.log('PASS: exact lookup, Georgian Colomycin, mismatch, unknown, typo, confirmation, source ID/group/name changes, rate limit and offline guards');

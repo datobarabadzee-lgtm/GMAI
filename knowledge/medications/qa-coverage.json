@@ -1,0 +1,8 @@
+{
+  "all_file_hashes": "passed",
+  "all_401216_record_stubs_equal_source": true,
+  "all_580114_fda_alias_rows_equal_source": true,
+  "all_mis_aliases_and_29591_entities_equal_source": true,
+  "all_crosswalk_candidates_preserved_unapproved": true,
+  "clinical_text_local": false
+}

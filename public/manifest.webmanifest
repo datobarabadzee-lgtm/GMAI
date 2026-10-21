@@ -1,0 +1,55 @@
+{
+  "name": "ლიდერმედი — Medical AI",
+  "short_name": "ლიდერმედი",
+  "description": "ლიდერმედის კლინიკური ინტელექტის სისტემა — ახსნა მარტივ ენაზე, დეტერმინისტული კალკულატორები, მედიკამენტების შეჯერება და ციტირებადი ცოდნის ბიბლიოთეკა.",
+  "lang": "ka",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#040a14",
+  "theme_color": "#040a14",
+  "categories": [
+    "medical",
+    "health",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "პაციენტის AI",
+      "short_name": "პაციენტი",
+      "url": "/patient"
+    },
+    {
+      "name": "კალკულატორები",
+      "short_name": "კალკულატორი",
+      "url": "/calculators"
+    },
+    {
+      "name": "ცოდნის ბიბლიოთეკა",
+      "short_name": "ბიბლიოთეკა",
+      "url": "/library"
+    }
+  ]
+}

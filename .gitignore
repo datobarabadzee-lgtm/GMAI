@@ -1,0 +1,30 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+coverage
+eval-report.json
+
+# Secrets: every .env file is private EXCEPT the documented templates, which
+# carry variable names only and must travel with the source.
+.env
+.env.*
+!.env.example
+!.env.local.template
+
+# Owner's private knowledge-base workspace (licensed / third-party corpus and the
+# generated SQLite). Anchored to the repository root: an unanchored "data/" also
+# matched knowledge/medications/data — the medication identity index (515 files)
+# that the application needs at runtime.
+/data/
+/knowledge-source/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+.vercel
+/mnt
+*.zip
+screenshots/
+release-out/

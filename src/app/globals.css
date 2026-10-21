@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   THEME — LeaderMED. Light by default; `html.dark` switches every token.
+   Colours are RGB triplets so Tailwind opacity modifiers (bg-cyan/10) work.
+   --------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --bg: 245 249 251;            /* #F5F9FB */
+  --fg: 16 38 56;               /* #102638 navy */
+  --ink-950: 255 255 255;       /* fields, raised cards */
+  --ink-900: 255 255 255;       /* panels */
+  --ink-850: 240 250 253;       /* #F0FAFD ice — inner blocks */
+  --ink-800: 232 243 248;
+  --ink-700: 220 235 242;
+  --ink-600: 201 221 232;
+  --ink-500: 176 200 214;
+  --slate-50: 11 28 42;
+  --slate-100: 16 38 56;
+  --slate-200: 29 52 72;
+  --slate-300: 52 73 91;
+  --slate-400: 91 107 121;      /* #5B6B79 muted */
+  --slate-500: 112 127 140;
+  --slate-600: 148 163 174;
+  --slate-700: 196 208 216;
+  --slate-800: 226 237 242;
+  --slate-900: 240 245 248;
+  --line: 214 229 237;          /* #D6E5ED */
+  --accent: 0 145 194;          /* text-legible cyan on white */
+  --accent-soft: 0 120 163;
+  --c-critical: 211 47 56;
+  --c-high: 196 90 22;
+  --c-moderate: 168 112 20;
+  --c-low: 26 128 83;
+  --c-info: 22 112 190;
+  --shadow-panel: 0 1px 2px rgba(16, 38, 56, 0.04), 0 8px 24px -12px rgba(16, 38, 56, 0.12);
+  --shadow-soft: 0 10px 30px -12px rgba(8, 198, 255, 0.35);
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg: 8 18 29;
+  --fg: 241 246 251;
+  --ink-950: 6 14 24;
+  --ink-900: 12 26 40;
+  --ink-850: 16 33 50;
+  --ink-800: 20 40 60;
+  --ink-700: 28 52 76;
+  --ink-600: 38 66 94;
+  --ink-500: 52 84 116;
+  --slate-50: 248 250 252;
+  --slate-100: 236 242 248;
+  --slate-200: 214 225 236;
+  --slate-300: 184 199 214;
+  --slate-400: 145 163 182;
+  --slate-500: 112 130 150;
+  --slate-600: 82 99 118;
+  --slate-700: 58 74 92;
+  --slate-800: 36 50 66;
+  --slate-900: 20 31 44;
+  --line: 44 70 96;
+  --accent: 64 206 255;
+  --accent-soft: 140 222 255;
+  --c-critical: 255 99 112;
+  --c-high: 255 150 82;
+  --c-moderate: 242 193 78;
+  --c-low: 96 205 148;
+  --c-info: 112 172 245;
+  --shadow-panel: 0 1px 0 rgba(148, 180, 214, 0.06), 0 18px 40px -24px rgba(0, 0, 0, 0.8);
+  --shadow-soft: 0 10px 30px -12px rgba(8, 198, 255, 0.25);
+}
+
+* {
+  border-color: rgb(var(--line));
+}
+
+html,
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(8, 198, 255, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--slate-600) / 0.35);
+  border-radius: 999px;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-line bg-ink-900 shadow-panel;
+  }
+  .panel-tight {
+    @apply rounded-xl border border-line bg-ink-850;
+  }
+  .label {
+    @apply text-[12px] font-semibold text-slate-400;
+  }
+  .field {
+    @apply w-full rounded-xl border border-line bg-ink-950 px-3.5 py-2.5 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan/60 focus:ring-2 focus:ring-cyan/20;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-ink-950 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan/50 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan/60 disabled:cursor-not-allowed disabled:opacity-45;
+  }
+  /* The one solid call to action: LeaderMED cyan with white text. */
+  .btn-primary {
+    @apply border-transparent bg-cyan-brand text-white shadow-soft hover:bg-cyan-deep hover:text-white;
+  }
+  .btn-ghost {
+    @apply border-transparent bg-transparent shadow-none hover:border-line;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-ink-850 px-2.5 py-1 text-xs text-slate-300;
+  }
+  .kbd {
+    @apply rounded border border-line bg-ink-950 px-1.5 py-0.5 font-mono text-[10px] text-slate-400;
+  }
+  .prose-clinical p {
+    @apply text-sm leading-relaxed text-slate-300;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Installed-app / iOS behaviour.
+   The layout is declared viewport-fit: cover so it paints edge to edge; the
+   insets below keep content clear of the notch, the rounded corners and the
+   home indicator. iOS zooms the page whenever a focused field is under 16px,
+   so form controls are pinned at 16px on small screens.
+   --------------------------------------------------------------------------- */
+@supports (padding: max(0px)) {
+  header.sticky {
+    padding-top: env(safe-area-inset-top);
+  }
+  main {
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+  }
+  footer {
+    padding-bottom: max(1.5rem, calc(1.5rem + env(safe-area-inset-bottom)));
+  }
+  aside {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea,
+  .field {
+    font-size: 16px; /* prevents iOS Safari from zooming on focus */
+  }
+  .btn {
+    min-height: 44px; /* Apple HIG minimum touch target */
+  }
+  button,
+  a[role='button'],
+  [role='tab'] {
+    touch-action: manipulation;
+  }
+  /* Wide clinical tables scroll inside their own container rather than
+     forcing the page body to scroll sideways. */
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Standalone (home-screen) launches get no browser chrome; suppress the
+   rubber-band highlight that makes a web view feel unlike an app. */
+@media (display-mode: standalone) {
+  body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .panel {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  * {
+    color: #000 !important;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-20T08:12:08.051Z",
+  "sources": {
+    "medicines": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines_json-report_en.json",
+    "documents": "https://www.ema.europa.eu/en/documents/report/documents-output-json-report_en.json"
+  },
+  "file": "index.json.gz",
+  "sha256": "562e776506aed376907c1edbd231e3280262b3e5148ff220b10880a2c5f0aa5f",
+  "bytes": 110818,
+  "counts": {
+    "human": 2357,
+    "with_pi": 1932,
+    "authorised": 1566,
+    "authorised_with_pi": 1533,
+    "ambiguous_pi": 1
+  },
+  "note": "Centrally authorised medicines only (EU). Product information is fetched live from www.ema.europa.eu by the server, verified and hashed on every use."
+}
