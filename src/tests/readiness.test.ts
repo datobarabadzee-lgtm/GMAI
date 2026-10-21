@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { execSync } from 'node:child_process';
+import os from 'node:os';
 import fs from 'node:fs';
 import path from 'node:path';
 import { checkEnv, ENV_VARS } from '@/server/env-check';
@@ -104,3 +105,20 @@ describe.runIf(isGit)('release manifest and the repository (F06)', () => {
     expect(tracked.some((f) => /^\.env(\.local)?$/.test(f))).toBe(false);
   });
 });
+
+describe('release scripts on a Windows-style path with spaces', () => {
+  it('release-manifest.mjs runs from a folder whose name contains spaces („georgian expert AI“)', () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'georgian expert AI '));
+    try {
+      fs.mkdirSync(path.join(dir, 'scripts'));
+      fs.copyFileSync(path.join(process.cwd(), 'scripts/release-manifest.mjs'), path.join(dir, 'scripts/release-manifest.mjs'));
+      fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify({ version: '0.0.1' }));
+      const out = execSync(`node "${path.join(dir, 'scripts/release-manifest.mjs')}" --out "${path.join(dir, 'm.json')}"`, { encoding: 'utf8' });
+      expect(out).toMatch(/gmai-0\.0\.1-/);
+      expect(JSON.parse(fs.readFileSync(path.join(dir, 'm.json'), 'utf8')).files.map((f: { path: string }) => f.path)).toEqual(['package.json', 'scripts/release-manifest.mjs']);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+

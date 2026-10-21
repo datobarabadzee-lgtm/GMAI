@@ -20,9 +20,10 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import zlib from 'node:zlib';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const MED = path.join(ROOT, 'knowledge', 'medications');
 const gz = (f) => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(MED, f))).toString('utf8'));
 
@@ -72,7 +73,8 @@ export function coverage() {
   };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// pathToFileURL: a path with spaces (e.g. „georgian expert AI“) is percent-encoded in import.meta.url.
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const r = coverage();
   fs.writeFileSync(path.join(ROOT, 'docs', 'MEDICATION_COVERAGE.json'), JSON.stringify(r, null, 2) + '\n');
   const pct = (n) => `${((n / r.mis_entities) * 100).toFixed(1)}%`;

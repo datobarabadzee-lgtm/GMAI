@@ -17,9 +17,10 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { execSync } from 'node:child_process';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Mirrors .gitignore. Paths are relative, with forward slashes. */
 const IGNORE_DIR = new Set(['node_modules', '.next', 'out', 'coverage', '.vercel', 'screenshots', 'release-out', '.git']);
@@ -110,7 +111,8 @@ function verify(expectedFile, root = ROOT) {
   return ok;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// pathToFileURL: a path with spaces (e.g. „georgian expert AI“) is percent-encoded in import.meta.url.
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const args = process.argv.slice(2);
   const at = (flag) => (args.includes(flag) ? args[args.indexOf(flag) + 1] : null);
   if (at('--verify')) process.exit(verify(at('--verify'), at('--root') ?? ROOT) ? 0 : 1);

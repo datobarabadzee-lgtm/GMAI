@@ -37,6 +37,8 @@
 | AI პროვაიდერის შეფერხებისას public-ში შაბლონური ტექსტი ქვეყნდებოდა „გაფრთხილებით“ | Docker ტესტი მიუწვდომელი პროვაიდერით | `classifyAiError`; public: 503 / 429 / 401 / BUDGET_EXHAUSTED მიზეზით; internal: მონიშნული ძრავის შედეგი | `ai-outage` (3); Docker: 503 → 429 → რესტარტის შემდეგ 429 |
 | A06 ცარიელ კითხვაზე ყველა გაიდლაინს „პასუხად“ აბრუნებდა | `agent-failure` | skipped | `agent-failure` |
 | Turbopack „whole project tracing“ (curation, readiness) | Docker build | სტატიკური გზები / ignore | build 0 warning |
+| `release-manifest.mjs` და `medication-coverage.mjs` არაფერს აკეთებდა საქაღალდეში, რომლის სახელშიც ჰარეა („georgian expert AI“) | release-ის შემოწმება მფლობელის კომპიუტერზე | `fileURLToPath` / `pathToFileURL` | `readiness` (ჰარეებიანი ბილიკი; გასწორებამდე ჩავარდა) |
+| ერთი commit-ისთვის Vercel-სა და Docker-ში სხვადასხვა release id | production `/api/version` | `.gitignore`, `.dockerignore`, `vercel.json` — ჰოსტის მეტამონაცემები, id-ში არ შედის (Vercel `vercel.json`-ს build-ისას ცვლის) | production id = Docker id = manifest |
 
 ## არსებული ტესტების ცვლილებები და მიზეზი
 
