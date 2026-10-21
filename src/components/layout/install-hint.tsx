@@ -74,7 +74,7 @@ export function InstallHint() {
           {mode === 'ios' ? (
             <p className="mt-0.5 text-[12px] leading-relaxed text-slate-400">
               Safari-ის ქვედა ზოლში დააჭირეთ <span className="text-slate-200">გაზიარების</span> ღილაკს, ჩამოსქროლეთ და
-              აირჩიეთ <span className="text-slate-200">„Add to Home Screen"</span>. შემდეგ აპლიკაცია გაიხსნება ეკრანიდან,
+              აირჩიეთ <span className="text-slate-200">„Add to Home Screen“</span>. შემდეგ აპლიკაცია გაიხსნება ეკრანიდან,
               ბრაუზერის ზოლის გარეშე.
             </p>
           ) : (

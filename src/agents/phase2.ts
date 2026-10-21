@@ -384,7 +384,7 @@ export const patientAgent: AgentImpl = (c) => {
   if (glossary.length) sections.push({ titleKa: 'ტერმინები მარტივად', titleEn: 'What this means', body: '', bullets: glossary.map((g) => `${g.termKa} — ${g.plainKa}`) });
   if (labLines.length) sections.push({ titleKa: 'თქვენი ანალიზები მარტივად', titleEn: 'Your results', body: 'ერთი გადახრილი მაჩვენებელი თავისთავად დიაგნოზი არ არის — ექიმი მას სხვა მონაცემებთან ერთად აფასებს.', bullets: labLines });
   if (medLines.length) sections.push({ titleKa: 'წამლები, რომელთა სარგებელი დადასტურებული არ არის', titleEn: 'Medicines with unproven benefit', body: '', bullets: medLines });
-  const urgentList = [...(card?.urgentKa ?? []), ...flags.filter((f) => !card), ...(card || flags.length ? [] : GENERIC_PATIENT_RED_FLAGS)];
+  const urgentList = [...(card?.urgentKa ?? []), ...(card ? [] : flags), ...(card || flags.length ? [] : GENERIC_PATIENT_RED_FLAGS)];
   sections.push({ titleKa: 'როდის დარეკოთ 112-ზე', titleEn: 'Red flags', body: '', bullets: [...new Set(urgentList)].slice(0, 6) });
   sections.push({ titleKa: 'რა ვკითხოთ ექიმს', titleEn: 'Questions for your doctor', body: '', bullets: questions });
   if (card) sections.push({ titleKa: 'რას ეყრდნობა ეს ახსნა', titleEn: 'Basis', body: 'ზოგადი ინფორმაცია, მომზადებული საერთაშორისო გაიდლაინების მიხედვით; არ ცვლის ექიმის შეფასებას.', bullets: card.sourcesKa });

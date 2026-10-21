@@ -1,3 +1,5 @@
+import { appTier } from '@/lib/tier';
+import { checkOperator } from '@/server/operator-auth';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { RightsStatusSchema, SourceTypeSchema, EVIDENCE_RANK } from '@/schemas/evidence';
@@ -6,7 +8,7 @@ import { tokenize } from '@/services/retrieval';
 
 export const runtime = 'nodejs';
 
-const devEnabled = () => process.env.ENABLE_DEV_TOOLS === '1';
+const devEnabled = () => process.env.ENABLE_DEV_TOOLS === '1' && appTier() === 'internal';
 
 const IngestSchema = z.object({
   title: z.string().min(3),
@@ -42,6 +44,9 @@ export async function GET() {
 
 export async function POST(req: Request) {
   if (!devEnabled()) return NextResponse.json({ error: 'DISABLED', messageKa: 'დეველოპერული ინსტრუმენტები გამორთულია. ჩართეთ ENABLE_DEV_TOOLS=1.' }, { status: 404 });
+  // An environment flag is not authorisation (audit F18).
+  const auth = checkOperator(req);
+  if (!auth.ok) return NextResponse.json({ error: auth.error, messageKa: auth.messageKa }, { status: auth.status });
 
   let json: unknown;
   try {

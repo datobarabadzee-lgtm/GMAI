@@ -107,7 +107,7 @@ export function resetFdaClient() {
 }
 
 /** fetch-compatible function handed to MedicationStore. */
-export async function fdaFetch(input: URL | string, _init?: RequestInit): Promise<Response> {
+export async function fdaFetch(input: URL | string): Promise<Response> {
   const url = new URL(input.toString());
   if (url.protocol !== 'https:' || url.hostname !== HOST) throw new Error('FDA_HOST_REJECTED');
   if (process.env.DISABLE_LIVE_SOURCES === '1' && transport === defaultTransportRef) throw new Error('SOURCE_UNAVAILABLE');

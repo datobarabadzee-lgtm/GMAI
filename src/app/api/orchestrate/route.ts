@@ -51,7 +51,10 @@ export async function POST(req: Request) {
     }
     parsed.data.mode = mode;
 
-    if (engineStatus().engine !== 'live') {
+    // A visitor's own key (BYOK) is a working engine even when the operator has
+    // none configured (audit F19): the platform check applies only without it.
+    const byok = callerKeyFrom(req);
+    if (engineStatus().engine !== 'live' && !(byok && isPlausibleKey(byok))) {
       return NextResponse.json(
         {
           error: 'AI_NOT_CONFIGURED',

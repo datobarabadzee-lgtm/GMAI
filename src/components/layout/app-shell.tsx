@@ -123,7 +123,7 @@ export function AppShell({ children }: { children: React.ReactNode; engine?: { e
 
       <footer className="no-print hidden border-t border-line bg-ink-900 px-6 py-5 lg:block">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-          <p>შპს „ინ ვიტრო განაყოფიერების ცენტრი" — ლიდერმედი · ნოდარ ბოხუას ქ. 21, თბილისი · ს/კ 202462708</p>
+          <p>შპს „ინ ვიტრო განაყოფიერების ცენტრი“ — ლიდერმედი · ნოდარ ბოხუას ქ. 21, თბილისი · ს/კ 202462708</p>
           <p>
             <a className="hover:text-fg" href="tel:+995322157777">(+995 32) 215 77 77</a>
             {' · '}

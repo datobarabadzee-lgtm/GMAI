@@ -184,7 +184,6 @@ describe('gmai_clinical_v2 — search', async () => {
   });
 
   it('marks images as unread rather than as facts', () => {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
     const withImage = corpus.units.find((u: { items: { media: unknown[] }[] }) => u.items.some((i) => i.media.length));
     return import('@/knowledge/clinical-v2').then(({ unitText, UNIT_BY_ID }) => {
       expect(unitText(UNIT_BY_ID.get(withImage.id)!, { media: true })).toMatch(/ტექსტად არ არის წაკითხული/);

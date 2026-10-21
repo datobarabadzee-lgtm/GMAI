@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Scale } from 'lucide-react';
 import type { ComparisonTopic, GuidelineBody } from '@/knowledge/guidelines';
 import type { Source } from '@/schemas/evidence';
 import { Badge, Bullets, EmptyState, ExportBar, Panel } from '@/components/ui/primitives';

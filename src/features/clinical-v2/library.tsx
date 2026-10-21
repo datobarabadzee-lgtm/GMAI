@@ -62,7 +62,10 @@ export function ClinicalLibrary() {
 
   const set = (patch: Record<string, string>) => {
     const next = new URLSearchParams(params.toString());
-    for (const [k, v] of Object.entries(patch)) (v ? next.set(k, v) : next.delete(k));
+    for (const [k, v] of Object.entries(patch)) {
+      if (v) next.set(k, v);
+      else next.delete(k);
+    }
     const qs = next.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
   };

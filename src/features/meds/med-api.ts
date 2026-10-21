@@ -1,6 +1,6 @@
 /** JSON POST for the medication pages; the server's Georgian message is passed through. */
-export async function post<T>(url: string, body: unknown): Promise<{ ok: boolean; status: number; data: T & { messageKa?: string; error?: string } }> {
-  const res = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+export async function post<T>(url: string, body: unknown, headers: Record<string, string> = {}): Promise<{ ok: boolean; status: number; data: T & { messageKa?: string; error?: string } }> {
+  const res = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify(body) });
   const data = await res.json().catch(() => ({}));
   return { ok: res.ok, status: res.status, data };
 }

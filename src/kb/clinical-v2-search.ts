@@ -3,7 +3,6 @@ import {
   CLINICAL_UNITS,
   SETTING_KA,
   TOPIC_TWINS,
-  UNIT_BY_ID,
   sectionUnits,
   topicOutline,
   unitHref,

@@ -101,3 +101,32 @@ describe('claim → passage linking', () => {
     expect(none.linkedClaims).toBe(0);
   });
 });
+
+describe('F19: BYOK does not depend on the operator key', () => {
+  it('public tier without a platform key: no caller key → 503; plausible caller key → served with the caller provider', async () => {
+    vi.resetModules();
+    vi.doMock('@/services/ai-provider', async (orig) => {
+      const real = await orig<typeof import('@/services/ai-provider')>();
+      const callerProvider = { name: 'caller', live: true, info: () => ({ engine: 'live', provider: 'caller', fast: 'm', reasoning: 'm' }), complete: async () => 'x', completeDetailed: async () => ({ text: 'ზოგადი პასუხი.', model: 'caller-model', usage: { ...real.EMPTY_USAGE }, latencyMs: 1, truncated: false }) };
+      return {
+        ...real,
+        engineStatus: () => ({ engine: 'mock', label: 'Demo' }),
+        getProviderFor: (k?: string | null) => (k && real.isPlausibleKey(k) ? { provider: callerProvider, ownKey: true } : { provider: { ...callerProvider, live: false }, ownKey: false }),
+      };
+    });
+    const prev = process.env.APP_TIER;
+    process.env.APP_TIER = 'public';
+    try {
+      const { POST } = await import('@/app/api/orchestrate/route');
+      const call = (h: Record<string, string>) => POST(new Request('http://localhost/api/orchestrate', { method: 'POST', headers: { 'content-type': 'application/json', ...h }, body: JSON.stringify({ question: 'რა არის ანემია?', mode: 'quick' }) }));
+      expect((await call({})).status).toBe(503);
+      const ok = await call({ 'x-user-api-key': `sk-${'a'.repeat(40)}` });
+      expect(ok.status).toBe(200);
+      expect((await ok.json()).usage.model).toBe('caller-model');
+      expect((await call({ 'x-user-api-key': 'not-a-key' })).status).toBe(503);
+    } finally {
+      process.env.APP_TIER = prev;
+      vi.doUnmock('@/services/ai-provider');
+    }
+  });
+});

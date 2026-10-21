@@ -1,3 +1,4 @@
+import { appTier } from '@/lib/tier';
 import { IngestWorkspace } from '@/features/evidence/ingest-workspace';
 
 // The dev-tools flag is an environment decision, read per request rather than at build time.
@@ -6,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = { title: 'წყაროების იმპორტი (შიდა)', robots: { index: false, follow: false } };
 
 export default function IngestPage() {
-  const enabled = process.env.ENABLE_DEV_TOOLS === '1';
+  const enabled = process.env.ENABLE_DEV_TOOLS === '1' && appTier() === 'internal';
   return (
     <div className="mx-auto max-w-4xl space-y-4">
       <header>

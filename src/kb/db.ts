@@ -3,6 +3,7 @@ import type Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { appTier } from '@/lib/tier';
 
 /**
  * better-sqlite3 is a native addon. It is loaded lazily so that a deployment which
@@ -35,7 +36,7 @@ let cached: Database.Database | null = null;
  * mistake, no request path would read from it.
  */
 export function kbExists(): boolean {
-  if (process.env.APP_TIER === 'public') return false;
+  if (appTier() === 'public') return false;
   return fs.existsSync(/*turbopackIgnore: true*/ DB_PATH);
 }
 
@@ -46,7 +47,7 @@ export function kbExists(): boolean {
  */
 export function openDb(opts: { create?: boolean; readonly?: boolean } = {}): Database.Database {
   const { create = false } = opts;
-  if (process.env.APP_TIER === 'public') throw new KbUnavailableError();
+  if (appTier() === 'public') throw new KbUnavailableError();
   if (cached) return cached;
   if (!fs.existsSync(/*turbopackIgnore: true*/ DB_PATH)) {
     if (!create) throw new KbUnavailableError();

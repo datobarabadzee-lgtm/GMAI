@@ -19,8 +19,12 @@
  */
 export type AppTier = 'public' | 'internal';
 
+/**
+ * The internal tier must be chosen explicitly (APP_TIER=internal). A missing or
+ * misspelt value never widens access: it is the public tier (audit F18).
+ */
 export function appTier(): AppTier {
-  return process.env.APP_TIER === 'public' ? 'public' : 'internal';
+  return process.env.APP_TIER === 'internal' ? 'internal' : 'public';
 }
 
 /** Operator tooling. Closed in the public tier; there is no knowledge base to inspect. */

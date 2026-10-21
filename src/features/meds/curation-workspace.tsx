@@ -52,6 +52,14 @@ const PAGE = 25;
 export function CurationWorkspace() {
   const [curator, setCurator] = useState('Davit Barabadze');
   const [pending, setPending] = useState<Decision[]>([]);
+  const [operatorToken, setOperatorToken] = useState('');
+  useEffect(() => {
+    try {
+      setOperatorToken(sessionStorage.getItem('gmai.operator.token') ?? '');
+    } catch {
+      /* not available */
+    }
+  }, []);
   const [map, setMap] = useState<MapInfo | null>(null);
   const [q, setQ] = useState('');
   const [draftQ, setDraftQ] = useState('');
@@ -161,7 +169,7 @@ export function CurationWorkspace() {
   };
 
   const saveLocal = async () => {
-    const r = await post<{ saved: number; rejected: { entry: Decision; reasonKa: string }[] }>('/api/curation/save', { decisions: pending }).catch(() => null);
+    const r = await post<{ saved: number; rejected: { entry: Decision; reasonKa: string }[] }>('/api/curation/save', { decisions: pending }, operatorToken ? { authorization: `Bearer ${operatorToken}` } : {}).catch(() => null);
     if (!r || !r.ok) return setSaveMsg(r?.data.messageKa ?? 'შენახვა ვერ მოხერხდა.');
     setSaveMsg(`ფაილში ჩაიწერა ${r.data.saved}. ${r.data.rejected.length ? `უარყოფილია ${r.data.rejected.length}: ${r.data.rejected.map((x) => `${x.entry.name_ka} — ${x.reasonKa}`).join('; ')}` : ''}`);
     const savedIds = new Set(pending.map((p) => p.mis_id));
@@ -202,7 +210,7 @@ export function CurationWorkspace() {
               ძალაშია: <span className="font-medium text-fg">{map.entries.length}</span> გადაწყვეტილება
               {map.invalid.length > 0 && <span className="text-clinical-high"> · {map.invalid.length} არავალიდური (არ გამოიყენება)</span>}
               <br />
-              {map.localWrite ? 'ლოკალური რეჟიმი: შენახვა პირდაპირ ფაილში.' : 'ონლაინ ვერსია: გადაწყვეტილებები ინახება ამ ბრაუზერში — ჩამოტვირთეთ ფაილი და გადმომეცით.'}
+              {map.localWrite ? 'შიდა ვერსია: შენახვა ფაილში ოპერატორის გასაღებით.' : 'ონლაინ ვერსია: გადაწყვეტილებები ინახება ამ ბრაუზერში — ჩამოტვირთეთ ფაილი და გადმომეცით.'}
             </>
           ) : (
             '…'
@@ -391,9 +399,28 @@ export function CurationWorkspace() {
               <Download className="h-4 w-4" aria-hidden /> ჩამოტვირთვა
             </button>
             {map?.localWrite && (
-              <button type="button" className="btn btn-primary !min-h-0 !py-1.5 text-[12.5px]" disabled={!pending.length} onClick={() => void saveLocal()}>
-                შენახვა ფაილში
-              </button>
+              <>
+                <label className="flex items-center gap-1.5 text-[12px] text-slate-400">
+                  ოპერატორის გასაღები
+                  <input
+                    type="password"
+                    autoComplete="off"
+                    className="field !min-h-0 !w-44 !py-1 text-[12px]"
+                    value={operatorToken}
+                    onChange={(e) => {
+                      setOperatorToken(e.target.value);
+                      try {
+                        sessionStorage.setItem('gmai.operator.token', e.target.value);
+                      } catch {
+                        /* kept in memory only */
+                      }
+                    }}
+                  />
+                </label>
+                <button type="button" className="btn btn-primary !min-h-0 !py-1.5 text-[12.5px]" disabled={!pending.length || operatorToken.length < 32} onClick={() => void saveLocal()}>
+                  შენახვა ფაილში
+                </button>
+              </>
             )}
           </div>
         </div>

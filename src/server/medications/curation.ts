@@ -1,4 +1,6 @@
 import 'server-only';
+import { appTier } from '@/lib/tier';
+import { operatorConfigured } from '@/server/operator-auth';
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import path from 'node:path';
 import type { MisEntry } from '../../../knowledge/medications/store.mjs';
@@ -163,12 +165,12 @@ export async function saveDecisions(decisions: CurationDecision[]) {
 }
 
 /**
- * Writing is allowed only on the owner's own computer: never on Vercel (VERCEL
- * is always set there) and only for a request addressed to localhost. The
- * local copy runs with APP_TIER=public too, so the tier is not the test.
+ * Whether this deployment can accept curator writes at all (internal tier with
+ * an operator token configured). This is a capability flag for the UI — every
+ * write is still authorised per request by checkOperator (operator-auth.ts).
+ * A localhost hostname or a missing VERCEL variable is not authorisation
+ * (audit F18).
  */
-export function localWriteAllowed(req: Request): boolean {
-  if (process.env.VERCEL || process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.AWS_LAMBDA_FUNCTION_NAME) return false;
-  const host = new URL(req.url).hostname;
-  return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+export function curatorWritesEnabled(): boolean {
+  return appTier() === 'internal' && operatorConfigured();
 }

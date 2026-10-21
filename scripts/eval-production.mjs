@@ -125,7 +125,7 @@ async function run() {
       const res = await fetch(`${BASE}/api/orchestrate`, { method: 'POST', headers: { 'content-type': 'application/json', ...(c.noConsent ? {} : c.headers ?? {}) }, body: JSON.stringify(c.body) });
       status = res.status;
       d = await res.json().catch(() => null);
-    } catch (e) {
+    } catch {
       status = -1;
     }
     const checks = [];

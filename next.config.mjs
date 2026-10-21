@@ -25,7 +25,6 @@ const MEDICATION_ROUTES = [
 const nextConfig = {
   reactStrictMode: true,
   serverExternalPackages: ['mammoth', 'better-sqlite3'],
-  eslint: { ignoreDuringBuilds: true },
   // The brand art is already sized and compressed for the UI; skipping the
   // optimizer keeps a runtime service (and its quota) off the critical path.
   images: { unoptimized: true },

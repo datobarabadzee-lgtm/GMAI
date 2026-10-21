@@ -28,7 +28,9 @@ const PROHIBITED = [
 export function runSafetyGate(params: { answer: ClinicalAnswer; claims: Claim[]; risk: RiskClass; emergency: boolean; numericVerified: boolean }): SafetyGateResult {
   const warnings: string[] = [];
   const rewrites: { from: string; to: string }[] = [];
-  let blocked = false;
+  // A20 here rewrites and annotates; the BLOCK decision is the release gate's
+  // (verifiers.ts) and is enforced by the publication contract.
+  const blocked = false;
 
   const serialize = (a: ClinicalAnswer) => [a.bottomLine, ...a.sections.map((s) => `${s.body} ${s.bullets.join(' ')}`)].join(' ');
   const text = serialize(params.answer);

@@ -18,11 +18,18 @@ const INTERNAL_PAGES = ['/admin', '/admin/knowledge', '/admin/retrieval', '/admi
 const SHARED_APIS = ['/api/health', '/api/library', '/api/sources', '/api/orchestrate', '/api/parse', '/api/evidence', '/api/guidelines', '/api/agents'];
 
 describe('public tier boundary', () => {
-  it('defaults to the internal tier when APP_TIER is unset', () => {
+  // F18 (audit 2026-10-21): omitting APP_TIER must never widen access. The
+  // previous default (internal) was the defect; internal must be explicit.
+  it('defaults to the PUBLIC tier when APP_TIER is unset or misspelt; internal only when explicit', () => {
     const prev = process.env.APP_TIER;
     delete process.env.APP_TIER;
+    expect(appTier()).toBe('public');
+    process.env.APP_TIER = 'Internal ';
+    expect(appTier()).toBe('public');
+    process.env.APP_TIER = 'internal';
     expect(appTier()).toBe('internal');
     if (prev !== undefined) process.env.APP_TIER = prev;
+    else delete process.env.APP_TIER;
   });
 
   it('serves every clinical module in the public tier', () => {

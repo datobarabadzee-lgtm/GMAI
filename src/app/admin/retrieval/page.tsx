@@ -1,3 +1,4 @@
+import { appTier } from '@/lib/tier';
 import { RetrievalDebugger } from '@/features/admin/retrieval-debugger';
 import { ErrorState } from '@/components/ui/primitives';
 
@@ -7,7 +8,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = { title: 'ძიების დიაგნოსტიკა', robots: { index: false, follow: false } };
 
 export default function RetrievalDebugPage() {
-  if (process.env.ENABLE_DEV_TOOLS !== '1') {
+  if (process.env.ENABLE_DEV_TOOLS !== '1' || appTier() !== 'internal') {
     return (
       <div className="mx-auto max-w-3xl">
         <ErrorState title="შიდა გვერდი გამორთულია" detail="ეს გვერდი ხელმისაწვდომია მხოლოდ ENABLE_DEV_TOOLS=1 რეჟიმში და საჯაროდ არ ქვეყნდება." />

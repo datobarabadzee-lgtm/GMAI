@@ -14,7 +14,7 @@ import path from 'node:path';
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'gmai-kb-'));
 process.env.KB_DB_PATH = path.join(tmp, 'kb.sqlite');
 process.env.EMBEDDING_PROVIDER = 'hash';
-delete process.env.APP_TIER;
+process.env.APP_TIER = 'internal';
 
 const nodes = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'authored', 'quality', 'taxonomy.json'), 'utf8')) as { id: string; type: string; code: string | null; nameKa: string; parent: string | null; headingPath: string[] }[];
 

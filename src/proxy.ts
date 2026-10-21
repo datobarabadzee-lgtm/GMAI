@@ -1,14 +1,15 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { isPublicApi, isPublicPage } from '@/lib/tier';
+import { appTier, isPublicApi, isPublicPage } from '@/lib/tier';
 
 /**
  * Tier boundary. In the public deployment every internal route — pages, APIs and
  * admin tooling alike — is answered as if it did not exist, before any handler,
  * database connection or knowledge lookup runs.
  */
-export function middleware(req: NextRequest) {
-  if (process.env.APP_TIER !== 'public') return NextResponse.next();
+export function proxy(req: NextRequest) {
+  // The internal tier must be chosen explicitly; anything else is public.
+  if (appTier() === 'internal') return NextResponse.next();
 
   const { pathname } = req.nextUrl;
   if (pathname.startsWith('/api/')) {

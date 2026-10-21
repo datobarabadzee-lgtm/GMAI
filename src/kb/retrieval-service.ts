@@ -1,3 +1,4 @@
+import { appTier } from '@/lib/tier';
 import { hybridSearch, type RetrievalFilters, type RetrievalHitKb, type RetrievalTrace, type ClinicalRuleHit, type QualityRuleHit, type AuditQuestionHit } from './search';
 import { kbExists, KbUnavailableError, openDb } from './db';
 import { openCorpusSearch } from './open-corpus';
@@ -57,7 +58,7 @@ export async function retrieveRules(query: string, filters: RetrievalFilters = {
     // source registry, which the answer cites in the usual way.
     return {
       coverage: 'KB_UNAVAILABLE',
-      messageKa: process.env.APP_TIER === 'public' ? '' : new KbUnavailableError().messageKa,
+      messageKa: appTier() === 'public' ? '' : new KbUnavailableError().messageKa,
       hits: [],
       trace: null,
       ruleIds: [],

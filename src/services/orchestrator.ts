@@ -367,7 +367,7 @@ function sectionsFrom(results: Map<string, AgentResult>, ctx: { risk: RiskClass;
   }
 
   const steps: string[] = [];
-  get('A03')?.data && (get('A03')!.data.items as { omission: string; resolve: string; urgency: string }[] | undefined)?.slice(0, 6).forEach((i) => steps.push(`[${i.urgency}] ${i.omission} → ${i.resolve}`));
+  ((get('A03')?.data?.items as { omission: string; resolve: string; urgency: string }[] | undefined) ?? []).slice(0, 6).forEach((i) => steps.push(`[${i.urgency}] ${i.omission} → ${i.resolve}`));
   get('A08')?.sections.find((s) => s.titleEn === 'Findings')?.bullets.slice(0, 4).forEach((b) => steps.push(b));
   get('A10')?.sections.find((s) => s.titleEn === 'Requires urgent attention')?.bullets.forEach((b) => steps.push(`გადაუდებელი: ${b}`));
   get('A06')?.sections.find((s) => s.titleEn === 'Consensus')?.bullets.slice(0, 3).forEach((b) => steps.push(`კონსენსუსი: ${b}`));
@@ -1152,6 +1152,7 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
   const gateBullets = [
     ...safety.warnings,
     ...release.reasonsKa,
+    ...(focusReplaced ? ['AI-ფორმულირება უარყოფდა წყაროში არსებულ ტექსტს — ნაჩვენებია წყაროს ტექსტი (ინგლისურად) ავტომატური შეჯამების ნაცვლად.'] : []),
     ...(drugNamesRejected.length ? [`მოდელის ტექსტი არ გამოქვეყნდა: მასში დასახელებული პრეპარატი (${drugNamesRejected.join(', ')}) არც შეკითხვაში და არც აგენტების შედეგშია.`] : []),
   ];
   if (gateBullets.length) {

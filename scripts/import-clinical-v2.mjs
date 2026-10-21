@@ -381,7 +381,11 @@ function main() {
           title: s.title,
           units: s.units.map((id) => {
             const u = list.find((x) => x.id === id);
-            return { id: u.id, title: u.title, order: u.order, clinical_types: u.clinical_types, items: u.items.map(({ numeric_mentions: _n, ...it }) => it) };
+            return { id: u.id, title: u.title, order: u.order, clinical_types: u.clinical_types, items: u.items.map((item) => {
+              const it = { ...item };
+              delete it.numeric_mentions;
+              return it;
+            }) };
           }),
         })),
       });

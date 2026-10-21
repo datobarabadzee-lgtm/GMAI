@@ -135,7 +135,6 @@ export function PatientWorkspace() {
     const onNew = () => reset();
     window.addEventListener('gmai:new-question', onNew);
     return () => window.removeEventListener('gmai:new-question', onNew);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Entry points: ?q= from the home page runs at once, ?start=diagnosis

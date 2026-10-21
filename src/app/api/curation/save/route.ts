@@ -1,5 +1,6 @@
 import { z } from 'zod';
-import { localWriteAllowed, saveDecisions } from '@/server/medications/curation';
+import { saveDecisions } from '@/server/medications/curation';
+import { checkOperator } from '@/server/operator-auth';
 import { errorReply, reply } from '@/server/medications/http';
 
 export const runtime = 'nodejs';
@@ -24,8 +25,11 @@ const Body = z.object({ decisions: z.array(Decision).min(1).max(2000) });
  * a file and merged by the operator before the next deployment.
  */
 export async function POST(req: Request) {
-  if (!localWriteAllowed(req)) {
-    return reply({ error: 'LOCAL_ONLY', messageKa: 'ონლაინ ვერსიაში ფაილში ჩაწერა შეუძლებელია — გადაწყვეტილებები ინახება ამ ბრაუზერში; ჩამოტვირთეთ ფაილი და გადმოეცით ოპერატორს.' }, null, { status: 403 });
+  // Writes require the internal tier, a configured OPERATOR_TOKEN, the token in
+  // the request and a same-origin browser request (operator-auth.ts).
+  const auth = checkOperator(req);
+  if (!auth.ok) {
+    return reply({ error: auth.error, messageKa: auth.error === 'PUBLIC_READ_ONLY' ? 'ონლაინ ვერსიაში ფაილში ჩაწერა შეუძლებელია — გადაწყვეტილებები ინახება ამ ბრაუზერში; ჩამოტვირთეთ ფაილი და გადმოეცით ოპერატორს.' : auth.messageKa }, null, { status: auth.status });
   }
   const b = Body.safeParse(await req.json().catch(() => null));
   if (!b.success) return reply({ error: 'BAD_REQUEST', messageKa: 'გადაწყვეტილებების ფორმატი არასწორია.' }, null, { status: 400 });

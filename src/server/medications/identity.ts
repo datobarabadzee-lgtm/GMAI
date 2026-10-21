@@ -31,7 +31,7 @@ export const MED_ROOT = path.join(process.cwd(), 'knowledge', 'medications');
 let storePromise: Promise<MedicationStore> | null = null;
 export function getStore(): Promise<MedicationStore> {
   if (!storePromise) {
-    storePromise = new MedicationStore({ root: MED_ROOT, fetchImpl: (u, i) => fdaFetch(u, i) }).init().catch((e) => {
+    storePromise = new MedicationStore({ root: MED_ROOT, fetchImpl: (u) => fdaFetch(u) }).init().catch((e) => {
       storePromise = null;
       throw e;
     });

@@ -13,7 +13,8 @@ const MAP = path.join(dir, 'curated-map.json');
 process.env.MED_CURATED_MAP = MAP;
 
 const { searchMedication, previewProduct } = await import('@/server/medications/identity');
-const { loadCuratedMap, saveDecisions, localWriteAllowed, curationQueue, curationItem, targetCheck } = await import('@/server/medications/curation');
+const { loadCuratedMap, saveDecisions, curationQueue, curationItem, targetCheck } = await import('@/server/medications/curation');
+const { checkOperator } = await import('@/server/operator-auth');
 const { buildMedicationGate } = await import('@/server/medications/agent-gate');
 const { POST: savePost } = await import('@/app/api/curation/save/route');
 
@@ -89,18 +90,34 @@ describe('curator mappings', () => {
     expect(JSON.parse(fs.readFileSync(MAP, 'utf8')).entries).toHaveLength(1);
   });
 
-  it('the public site cannot write decisions', async () => {
-    process.env.VERCEL = '1';
+  // F18 (audit 2026-10-21): a localhost hostname or a missing VERCEL variable is
+  // not authorisation. Writes need the internal tier, OPERATOR_TOKEN, the token
+  // in the request and a same-origin browser request.
+  it('only an authorised operator on the internal tier can write decisions', async () => {
+    const TOKEN = 'x'.repeat(40);
+    const req = (url: string, h: Record<string, string> = {}) => new Request(url, { method: 'POST', headers: { 'content-type': 'application/json', ...h }, body: JSON.stringify({ decisions: [] }) });
+    const prevTier = process.env.APP_TIER;
     try {
-      expect(localWriteAllowed(new Request('http://localhost:3000/api/curation/save'))).toBe(false);
-      const r = await savePost(new Request('http://localhost:3000/api/curation/save', { method: 'POST', body: JSON.stringify({ decisions: [] }) }));
-      expect(r.status).toBe(403);
+      process.env.APP_TIER = 'public';
+      process.env.OPERATOR_TOKEN = TOKEN;
+      expect((await savePost(req('http://localhost:3000/api/curation/save', { authorization: `Bearer ${TOKEN}` }))).status).toBe(403);
+      process.env.APP_TIER = 'internal';
+      delete process.env.OPERATOR_TOKEN;
+      expect((await savePost(req('http://localhost:3000/api/curation/save'))).status).toBe(403);
+      process.env.OPERATOR_TOKEN = TOKEN;
+      // localhost without the token: refused
+      expect((await savePost(req('http://localhost:3000/api/curation/save'))).status).toBe(401);
+      expect(checkOperator(req('http://localhost:3000/api/curation/save', { authorization: 'Bearer wrong-wrong-wrong-wrong-wrong-wrong-wrong' })).ok).toBe(false);
+      // cross-origin browser request with the token: refused
+      expect(checkOperator(req('http://gmai.local/api/curation/save', { authorization: `Bearer ${TOKEN}`, origin: 'https://evil.example' })).ok).toBe(false);
+      // same-origin with the token on any host: allowed
+      expect(checkOperator(req('http://gmai.local/api/curation/save', { authorization: `Bearer ${TOKEN}`, origin: 'http://gmai.local' })).ok).toBe(true);
+      // authorised: the request passes the gate and reaches validation (an empty list is a 400)
+      expect([200, 400]).toContain((await savePost(req('http://gmai.local/api/curation/save', { authorization: `Bearer ${TOKEN}` }))).status);
     } finally {
-      delete process.env.VERCEL;
+      process.env.APP_TIER = prevTier;
+      delete process.env.OPERATOR_TOKEN;
     }
-    // The owner's local copy (also APP_TIER=public) may write; a non-local host may not.
-    expect(localWriteAllowed(new Request('http://localhost:3000/api/curation/save'))).toBe(true);
-    expect(localWriteAllowed(new Request('https://gmai-public.vercel.app/api/curation/save'))).toBe(false);
   });
 
   it('queue is paged and the item view explains the crosswalk', async () => {

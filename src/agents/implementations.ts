@@ -4,7 +4,7 @@ import { CALCULATORS, suggestCalculators } from '@/lib/calculators';
 import { interpretLabs } from '@/lib/labs';
 import { withoutNegatedRequests } from '@/services/intent-text';
 import { reviewMedications } from '@/lib/medication-review';
-import { findDrug, DRUGS } from '@/knowledge/drugs';
+import { findDrug } from '@/knowledge/drugs';
 import { georgianContextFor, termLookup } from '@/knowledge/georgian-context';
 import { findComparisonTopics, GUIDELINE_BODIES } from '@/knowledge/guidelines';
 import { ASSESSMENT_QUESTIONS, CAUSE_CATEGORIES, suggestDefectClasses } from '@/knowledge/defect-classifier';
