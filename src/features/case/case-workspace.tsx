@@ -15,6 +15,7 @@ import { Badge, Bullets, EmptyState, ErrorState, Panel, Skeleton } from '@/compo
 import { cn, uid } from '@/lib/utils';
 import type { ClinicalMode, TimelineEvent } from '@/schemas/clinical';
 import { UPLOAD_HINT_KA, uploadForParsing } from '@/lib/upload-client';
+import { AttestationBox } from '@/features/settings/attestation-box';
 
 type Tab = 'timeline' | 'problems' | 'medications' | 'labs' | 'documents' | 'ai' | 'quality';
 
@@ -157,6 +158,9 @@ export function CaseWorkspace() {
 
       <div className="min-w-0 space-y-4">
         <Panel>
+          <div className="mb-2">
+            <AttestationBox needed />
+          </div>
           <div className="flex flex-wrap gap-1.5">
             {actions.map((a) => {
               const Icon = a.icon;

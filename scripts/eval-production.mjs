@@ -15,7 +15,12 @@
  */
 
 const BASE = process.argv[2] ?? 'https://gmai-public.vercel.app';
-const CONSENT = { 'x-consent-version': '2026-10-17.1' };
+// Versions of the disclosure (patient) and the professional attestation the
+// server currently requires (src/knowledge/controller.ts, audit F07). The
+// professional cases send the attestation, as the UI does after the user
+// confirms it; a case without it is refused with 451 by design.
+const CONSENT = { 'x-consent-version': '2026-10-21.1' };
+const ATTEST = { 'x-processing-attestation': '2026-10-21.1' };
 const FOREIGN = /[԰-֏Ѐ-ӿͰ-Ͽ֐-׿؀-ۿ一-鿿぀-ヿ가-힯]/;
 const PACE_MS = 5500;
 
@@ -122,7 +127,7 @@ async function run() {
     let status = 0;
     let d = null;
     try {
-      const res = await fetch(`${BASE}/api/orchestrate`, { method: 'POST', headers: { 'content-type': 'application/json', ...(c.noConsent ? {} : c.headers ?? {}) }, body: JSON.stringify(c.body) });
+      const res = await fetch(`${BASE}/api/orchestrate`, { method: 'POST', headers: { 'content-type': 'application/json', ...(c.body.mode === 'patient' ? {} : ATTEST), ...(c.noConsent ? {} : c.headers ?? {}) }, body: JSON.stringify(c.body) });
       status = res.status;
       d = await res.json().catch(() => null);
     } catch {

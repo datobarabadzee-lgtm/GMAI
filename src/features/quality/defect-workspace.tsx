@@ -10,6 +10,7 @@ import { Badge, Bullets, Collapsible, EmptyState, ErrorState, ExportBar, Panel, 
 import { CorpusAudit } from '@/features/quality/corpus-audit';
 import type { OrchestrateResult } from '@/features/clinical/answer-view';
 import { cn } from '@/lib/utils';
+import { AttestationBox } from '@/features/settings/attestation-box';
 
 const MODES: DefectReviewMode[] = ['patient', 'clinician', 'clinic_defense', 'regulator'];
 
@@ -94,6 +95,9 @@ export function DefectWorkspace() {
         }
       >
         <textarea className="field min-h-[140px] resize-y" value={patient.narrative} onChange={(e) => update('narrative', e.target.value)} placeholder="აღწერეთ მოვლენები ქრონოლოგიურად, ჩანაწერების შინაარსის მითითებით…" />
+        <div className="mt-2">
+          <AttestationBox needed={Boolean(patient.narrative.trim())} />
+        </div>
       </Panel>
 
       {loading && (

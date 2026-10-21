@@ -8,6 +8,7 @@ import { DEFECT_CLASSES, CAUSE_CATEGORIES, ASSESSMENT_QUESTIONS, NEUTRAL_LANGUAG
 import { Badge, Bullets, Collapsible, EmptyState, ErrorState, ExportBar, Panel, Skeleton, Table } from '@/components/ui/primitives';
 import type { OrchestrateResult } from '@/features/clinical/answer-view';
 import { cn } from '@/lib/utils';
+import { AttestationBox } from '@/features/settings/attestation-box';
 
 type DefectRow = {
   id: string;
@@ -74,6 +75,9 @@ export function QualityWorkspace() {
       <Panel title="ქეისის მასალა" subtitle="სამედიცინო ჩანაწერი → მოსალოდნელი სტანდარტი → ფაქტობრივი დახმარება → გადახვევა" actions={<button type="button" className="btn btn-primary text-xs" onClick={() => void run()} disabled={loading}><Play className="h-3.5 w-3.5" /> აუდიტის გაშვება</button>}>
         <textarea className="field min-h-[130px] resize-y" value={patient.narrative} onChange={(e) => update('narrative', e.target.value)} placeholder="აღწერეთ ქეისი: რა მოხდა, რა ჩატარდა, რა დაფიქსირდა ჩანაწერში…" />
         <p className="mt-2 text-[11px] text-slate-500">ქრონოლოგია შეავსეთ Case Workspace-ის „ქრონოლოგია“ ჩანართში — ეს აუმჯობესებს აუდიტის სიზუსტეს.</p>
+        <div className="mt-2">
+          <AttestationBox needed={Boolean(patient.narrative.trim())} />
+        </div>
       </Panel>
 
       {loading && <Panel><Skeleton lines={6} /></Panel>}

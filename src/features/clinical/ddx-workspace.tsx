@@ -6,6 +6,7 @@ import { useCase } from '@/features/case/case-store';
 import { useRole } from '@/features/settings/role-store';
 import { Badge, EmptyState, ErrorState, ExportBar, Panel, Skeleton, Table } from '@/components/ui/primitives';
 import type { OrchestrateResult } from './answer-view';
+import { AttestationBox } from '@/features/settings/attestation-box';
 
 type Row = { dx: string; tier: string; category: string; supporting: string; against: string; test: string; urgency: string };
 
@@ -73,6 +74,9 @@ export function DdxWorkspace() {
     <div className="mx-auto max-w-6xl space-y-4">
       <Panel title="კლინიკური სურათი" subtitle="თავისუფალი ტექსტი ან Case Workspace-ის პაციენტი">
         <textarea className="field min-h-[110px] resize-y" value={text} onChange={(e) => setText(e.target.value)} placeholder={patient.narrative ? `ქეისი ჩატვირთულია: ${patient.label}. სურვილისამებრ დააზუსტეთ კითხვა…` : 'აღწერეთ პაციენტი: ასაკი, ჩივილები, ხანგრძლივობა, რისკ-ფაქტორები, ობიექტური სტატუსი…'} />
+        <div className="mt-3">
+          <AttestationBox needed={Boolean(text.trim() || patient.narrative)} />
+        </div>
         <button type="button" className="btn btn-primary mt-3" onClick={() => void run()} disabled={loading}>
           <GitBranch className="h-4 w-4" /> {loading ? 'მიმდინარეობს…' : 'DDx გენერაცია'}
         </button>
