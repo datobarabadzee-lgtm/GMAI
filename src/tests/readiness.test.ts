@@ -97,8 +97,8 @@ describe.runIf(isGit)('release manifest and the repository (F06)', () => {
   it('lists exactly the files git tracks, including all 515 medication index files', () => {
     const tracked = execSync('git ls-files -c -o --exclude-standard', { encoding: 'utf8' }).split('\n').filter(Boolean).sort();
     const listed = JSON.parse(execSync(`node -e "import('./scripts/release-manifest.mjs').then(m=>console.log(JSON.stringify(m.listFiles())))"`, { encoding: 'utf8' })) as string[];
-    // .gitignore / .dockerignore: repository metadata, not release content (release-manifest.mjs METADATA).
-    expect(listed).toEqual(tracked.filter((f) => fs.existsSync(f) && f !== '.gitignore' && f !== '.dockerignore'));
+    // .gitignore / .dockerignore / vercel.json: host metadata, not release content (release-manifest.mjs METADATA).
+    expect(listed).toEqual(tracked.filter((f) => fs.existsSync(f) && f !== '.gitignore' && f !== '.dockerignore' && f !== 'vercel.json'));
     expect(tracked.filter((f) => f.startsWith('knowledge/medications/data/')).length).toBe(515);
     expect(tracked).toContain('.env.example');
     expect(tracked.some((f) => /^\.env(\.local)?$/.test(f))).toBe(false);

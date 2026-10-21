@@ -24,9 +24,11 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 /** Mirrors .gitignore. Paths are relative, with forward slashes. */
 const IGNORE_DIR = new Set(['node_modules', '.next', 'out', 'coverage', '.vercel', 'screenshots', 'release-out', '.git']);
 const IGNORE_ROOT_DIR = new Set(['data', 'knowledge-source', 'mnt']);
-// .gitignore and .dockerignore are repository metadata that hosting uploads
-// drop (the Vercel CLI never sends them); they are not part of the release id.
-export const METADATA = new Set(['.gitignore', '.dockerignore']);
+// Host metadata, not release content: .gitignore and .dockerignore are dropped
+// by hosting uploads (the Vercel CLI never sends them), and Vercel rewrites
+// vercel.json during its build (measured: +16 bytes). Including them would give
+// the same commit different ids on different hosts.
+export const METADATA = new Set(['.gitignore', '.dockerignore', 'vercel.json']);
 const IGNORE_FILE = (rel, base) =>
   METADATA.has(rel) ||
   base.endsWith('.tsbuildinfo') ||
@@ -115,5 +117,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const out = at('--out') ?? path.join(ROOT, 'release-manifest.json');
   const m = buildManifest(at('--root') ?? ROOT);
   fs.writeFileSync(out, JSON.stringify(m, null, 1));
+  // Diagnostics: list source files with size and hash (no content) to compare two hosts.
+  if (process.env.RELEASE_MANIFEST_DEBUG === '1') for (const f of m.files) if (f.kind === 'source') console.log(`${f.sha256.slice(0, 12)} ${f.bytes} ${f.path}`);
   console.log(`${m.releaseId}  files=${m.totals.files}  medicationIndexFiles=${m.counts.medicationIndexFiles}  → ${out}`);
 }
