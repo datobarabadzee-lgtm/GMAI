@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CalendarHeart, HeartPulse, Lock, Phone, PiggyBank, RotateCcw, ShieldCheck, Siren, Sparkles, Timer } from 'lucide-react';
 import { buildPlan } from '@/prevention/engine';
+import { localToday, type ReminderLead } from '@/prevention/schedule';
 import { STATUS_KA } from '@/prevention/labels';
 import type { PreventionInput, PreventionPlan } from '@/prevention/types';
 import { cn } from '@/lib/utils';
@@ -22,6 +23,8 @@ import { PulseLine } from './visuals';
 const KEY_INPUT = 'gmai.prevention.input.v1';
 const KEY_SNAPSHOT = 'gmai.prevention.snapshot.v1';
 const KEY_PROGRESS = 'gmai.prevention.progress.v1';
+const KEY_PLANNED = 'gmai.prevention.planned.v1';
+const KEY_LEAD = 'gmai.prevention.lead.v1';
 
 const read = <T,>(k: string): T | null => {
   try {
@@ -48,7 +51,9 @@ export function PreventionApp() {
   const [saved, setSaved] = useState(false);
   const [progress, setProgress] = useState<Record<string, boolean>>({});
   const [changes, setChanges] = useState<string[]>([]);
-  const today = useMemo(() => new Date().toISOString().slice(0, 10), []);
+  const today = useMemo(() => localToday(), []);
+  const [planned, setPlannedState] = useState<Record<string, string>>({});
+  const [lead, setLeadState] = useState<ReminderLead>(7);
 
   useEffect(() => {
     const i = read<PreventionInput>(KEY_INPUT);
@@ -57,6 +62,9 @@ export function PreventionApp() {
       setSaved(true);
     }
     setProgress(read<Record<string, boolean>>(KEY_PROGRESS) ?? {});
+    setPlannedState(read<Record<string, string>>(KEY_PLANNED) ?? {});
+    const l = read<number>(KEY_LEAD);
+    if (l === 1 || l === 7 || l === 14) setLeadState(l);
   }, []);
 
   const set = useCallback((patch: Partial<PreventionInput>) => setInput((prev) => ({ ...prev, ...patch })), []);
@@ -87,8 +95,25 @@ export function PreventionApp() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const setPlanned = (group: string, date: string | undefined) =>
+    setPlannedState((p) => {
+      const next = { ...p };
+      if (date) next[group] = date;
+      else delete next[group];
+      write(KEY_PLANNED, next);
+      return next;
+    });
+  const setLead = (l: ReminderLead) => {
+    setLeadState(l);
+    write(KEY_LEAD, l);
+  };
+
   const markDone = (group: string, date: string) => {
-    const next = { ...input, lastDone: { ...(input.lastDone ?? {}), [group]: date } };
+    setPlanned(group, undefined);
+    const vid = group.startsWith('vaccine:') ? (group.slice(8) as keyof NonNullable<PreventionInput['vaccines']>) : null;
+    const next: PreventionInput = vid
+      ? { ...input, vaccines: { ...(input.vaccines ?? {}), [vid]: { done: true, lastDate: date } } }
+      : { ...input, lastDone: { ...(input.lastDone ?? {}), [group]: date } };
     setInput(next);
     const { redFlags: _drop, ...keep } = next;
     void _drop;
@@ -103,7 +128,7 @@ export function PreventionApp() {
     });
 
   const forget = () => {
-    [KEY_INPUT, KEY_SNAPSHOT, KEY_PROGRESS].forEach((k) => {
+    [KEY_INPUT, KEY_SNAPSHOT, KEY_PROGRESS, KEY_PLANNED, KEY_LEAD].forEach((k) => {
       try {
         window.localStorage.removeItem(k);
       } catch {
@@ -113,6 +138,7 @@ export function PreventionApp() {
     setInput({});
     setSaved(false);
     setProgress({});
+    setPlannedState({});
     setChanges([]);
     setStage('intro');
   };
@@ -162,7 +188,7 @@ export function PreventionApp() {
   }
   return (
     <>
-      <PlanView plan={plan} input={input} onEdit={() => setStage('form')} onDone={markDone} changes={changes} progress={progress} toggleProgress={toggleProgress} />
+      <PlanView plan={plan} input={input} onEdit={() => setStage('form')} onDone={markDone} changes={changes} progress={progress} toggleProgress={toggleProgress} today={today} planned={planned} setPlanned={setPlanned} lead={lead} setLead={setLead} />
       <div className="no-print mx-auto mt-2 max-w-6xl text-center">
         <button type="button" onClick={forget} className="inline-flex items-center gap-1.5 text-[12px] text-slate-500 hover:text-clinical-critical">
           <RotateCcw className="h-3.5 w-3.5" /> ჩემი მონაცემების წაშლა ამ მოწყობილობიდან

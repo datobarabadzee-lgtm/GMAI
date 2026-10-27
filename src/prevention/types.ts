@@ -109,6 +109,8 @@ export type PlanItem = {
   nextDue?: string;
   /** Interval in months, when the rule has a fixed one. */
   intervalMonths?: number;
+  /** Last age (inclusive) at which this rule still recommends the test; recurring reminders stop there. */
+  stopAge?: number;
   missingKa?: string[];
   sources: Source[];
   reviewStatus: ReviewStatus;

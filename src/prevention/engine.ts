@@ -219,6 +219,7 @@ function item(r: ScreeningRule, status: ScreeningStatus, reasonKa: string, last?
     id: r.id, group: r.group, titleKa: r.titleKa, shortKa: r.shortKa, icon: r.icon, status,
     frequencyKa: r.frequencyKa, reasonKa, whyKa: r.whyKa, howKa: (r as { howKa?: string }).howKa,
     lastDone: last, nextDue, intervalMonths: iv.kind === 'fixed' ? iv.months : undefined,
+    stopAge: r.ageMax < 120 ? r.ageMax : undefined,
     sources: sourcesFor(r.sources), reviewStatus: r.reviewStatus as PlanItem['reviewStatus'],
   };
 }

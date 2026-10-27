@@ -13,7 +13,10 @@ import { useConsent } from '@/features/settings/consent-store';
 import { whatsappLink } from '@/lib/contact';
 import { cn } from '@/lib/utils';
 import { BAND_COLOR, Gauge, ICONS, LeverBars, PulseLine, ScaleBar, StatusRing } from './visuals';
-import { buildIcs, downloadBlob, planSections, planText } from './export';
+import { downloadBlob, planSections, planText } from './export';
+import { CalendarView } from './calendar-view';
+import { FindriscSimulator, Score2Simulator } from './simulator';
+import { buildIcsFromSchedule, buildSchedule, localToday, type ReminderLead } from '@/prevention/schedule';
 
 type Plan = Extract<PreventionPlan, { kind: 'PLAN' }>;
 
@@ -88,7 +91,7 @@ function Explain({ input, kind, id, fallback }: { input: PreventionInput; kind: 
     }
     setState('loading');
     try {
-      const r = await fetch('/api/prevention/explain', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ input, kind, id }) });
+      const r = await fetch('/api/prevention/explain', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ input, kind, id, today: localToday() }) });
       const j = (await r.json()) as { textKa?: string; ai?: boolean };
       setText(j.textKa || fallback);
       setAi(Boolean(j.ai));
@@ -132,16 +135,19 @@ function Explain({ input, kind, id, fallback }: { input: PreventionInput; kind: 
 
 /* ── hero ───────────────────────────────────────────────────────────────── */
 
-function Hero({ plan, onEdit, changes }: { plan: Plan; onEdit: () => void; changes: string[] }) {
+type HeroProps = { plan: Plan; onEdit: () => void; changes: string[]; planned: Record<string, string>; lead: ReminderLead };
+
+function Hero({ plan, onEdit, changes, planned, lead }: HeroProps) {
   const c = plan.counts;
   const todo = c.overdue + c.due;
   const [msg, setMsg] = useState('');
-  const today = new Date().toISOString().slice(0, 10);
+  const today = localToday();
 
   const exportIcs = () => {
-    const { ics, count } = buildIcs(plan, today);
-    downloadBlob('prevention-plan.ics', ics, 'text/calendar;charset=utf-8');
-    setMsg(`${count} შეხსენება ჩაიწერა — გახსენით ფაილი და დაამატეთ კალენდარში.`);
+    const { events, unscheduled } = buildSchedule(plan, today, planned);
+    const { ics, count } = buildIcsFromSchedule(events, today, lead);
+    downloadBlob('chemi-prevencia.ics', ics, 'text/calendar;charset=utf-8');
+    setMsg(`${count} შეხსენების სერია ჩაიწერა — გახსენით ფაილი და დაამატეთ კალენდარში.${unscheduled.length ? ` ${unscheduled.length} კვლევას ჯერ თარიღი არ აქვს — დაგეგმეთ ქვემოთ, კალენდარში.` : ''}`);
   };
   const exportDocx = async () => {
     setMsg('Word ფაილი მზადდება…');
@@ -352,7 +358,7 @@ function ScreeningCard({ s, input, onDone, i }: { s: PlanItem; input: Prevention
               autoFocus
               aria-label="ჩატარების თარიღი"
               className="rounded-full border border-line bg-ink-950 px-3 py-1.5 text-[12.5px] text-slate-200"
-              max={new Date().toISOString().slice(0, 10)}
+              max={localToday()}
               onChange={(e) => {
                 if (e.target.value) {
                   onDone(s.group, e.target.value);
@@ -470,7 +476,8 @@ function RiskCard({ r, input, onAdd }: { r: RiskResult; input: PreventionInput; 
 /* ── main view ──────────────────────────────────────────────────────────── */
 
 const NAV = [
-  { id: 'calendar', label: 'კალენდარი' },
+  { id: 'calendar', label: 'კვლევები' },
+  { id: 'agenda', label: 'კალენდარი' },
   { id: 'risk', label: 'რისკი' },
   { id: 'vaccines', label: 'ვაქცინები' },
   { id: 'pregnancy', label: 'ორსულობამდე' },
@@ -480,7 +487,7 @@ const NAV = [
 ];
 
 export function PlanView({
-  plan, input, onEdit, onDone, changes, progress, toggleProgress,
+  plan, input, onEdit, onDone, changes, progress, toggleProgress, today, planned, setPlanned, lead, setLead,
 }: {
   plan: Plan;
   input: PreventionInput;
@@ -489,12 +496,17 @@ export function PlanView({
   changes: string[];
   progress: Record<string, boolean>;
   toggleProgress: (key: string) => void;
+  today: string;
+  planned: Record<string, string>;
+  setPlanned: (group: string, date: string | undefined) => void;
+  lead: ReminderLead;
+  setLead: (l: ReminderLead) => void;
 }) {
   const nav = NAV.filter((n) => n.id !== 'pregnancy' || plan.preconception);
   const [showAllLow, setShowAllLow] = useState(false);
   return (
     <div className="mx-auto max-w-6xl space-y-10 pb-16">
-      <Hero plan={plan} onEdit={onEdit} changes={changes} />
+      <Hero plan={plan} onEdit={onEdit} changes={changes} planned={planned} lead={lead} />
 
       <nav aria-label="გეგმის ნაწილები" className="no-print sticky top-[60px] z-20 -mx-3 overflow-x-auto bg-[rgb(var(--bg)/0.85)] px-3 py-2 backdrop-blur-md">
         <div className="flex gap-2">
@@ -518,12 +530,21 @@ export function PlanView({
       <Screening plan={plan} input={input} onDone={onDone} />
 
       <div className="space-y-5">
+        <SectionHead id="agenda" icon={CalendarCheck2} eyebrow="კალენდარი და შეხსენებები" title="დაგეგმეთ — და აღარ დაგავიწყდებათ" sub="დაუნიშნეთ თარიღი ყოველ კვლევას. განმეორებითი კვლევები თავისით დაემატება სწორი ინტერვალით და შეწყდება იმ ასაკში, როცა აღარ არის საჭირო. შეხსენება — ტელეფონის კალენდარში ან Google Calendar-ში." />
+        <CalendarView plan={plan} today={today} planned={planned} setPlanned={setPlanned} onDone={onDone} lead={lead} setLead={setLead} />
+      </div>
+
+      <div className="space-y-5">
         <SectionHead id="risk" icon={GaugeIcon} eyebrow="4.2 · რისკის კალკულატორები" title="თქვენი რისკი — და რა შეამცირებს მას ყველაზე მეტად" sub="SCORE2 გათვლილია საქართველოსთვის (ESC-ის ძალიან მაღალი რისკის რეგიონი), FINDRISC — დიაბეტის რისკი ანალიზის გარეშე." />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {plan.risks.map((r) => (
             <RiskCard key={r.id} r={r} input={input} onAdd={onEdit} />
           ))}
         </div>
+        {plan.ageYears >= 40 && plan.ageYears <= 89 && !(input.conditions ?? []).some((c) => c === 'diabetes' || c === 'cvd' || c === 'ckd') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' && (
+          <Score2Simulator input={input} age={plan.ageYears} />
+        )}
+        {!(input.conditions ?? []).includes('diabetes') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' && <FindriscSimulator input={input} age={plan.ageYears} />}
       </div>
 
       <div className="space-y-5">

@@ -5,7 +5,8 @@ import type { LucideIcon } from 'lucide-react';
 import {
   AlertTriangle, ArrowRight, Baby, Cigarette, ClipboardCheck, FlaskConical, HeartHandshake, Minus, Plus, Ruler, Stethoscope, Syringe, Users, Sparkles, ChevronDown,
 } from 'lucide-react';
-import { RED_FLAGS } from '@/prevention/engine';
+import { RED_FLAGS, bmiOf } from '@/prevention/engine';
+import { localToday } from '@/prevention/schedule';
 import type { ChronicCondition, PreventionInput, VaccineId } from '@/prevention/types';
 import { cn } from '@/lib/utils';
 
@@ -68,7 +69,7 @@ function DateField({ label, value, onChange }: { label: string; value?: string; 
   return (
     <label className="block">
       <span className="label">{label}</span>
-      <input type="date" className="field mt-1" value={value ?? ''} max={new Date().toISOString().slice(0, 10)} onChange={(e) => onChange(e.target.value || undefined)} />
+      <input type="date" className="field mt-1" value={value ?? ''} max={localToday()} onChange={(e) => onChange(e.target.value || undefined)} />
     </label>
   );
 }
@@ -128,6 +129,54 @@ const VACCINES: { id: VaccineId; label: string }[] = [
   { id: 'rsv', label: 'RSV' },
 ];
 
+function Hint({ children, action }: { children: ReactNode; action?: { label: string; run: () => void } }) {
+  return (
+    <p className="flex flex-wrap items-center gap-2 rounded-xl bg-clinical-moderate/10 px-3 py-2 text-[12.5px] text-clinical-moderate">
+      <span>{children}</span>
+      {action && (
+        <button type="button" onClick={action.run} className="rounded-full bg-clinical-moderate px-2.5 py-0.5 text-[12px] font-medium text-white">
+          {action.label}
+        </button>
+      )}
+    </p>
+  );
+}
+
+function BmiLive({ input }: { input: PreventionInput }) {
+  const bmi = bmiOf(input);
+  if (bmi === null) return null;
+  const [label, tone] = bmi < 18.5 ? ['წონის ნაკლებობა', 'text-clinical-moderate'] : bmi < 25 ? ['ნორმა', 'text-clinical-low'] : bmi < 30 ? ['ჭარბი წონა', 'text-clinical-moderate'] : ['სიმსუქნე', 'text-clinical-high'];
+  return (
+    <p className="text-[13px] text-slate-300">
+      BMI: <b className="tabular-nums text-fg">{bmi}</b> <span className={tone}>· {label}</span>
+    </p>
+  );
+}
+
+/** cigarettes per day × years ÷ 20 = pack-years */
+function PackYears({ onUse }: { onUse: (v: number) => void }) {
+  const [perDay, setPerDay] = useState<number | undefined>();
+  const [years, setYears] = useState<number | undefined>();
+  const py = perDay && years ? Math.round(((perDay * years) / 20) * 10) / 10 : null;
+  return (
+    <div className="rounded-xl border border-dashed border-line p-3">
+      <p className="text-[12.5px] font-medium text-slate-300">არ იცით კოლოფ-წლები? გამოვთვალოთ:</p>
+      <div className="mt-2 grid grid-cols-2 gap-3">
+        <Num label="ღერი დღეში" value={perDay} onChange={setPerDay} placeholder="20" />
+        <Num label="რამდენი წელი" value={years} onChange={setYears} placeholder="25" />
+      </div>
+      {py !== null && (
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-[13px] text-slate-200">
+          = <b className="tabular-nums text-fg">{py}</b> კოლოფ-წელი
+          <button type="button" onClick={() => onUse(py)} className="rounded-full bg-cyan-brand px-3 py-1 text-[12px] font-medium text-white">
+            გამოყენება
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── the form ──────────────────────────────────────────────────────────── */
 
 export function completeness(i: PreventionInput): number {
@@ -147,6 +196,16 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
   const conditions = new globalThis.Set(input.conditions ?? []);
   const family = input.family ?? {};
   const setFamily = (p: Partial<NonNullable<PreventionInput['family']>>) => set({ family: { ...family, ...p } });
+  // Switching units converts what is already typed, so 230 mg/dL never becomes 230 mmol/L.
+  const switchCholUnit = (u: 'mg/dL' | 'mmol/L') => {
+    const cur = input.cholUnit ?? 'mg/dL';
+    if (u === cur) return;
+    const f = u === 'mmol/L' ? 1 / 38.67 : 38.67;
+    const conv = (v?: number) => (v === undefined ? undefined : u === 'mmol/L' ? Math.round(v * f * 10) / 10 : Math.round(v * f));
+    set({ cholUnit: u, totalChol: conv(input.totalChol), hdlChol: conv(input.hdlChol) });
+  };
+  const tc = input.totalChol;
+  const cholSuspect = tc === undefined ? null : (input.cholUnit ?? 'mg/dL') === 'mg/dL' && tc < 20 ? 'mmol' : input.cholUnit === 'mmol/L' && tc > 25 ? 'mgdl' : null;
 
   return (
     <div className="mx-auto max-w-3xl space-y-4 pb-6">
@@ -245,6 +304,7 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
           <Num label="წონა" unit="კგ" value={input.weightKg} onChange={(v) => set({ weightKg: v })} placeholder="75" />
           <Num label="წელის გარშემოწერილობა" unit="სმ" value={input.waistCm} onChange={(v) => set({ waistCm: v })} placeholder="ჭიპის დონეზე" />
         </div>
+        <BmiLive input={input} />
       </Section>
 
       <Section icon={Cigarette} title="მოწევა" hint="სტატუსი და კოლოფ-წლები" filled={input.smoking ? 1 : 0}>
@@ -255,6 +315,10 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
             {input.smoking === 'former' && <Num label="რომელ წელს დაანებეთ თავი" value={input.quitYear} onChange={(v) => set({ quitYear: v })} placeholder="2015" />}
           </div>
         )}
+        {input.smoking && input.smoking !== 'never' && <PackYears onUse={(v) => set({ packYears: v })} />}
+        {input.smoking === 'former' && input.quitYear !== undefined && (input.quitYear > Number(localToday().slice(0, 4)) || (input.age !== undefined && input.quitYear < Number(localToday().slice(0, 4)) - input.age + 10)) && (
+          <Hint>წელი არადამაჯერებელია — შეამოწმეთ.</Hint>
+        )}
       </Section>
 
       <Section icon={FlaskConical} title="წნევა და ანალიზები" hint="წნევა, ქოლესტერინი, შაქარი" filled={[input.systolicBp, input.totalChol, input.hdlChol, input.glucoseFasting, input.hba1c].filter(Boolean).length}>
@@ -262,20 +326,32 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
           <Num label="ზედა წნევა" unit="მმ ვწყ. სვ." value={input.systolicBp} onChange={(v) => set({ systolicBp: v })} placeholder="120" />
           <Num label="ქვედა წნევა" unit="მმ ვწყ. სვ." value={input.diastolicBp} onChange={(v) => set({ diastolicBp: v })} placeholder="80" />
         </div>
+        {input.systolicBp !== undefined && input.diastolicBp !== undefined && input.systolicBp <= input.diastolicBp && <Hint>ზედა წნევა ქვედაზე მეტი უნდა იყოს — ადგილები ხომ არ აგერიათ?</Hint>}
+        {input.systolicBp !== undefined && (input.systolicBp < 70 || input.systolicBp > 250) && <Hint>ეს მნიშვნელობა ძალიან უჩვეულოა — შეამოწმეთ გაზომვა.</Hint>}
         <div>
           <span className="label">ქოლესტერინის ერთეული</span>
           <div className="mt-1.5">
-            <Choice value={input.cholUnit ?? 'mg/dL'} onChange={(v) => set({ cholUnit: v ?? 'mg/dL' })} options={[{ v: 'mg/dL', label: 'მგ/დლ' }, { v: 'mmol/L', label: 'მმოლ/ლ' }]} />
+            <Choice value={input.cholUnit ?? 'mg/dL'} onChange={(v) => switchCholUnit(v ?? 'mg/dL')} options={[{ v: 'mg/dL', label: 'მგ/დლ' }, { v: 'mmol/L', label: 'მმოლ/ლ' }]} />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <Num label="საერთო ქოლესტერინი" unit={input.cholUnit === 'mmol/L' ? 'მმოლ/ლ' : 'მგ/დლ'} step={0.1} value={input.totalChol} onChange={(v) => set({ totalChol: v, cholUnit: input.cholUnit ?? 'mg/dL' })} />
           <Num label="HDL („კარგი“) ქოლესტერინი" unit={input.cholUnit === 'mmol/L' ? 'მმოლ/ლ' : 'მგ/დლ'} step={0.1} value={input.hdlChol} onChange={(v) => set({ hdlChol: v, cholUnit: input.cholUnit ?? 'mg/dL' })} />
         </div>
+        {cholSuspect && (
+          <Hint action={{ label: cholSuspect === 'mmol' ? 'გადართვა მმოლ/ლ-ზე' : 'გადართვა მგ/დლ-ზე', run: () => set({ cholUnit: cholSuspect === 'mmol' ? 'mmol/L' : 'mg/dL' }) }}>
+            {cholSuspect === 'mmol' ? 'ეს რიცხვები მმოლ/ლ-ს ჰგავს, არა მგ/დლ-ს.' : 'ეს რიცხვები მგ/დლ-ს ჰგავს, არა მმოლ/ლ-ს.'}
+          </Hint>
+        )}
+        {input.totalChol !== undefined && input.hdlChol !== undefined && input.hdlChol >= input.totalChol && <Hint>HDL საერთო ქოლესტერინზე ნაკლები უნდა იყოს — შეამოწმეთ.</Hint>}
         <div className="grid grid-cols-2 gap-3">
           <Num label="უზმოზე გლუკოზა" unit="მგ/დლ" value={input.glucoseFasting} onChange={(v) => set({ glucoseFasting: v, glucoseUnit: 'mg/dL' })} placeholder="95" />
           <Num label="HbA1c" unit="%" step={0.1} value={input.hba1c} onChange={(v) => set({ hba1c: v })} placeholder="5.4" />
         </div>
+        {input.glucoseFasting !== undefined && input.glucoseFasting < 30 && (
+          <Hint action={{ label: `გადაყვანა: ${Math.round(input.glucoseFasting * 18)} მგ/დლ`, run: () => set({ glucoseFasting: Math.round(input.glucoseFasting! * 18), glucoseUnit: 'mg/dL' }) }}>ეს მმოლ/ლ-ს ჰგავს (მგ/დლ = მმოლ/ლ × 18).</Hint>
+        )}
+        {input.hba1c !== undefined && input.hba1c > 20 && <Hint>HbA1c პროცენტებში იწერება (მაგ. 5.6) — mmol/mol ხომ არ არის?</Hint>}
       </Section>
 
       <Section icon={Users} title="ოჯახური ანამნეზი" hint="მშობლები, და-ძმა, შვილები" filled={Object.values(family).filter((v) => v !== undefined && v !== 'none' && v !== false).length}>
@@ -380,7 +456,7 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
                       aria-label={`${v.label} — თარიღი`}
                       className="rounded-lg border border-line bg-ink-950 px-2 py-1 text-[12.5px] text-slate-200"
                       value={cur.lastDate ?? ''}
-                      max={new Date().toISOString().slice(0, 10)}
+                      max={localToday()}
                       onChange={(e) => set({ vaccines: { ...(input.vaccines ?? {}), [v.id]: { done: true, lastDate: e.target.value || undefined } } })}
                     />
                   )}
@@ -402,7 +478,7 @@ export function IntakeForm({ input, set, onSubmit }: { input: PreventionInput; s
       </Section>
 
       {/* Sticky action bar */}
-      <div className="no-print sticky bottom-3 z-30 rounded-2xl border border-line bg-ink-900/95 px-4 py-3 shadow-panel backdrop-blur-md" style={{ marginBottom: 'env(safe-area-inset-bottom)' }}>
+      <div className="no-print sticky bottom-[84px] z-30 lg:bottom-3 rounded-2xl border border-line bg-ink-900/95 px-4 py-3 shadow-panel backdrop-blur-md" style={{ marginBottom: 'env(safe-area-inset-bottom)' }}>
         <div className="flex items-center gap-4">
           <div className="hidden min-w-0 flex-1 sm:block">
             <div className="flex items-center justify-between text-[12px] text-slate-400">
