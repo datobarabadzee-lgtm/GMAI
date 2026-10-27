@@ -348,7 +348,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-006",
@@ -657,7 +663,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-010",
@@ -776,7 +788,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-012",
@@ -942,7 +960,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-014",
@@ -1064,7 +1088,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-015",
@@ -1298,7 +1328,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-019",
@@ -1497,7 +1533,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval, confirmed after priority-review notice (doses / secondary sources)"
+  }
  },
  {
   "rule_id": "PUB-OSTEOP-022",
