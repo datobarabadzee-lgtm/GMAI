@@ -31,7 +31,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-002",
@@ -57,7 +63,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-003",
@@ -83,7 +95,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-004",
@@ -112,7 +130,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-005",
@@ -141,7 +165,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-006",
@@ -171,7 +201,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-007",
@@ -203,7 +239,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-008",
@@ -231,7 +273,13 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
   "rule_id": "PUB-ABDPREG-009",
@@ -260,6 +308,12 @@
    }
   ],
   "evidence_checked": "2026-10-27",
-  "status": "CLINICAL_REVIEW_REQUIRED"
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  }
 ]

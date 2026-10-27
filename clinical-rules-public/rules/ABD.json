@@ -1,206 +1,706 @@
 [
  {
-  "rule_id": "PUB-ABD-001", "cluster": "ABD", "topics": [53, 54], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-ABD-001",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "მწვავე ან არასპეციფიკური მუცლის ტკივილი რეპროდუქციული ასაკის ქალში",
   "recommendation_ka": "კლინიკური შეფასებისას ყოველთვის გაითვალისწინეთ შესაძლო ორსულობა და შესთავაზეთ ორსულობის ტესტი, მაშინაც კი, როცა სიმპტომები არასპეციფიკურია. ექტოპიური ორსულობის სიმპტომები და ნიშნები შეიძლება ჰგავდეს კუჭ-ნაწლავის დაავადებას ან შარდის გზების ინფექციას. ექტოპიური ორსულობა გამორიცხეთ რისკ-ფაქტორების არარსებობის შემთხვევაშიც, რადგან ასეთ ქალთა დაახლოებით მესამედს ცნობილი რისკ-ფაქტორი არ აქვს.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["ჰემოდინამიკური არასტაბილურობა", "მხრის წვერის ტკივილი", "გულის წასვლა ან კოლაფსი"],
-  "sources": [
-   {"org": "NICE", "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (NG126), section 1.4", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng126/chapter/Symptoms-and-signs-of-ectopic-pregnancy-and-initial-assessment", "type": "guideline", "supports": "Rec 1.4.5: in women of reproductive age be aware they may be pregnant and think about offering a pregnancy test even when symptoms are non-specific; ectopic symptoms can resemble GI conditions or UTI. Rec 1.4.8: exclude ectopic even without risk factors, as about a third have no known risk factors (guideline last updated June 2026)."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰემოდინამიკური არასტაბილურობა",
+   "მხრის წვერის ტკივილი",
+   "გულის წასვლა ან კოლაფსი"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (NG126), section 1.4",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng126/chapter/Symptoms-and-signs-of-ectopic-pregnancy-and-initial-assessment",
+    "type": "guideline",
+    "supports": "Rec 1.4.5: in women of reproductive age be aware they may be pregnant and think about offering a pregnancy test even when symptoms are non-specific; ectopic symptoms can resemble GI conditions or UTI. Rec 1.4.8: exclude ectopic even without risk factors, as about a third have no known risk factors (guideline last updated June 2026)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-002", "cluster": "ABD", "topics": [53, 54], "rule_type": "referral", "population": "adult",
+  "rule_id": "PUB-ABD-002",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "referral",
+  "population": "adult",
   "condition_ka": "დადებითი ორსულობის ტესტი და მუცლის ან მენჯის ტკივილი",
   "recommendation_ka": "ჰემოდინამიკურად არასტაბილური ქალი, ან როცა ტკივილის ან სისხლდენის ხარისხი სერიოზულ შეშფოთებას იწვევს, პირდაპირ გადაიყვანეთ გადაუდებელი დახმარების განყოფილებაში. დადებითი ტესტისა და მუცლის მტკივნეულობის, მენჯის მტკივნეულობის ან საშვილოსნოს ყელის გადაადგილებით გამოწვეული მტკივნეულობის დროს დაუყოვნებლივ მიმართეთ ადრეული ორსულობის შეფასების სამსახურს (ან სამორიგეო გინეკოლოგიას). შოკის ნიშნებია ტაქიკარდია (100 დარტყმა/წთ-ზე მეტი) ან ჰიპოტენზია (100/60 მმ ვწყ. სვ.-ზე დაბალი).",
   "doses": [],
   "numeric_values": [
-   {"value": 100, "unit": "bpm", "meaning_ka": "ტაქიკარდიის ზღვარი; ასევე სისტოლური წნევის ზღვარი 100 მმ ვწყ. სვ."},
-   {"value": 60, "unit": "mmHg", "meaning_ka": "დიასტოლური წნევის ზღვარი ჰიპოტენზიისთვის"}
+   {
+    "value": 100,
+    "unit": "bpm",
+    "meaning_ka": "ტაქიკარდიის ზღვარი; ასევე სისტოლური წნევის ზღვარი 100 მმ ვწყ. სვ."
+   },
+   {
+    "value": 60,
+    "unit": "mmHg",
+    "meaning_ka": "დიასტოლური წნევის ზღვარი ჰიპოტენზიისთვის"
+   }
   ],
-  "red_flags_ka": ["ჰიპოტენზია", "ტაქიკარდია", "პერიტონეუმის გაღიზიანების ნიშნები", "კოლაფსი"],
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "ტაქიკარდია",
+   "პერიტონეუმის გაღიზიანების ნიშნები",
+   "კოლაფსი"
+  ],
   "sources": [
-   {"org": "NICE", "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (NG126), section 1.4", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng126/chapter/Symptoms-and-signs-of-ectopic-pregnancy-and-initial-assessment", "type": "guideline", "supports": "Rec 1.4.1: refer haemodynamically unstable women or those with significant concern about pain/bleeding directly to A&E. Rec 1.4.7: refer immediately to EPAS with positive pregnancy test plus pain and abdominal tenderness, pelvic tenderness or cervical motion tenderness. Signs include tachycardia >100 bpm or hypotension <100/60 mmHg."}
+   {
+    "org": "NICE",
+    "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (NG126), section 1.4",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng126/chapter/Symptoms-and-signs-of-ectopic-pregnancy-and-initial-assessment",
+    "type": "guideline",
+    "supports": "Rec 1.4.1: refer haemodynamically unstable women or those with significant concern about pain/bleeding directly to A&E. Rec 1.4.7: refer immediately to EPAS with positive pregnancy test plus pain and abdominal tenderness, pelvic tenderness or cervical motion tenderness. Signs include tachycardia >100 bpm or hypotension <100/60 mmHg."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-003", "cluster": "ABD", "topics": [53, 54], "rule_type": "red_flag", "population": "adult",
+  "rule_id": "PUB-ABD-003",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
   "condition_ka": "ახლად განვითარებული მუცლის და/ან წელის ტკივილი, გულ-სისხლძარღვთა კოლაფსი ან ცნობიერების დაკარგვა",
   "recommendation_ka": "იფიქრეთ მუცლის აორტის ანევრიზმის გასკდომაზე; ალბათობა მეტია, თუ არსებობს ცნობილი ანევრიზმა, ასაკი 60 წელზე მეტი, მწეველობა (ამჟამად ან წარსულში) ან ჰიპერტენზია. გაითვალისწინეთ, რომ ქალებში ანევრიზმის გასკდომა უფრო ხშირია. ჩაატარეთ დაუყოვნებელი საწოლთან აორტის ულტრაბგერა; დაუყოვნებლივ დაუკავშირდით რეგიონულ სისხლძარღვთა სამსახურს, თუ ულტრაბგერა ანევრიზმას აჩვენებს, ან თუ ის მიუწვდომელი/არადიაგნოსტიკურია და ეჭვი რჩება.",
   "doses": [],
-  "numeric_values": [{"value": 60, "unit": "age_years", "meaning_ka": "ასაკი, რომლის ზემოთაც გასკდომის რისკი მეტია"}],
-  "red_flags_ka": ["კოლაფსი", "ცნობიერების დაკარგვა", "მუცლისა და წელის ერთდროული მწვავე ტკივილი"],
-  "sources": [
-   {"org": "NICE", "title": "Abdominal aortic aneurysm: diagnosis and management (NG156)", "year": 2020, "url": "https://www.nice.org.uk/guidance/ng156/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.1.7: think about ruptured AAA in new abdominal and/or back pain, cardiovascular collapse or loss of consciousness, more likely with existing AAA, age over 60, smoking, hypertension. 1.1.8: rupture more likely in women. 1.1.9: immediate bedside aortic ultrasound; discuss immediately with regional vascular service if AAA shown or US unavailable/non-diagnostic."}
+  "numeric_values": [
+   {
+    "value": 60,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლის ზემოთაც გასკდომის რისკი მეტია"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "კოლაფსი",
+   "ცნობიერების დაკარგვა",
+   "მუცლისა და წელის ერთდროული მწვავე ტკივილი"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Abdominal aortic aneurysm: diagnosis and management (NG156)",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/ng156/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Rec 1.1.7: think about ruptured AAA in new abdominal and/or back pain, cardiovascular collapse or loss of consciousness, more likely with existing AAA, age over 60, smoking, hypertension. 1.1.8: rupture more likely in women. 1.1.9: immediate bedside aortic ultrasound; discuss immediately with regional vascular service if AAA shown or US unavailable/non-diagnostic."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-004", "cluster": "ABD", "topics": [54], "rule_type": "referral", "population": "adult",
+  "rule_id": "PUB-ABD-004",
+  "cluster": "ABD",
+  "topics": [
+   54
+  ],
+  "rule_type": "referral",
+  "population": "adult",
   "condition_ka": "მუცლის აორტის ანევრიზმა, აღმოჩენილი მუცლის პალპაციით ან გამოკვლევისას, სიმპტომების გარეშე",
   "recommendation_ka": "პალპაციით ეჭვის დროს ჩაატარეთ აორტის ულტრაბგერა. 5.5 სმ ან მეტი დიამეტრის ანევრიზმა: მიმართეთ სისხლძარღვთა სამსახურს, ნახვა დიაგნოზიდან 2 კვირაში. 3.0–5.4 სმ: ნახვა 12 კვირის განმავლობაში. სიმპტომური ანევრიზმა გადაუდებელი მდგომარეობაა.",
   "doses": [],
   "numeric_values": [
-   {"value": 5.5, "unit": "cm", "meaning_ka": "დიამეტრი, რომელიც 2 კვირაში მიმართვას მოითხოვს"},
-   {"value": 2, "unit": "week", "meaning_ka": "სპეციალისტის ნახვის ვადა 5.5 სმ-ისთვის"},
-   {"value": 3.0, "unit": "cm", "meaning_ka": "ანევრიზმის ქვედა ზღვარი"},
-   {"value": 5.4, "unit": "cm", "meaning_ka": "საშუალო ზომის ზედა ზღვარი"},
-   {"value": 12, "unit": "week", "meaning_ka": "ნახვის ვადა 3.0–5.4 სმ-ისთვის"}
+   {
+    "value": 5.5,
+    "unit": "cm",
+    "meaning_ka": "დიამეტრი, რომელიც 2 კვირაში მიმართვას მოითხოვს"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სპეციალისტის ნახვის ვადა 5.5 სმ-ისთვის"
+   },
+   {
+    "value": 3.0,
+    "unit": "cm",
+    "meaning_ka": "ანევრიზმის ქვედა ზღვარი"
+   },
+   {
+    "value": 5.4,
+    "unit": "cm",
+    "meaning_ka": "საშუალო ზომის ზედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "ნახვის ვადა 3.0–5.4 სმ-ისთვის"
+   }
   ],
-  "red_flags_ka": ["ახალი მუცლის ან წელის ტკივილი ცნობილი ანევრიზმის ფონზე"],
+  "red_flags_ka": [
+   "ახალი მუცლის ან წელის ტკივილი ცნობილი ანევრიზმის ფონზე"
+  ],
   "sources": [
-   {"org": "NICE", "title": "Abdominal aortic aneurysm: diagnosis and management (NG156)", "year": 2020, "url": "https://www.nice.org.uk/guidance/ng156/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.1.5–1.1.6: refer AAA ≥5.5 cm to be seen within 2 weeks; 3.0–5.4 cm within 12 weeks; offer aortic ultrasound for suspected AAA on abdominal palpation."}
+   {
+    "org": "NICE",
+    "title": "Abdominal aortic aneurysm: diagnosis and management (NG156)",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/ng156/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Rec 1.1.5–1.1.6: refer AAA ≥5.5 cm to be seen within 2 weeks; 3.0–5.4 cm within 12 weeks; offer aortic ultrasound for suspected AAA on abdominal palpation."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-005", "cluster": "ABD", "topics": [54], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-ABD-005",
+  "cluster": "ABD",
+  "topics": [
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "მარჯვენა ქვედა კვადრანტის ტკივილი მოზრდილში (მათ შორის ცხელებით და ლეიკოციტოზით, აპენდიციტის ეჭვი), არაორსული პაციენტი",
   "recommendation_ka": "საწყის ვიზუალიზაციად ჩვეულებრივ მიზანშეწონილია მუცლისა და მენჯის კტ ინტრავენური კონტრასტით. მუცლის ან მენჯის ულტრაბგერა და მრტ შეიძლება მიზანშეწონილი იყოს (მაგ., ახალგაზრდებში რადიაციის შესამცირებლად). მუცლის მიმოხილვითი რენტგენოგრაფია და კონტრასტული ირიგოსკოპია ჩვეულებრივ მიზანშეწონილი არ არის. შენიშვნა: WSES-ის რეკომენდაციით ჯერ კლინიკური შკალით რისკის სტრატიფიკაცია და POCUS, ხოლო კტ შერჩევით — ACR და WSES მიდგომები განსხვავდება.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["დიფუზური პერიტონიტის ნიშნები", "სეფსისი"],
-  "sources": [
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Right Lower Quadrant Pain (revised 2022)", "year": 2022, "url": "https://acsearch.acr.org/docs/69357/Narrative/", "type": "guideline", "supports": "Variants 1–2 (RLQ pain; RLQ pain with fever and leukocytosis, suspected appendicitis): CT abdomen/pelvis with IV contrast usually appropriate; US abdomen/pelvis and MRI may be appropriate; abdominal radiography and contrast enema usually not appropriate."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "დიფუზური პერიტონიტის ნიშნები",
+   "სეფსისი"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Right Lower Quadrant Pain (revised 2022)",
+    "year": 2022,
+    "url": "https://acsearch.acr.org/docs/69357/Narrative/",
+    "type": "guideline",
+    "supports": "Variants 1–2 (RLQ pain; RLQ pain with fever and leukocytosis, suspected appendicitis): CT abdomen/pelvis with IV contrast usually appropriate; US abdomen/pelvis and MRI may be appropriate; abdominal radiography and contrast enema usually not appropriate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-006", "cluster": "ABD", "topics": [54], "rule_type": "evaluation", "population": "pregnancy",
+  "rule_id": "PUB-ABD-006",
+  "cluster": "ABD",
+  "topics": [
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "pregnancy",
   "condition_ka": "ორსული ქალი მარჯვენა ქვედა კვადრანტის ტკივილით, აპენდიციტის ეჭვი",
   "recommendation_ka": "დიაგნოზს მხოლოდ სიმპტომებსა და ნიშნებზე ნუ დააფუძნებთ — ყოველთვის მოითხოვეთ ლაბორატორიული და ანთებითი მარკერები. საწყისი ვიზუალიზაცია: მუცლის ულტრაბგერა (WSES: კომპრესიული ტრანსაბდომინური ულტრაბგერა); არადიაგნოსტიკური ულტრაბგერის შემდეგ — მრტ კონტრასტის გარეშე, თუ ხელმისაწვდომია (ACR ორივეს „ჩვეულებრივ მიზანშეწონილად“ აფასებს). უარყოფითი ან გაურკვეველი მრტ აპენდიციტს არ გამორიცხავს; მაღალი კლინიკური ეჭვისას განიხილეთ ოპერაცია. ორსულობაში არაოპერაციული (ანტიბიოტიკური) მკურნალობა რეკომენდებული არ არის.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["პერიტონეუმის გაღიზიანება", "ნაყოფის დისტრესი"],
-  "sources": [
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Right Lower Quadrant Pain (revised 2022)", "year": 2022, "url": "https://acsearch.acr.org/docs/69357/Narrative/", "type": "guideline", "supports": "Variant 3 (pregnant woman, suspected appendicitis): US abdomen and MRI abdomen/pelvis without IV contrast usually appropriate; CT may be appropriate."},
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Rec 1.2.2: do not diagnose in pregnancy on symptoms/signs only, request labs/inflammatory markers. Rec 1.13.1–1.13.2: graded compression transabdominal US first, MRI after inconclusive US; negative MRI does not exclude appendicitis. Rec 2.1.2: suggest against non-operative treatment during pregnancy."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პერიტონეუმის გაღიზიანება",
+   "ნაყოფის დისტრესი"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Right Lower Quadrant Pain (revised 2022)",
+    "year": 2022,
+    "url": "https://acsearch.acr.org/docs/69357/Narrative/",
+    "type": "guideline",
+    "supports": "Variant 3 (pregnant woman, suspected appendicitis): US abdomen and MRI abdomen/pelvis without IV contrast usually appropriate; CT may be appropriate."
+   },
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Rec 1.2.2: do not diagnose in pregnancy on symptoms/signs only, request labs/inflammatory markers. Rec 1.13.1–1.13.2: graded compression transabdominal US first, MRI after inconclusive US; negative MRI does not exclude appendicitis. Rec 2.1.2: suggest against non-operative treatment during pregnancy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-007", "cluster": "ABD", "topics": [53, 54], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-ABD-007",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "მარჯვენა ზედა კვადრანტის ტკივილი, ნავარაუდევი ნაღვლის გზების დაავადება",
   "recommendation_ka": "საწყისი კვლევა: მუცლის ულტრაბგერა (უცნობი მიზეზის დროს ასევე მისაღებია კტ ინტრავენური კონტრასტით). თუ ულტრაბგერა უარყოფითი ან საეჭვოა: ცხელებისა და ლეიკოციტოზის გარეშე — მრტ/მრქპ ან კტ კონტრასტით; ცხელებით და მომატებული ლეიკოციტებით — მრტ/მრქპ, ნაღვლის ბუშტის რადიონუკლიდური სკანირება (ქოლესცინტიგრაფია) ან კტ კონტრასტით.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["ცხელება სიყვითლით (ქოლანგიტის ეჭვი)", "ჰიპოტენზია"],
-  "sources": [
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Right Upper Quadrant Pain (revised 2022)", "year": 2022, "url": "https://acsearch.acr.org/docs/69474/Narrative/", "type": "guideline", "supports": "Variant 1: US abdomen and CT with IV contrast usually appropriate (unknown aetiology). Variant 2: US usually appropriate for suspected biliary disease. Variant 3 (no fever/WBC, negative US): MRI/MRCP or CT with contrast usually appropriate. Variant 4 (fever, high WBC, negative US): MRI/MRCP, nuclear medicine gallbladder scan or CT with contrast usually appropriate."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელება სიყვითლით (ქოლანგიტის ეჭვი)",
+   "ჰიპოტენზია"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Right Upper Quadrant Pain (revised 2022)",
+    "year": 2022,
+    "url": "https://acsearch.acr.org/docs/69474/Narrative/",
+    "type": "guideline",
+    "supports": "Variant 1: US abdomen and CT with IV contrast usually appropriate (unknown aetiology). Variant 2: US usually appropriate for suspected biliary disease. Variant 3 (no fever/WBC, negative US): MRI/MRCP or CT with contrast usually appropriate. Variant 4 (fever, high WBC, negative US): MRI/MRCP, nuclear medicine gallbladder scan or CT with contrast usually appropriate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-008", "cluster": "ABD", "topics": [53, 54], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-ABD-008",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "მარცხენა ქვედა კვადრანტის ტკივილი, მათ შორის დივერტიკულიტის ან მისი გართულების ეჭვი",
   "recommendation_ka": "საწყის ვიზუალიზაციად ჩვეულებრივ მიზანშეწონილია მუცლისა და მენჯის კტ ინტრავენური კონტრასტით. მრტ ან კონტრასტის გარეშე კტ შეიძლება იყოს ალტერნატივა (მაგ., კონტრასტის უკუჩვენებისას). დივერტიკულიტის ეჭვისას მუცლის ულტრაბგერა და მიმოხილვითი რენტგენოგრაფია ჩვეულებრივ მიზანშეწონილი არ არის; ფისტულის ეჭვისას შეიძლება დაემატოს ცისტოგრაფია ან კონტრასტული ირიგოსკოპია.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["პერიტონიტის ნიშნები (პერფორაცია)", "პნევმატურია ან ფეკალურია (ფისტულა)"],
-  "sources": [
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Left Lower Quadrant Pain (revised 2023)", "year": 2023, "url": "https://acsearch.acr.org/docs/69356/Narrative/", "type": "guideline", "supports": "Variants 1–3 (LLQ pain; suspected diverticulitis; suspected complications): CT abdomen/pelvis with IV contrast usually appropriate; MRI and non-contrast CT may be appropriate; for suspected diverticulitis US and radiography usually not appropriate; for complications contrast enema and cystography may be appropriate."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პერიტონიტის ნიშნები (პერფორაცია)",
+   "პნევმატურია ან ფეკალურია (ფისტულა)"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Left Lower Quadrant Pain (revised 2023)",
+    "year": 2023,
+    "url": "https://acsearch.acr.org/docs/69356/Narrative/",
+    "type": "guideline",
+    "supports": "Variants 1–3 (LLQ pain; suspected diverticulitis; suspected complications): CT abdomen/pelvis with IV contrast usually appropriate; MRI and non-contrast CT may be appropriate; for suspected diverticulitis US and radiography usually not appropriate; for complications contrast enema and cystography may be appropriate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-009", "cluster": "ABD", "topics": [53, 54], "rule_type": "diagnosis", "population": "adult",
+  "rule_id": "PUB-ABD-009",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
   "condition_ka": "მოზრდილი მწვავე აპენდიციტის ეჭვით",
   "recommendation_ka": "გამოიყენეთ კლინიკური შკალები (უპირატესად AIR და AAS) აპენდიციტის გამოსარიცხად და შუალედური რისკის პაციენტების გამოსავლენად, რომლებსაც სისტემური ვიზუალიზაცია სჭირდებათ. ალვარადოს შკალა დიაგნოზის დასადასტურებლად არ გამოიყენოთ. 40 წლამდე მაღალი რისკის პაციენტებში (AIR 9–12, ალვარადო 9–10, AAS 16 ან მეტი) ოპერაციამდე კტ შეიძლება არ გახდეს საჭირო და პირდაპირ დიაგნოსტიკურ/სამკურნალო ლაპაროსკოპიაზე გადასვლა განიხილება.",
   "doses": [],
   "numeric_values": [
-   {"value": 40, "unit": "age_years", "meaning_ka": "ასაკის ზედა ზღვარი, როცა კტ შეიძლება გამოტოვდეს"},
-   {"value": 9, "unit": "score", "meaning_ka": "AIR და ალვარადოს მაღალი რისკის ქვედა ზღვარი"},
-   {"value": 12, "unit": "score", "meaning_ka": "AIR შკალის მაქსიმუმი"},
-   {"value": 10, "unit": "score", "meaning_ka": "ალვარადოს შკალის მაქსიმუმი"},
-   {"value": 16, "unit": "score", "meaning_ka": "AAS მაღალი რისკის ზღვარი"}
+   {
+    "value": 40,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზედა ზღვარი, როცა კტ შეიძლება გამოტოვდეს"
+   },
+   {
+    "value": 9,
+    "unit": "score",
+    "meaning_ka": "AIR და ალვარადოს მაღალი რისკის ქვედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "score",
+    "meaning_ka": "AIR შკალის მაქსიმუმი"
+   },
+   {
+    "value": 10,
+    "unit": "score",
+    "meaning_ka": "ალვარადოს შკალის მაქსიმუმი"
+   },
+   {
+    "value": 16,
+    "unit": "score",
+    "meaning_ka": "AAS მაღალი რისკის ზღვარი"
+   }
   ],
   "red_flags_ka": [],
   "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Rec 1.2.1 and 1.4: use clinical scores (AIR, AAS best performing) to exclude AA and identify intermediate-risk patients needing imaging. Rec 1.3: against Alvarado to positively confirm AA. Rec 1.9: CT may be avoided in high-risk patients <40 years (AIR 9–12, Alvarado 9–10, AAS ≥16) before laparoscopy."}
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Rec 1.2.1 and 1.4: use clinical scores (AIR, AAS best performing) to exclude AA and identify intermediate-risk patients needing imaging. Rec 1.3: against Alvarado to positively confirm AA. Rec 1.9: CT may be avoided in high-risk patients <40 years (AIR 9–12, Alvarado 9–10, AAS ≥16) before laparoscopy."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-010", "cluster": "ABD", "topics": [54], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-ABD-010",
+  "cluster": "ABD",
+  "topics": [
+   54
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "აპენდიციტის ეჭვი, როცა კლინიკური შეფასების შემდეგ ვიზუალიზაცია ნაჩვენებია",
   "recommendation_ka": "პირველი რიგის კვლევად გამოცდილი ექიმის მიერ ჩატარებული წერტილოვანი ულტრაბგერა (POCUS) განიხილეთ; კლინიკური პარამეტრებისა და ულტრაბგერის კომბინაცია ამცირებს კტ-ის საჭიროებას. მოზარდებსა და ახალგაზრდებში უარყოფითი ულტრაბგერის შემდეგ უპირატესობა მიანიჭეთ დაბალდოზიან კონტრასტულ კტ-ს. ნორმალური კვლევებისას, მაგრამ შენარჩუნებული მარჯვენა თეძოს ფოსოს ტკივილისას, ოპერაციამდე ჩაატარეთ კვეთითი ვიზუალიზაცია; პროგრესირებადი ტკივილისას — დიაგნოსტიკური ლაპაროსკოპია.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["პროგრესირებადი ან უწყვეტი ტკივილი ნორმალური კვლევების მიუხედავად"],
-  "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Rec 1.7: combine clinical parameters and US to reduce CT. Rec 1.10: POCUS most appropriate first-line imaging in adults and children if imaging indicated. Rec 1.11: low-dose contrast CT preferred for adolescents/young adults with negative US. Rec 1.12: cross-sectional imaging for non-resolving RIF pain with normal investigations; laparoscopy if progressive/persistent pain."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პროგრესირებადი ან უწყვეტი ტკივილი ნორმალური კვლევების მიუხედავად"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Rec 1.7: combine clinical parameters and US to reduce CT. Rec 1.10: POCUS most appropriate first-line imaging in adults and children if imaging indicated. Rec 1.11: low-dose contrast CT preferred for adolescents/young adults with negative US. Rec 1.12: cross-sectional imaging for non-resolving RIF pain with normal investigations; laparoscopy if progressive/persistent pain."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-011", "cluster": "ABD", "topics": [53], "rule_type": "treatment", "population": "adult",
+  "rule_id": "PUB-ABD-011",
+  "cluster": "ABD",
+  "topics": [
+   53
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
   "condition_ka": "დადასტურებული გაურთულებელი მწვავე აპენდიციტი მოზრდილში",
   "recommendation_ka": "დაგეგმეთ ლაპაროსკოპიული აპენდექტომია უახლოეს ოპერაციულ სიაში, 24 საათის განმავლობაში; ოპერაცია მიღებიდან 24 საათზე მეტად ნუ გადადებთ. შერჩეულ პაციენტებში აპენდიკოლითის გარეშე განიხილეთ არაოპერაციული მკურნალობა ანტიბიოტიკებით (ჯერ ინტრავენური, შემდეგ პერორალური), პაციენტს კი აცნობეთ, რომ რეციდივის რისკი 5 წელში 39%-მდეა და არსებობს გართულებული აპენდიციტის გამოტოვების შესაძლებლობა.",
   "doses": [],
   "numeric_values": [
-   {"value": 24, "unit": "h", "meaning_ka": "აპენდექტომიის მაქსიმალური დაყოვნება მიღებიდან"},
-   {"value": 5, "unit": "year", "meaning_ka": "რეციდივის შეფასების პერიოდი"},
-   {"value": 39, "unit": "%", "meaning_ka": "რეციდივის მაქსიმალური სიხშირე არაოპერაციული მკურნალობის შემდეგ"}
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "აპენდექტომიის მაქსიმალური დაყოვნება მიღებიდან"
+   },
+   {
+    "value": 5,
+    "unit": "year",
+    "meaning_ka": "რეციდივის შეფასების პერიოდი"
+   },
+   {
+    "value": 39,
+    "unit": "%",
+    "meaning_ka": "რეციდივის მაქსიმალური სიხშირე არაოპერაციული მკურნალობის შემდეგ"
+   }
   ],
-  "red_flags_ka": ["აპენდიკოლითი", "პერფორაციის ან აბსცესის ნიშნები"],
+  "red_flags_ka": [
+   "აპენდიკოლითი",
+   "პერფორაციის ან აბსცესის ნიშნები"
+  ],
   "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Rec 3.1–3.2: plan laparoscopic appendectomy for next available list within 24 h; against delay beyond 24 h from admission. Rec 2.1.1: discuss NOM with antibiotics in selected uncomplicated AA without appendicolith; recurrence risk up to 39% after 5 years. Rec 2.3: initial IV antibiotics then switch to oral."}
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Rec 3.1–3.2: plan laparoscopic appendectomy for next available list within 24 h; against delay beyond 24 h from admission. Rec 2.1.1: discuss NOM with antibiotics in selected uncomplicated AA without appendicolith; recurrence risk up to 39% after 5 years. Rec 2.3: initial IV antibiotics then switch to oral."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-012", "cluster": "ABD", "topics": [48], "rule_type": "diagnosis", "population": "child",
+  "rule_id": "PUB-ABD-012",
+  "cluster": "ABD",
+  "topics": [
+   48
+  ],
+  "rule_type": "diagnosis",
+  "population": "child",
   "condition_ka": "ბავშვი მწვავე მუცლის ტკივილით და აპენდიციტის ეჭვით",
   "recommendation_ka": "ალვარადოს შკალა და პედიატრიული აპენდიციტის შკალა (PAS) სასარგებლოა აპენდიციტის გამოსარიცხად, მაგრამ დიაგნოზი მხოლოდ შკალით არ დასვათ. რუტინულად მოითხოვეთ სისხლის საერთო ანალიზი ლეიკოციტური ფორმულით (ნეიტროფილების აბსოლუტური რაოდენობით), C-რეაქტიული ცილა და შარდის ანალიზი. მიღებისას CRP 10 მგ/ლ ან მეტი და ლეიკოციტოზი 16 × 10⁹/ლ ან მეტი აპენდიციტის ძლიერი პრედიქტორებია. მარკერები და შკალა ერთად გამოიყენეთ ვიზუალიზაციის საჭიროების შესაფასებლად.",
   "doses": [],
   "numeric_values": [
-   {"value": 10, "unit": "mg/L", "meaning_ka": "CRP-ის ზღვარი; ასევე 10⁹/ლ ჩანაწერის ფუძე"},
-   {"value": 16, "unit": "x10^9/L", "meaning_ka": "ლეიკოციტების ზღვარი (16 000/მკლ)"}
+   {
+    "value": 10,
+    "unit": "mg/L",
+    "meaning_ka": "CRP-ის ზღვარი; ასევე 10⁹/ლ ჩანაწერის ფუძე"
+   },
+   {
+    "value": 16,
+    "unit": "x10^9/L",
+    "meaning_ka": "ლეიკოციტების ზღვარი (16 000/მკლ)"
+   }
   ],
-  "red_flags_ka": ["ნაღვლიანი ღებინება", "დიფუზური პერიტონიტი", "სეფსისის ნიშნები"],
+  "red_flags_ka": [
+   "ნაღვლიანი ღებინება",
+   "დიფუზური პერიტონიტი",
+   "სეფსისის ნიშნები"
+  ],
   "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Statement/Rec 1.5: Alvarado and PAS useful to exclude AA in children; do not diagnose on scores alone. Statement 1.7/Rec 1.6.1–1.6.2: WBC with ANC, CRP, urinalysis routinely; CRP ≥10 mg/L and leucocytosis ≥16,000/mL strong predictors; combine biomarkers and scores to decide on imaging."},
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Suspected Appendicitis–Child (J Am Coll Radiol 2019;16:S252–S263)", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31054752/", "type": "guideline", "supports": "Initial consideration for imaging in a child with suspected appendicitis is based on clinical assessment, facilitated by published scoring systems; clinical risk level (low/intermediate/high) defines need for imaging."}
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Statement/Rec 1.5: Alvarado and PAS useful to exclude AA in children; do not diagnose on scores alone. Statement 1.7/Rec 1.6.1–1.6.2: WBC with ANC, CRP, urinalysis routinely; CRP ≥10 mg/L and leucocytosis ≥16,000/mL strong predictors; combine biomarkers and scores to decide on imaging."
+   },
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Suspected Appendicitis–Child (J Am Coll Radiol 2019;16:S252–S263)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31054752/",
+    "type": "guideline",
+    "supports": "Initial consideration for imaging in a child with suspected appendicitis is based on clinical assessment, facilitated by published scoring systems; clinical risk level (low/intermediate/high) defines need for imaging."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-013", "cluster": "ABD", "topics": [48], "rule_type": "evaluation", "population": "child",
+  "rule_id": "PUB-ABD-013",
+  "cluster": "ABD",
+  "topics": [
+   48
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
   "condition_ka": "ბავშვი აპენდიციტის ეჭვით, როცა ვიზუალიზაცია ნაჩვენებია",
   "recommendation_ka": "ვიზუალიზაციის საჭიროება და მეთოდი განსაზღვრეთ კლინიკური რისკის (დაბალი, შუალედური, მაღალი) მიხედვით; დაბალი რისკისას ვიზუალიზაცია შეიძლება საერთოდ არ დასჭირდეს. პირველი რიგის კვლევაა ულტრაბგერა; კტ რუტინულად პირველ კვლევად არ გამოიყენოთ. გაურკვეველი ულტრაბგერის შემდეგ მეორე რიგის მეთოდი (მრტ უპირატესია კტ-თან შედარებით, ან განმეორებითი ულტრაბგერა) შეარჩიეთ ადგილობრივი ხელმისაწვდომობისა და გამოცდილების მიხედვით.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["ნაწლავის გაუვალობის ნიშნები (გართულების ეჭვი)"],
-  "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Statement 1.15/Rec 1.14.1–1.14.2: US first-line imaging in children; MRI preferred over CT as second-line; choose second-line by local availability; against routine CT as first-line in children with RIF pain."},
-   {"org": "ACR", "title": "ACR Appropriateness Criteria: Suspected Appendicitis–Child (J Am Coll Radiol 2019;16:S252–S263)", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31054752/", "type": "guideline", "supports": "Clinical risk level and scenario define need for imaging and optimal modality; in some situations no imaging is required, in others US, CT or MRI may be appropriate; addresses equivocal initial US."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ნაწლავის გაუვალობის ნიშნები (გართულების ეჭვი)"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Statement 1.15/Rec 1.14.1–1.14.2: US first-line imaging in children; MRI preferred over CT as second-line; choose second-line by local availability; against routine CT as first-line in children with RIF pain."
+   },
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Suspected Appendicitis–Child (J Am Coll Radiol 2019;16:S252–S263)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31054752/",
+    "type": "guideline",
+    "supports": "Clinical risk level and scenario define need for imaging and optimal modality; in some situations no imaging is required, in others US, CT or MRI may be appropriate; addresses equivocal initial US."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-014", "cluster": "ABD", "topics": [48], "rule_type": "treatment", "population": "child",
+  "rule_id": "PUB-ABD-014",
+  "cluster": "ABD",
+  "topics": [
+   48
+  ],
+  "rule_type": "treatment",
+  "population": "child",
   "condition_ka": "ბავშვი დადასტურებული მწვავე აპენდიციტით",
   "recommendation_ka": "გაურთულებელი აპენდიციტისას ოპერაცია მიღებიდან 24 საათზე მეტად არ გადადოთ; გართულებული აპენდიციტისას ადრეული აპენდექტომია ჩაატარეთ 8 საათის განმავლობაში. აპენდიკოლითის გარეშე გაურთულებელი აპენდიციტისას მშობლებთან განიხილეთ ანტიბიოტიკებით არაოპერაციული მკურნალობა, მარცხისა და გართულებული ფორმის გამოტოვების რისკის განმარტებით; აპენდიკოლითის არსებობისას რეკომენდებულია ოპერაცია.",
   "doses": [],
   "numeric_values": [
-   {"value": 24, "unit": "h", "meaning_ka": "გაურთულებელი აპენდიციტის ოპერაციის მაქსიმალური დაყოვნება"},
-   {"value": 8, "unit": "h", "meaning_ka": "გართულებული აპენდიციტის ოპერაციის ვადა"}
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "გაურთულებელი აპენდიციტის ოპერაციის მაქსიმალური დაყოვნება"
+   },
+   {
+    "value": 8,
+    "unit": "h",
+    "meaning_ka": "გართულებული აპენდიციტის ოპერაციის ვადა"
+   }
   ],
-  "red_flags_ka": ["პერფორაცია", "აბსცესი", "სეფსისი"],
+  "red_flags_ka": [
+   "პერფორაცია",
+   "აბსცესი",
+   "სეფსისი"
+  ],
   "sources": [
-   {"org": "WSES", "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines", "year": 2020, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/", "type": "guideline", "supports": "Rec 3.3: against delaying appendectomy in children with uncomplicated AA beyond 24 h; early appendectomy within 8 h for complicated AA. Statement/Rec 2.2: NOM feasible in children with uncomplicated AA without appendicolith; surgery recommended when appendicolith present."}
+   {
+    "org": "WSES",
+    "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386163/",
+    "type": "guideline",
+    "supports": "Rec 3.3: against delaying appendectomy in children with uncomplicated AA beyond 24 h; early appendectomy within 8 h for complicated AA. Statement/Rec 2.2: NOM feasible in children with uncomplicated AA without appendicolith; surgery recommended when appendicolith present."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-015", "cluster": "ABD", "topics": [53], "rule_type": "diagnosis", "population": "adult",
+  "rule_id": "PUB-ABD-015",
+  "cluster": "ABD",
+  "topics": [
+   53
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
   "condition_ka": "უეცრად დაწყებული ეპიგასტრიული ტკივილი გულისრევით/ღებინებით, ნაღვლკენჭოვანი დაავადების ან ალკოჰოლის ანამნეზით (მწვავე პანკრეატიტის ეჭვი)",
   "recommendation_ka": "დიაგნოზი დაადასტურეთ სისხლის ლიპაზით ან ამილაზით (მომატება სხვა მდგომარეობებშიც გვხვდება); თუ ფერმენტები არ არის მომატებული, ანთება შეიძლება დაადასტუროს მუცლის კტ-მ. მიზეზად ალკოჰოლი ავტომატურად ნუ ჩათვლით; ნაღვლის კენჭებისა და ალკოჰოლის გამორიცხვის შემდეგ გამოიკვლიეთ სხვა მიზეზები (ჰიპერკალციემია, ჰიპერლიპიდემია, მედიკამენტები, სიმსივნე). პროფილაქტიკური ანტიმიკრობული საშუალებები არ დანიშნოთ; პაციენტს საკვები უმიზეზოდ არ შეუწყვიტოთ, მძიმე და საშუალოდ მძიმე ფორმისას ენტერული კვება დაიწყეთ 72 საათის განმავლობაში.",
   "doses": [],
-  "numeric_values": [{"value": 72, "unit": "h", "meaning_ka": "ენტერული კვების დაწყების ვადა მიღებიდან"}],
-  "red_flags_ka": ["ორგანოთა უკმარისობა", "ინფიცირებული ნეკროზის ეჭვი"],
-  "sources": [
-   {"org": "NICE", "title": "Pancreatitis (NG104), section 1.2", "year": 2018, "url": "https://www.nice.org.uk/guidance/ng104/chapter/Recommendations", "type": "guideline", "supports": "Section 1.2 intro: acute pancreatitis presents with sudden abdominal pain, nausea/vomiting; diagnosis confirmed by raised blood lipase or amylase; CT may confirm if not raised. 1.2.1–1.2.2: don't assume alcohol; investigate other causes. 1.2.3: no prophylactic antimicrobials. 1.2.5–1.2.6: avoid nil-by-mouth; enteral nutrition within 72 h for severe/moderately severe (last updated 2020)."}
+  "numeric_values": [
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "ენტერული კვების დაწყების ვადა მიღებიდან"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "ორგანოთა უკმარისობა",
+   "ინფიცირებული ნეკროზის ეჭვი"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Pancreatitis (NG104), section 1.2",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng104/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Section 1.2 intro: acute pancreatitis presents with sudden abdominal pain, nausea/vomiting; diagnosis confirmed by raised blood lipase or amylase; CT may confirm if not raised. 1.2.1–1.2.2: don't assume alcohol; investigate other causes. 1.2.3: no prophylactic antimicrobials. 1.2.5–1.2.6: avoid nil-by-mouth; enteral nutrition within 72 h for severe/moderately severe (last updated 2020)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-ABD-016", "cluster": "ABD", "topics": [53, 54], "rule_type": "referral", "population": "all",
+  "rule_id": "PUB-ABD-016",
+  "cluster": "ABD",
+  "topics": [
+   53,
+   54
+  ],
+  "rule_type": "referral",
+  "population": "all",
   "condition_ka": "მწვავე პანკრეატიტი გართულებებით, ან მწვავე პანკრეატიტი ბავშვში; ქრონიკული ან განმეორებითი ზედა მუცლის ტკივილი",
   "recommendation_ka": "ნეკროზული, ინფექციური, ჰემორაგიული ან სისტემური გართულებისას მიიღეთ რჩევა სპეციალიზებული პანკრეატოლოგიური ცენტრისგან და განიხილეთ გადაყვანა; ბავშვებში ასევე მიმართეთ პედიატრიულ გასტროენტეროლოგიას/ჰეპატოლოგიას. ქრონიკული ან განმეორებითი ზედა მუცლის ტკივილისას დიფერენციულ დიაგნოზში შეიყვანეთ ქრონიკული პანკრეატიტი და შესაბამისად მიმართეთ.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["ჰემორაგიული გართულება", "სისტემური გართულება"],
-  "sources": [
-   {"org": "NICE", "title": "Pancreatitis (NG104)", "year": 2018, "url": "https://www.nice.org.uk/guidance/ng104/chapter/Recommendations", "type": "guideline", "supports": "1.2.14: seek advice from specialist pancreatic centre for necrotic, infective, haemorrhagic or systemic complications. 1.2.15: children—seek advice from paediatric gastroenterology/hepatology and specialist centre. 1.3.1: think about chronic pancreatitis in chronic or recurrent upper abdominal pain and refer."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰემორაგიული გართულება",
+   "სისტემური გართულება"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Pancreatitis (NG104)",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng104/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "1.2.14: seek advice from specialist pancreatic centre for necrotic, infective, haemorrhagic or systemic complications. 1.2.15: children—seek advice from paediatric gastroenterology/hepatology and specialist centre. 1.3.1: think about chronic pancreatitis in chronic or recurrent upper abdominal pain and refer."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  }
 ]

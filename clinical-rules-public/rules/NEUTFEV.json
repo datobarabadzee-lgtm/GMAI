@@ -1,223 +1,774 @@
 [
  {
-  "rule_id": "PUB-NEUTFEV-001", "cluster": "NEUTFEV", "topics": [85], "rule_type": "diagnosis", "population": "immunocompromised",
+  "rule_id": "PUB-NEUTFEV-001",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "diagnosis",
+  "population": "immunocompromised",
   "condition_ka": "ცხელება ან სეფსისის ნიშნები პაციენტში, რომელიც ღებულობს ანტისიმსივნურ მკურნალობას",
   "recommendation_ka": "NICE: ნეიტროპენიური სეფსისი დაადგინეთ, თუ ნეიტროფილები 0.5 × 10⁹/ლ ან ნაკლებია და ტემპერატურა 38°C-ზე მაღალია ან არის კლინიკურად მნიშვნელოვანი სეფსისის სხვა ნიშნები. ASCO/IDSA (აშშ): ცხელება — ერთჯერადი ორალური ტემპერატურა 38.3°C ან მეტი, ან 38.0°C ან მეტი, რომელიც 1 საათის განმავლობაში ნარჩუნდება; ნეიტროპენია — 1.0 × 10⁹/ლ-ზე ნაკლები, მძიმე — 0.5-ზე ნაკლები, ღრმა — 0.1-ზე ნაკლები. ზღვრები ორგანიზაციებს შორის განსხვავდება: მკურნალობის დაწყება ნუ გადადებთ ზუსტი ზღვრის მოლოდინში.",
   "doses": [],
   "numeric_values": [
-   {"value": 0.5, "unit": "x10^9/L", "meaning_ka": "ნეიტროფილების ზღვარი (NICE); მძიმე ნეიტროპენია (ASCO/IDSA)"},
-   {"value": 10, "unit": "label", "meaning_ka": "ერთეულის ჩანაწერი 10⁹/ლ"},
-   {"value": 38, "unit": "°C", "meaning_ka": "ცხელების ზღვარი NICE-ით (38°C-ზე მაღალი); 38.0°C 1 საათის განმავლობაში ASCO/IDSA-ით"},
-   {"value": 38.3, "unit": "°C", "meaning_ka": "ერთჯერადი ორალური ტემპერატურის ზღვარი (ASCO/IDSA)"},
-   {"value": 1, "unit": "h", "meaning_ka": "ტემპერატურის შენარჩუნების ხანგრძლივობა; ასევე ნეიტროპენიის ზღვარი 1.0 × 10⁹/ლ"},
-   {"value": 0.1, "unit": "x10^9/L", "meaning_ka": "ღრმა ნეიტროპენიის ზღვარი"}
+   {
+    "value": 0.5,
+    "unit": "x10^9/L",
+    "meaning_ka": "ნეიტროფილების ზღვარი (NICE); მძიმე ნეიტროპენია (ASCO/IDSA)"
+   },
+   {
+    "value": 10,
+    "unit": "label",
+    "meaning_ka": "ერთეულის ჩანაწერი 10⁹/ლ"
+   },
+   {
+    "value": 38,
+    "unit": "°C",
+    "meaning_ka": "ცხელების ზღვარი NICE-ით (38°C-ზე მაღალი); 38.0°C 1 საათის განმავლობაში ASCO/IDSA-ით"
+   },
+   {
+    "value": 38.3,
+    "unit": "°C",
+    "meaning_ka": "ერთჯერადი ორალური ტემპერატურის ზღვარი (ASCO/IDSA)"
+   },
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "ტემპერატურის შენარჩუნების ხანგრძლივობა; ასევე ნეიტროპენიის ზღვარი 1.0 × 10⁹/ლ"
+   },
+   {
+    "value": 0.1,
+    "unit": "x10^9/L",
+    "meaning_ka": "ღრმა ნეიტროპენიის ზღვარი"
+   }
   ],
-  "red_flags_ka": ["ჰიპოტენზია", "ცნობიერების შეცვლა", "ლაქტატის მომატება"],
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "ცნობიერების შეცვლა",
+   "ლაქტატის მომატება"
+  ],
   "sources": [
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition (prescribing notes updated 2024). Rec 1.4.4.1: diagnose neutropenic sepsis with neutrophil count ≤0.5×10^9/L and temperature >38°C or other signs of clinically significant sepsis."},
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy: ASCO/IDSA Clinical Practice Guideline Update (J Clin Oncol 2018;36:1443–1453)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Methods: neutropenia ANC <1,000/µL (<1.0×10^9/L), severe <500/µL, profound <100/µL; fever single oral temperature ≥38.3°C or ≥38.0°C sustained over 1 hour."}
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition (prescribing notes updated 2024). Rec 1.4.4.1: diagnose neutropenic sepsis with neutrophil count ≤0.5×10^9/L and temperature >38°C or other signs of clinically significant sepsis."
+   },
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy: ASCO/IDSA Clinical Practice Guideline Update (J Clin Oncol 2018;36:1443–1453)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Methods: neutropenia ANC <1,000/µL (<1.0×10^9/L), severe <500/µL, profound <100/µL; fever single oral temperature ≥38.3°C or ≥38.0°C sustained over 1 hour."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-002", "cluster": "NEUTFEV", "topics": [85], "rule_type": "red_flag", "population": "all",
+  "rule_id": "PUB-NEUTFEV-002",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
   "condition_ka": "ანტისიმსივნური მკურნალობის მიმღები პაციენტი, რომელიც ცუდად გახდა (ცხელება ან სეფსისის ეჭვი)",
   "recommendation_ka": "ეჭვი მიიტანეთ ნეიტროპენიურ სეფსისზე და პაციენტი დაუყოვნებლივ გაგზავნეთ საავადმყოფოში შესაფასებლად. მიიჩნიეთ გადაუდებელ მდგომარეობად: სისტემური შეფასება ტრიაჟიდან 15 წუთში, ემპირიული ანტიბიოტიკის პირველი დოზა ტრიაჟიდან 1 საათის განმავლობაში (ნეიტროფილების პასუხის მოლოდინის გარეშე). თუ 1 საათში რისკის ხარისხი ჯერ არ არის განსაზღვრული, მიეცით ინტრავენური დოზა შეფასების პარალელურად.",
   "doses": [],
   "numeric_values": [
-   {"value": 15, "unit": "min", "meaning_ka": "შეფასების ვადა ტრიაჟიდან"},
-   {"value": 1, "unit": "h", "meaning_ka": "პირველი ანტიბიოტიკის ვადა ტრიაჟიდან"}
+   {
+    "value": 15,
+    "unit": "min",
+    "meaning_ka": "შეფასების ვადა ტრიაჟიდან"
+   },
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "პირველი ანტიბიოტიკის ვადა ტრიაჟიდან"
+   }
   ],
-  "red_flags_ka": ["ჰიპოტენზია", "ტაქიპნოე", "ცნობიერების დაქვეითება", "ოლიგურია"],
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "ტაქიპნოე",
+   "ცნობიერების დაქვეითება",
+   "ოლიგურია"
+  ],
   "sources": [
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.3.1.1–1.3.1.2: suspect neutropenic sepsis in patients on anticancer treatment who become unwell; refer immediately. Rec 1.4.1.1: treat as acute medical emergency and offer empiric antibiotics immediately."},
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 1.1g–h: assessment within 15 minutes of triage; first dose of empirical therapy within 1 hour of triage; if risk not determined within 1 hour give an initial IV dose while undergoing evaluation."}
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.3.1.1–1.3.1.2: suspect neutropenic sepsis in patients on anticancer treatment who become unwell; refer immediately. Rec 1.4.1.1: treat as acute medical emergency and offer empiric antibiotics immediately."
+   },
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 1.1g–h: assessment within 15 minutes of triage; first dose of empirical therapy within 1 hour of triage; if risk not determined within 1 hour give an initial IV dose while undergoing evaluation."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-003", "cluster": "NEUTFEV", "topics": [85], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-003",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "ნეიტროპენიური ცხელების ეჭვი, საწყისი გამოკვლევა",
   "recommendation_ka": "ჩაატარეთ სრული ანამნეზი და გასინჯვა ინფექციის კერის მოსაძებნად; სისხლის საერთო ანალიზი ფორმულით, ელექტროლიტები, კრეატინინი, შარდოვანა, ლაქტატი, ღვიძლის სინჯები (NICE: ალბუმინი და C-რეაქტიული ცილაც). სისხლის კულტურა მინიმუმ ორი სეტი სხვადასხვა ადგილიდან — პერიფერიული ვენიდან და ცენტრალური კათეტერის სანათურიდან (თუ კათეტერია). სხვა კულტურები (შარდი, ნახველი, ლიქვორი, განავალი, ჭრილობა) ჩვენებით. გულმკერდის რენტგენოგრაფია მხოლოდ რესპირაციული ნიშნების არსებობისას; გრიპისმაგვარი დაავადებისას — ცხვირ-ხახის ნაცხი გრიპზე.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["ლაქტატის მომატება", "კათეტერის ირგვლივ ინფექციის ნიშნები"],
-  "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 1.1a–f: history/exam; CBC with differential, electrolytes, creatinine, BUN, lactate, LFTs; at least two sets of blood cultures incl. peripheral and CVC lumen; other cultures as indicated; chest imaging if respiratory signs; nasopharyngeal swab for influenza in influenza-like illness."},
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.4.1.2: FBC, kidney and liver tests incl. albumin, CRP, lactate, blood culture. 1.4.2.1: additional peripheral culture with CVAD. 1.4.2.2: no chest X-ray unless clinically indicated."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ლაქტატის მომატება",
+   "კათეტერის ირგვლივ ინფექციის ნიშნები"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 1.1a–f: history/exam; CBC with differential, electrolytes, creatinine, BUN, lactate, LFTs; at least two sets of blood cultures incl. peripheral and CVC lumen; other cultures as indicated; chest imaging if respiratory signs; nasopharyngeal swab for influenza in influenza-like illness."
+   },
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.4.1.2: FBC, kidney and liver tests incl. albumin, CRP, lactate, blood culture. 1.4.2.1: additional peripheral culture with CVAD. 1.4.2.2: no chest X-ray unless clinically indicated."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-004", "cluster": "NEUTFEV", "topics": [85], "rule_type": "treatment", "population": "all",
+  "rule_id": "PUB-NEUTFEV-004",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "treatment",
+  "population": "all",
   "condition_ka": "ნეიტროპენიური სეფსისის ეჭვი, რომელიც ინტრავენურ მკურნალობას საჭიროებს",
   "recommendation_ka": "NICE: საწყისი ემპირიული თერაპია — ბეტა-ლაქტამური მონოთერაპია „პიპერაცილინი-ტაზობაქტამით“, თუ პაციენტის ან ადგილობრივი მიკრობიოლოგიური უკუჩვენება არ არსებობს. ASCO/IDSA (IDSA 2010-ის მოწონებით): ანტიფსევდომონური ბეტა-ლაქტამური მონოთერაპია — „ცეფეპიმი“, კარბაპენემი („მეროპენემი“ ან „იმიპენემ-ცილასტატინი“) ან „პიპერაცილინი-ტაზობაქტამი“. ამინოგლიკოზიდი (მონო- ან კომბინირებულ თერაპიაში) და ემპირიული გლიკოპეპტიდი („ვანკომიცინი“) რუტინულად არ დანიშნოთ — მხოლოდ სპეციფიკური ჩვენებით (კათეტერთან ასოცირებული ან კანის ინფექცია, პნევმონია, ჰემოდინამიკური არასტაბილურობა, რეზისტენტობის ეჭვი). ცენტრალური კათეტერი საწყის ეტაპზე არ ამოიღოთ.",
-  "doses": [], "numeric_values": [{"value": 2010, "unit": "label", "meaning_ka": "IDSA-ს 2010 წლის სახელმძღვანელო"}],
-  "red_flags_ka": ["ჰიპოტენზია", "პნევმონია", "კათეტერის ინფექცია"],
-  "sources": [
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.4.3.1: piperacillin with tazobactam monotherapy as initial empiric IV therapy. 1.4.3.2: no aminoglycoside unless indicated. 1.4.3.3: no empiric glycopeptide for CVAD unless indicated. 1.4.3.4: do not remove CVAD in initial management."},
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 1.1h endorses IDSA 2010: monotherapy with antipseudomonal beta-lactam (cefepime, carbapenem, piperacillin-tazobactam); vancomycin not standard initially, only for specific indications (catheter, skin/soft tissue infection, pneumonia, haemodynamic instability)."}
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2010,
+    "unit": "label",
+    "meaning_ka": "IDSA-ს 2010 წლის სახელმძღვანელო"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "პნევმონია",
+   "კათეტერის ინფექცია"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.4.3.1: piperacillin with tazobactam monotherapy as initial empiric IV therapy. 1.4.3.2: no aminoglycoside unless indicated. 1.4.3.3: no empiric glycopeptide for CVAD unless indicated. 1.4.3.4: do not remove CVAD in initial management."
+   },
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 1.1h endorses IDSA 2010: monotherapy with antipseudomonal beta-lactam (cefepime, carbapenem, piperacillin-tazobactam); vancomycin not standard initially, only for specific indications (catheter, skin/soft tissue infection, pneumonia, haemodynamic instability)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-005", "cluster": "NEUTFEV", "topics": [85], "rule_type": "treatment", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-005",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
   "condition_ka": "ნეიტროპენიური ცხელება და რეზისტენტული გამომწვევის რისკი (წინა ინფექცია/კოლონიზაცია, მაღალი ენდემურობის საავადმყოფო), განსაკუთრებით არასტაბილური პაციენტი ან საეჭვო ჰემოკულტურა",
   "recommendation_ka": "განიხილეთ საწყისი რეჟიმის მოდიფიკაცია: MRSA — ადრე დაამატეთ „ვანკომიცინი“, „ლინეზოლიდი“ ან (პნევმონიის არარსებობისას) „დაპტომიცინი“; VRE — „ლინეზოლიდი“ ან „დაპტომიცინი“; ESBL-მაპროდუცირებელი გრამუარყოფითი ბაქტერიები — ადრეული კარბაპენემი; კარბაპენემაზა-მაპროდუცირებელი (KPC) — „პოლიმიქსინი-კოლისტინი“, „ტიგეციკლინი“ ან რეზისტენტულ გრამუარყოფითებზე მოქმედი ახალი ბეტა-ლაქტამი. ამ პაციენტებს ამბულატორიულად ნუ უმკურნალებთ.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["სეპტიური შოკი", "დადებითი ჰემოკულტურა რეზისტენტული გამომწვევით"],
-  "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 1.1h (endorsing IDSA 2010): modify for MRSA (vancomycin, linezolid, daptomycin if no pneumonia), VRE (linezolid, daptomycin), ESBL (carbapenem), KPC (polymyxin-colistin, tigecycline, or newer beta-lactam). Rec 2.1 qualifying statements: MRSA/VRE/Stenotrophomonas colonised or FQ-resistant co-resistant gram-negatives treated as inpatients."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სეპტიური შოკი",
+   "დადებითი ჰემოკულტურა რეზისტენტული გამომწვევით"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 1.1h (endorsing IDSA 2010): modify for MRSA (vancomycin, linezolid, daptomycin if no pneumonia), VRE (linezolid, daptomycin), ESBL (carbapenem), KPC (polymyxin-colistin, tigecycline, or newer beta-lactam). Rec 2.1 qualifying statements: MRSA/VRE/Stenotrophomonas colonised or FQ-resistant co-resistant gram-negatives treated as inpatients."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-006", "cluster": "NEUTFEV", "topics": [85], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-006",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "დადასტურებული ნეიტროპენიური ცხელება მოზრდილში: სეპტიური გართულებების რისკის სტრატიფიკაცია",
   "recommendation_ka": "რისკი შეაფასეთ კლინიკური განსჯით და ვალიდირებული ინსტრუმენტით (NICE: კომპეტენტური სპეციალისტის მიერ მიღებიდან 24 საათის განმავლობაში). MASCC ინდექსი (მაქსიმუმ 26 ქულა): 21 ან მეტი — დაბალი რისკი; 21-ზე ნაკლები — მაღალი რისკი. ტალკოტის კლასიფიკაციით დაბალი რისკია მხოლოდ IV ჯგუფი. ASCO/IDSA: სტაბილურ პაციენტებში მყარი სიმსივნით და მსუბუქი/საშუალო ინტენსივობის ქიმიოთერაპიით დამატებით შეიძლება CISNE ინდექსი; CISNE 3 ან მეტი — სტაციონარული მკურნალობის კანდიდატი. MASCC-ით დაბალი რისკის პაციენტთა 11%-მდე მაინც უვითარდება სერიოზული გართულება.",
   "doses": [],
   "numeric_values": [
-   {"value": 24, "unit": "h", "meaning_ka": "რისკის შეფასების ვადა (NICE)"},
-   {"value": 26, "unit": "score", "meaning_ka": "MASCC მაქსიმალური ქულა"},
-   {"value": 21, "unit": "score", "meaning_ka": "MASCC დაბალი რისკის ზღვარი"},
-   {"value": 3, "unit": "score", "meaning_ka": "CISNE მაღალი რისკის ზღვარი"},
-   {"value": 11, "unit": "%", "meaning_ka": "გართულებების სიხშირე MASCC დაბალი რისკის ჯგუფში"}
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "რისკის შეფასების ვადა (NICE)"
+   },
+   {
+    "value": 26,
+    "unit": "score",
+    "meaning_ka": "MASCC მაქსიმალური ქულა"
+   },
+   {
+    "value": 21,
+    "unit": "score",
+    "meaning_ka": "MASCC დაბალი რისკის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "CISNE მაღალი რისკის ზღვარი"
+   },
+   {
+    "value": 11,
+    "unit": "%",
+    "meaning_ka": "გართულებების სიხშირე MASCC დაბალი რისკის ჯგუფში"
+   }
   ],
   "red_flags_ka": [],
   "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 2.1–2.2, Fig 1, Tables 2–3: clinical judgment plus MASCC (max 26; ≥21 low risk) or Talcott (group IV low risk); CISNE for stable solid-tumour patients on mild–moderate chemo, CISNE ≥3 inpatient candidate; serious complications in ≤11% of MASCC ≥21."},
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.5.1.1: competent professional assesses risk of septic complications within 24 hours using a validated risk scoring system (e.g. MASCC; modified Alexander rule for under 18s)."}
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 2.1–2.2, Fig 1, Tables 2–3: clinical judgment plus MASCC (max 26; ≥21 low risk) or Talcott (group IV low risk); CISNE for stable solid-tumour patients on mild–moderate chemo, CISNE ≥3 inpatient candidate; serious complications in ≤11% of MASCC ≥21."
+   },
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.5.1.1: competent professional assesses risk of septic complications within 24 hours using a validated risk scoring system (e.g. MASCC; modified Alexander rule for under 18s)."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-007", "cluster": "NEUTFEV", "topics": [85], "rule_type": "red_flag", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-007",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
   "condition_ka": "ნეიტროპენიური ცხელება, MASCC 21 ან მეტი, ამბულატორიული მკურნალობის განხილვა",
   "recommendation_ka": "დაბალი ქულის მიუხედავად ამბულატორიული მკურნალობა არ არის მიზანშეწონილი, თუ არის: ჰიპოტენზია, სინკოპე, აქტიური სისხლდენა; თრომბოციტები 10 × 10⁹/ლ-ზე ნაკლები ან ჰემოგლობინი 7 გ/დლ-ზე ნაკლები; ნეიტროფილები 0.1 × 10⁹/ლ-ზე ნაკლები მოსალოდნელი ხანგრძლივობით 7 დღე ან მეტი; ტრანსამინაზები ნორმის ზედა ზღვარზე 5-ჯერ მეტი ან ბილირუბინი 2.0 მგ/დლ-ზე მეტი; კრეატინინის კლირენსი 30 მლ/წთ ან ნაკლები; მუცლის ტკივილი, ახალი დიარეა, პერორალური მედიკამენტების მიღების შეუძლებლობა; ანტიბიოტიკი ბოლო 72 საათში; ინფექციის მკაფიო კერა ან კათეტერის ინფექცია; ცნობიერების შეცვლა; ჰიპოქსემია; ორსულობა. ჰემოპოეზური ღეროვანი უჯრედების ტრანსპლანტაციის ან მწვავე ლეიკემიის ინდუქციის პაციენტები, როგორც წესი, სტაციონარულად მკურნალობენ.",
   "doses": [],
   "numeric_values": [
-   {"value": 21, "unit": "score", "meaning_ka": "MASCC დაბალი რისკის ზღვარი"},
-   {"value": 10, "unit": "x10^9/L", "meaning_ka": "თრომბოციტების ზღვარი (10 000/მკლ); ასევე 10⁹/ლ ჩანაწერის ფუძე"},
-   {"value": 7, "unit": "g/dL", "meaning_ka": "ჰემოგლობინის ზღვარი; ასევე ღრმა ნეიტროპენიის 7 დღე"},
-   {"value": 0.1, "unit": "x10^9/L", "meaning_ka": "ღრმა ნეიტროპენიის ზღვარი"},
-   {"value": 5, "unit": "x ULN", "meaning_ka": "ტრანსამინაზების ზღვარი"},
-   {"value": 2.0, "unit": "mg/dL", "meaning_ka": "ბილირუბინის ზღვარი"},
-   {"value": 30, "unit": "mL/min", "meaning_ka": "კრეატინინის კლირენსის ზღვარი"},
-   {"value": 72, "unit": "h", "meaning_ka": "ანტიბიოტიკის მიღება ბოლო 72 საათში"}
+   {
+    "value": 21,
+    "unit": "score",
+    "meaning_ka": "MASCC დაბალი რისკის ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "x10^9/L",
+    "meaning_ka": "თრომბოციტების ზღვარი (10 000/მკლ); ასევე 10⁹/ლ ჩანაწერის ფუძე"
+   },
+   {
+    "value": 7,
+    "unit": "g/dL",
+    "meaning_ka": "ჰემოგლობინის ზღვარი; ასევე ღრმა ნეიტროპენიის 7 დღე"
+   },
+   {
+    "value": 0.1,
+    "unit": "x10^9/L",
+    "meaning_ka": "ღრმა ნეიტროპენიის ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "x ULN",
+    "meaning_ka": "ტრანსამინაზების ზღვარი"
+   },
+   {
+    "value": 2.0,
+    "unit": "mg/dL",
+    "meaning_ka": "ბილირუბინის ზღვარი"
+   },
+   {
+    "value": 30,
+    "unit": "mL/min",
+    "meaning_ka": "კრეატინინის კლირენსის ზღვარი"
+   },
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "ანტიბიოტიკის მიღება ბოლო 72 საათში"
+   }
   ],
-  "red_flags_ka": ["ჰიპოტენზია", "ცნობიერების შეცვლა", "ჰიპოქსემია", "აქტიური სისხლდენა"],
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "ცნობიერების შეცვლა",
+   "ჰიპოქსემია",
+   "აქტიური სისხლდენა"
+  ],
   "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Table 1: criteria excluding outpatient care even with MASCC ≥21, incl. hypotension, syncope, bleeding, platelets <10,000/µL, Hb <7 g/dL, ANC <100/µL expected ≥7 days, aminotransferases >5×ULN, bilirubin >2.0 mg/dL, CrCl ≤30 mL/min, abdominal pain, diarrhoea, unable to swallow, antibiotics ≤72 h, clear infection site, catheter infection, altered mental status, hypoxaemia, pregnancy. Rec 2.1: HSCT/acute leukaemia induction unlikely outpatient candidates."}
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Table 1: criteria excluding outpatient care even with MASCC ≥21, incl. hypotension, syncope, bleeding, platelets <10,000/µL, Hb <7 g/dL, ANC <100/µL expected ≥7 days, aminotransferases >5×ULN, bilirubin >2.0 mg/dL, CrCl ≤30 mL/min, abdominal pain, diarrhoea, unable to swallow, antibiotics ≤72 h, clear infection site, catheter infection, altered mental status, hypoxaemia, pregnancy. Rec 2.1: HSCT/acute leukaemia induction unlikely outpatient candidates."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-008", "cluster": "NEUTFEV", "topics": [85], "rule_type": "evaluation", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-008",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
   "condition_ka": "დაბალი რისკის ნეიტროპენიური ცხელება, ამბულატორიული მკურნალობის ფსიქოსოციალური და ლოგისტიკური პირობები",
   "recommendation_ka": "ამბულატორიული მკურნალობა დასაშვებია მხოლოდ თუ: პაციენტი ცხოვრობს კლინიკიდან ან საავადმყოფოდან 1 საათის სავალზე ან უფრო ახლოს; ონკოლოგი/ოჯახის ექიმი თანახმაა; შეუძლია ხშირი ვიზიტები; სახლში ოჯახის წევრი ან მომვლელი 24 საათის განმავლობაში იმყოფება; აქვს ტელეფონი და ტრანსპორტი 24 საათის განმავლობაში; მკურნალობის რეჟიმის დარღვევის ანამნეზი არ აქვს. NICE ასევე მოითხოვს პაციენტის სოციალური და კლინიკური გარემოებების გათვალისწინებას და განმარტებას, რომ პრობლემისას სასწრაფოდ დაბრუნდეს.",
   "doses": [],
   "numeric_values": [
-   {"value": 1, "unit": "h", "meaning_ka": "მაქსიმალური მანძილი სამედიცინო დაწესებულებამდე"},
-   {"value": 24, "unit": "h", "meaning_ka": "მომვლელის, ტელეფონისა და ტრანსპორტის ხელმისაწვდომობა დღე-ღამეში"}
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "მაქსიმალური მანძილი სამედიცინო დაწესებულებამდე"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "მომვლელის, ტელეფონისა და ტრანსპორტის ხელმისაწვდომობა დღე-ღამეში"
+   }
   ],
   "red_flags_ka": [],
   "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 3.1: residence ≤1 hour or ≤30 miles from clinic/hospital; physician agrees; able to comply with frequent visits; family member or caregiver at home 24 h/d; telephone and transportation 24 h/d; no history of non-compliance."},
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.5.2.1: consider outpatient antibiotics for low-risk patients, taking into account social and clinical circumstances and discussing the need to return promptly."}
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 3.1: residence ≤1 hour or ≤30 miles from clinic/hospital; physician agrees; able to comply with frequent visits; family member or caregiver at home 24 h/d; telephone and transportation 24 h/d; no history of non-compliance."
+   },
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.5.2.1: consider outpatient antibiotics for low-risk patients, taking into account social and clinical circumstances and discussing the need to return promptly."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-009", "cluster": "NEUTFEV", "topics": [85], "rule_type": "treatment", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-009",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
   "condition_ka": "დაბალი რისკის ნეიტროპენიური ცხელება მოზრდილში, ამბულატორიული ემპირიული თერაპია",
   "recommendation_ka": "პირველი დოზა მიეცით კლინიკაში ან გადაუდებელ განყოფილებაში, ცხელების დადასტურებისა და სისხლის აღების შემდეგ; გაწერამდე პაციენტს დააკვირდით მინიმუმ 4 საათი. რეკომენდებულია პერორალური ფტორქინოლონი („ციპროფლოქსაცინი“ ან „ლევოფლოქსაცინი“) „ამოქსიცილინ/კლავულანატთან“ ერთად (პენიცილინზე ალერგიისას — „კლინდამიცინთან“ ერთად), გარდა იმ შემთხვევისა, როცა ცხელებამდე ფტორქინოლონით პროფილაქტიკა ტარდებოდა. ფტორქინოლონის მონოთერაპია რეკომენდებული არ არის. ESBL-ის ან ფტორქინოლონ-რეზისტენტობის მაღალი გავრცელებისას განიხილეთ ჰოსპიტალიზაცია და კარბაპენემი.",
   "doses": [],
-  "numeric_values": [{"value": 4, "unit": "h", "meaning_ka": "მინიმალური დაკვირვება გაწერამდე"}],
-  "red_flags_ka": ["პერორალური მედიკამენტების აუტანლობა"],
-  "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 4.1: first dose in clinic/ED after fever documented and blood drawn; observe ≥4 hours before discharge. Rec 5.1: oral fluoroquinolone (ciprofloxacin or levofloxacin) plus amoxicillin/clavulanate (or clindamycin if penicillin allergic), unless FQ prophylaxis was used; FQ alone not recommended; high ESBL/FQ-resistance prevalence—consider admission and carbapenem. Doses not specified in the guideline text reviewed."}
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "h",
+    "meaning_ka": "მინიმალური დაკვირვება გაწერამდე"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "პერორალური მედიკამენტების აუტანლობა"
+  ],
+  "sources": [
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 4.1: first dose in clinic/ED after fever documented and blood drawn; observe ≥4 hours before discharge. Rec 5.1: oral fluoroquinolone (ciprofloxacin or levofloxacin) plus amoxicillin/clavulanate (or clindamycin if penicillin allergic), unless FQ prophylaxis was used; FQ alone not recommended; high ESBL/FQ-resistance prevalence—consider admission and carbapenem. Doses not specified in the guideline text reviewed."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-010", "cluster": "NEUTFEV", "topics": [85], "rule_type": "monitoring", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-010",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "monitoring",
+  "population": "adult",
   "condition_ka": "ამბულატორიულად ნამკურნალევი დაბალი რისკის ნეიტროპენიური ცხელება",
   "recommendation_ka": "ხშირი შეფასება მინიმუმ 3 დღის განმავლობაში (კლინიკაში ან სახლში), ყოველდღიური სატელეფონო კონტაქტი ცხელების ალაგების დასადასტურებლად (სახლის თერმომეტრით), ნეიტროფილებისა და თრომბოციტების მონიტორინგი. ჰოსპიტალიზაცია განიხილეთ, თუ ცხელება 2–3 დღეში არ ალაგდა, ცხელება განმეორდა, გაჩნდა ინფექციის ახალი ნიშანი, პერორალური მიღება შეუძლებელი გახდა, საჭიროა რეჟიმის შეცვლა, ან ჰემოკულტურა დადებითი/გამომწვევი რეჟიმისადმი არამგრძნობიარეა.",
   "doses": [],
   "numeric_values": [
-   {"value": 3, "unit": "day", "meaning_ka": "ინტენსიური შეფასების მინიმალური პერიოდი; ასევე ცხელების ალაგების ზედა ვადა"},
-   {"value": 2, "unit": "day", "meaning_ka": "ცხელების ალაგების მოსალოდნელი ვადის ქვედა ზღვარი"}
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ინტენსიური შეფასების მინიმალური პერიოდი; ასევე ცხელების ალაგების ზედა ვადა"
+   },
+   {
+    "value": 2,
+    "unit": "day",
+    "meaning_ka": "ცხელების ალაგების მოსალოდნელი ვადის ქვედა ზღვარი"
+   }
   ],
-  "red_flags_ka": ["ცხელების განმეორება", "ინფექციის ახალი კერა", "დადებითი ჰემოკულტურა"],
+  "red_flags_ka": [
+   "ცხელების განმეორება",
+   "ინფექციის ახალი კერა",
+   "დადებითი ჰემოკულტურა"
+  ],
   "sources": [
-   {"org": "ASCO/IDSA", "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)", "year": 2018, "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211", "type": "guideline", "supports": "Rec 3.1 additional measures: frequent evaluation for at least 3 days, daily telephone contact with home thermometry, ANC/platelet monitoring. Rec 6.1: re-evaluate and consider hospitalisation if no defervescence after 2–3 days, fever recurrence, new infection, oral intolerance, regimen change, positive blood cultures or non-susceptible organism."}
+   {
+    "org": "ASCO/IDSA",
+    "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy (J Clin Oncol 2018)",
+    "year": 2018,
+    "url": "https://ascopubs.org/doi/10.1200/JCO.2017.77.6211",
+    "type": "guideline",
+    "supports": "Rec 3.1 additional measures: frequent evaluation for at least 3 days, daily telephone contact with home thermometry, ANC/platelet monitoring. Rec 6.1: re-evaluate and consider hospitalisation if no defervescence after 2–3 days, fever recurrence, new infection, oral intolerance, regimen change, positive blood cultures or non-susceptible organism."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-011", "cluster": "NEUTFEV", "topics": [85], "rule_type": "monitoring", "population": "all",
+  "rule_id": "PUB-NEUTFEV-011",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
   "condition_ka": "სტაციონარში ნამკურნალევი დადასტურებული ნეიტროპენიური სეფსისი",
   "recommendation_ka": "მაღალი რისკის პაციენტში კომპეტენტურმა სპეციალისტმა ყოველდღიურად შეაფასოს კლინიკური მდგომარეობა და ხელახლა გადაითვალოს რისკი ვალიდირებული ინსტრუმენტით. მდგრადი ცხელებისას საწყისი ემპირიული ანტიბიოტიკი არ შეცვალოთ, თუ არ არის კლინიკური გაუარესება ან მიკრობიოლოგიური ჩვენება. თუ განმეორებითი შეფასებით რისკი დაბალია, მკურნალობის 48 საათის შემდეგ გადადით პერორალურ ანტიბიოტიკზე. ემპირიული თერაპია შეწყვიტეთ, როცა სეფსისმა მკურნალობას უპასუხა, ნეიტროფილების რაოდენობის მიუხედავად (NICE).",
   "doses": [],
-  "numeric_values": [{"value": 48, "unit": "h", "meaning_ka": "ინტრავენურიდან პერორალურ თერაპიაზე გადასვლის ვადა"}],
-  "red_flags_ka": ["კლინიკური გაუარესება მკურნალობის ფონზე"],
-  "sources": [
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.5.3.1: daily review and risk reassessment for high-risk patients. 1.5.3.2: do not switch empiric antibiotics for unresponsive fever unless deterioration or microbiological indication. 1.5.3.3: switch IV to oral after 48 hours if reassessed as low risk. 1.5.4.2: discontinue when responded irrespective of neutrophil count."}
+  "numeric_values": [
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ინტრავენურიდან პერორალურ თერაპიაზე გადასვლის ვადა"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "კლინიკური გაუარესება მკურნალობის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.5.3.1: daily review and risk reassessment for high-risk patients. 1.5.3.2: do not switch empiric antibiotics for unresponsive fever unless deterioration or microbiological indication. 1.5.3.3: switch IV to oral after 48 hours if reassessed as low risk. 1.5.4.2: discontinue when responded irrespective of neutrophil count."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-012", "cluster": "NEUTFEV", "topics": [85], "rule_type": "prevention", "population": "adult",
+  "rule_id": "PUB-NEUTFEV-012",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "prevention",
+  "population": "adult",
   "condition_ka": "მოზრდილი (18 წელი და მეტი) მწვავე ლეიკემიით, ღეროვანი უჯრედების ტრანსპლანტაციით ან მყარი სიმსივნით, როცა ქიმიოთერაპიის შედეგად მოსალოდნელია ნეიტროფილები 0.5 × 10⁹/ლ ან ნაკლები",
   "recommendation_ka": "შესთავაზეთ ფტორქინოლონით პროფილაქტიკა მხოლოდ ნეიტროპენიის მოსალოდნელ პერიოდში (გაერთიანებულ სამეფოში ამ ჩვენებით ლიცენზირებულია მხოლოდ „ციპროფლოქსაცინი“; გაითვალისწინეთ ფტორქინოლონების სერიოზული, შესაძლოა შეუქცევადი გვერდითი ეფექტების შესახებ გაფრთხილებები). დაწესებულებაში აკონტროლეთ რეზისტენტობა და Clostridioides difficile. G-CSF რუტინულად პრევენციისთვის არ დანიშნოთ, თუ ის ქიმიოთერაპიის რეჟიმის ნაწილი არ არის ან დოზის ინტენსივობის შესანარჩუნებლად არ არის საჭირო. პაციენტებს და მომვლელებს მიეცით წერილობითი და ზეპირი ინფორმაცია ნეიტროპენიურ სეფსისზე და 24-საათიან ონკოლოგიურ კონსულტაციაზე.",
   "doses": [],
   "numeric_values": [
-   {"value": 18, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი პროფილაქტიკისთვის"},
-   {"value": 0.5, "unit": "x10^9/L", "meaning_ka": "მოსალოდნელი ნეიტროფილების ზღვარი"},
-   {"value": 10, "unit": "label", "meaning_ka": "ერთეულის ჩანაწერი 10⁹/ლ"},
-   {"value": 24, "unit": "h", "meaning_ka": "დღე-ღამის განმავლობაში ხელმისაწვდომი ონკოლოგიური კონსულტაცია"}
+   {
+    "value": 18,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი პროფილაქტიკისთვის"
+   },
+   {
+    "value": 0.5,
+    "unit": "x10^9/L",
+    "meaning_ka": "მოსალოდნელი ნეიტროფილების ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "label",
+    "meaning_ka": "ერთეულის ჩანაწერი 10⁹/ლ"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "დღე-ღამის განმავლობაში ხელმისაწვდომი ონკოლოგიური კონსულტაცია"
+   }
   ],
   "red_flags_ka": [],
   "sources": [
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition (notes updated 2024). Rec 1.2.1.1: adults ≥18 with acute leukaemias, SCT or solid tumours with anticipated neutrophils ≤0.5×10^9/L: fluoroquinolone prophylaxis during expected neutropenia only; in Sept 2024 only ciprofloxacin licensed; MHRA 2024 fluoroquinolone warnings. 1.2.1.2: monitor resistance/C. difficile. 1.2.1.3: no routine G-CSF unless integral to regimen or dose intensity. 1.1.1.1: information incl. 24-hour specialist oncology advice."}
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition (notes updated 2024). Rec 1.2.1.1: adults ≥18 with acute leukaemias, SCT or solid tumours with anticipated neutrophils ≤0.5×10^9/L: fluoroquinolone prophylaxis during expected neutropenia only; in Sept 2024 only ciprofloxacin licensed; MHRA 2024 fluoroquinolone warnings. 1.2.1.2: monitor resistance/C. difficile. 1.2.1.3: no routine G-CSF unless integral to regimen or dose intensity. 1.1.1.1: information incl. 24-hour specialist oncology advice."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-013", "cluster": "NEUTFEV", "topics": [85], "rule_type": "evaluation", "population": "child",
+  "rule_id": "PUB-NEUTFEV-013",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
   "condition_ka": "ბავშვი სიმსივნით ან ჰემოპოეზური უჯრედების ტრანსპლანტაციის შემდეგ, ცხელება და ნეიტროპენია",
   "recommendation_ka": "რუტინულად გამოიყენეთ ვალიდირებული რისკის სტრატიფიკაციის სქემა (NICE-ის მაგალითი: მოდიფიცირებული ალექსანდრეს წესი). სისხლის კულტურა აიღეთ ცენტრალური კათეტერის ყველა სანათურიდან; განიხილეთ პარალელური პერიფერიული კულტურა. შარდის ანალიზი და კულტურა განიხილეთ, თუ სუფთა შუა ნაკადის ნიმუში ადვილად მისაღებია (NICE: შარდის ანალიზი 5 წლამდე ყველა ბავშვში); ანტიბიოტიკი ამის გამო არ დააყოვნოთ. გულმკერდის რენტგენოგრაფია მხოლოდ რესპირაციული ნიშნებისას.",
   "doses": [],
-  "numeric_values": [{"value": 5, "unit": "age_years", "meaning_ka": "ასაკი, რომლამდეც NICE შარდის ანალიზს ყველას უნიშნავს"}],
-  "red_flags_ka": ["კლინიკური არასტაბილურობა"],
-  "sources": [
-   {"org": "International Pediatric Fever and Neutropenia Guideline Panel", "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023;41:1774–1785)", "year": 2023, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/", "type": "guideline", "supports": "A1: adopt validated risk stratification. A2: blood cultures from all CVC lumens. A3: consider concurrent peripheral cultures. A4: consider urinalysis/culture if clean-catch specimen readily available; do not delay antibiotics. A5: chest radiography only with respiratory signs."},
-   {"org": "NICE", "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)", "year": 2012, "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.4.2.1: urinalysis in all children aged under 5; risk scoring examples include modified Alexander rule for under 18s."}
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლამდეც NICE შარდის ანალიზს ყველას უნიშნავს"
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "red_flags_ka": [
+   "კლინიკური არასტაბილურობა"
+  ],
+  "sources": [
+   {
+    "org": "International Pediatric Fever and Neutropenia Guideline Panel",
+    "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023;41:1774–1785)",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/",
+    "type": "guideline",
+    "supports": "A1: adopt validated risk stratification. A2: blood cultures from all CVC lumens. A3: consider concurrent peripheral cultures. A4: consider urinalysis/culture if clean-catch specimen readily available; do not delay antibiotics. A5: chest radiography only with respiratory signs."
+   },
+   {
+    "org": "NICE",
+    "title": "Neutropenic sepsis: prevention and management in people with cancer (CG151)",
+    "year": 2012,
+    "url": "https://www.nice.org.uk/guidance/cg151/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition. Rec 1.4.2.1: urinalysis in all children aged under 5; risk scoring examples include modified Alexander rule for under 18s."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-014", "cluster": "NEUTFEV", "topics": [85], "rule_type": "treatment", "population": "child",
+  "rule_id": "PUB-NEUTFEV-014",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "treatment",
+  "population": "child",
   "condition_ka": "ბავშვი მაღალი ან დაბალი რისკის ნეიტროპენიური ცხელებით, ემპირიული თერაპია",
   "recommendation_ka": "მაღალი რისკი: მონოთერაპია ანტიფსევდომონური ბეტა-ლაქტამით, მეოთხე თაობის ცეფალოსპორინით ან კარბაპენემით (არჩევანი ადგილობრივი მგრძნობელობის მიხედვით; კარბაპენემი სასურველია შეინახოთ არასტაბილური პაციენტებისთვის). მეორე ანტიგრამუარყოფითი საშუალება ან გლიკოპეპტიდი დაამატეთ მხოლოდ არასტაბილურ პაციენტში, რეზისტენტული ინფექციის ეჭვისას ან რეზისტენტობის მაღალი სიხშირის ცენტრში. დაბალი რისკი: განიხილეთ საწყისი ან ეტაპობრივი ამბულატორიული მკურნალობა (თუ მონიტორინგის ინფრასტრუქტურა არსებობს) და პერორალური თერაპია, თუ ბავშვი მას საიმედოდ იტანს. კლინიკურად არასტაბილურ ცხელებიან პაციენტში ანტიბიოტიკი დაიწყეთ რაც შეიძლება სწრაფად.",
-  "doses": [], "numeric_values": [], "red_flags_ka": ["შოკი", "კლინიკური არასტაბილურობა"],
-  "sources": [
-   {"org": "International Pediatric Fever and Neutropenia Guideline Panel", "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023)", "year": 2023, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/", "type": "guideline", "supports": "A6a: monotherapy with antipseudomonal beta-lactam, 4th-generation cephalosporin or carbapenem in high-risk FN; carbapenems ideally reserved for unstable patients. A6b: reserve second anti-gram-negative agent or glycopeptide for unstable, suspected resistance or high-resistance centres. A7a–b: consider outpatient and oral therapy in low-risk FN. Good practice statement: start empiric therapy as soon as possible in unstable febrile patients."}
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "შოკი",
+   "კლინიკური არასტაბილურობა"
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "sources": [
+   {
+    "org": "International Pediatric Fever and Neutropenia Guideline Panel",
+    "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023)",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/",
+    "type": "guideline",
+    "supports": "A6a: monotherapy with antipseudomonal beta-lactam, 4th-generation cephalosporin or carbapenem in high-risk FN; carbapenems ideally reserved for unstable patients. A6b: reserve second anti-gram-negative agent or glycopeptide for unstable, suspected resistance or high-resistance centres. A7a–b: consider outpatient and oral therapy in low-risk FN. Good practice statement: start empiric therapy as soon as possible in unstable febrile patients."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  },
  {
-  "rule_id": "PUB-NEUTFEV-015", "cluster": "NEUTFEV", "topics": [85], "rule_type": "monitoring", "population": "child",
+  "rule_id": "PUB-NEUTFEV-015",
+  "cluster": "NEUTFEV",
+  "topics": [
+   85
+  ],
+  "rule_type": "monitoring",
+  "population": "child",
   "condition_ka": "ბავშვი ნეიტროპენიური ცხელებით, რომელიც ემპირიულ თერაპიას ღებულობს",
   "recommendation_ka": "თუ ბავშვი პასუხობს, ორმაგი ანტიგრამუარყოფითი დაფარვა ან ემპირიული გლიკოპეპტიდი შეწყვიტეთ 24–72 საათის შემდეგ, სპეციფიკური მიკრობიოლოგიური ჩვენების გარეშე. კლინიკურად სტაბილურ ბავშვში მხოლოდ მდგრადი ცხელების გამო რეჟიმი არ გააფართოვოთ; არასტაბილურობისას გააფართოვეთ რეზისტენტულ გრამუარყოფით, გრამდადებით და ანაერობულ ბაქტერიებზე. ემპირიული თერაპია შეწყვიტეთ, თუ ბავშვი 24 საათზე მეტია კარგად და უცხელოდაა და ჰემოკულტურა 48 საათზე უარყოფითია, ძვლის ტვინის აღდგენის ნიშნებით; დაბალი რისკისას შეწყვეტა განიხილეთ აღდგენის ნიშნების გარეშეც (2023 წლის ცვლილება: 72 საათის ნაცვლად 48 საათი).",
   "doses": [],
   "numeric_values": [
-   {"value": 24, "unit": "h", "meaning_ka": "კომბინირებული თერაპიის შეწყვეტის ქვედა ვადა; უცხელო პერიოდის მინიმუმი"},
-   {"value": 72, "unit": "h", "meaning_ka": "კომბინირებული თერაპიის შეწყვეტის ზედა ვადა; წინა რეკომენდაციის ვადა"},
-   {"value": 48, "unit": "h", "meaning_ka": "უარყოფითი ჰემოკულტურის ვადა"},
-   {"value": 2023, "unit": "label", "meaning_ka": "სახელმძღვანელოს განახლების წელი"}
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "კომბინირებული თერაპიის შეწყვეტის ქვედა ვადა; უცხელო პერიოდის მინიმუმი"
+   },
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "კომბინირებული თერაპიის შეწყვეტის ზედა ვადა; წინა რეკომენდაციის ვადა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "უარყოფითი ჰემოკულტურის ვადა"
+   },
+   {
+    "value": 2023,
+    "unit": "label",
+    "meaning_ka": "სახელმძღვანელოს განახლების წელი"
+   }
   ],
-  "red_flags_ka": ["კლინიკური გაუარესება მდგრადი ცხელებით"],
+  "red_flags_ka": [
+   "კლინიკური გაუარესება მდგრადი ცხელებით"
+  ],
   "sources": [
-   {"org": "International Pediatric Fever and Neutropenia Guideline Panel", "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023)", "year": 2023, "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/", "type": "guideline", "supports": "B1: discontinue double gram-negative coverage or empiric glycopeptide after 24–72 h if responding. B2: do not broaden for persistent fever alone if stable. B3: escalate if unstable. B4: discontinue if afebrile ≥24 h and cultures negative at 48 h with marrow recovery. B5: consider discontinuation in low-risk FN without marrow recovery (changed from 72 to 48 h)."}
+   {
+    "org": "International Pediatric Fever and Neutropenia Guideline Panel",
+    "title": "Guideline for the Management of Fever and Neutropenia in Pediatric Patients With Cancer and HCT Recipients: 2023 Update (J Clin Oncol 2023)",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10022858/",
+    "type": "guideline",
+    "supports": "B1: discontinue double gram-negative coverage or empiric glycopeptide after 24–72 h if responding. B2: do not broaden for persistent fever alone if stable. B3: escalate if unstable. B4: discontinue if afebrile ≥24 h and cultures negative at 48 h with marrow recovery. B5: consider discontinuation in low-risk FN without marrow recovery (changed from 72 to 48 h)."
+   }
   ],
-  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED",
+  "review": {
+   "reviewer": "Davit (owner-physician)",
+   "date": "2026-10-27",
+   "decision": "APPROVED",
+   "mode": "bulk approval"
+  }
  }
 ]
