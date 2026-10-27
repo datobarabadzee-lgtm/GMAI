@@ -72,6 +72,7 @@ export function CalendarView({
     setSelected(null);
   };
   const monthCount = events.filter((e) => e.date.startsWith(cursor)).length;
+  const nextEvent = events.find((e) => e.date.slice(0, 7) > cursor);
 
   const [allYears, setAllYears] = useState(false);
   const agendaLimit = `${Number(today.slice(0, 4)) + 2}${today.slice(4)}`;
@@ -176,6 +177,11 @@ export function CalendarView({
                 {MONTHS[cm - 1]} {cy}
               </p>
               <p className="text-[11.5px] text-slate-500">{monthCount ? `${monthCount} ჩანაწერი` : 'ამ თვეში ჩანაწერი არ არის'}</p>
+              {!monthCount && nextEvent && (
+                <button type="button" onClick={() => (setCursor(nextEvent.date.slice(0, 7)), setSelected(nextEvent.date))} className="mt-1 text-[12px] font-medium text-cyan hover:underline">
+                  შემდეგი ჩანაწერი: {nextEvent.shortKa}, {fmt(nextEvent.date)} →
+                </button>
+              )}
             </div>
             <button type="button" className="btn h-10 w-10 !p-0" aria-label="შემდეგი თვე" onClick={() => shift(1)}>
               <ChevronRight className="h-4 w-4" />

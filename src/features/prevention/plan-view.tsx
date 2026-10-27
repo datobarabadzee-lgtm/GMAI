@@ -5,7 +5,7 @@ import { useState, type ReactNode } from 'react';
 import type { LucideIcon } from 'lucide-react';
 import {
   AlertOctagon, ArrowRight, Baby, BadgeCheck, Ban, CalendarCheck2, CalendarPlus, Check, CheckCircle2, ChevronDown, CircleHelp, Clock, ExternalLink,
-  FileDown, Gauge as GaugeIcon, Loader2, MessageCircle, Pencil, PiggyBank, Phone, Printer, ShieldAlert, Siren, Sparkles, Syringe, Target, TriangleAlert,
+  FileDown, Gauge as GaugeIcon, SlidersHorizontal, Loader2, MessageCircle, Pencil, PiggyBank, Phone, Printer, ShieldAlert, Siren, Sparkles, Syringe, Target, TriangleAlert,
 } from 'lucide-react';
 import type { PlanItem, PreventionInput, PreventionPlan, RiskResult, Source } from '@/prevention/types';
 import { STATUS_KA, VACCINE_STATUS_KA } from '@/prevention/labels';
@@ -16,7 +16,7 @@ import { BAND_COLOR, Gauge, ICONS, LeverBars, PulseLine, ScaleBar, StatusRing } 
 import { downloadBlob, planSections, planText } from './export';
 import { CalendarView } from './calendar-view';
 import { FindriscSimulator, Score2Simulator } from './simulator';
-import { buildIcsFromSchedule, buildSchedule, localToday, type ReminderLead } from '@/prevention/schedule';
+import { localToday, type ReminderLead } from '@/prevention/schedule';
 
 type Plan = Extract<PreventionPlan, { kind: 'PLAN' }>;
 
@@ -135,20 +135,14 @@ function Explain({ input, kind, id, fallback }: { input: PreventionInput; kind: 
 
 /* ── hero ───────────────────────────────────────────────────────────────── */
 
-type HeroProps = { plan: Plan; onEdit: () => void; changes: string[]; planned: Record<string, string>; lead: ReminderLead };
+type HeroProps = { plan: Plan; onEdit: () => void; changes: string[] };
 
-function Hero({ plan, onEdit, changes, planned, lead }: HeroProps) {
+function Hero({ plan, onEdit, changes }: HeroProps) {
   const c = plan.counts;
   const todo = c.overdue + c.due;
   const [msg, setMsg] = useState('');
   const today = localToday();
 
-  const exportIcs = () => {
-    const { events, unscheduled } = buildSchedule(plan, today, planned);
-    const { ics, count } = buildIcsFromSchedule(events, today, lead);
-    downloadBlob('chemi-prevencia.ics', ics, 'text/calendar;charset=utf-8');
-    setMsg(`${count} შეხსენების სერია ჩაიწერა — გახსენით ფაილი და დაამატეთ კალენდარში.${unscheduled.length ? ` ${unscheduled.length} კვლევას ჯერ თარიღი არ აქვს — დაგეგმეთ ქვემოთ, კალენდარში.` : ''}`);
-  };
   const exportDocx = async () => {
     setMsg('Word ფაილი მზადდება…');
     try {
@@ -186,10 +180,30 @@ function Hero({ plan, onEdit, changes, planned, lead }: HeroProps) {
           <p className="mt-2 text-[14px] text-white/75">
             {plan.ageYears} წელი · {plan.sex === 'female' ? 'ქალი' : 'მამაკაცი'} · გეგმა შედგენილია {fmtDate(plan.generatedFor)}
           </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            <button type="button" onClick={exportIcs} className="inline-flex items-center gap-1.5 rounded-full bg-cyan-brand px-4 py-2.5 text-[13px] font-medium text-white transition hover:bg-cyan-deep">
-              <CalendarPlus className="h-4 w-4" /> კალენდარში დამატება
-            </button>
+          <div className="mt-6 grid gap-2.5 sm:grid-cols-3">
+            {[
+              { id: 'agenda', icon: CalendarPlus, t: 'ჩემი კალენდარი', d: 'დაგეგმვა და შეხსენებები' },
+              { id: 'simulator', icon: SlidersHorizontal, t: 'რისკის სიმულატორი', d: '„რა მოხდება, თუ…?“' },
+              { id: 'calendar', icon: CalendarCheck2, t: 'ჩემი კვლევები', d: `${plan.screening.filter((s) => s.status !== 'not_needed').length} პუნქტი` },
+            ].map((b) => (
+              <button
+                key={b.id}
+                type="button"
+                onClick={() => document.getElementById(b.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="group flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3.5 text-left ring-1 ring-white/15 transition hover:bg-white/15 hover:ring-cyan-brand"
+              >
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-cyan-brand text-white shadow-soft">
+                  <b.icon className="h-5 w-5" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-[15px] font-semibold">{b.t}</span>
+                  <span className="block text-[12px] text-white/65">{b.d}</span>
+                </span>
+                <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-white/50 transition group-hover:translate-x-0.5 group-hover:text-white" />
+              </button>
+            ))}
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
             <button type="button" onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-4 py-2.5 text-[13px] text-white/90 transition hover:border-cyan-brand">
               <Printer className="h-4 w-4" /> ბეჭდვა / PDF
             </button>
@@ -476,8 +490,9 @@ function RiskCard({ r, input, onAdd }: { r: RiskResult; input: PreventionInput; 
 /* ── main view ──────────────────────────────────────────────────────────── */
 
 const NAV = [
-  { id: 'calendar', label: 'კვლევები' },
   { id: 'agenda', label: 'კალენდარი' },
+  { id: 'simulator', label: 'სიმულატორი' },
+  { id: 'calendar', label: 'კვლევები' },
   { id: 'risk', label: 'რისკი' },
   { id: 'vaccines', label: 'ვაქცინები' },
   { id: 'pregnancy', label: 'ორსულობამდე' },
@@ -506,7 +521,7 @@ export function PlanView({
   const [showAllLow, setShowAllLow] = useState(false);
   return (
     <div className="mx-auto max-w-6xl space-y-10 pb-16">
-      <Hero plan={plan} onEdit={onEdit} changes={changes} planned={planned} lead={lead} />
+      <Hero plan={plan} onEdit={onEdit} changes={changes} />
 
       <nav aria-label="გეგმის ნაწილები" className="no-print sticky top-[60px] z-20 -mx-3 overflow-x-auto bg-[rgb(var(--bg)/0.85)] px-3 py-2 backdrop-blur-md">
         <div className="flex gap-2">
@@ -527,12 +542,31 @@ export function PlanView({
         </button>
       )}
 
-      <Screening plan={plan} input={input} onDone={onDone} />
-
       <div className="space-y-5">
-        <SectionHead id="agenda" icon={CalendarCheck2} eyebrow="კალენდარი და შეხსენებები" title="დაგეგმეთ — და აღარ დაგავიწყდებათ" sub="დაუნიშნეთ თარიღი ყოველ კვლევას. განმეორებითი კვლევები თავისით დაემატება სწორი ინტერვალით და შეწყდება იმ ასაკში, როცა აღარ არის საჭირო. შეხსენება — ტელეფონის კალენდარში ან Google Calendar-ში." />
+        <SectionHead id="agenda" icon={CalendarPlus} eyebrow="კალენდარი და შეხსენებები" title="დაგეგმეთ — და აღარ დაგავიწყდებათ" sub="დაუნიშნეთ თარიღი ყოველ კვლევას. განმეორებითი კვლევები თავისით დაემატება სწორი ინტერვალით და შეწყდება იმ ასაკში, როცა აღარ არის საჭირო. შეხსენება — ტელეფონის კალენდარში ან Google Calendar-ში." />
         <CalendarView plan={plan} today={today} planned={planned} setPlanned={setPlanned} onDone={onDone} lead={lead} setLead={setLead} />
       </div>
+
+      <div className="space-y-5">
+        <SectionHead id="simulator" icon={SlidersHorizontal} eyebrow="რისკის სიმულატორი" title="რა მოხდება, თუ…?" sub="გადაწიეთ სლაიდერები და ნახეთ, როგორ იცვლება თქვენი ინფარქტის, ინსულტის და დიაბეტის რისკი. გათვლა — იგივე ოფიციალური მოდელებით (SCORE2, FINDRISC)." />
+        {plan.ageYears >= 40 && plan.ageYears <= 89 && !(input.conditions ?? []).some((c) => c === 'diabetes' || c === 'cvd' || c === 'ckd') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' ? (
+          <Score2Simulator input={input} age={plan.ageYears} />
+        ) : (
+          <p className="panel p-5 text-[13.5px] leading-relaxed text-slate-300">
+            გულის რისკის სიმულატორი (SCORE2) 40–89 წლის ასაკისთვისაა და არ გამოიყენება დიაბეტის, გულ-სისხლძარღვთა ან თირკმლის ქრონიკული დაავადებისას — ასეთ დროს რისკს ექიმი აფასებს.
+          </p>
+        )}
+        {!(input.conditions ?? []).includes('diabetes') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' &&
+          (input.heightCm ? (
+            <FindriscSimulator input={input} age={plan.ageYears} />
+          ) : (
+            <button type="button" onClick={onEdit} className="panel w-full p-5 text-left text-[13.5px] text-slate-300 transition hover:border-cyan/50">
+              დიაბეტის რისკის სიმულატორისთვის შეიყვანეთ <b className="text-fg">სიმაღლე და წონა</b> → მონაცემების შეცვლა
+            </button>
+          ))}
+      </div>
+
+      <Screening plan={plan} input={input} onDone={onDone} />
 
       <div className="space-y-5">
         <SectionHead id="risk" icon={GaugeIcon} eyebrow="4.2 · რისკის კალკულატორები" title="თქვენი რისკი — და რა შეამცირებს მას ყველაზე მეტად" sub="SCORE2 გათვლილია საქართველოსთვის (ESC-ის ძალიან მაღალი რისკის რეგიონი), FINDRISC — დიაბეტის რისკი ანალიზის გარეშე." />
@@ -541,10 +575,6 @@ export function PlanView({
             <RiskCard key={r.id} r={r} input={input} onAdd={onEdit} />
           ))}
         </div>
-        {plan.ageYears >= 40 && plan.ageYears <= 89 && !(input.conditions ?? []).some((c) => c === 'diabetes' || c === 'cvd' || c === 'ckd') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' && (
-          <Score2Simulator input={input} age={plan.ageYears} />
-        )}
-        {!(input.conditions ?? []).includes('diabetes') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' && <FindriscSimulator input={input} age={plan.ageYears} />}
       </div>
 
       <div className="space-y-5">
