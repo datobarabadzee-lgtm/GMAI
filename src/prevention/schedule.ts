@@ -148,7 +148,10 @@ export type ReminderLead = 1 | 7 | 14;
  * One VEVENT per series: the first occurrence carries an RRULE, so a phone
  * calendar shows every repeat and stops by itself at the age limit.
  */
-export function buildIcsFromSchedule(events: ScheduleEvent[], today: string, leadDays: ReminderLead = 7): { ics: string; count: number } {
+export type CalendarLabels = { calName: string; suffix: string; uid: string };
+const PREVENTION_LABELS: CalendarLabels = { calName: 'ჩემი პრევენცია', suffix: 'პრევენციის გეგმა', uid: 'gmai-prev' };
+
+export function buildIcsFromSchedule(events: ScheduleEvent[], today: string, leadDays: ReminderLead = 7, labels: CalendarLabels = PREVENTION_LABELS): { ics: string; count: number } {
   const stamp = `${compact(today)}T000000Z`;
   // One series per group. If the second occurrence does not follow the first by exactly the
   // interval (e.g. a flu shot this November, then every 1 October), the first is a single event
@@ -166,12 +169,12 @@ export function buildIcsFromSchedule(events: ScheduleEvent[], today: string, lea
     const rule = recurring ? rrule(e) : null;
     return [
       'BEGIN:VEVENT',
-      `UID:gmai-prev-${e.group.replace(/[^a-z0-9]/gi, '-')}-${compact(e.date)}@leadermed`,
+      `UID:${labels.uid}-${e.group.replace(/[^a-z0-9]/gi, '-')}-${compact(e.date)}@leadermed`,
       `DTSTAMP:${stamp}`,
       `DTSTART;VALUE=DATE:${compact(e.date)}`,
       `DTEND;VALUE=DATE:${compact(addDaysIso(e.date, 1))}`,
       ...(rule ? [`RRULE:${rule}`] : []),
-      fold(`SUMMARY:${esc(`${e.shortKa} — პრევენციის გეგმა`)}`),
+      fold(`SUMMARY:${esc(`${e.shortKa} — ${labels.suffix}`)}`),
       fold(`DESCRIPTION:${esc(e.detailKa)}`),
       'BEGIN:VALARM',
       `TRIGGER:-P${leadDays}D`,
@@ -181,15 +184,15 @@ export function buildIcsFromSchedule(events: ScheduleEvent[], today: string, lea
       'END:VEVENT',
     ].join('\r\n');
   });
-  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//LeaderMed//GMAI Prevention//KA', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:ჩემი პრევენცია', ...blocks, 'END:VCALENDAR'].join('\r\n');
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//LeaderMed//GMAI Prevention//KA', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', `X-WR-CALNAME:${labels.calName}`, ...blocks, 'END:VCALENDAR'].join('\r\n');
   return { ics, count: blocks.length };
 }
 
 /** Google Calendar "add event" link for one series (all-day, with its repeat rule). */
-export function googleCalendarUrl(e: ScheduleEvent): string {
+export function googleCalendarUrl(e: ScheduleEvent, suffix = PREVENTION_LABELS.suffix): string {
   const p = new URLSearchParams({
     action: 'TEMPLATE',
-    text: `${e.shortKa} — პრევენციის გეგმა`,
+    text: `${e.shortKa} — ${suffix}`,
     dates: `${compact(e.date)}/${compact(addDaysIso(e.date, 1))}`,
     details: e.detailKa,
   });

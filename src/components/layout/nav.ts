@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react';
 import {
-  ShieldAlert, ShieldPlus, Gauge,
+  ShieldAlert, ShieldPlus, Gauge, HeartHandshake,
   LayoutDashboard, BrainCircuit, FolderKanban, GitBranch, BookOpenCheck, Scale, Pill, ClipboardList,
   Calculator, FlaskConical, FileText, ShieldCheck, Gavel, HeartPulse, GraduationCap, Microscope,
   Building2, Library, Info,
@@ -56,6 +56,7 @@ export const NAV: NavItem[] = [
   { href: '/quality', labelKa: 'ხარისხი და უსაფრთხოება', labelEn: 'Quality & Safety', icon: ShieldCheck, group: 'ხარისხი', roles: ['quality', 'clinician'] },
   { href: '/defect', labelKa: 'დეფექტების ანალიზი', labelEn: 'Medical Defect Analysis', icon: Gavel, group: 'ხარისხი', roles: ['quality'], primaryFor: ['quality'] },
   { href: '/prevention', labelKa: 'ჩემი პრევენცია', labelEn: 'Prevention', icon: ShieldPlus, group: 'პლატფორმა', roles: ['patient', 'clinician'] },
+  { href: '/reproductive', labelKa: 'ორსულობა და ნაყოფიერება', labelEn: 'Pregnancy & Fertility', icon: HeartHandshake, group: 'პლატფორმა', roles: ['patient', 'clinician'] },
   { href: '/patient', labelKa: 'ამიხსენი მარტივად', labelEn: 'Patient AI', icon: HeartPulse, group: 'პლატფორმა', roles: ['patient', 'clinician'], primaryFor: ['patient'] },
   { href: '/academy', labelKa: 'სამედიცინო აკადემია', labelEn: 'Medical Academy', icon: GraduationCap, group: 'პლატფორმა', roles: ['student', 'clinician'], primaryFor: ['student'] },
   { href: '/academy/clinical', labelKa: 'კლინიკური ცოდნა', labelEn: 'Clinical Knowledge', icon: BookOpenCheck, group: 'პლატფორმა', roles: ['student', 'clinician'] },
@@ -113,6 +114,7 @@ export const MENU: Record<Audience, MenuItem[]> = {
     { href: '/prevention', labelKa: 'ჩემი პრევენცია', shortKa: 'პრევენცია', icon: ShieldPlus },
     { href: '/prevention?tool=simulator', labelKa: 'რისკის სიმულატორი', shortKa: 'სიმულატორი', icon: Gauge },
     { href: '/patient', labelKa: 'AI-ს კითხვა', shortKa: 'კითხვა', icon: MessageCircle },
+    { href: '/reproductive', labelKa: 'ორსულობა და ნაყოფიერება', shortKa: 'ორსულობა', icon: HeartHandshake },
     { href: '/labs', labelKa: 'ანალიზების ახსნა', shortKa: 'ანალიზები', icon: Flask },
     { href: '/medication-review', labelKa: 'წამლების შემოწმება', shortKa: 'წამლები', icon: PillIcon },
     { href: '/patient?start=diagnosis', labelKa: 'ამიხსენი მარტივად', shortKa: 'ახსნა', icon: AlignLeft },
@@ -148,6 +150,7 @@ export const MORE_TOOLS: MenuItem[] = [
   { href: '/drugs', labelKa: 'მედიკამენტების მონოგრაფიები', shortKa: 'მონოგრაფიები', icon: ClipboardList },
   { href: '/prevention', labelKa: 'პრევენციის ჩეკლისტი (SCORE2, სკრინინგი, ვაქცინები)', shortKa: 'პრევენცია', icon: ShieldPlus },
   { href: '/calculators', labelKa: 'კალკულატორები', shortKa: 'კალკულატორები', icon: Calculator },
+  { href: '/reproductive', labelKa: 'ორსულობის ვადა, კალენდარი, ოვულაცია', shortKa: 'ორსულობა', icon: HeartHandshake },
   { href: '/defect', labelKa: 'დეფექტების ანალიზი', shortKa: 'დეფექტები', icon: Gavel },
   { href: '/research', labelKa: 'კვლევის AI', shortKa: 'კვლევა', icon: Microscope },
   { href: '/academy', labelKa: 'სამედიცინო აკადემია', shortKa: 'აკადემია', icon: GraduationCap },

@@ -9,11 +9,14 @@ import { ServiceWorker } from '@/components/layout/service-worker';
 import { InstallHint } from '@/components/layout/install-hint';
 import { THEME_BOOT_SCRIPT } from '@/components/layout/theme';
 import { RoleProvider } from '@/features/settings/role-store';
+import { SITE_URL, shareMeta } from '@/lib/site';
 
 const ge = Noto_Sans_Georgian({ subsets: ['georgian'], weight: ['400', '500', '600', '700'], variable: '--font-ge', display: 'swap' });
 const latin = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-latin', display: 'swap' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  ...shareMeta('ლიდერმედი — სამედიცინო AI პლატფორმა', 'უფასო სამედიცინო AI ქართულად: ექიმებისთვის, პაციენტებისთვის და სტუდენტებისთვის. ყოველ პასუხს — ოფიციალური წყარო.'),
   title: { default: 'ლიდერმედი — Medical AI', template: '%s · ლიდერმედი' },
   description: 'ლიდერმედის კლინიკური ინტელექტის სისტემა — ექიმებისთვის, სტუდენტებისთვის, კლინიკებისთვის და პაციენტებისთვის.',
   applicationName: 'ლიდერმედი Medical AI',

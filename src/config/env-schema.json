@@ -15,6 +15,14 @@
       "ka": "განთავსების დონე. აუცილებლად მიუთითეთ ცხადად. დაუყენებელი ან უცნობი მნიშვნელობა = public (უსაფრთხო ნაგულისხმევი). internal მხოლოდ კლინიკის კონტროლირებად ინფრასტრუქტურაზე."
     },
     {
+      "name": "NEXT_PUBLIC_SITE_URL",
+      "group": "deployment",
+      "required": "optional",
+      "secret": false,
+      "default": "https://gmai-29267867738.europe-west1.run.app",
+      "ka": "საიტის საჯარო მისამართი (მაგ. საკუთარი დომენი). გამოიყენება Facebook-ისა და სხვა სოციალური ქსელების გაზიარების ბარათის სრული ბმულისთვის. ბილდის დროს იკითხება."
+    },
+    {
       "name": "PUBLIC_ORIGIN",
       "group": "security",
       "required": "self_hosted",

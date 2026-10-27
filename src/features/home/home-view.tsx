@@ -6,7 +6,7 @@ import { useState } from 'react';
 import type { LucideIcon } from 'lucide-react';
 import {
   ArrowRight, BookOpen, FileText, FlaskConical, GraduationCap, Heart, ListChecks, Lock, MessageSquareText,
-  Microscope, Phone, Pill, ShieldAlert, ShieldPlus, AlignLeft, Stethoscope, Users,
+  Microscope, Phone, Pill, ShieldAlert, ShieldPlus, AlignLeft, Stethoscope, Users, HeartHandshake,
 } from 'lucide-react';
 import { ASK_HREF, audienceOf, type Audience } from '@/components/layout/nav';
 import { useRole } from '@/features/settings/role-store';
@@ -157,6 +157,23 @@ export function HomeView() {
           </span>
           <span className="relative inline-flex shrink-0 items-center gap-1.5 self-start rounded-full bg-cyan-brand px-5 py-3 text-sm font-medium text-white transition group-hover:bg-cyan-deep sm:self-center">
             დაწყება <ArrowRight className="h-4 w-4" />
+          </span>
+        </Link>
+      )}
+
+      {audience === 'patient' && (
+        <Link href="/reproductive" className="group relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-line bg-ink-900 p-6 shadow-panel transition hover:-translate-y-0.5 hover:shadow-soft sm:flex-row sm:items-center">
+          <span aria-hidden className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-rose-400/15 blur-2xl" />
+          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-navy text-cyan-brand">
+            <HeartHandshake className="h-7 w-7" />
+          </span>
+          <span className="relative min-w-0 flex-1">
+            <span className="block text-[12px] font-semibold uppercase tracking-wider text-cyan">ახალი · ორსულობა და ნაყოფიერება</span>
+            <span className="mt-1 block text-[19px] font-bold leading-snug text-fg">მშობიარობის თარიღი და ორსულობის კალენდარი</span>
+            <span className="mt-1 block text-[13.5px] leading-relaxed text-slate-400">ვადის გამოთვლა, კვლევები და ვაქცინები კვირების მიხედვით შეხსენებებით, ოვულაციის დღეები.</span>
+          </span>
+          <span className="relative inline-flex shrink-0 items-center gap-1.5 self-start rounded-full bg-cyan-brand px-5 py-3 text-sm font-medium text-white transition group-hover:bg-cyan-deep sm:self-center">
+            გახსნა <ArrowRight className="h-4 w-4" />
           </span>
         </Link>
       )}

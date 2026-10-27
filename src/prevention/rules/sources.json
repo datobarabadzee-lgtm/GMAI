@@ -382,5 +382,125 @@
     "title": "Suspected cancer: recognition and referral (NG12)",
     "year": 2026,
     "url": "https://www.nice.org.uk/guidance/ng12"
+  },
+  "acog_edd_2017": {
+    "org": "ACOG · AIUM · SMFM",
+    "title": "Methods for Estimating the Due Date — Committee Opinion No. 700 (reaffirmed 2025)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28426621/"
+  },
+  "nice_ng201": {
+    "org": "NICE",
+    "title": "Antenatal care (NG201)",
+    "year": 2021,
+    "url": "https://www.nice.org.uk/guidance/ng201/chapter/Recommendations"
+  },
+  "acog_chromosomal_2020": {
+    "org": "ACOG · SMFM",
+    "title": "Screening for Fetal Chromosomal Abnormalities — Practice Bulletin No. 226",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32804883/"
+  },
+  "uspstf_gdm_2021": {
+    "org": "USPSTF",
+    "title": "Gestational Diabetes: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/gestational-diabetes-screening",
+    "grade": "B"
+  },
+  "uspstf_bacteriuria_2019": {
+    "org": "USPSTF",
+    "title": "Asymptomatic Bacteriuria in Adults: Screening",
+    "year": 2019,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/asymptomatic-bacteriuria-in-adults-screening",
+    "grade": "B"
+  },
+  "uspstf_syphilis_preg_2025": {
+    "org": "USPSTF",
+    "title": "Syphilis Infection During Pregnancy: Screening",
+    "year": 2025,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/syphilis-infection-in-pregnancy-screening",
+    "grade": "A"
+  },
+  "uspstf_hbv_preg_2019": {
+    "org": "USPSTF",
+    "title": "Hepatitis B Virus Infection in Pregnant Women: Screening",
+    "year": 2019,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hepatitis-b-virus-infection-in-pregnant-women-screening",
+    "grade": "A"
+  },
+  "uspstf_rh_2004": {
+    "org": "USPSTF",
+    "title": "Rh(D) Incompatibility: Screening",
+    "year": 2004,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/rh-d-incompatibility-screening",
+    "grade": "A / B"
+  },
+  "acog_rh_2017": {
+    "org": "ACOG",
+    "title": "Prevention of Rh D Alloimmunization — Practice Bulletin No. 181",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28742673/"
+  },
+  "uspstf_aspirin_pe_2021": {
+    "org": "USPSTF",
+    "title": "Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication",
+    "grade": "B"
+  },
+  "acog_gbs_2020": {
+    "org": "ACOG",
+    "title": "Prevention of Group B Streptococcal Early-Onset Disease in Newborns — Committee Opinion No. 797",
+    "year": 2020,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/02/prevention-of-group-b-streptococcal-early-onset-disease-in-newborns"
+  },
+  "cdc_tdap_preg": {
+    "org": "CDC",
+    "title": "Tdap Vaccination During Pregnancy",
+    "year": 2024,
+    "url": "https://www.cdc.gov/pertussis/vaccines/tdap-vaccination-during-pregnancy.html"
+  },
+  "cdc_rsv_infants": {
+    "org": "CDC",
+    "title": "RSV Immunization: Protecting Infants (maternal vaccine and nirsevimab)",
+    "year": 2024,
+    "url": "https://www.cdc.gov/rsv/vaccines/protect-infants.html"
+  },
+  "iom_gwg_2009": {
+    "org": "IOM (National Academies)",
+    "title": "Weight Gain During Pregnancy: Reexamining the Guidelines",
+    "year": 2009,
+    "url": "https://nap.nationalacademies.org/catalog/12584/weight-gain-during-pregnancy-reexamining-the-guidelines"
+  },
+  "cdc_gwg": {
+    "org": "CDC",
+    "title": "Weight Gain During Pregnancy (IOM recommendations)",
+    "year": 2024,
+    "url": "https://www.cdc.gov/maternal-infant-health/pregnancy-weight/index.html"
+  },
+  "wilcox_1995": {
+    "org": "NEJM · Wilcox",
+    "title": "Timing of sexual intercourse in relation to ovulation",
+    "year": 1995,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7477165/"
+  },
+  "wilcox_2000": {
+    "org": "BMJ · Wilcox",
+    "title": "The timing of the \"fertile window\" in the menstrual cycle",
+    "year": 2000,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11082086/"
+  },
+  "gnoth_2003": {
+    "org": "Hum Reprod · Gnoth",
+    "title": "Time to pregnancy: results of the German prospective study",
+    "year": 2003,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12923157/"
+  },
+  "ada_preg_2025": {
+    "org": "ADA",
+    "title": "Standards of Care in Diabetes — 2025: Management of Diabetes in Pregnancy",
+    "year": 2025,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39651985/"
   }
 }
