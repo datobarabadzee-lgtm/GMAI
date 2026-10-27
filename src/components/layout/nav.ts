@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react';
 import {
-  ShieldAlert, ShieldPlus,
+  ShieldAlert, ShieldPlus, Gauge,
   LayoutDashboard, BrainCircuit, FolderKanban, GitBranch, BookOpenCheck, Scale, Pill, ClipboardList,
   Calculator, FlaskConical, FileText, ShieldCheck, Gavel, HeartPulse, GraduationCap, Microscope,
   Building2, Library, Info,
@@ -111,6 +111,7 @@ export const MENU: Record<Audience, MenuItem[]> = {
   patient: [
     { href: '/', labelKa: 'მთავარი', shortKa: 'მთავარი', icon: Home },
     { href: '/prevention', labelKa: 'ჩემი პრევენცია', shortKa: 'პრევენცია', icon: ShieldPlus },
+    { href: '/prevention?tool=simulator', labelKa: 'რისკის სიმულატორი', shortKa: 'სიმულატორი', icon: Gauge },
     { href: '/patient', labelKa: 'AI-ს კითხვა', shortKa: 'კითხვა', icon: MessageCircle },
     { href: '/labs', labelKa: 'ანალიზების ახსნა', shortKa: 'ანალიზები', icon: Flask },
     { href: '/medication-review', labelKa: 'წამლების შემოწმება', shortKa: 'წამლები', icon: PillIcon },

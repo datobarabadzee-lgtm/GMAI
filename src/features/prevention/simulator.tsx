@@ -79,7 +79,7 @@ function People({ n, color }: { n: number; color: string }) {
   );
 }
 
-export function Score2Simulator({ input, age }: { input: PreventionInput; age: number }) {
+export function Score2Simulator({ input, age, standalone = false }: { input: PreventionInput; age: number; standalone?: boolean }) {
   const sex = input.sex!;
   const mgdl = input.cholUnit !== 'mmol/L';
   const fromUser = {
@@ -112,7 +112,7 @@ export function Score2Simulator({ input, age }: { input: PreventionInput; age: n
             <RotateCcw className="h-3.5 w-3.5" /> თავიდან
           </button>
         </div>
-        {missing && <p className="rounded-xl bg-clinical-moderate/10 px-3 py-2 text-[12.5px] text-clinical-moderate">ზოგი მონაცემი არ შეგიყვანიათ — სლაიდერი საშუალო მნიშვნელობიდან იწყება. ზუსტი შედეგისთვის შეავსეთ წნევა და ქოლესტერინი.</p>}
+        {missing && !standalone && <p className="rounded-xl bg-clinical-moderate/10 px-3 py-2 text-[12.5px] text-clinical-moderate">ზოგი მონაცემი არ შეგიყვანიათ — სლაიდერი საშუალო მნიშვნელობიდან იწყება. ზუსტი შედეგისთვის შეავსეთ წნევა და ქოლესტერინი.</p>}
         <Toggle on={s.smoker} onChange={(v) => setS({ ...s, smoker: v })} label="ვეწევი" />
         <Slider label="ზედა (სისტოლური) წნევა" value={s.sbp} min={95} max={200} step={1} unit="მმ ვწყ. სვ." onChange={(v) => setS({ ...s, sbp: v })} start={fromUser.sbp} marks={[{ at: 130, label: 'სამიზნე: 130-ზე ნაკლები' }]} />
         <Slider label="საერთო ქოლესტერინი" value={s.tc} {...cholRange} onChange={(v) => setS({ ...s, tc: v })} start={fromUser.tc} />
@@ -142,7 +142,7 @@ export function Score2Simulator({ input, age }: { input: PreventionInput; age: n
   );
 }
 
-export function FindriscSimulator({ input, age }: { input: PreventionInput; age: number }) {
+export function FindriscSimulator({ input, age, standalone = false }: { input: PreventionInput; age: number; standalone?: boolean }) {
   const sex = input.sex!;
   const start = {
     weight: input.weightKg ?? 75,
@@ -175,7 +175,7 @@ export function FindriscSimulator({ input, age }: { input: PreventionInput; age:
             <RotateCcw className="h-3.5 w-3.5" /> თავიდან
           </button>
         </div>
-        {partial && <p className="rounded-xl bg-clinical-moderate/10 px-3 py-2 text-[12.5px] text-clinical-moderate">ოჯახური ანამნეზი ან „ოდესმე მაღალი შაქარი“ არ არის შევსებული — ითვლება „არა“-დ. ზუსტი ქულისთვის შეავსეთ ფორმაში.</p>}
+        {partial && !standalone && <p className="rounded-xl bg-clinical-moderate/10 px-3 py-2 text-[12.5px] text-clinical-moderate">ოჯახური ანამნეზი ან „ოდესმე მაღალი შაქარი“ არ არის შევსებული — ითვლება „არა“-დ. ზუსტი ქულისთვის შეავსეთ ფორმაში.</p>}
         <Slider label="წონა" value={s.weight} min={Math.max(35, Math.round(start.weight * 0.7))} max={Math.round(start.weight * 1.15)} step={0.5} unit="კგ" onChange={(v) => setS({ ...s, weight: v })} start={start.weight} />
         <Slider label="წელის გარშემოწერილობა" value={s.waist} min={60} max={140} step={1} unit="სმ" onChange={(v) => setS({ ...s, waist: v })} start={start.waist} marks={sex === 'male' ? [{ at: 94, label: '94' }, { at: 102, label: '102' }] : [{ at: 80, label: '80' }, { at: 88, label: '88' }]} />
         <Toggle on={s.active} onChange={(v) => setS({ ...s, active: v })} label="ყოველდღე 30+ წუთი მოძრაობა" />
@@ -204,5 +204,69 @@ export function FindriscSimulator({ input, age }: { input: PreventionInput; age:
         </div>
       </div>
     </article>
+  );
+}
+
+/**
+ * Straight into the simulators — no form first. Age, sex and height are set
+ * here with sliders; everything else starts from typical values the person
+ * then moves themselves.
+ */
+export function QuickSimulator({ onBack, onPlan }: { onBack: () => void; onPlan: () => void }) {
+  const [age, setAge] = useState(55);
+  const [sex, setSex] = useState<'female' | 'male'>('male');
+  const [height, setHeight] = useState(170);
+  const input: PreventionInput = { age, sex, heightCm: height, cholUnit: 'mg/dL' };
+  return (
+    <div className="mx-auto max-w-6xl space-y-5">
+      <section className="relative overflow-hidden rounded-3xl bg-navy px-6 py-7 text-white sm:px-9">
+        <span aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-cyan-brand/25 blur-2xl" />
+        <div className="relative flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <button type="button" onClick={onBack} className="text-[12.5px] text-white/60 hover:text-white">
+              ← უკან
+            </button>
+            <h1 className="mt-2 flex items-center gap-2 text-[26px] font-bold sm:text-[32px]">
+              <SlidersHorizontal className="h-7 w-7 text-cyan-brand" /> რისკის სიმულატორი
+            </h1>
+            <p className="mt-1 max-w-xl text-[14px] text-white/75">აირჩიეთ ასაკი და სქესი, მერე გადაწიეთ სლაიდერები — ინფარქტის, ინსულტის და დიაბეტის რისკი მაშინვე გადაითვლება.</p>
+          </div>
+          <button type="button" onClick={onPlan} className="self-start rounded-full bg-cyan-brand px-5 py-3 text-[14px] font-semibold text-white shadow-soft transition hover:bg-cyan-deep lg:self-auto">
+            სრული პრევენციის გეგმა →
+          </button>
+        </div>
+        <div className="relative mt-6 grid gap-5 rounded-2xl bg-white/10 p-5 sm:grid-cols-3">
+          <label className="block">
+            <span className="flex items-baseline justify-between text-[13px] text-white/80">
+              ასაკი <b className="text-[18px] tabular-nums text-white">{age}</b>
+            </span>
+            <input type="range" min={18} max={89} value={age} onChange={(e) => setAge(Number(e.target.value))} className="prev-range mt-2 w-full" aria-label="ასაკი" style={{ background: `linear-gradient(to right, #08C6FF ${((age - 18) / 71) * 100}%, rgba(255,255,255,0.2) ${((age - 18) / 71) * 100}%)` }} />
+          </label>
+          <div>
+            <span className="text-[13px] text-white/80">სქესი</span>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              {(['female', 'male'] as const).map((s) => (
+                <button key={s} type="button" aria-pressed={sex === s} onClick={() => setSex(s)} className={cn('rounded-xl py-2.5 text-[14px] font-semibold transition', sex === s ? 'bg-cyan-brand text-white' : 'bg-white/10 text-white/80 hover:bg-white/15')}>
+                  {s === 'female' ? 'ქალი' : 'მამაკაცი'}
+                </button>
+              ))}
+            </div>
+          </div>
+          <label className="block">
+            <span className="flex items-baseline justify-between text-[13px] text-white/80">
+              სიმაღლე <b className="text-[18px] tabular-nums text-white">{height} სმ</b>
+            </span>
+            <input type="range" min={140} max={210} value={height} onChange={(e) => setHeight(Number(e.target.value))} className="prev-range mt-2 w-full" aria-label="სიმაღლე" style={{ background: `linear-gradient(to right, #08C6FF ${((height - 140) / 70) * 100}%, rgba(255,255,255,0.2) ${((height - 140) / 70) * 100}%)` }} />
+          </label>
+        </div>
+      </section>
+      {age >= 40 ? (
+        <Score2Simulator key={`s2-${sex}`} input={input} age={age} standalone />
+      ) : (
+        <p className="panel p-5 text-[13.5px] leading-relaxed text-slate-300">ინფარქტისა და ინსულტის 10-წლიანი რისკის მოდელი (SCORE2) 40 წლიდან გამოიყენება. ამ ასაკში მთავარია წნევის, წონის და მოწევის კონტროლი — დიაბეტის რისკი კი ქვემოთ ჩანს.</p>
+      )}
+      <FindriscSimulator key={`fr-${sex}`} input={input} age={age} standalone />
+      <p className="text-center text-[12px] text-slate-500">სიმულატორი არ ინახავს მონაცემებს და არ ცვლის ექიმთან კონსულტაციას.</p>
+    </div>
   );
 }

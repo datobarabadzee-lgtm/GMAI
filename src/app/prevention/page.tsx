@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { PreventionApp } from '@/features/prevention/prevention-app';
 
 export const metadata = {
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function PreventionPage() {
-  return <PreventionApp />;
+  return (
+    <Suspense fallback={null}>
+      <PreventionApp />
+    </Suspense>
+  );
 }

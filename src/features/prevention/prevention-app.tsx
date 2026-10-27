@@ -1,7 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { ArrowRight, CalendarHeart, HeartPulse, Lock, Phone, PiggyBank, RotateCcw, ShieldCheck, Siren, Sparkles, Timer } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { ArrowRight, CalendarHeart, SlidersHorizontal, HeartPulse, Lock, Phone, PiggyBank, RotateCcw, ShieldCheck, Siren, Sparkles, Timer } from 'lucide-react';
 import { buildPlan } from '@/prevention/engine';
 import { localToday, type ReminderLead } from '@/prevention/schedule';
 import { STATUS_KA } from '@/prevention/labels';
@@ -10,6 +11,7 @@ import { cn } from '@/lib/utils';
 import { IntakeForm } from './intake-form';
 import { PlanView } from './plan-view';
 import { PulseLine } from './visuals';
+import { QuickSimulator } from './simulator';
 
 /**
  * „ჩემი პრევენცია“ — the whole module runs in the browser.
@@ -43,7 +45,7 @@ const write = (k: string, v: unknown) => {
 };
 
 type Snapshot = { at: string; statuses: Record<string, { status: string; titleKa: string }> };
-type Stage = 'intro' | 'form' | 'result';
+type Stage = 'intro' | 'form' | 'result' | 'sim' | 'quick';
 
 export function PreventionApp() {
   const [stage, setStage] = useState<Stage>('intro');
@@ -54,6 +56,9 @@ export function PreventionApp() {
   const today = useMemo(() => localToday(), []);
   const [planned, setPlannedState] = useState<Record<string, string>>({});
   const [lead, setLeadState] = useState<ReminderLead>(7);
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null);
+  const [pendingTool, setPendingTool] = useState<string | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const i = read<PreventionInput>(KEY_INPUT);
@@ -65,13 +70,29 @@ export function PreventionApp() {
     setPlannedState(read<Record<string, string>>(KEY_PLANNED) ?? {});
     const l = read<number>(KEY_LEAD);
     if (l === 1 || l === 7 || l === 14) setLeadState(l);
+    setLoaded(true);
   }, []);
+
+  // Direct links (also from the menu while already on this page): ?tool=simulator | ?tool=calendar
+  const tool = useSearchParams().get('tool');
+  useEffect(() => {
+    if (loaded && tool) setPendingTool(tool);
+  }, [tool, loaded]);
+
+  useEffect(() => {
+    if (stage !== 'result' || !scrollTarget) return;
+    const t = setTimeout(() => {
+      document.getElementById(scrollTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setScrollTarget(null);
+    }, 120);
+    return () => clearTimeout(t);
+  }, [stage, scrollTarget]);
 
   const set = useCallback((patch: Partial<PreventionInput>) => setInput((prev) => ({ ...prev, ...patch })), []);
 
   const plan: PreventionPlan | null = useMemo(() => (stage === 'result' ? buildPlan(input, today) : null), [stage, input, today]);
 
-  const generate = (from: PreventionInput = input) => {
+  const generate = (from: PreventionInput = input, target?: string) => {
     const p = buildPlan(from, today);
     if (p.kind === 'PLAN') {
       // Remember the last plan's statuses so the next visit can say what changed.
@@ -92,8 +113,22 @@ export function PreventionApp() {
       setSaved(true);
     }
     setStage('result');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (target) setScrollTarget(target);
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const openCalendar = () => (saved ? generate(input, 'agenda') : setStage('quick'));
+  const openSimulator = () => {
+    setStage('sim');
+    window.scrollTo({ top: 0 });
+  };
+
+  useEffect(() => {
+    if (!pendingTool) return;
+    if (pendingTool === 'simulator') openSimulator();
+    if (pendingTool === 'calendar') openCalendar();
+    setPendingTool(null);
+  }, [pendingTool]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const setPlanned = (group: string, date: string | undefined) =>
     setPlannedState((p) => {
@@ -143,7 +178,9 @@ export function PreventionApp() {
     setStage('intro');
   };
 
-  if (stage === 'intro') return <Intro saved={saved} onStart={() => setStage('form')} onResume={() => generate()} onForget={forget} />;
+  if (stage === 'intro') return <Intro saved={saved} onStart={() => setStage('form')} onResume={() => generate()} onForget={forget} onSim={openSimulator} onCalendar={openCalendar} />;
+  if (stage === 'sim') return <QuickSimulator onBack={() => setStage('intro')} onPlan={() => setStage('form')} />;
+  if (stage === 'quick') return <QuickStart input={input} set={set} onBack={() => setStage('intro')} onGo={() => generate(input, 'agenda')} />;
   if (stage === 'form') return <IntakeForm input={input} set={set} onSubmit={() => generate()} />;
 
   if (!plan) return null;
@@ -198,13 +235,46 @@ export function PreventionApp() {
   );
 }
 
-function Intro({ saved, onStart, onResume, onForget }: { saved: boolean; onStart: () => void; onResume: () => void; onForget: () => void }) {
+function QuickStart({ input, set, onBack, onGo }: { input: PreventionInput; set: (p: Partial<PreventionInput>) => void; onBack: () => void; onGo: () => void }) {
+  const ready = Boolean(input.age && input.age >= 18 && input.age <= 110 && input.sex);
+  return (
+    <div className="mx-auto max-w-xl">
+      <section className="panel animate-fade-up p-6">
+        <button type="button" onClick={onBack} className="text-[12.5px] text-slate-400 hover:text-fg">
+          ← უკან
+        </button>
+        <h1 className="mt-2 flex items-center gap-2 text-[22px] font-bold text-fg">
+          <CalendarHeart className="h-6 w-6 text-cyan" /> კალენდარი და შეხსენებები
+        </h1>
+        <p className="mt-1 text-[13.5px] text-slate-400">კალენდრისთვის საკმარისია ასაკი და სქესი. დანარჩენი მოგვიანებით შეგიძლიათ დაამატოთ.</p>
+        <div className="mt-5 grid grid-cols-[110px_1fr] items-end gap-3">
+          <label className="block">
+            <span className="label">ასაკი</span>
+            <input type="number" inputMode="numeric" className="field mt-1 text-center text-lg font-bold" value={input.age ?? ''} placeholder="—" onChange={(e) => set({ age: e.target.value === '' ? undefined : Number(e.target.value) })} />
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {(['female', 'male'] as const).map((s) => (
+              <button key={s} type="button" aria-pressed={input.sex === s} onClick={() => set({ sex: s })} className={cn('h-[46px] rounded-xl border text-[14px] font-semibold transition', input.sex === s ? 'border-transparent bg-navy text-white dark:bg-cyan-brand' : 'border-line bg-ink-950 text-slate-300 hover:border-cyan/50')}>
+                {s === 'female' ? 'ქალი' : 'მამაკაცი'}
+              </button>
+            ))}
+          </div>
+        </div>
+        <button type="button" disabled={!ready} onClick={onGo} className="btn btn-primary mt-5 h-12 w-full text-[15px]">
+          კალენდრის გახსნა <ArrowRight className="h-4 w-4" />
+        </button>
+      </section>
+    </div>
+  );
+}
+
+function Intro({ saved, onStart, onResume, onForget, onSim, onCalendar }: { saved: boolean; onStart: () => void; onResume: () => void; onForget: () => void; onSim: () => void; onCalendar: () => void }) {
   return (
     <div className="mx-auto max-w-6xl space-y-6">
       <section className="relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white ring-white/10 dark:ring-1 sm:px-12 sm:py-14">
         <span aria-hidden className="prev-float pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full bg-cyan-brand/30 blur-2xl" />
         <span aria-hidden className="prev-float-slow pointer-events-none absolute -bottom-24 left-1/3 h-64 w-64 rounded-full bg-leadermed-green/20 blur-3xl" />
-        <PulseLine className="absolute bottom-6 left-0 h-20 w-full opacity-50" />
+        <PulseLine className="absolute -bottom-6 left-0 h-16 w-full opacity-30" />
         <div className="relative grid items-center gap-8 lg:grid-cols-[1.3fr_1fr]">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[12.5px] text-cyan-brand">
@@ -234,6 +304,23 @@ function Intro({ saved, onStart, onResume, onForget }: { saved: boolean; onStart
                   დავიწყოთ <ArrowRight className="h-5 w-5" />
                 </button>
               )}
+            </div>
+            <div className="mt-5 grid max-w-xl gap-2.5 sm:grid-cols-2">
+              {[
+                { on: onSim, icon: SlidersHorizontal, t: 'რისკის სიმულატორი', d: 'პირდაპირ, ფორმის გარეშე' },
+                { on: onCalendar, icon: CalendarHeart, t: 'კალენდარი და შეხსენებები', d: saved ? 'თქვენი გეგმიდან' : 'მხოლოდ ასაკი და სქესი' },
+              ].map((b) => (
+                <button key={b.t} type="button" onClick={b.on} className="group flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3.5 text-left ring-1 ring-white/15 transition hover:bg-white/15 hover:ring-cyan-brand">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-cyan-brand text-white shadow-soft">
+                    <b.icon className="h-5 w-5" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[15px] font-semibold">{b.t}</span>
+                    <span className="block text-[12px] text-white/65">{b.d}</span>
+                  </span>
+                  <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-white/50 transition group-hover:translate-x-0.5 group-hover:text-white" />
+                </button>
+              ))}
             </div>
           </div>
           <div className="relative hidden lg:block" aria-hidden>
