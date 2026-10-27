@@ -29,3 +29,6 @@ eval-report.json
 screenshots/
 release-out/
 release-manifest.json
+
+# Local build CA (ops/build-ca/README.md)
+/ops/build-ca/*.pem

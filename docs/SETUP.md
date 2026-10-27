@@ -43,7 +43,7 @@ node scripts/smoke.mjs http://127.0.0.1:3000 --expect-release "$(jq -r .releaseI
 - პორტი მხოლოდ `127.0.0.1:3000`-ზეა; წინ დააყენეთ TLS reverse proxy (Caddy / nginx) და `PUBLIC_ORIGIN=https://…`.
 - ჩასაწერი მდგომარეობა (ლიმიტები, განხილვები, შიდა KB) — volume `gmai-data` → `/app/data`. image read-only-ა.
 - `APP_TIER` build-ისა და გაშვების დროს ერთნაირი უნდა იყოს (compose ამას აკეთებს).
-- TLS-inspecting proxy-ს მქონე ქსელში: `docker build --build-arg APT_HTTPS=1 --secret id=ca,src=<ca.pem> …`.
+- TLS-inspecting proxy-ს მქონე ქსელში: CA ფაილი ჩადეთ `ops/build-ca/ca.pem`-ში და `docker build --build-arg APT_HTTPS=1 …`.
 
 Caddy-ის მაგალითი:
 
