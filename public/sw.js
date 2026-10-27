@@ -9,12 +9,12 @@
  * A clinical or patient-facing answer is therefore never replayed from cache: if the
  * device is offline the user is told so, rather than shown a stale reply that looks live.
  */
-const VERSION = 'leadermed-v2';
+const VERSION = 'leadermed-v3';
 const SHELL = `${VERSION}-shell`;
 const PAGES = `${VERSION}-pages`;
 const OFFLINE_URL = '/offline';
 
-const PRECACHE = ['/offline', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png'];
+const PRECACHE = ['/offline', '/prevention', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

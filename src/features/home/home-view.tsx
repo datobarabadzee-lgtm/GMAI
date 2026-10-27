@@ -6,7 +6,7 @@ import { useState } from 'react';
 import type { LucideIcon } from 'lucide-react';
 import {
   ArrowRight, BookOpen, FileText, FlaskConical, GraduationCap, Heart, ListChecks, Lock, MessageSquareText,
-  Microscope, Phone, Pill, ShieldAlert, AlignLeft, Stethoscope, Users,
+  Microscope, Phone, Pill, ShieldAlert, ShieldPlus, AlignLeft, Stethoscope, Users,
 } from 'lucide-react';
 import { ASK_HREF, audienceOf, type Audience } from '@/components/layout/nav';
 import { useRole } from '@/features/settings/role-store';
@@ -143,6 +143,23 @@ export function HomeView() {
           );
         })}
       </section>
+
+      {audience === 'patient' && (
+        <Link href="/prevention" className="group relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-line bg-ink-900 p-6 shadow-panel transition hover:-translate-y-0.5 hover:shadow-soft sm:flex-row sm:items-center">
+          <span aria-hidden className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-brand/15 blur-2xl" />
+          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-navy text-cyan-brand">
+            <ShieldPlus className="h-7 w-7" />
+          </span>
+          <span className="relative min-w-0 flex-1">
+            <span className="block text-[12px] font-semibold uppercase tracking-wider text-cyan">ახალი · 2 წუთში</span>
+            <span className="mt-1 block text-[19px] font-bold leading-snug text-fg">ჩემი პრევენციის გეგმა</span>
+            <span className="mt-1 block text-[13.5px] leading-relaxed text-slate-400">რა კვლევა და ვაქცინა გჭირდებათ, როდის და რატომ — და რაზე არ ღირს ფულის დახარჯვა.</span>
+          </span>
+          <span className="relative inline-flex shrink-0 items-center gap-1.5 self-start rounded-full bg-cyan-brand px-5 py-3 text-sm font-medium text-white transition group-hover:bg-cyan-deep sm:self-center">
+            დაწყება <ArrowRight className="h-4 w-4" />
+          </span>
+        </Link>
+      )}
 
       {audience === 'patient' && (
         <section className="flex flex-col gap-3 rounded-2xl border border-line border-l-4 border-l-clinical-critical bg-ink-900 p-4 sm:flex-row sm:items-center">

@@ -188,6 +188,27 @@ body {
   }
 }
 
+/* Prevention module — decorative motion. Disabled for reduced-motion users. */
+.prev-pulse {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: prev-draw 3.2s ease-in-out infinite;
+}
+@keyframes prev-draw {
+  0% { stroke-dashoffset: 900; opacity: 0.2; }
+  45% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -900; opacity: 0.2; }
+}
+.prev-float { animation: prev-float 7s ease-in-out infinite; }
+.prev-float-slow { animation: prev-float 11s ease-in-out infinite reverse; }
+@keyframes prev-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prev-pulse, .prev-float, .prev-float-slow, .animate-fade-up { animation: none !important; stroke-dashoffset: 0; }
+}
+
 @media print {
   body {
     background: #fff;

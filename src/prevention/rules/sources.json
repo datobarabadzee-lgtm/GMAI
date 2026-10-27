@@ -1,0 +1,386 @@
+{
+  "uspstf_bp_2021": {
+    "org": "USPSTF",
+    "title": "Hypertension in Adults: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening",
+    "grade": "A"
+  },
+  "uspstf_dm_2021": {
+    "org": "USPSTF",
+    "title": "Prediabetes and Type 2 Diabetes: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes",
+    "grade": "B"
+  },
+  "uspstf_crc_2021": {
+    "org": "USPSTF",
+    "title": "Colorectal Cancer: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening",
+    "grade": "A (50–75), B (45–49), C (76–85)"
+  },
+  "uspstf_breast_2024": {
+    "org": "USPSTF",
+    "title": "Breast Cancer: Screening",
+    "year": 2024,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening",
+    "grade": "B"
+  },
+  "uspstf_cervical_2018": {
+    "org": "USPSTF",
+    "title": "Cervical Cancer: Screening",
+    "year": 2018,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening",
+    "grade": "A"
+  },
+  "who_cervical_2021": {
+    "org": "WHO",
+    "title": "WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, 2nd ed.",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240030824"
+  },
+  "uspstf_lung_2021": {
+    "org": "USPSTF",
+    "title": "Lung Cancer: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+    "grade": "B"
+  },
+  "uspstf_aaa_2019": {
+    "org": "USPSTF",
+    "title": "Abdominal Aortic Aneurysm: Screening",
+    "year": 2019,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/abdominal-aortic-aneurysm-screening",
+    "grade": "B"
+  },
+  "uspstf_osteo_2025": {
+    "org": "USPSTF",
+    "title": "Osteoporosis to Prevent Fractures: Screening",
+    "year": 2025,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+    "grade": "B"
+  },
+  "uspstf_hcv_2020": {
+    "org": "USPSTF",
+    "title": "Hepatitis C Virus Infection in Adolescents and Adults: Screening",
+    "year": 2020,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hepatitis-c-screening",
+    "grade": "B"
+  },
+  "uspstf_hiv_2019": {
+    "org": "USPSTF",
+    "title": "Human Immunodeficiency Virus (HIV) Infection: Screening",
+    "year": 2019,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/human-immunodeficiency-virus-hiv-infection-screening",
+    "grade": "A"
+  },
+  "cdc_hbv_2023": {
+    "org": "CDC",
+    "title": "Screening and Testing for Hepatitis B Virus Infection: CDC Recommendations — United States, 2023",
+    "year": 2023,
+    "url": "https://www.cdc.gov/mmwr/volumes/72/rr/rr7201a1.htm"
+  },
+  "uspstf_brca_2019": {
+    "org": "USPSTF",
+    "title": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+    "year": 2019,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing",
+    "grade": "B"
+  },
+  "uspstf_psa_2018": {
+    "org": "USPSTF",
+    "title": "Prostate Cancer: Screening",
+    "year": 2018,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/prostate-cancer-screening",
+    "grade": "C (55–69), D (≥70)"
+  },
+  "uspstf_depression_2023": {
+    "org": "USPSTF",
+    "title": "Depression and Suicide Risk in Adults: Screening",
+    "year": 2023,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-depression-suicide-risk-adults",
+    "grade": "B"
+  },
+  "uspstf_alcohol_2018": {
+    "org": "USPSTF",
+    "title": "Unhealthy Alcohol Use in Adolescents and Adults: Screening and Behavioral Counseling Interventions",
+    "year": 2018,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/unhealthy-alcohol-use-in-adolescents-and-adults-screening-and-behavioral-counseling-interventions",
+    "grade": "B"
+  },
+  "uspstf_tobacco_2021": {
+    "org": "USPSTF",
+    "title": "Tobacco Smoking Cessation in Adults, Including Pregnant Persons: Interventions",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+    "grade": "A"
+  },
+  "esc_prev_2021": {
+    "org": "ESC",
+    "title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34458905/"
+  },
+  "score2_2021": {
+    "org": "ESC · SCORE2",
+    "title": "SCORE2 risk prediction algorithms: new models to estimate 10-year risk of cardiovascular disease in Europe",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34120177/"
+  },
+  "score2op_2021": {
+    "org": "ESC · SCORE2-OP",
+    "title": "SCORE2-OP risk prediction algorithms: estimating incident cardiovascular event risk in older persons in four geographical risk regions",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34120185/"
+  },
+  "esc_htn_2024": {
+    "org": "ESC",
+    "title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "year": 2024,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39210715/"
+  },
+  "findrisc": {
+    "org": "FINDRISC · CTFPHC",
+    "title": "FINDRISC — Type 2 Diabetes Risk Calculator",
+    "year": 2012,
+    "url": "https://canadiantaskforce.ca/wp-content/uploads/2016/08/2012-type-2-diabetes-clinician-findrisc-en.pdf"
+  },
+  "ada_2025": {
+    "org": "ADA",
+    "title": "Standards of Care in Diabetes — 2025: Diagnosis and Classification of Diabetes",
+    "year": 2025,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39651986/"
+  },
+  "who_obesity": {
+    "org": "WHO",
+    "title": "Obesity and overweight — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+  },
+  "who_waist_2008": {
+    "org": "WHO",
+    "title": "Waist circumference and waist–hip ratio: report of a WHO expert consultation (current edition)",
+    "year": 2008,
+    "url": "https://www.who.int/publications/i/item/9789241501491"
+  },
+  "who_flu_2022": {
+    "org": "WHO",
+    "title": "Vaccines against influenza: WHO position paper — May 2022",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/who-wer9719"
+  },
+  "who_tetanus_2017": {
+    "org": "WHO",
+    "title": "Tetanus vaccines: WHO position paper — February 2017 (current edition)",
+    "year": 2017,
+    "url": "https://www.who.int/publications/i/item/who-wer9206"
+  },
+  "cdc_adult_2025": {
+    "org": "CDC",
+    "title": "Adult Immunization Schedule by Age — United States, 2025",
+    "year": 2025,
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html"
+  },
+  "who_hpv_2022": {
+    "org": "WHO",
+    "title": "Human papillomavirus vaccines: WHO position paper (2022 update)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/who-wer9750-645-672"
+  },
+  "who_hepb_2017": {
+    "org": "WHO",
+    "title": "Hepatitis B vaccines: WHO position paper — July 2017 (current edition)",
+    "year": 2017,
+    "url": "https://www.who.int/publications/i/item/WER9227"
+  },
+  "who_measles_2017": {
+    "org": "WHO",
+    "title": "Measles vaccines: WHO position paper — April 2017 (current edition)",
+    "year": 2017,
+    "url": "https://www.who.int/publications/i/item/who-wer9217"
+  },
+  "ncdc_ge": {
+    "org": "NCDC Georgia",
+    "title": "საქართველოს დაავადებათა კონტროლისა და საზოგადოებრივი ჯანმრთელობის ეროვნული ცენტრი — იმუნიზაციის ეროვნული კალენდარი",
+    "year": 2026,
+    "url": "https://www.ncdc.ge/"
+  },
+  "uspstf_folic_2023": {
+    "org": "USPSTF",
+    "title": "Folic Acid Supplementation to Prevent Neural Tube Defects: Preventive Medication",
+    "year": 2023,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/folic-acid-for-the-prevention-of-neural-tube-defects-preventive-medication",
+    "grade": "A"
+  },
+  "who_folic_2016": {
+    "org": "WHO",
+    "title": "WHO recommendations on antenatal care for a positive pregnancy experience (current edition)",
+    "year": 2016,
+    "url": "https://www.who.int/publications/i/item/9789241549912"
+  },
+  "acog_prepreg_2019": {
+    "org": "ACOG",
+    "title": "Prepregnancy Counseling — Committee Opinion No. 762",
+    "year": 2019,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/01/prepregnancy-counseling"
+  },
+  "acog_age_2022": {
+    "org": "ACOG / ASRM",
+    "title": "Female Age-Related Fertility Decline — Committee Opinion No. 589 (reaffirmed)",
+    "year": 2022,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2014/03/female-age-related-fertility-decline"
+  },
+  "asrm_infertility_2020": {
+    "org": "ASRM",
+    "title": "Definitions of infertility and recurrent pregnancy loss: a committee opinion",
+    "year": 2020,
+    "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/definitions-of-infertility-and-recurrent-pregnancy-loss-a-committee-opinion-2020/"
+  },
+  "ata_pregnancy_2017": {
+    "org": "ATA",
+    "title": "2017 Guidelines of the American Thyroid Association for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28056690/"
+  },
+  "uspstf_ecg_2018": {
+    "org": "USPSTF",
+    "title": "Cardiovascular Disease Risk: Screening With Electrocardiography",
+    "year": 2018,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cardiovascular-disease-risk-screening-with-electrocardiography",
+    "grade": "D (low risk)"
+  },
+  "uspstf_vitd_2021": {
+    "org": "USPSTF",
+    "title": "Vitamin D Deficiency in Adults: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-d-deficiency-screening",
+    "grade": "I"
+  },
+  "endo_vitd_2024": {
+    "org": "Endocrine Society",
+    "title": "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline",
+    "year": 2024,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38828931/"
+  },
+  "uspstf_vitamins_2022": {
+    "org": "USPSTF",
+    "title": "Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer: Preventive Medication",
+    "year": 2022,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication",
+    "grade": "I / D (beta-carotene, vitamin E)"
+  },
+  "uspstf_ovarian_2018": {
+    "org": "USPSTF",
+    "title": "Ovarian Cancer: Screening",
+    "year": 2018,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/ovarian-cancer-screening",
+    "grade": "D"
+  },
+  "uspstf_thyroid_2017": {
+    "org": "USPSTF",
+    "title": "Thyroid Cancer: Screening",
+    "year": 2017,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/thyroid-cancer-screening",
+    "grade": "D"
+  },
+  "uspstf_carotid_2021": {
+    "org": "USPSTF",
+    "title": "Carotid Artery Stenosis: Screening",
+    "year": 2021,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/carotid-artery-stenosis-screening",
+    "grade": "D"
+  },
+  "uspstf_aspirin_2022": {
+    "org": "USPSTF",
+    "title": "Aspirin Use to Prevent Cardiovascular Disease: Preventive Medication",
+    "year": 2022,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+    "grade": "D (≥60), C (40–59)"
+  },
+  "fda_wholebody_ct": {
+    "org": "FDA",
+    "title": "Full-Body CT Scans — What You Need to Know",
+    "year": 2023,
+    "url": "https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/full-body-ct-scans-what-you-need-know"
+  },
+  "acr_wholebody": {
+    "org": "ACR",
+    "title": "ACR Statement on Screening Total Body CT and MRI (current position)",
+    "year": 2023,
+    "url": "https://www.acr.org/News-and-Publications/Media-Center/2023/ACR-Statement-on-Screening-Total-Body-MRI"
+  },
+  "cw_sgim": {
+    "org": "Choosing Wisely / SGIM",
+    "title": "Society of General Internal Medicine — Five Things Physicians and Patients Should Question (routine labs in asymptomatic adults)",
+    "year": 2017,
+    "url": "https://www.choosingwisely.org/societies/society-of-general-internal-medicine/"
+  },
+  "who_activity_2020": {
+    "org": "WHO",
+    "title": "WHO guidelines on physical activity and sedentary behaviour",
+    "year": 2020,
+    "url": "https://www.who.int/publications/i/item/9789240015128"
+  },
+  "who_salt": {
+    "org": "WHO",
+    "title": "Sodium reduction — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/salt-reduction"
+  },
+  "cdc_dpp": {
+    "org": "CDC",
+    "title": "National Diabetes Prevention Program",
+    "year": 2024,
+    "url": "https://www.cdc.gov/diabetes-prevention/index.html"
+  },
+  "who_tobacco": {
+    "org": "WHO",
+    "title": "Tobacco — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+  },
+  "who_alcohol": {
+    "org": "WHO",
+    "title": "Alcohol — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/alcohol"
+  },
+  "uspstf_falls_2024": {
+    "org": "USPSTF",
+    "title": "Falls Prevention in Community-Dwelling Older Adults: Interventions",
+    "year": 2024,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions",
+    "grade": "B"
+  },
+  "aha_stroke_fast": {
+    "org": "American Stroke Association",
+    "title": "Stroke Symptoms — BE FAST",
+    "year": 2024,
+    "url": "https://www.stroke.org/en/about-stroke/stroke-symptoms"
+  },
+  "aha_mi": {
+    "org": "American Heart Association",
+    "title": "Warning Signs of a Heart Attack",
+    "year": 2024,
+    "url": "https://www.heart.org/en/health-topics/heart-attack/warning-signs-of-a-heart-attack"
+  },
+  "cdc_sepsis": {
+    "org": "CDC",
+    "title": "About Sepsis — signs and symptoms",
+    "year": 2024,
+    "url": "https://www.cdc.gov/sepsis/about/index.html"
+  },
+  "ada_hypo_2025": {
+    "org": "ADA",
+    "title": "Standards of Care in Diabetes — 2025: Glycemic Goals and Hypoglycemia",
+    "year": 2025,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39651981/"
+  },
+  "nice_ng12": {
+    "org": "NICE",
+    "title": "Suspected cancer: recognition and referral (NG12)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng12"
+  }
+}
