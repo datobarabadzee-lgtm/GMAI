@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils';
 import { BAND_COLOR, Gauge, ICONS, LeverBars, PulseLine, ScaleBar, StatusRing } from './visuals';
 import { downloadBlob, planSections, planText } from './export';
 import { CalendarView } from './calendar-view';
-import { FindriscSimulator, Score2Simulator } from './simulator';
+import { SimulatorHub } from './simulator-hub';
 import { localToday, type ReminderLead } from '@/prevention/schedule';
 
 type Plan = Extract<PreventionPlan, { kind: 'PLAN' }>;
@@ -548,22 +548,8 @@ export function PlanView({
       </div>
 
       <div className="space-y-5">
-        <SectionHead id="simulator" icon={SlidersHorizontal} eyebrow="რისკის სიმულატორი" title="რა მოხდება, თუ…?" sub="გადაწიეთ სლაიდერები და ნახეთ, როგორ იცვლება თქვენი ინფარქტის, ინსულტის და დიაბეტის რისკი. გათვლა — იგივე ოფიციალური მოდელებით (SCORE2, FINDRISC)." />
-        {plan.ageYears >= 40 && plan.ageYears <= 89 && !(input.conditions ?? []).some((c) => c === 'diabetes' || c === 'cvd' || c === 'ckd') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' ? (
-          <Score2Simulator input={input} age={plan.ageYears} />
-        ) : (
-          <p className="panel p-5 text-[13.5px] leading-relaxed text-slate-300">
-            გულის რისკის სიმულატორი (SCORE2) 40–89 წლის ასაკისთვისაა და არ გამოიყენება დიაბეტის, გულ-სისხლძარღვთა ან თირკმლის ქრონიკული დაავადებისას — ასეთ დროს რისკს ექიმი აფასებს.
-          </p>
-        )}
-        {!(input.conditions ?? []).includes('diabetes') && plan.risks.find((r) => r.id === 'glycaemia')?.band !== 'high' &&
-          (input.heightCm ? (
-            <FindriscSimulator input={input} age={plan.ageYears} />
-          ) : (
-            <button type="button" onClick={onEdit} className="panel w-full p-5 text-left text-[13.5px] text-slate-300 transition hover:border-cyan/50">
-              დიაბეტის რისკის სიმულატორისთვის შეიყვანეთ <b className="text-fg">სიმაღლე და წონა</b> → მონაცემების შეცვლა
-            </button>
-          ))}
+        <SectionHead id="simulator" icon={SlidersHorizontal} eyebrow="რისკის სიმულატორი" title="რა მოხდება, თუ…?" sub="7 სიმულატორი: გული, დიაბეტი, ფილტვის კიბო, ჰიპერტენზია, ოსტეოპოროზი, ალკოჰოლი და მოწევის შეწყვეტა. ყოველი — ოფიციალური, გამოქვეყნებული მოდელით." />
+        <SimulatorHub initial={{ age: plan.ageYears, sex: plan.sex, heightCm: input.heightCm, weightKg: input.weightKg }} extra={input} />
       </div>
 
       <Screening plan={plan} input={input} onDone={onDone} />
