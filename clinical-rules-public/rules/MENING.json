@@ -1,0 +1,797 @@
+[
+ {
+  "rule_id": "PUB-MENING-001",
+  "cluster": "MENING",
+  "topics": [
+   97
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ზრდასრულში ბაქტერიული მენინგიტის კლინიკური ეჭვი",
+  "recommendation_ka": "კლასიკური ტრიადა (ცხელება, კისრის რიგიდობა, ცნობიერების ცვლილება) არის ზრდასრულთა მხოლოდ 44%-ში, ამიტომ მისი არარსებობა მენინგიტს არ გამორიცხავს. პაციენტთა 95%-ს აქვს ოთხიდან მინიმუმ ორი ნიშანი: თავის ტკივილი, ცხელება, კისრის რიგიდობა, ცნობიერების დარღვევა. ასეთ კომბინაციაზე დაიწყეთ გამოკვლევა მენინგიტზე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 44,
+    "unit": "%",
+    "meaning_ka": "კლასიკური ტრიადის სიხშირე ზრდასრულებში"
+   },
+   {
+    "value": 95,
+    "unit": "%",
+    "meaning_ka": "ოთხიდან მინიმუმ ორი ნიშნის სიხშირე"
+   }
+  ],
+  "red_flags_ka": [
+   "ცნობიერების დაქვეითება",
+   "კეროვანი ნევროლოგიური დეფიციტი",
+   "პეტექიური/პურპურული გამონაყარი"
+  ],
+  "sources": [
+   {
+    "org": "AAFP (summary of NEJM cohort, van de Beek 2004)",
+    "title": "Bacterial meningitis: classic triad often absent",
+    "year": 2005,
+    "url": "https://www.aafp.org/pubs/afp/issues/2005/0915/p1113a.html",
+    "type": "study_summary",
+    "supports": "Summary of the cohort that remains the current reference for adult presentation data. Summary of the prospective Dutch cohort of 696 adults (NEJM 2004), which remains the current reference dataset: classic triad present in only 44%; 95% had at least two of headache, neck stiffness, fever and altered mental status; lumbar puncture mandatory in any suspected case."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-002",
+  "cluster": "MENING",
+  "topics": [
+   97
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ბაქტერიული მენინგიტის ეჭვი, ლუმბალური პუნქციის დაგეგმვა",
+  "recommendation_ka": "ლუმბალური პუნქცია ჩაატარეთ ანტიბიოტიკის დაწყებამდე, თუ ეს უსაფრთხოა და კლინიკურად მნიშვნელოვნად არ აყოვნებს მკურნალობას; სისხლის კულტურა აიღეთ დაუყოვნებლივ. თუ პუნქცია გადაიდო, ანტიბიოტიკი დაიწყეთ მის მოლოდინში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Perform the lumbar puncture before starting antibiotics, unless it is not safe to do so or it will cause a clinically significant delay to starting antibiotics."
+   },
+   {
+    "org": "AAFP (summary of peer-reviewed literature)",
+    "title": "Management of bacterial meningitis: new guidelines from the IDSA",
+    "year": 2005,
+    "url": "https://www.aafp.org/pubs/afp/issues/2005/0515/p2003.html",
+    "type": "guideline_summary",
+    "supports": "Summary of the current edition of the IDSA guideline. IDSA: blood samples should be obtained immediately and appropriate empiric therapy administered even if LP is delayed for CT."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-003",
+  "cluster": "MENING",
+  "topics": [
+   97
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ბაქტერიული მენინგიტის ეჭვი — ლუმბალური პუნქციის უკუჩვენებები",
+  "recommendation_ka": "ლუმბალური პუნქცია არ ჩაატაროთ, სანამ არ მოგვარდება: გლაზგოს კომის შკალა 9 ქულა ან ნაკლები, ცნობიერების პროგრესირებადი ან სწრაფი დაქვეითება, გუგების პათოლოგიური რეაქცია და სხვა სიცოცხლისთვის საშიში მდგომარეობები (შოკი, მძიმე კოაგულოპათია). ანტიბიოტიკს ამ დროს არ დააყოვნოთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 9,
+    "unit": "score",
+    "meaning_ka": "გლაზგოს კომის შკალის ზღვარი, რომლის დროსაც პუნქცია გადაიდება"
+   }
+  ],
+  "red_flags_ka": [
+   "GCS-ის დაქვეითება",
+   "გუგების ასიმეტრია ან რეაქციის დარღვევა",
+   "კეროვანი ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Do not perform a lumbar puncture until factors such as abnormal pupillary reactions or a GCS score of 9 or less, or a progressive and sustained or rapid fall in level of consciousness, have been resolved."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-004",
+  "cluster": "MENING",
+  "topics": [
+   97
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ბაქტერიული მენინგიტის ეჭვი — თავის კტ-ის საჭიროება პუნქციამდე",
+  "recommendation_ka": "IDSA-ს (აშშ) მიხედვით, პუნქციამდე თავის კტ ნაჩვენებია: იმუნოკომპრომისის, ბოლო 1 კვირაში კრუნჩხვის (ზრდასრულებში), პაპილედემის, კეროვანი ნევროლოგიური დეფიციტის ან ცნობიერების დარღვევისას. NICE (გაერთიანებული სამეფო) პუნქციის გადადებას უფრო კლინიკური კრიტერიუმებით (GCS, გუგები) განსაზღვრავს — მიდგომები განსხვავდება. ორივე შემთხვევაში სისხლის კულტურა და ემპირიული ანტიბიოტიკი კტ-ს არ ელოდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "კრუნჩხვის დროის ფანჯარა პუნქციამდე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice guidelines for the management of bacterial meningitis (Tunkel et al., Clin Infect Dis 39:1267–84)",
+    "year": 2004,
+    "url": "https://academic.oup.com/cid/article/39/9/1267/402080",
+    "type": "guideline",
+    "supports": "Current edition of the IDSA bacterial meningitis guideline: CT before LP in at-risk patients; empirical therapy must not be delayed by imaging."
+   },
+   {
+    "org": "AAFP (summary of peer-reviewed literature)",
+    "title": "Management of bacterial meningitis: new guidelines from the IDSA",
+    "year": 2005,
+    "url": "https://www.aafp.org/pubs/afp/issues/2005/0515/p2003.html",
+    "type": "guideline_summary",
+    "supports": "Summary of the current edition of the IDSA guideline. At-risk patients (immunocompromised, seizure within the previous week [adults only], papilledema, specific neurologic abnormality) should have CT before LP (B-II); blood cultures and empiric antibiotics should not wait."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "NICE lists clinical factors (GCS ≤9, falling consciousness, abnormal pupils) that require stabilisation before lumbar puncture."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-005",
+  "cluster": "MENING",
+  "topics": [
+   99
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ზრდასრულის სავარაუდო ან დადასტურებული ბაქტერიული მენინგიტი, გამომწვევი უცნობია",
+  "recommendation_ka": "დაუყოვნებლივ დაიწყეთ ინტრავენური ცეფტრიაქსონი (ან ცეფოტაქსიმი) მაღალი, მენინგეალური დოზით — ცეფტრიაქსონი 2 გ ყოველ 12 საათში. ლისტერიის რისკ-ფაქტორებისას (ხანდაზმული ასაკი, ორსულობა, იმუნოსუპრესია, ალკოჰოლიზმი) დაამატეთ ამპიცილინი ან ამოქსიცილინი; ასაკობრივი ზღვარი გაიდლაინებში განსხვავდება (აშშ-ის და ევროპული წყაროები).",
+  "doses": [
+   {
+    "drug": "ceftriaxone",
+    "amount": 2,
+    "unit": "g",
+    "route": "IV",
+    "frequency": "every 12 h",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "h",
+    "meaning_ka": "ცეფტრიაქსონის დოზირების ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [
+   "სეპტიური შოკი",
+   "სწრაფად გავრცელებადი პურპურა"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO launches first-ever guidelines on meningitis diagnosis, treatment and care (news release)",
+    "year": 2025,
+    "url": "https://www.who.int/news/item/10-04-2025-who-launches-first-ever-guidelines-on-meningitis-diagnosis--treatment-and-care",
+    "type": "news_release",
+    "supports": "WHO recommends intravenous ceftriaxone or cefotaxime as empiric treatment in children and adults with suspected or probable acute bacterial meningitis, with ampicillin or amoxicillin added when there are risk factors for Listeria monocytogenes."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Give ceftriaxone using the highest doses recommended by the BNF/BNFC (or local guidance); NHS board CNS-infection guidance retrieved during research specifies ceftriaxone 2 g IV twice daily as first line for adults."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-006",
+  "cluster": "MENING",
+  "topics": [
+   99
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ბაქტერიული მენინგიტი პენიცილინ-რეზისტენტული პნევმოკოკის რისკით",
+  "recommendation_ka": "IDSA (აშშ) ემპირიულად რეკომენდაციას უწევს ვანკომიცინის დამატებას მესამე თაობის ცეფალოსპორინზე. ევროპულ და ბრიტანულ პრაქტიკაში ვანკომიცინი ემატება მხოლოდ მაშინ, როცა რეზისტენტული პნევმოკოკის რისკი არსებობს (ადგილობრივი რეზისტენტობა, ბოლოდროინდელი მოგზაურობა) — შეარჩიეთ ადგილობრივი ანტიბიოგრამის მიხედვით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice guidelines for the management of bacterial meningitis (Tunkel et al., Clin Infect Dis 39:1267–84)",
+    "year": 2004,
+    "url": "https://academic.oup.com/cid/article/39/9/1267/402080",
+    "type": "guideline",
+    "supports": "Current edition: empiric regimen chosen by age and predisposing condition; vancomycin plus a third-generation cephalosporin where penicillin-resistant pneumococci are a concern."
+   },
+   {
+    "org": "AAFP (summary of peer-reviewed literature)",
+    "title": "Management of bacterial meningitis: new guidelines from the IDSA",
+    "year": 2005,
+    "url": "https://www.aafp.org/pubs/afp/issues/2005/0515/p2003.html",
+    "type": "guideline_summary",
+    "supports": "Summary of the current edition of the IDSA guideline. Choice of empiric agents depends on age and predisposing conditions and should account for local resistance patterns."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "NICE advises ceftriaxone with reference to local antimicrobial guidance."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-007",
+  "cluster": "MENING",
+  "topics": [
+   99,
+   97
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ზრდასრულის ძლიერად სავარაუდო ან დადასტურებული ბაქტერიული მენინგიტი",
+  "recommendation_ka": "დექსამეთაზონი 10 მგ ი/ვ ყოველ 6 საათში, 4 დღის განმავლობაში; პირველი დოზა მიეცით ანტიბიოტიკის პირველ დოზამდე ცოტა ხნით ადრე ან მასთან ერთად. WHO განსაკუთრებით ხაზს უსვამს სავარაუდო პნევმოკოკურ მენინგიტს; მენინგოკოკური სეფსისის/სეპტიური შოკის დროს ბრიტანული წყაროები დექსამეთაზონს არ გვთავაზობენ — ეს განსხვავება გაითვალისწინეთ.",
+  "doses": [
+   {
+    "drug": "dexamethasone",
+    "amount": 10,
+    "unit": "mg",
+    "route": "IV",
+    "frequency": "every 6 h for 4 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დოზირების ინტერვალი"
+   },
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESCMID",
+    "title": "ESCMID guideline: diagnosis and treatment of acute bacterial meningitis (van de Beek et al., Clin Microbiol Infect 22 Suppl 3:S37–62)",
+    "year": 2016,
+    "url": "https://www.doi.org/10.1016/j.cmi.2016.01.007",
+    "type": "guideline",
+    "supports": "Current edition of the ESCMID guideline: adjunctive dexamethasone 10 mg every 6 hours for 4 days in adults, started with or just before the first antibiotic dose."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "For people over 3 months with strongly suspected or confirmed bacterial meningitis, give intravenous dexamethasone (off-label)."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO launches first-ever guidelines on meningitis diagnosis, treatment and care (news release)",
+    "year": 2025,
+    "url": "https://www.who.int/news/item/10-04-2025-who-launches-first-ever-guidelines-on-meningitis-diagnosis--treatment-and-care",
+    "type": "news_release",
+    "supports": "For suspected or probable pneumococcal meningitis, intravenous corticosteroids (e.g. dexamethasone) should be initiated with the first dose of antibiotics."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-008",
+  "cluster": "MENING",
+  "topics": [
+   99
+  ],
+  "rule_type": "monitoring",
+  "population": "adult",
+  "condition_ka": "ბაქტერიული მენინგიტის მკურნალობის შემდეგ — ზრდასრული",
+  "recommendation_ka": "გაწერამდე ჩაატარეთ ფორმალური აუდიოლოგიური შეფასება; თუ ვერ ხერხდება — 4 კვირის განმავლობაში. მძიმე სმენის დაქვეითებისას სასწრაფოდ მიმართეთ კოხლეარული იმპლანტაციისთვის, რადგან იგი სრულად ეფექტურია მხოლოდ დაავადებიდან 6 თვის განმავლობაში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "აუდიოლოგიური შეფასების ვადა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "კოხლეარული იმპლანტის ეფექტურობის ფანჯარა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO guidelines on meningitis diagnosis, treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240108042",
+    "type": "guideline",
+    "supports": "Formal audiological screening should be conducted before discharge for children and adults with acute meningitis, or within four weeks if not possible."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease (QS19) — Quality statement 4: Audiological assessment",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/qs19/chapter/Quality-statement-4-Audiological-assessment",
+    "type": "quality_standard",
+    "supports": "Audiological assessment within 4 weeks of being well enough for testing, ideally before discharge, so urgent cochlear implant referral can be made; implants are only fully effective if fitted within 6 months of illness onset."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-009",
+  "cluster": "MENING",
+  "topics": [
+   98
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ბაქტერიული მენინგიტის პათოგენეზი",
+  "recommendation_ka": "ტიპური გზა: ცხვირ-ხახის კოლონიზაცია → ბაქტერიემია → ჰემატოენცეფალური ბარიერის და სისხლძარღვოვანი წნულის გადალახვა → სუბარაქნოიდული ანთება. ბარიერის განვლადობის მატება და ციტოკინური ანთება იწვევს ტვინის შეშუპებას, ინტრაკრანიული წნევის მატებას და ვასკულურ ოკლუზიას; ეს ხსნის კრუნჩხვებს, ინსულტს და სმენის დაკარგვას და ადრეული ანტიბიოტიკის და დექსამეთაზონის საჭიროებას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Front Cell Infect Microbiol (peer-reviewed review)",
+    "title": "Blood–brain barrier integrity damage in bacterial meningitis: the underlying link, mechanisms, and therapeutic targets",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9918147/",
+    "type": "review",
+    "supports": "Increased BBB permeability is a defining feature; disruption results from bacterial virulence factors and host inflammatory pathways; cytokines and free radicals increase permeability, raise intracranial pressure and may lead to vascular occlusion."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-010",
+  "cluster": "MENING",
+  "topics": [
+   98
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "კომპლემენტის ინჰიბიტორით (ეკულიზუმაბი, რავულიზუმაბი) მკურნალობა",
+  "recommendation_ka": "მენინგოკოკური დაავადების რისკი დაახლოებით 2000-ჯერ მაღალია. მკურნალობამდე ჩაატარეთ MenACWY და MenB ვაქცინაცია და შემდგომი რევაქცინაცია; ვაქცინა სრულ დაცვას არ იძლევა, ამიტომ განიხილეთ ანტიმიკრობული პროფილაქტიკა და პაციენტს აუხსენით, რომ ცხელებისას დაუყოვნებლივ მიმართოს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2000,
+    "unit": "ratio",
+    "meaning_ka": "მენინგოკოკური დაავადების რისკის ზრდა ჯანმრთელებთან შედარებით"
+   }
+  ],
+  "red_flags_ka": [
+   "ცხელება კომპლემენტის ინჰიბიტორის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Meningococcal disease — clinical guidance for patients receiving complement inhibitors",
+    "year": 2024,
+    "url": "https://www.cdc.gov/meningococcal/hcp/clinical-guidance/complement-inhibitor.html",
+    "type": "guidance",
+    "supports": "Risk of meningococcal disease is up to 2,000 times greater with complement inhibitors; vaccination recommended but incomplete protection; providers could consider antimicrobial prophylaxis."
+   },
+   {
+    "org": "CDC/ACIP",
+    "title": "Meningococcal vaccination: recommendations of the ACIP, United States, 2020 (MMWR Recomm Rep 69(9))",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7527029/",
+    "type": "guideline",
+    "supports": "MenACWY and MenB recommended for persons at increased risk including complement inhibitor recipients; boosters while risk persists."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-011",
+  "cluster": "MENING",
+  "topics": [
+   98
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ანატომიური ან ფუნქციური ასპლენია",
+  "recommendation_ka": "ასპლენიის მქონე პირებში ჩაატარეთ MenACWY ვაქცინაცია 2 თვის ასაკიდან და MenB ვაქცინაცია 10 წლის ასაკიდან, რევაქცინაციით, სანამ რისკი რჩება; ასევე უზრუნველყავით პნევმოკოკური ვაქცინაცია ეროვნული კალენდრის მიხედვით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_months",
+    "meaning_ka": "MenACWY ვაქცინაციის მინიმალური ასაკი"
+   },
+   {
+    "value": 10,
+    "unit": "age_years",
+    "meaning_ka": "MenB ვაქცინაციის მინიმალური ასაკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC/ACIP",
+    "title": "Meningococcal vaccination: recommendations of the ACIP, United States, 2020 (MMWR Recomm Rep 69(9))",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7527029/",
+    "type": "guideline",
+    "supports": "ACIP 2020: routine MenACWY for persons aged ≥2 months at increased risk (incl. asplenia, complement deficiency/inhibitor use); MenB series for persons aged ≥10 years at increased risk; booster doses for those who remain at risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-012",
+  "cluster": "MENING",
+  "topics": [
+   98,
+   99
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "ზრდასრულთა თემშეძენილი ბაქტერიული მენინგიტის გამომწვევები",
+  "recommendation_ka": "განვითარებულ ქვეყნებში ზრდასრულთა თემშეძენილი მენინგიტის უმთავრესი გამომწვევია Streptococcus pneumoniae (დაახლოებით ორი მესამედი შემთხვევისა), შემდეგ Neisseria meningitidis; ხანდაზმულებში და იმუნოკომპრომისულებში — Listeria monocytogenes. პნევმოკოკური მენინგიტი უფრო ცუდ გამოსავალთან ასოცირდება, ვიდრე მენინგოკოკური.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Front Cell Infect Microbiol (peer-reviewed review)",
+    "title": "Blood–brain barrier integrity damage in bacterial meningitis: the underlying link, mechanisms, and therapeutic targets",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9918147/",
+    "type": "review",
+    "supports": "Review of bacterial meningitis pathogenesis describing nasopharyngeal colonisation, bacteraemia and BBB traversal by S. pneumoniae and N. meningitidis."
+   },
+   {
+    "org": "AAFP (summary of NEJM cohort, van de Beek 2004)",
+    "title": "Bacterial meningitis: classic triad often absent",
+    "year": 2005,
+    "url": "https://www.aafp.org/pubs/afp/issues/2005/0915/p1113a.html",
+    "type": "study_summary",
+    "supports": "Summary of the cohort that remains the current reference for adult presentation data. In the adult cohort, infection with S. pneumoniae carried a much higher risk of unfavourable outcome than N. meningitidis."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO launches first-ever guidelines on meningitis diagnosis, treatment and care (news release)",
+    "year": 2025,
+    "url": "https://www.who.int/news/item/10-04-2025-who-launches-first-ever-guidelines-on-meningitis-diagnosis--treatment-and-care",
+    "type": "news_release",
+    "supports": "Empiric therapy adds ampicillin/amoxicillin when risk factors for Listeria monocytogenes are present."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-013",
+  "cluster": "MENING",
+  "topics": [
+   41
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვთა ბაქტერიული მენინგიტის ნევროლოგიური გართულებები",
+  "recommendation_ka": "ადრეული გართულებებია სუბდურული გამონაჟონი, კრუნჩხვები, ინტრაკრანიული წნევის მატება; გვიანი — სმენის დაქვეითება, ეპილეფსია, კოგნიტური დარღვევა და ჰიდროცეფალია. რისკს ზრდის ადრეული ასაკი, დაგვიანებული მიმართვა და Streptococcus pneumoniae, როგორც გამომწვევი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ახალი კრუნჩხვა მკურნალობის ფონზე",
+   "თავის გარშემოწერილობის ზრდა ან ყიფლიბანდის დაჭიმულობა",
+   "მუდმივი ცხელება"
+  ],
+  "sources": [
+   {
+    "org": "Microorganisms (MDPI, peer-reviewed review)",
+    "title": "Neurological complications of bacterial meningitis — review (microorganisms-09-00535)",
+    "year": 2021,
+    "url": "https://mdpi-res.com/d_attachment/microorganisms/microorganisms-09-00535/article_deploy/microorganisms-09-00535.pdf",
+    "type": "review",
+    "supports": "Early complications include subdural effusion; later sequelae include hearing loss, seizures, cognitive impairment and hydrocephalus; young age, delayed presentation and S. pneumoniae increase risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-014",
+  "cluster": "MENING",
+  "topics": [
+   41
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "3 თვეზე უფროსი ბავშვის ძლიერად სავარაუდო ან დადასტურებული ბაქტერიული მენინგიტი",
+  "recommendation_ka": "დექსამეთაზონი 0.15 მგ/კგ ი/ვ ყოველ 6 საათში, 4 დღის განმავლობაში, პირველი დოზა ანტიბიოტიკის პირველ დოზამდე ან მასთან ერთად — ამცირებს სმენის დაქვეითებას და მძიმე ნევროლოგიურ გართულებებს (განსაკუთრებით Hib და პნევმოკოკური მენინგიტისას). 28 დღიდან 3 თვემდე ჩვილებში გადაწყვეტილება მიიღეთ ინფექციონისტთან კონსულტაციით; ახალშობილებში არ გამოიყენება.",
+  "doses": [
+   {
+    "drug": "dexamethasone",
+    "amount": 0.15,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "every 6 h for 4 days",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ასაკი, რომლის ზემოთაც დექსამეთაზონი რუტინულად ინიშნება"
+   },
+   {
+    "value": 28,
+    "unit": "age_days",
+    "meaning_ka": "სპეციალისტის კონსულტაციის ასაკობრივი ქვედა ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დოზირების ინტერვალი"
+   },
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Give IV dexamethasone to people over 3 months with strongly suspected or confirmed bacterial meningitis; for babies 28 days to 3 months get infection specialist advice."
+   },
+   {
+    "org": "ESCMID",
+    "title": "ESCMID guideline: diagnosis and treatment of acute bacterial meningitis (van de Beek et al., Clin Microbiol Infect 22 Suppl 3:S37–62)",
+    "year": 2016,
+    "url": "https://www.doi.org/10.1016/j.cmi.2016.01.007",
+    "type": "guideline",
+    "supports": "Current edition of the ESCMID guideline: dexamethasone 0.15 mg/kg every 6 hours for 4 days in children; not recommended in neonates."
+   },
+   {
+    "org": "Microorganisms (MDPI, peer-reviewed review)",
+    "title": "Neurological complications of bacterial meningitis — review (microorganisms-09-00535)",
+    "year": 2021,
+    "url": "https://mdpi-res.com/d_attachment/microorganisms/microorganisms-09-00535/article_deploy/microorganisms-09-00535.pdf",
+    "type": "review",
+    "supports": "Early adjuvant corticosteroids in Hib meningitis reduce the risk of hearing loss and severe neurological complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-015",
+  "cluster": "MENING",
+  "topics": [
+   41,
+   42
+  ],
+  "rule_type": "monitoring",
+  "population": "child",
+  "condition_ka": "ბავშვი მწვავე მენინგიტის შემდეგ (ბაქტერიული ან ვირუსული)",
+  "recommendation_ka": "ფორმალური აუდიოლოგიური შეფასება ჩაატარეთ გაწერამდე, ან არაუგვიანეს 4 კვირისა მას შემდეგ, რაც ბავშვი ტესტირებისთვის საკმარისად კარგად იქნება. მძიმე სმენის დაქვეითებისას დაუყოვნებლივ მიმართეთ კოხლეარული იმპლანტაციისთვის — ეფექტურობის ფანჯარა დაავადებიდან 6 თვეა (კოხლეის ოსიფიკაციის რისკი).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "აუდიოლოგიური შეფასების მაქსიმალური ვადა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "კოხლეარული იმპლანტაციის ფანჯარა"
+   }
+  ],
+  "red_flags_ka": [
+   "სმენის დაქვეითების ნიშნები მშობლის მიერ"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO guidelines on meningitis diagnosis, treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240108042",
+    "type": "guideline",
+    "supports": "Formal audiological screening should be conducted before discharge for children and adults with acute meningitis; if not possible, within four weeks."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease (QS19) — Quality statement 4: Audiological assessment",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/qs19/chapter/Quality-statement-4-Audiological-assessment",
+    "type": "quality_standard",
+    "supports": "Audiological assessment within 4 weeks of being well enough to test; urgent cochlear implant referral; implants fully effective only if fitted within 6 months."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-016",
+  "cluster": "MENING",
+  "topics": [
+   41
+  ],
+  "rule_type": "referral",
+  "population": "child",
+  "condition_ka": "ბაქტერიული მენინგიტის შემდეგ გაწერილი ბავშვი",
+  "recommendation_ka": "გაწერიდან 6 კვირის განმავლობაში დანიშნეთ პედიატრის განმეორებითი ვიზიტი: შეაფასეთ სმენა, განვითარება, ქცევა, კრუნჩხვები, მხედველობა და ორთოპედიული/კანის გართულებები (მენინგოკოკური სეფსისის შემდეგ), და საჭიროებისას მიმართეთ ნევროლოგთან, აუდიოლოგთან ან რეაბილიტაციაზე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "პირველი შემდგომი ვიზიტის ვადა გაწერიდან"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease (QS19) — Quality statement 5: Follow-up in secondary care",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/QS19/chapter/quality-statement-5-follow-up-in-secondary-care",
+    "type": "quality_standard",
+    "supports": "Follow-up appointment within 6 weeks of discharge, carried out by a paediatrician for children, to review short-term effects and identify long-term issues early for prompt referral."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-017",
+  "cluster": "MENING",
+  "topics": [
+   42
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ბავშვი მენინგიტის კლინიკით და ლიქვორის პლეოციტოზით",
+  "recommendation_ka": "ლიქვორში ჩაატარეთ ენტეროვირუსის RT-PCR (და ჰერპეს სიმპლექსის ვირუსის PCR) — ტესტი მგრძნობიარე და სპეციფიკურია ენტეროვირუსული მენინგიტისთვის. დადებითი შედეგი, უარყოფით ბაქტერიულ კულტურასთან და სტაბილურ მდგომარეობასთან ერთად, საშუალებას იძლევა ადრე შეწყდეს ემპირიული ანტიმიკრობული თერაპია და შემცირდეს ჰოსპიტალიზაციის ხანგრძლივობა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Peer-reviewed article (PMC)",
+    "title": "Viral polymerase chain reaction testing of the cerebrospinal fluid: comprehensive care for neonates with a fever",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11606504/",
+    "type": "review",
+    "supports": "CSF enterovirus PCR is a sensitive and specific method for diagnosing enteroviral meningitis; early diagnosis can reduce the duration of empirical antimicrobials and permit earlier discharge."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-018",
+  "cluster": "MENING",
+  "topics": [
+   42
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ბავშვთა სავარაუდო ვირუსული მენინგიტი — ბაქტერიული ჯერ არ არის გამორიცხული",
+  "recommendation_ka": "სანამ ბაქტერიული მენინგიტი არ გამოირიცხება (კულტურა, PCR, კლინიკური მდგომარეობა), გააგრძელეთ ემპირიული ინტრავენური ცეფტრიაქსონი ან ცეფოტაქსიმი; 3 თვემდე ჩვილებში დაამატეთ ამოქსიცილინი ან ამპიცილინი ლისტერიის დასაფარად. ვირუსული მენინგიტის დადასტურებისას მკურნალობა სიმპტომურია: ჰიდრატაცია, ანალგეზია, ცხელების კონტროლი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ასაკი, რომლამდეც ემატება ლისტერიის საწინააღმდეგო საშუალება"
+   }
+  ],
+  "red_flags_ka": [
+   "ცნობიერების დაქვეითება ან კრუნჩხვა (ენცეფალიტი)"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO launches first-ever guidelines on meningitis diagnosis, treatment and care (news release)",
+    "year": 2025,
+    "url": "https://www.who.int/news/item/10-04-2025-who-launches-first-ever-guidelines-on-meningitis-diagnosis--treatment-and-care",
+    "type": "news_release",
+    "supports": "WHO: IV ceftriaxone or cefotaxime as empiric treatment for suspected/probable acute bacterial meningitis in children and adults; add ampicillin/amoxicillin when Listeria risk factors are present."
+   },
+   {
+    "org": "NICE",
+    "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NG240) — recommendations",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng240/chapter/recommendations",
+    "type": "guideline",
+    "supports": "NICE NG240 empiric approach: IV ceftriaxone; amoxicillin added for infants under 3 months to cover Listeria (per guideline summaries)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-MENING-019",
+  "cluster": "MENING",
+  "topics": [
+   42
+  ],
+  "rule_type": "red_flag",
+  "population": "infant",
+  "condition_ka": "ახალშობილი ან ჩვილი ვირუსული მენინგიტის ეჭვით",
+  "recommendation_ka": "ახალშობილებში ჰერპეს სიმპლექსის ინფექცია ვერ გამოირიცხება კლინიკურად: კრუნჩხვის, ენცეფალოპათიის, ვეზიკულების, ტრანსამინაზების მატების ან დედის გენიტალური ჰერპესის დროს დაუყოვნებლივ დაიწყეთ ემპირიული ინტრავენური აციკლოვირი და შეწყვიტეთ მხოლოდ HSV PCR-ის უარყოფითი პასუხის შემდეგ (დოზირება — ადგილობრივი ნეონატალური პროტოკოლით).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "კრუნჩხვა",
+   "ვეზიკულური გამონაყარი",
+   "ღვიძლის ფერმენტების მატება"
+  ],
+  "sources": [
+   {
+    "org": "Peer-reviewed article (PMC)",
+    "title": "Viral polymerase chain reaction testing of the cerebrospinal fluid: comprehensive care for neonates with a fever",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11606504/",
+    "type": "review",
+    "supports": "Neonatal CSF viral PCR (enterovirus, HSV) guides comprehensive care; HSV-negative/enterovirus-positive results allow empirical antimicrobials (including aciclovir) to be shortened."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

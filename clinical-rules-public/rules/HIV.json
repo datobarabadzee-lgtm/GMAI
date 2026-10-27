@@ -1,0 +1,583 @@
+[
+ {
+  "rule_id": "PUB-HIV-001",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "HIV-ის გადაცემის გზები და რისკ-ფაქტორები",
+  "recommendation_ka": "HIV გადაეცემა სისხლით, სპერმით, ვაგინალური სეკრეტით და დედის რძით, ასევე დედიდან ნაყოფზე ორსულობისა და მშობიარობისას; არ გადაეცემა კოცნით, ჩახუტებით, საერთო ჭურჭლით ან საკვებით. მაღალი რისკია: დაუცველი ანალური ან ვაგინალური სქესობრივი კონტაქტი, თანმხლები სქესობრივი გზით გადამდები ინფექცია (სიფილისი, ჰერპესი, ქლამიდია, გონორეა), ინექციური აღჭურვილობის გაზიარება, არაუსაფრთხო ინექცია ან გადასხმა და ნემსით დაზიანება. ანტირეტროვირუსულ თერაპიაზე მყოფი პირი, რომლის ვირუსული დატვირთვა არ განისაზღვრება, სქესობრივი გზით HIV-ს არ გადასცემს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "HIV is transmitted via blood, breast milk, semen and vaginal secretions and from mother to child; not via kissing, hugging or sharing food. Lists risk factors (condomless sex, other STIs, sharing injecting equipment, unsafe injections/transfusions, needle-stick). People on ART with undetectable viral load do not transmit HIV sexually."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-002",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "HIV ინფექციის ბუნებრივი მიმდინარეობა და პროგრესირებული HIV დაავადების განსაზღვრება",
+  "recommendation_ka": "მკურნალობის გარეშე HIV თანდათან ასუსტებს იმუნიტეტს და, ჩვეულებრივ, მრავალი წლის შემდეგ პროგრესირებს შიდსამდე. მოზრდილებსა და მოზარდებში პროგრესირებული HIV დაავადება განისაზღვრება, როგორც CD4 უჯრედების რაოდენობა 200 უჯრედი/მმ³-ზე ნაკლები ან WHO-ს 3 ან 4 კლინიკური სტადიის მოვლენა; 5 წლამდე ასაკის ყველა ბავშვი HIV-ით მიიჩნევა პროგრესირებული დაავადების მქონედ, კლინიკური ან იმუნოლოგიური სტატუსის მიუხედავად. ქრონიკულ ფაზაში შესაძლოა გამოვლინდეს ლიმფადენოპათია, წონის კლება, ცხელება, დიარეა და ხველა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 200,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი პროგრესირებული HIV დაავადებისთვის (უჯრედი/მმ³)"
+   },
+   {
+    "value": 3,
+    "unit": "label",
+    "meaning_ka": "WHO კლინიკური სტადია 3"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "WHO კლინიკური სტადია 4"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლამდეც ყველა ბავშვი HIV-ით პროგრესირებულ დაავადებად ითვლება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "Untreated HIV can progress to AIDS, often after many years. WHO defines advanced HIV disease as CD4 <200 cells/mm3 or WHO stage 3 or 4 event in adults and adolescents; all children <5 years with HIV are considered to have advanced disease. Progressive symptoms include swollen lymph nodes, weight loss, fever, diarrhoea and cough."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-003",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "red_flag",
+  "population": "immunocompromised",
+  "condition_ka": "HIV ინფექცია მკურნალობის გარეშე: მძიმე ოპორტუნისტული დაავადებები",
+  "recommendation_ka": "HIV-ით მცხოვრებ, განსაკუთრებით მკურნალობის არმქონე პირში აქტიურად გამორიცხეთ ტუბერკულოზი, კრიპტოკოკური მენინგიტი, მძიმე ბაქტერიული ინფექციები და სიმსივნეები (ლიმფომა, კაპოშის სარკომა). HIV-ით მცხოვრებთ ტუბერკულოზით დაავადების რისკი დაახლოებით 12-ჯერ მეტი აქვთ და ტუბერკულოზი მათში სიკვდილის წამყვანი მიზეზია. HIV ამძიმებს B და C ჰეპატიტისა და მპოქსის მიმდინარეობას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "ratio",
+    "meaning_ka": "ტუბერკულოზის შეფარდებითი რისკი HIV-ის დროს"
+   }
+  ],
+  "red_flags_ka": [
+   "ხველა, ცხელება, ღამის ოფლიანობა ან წონის კლება HIV-ით მცხოვრებ პირში",
+   "თავის ტკივილი ან ცნობიერების ცვლილება დაბალი CD4-ის დროს (კრიპტოკოკური მენინგიტი)"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "Without treatment people with HIV can develop TB, cryptococcal meningitis, severe bacterial infections and cancers such as lymphomas and Kaposi sarcoma; HIV worsens hepatitis B/C and mpox."
+   },
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "People living with HIV are 12 times more likely to fall ill with TB; TB is the leading cause of death among people with HIV."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-004",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "evaluation",
+  "population": "immunocompromised",
+  "condition_ka": "ახლად დიაგნოსტირებული ან მკურნალობაზე დაბრუნებული HIV, დაბალი CD4 (პროგრესირებული დაავადების პაკეტი)",
+  "recommendation_ka": "CD4 100 უჯრედი/მმ³-ზე ნაკლების დროს ანტირეტროვირუსული თერაპიის დაწყებამდე ჩაატარეთ კრიპტოკოკური ანტიგენის სკრინინგი (შეიძლება განიხილოთ 200 უჯრედი/მმ³-ზე ნაკლების დროსაც); დადებითი შედეგისას შეაფასეთ მენინგიტის ნიშნები და, თუ შესაძლებელია, ჩაატარეთ ლუმბალური პუნქცია ლიქვორში კრიპტოკოკური ანტიგენის განსაზღვრით. ტუბერკულოზის სიმპტომების მქონე პირებში გამოიყენეთ შარდის ლიპოარაბინომანანის (LF-LAM) ტესტი: სტაციონარში CD4 ≤200, ამბულატორიულად ≤100 უჯრედი/მმ³, ან ნებისმიერი CD4-ის დროს მძიმე მდგომარეობისას. სკრინინგის მიუწვდომლობისას CD4 100-ზე ნაკლების დროს მიეცით ფლუკონაზოლის პირველადი პროფილაქტიკა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 100,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი კრიპტოკოკური ანტიგენის სკრინინგისა და ამბულატორიული LF-LAM-ისთვის"
+   },
+   {
+    "value": 200,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი, რომლის დროსაც სკრინინგი შეიძლება განიხილოთ / სტაციონარული LF-LAM"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "CrAg screening and pre-emptive antifungal therapy recommended before (re)initiating ART in adults/adolescents with CD4 <100 cells/mm3, may be considered at <200; CrAg-positive persons should be evaluated for meningitis with LP and CSF CrAg; fluconazole primary prophylaxis at CD4 <100 when screening unavailable. LF-LAM to assist TB diagnosis in symptomatic people: CD4 <=200 inpatients, <=100 outpatients, or any CD4 if seriously ill."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-005",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "HIV-ით მცხოვრები მოზრდილი: კო-ტრიმოქსაზოლით პროფილაქტიკის ჩვენება",
+  "recommendation_ka": "კო-ტრიმოქსაზოლით პროფილაქტიკა რეკომენდებულია მოზრდილებში (ორსულების ჩათვლით) მძიმე ან პროგრესირებული კლინიკური დაავადებისას (WHO-ს 3 ან 4 სტადია) და/ან CD4 ≤350 უჯრედი/მმ³-ის დროს, ასევე ყველა HIV-ით მცხოვრებ პირს აქტიური ტუბერკულოზით, CD4-ის მიუხედავად. მალარიისა და მძიმე ბაქტერიული ინფექციების მაღალი გავრცელების რეგიონებში პროფილაქტიკა გრძელდება CD4-ის მიუხედავად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 350,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი კო-ტრიმოქსაზოლით პროფილაქტიკისთვის"
+   },
+   {
+    "value": 3,
+    "unit": "label",
+    "meaning_ka": "WHO სტადია 3"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "WHO სტადია 4"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "Co-trimoxazole prophylaxis recommended for adults (including pregnant women) with WHO stage 3 or 4 and/or CD4 <=350 cells/mm3; in settings with high malaria/severe bacterial infection prevalence it should be continued regardless of CD4; routine co-trimoxazole for all people with HIV and active TB regardless of CD4."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-006",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "evaluation",
+  "population": "immunocompromised",
+  "condition_ka": "HIV-ით მცხოვრები მოზრდილი ან მოზარდი: ტუბერკულოზის სკრინინგი ყოველ ვიზიტზე",
+  "recommendation_ka": "ჩაატარეთ ტუბერკულოზის სკრინინგი კლინიკური ალგორითმით: ამჟამინდელი ხველა, ცხელება, წონის კლება ან ღამის ოფლიანობა. რომელიმე სიმპტომის არსებობისას გამოიკვლიეთ ტუბერკულოზზე და სხვა დაავადებებზე; სიმპტომების არარსებობისას ტუბერკულოზი ნაკლებად სავარაუდოა. დამატებით შეიძლება გამოიყენოთ გულმკერდის რენტგენოგრაფია, C-რეაქტიული ცილა (ზღვარი >5 მგ/ლ) ან WHO-ს მიერ რეკომენდებული სწრაფი მოლეკულური ტესტი. აქტიური ტუბერკულოზის გამორიცხვის შემდეგ შესთავაზეთ ტუბერკულოზის პრევენციული მკურნალობა, ანტირეტროვირუსული თერაპიის სტატუსის მიუხედავად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "mg/L",
+    "meaning_ka": "CRP-ის ზღვარი ტუბერკულოზის სკრინინგისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "Adults and adolescents with HIV should be screened with a clinical algorithm (current cough, fever, weight loss, night sweats); symptomatic people evaluated for TB and offered TPT if TB excluded regardless of ART status; CXR, CRP >5 mg/L and molecular WRDs may be used to screen."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-007",
+  "cluster": "HIV",
+  "topics": [
+   29,
+   86
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "დადასტურებული HIV ინფექცია (მათ შორის მწვავე ინფექცია): ანტირეტროვირუსული თერაპიის დაწყება",
+  "recommendation_ka": "ანტირეტროვირუსული თერაპია შესთავაზეთ ყველა HIV-ით მცხოვრებს დადასტურებული დიაგნოზისა და კლინიკური შეფასების შემდეგ, CD4-ის მიუხედავად — სწრაფად, დიაგნოზიდან 7 დღის განმავლობაში, ხოლო მზადყოფნის შემთხვევაში იმავე დღეს; პროგრესირებული დაავადების მქონეებს მიანიჭეთ პრიორიტეტი. მოზრდილებისა და მოზარდების პირველი რიგის სასურველი რეჟიმია ტენოფოვირ დიზოპროქსილი + ლამივუდინი (ან ემტრიციტაბინი) + დოლუტეგრავირი; ბავშვებში — აბაკავირი + ლამივუდინი + დოლუტეგრავირი. მენინგიტის (კრიპტოკოკური ან ტუბერკულოზური) ნიშნების არსებობისას თერაპიის დაუყოვნებლივ დაწყება არ არის მიზანშეწონილი — საჭიროა სპეციალისტის გადაწყვეტილება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "სწრაფი დაწყების მაქსიმალური ვადა დიაგნოზიდან"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "Rapid ART initiation (within seven days of diagnosis) should be offered to all people with HIV after confirmed diagnosis and clinical assessment; same-day initiation offered to those ready; people with advanced disease prioritized. Preferred first-line: TDF + 3TC (or FTC) + DTG for adults/adolescents; ABC + 3TC + DTG for children."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "ART within two weeks of TB treatment except when signs and symptoms of meningitis are present."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-008",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "ანტირეტროვირუსულ თერაპიაზე მყოფი პაციენტის მონიტორინგი",
+  "recommendation_ka": "ვირუსული დატვირთვა განსაზღვრეთ მკურნალობიდან 6 თვისთვის, 12 თვეზე და შემდეგ ყოველ 12 თვეში სტაბილურ პაციენტში. ვირუსული დატვირთვა >1000 ასლი/მლ მიუთითებს შესაძლო ვირუსულ წარუმატებლობაზე და მოითხოვს ერთგულების შეფასებას და განმეორებით ტესტს; სადაც ვირუსული დატვირთვის რუტინული მონიტორინგი ხელმისაწვდომია, სტაბილურ პაციენტებში CD4-ის რეგულარული მონიტორინგი შეიძლება შეწყდეს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "პირველი ვირუსული დატვირთვის ვადა"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "მეორე განსაზღვრა და შემდგომი ინტერვალი"
+   },
+   {
+    "value": 1000,
+    "unit": "copies/mL",
+    "meaning_ka": "ვირუსული წარუმატებლობის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "Routine viral load monitoring by six months, at 12 months and then every 12 months for people established on ART; threshold of 1000 copies/mL used to define virological failure; CD4 monitoring can be stopped where routine viral load is available for people established on ART."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-009",
+  "cluster": "HIV",
+  "topics": [
+   29
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "HIV დიაგნოზის დადასტურება; 18 თვემდე ასაკის ბავშვი HIV-დადებითი დედისგან",
+  "recommendation_ka": "ერთი რეაქტიული ტესტი საკმარისი არ არის: დიაგნოზი დაადასტურეთ ეროვნული ტესტირების ალგორითმით და მკურნალობის დაწყებამდე ჩაატარეთ განმეორებითი ტესტი შეცდომის გამოსარიცხად. 18 თვემდე ასაკის ბავშვებში ანტისხეულების ტესტი დედის ანტისხეულების გამო არ არის სანდო — საჭიროა ვირუსოლოგიური (ნუკლეინის მჟავის) ტესტი დაბადებისას ან 6 კვირის ასაკში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 18,
+    "unit": "age_months",
+    "meaning_ka": "ასაკი, რომლამდეც ანტისხეულების ტესტი არასაკმარისია"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "ჩვილის ვირუსოლოგიური ტესტის ვადა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "No single test provides a full HIV diagnosis; confirmatory testing required and people should be retested before enrolment in care. For children <18 months rapid antibody testing is insufficient; virological testing at birth or 6 weeks of age."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-010",
+  "cluster": "HIV",
+  "topics": [
+   86
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ბოლო კვირებში შესაძლო HIV ექსპოზიცია და გრიპისმაგვარი დაავადება",
+  "recommendation_ka": "მწვავე HIV ინფექცია შეიძლება იყოს უსიმპტომო ან გამოვლინდეს გრიპისმაგვარი სინდრომით: ცხელება, თავის ტკივილი, გამონაყარი, ყელის ტკივილი. რისკის მქონე პირში ასეთი სურათისას (განსაკუთრებით სხვა სქესობრივი გზით გადამდები ინფექციის, ახალი პარტნიორის ან ინექციური ნარკოტიკის მოხმარების ფონზე) მიზანმიმართულად მოითხოვეთ მწვავე ინფექციის აღმომჩენი ტესტი (ანტიგენი/ანტისხეული ან ნუკლეინის მჟავის ტესტი), და არა მხოლოდ სწრაფი ანტისხეულების ტესტი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელება და გამონაყარი ბოლო სარისკო კონტაქტიდან რამდენიმე კვირაში",
+   "ახლად გამოვლენილი სქესობრივი გზით გადამდები ინფექცია ცხელებით"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "In the first few weeks after infection people may have no symptoms or an influenza-like illness including fever, headache, rash and sore throat; HIV spreads more easily in the first few months."
+   },
+   {
+    "org": "CDC",
+    "title": "2018 Quick Reference Guide: Recommended Laboratory HIV Testing Algorithm for Serum or Plasma Specimens",
+    "year": 2018,
+    "url": "https://stacks.cdc.gov/view/cdc/50872",
+    "type": "guideline",
+    "supports": "Initial testing should use an antigen/antibody immunoassay detecting HIV-1 p24 antigen for acute infection; if very early infection is possible (recent exposure), conduct HIV-1 NAT or repeat testing."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-011",
+  "cluster": "HIV",
+  "topics": [
+   86
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "მწვავე HIV ინფექციის ლაბორატორიული სტადიები და ფანჯრის პერიოდი",
+  "recommendation_ka": "ინფიცირებიდან დაახლოებით 10 დღეში პლაზმაში ვლინდება HIV-ის RNA (ეკლიფსის პერიოდის შემდეგ); p24 ანტიგენი მეოთხე თაობის ტესტით ვლინდება RNA-დან 4–10 დღეში, IgM ანტისხეულები — RNA-დან 10–13 დღეში. მწვავე ინფექცია არის პერიოდი RNA-ის გამოჩენიდან ანტისხეულების აღმოჩენამდე. ტესტების უმეტესობით ანტისხეულები ვლინდება ინფიცირებიდან 28 დღის განმავლობაში; ამ პერიოდში სწრაფი ანტისხეულების ტესტი შეიძლება ცრუ-უარყოფითი იყოს, პირი კი გადამდებია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "RNA-ის გამოჩენა ინფიცირებიდან / p24-ის და IgM-ის ინტერვალების საზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "p24 ანტიგენის გამოჩენის მინიმალური ინტერვალი RNA-დან"
+   },
+   {
+    "value": 13,
+    "unit": "day",
+    "meaning_ka": "IgM ანტისხეულების გამოჩენის ზედა ზღვარი RNA-დან"
+   },
+   {
+    "value": 28,
+    "unit": "day",
+    "meaning_ka": "ანტისხეულების ფორმირების ვადა უმეტეს შემთხვევაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC/APHL",
+    "title": "Laboratory Testing for the Diagnosis of HIV Infection: Updated Recommendations",
+    "year": 2014,
+    "url": "https://stacks.cdc.gov/view/cdc/23447",
+    "type": "guideline",
+    "supports": "Current edition (still the CDC reference for the laboratory algorithm, updated by the 2018 quick reference guide). HIV-1 RNA detectable by NAT about 10 days after infection; p24 antigen detectable by 4th-generation assays 4-10 days after RNA; IgM antibodies detectable 10-13 days after RNA. Defines eclipse, seroconversion window and acute HIV infection (RNA detectable, antibodies not yet)."
+   },
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "Most people develop antibodies within 28 days; during the window period many rapid tests cannot detect antibodies but people may still transmit HIV."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-012",
+  "cluster": "HIV",
+  "topics": [
+   86
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "HIV-ის ლაბორატორიული ტესტირების ალგორითმი (შრატი/პლაზმა)",
+  "recommendation_ka": "საწყისი ტესტი: ანტიგენ/ანტისხეულის კომბინირებული იმუნოანალიზი (HIV-1/HIV-2 ანტისხეულები და HIV-1 p24 ანტიგენი); არარეაქტიული შედეგი დამატებით ტესტს არ საჭიროებს, თუ ბოლოდროინდელი ექსპოზიცია არ არის საეჭვო. რეაქტიული შედეგისას ჩაატარეთ HIV-1/HIV-2 ანტისხეულების დიფერენცირების ტესტი. თუ დიფერენცირების ტესტი არარეაქტიული ან განუსაზღვრელია, ჩაატარეთ HIV-1 ნუკლეინის მჟავის ტესტი: რეაქტიული NAT + არარეაქტიული ანტისხეულები = მწვავე HIV-1 ინფექცია; უარყოფითი NAT = საწყისი ტესტის ცრუ-დადებითი შედეგი. ლაბორატორიული ინსტრუმენტული ანტიგენ/ანტისხეულის ტესტი სასურველია სწრაფ ტესტთან შედარებით უკეთესი მგრძნობელობის გამო მწვავე ფაზაში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "HIV-1"
+   },
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "HIV-2"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "2018 Quick Reference Guide: Recommended Laboratory HIV Testing Algorithm for Serum or Plasma Specimens",
+    "year": 2018,
+    "url": "https://stacks.cdc.gov/view/cdc/50872",
+    "type": "guideline",
+    "supports": "Initial testing with antigen/antibody immunoassay; reactive specimens tested with HIV-1/HIV-2 antibody differentiation assay; if non-reactive or indeterminate, test with HIV-1 NAT: reactive NAT with non-reactive/indeterminate differentiation indicates acute HIV-1 infection, negative NAT indicates false-positive initial result. Instrumented Ag/Ab tests preferred due to superior sensitivity in acute infection."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-013",
+  "cluster": "HIV",
+  "topics": [
+   86
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ბოლოდროინდელი სარისკო ექსპოზიცია და უარყოფითი საწყისი HIV ტესტი",
+  "recommendation_ka": "თუ საეჭვოა ძალიან ადრეული ინფექცია, უარყოფითი ანტიგენ/ანტისხეულის ტესტი ინფექციას ვერ გამორიცხავს: ჩაატარეთ HIV-1 ნუკლეინის მჟავის ტესტი ან აიღეთ ახალი ნიმუში და გაიმეორეთ ალგორითმი; სწრაფი ანტისხეულების ტესტის უარყოფითი შედეგისას გაიმეორეთ ტესტი ექსპოზიციიდან 28 დღის შემდეგ. ექსპოზიციიდან ახლო დროში შეაფასეთ ექსპოზიციის შემდგომი პროფილაქტიკის ჩვენება. HIV-2 ან განუსაზღვრელი დიფერენცირების შედეგისა და უარყოფითი NAT-ის დროს გამოიყენეთ სხვა ვალიდირებული HIV-2 ტესტი ან გაიმეორეთ ალგორითმი 2–4 კვირაში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 28,
+    "unit": "day",
+    "meaning_ka": "განმეორებითი ტესტის ვადა ექსპოზიციის შემდეგ"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "განმეორებითი ალგორითმის მინიმალური ინტერვალი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "განმეორებითი ალგორითმის მაქსიმალური ინტერვალი"
+   },
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "HIV-1"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "2018 Quick Reference Guide: Recommended Laboratory HIV Testing Algorithm for Serum or Plasma Specimens",
+    "year": 2018,
+    "url": "https://stacks.cdc.gov/view/cdc/50872",
+    "type": "guideline",
+    "supports": "If very early infection is possible despite non-reactive Ag/Ab result, conduct HIV-1 NAT or request a new specimen and repeat the algorithm; negative NAT with HIV-2/HIV indeterminate differentiation should be referred for another HIV-2 test or repeat algorithm in 2 to 4 weeks."
+   },
+   {
+    "org": "WHO",
+    "title": "HIV and AIDS — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+    "type": "fact_sheet",
+    "supports": "People with a recent high-risk exposure who test negative can have a further test after 28 days; PEP can be used after a possible exposure."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HIV-014",
+  "cluster": "HIV",
+  "topics": [
+   86
+  ],
+  "rule_type": "referral",
+  "population": "all",
+  "condition_ka": "დადასტურებული მწვავე ან ადრეული HIV ინფექცია",
+  "recommendation_ka": "მწვავე ინფექციის დროს ვირუსის დონე სისხლსა და გენიტალურ სეკრეტში უკიდურესად მაღალია და შენარჩუნებულია დაახლოებით 10–12 კვირა; სქესობრივი გადაცემის ალბათობა დაახლოებით 26-ჯერ მაღალია დადგენილ ინფექციასთან შედარებით. გადაამისამართეთ HIV-ის სამედიცინო მომსახურებაში ანტირეტროვირუსული თერაპიის სწრაფად დასაწყებად (ამცირებს გადაცემას და აუმჯობესებს იმუნოლოგიურ მაჩვენებლებს), ჩაატარეთ პარტნიორების შეტყობინება და ტესტირება, ურჩიეთ პრეზერვატივის გამოყენება. თუ მწვავე ინფექცია გამოვლინდა წინასწარი ექსპოზიციის პროფილაქტიკის (PrEP) დროს, საჭიროა რეზისტენტობის შეფასება და სრულ რეჟიმზე გადასვლა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "week",
+    "meaning_ka": "მაღალი ვირემიის ხანგრძლივობის ქვედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "მაღალი ვირემიის ხანგრძლივობის ზედა ზღვარი"
+   },
+   {
+    "value": 26,
+    "unit": "ratio",
+    "meaning_ka": "გადაცემის შეფარდებითი ალბათობა მწვავე ფაზაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC/APHL",
+    "title": "Laboratory Testing for the Diagnosis of HIV Infection: Updated Recommendations",
+    "year": 2014,
+    "url": "https://stacks.cdc.gov/view/cdc/23447",
+    "type": "guideline",
+    "supports": "Current edition (still the CDC reference for the laboratory algorithm, updated by the 2018 quick reference guide). Extremely high levels of virus in serum and genital secretions during acute infection persist for 10-12 weeks; modelled sexual transmission rate during acute infection is 26 times that of established infection; ART during acute/early infection improves markers and can substantially reduce transmission."
+   },
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "Rapid ART initiation for all people with confirmed HIV; resistance can be selected when PrEP is started in the presence of acute HIV infection."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

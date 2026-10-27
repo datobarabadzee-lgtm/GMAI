@@ -1,0 +1,1000 @@
+[
+ {
+  "rule_id": "PUB-TYPH-001",
+  "cluster": "TYPH",
+  "topics": [
+   6
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ენტერული (ტიფური და პარატიფური) ცხელების გამომწვევი და გადაცემის გზები",
+  "recommendation_ka": "ტიფურ ცხელებას იწვევს Salmonella enterica სეროტიპი Typhi, პარატიფურს – Paratyphi A, B და C. ერთადერთი რეზერვუარი ადამიანია (ცხოველური ან გარემოს რეზერვუარი არ არის ცნობილი). ინფექცია გადაეცემა მწვავედ დაავადებულის, გამოჯანმრთელების ფაზაში მყოფის ან უსიმპტომო ქრონიკული მატარებლის განავლით დაბინძურებული საკვებითა და წყლით; სექსუალური გზა იშვიათია. ჩაყლაპვის შემდეგ ბაქტერია მრავლდება და სისხლში გადადის, ამიტომ ენტერული ცხელება ბაქტერიემიული სისტემური დაავადებაა და არა მხოლოდ გასტროენტერიტი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Serotypes Typhi and Paratyphi A, B, C cause bacteremic enteric fever; humans are the only source; transmission via food/water contaminated by feces of acutely ill, convalescent or chronic carriers; sexual transmission rare."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "Salmonella Typhi lives only in humans; once ingested the bacteria multiply and spread into the bloodstream."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-002",
+  "cluster": "TYPH",
+  "topics": [
+   6,
+   8
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების ინკუბაციური პერიოდი",
+  "recommendation_ka": "ტიფური ცხელების ტიპური ინკუბაციური პერიოდია 6–30 დღე, პარატიფურის – 1–10 დღე; დიაპაზონი დამოკიდებულია მასპინძლის ფაქტორებსა და ინფექციურ დოზაზე. ენდემური ქვეყნიდან დაბრუნებულ მოცხელებულ პაციენტში შეაფასეთ ექსპოზიცია ბოლო 30 დღის განმავლობაში; დაავადება შესაძლოა განვითარდეს 1 კვირაზე ნაკლები ვიზიტის შემდეგაც (განსაკუთრებით სამხრეთ აზიაში).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "day",
+    "meaning_ka": "ტიფური ცხელების ინკუბაციის მინიმუმი"
+   },
+   {
+    "value": 30,
+    "unit": "day",
+    "meaning_ka": "ტიფური ცხელების ინკუბაციის მაქსიმუმი"
+   },
+   {
+    "value": 1,
+    "unit": "day",
+    "meaning_ka": "პარატიფური ცხელების ინკუბაციის მინიმუმი; ასევე 1 კვირა – ვიზიტის ხანგრძლივობა"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "პარატიფური ცხელების ინკუბაციის მაქსიმუმი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Typical incubation 6–30 days for typhoid vs 1–10 days for paratyphoid, varying with host factors and dose; travelers have acquired typhoid during visits of <1 week to highly endemic countries (Bangladesh, India, Pakistan)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-003",
+  "cluster": "TYPH",
+  "topics": [
+   6,
+   9
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "რეციდივი და ქრონიკული მატარებლობა ტიფური ცხელების შემდეგ",
+  "recommendation_ka": "კლინიკური გამოჯანმრთელებიდან 1–3 კვირაში რეციდივი ვითარდება პაციენტების არაუმეტეს 10%-ში და საჭიროებს ანტიბიოტიკით განმეორებით მკურნალობას. ნამკურნალევთა დაახლოებით 1–4% ხდება უსიმპტომო ქრონიკული მატარებელი (ბაქტერიის გამოყოფა განავლით 12 თვე ან მეტი ხნის განმავლობაში); მის ერადიკაციას, როგორც წესი, ანტიბიოტიკის ხანგრძლივი კურსი სჭირდება. სიმპტომების გაქრობა მატარებლობის არარსებობას არ ნიშნავს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "რეციდივის დრო – მინიმუმი; ასევე 1% – მატარებლობის ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "რეციდივის დრო – მაქსიმუმი"
+   },
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "რეციდივის სიხშირის ზედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "%",
+    "meaning_ka": "ქრონიკული მატარებლობის სიხშირის ზედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "ქრონიკული მატარებლობის განმსაზღვრელი ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Relapse in ≤10% of patients 1–3 weeks after clinical recovery; an estimated 1–4% of treated patients become asymptomatic chronic carriers (excretion ≥12 months), usually requiring a prolonged antibiotic course."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "Even when symptoms go away, people may still carry typhoid bacteria and shed them in faeces."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-004",
+  "cluster": "TYPH",
+  "topics": [
+   8
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების გლობალური ტვირთი და რისკის ჯგუფები",
+  "recommendation_ka": "CDC-ის შეფასებით, ყოველწლიურად მსოფლიოში ტიფური ცხელების დაახლოებით 9.2 მილიონი და პარატიფურის 3.8 მილიონი შემთხვევა ხდება, დაახლოებით 133 ათასი სიკვდილით (WHO-ს 2019 წლის შეფასებით – 9 მილიონი შემთხვევა და 110 ათასი სიკვდილი; შეფასებები განსხვავდება). ყველაზე მაღალი რისკი სამხრეთ აზიაშია, ასევე აფრიკასა და ლათინურ ამერიკაში. რისკი მაღალია უსაფრთხო წყლისა და სანიტარიის ნაკლებობისას; ბავშვები ყველაზე მაღალი რისკის ჯგუფია. მოგზაურებს შორის განსაკუთრებით მოწყვლადები არიან ნათესავების მონახულებით მოგზაურები (VFR) და მასობრივი თავშეყრის მონაწილეები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 9.2,
+    "unit": "label",
+    "meaning_ka": "ტიფური ცხელების წლიური შემთხვევები (მილიონი), CDC"
+   },
+   {
+    "value": 3.8,
+    "unit": "label",
+    "meaning_ka": "პარატიფური ცხელების წლიური შემთხვევები (მილიონი)"
+   },
+   {
+    "value": 133,
+    "unit": "label",
+    "meaning_ka": "წლიური სიკვდილი (ათასი), CDC"
+   },
+   {
+    "value": 9,
+    "unit": "label",
+    "meaning_ka": "ტიფური ცხელების შემთხვევები (მილიონი), WHO"
+   },
+   {
+    "value": 2019,
+    "unit": "label",
+    "meaning_ka": "WHO-ს შეფასების წელი"
+   },
+   {
+    "value": 110,
+    "unit": "label",
+    "meaning_ka": "წლიური სიკვდილი (ათასი), WHO"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Estimated 9.2 million typhoid and 3.8 million paratyphoid cases annually with ~133,000 deaths; greatest risk in South Asia; VFR travelers and mass gatherings at increased risk."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "As of 2019, an estimated 9 million people get sick from typhoid and 110 000 die each year; risk higher where safe water/sanitation lacking; children at highest risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-005",
+  "cluster": "TYPH",
+  "topics": [
+   6,
+   8
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ენდემური რეგიონიდან დაბრუნებული პაციენტი თანდათან მზარდი ცხელებით",
+  "recommendation_ka": "ენტერული ცხელება ეჭვმიტანილია, როცა ექსპოზიციის რისკის ფონზე ცხელება დღითიდღე იზრდება და დაავადების მე-3–4 დღისთვის 39–40 °C-ს აღწევს; ტიპურია ანორექსია, თავის ტკივილი, სისუსტე, მუცლის ტკივილი, ყაბზობა ან დიარეა (დიარეა და ღებინება ბავშვებში უფრო ხშირია), შესაძლოა ჰეპატოსპლენომეგალია და ტანზე „ვარდისფერი ლაქები“. WHO AWaRe-ის კრიტერიუმით – ხანგრძლივი ცხელება ≥38.0 °C 3 დღეზე მეტი ხნით. ტიფური და პარატიფური ცხელება კლინიკურად არ განსხვავდება; ხშირად ერევა მალარიაში – ეჭვი მიიტანეთ, თუ ანტიმალარიული მკურნალობა არ შველის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ცხელების პიკამდე – მე-3 დღე; ასევე AWaRe-ის 3 დღის კრიტერიუმი"
+   },
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "ცხელების პიკამდე – მე-4 დღე"
+   },
+   {
+    "value": 39,
+    "unit": "°C",
+    "meaning_ka": "ცხელების დონე – ქვედა"
+   },
+   {
+    "value": 40,
+    "unit": "°C",
+    "meaning_ka": "ცხელების დონე – ზედა"
+   },
+   {
+    "value": 38.0,
+    "unit": "°C",
+    "meaning_ka": "ცხელების ზღვარი AWaRe-ის მიხედვით"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Insidious onset; fever rising daily to 39–40°C by day 3–4; anorexia, headache, malaise; abdominal pain, constipation, diarrhea; diarrhea/vomiting more common in children; rose spots; often confused with malaria; typhoid and paratyphoid clinically indistinguishable."
+   },
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Protracted fever (≥38.0 °C for >3 days) ± headache, loss of appetite, nausea; difficult to distinguish from other febrile illnesses."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-006",
+  "cluster": "TYPH",
+  "topics": [
+   6,
+   9
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების გართულებები (ჩვეულებრივ დაავადების მე-2–3 კვირაზე)",
+  "recommendation_ka": "ჰოსპიტალიზებულ პაციენტთა 10–15%-ში, ჩვეულებრივ 2–3 კვირიანი ავადობის შემდეგ, ვითარდება სიცოცხლისთვის საშიში გართულებები: კუჭ-ნაწლავის სისხლდენა, ნაწლავის პერფორაცია და ენცეფალოპათია. პერიტონიტზე იფიქრეთ ძლიერი ტკივილის, დიფუზური რიკოშეტული მტკივნეულობისა და კუნთოვანი დაჭიმულობისას – სასწრაფოდ ქირურგიული კონსულტაცია. მკურნალობის გარეშე ლეტალობა 10%-ს აღემატებოდა, დროული მკურნალობისას კი, როგორც წესი, 1%-ზე ნაკლებია; მკურნალობის დაგვიანება გართულებების რისკს ზრდის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "გართულებების სიხშირე – ქვედა; ასევე 10% – ლეტალობა მკურნალობის გარეშე"
+   },
+   {
+    "value": 15,
+    "unit": "%",
+    "meaning_ka": "გართულებების სიხშირე – ზედა"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "გართულებების დრო – ქვედა"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "გართულებების დრო – ზედა"
+   },
+   {
+    "value": 1,
+    "unit": "%",
+    "meaning_ka": "ლეტალობა დროული მკურნალობისას"
+   }
+  ],
+  "red_flags_ka": [
+   "ნაწლავის პერფორაცია / პერიტონიტი",
+   "კუჭ-ნაწლავის სისხლდენა",
+   "ენცეფალოპათია",
+   "სეპსისი ან სეპტიკური შოკი"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Serious complications in 10–15% of hospitalized patients, generally after 2–3 weeks: GI hemorrhage, intestinal perforation, encephalopathy; untreated CFR >10%, with prompt care usually <1%."
+   },
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Consider peritonitis with severe pain, diffuse rebound tenderness and guarding (due to intestinal bleeding and perforation); encephalopathy in severe cases; delays in treatment associated with higher risk of complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-007",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების ეჭვი – ლაბორატორიული დადასტურება",
+  "recommendation_ka": "მკურნალობის დაწყებამდე აიღეთ სისხლის კულტურა (არჩევის მეთოდი): ერთი კულტურა დადებითია მხოლოდ დაახლოებით 50%-ში, ამიტომ საჭიროა რამდენიმე ნიმუში და შესაძლოა კულტურის 7 დღემდე დაკვირვება უარყოფით პასუხამდე. ძვლის ტვინის კულტურა მგრძნობელობას დაახლოებით 80%-მდე ზრდის და წინასწარი ანტიბიოტიკით ნაკლებად ზიანდება. განავლის კულტურა პირველ კვირაში, როგორც წესი, უარყოფითია. ვიდალის რეაქცია და სხვა სეროლოგიური ტესტები არასანდოა (ვერ ასხვავებს მწვავე ინფექციას წარსულისა და ვაქცინაციისგან) – დიაგნოზისთვის არ გამოიყენოთ. რადგან კულტურას დრო სჭირდება, საწყისი დიაგნოზი ხშირად კლინიკურია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "ერთი სისხლის კულტურის მგრძნობელობა"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "კულტურის დაკვირვების ხანგრძლივობა"
+   },
+   {
+    "value": 80,
+    "unit": "%",
+    "meaning_ka": "ძვლის ტვინის კულტურის მგრძნობელობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Blood culture preferred; single culture positive in ~50%; multiple cultures increase sensitivity; may need up to 7 days; bone marrow culture ~80% and little affected by antibiotics; stool culture not usually positive in first week; Widal unreliable; serology cannot distinguish acute from past infection or vaccination."
+   },
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Serologic tests should not be used to diagnose enteric fever; bone marrow culture particularly valuable if antimicrobials already given; blood cultures when enteric fever suspected (current edition)."
+   },
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Severe cases: blood cultures ideally before antibiotics; bone marrow culture is reference standard but often not feasible; Widal serology not reliable."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-008",
+  "cluster": "TYPH",
+  "topics": [
+   8,
+   9
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების ანტიმიკრობული რეზისტენტობა",
+  "recommendation_ka": "ამპიცილინის, ქლორამფენიკოლისა და ტრიმეთოპრიმ-სულფამეთოქსაზოლის მიმართ მულტირეზისტენტობა (MDR) ფართოდაა გავრცელებული (სამხრეთ აზიაში იზოლატების დაახლოებით 9%, აფრიკის ნაწილში 36–59%); ეს პრეპარატები მხოლოდ დადასტურებული მგრძნობელობისას გამოიყენება. სამხრეთ აზიიდან შემოტანილი ინფექციების უმეტესობა ფტორქინოლონის მიმართ არამგრძნობიარეა. 2016 წლიდან პაკისტანში (სინდის პროვინცია) გავრცელდა ექსტრემალურად რეზისტენტული (XDR) Typhi – რეზისტენტული ცეფტრიაქსონისა და ციპროფლოქსაცინის მიმართ, მაგრამ მგრძნობიარე აზითრომიცინისა და კარბაპენემების მიმართ. ცეფტრიაქსონ-რეზისტენტობა აღწერილია ერაყიდან, ინდოეთიდან და ავღანეთიდან, აზითრომიცინ-რეზისტენტობა – სამხრეთ და სამხრეთ-აღმოსავლეთ აზიის რამდენიმე ქვეყნიდან. მკურნალობა წარმართეთ მგრძნობელობის ტესტით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 9,
+    "unit": "%",
+    "meaning_ka": "MDR სიხშირე სამხრეთ აზიაში"
+   },
+   {
+    "value": 36,
+    "unit": "%",
+    "meaning_ka": "MDR სიხშირე აფრიკაში – ქვედა"
+   },
+   {
+    "value": 59,
+    "unit": "%",
+    "meaning_ka": "MDR სიხშირე აფრიკაში – ზედა"
+   },
+   {
+    "value": 2016,
+    "unit": "label",
+    "meaning_ka": "XDR აფეთქების დაწყების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "MDR estimates 9% in South Asia (2015–2018) to 36–59% in parts of Africa; most fluoroquinolone-nonsusceptible infections from South Asia; XDR Typhi outbreak in Sindh, Pakistan since 2016, resistant to ampicillin, ceftriaxone, chloramphenicol, ciprofloxacin, TMP-SMX but susceptible to azithromycin and carbapenems; ceftriaxone resistance from Iraq, India, Afghanistan; azithromycin resistance reported."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "Antimicrobial resistance is common, requiring more complicated and expensive treatment in the most affected regions."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-009",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ეჭვმიტანილი ენტერული ცხელება – ემპირიული ანტიბიოტიკის შერჩევა მგზავრობის ისტორიის მიხედვით",
+  "recommendation_ka": "ანტიბიოტიკი დაიწყეთ ეჭვისთანავე (დაგვიანება გართულებების რისკს ზრდის), კულტურის აღების შემდეგ. CDC: პაკისტანიდან ან ერაყიდან დაბრუნებულებში, ან საერთაშორისო მგზავრობის გარეშე დაავადებულებში (XDR რისკი) – გაურთულებელი შემთხვევა: აზითრომიცინი; გართულებული: კარბაპენემი. სხვა ქვეყნებიდან დაბრუნებულებში ემპირიულად მისაღებია ცეფტრიაქსონი ან აზითრომიცინი. WHO AWaRe: ფტორქინოლონ-რეზისტენტობის დაბალი რისკისას – ციპროფლოქსაცინი; მაღალი რისკისას – მსუბუქ შემთხვევაში აზითრომიცინი, მძიმეში – ცეფტრიაქსონი IV. შეარჩიეთ ადგილობრივი რეზისტენტობისა და სიმძიმის მიხედვით და შეცვალეთ მგრძნობელობის პასუხის მიხედვით. XDR ინფექციისას, თუ კარბაპენემით მდგომარეობა არ უმჯობესდება, შეიძლება დაემატოს მეორე პრეპარატი (მაგ., აზითრომიცინი).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Empiric treatment guided by travel history: Iraq/Pakistan or no international travel → azithromycin for uncomplicated, carbapenem for complicated; ceftriaxone and azithromycin appropriate for most other countries; use susceptibilities once available; XDR not improving on carbapenem may benefit from adding azithromycin."
+   },
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Start antibiotics as soon as diagnosis suspected; choose by severity and local fluoroquinolone resistance: low risk ciprofloxacin; high risk mild azithromycin, severe ceftriaxone IV."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-010",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ენტერული ცხელება მოზრდილებში – WHO AWaRe-ის დოზირება (თირკმლის ნორმალური ფუნქცია)",
+  "recommendation_ka": "ფტორქინოლონ-რეზისტენტობის დაბალი რისკი (მსუბუქი და მძიმე): ციპროფლოქსაცინი 500 მგ პერორალურად ყოველ 12 საათში. მაღალი რისკი, მსუბუქი შემთხვევა: აზითრომიცინი 1 გ პირველ დღეს, შემდეგ 500 მგ ყოველ 24 საათში პერორალურად. მაღალი რისკი, მძიმე შემთხვევა (პერფორაცია, პერიტონიტი, სეფსისი): ცეფტრიაქსონი 2 გ IV ყოველ 24 საათში. ხანგრძლივობა: მსუბუქი – 7 დღე, მძიმე – 10 დღე (თუ კლინიკური გაუმჯობესებაა და პაციენტი 48 საათია უცხელოა). კლინიკური გაუმჯობესების, უცხელობისა და პერორალური მიღების შესაძლებლობისას გადადით IV-დან პერორალურზე. შენიშვნა: CDC ფტორქინოლონს არჩევის საშუალებად მხოლოდ დადასტურებული მგრძნობელობისას მიიჩნევს.",
+  "doses": [
+   {
+    "drug": "ciprofloxacin",
+    "amount": 500,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "q12h",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "azithromycin",
+    "amount": 1,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "day 1 loading",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "azithromycin",
+    "amount": 500,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "q24h from day 2",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ceftriaxone",
+    "amount": 2,
+    "unit": "g",
+    "route": "IV",
+    "frequency": "q24h",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "h",
+    "meaning_ka": "ციპროფლოქსაცინის ინტერვალი"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "აზითრომიცინის/ცეფტრიაქსონის ინტერვალი"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "მსუბუქი შემთხვევის ხანგრძლივობა"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "მძიმე შემთხვევის ხანგრძლივობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "უცხელო პერიოდი მკურნალობის დასრულებამდე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Adults: low FQ-resistance risk ciprofloxacin 500 mg q12h oral; high risk mild azithromycin 1 g day 1 then 500 mg q24h oral; severe ceftriaxone 2 g q24h IV; duration mild 7 days, severe 10 days if clinical improvement and afebrile 48 h; IV-to-oral step-down when improved, afebrile, tolerating oral."
+   },
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Fluoroquinolones remain treatment of choice for fluoroquinolone-susceptible infections in adults; treatment guided by susceptibility testing."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-011",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ენტერული ცხელება ბავშვებში – WHO AWaRe-ის დოზირება (თირკმლის ნორმალური ფუნქცია)",
+  "recommendation_ka": "ფტორქინოლონ-რეზისტენტობის დაბალი რისკი: ციპროფლოქსაცინი 15 მგ/კგ/დოზა პერორალურად ყოველ 12 საათში (≥30 კგ წონისას – 500 მგ ყოველ 12 საათში). მაღალი რისკი, მსუბუქი შემთხვევა: აზითრომიცინი 20 მგ/კგ/დოზა პერორალურად ყოველ 24 საათში. მაღალი რისკი, მძიმე შემთხვევა: ცეფტრიაქსონი 80 მგ/კგ/დოზა IV ყოველ 24 საათში. ხანგრძლივობა: მსუბუქი – 7 დღე, მძიმე – 10 დღე (კლინიკური გაუმჯობესებისა და 48 საათიანი უცხელობის პირობით). მძიმე შემთხვევაში გამოიკვლიეთ სისხლის საერთო ანალიზი, კრეატინინი, ელექტროლიტები, გლუკოზა და CRP.",
+  "doses": [
+   {
+    "drug": "ciprofloxacin",
+    "amount": 15,
+    "unit": "mg/kg/dose",
+    "route": "PO",
+    "frequency": "q12h",
+    "population": "child",
+    "max_amount": 500,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "azithromycin",
+    "amount": 20,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "q24h",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ceftriaxone",
+    "amount": 80,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "q24h",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 30,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი მოზრდილის ციპროფლოქსაცინის დოზისთვის"
+   },
+   {
+    "value": 12,
+    "unit": "h",
+    "meaning_ka": "ციპროფლოქსაცინის ინტერვალი"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "აზითრომიცინის/ცეფტრიაქსონის ინტერვალი"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "მსუბუქი შემთხვევის ხანგრძლივობა"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "მძიმე შემთხვევის ხანგრძლივობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "უცხელო პერიოდი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Children: ciprofloxacin 15 mg/kg/dose q12h oral (≥30 kg 500 mg q12h) for low FQ-resistance risk; high risk mild azithromycin 20 mg/kg/dose q24h oral; severe ceftriaxone 80 mg/kg/dose q24h IV; mild 7 days, severe 10 days if afebrile 48 h; severe cases: CBC, creatinine, electrolytes, glucose, CRP."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-012",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელება – პასუხის შეფასება ანტიბიოტიკოთერაპიაზე",
+  "recommendation_ka": "მკურნალობის ფონზე ცხელება შეიძლება 3–5 დღე გაგრძელდეს, თუმცა მაქსიმალური ტემპერატურა ყოველდღე უნდა იკლებდეს; პირველ დღეებში პაციენტი შეიძლება უარესადაც გრძნობდეს თავს. თუ ცხელება მკურნალობის დაწყებიდან 5 დღეში არ ქრება, განიხილეთ ალტერნატიული ანტიბიოტიკი (რეზისტენტობა, მათ შორის XDR) და მოძებნეთ ინფექციის პერსისტენტული კერა (აბსცესი, ძვლის, სახსრის ან სხვა ექსტრაინტესტინური ინფექცია).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "მოსალოდნელი ცხელების ხანგრძლივობა – ქვედა"
+   },
+   {
+    "value": 5,
+    "unit": "day",
+    "meaning_ka": "მოსალოდნელი ცხელების ხანგრძლივობა – ზედა; ასევე რეაქციის შეფასების ვადა"
+   }
+  ],
+  "red_flags_ka": [
+   "ცხელება 5 დღეზე მეტი ადექვატური მკურნალობის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Fever may persist 3–5 days on treatment with daily decreasing maximum; if fever does not subside within 5 days, consider alternative antibiotics or look for persistent focus (abscess, bone, joint, other extraintestinal site)."
+   },
+   {
+    "org": "WHO",
+    "title": "The WHO AWaRe (Access, Watch, Reserve) antibiotic book — Web Annex: Infographics (Enteric fever)",
+    "year": 2022,
+    "url": "https://www.who.int/publications/i/item/WHO-MHP-HPS-EML-2022.02",
+    "type": "guideline",
+    "supports": "Fever usually decreases slowly after 3–5 days of treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-013",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ტიფური ცხელებით ნამკურნალევი პაციენტი – გავრცელების პრევენცია და საზოგადოებრივი ჯანდაცვა",
+  "recommendation_ka": "ტიფური და პარატიფური ცხელება შეტყობინებას დაქვემდებარებული დაავადებაა – შეატყობინეთ საზოგადოებრივი ჯანდაცვის სამსახურს; ადგილობრივად შეძენილი შემთხვევა ეპიდემიოლოგიურ კვლევას საჭიროებს. პაციენტმა ანტიბიოტიკი სრული დანიშნული კურსით უნდა მიიღოს, ტუალეტის შემდეგ ხელები საპნით დაიბანოს და არ მოამზადოს ან არ მიაწოდოს საკვები სხვებს. სიმპტომების გაქრობის შემდეგაც შესაძლოა ბაქტერიის გამოყოფა განავლით, ამიტომ ჩაუტარეთ საკონტროლო ტესტირება; სამსახურში, სკოლაში ან ბაგა-ბაღში დაბრუნება ადგილობრივი ჯანდაცვის ორგანოს მოთხოვნების მიხედვით (განსაკუთრებით საკვების დამმუშავებლებისთვის).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Typhoid and paratyphoid are nationally notifiable; domestically acquired case prompts investigation; follow health department guidance on follow-up testing to return to work, school or day care."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "People treated should take antibiotics as long as prescribed, wash hands after bathroom, avoid preparing or serving food for others, and have their doctor test to ensure no Salmonella Typhi remains."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-014",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ენდემურ რეგიონში მოგზაური – ტიფის საწინააღმდეგო ვაქცინაციის ჩვენება და Vi პოლისაქარიდული (ViCPS) ვაქცინა",
+  "recommendation_ka": "ტიფის ვაქცინა რეკომენდებულია 2 წლისა და უფროსი ასაკის მოგზაურებისთვის, რომლებიც მიემგზავრებიან Typhi-ს ექსპოზიციის აღიარებული რისკის მქონე რეგიონებში (WHO: ვაქცინა შესთავაზეთ მაღალი რისკის მიმართულებით მოგზაურებს). ViCPS: ერთი დოზა 0.5 მლ (25 მკგ) კუნთში, მგზავრობამდე არანაკლებ 2 კვირით ადრე; რისკის შენარჩუნებისას – გამეორება ყოველ 2 წელიწადში. ერთადერთი უკუჩვენებაა წინა დოზაზე მძიმე ადგილობრივი ან სისტემური რეაქცია. ვაქცინები იცავს აცრილთა მხოლოდ 50–80%-ს და პარატიფისგან არ იცავს – საკვებისა და წყლის უსაფრთხოების ზომები სავალდებულოა.",
+  "doses": [
+   {
+    "drug": "typhoid Vi polysaccharide vaccine (ViCPS)",
+    "amount": 0.5,
+    "unit": "mL",
+    "route": "IM",
+    "frequency": "single dose; booster every 2 years",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "ViCPS-ის მინიმალური ასაკი; ასევე 2 კვირა მგზავრობამდე და 2 წლიანი ბუსტერის ინტერვალი"
+   },
+   {
+    "value": 25,
+    "unit": "mcg",
+    "meaning_ka": "Vi ანტიგენის რაოდენობა დოზაში"
+   },
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "ვაქცინის ეფექტიანობა – ქვედა"
+   },
+   {
+    "value": 80,
+    "unit": "%",
+    "meaning_ka": "ვაქცინის ეფექტიანობა – ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "ACIP recommends typhoid vaccine for travelers ≥2 years to areas with recognized risk; ViCPS one 0.5 mL (25 µg) IM dose ≥2 weeks before travel, booster every 2 years; only contraindication severe reaction to previous dose; vaccines protect 50–80%; no paratyphoid vaccine."
+   },
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "Typhoid vaccination should be offered to travellers to destinations where the risk of typhoid fever is high; injectable polysaccharide vaccine for people aged 2 years and above."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-015",
+  "cluster": "TYPH",
+  "topics": [
+   9
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ცოცხალი ორალური Ty21a ვაქცინა – გამოყენება, უკუჩვენებები და ურთიერთქმედებები",
+  "recommendation_ka": "Ty21a: ოთხი კაფსულა, თითო ყოველ მეორე დღეს (48 საათის ინტერვალით), 6 წლისა და უფროსი ასაკისთვის; კურსი დაასრულეთ ექსპოზიციამდე არანაკლებ 1 კვირით ადრე; ბუსტერი ყოველ 5 წელიწადში. კაფსულა გადაყლაპეთ მთლიანად, გრილი სითხით (არაუმეტეს 37 °C), ჭამამდე დაახლოებით 1 საათით ადრე; ინახება მაცივარში (2–8 °C). უკუნაჩვენებია ორსულობაში, იმუნოკომპრომისის (მათ შორის აივ-ინფექციის) დროს, მწვავე ცხელებისა და მწვავე გასტროენტერიტის დროს – ასეთ შემთხვევებში უპირატესია ViCPS. ნებისმიერი ანტიბიოტიკის მიღებიდან 72 საათზე მეტი უნდა გავიდეს ვაქცინაციამდე და ანტიბიოტიკი არ დანიშნოთ ბოლო დოზიდან 72 საათის განმავლობაში; ატოვაკვონ-პროგუანილი – მხოლოდ ბოლო დოზიდან 10 დღის შემდეგ (მეფლოქინი და ქლოროქინი თავსებადია).",
+  "doses": [
+   {
+    "drug": "typhoid Ty21a live oral vaccine",
+    "amount": 1,
+    "unit": "doses",
+    "route": "PO",
+    "frequency": "1 capsule every other day × 4",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "doses",
+    "meaning_ka": "კაფსულების რაოდენობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "დოზებს შორის ინტერვალი"
+   },
+   {
+    "value": 6,
+    "unit": "age_years",
+    "meaning_ka": "მინიმალური ასაკი"
+   },
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "კურსის დასრულება ექსპოზიციამდე; ასევე 1 საათი ჭამამდე"
+   },
+   {
+    "value": 5,
+    "unit": "year",
+    "meaning_ka": "ბუსტერის ინტერვალი"
+   },
+   {
+    "value": 37,
+    "unit": "°C",
+    "meaning_ka": "სითხის მაქსიმალური ტემპერატურა"
+   },
+   {
+    "value": 2,
+    "unit": "°C",
+    "meaning_ka": "შენახვის ტემპერატურა – ქვედა"
+   },
+   {
+    "value": 8,
+    "unit": "°C",
+    "meaning_ka": "შენახვის ტემპერატურა – ზედა"
+   },
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "ინტერვალი ანტიბიოტიკთან"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "ინტერვალი ატოვაკვონ-პროგუანილამდე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Ty21a: four capsules one every other day (48 h), ≥6 years, complete ≥1 week before exposure, booster every 5 years; cool liquid ≤37°C ~1 h before meal; refrigerate 2–8°C; not for pregnant or immunocompromised (incl. HIV); not with acute febrile illness or acute gastroenteritis; delay >72 h after antimicrobials and no antibiotics ≤72 h after last dose; atovaquone-proguanil only ≥10 days after final dose; mefloquine and chloroquine can be co-administered."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-016",
+  "cluster": "TYPH",
+  "topics": [
+   8,
+   9
+  ],
+  "rule_type": "prevention",
+  "population": "child",
+  "condition_ka": "ტიფის კონიუგირებული ვაქცინა (TCV) ენდემურ ქვეყნებში",
+  "recommendation_ka": "WHO რეკომენდაციით, TCV (Vi ანტიგენი, დაკავშირებული ცილოვან მატარებელთან) ერთჯერადი ინექციური დოზით კეთდება 6 თვის ასაკიდან, მოზრდილებში – 45 ან 65 წლამდე (ვაქცინის მიხედვით); WHO-ს SAGE რეკომენდაციას უწევს მის ჩართვას ენდემური ქვეყნების ბავშვთა რუტინულ იმუნიზაციაში, პრიორიტეტით მაღალი ტვირთის ან მაღალი ანტიბიოტიკორეზისტენტობის ქვეყნებისთვის. TCV უფრო ხანგრძლივ იმუნიტეტს იძლევა და 2 წლამდე ბავშვებშიც ეფექტიანია, განსხვავებით არაკონიუგირებული ვაქცინებისგან (რომლებიც 2 წლამდე არ არის ნებადართული). შენიშვნა: TCV ამჟამად აშშ-ში ლიცენზირებული არ არის – მოგზაურთა რეკომენდაციები (CDC) ViCPS-სა და Ty21a-ს ეფუძნება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "age_months",
+    "meaning_ka": "TCV-ის მინიმალური ასაკი"
+   },
+   {
+    "value": 45,
+    "unit": "age_years",
+    "meaning_ka": "TCV-ის ზედა ასაკი (ზოგი ვაქცინა)"
+   },
+   {
+    "value": 65,
+    "unit": "age_years",
+    "meaning_ka": "TCV-ის ზედა ასაკი (სხვა ვაქცინა)"
+   },
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "არაკონიუგირებული ვაქცინების ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "TCV given as a single injectable dose from 6 months of age and in adults up to 45 or 65 years depending on vaccine; SAGE recommends TCV in routine childhood immunization in endemic countries, prioritizing highest burden or high AMR; longer-lasting immunity; older vaccines not approved under 2 years."
+   },
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Conjugate Vi vaccines have greater efficacy in children <2 years and longer protection; WHO-prequalified TCVs introduced in endemic countries; not licensed or available in the United States."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TYPH-017",
+  "cluster": "TYPH",
+  "topics": [
+   8,
+   9
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ენტერული ცხელების პრევენცია საკვებისა და წყლის უსაფრთხოებით",
+  "recommendation_ka": "ყველა მოგზაურს (ვაქცინირებულსაც) აუხსენით: საკვები უნდა იყოს კარგად მოხარშული და ცხელი; მოერიდეთ უმ რძეს და მისგან დამზადებულ პროდუქტებს (მხოლოდ პასტერიზებული ან ადუღებული რძე); ყინული – მხოლოდ უსაფრთხო წყლისგან; საეჭვო წყალი ადუღეთ ან სანდო დეზინფექტანტით დაამუშავეთ; ხილი და ბოსტნეული კარგად გარეცხეთ და შესაძლებლობისას გაფცქვენით; ხშირად დაიბანეთ ხელები საპნით, განსაკუთრებით ჭამამდე და ტუალეტის შემდეგ. პარატიფის საწინააღმდეგო ვაქცინა არ არსებობს – ეს ზომები ერთადერთი დაცვაა; დიდი ბაქტერიული დოზა ვაქცინით გამოწვეულ იმუნიტეტსაც სძლევს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Typhoid — fact sheet",
+    "year": 2023,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "type": "fact_sheet",
+    "supports": "Travel recommendations: food properly cooked and hot; avoid raw milk; drink pasteurized/boiled milk; avoid ice unless from safe water; boil or disinfect questionable water; wash and peel fruits/vegetables; wash hands frequently with soap."
+   },
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Typhoid and Paratyphoid Fever",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+    "type": "guideline",
+    "supports": "Food and water precautions and handwashing prevent typhoid and paratyphoid; vaccines not 100% effective and large inoculum can overwhelm immunity; no paratyphoid vaccine."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

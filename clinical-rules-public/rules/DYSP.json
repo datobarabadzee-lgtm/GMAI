@@ -1,0 +1,451 @@
+[
+ {
+  "rule_id": "PUB-DYSP-001",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "დისპეფსიური ჩივილები (ეპიგასტრიუმის ტკივილი ან წვა, ჭამის შემდგომი სისავსე, ადრეული გაძღომა) სტრუქტურული მიზეზის გარეშე",
+  "recommendation_ka": "ფუნქციური დისპეფსია (Rome IV) დაისვას, თუ ერთი ან მეტი შემაწუხებელი სიმპტომი არსებობს ბოლო 3 თვის განმავლობაში, დაწყებით დიაგნოზამდე მინიმუმ 6 თვით ადრე, და ენდოსკოპიით სტრუქტურული დაავადება გამორიცხულია. ჭამის შემდგომი დისტრეს-სინდრომისთვის სისავსე ან ადრეული გაძღომა უნდა იყოს კვირაში არანაკლებ 3 დღე. გულძმარვა დისპეფსიის სიმპტომად არ ითვლება, თუმცა შეიძლება თან ახლდეს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "კრიტერიუმების ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "სიმპტომების დაწყებიდან მინიმალური პერიოდი"
+   },
+   {
+    "value": 3,
+    "unit": "times/week",
+    "meaning_ka": "PDS-ის სიმპტომების მინიმალური სიხშირე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Rome Foundation",
+    "title": "Rome IV Diagnostic Criteria for Disorders of Gut-Brain Interaction — criteria booklet",
+    "year": 2019,
+    "url": "https://theromefoundation.org/wp-content/uploads/Rome-Foundation-Diagnostic-Criteria-Booklet-2019.pdf",
+    "type": "diagnostic_criteria",
+    "supports": "Functional dyspepsia: ≥1 of bothersome postprandial fullness, early satiation, epigastric pain or burning, no structural disease on endoscopy; criteria fulfilled for last 3 months with onset ≥6 months; PDS symptoms ≥3 days/week; heartburn is not a dyspeptic symptom."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-002",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "დისპეფსია განგაშის ნიშნებით",
+  "recommendation_ka": "განგაშის ნიშნების არსებობისას (კუჭ-ნაწლავის სისხლდენა, აუხსნელი რკინადეფიციტური ანემია, უნებლიე წონის კლება, დისფაგია, მუდმივი ღებინება, მუცლის წარმონაქმნი) ფუნქციური დიაგნოზის დასმამდე აუცილებელია ორგანული პათოლოგიის გამორიცხვა. ACG/CAG-ის მიხედვით ახალგაზრდებში განგაშის ნიშნები ავტომატურად არ ნიშნავს ენდოსკოპიას — გადაწყვეტილება ინდივიდუალურია; NICE უფრო მკაცრია (იხ. ენდოსკოპიის წესები).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "კუჭ-ნაწლავის სისხლდენა",
+   "რკინადეფიციტური ანემია",
+   "უნებლიე წონის კლება",
+   "დისფაგია",
+   "მუდმივი ღებინება"
+  ],
+  "sources": [
+   {
+    "org": "Rome Foundation",
+    "title": "Rome IV Diagnostic Criteria for Disorders of Gut-Brain Interaction — criteria booklet",
+    "year": 2019,
+    "url": "https://theromefoundation.org/wp-content/uploads/Rome-Foundation-Diagnostic-Criteria-Booklet-2019.pdf",
+    "type": "diagnostic_criteria",
+    "supports": "Alarm features (GI bleeding, unexplained iron deficiency anaemia, unintentional weight loss, dysphagia, persistent vomiting, etc.) require clinical evaluation for other diagnoses."
+   },
+   {
+    "org": "ACG/CAG",
+    "title": "ACG and CAG Clinical Guideline: Management of Dyspepsia (Moayyedi et al., Am J Gastroenterol)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/",
+    "type": "guideline",
+    "supports": "Alarm features alone do not automatically mandate endoscopy in patients <60; handled case by case (2017; current edition of the joint ACG/CAG dyspepsia guideline)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-003",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "ახლად აღმოცენებული დისპეფსია, ასაკის მიხედვით ენდოსკოპიის გადაწყვეტა",
+  "recommendation_ka": "ACG/CAG (აშშ/კანადა): 60 წლის და უფროს ასაკში დისპეფსიისას ჩატარდეს ზედა ენდოსკოპია ორგანული პათოლოგიის გამოსარიცხად; კუჭის კიბოს მაღალი რისკის მქონეებს (ოჯახური ანამნეზი, ბავშვობა მაღალი რისკის ქვეყანაში) — უფრო ადრეც. NICE (დიდი ბრიტანეთი) განსხვავებულ ზღვარს იყენებს: 55 წლის და უფროსი ასაკი წონის კლებასთან ერთად — სასწრაფო ენდოსკოპია 2 კვირაში. ზღვრები განსხვავდება და ადგილობრივი პროტოკოლით უნდა შეირჩეს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 60,
+    "unit": "age_years",
+    "meaning_ka": "ACG/CAG ენდოსკოპიის ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 55,
+    "unit": "age_years",
+    "meaning_ka": "NICE ასაკობრივი ზღვარი წონის კლებისას"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სასწრაფო ენდოსკოპიის ვადა (NICE)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG/CAG",
+    "title": "ACG and CAG Clinical Guideline: Management of Dyspepsia (Moayyedi et al., Am J Gastroenterol)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/",
+    "type": "guideline",
+    "supports": "Suggests upper GI endoscopy for dyspepsia patients ≥60 years to exclude organic pathology; higher-risk younger patients may be scoped earlier (2017; current edition of the joint ACG/CAG dyspepsia guideline)."
+   },
+   {
+    "org": "NICE",
+    "title": "Dyspepsia and gastro-oesophageal reflux disease in adults (QS96) — Quality statement 2: Urgent endoscopy",
+    "year": 2015,
+    "url": "https://www.nice.org.uk/guidance/qs96/chapter/Quality-statement-2-Urgent-endoscopy",
+    "type": "quality_standard",
+    "supports": "Adults with dyspepsia or reflux symptoms and dysphagia, or aged ≥55 with weight loss, should have urgent direct-access endoscopy within 2 weeks (current edition of the quality standard)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-004",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "დისპეფსია 60 წლამდე ასაკში განგაშის ნიშნების გარეშე",
+  "recommendation_ka": "ჩაუტარდეს H. pylori-ის არაინვაზიური ტესტი (შარდოვანას სუნთქვითი ტესტი ან განავლის ანტიგენი) და დადებითი შედეგისას — ერადიკაცია („ტესტი და მკურნალობა“). ტესტამდე პროტონული ტუმბოს ინჰიბიტორი (PPI) შეწყდეს მინიმუმ 2 კვირით ადრე (NICE). უარყოფითი ტესტის ან ერადიკაციაზე პასუხის არარსებობისას — PPI-ის საცდელი კურსი. ოფისში ჩატარებული სეროლოგია არ არის რეკომენდებული.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 60,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "PPI-ის შეწყვეტის პერიოდი ტესტამდე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG/CAG",
+    "title": "ACG and CAG Clinical Guideline: Management of Dyspepsia (Moayyedi et al., Am J Gastroenterol)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/",
+    "type": "guideline",
+    "supports": "Patients <60 should have a non-invasive H. pylori test and treatment if positive; if negative or non-responsive, trial of PPI (2017; current edition of the joint ACG/CAG dyspepsia guideline)."
+   },
+   {
+    "org": "NICE",
+    "title": "Gastro-oesophageal reflux disease and dyspepsia in adults: investigation and management (CG184)",
+    "year": 2014,
+    "url": "https://www.nice.org.uk/guidance/cg184",
+    "type": "guideline",
+    "supports": "H. pylori test-and-treat with breath test or stool antigen (or validated laboratory serology); leave a 2-week PPI washout before testing; office-based serology not recommended (published 2014, updated 2019; current edition)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-005",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "გამოუკვლეველი დისპეფსია, ემპირიული მკურნალობა",
+  "recommendation_ka": "NICE-ის მიხედვით შეთავაზდეს PPI სრული დოზით 4 კვირის განმავლობაში ან H. pylori-ის ტესტი და მკურნალობა. დადებითი H. pylori-ისას ერადიკაციის კურსი — 7 დღე, დღეში ორჯერ, სრული დოზის PPI და ანტიბიოტიკების კომბინაცია (ადგილობრივი რეზისტენტობის გათვალისწინებით).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "ემპირიული PPI-ის ხანგრძლივობა"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "ერადიკაციის კურსის ხანგრძლივობა (NICE)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Gastro-oesophageal reflux disease and dyspepsia in adults: investigation and management (CG184)",
+    "year": 2014,
+    "url": "https://www.nice.org.uk/guidance/cg184",
+    "type": "guideline",
+    "supports": "Offer empirical full-dose PPI for 4 weeks to people with dyspepsia; H. pylori eradication as a 7-day twice-daily regimen with full-dose PPI plus antibiotics (published 2014, updated 2019; current edition)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-006",
+  "cluster": "DYSP",
+  "topics": [
+   1
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ფუნქციური დისპეფსია (ენდოსკოპიით პათოლოგია არ არის)",
+  "recommendation_ka": "H. pylori-ის დადებითობისას ჩატარდეს ერადიკაცია. H. pylori-უარყოფით ან ერადიკაციის შემდეგ სიმპტომურ პაციენტებში მკურნალობის რიგითობა: PPI, შემდეგ ტრიციკლური ანტიდეპრესანტი (დაბალი დოზით), შემდეგ პროკინეტიკი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG/CAG",
+    "title": "ACG and CAG Clinical Guideline: Management of Dyspepsia (Moayyedi et al., Am J Gastroenterol)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/",
+    "type": "guideline",
+    "supports": "FD patients with H. pylori should be offered eradication; PPI, then TCA, then prokinetic therapy (in that order) for those H. pylori-negative or not responding (2017; current edition of the joint ACG/CAG dyspepsia guideline)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-007",
+  "cluster": "DYSP",
+  "topics": [
+   1,
+   104
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "დისპეფსია ან რეფლუქსის სიმპტომები დისფაგიასთან ერთად, ნებისმიერ ასაკში",
+  "recommendation_ka": "დისფაგია განგაშის ნიშანია: ზრდასრულს დისფაგიით ჩაუტარდეს სასწრაფო პირდაპირი მიმართვით ენდოსკოპია 2 კვირაში, ასაკის მიუხედავად (NICE). 55 წლის და უფროსს წონის კლებით და ზედა მუცლის ტკივილით, რეფლუქსით ან დისპეფსიით — ასევე სასწრაფო ენდოსკოპია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სასწრაფო ენდოსკოპიის ვადა"
+   },
+   {
+    "value": 55,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი წონის კლებისას"
+   }
+  ],
+  "red_flags_ka": [
+   "დისფაგია",
+   "წონის კლება"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Dyspepsia and gastro-oesophageal reflux disease in adults (QS96) — Quality statement 2: Urgent endoscopy",
+    "year": 2015,
+    "url": "https://www.nice.org.uk/guidance/qs96/chapter/Quality-statement-2-Urgent-endoscopy",
+    "type": "quality_standard",
+    "supports": "Adults with dyspepsia or reflux and dysphagia (any age), or aged ≥55 with weight loss, are offered urgent direct-access upper GI endoscopy within 2 weeks (current edition of the quality standard)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-008",
+  "cluster": "DYSP",
+  "topics": [
+   104
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "დისფაგიის ჩივილი — პირველადი კლასიფიკაცია",
+  "recommendation_ka": "ანამნეზით გაირჩეს ოროფარინგეალური (ყლაპვის დაწყების გაძნელება, ხველა/დახრჩობა ყლაპვისას, ნაზალური რეგურგიტაცია — ხშირად ნევროლოგიური მიზეზი, მაგ. ინსულტი) და ეზოფაგური დისფაგია (საკვების „გაჩხერის“ შეგრძნება მკერდის უკან). ოროფარინგეალური დისფაგიისას ინსტრუმენტული შეფასების ოქროს სტანდარტია ვიდეოფლუოროსკოპიური ყლაპვის კვლევა (VFSS) ან ყლაპვის ბოჭკოვან-ენდოსკოპიური შეფასება (FEES); ინსულტის და რისკის ჯგუფებში რეკომენდებულია ადრეული სკრინინგი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ასპირაცია / ხველა ყლაპვისას",
+   "პნევმონია"
+  ],
+  "sources": [
+   {
+    "org": "ESSD/ESGAR",
+    "title": "ESSD–ESGAR best practice position statements on the technical performance of videofluoroscopic swallowing studies in adults",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12081525/",
+    "type": "position_statement",
+    "supports": "VFSS remain the gold standard for instrumental assessment of oropharyngeal swallowing disorders alongside FEES"
+   },
+   {
+    "org": "Korean Dysphagia Society / Ann Rehabil Med",
+    "title": "Clinical Practice Guidelines for Oropharyngeal Dysphagia",
+    "year": 2023,
+    "url": "https://synapse.koreamed.org/articles/1516083473",
+    "type": "guideline",
+    "supports": "Early screening and videofluoroscopic swallowing assessment are recommended for detecting dysphagia; rehabilitation, nutritional intervention and oral care endorsed"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-009",
+  "cluster": "DYSP",
+  "topics": [
+   104
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ეზოფაგური დისფაგია",
+  "recommendation_ka": "პირველ ეტაპზე ჩატარდეს ზედა ენდოსკოპია სტრუქტურული და ლორწოვანის დაზიანების (სტრიქტურა, სიმსივნე, ეოზინოფილური ეზოფაგიტი) გამოსარიცხად. თუ ენდოსკოპია ნორმალურია და დისფაგია გრძელდება, მოტორიკის დარღვევის შესაფასებლად ჩატარდეს მაღალი გარჩევადობის მანომეტრია (HRM) და, საჭიროებისას, დროში გაწერილი ბარიუმის ეზოფაგოგრამა. ენდოსკოპია ასევე აუცილებელია ფსევდოაქალაზიის (ავთვისებიანი პროცესის) გამოსარიცხად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "წონის კლება",
+   "პროგრესირებადი დისფაგია მყარ საკვებზე"
+  ],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guidelines: Diagnosis and Management of Achalasia (Vaezi et al., Am J Gastroenterol 2020)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32773454/",
+    "type": "guideline",
+    "supports": "Symptomatic patients with suspected achalasia should undergo upper endoscopy to exclude other pathology and pseudoachalasia; high-resolution manometry and timed barium swallow confirm the diagnosis"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-010",
+  "cluster": "DYSP",
+  "topics": [
+   104
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ეოზინოფილური ეზოფაგიტის ეჭვი (დისფაგია, საკვების ჩაჭედვა, განსაკუთრებით ატოპიის ფონზე)",
+  "recommendation_ka": "ენდოსკოპიისას აღებულ იქნეს მინიმუმ 6 მიზნობრივი ბიოფსია საყლაპავის 2 სხვადასხვა დონიდან და ენდოსკოპიური ნიშნები შეფასდეს EREFS სქემით. დიაგნოზი: საყლაპავის დისფუნქციის სიმპტომები და ბიოფსიაში მინიმუმ 15 ეოზინოფილი მაღალი გადიდების ველში, სხვა მიზეზების გამორიცხვით. PPI-ის საცდელი კურსი დიაგნოზისთვის აღარ მოითხოვება (ACG-ის განახლებული გაიდლაინი).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "count",
+    "meaning_ka": "ბიოფსიების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "საყლაპავის დონეების რაოდენობა"
+   },
+   {
+    "value": 15,
+    "unit": "count",
+    "meaning_ka": "ეოზინოფილები მაღალი გადიდების ველში — დიაგნოსტიკური ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Diagnosis and Management of Eosinophilic Esophagitis (Dellon et al., Am J Gastroenterol 2025;120:31-59)",
+    "year": 2025,
+    "url": "https://doi.org/10.14309/ajg.0000000000003194",
+    "type": "guideline",
+    "supports": "Diagnosis based on esophageal dysfunction symptoms plus ≥15 eosinophils/hpf after excluding other causes; obtain ≥6 biopsies from 2 esophageal levels; use EREFS; PPI trial no longer required for diagnosis"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-011",
+  "cluster": "DYSP",
+  "topics": [
+   104
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "დადასტურებული ეოზინოფილური ეზოფაგიტი",
+  "recommendation_ka": "პირველი რიგის ვარიანტებია: PPI, ყლაპვადი ტოპიკური გლუკოკორტიკოიდი ან ემპირიული ელიმინაციური დიეტა; PPI-ზე პასუხის არარსებობისას განიხილება დუპილუმაბი. ფიბროსტენოზური ცვლილებებისას — საყლაპავის დილატაცია. რეციდივი ხშირია მკურნალობის შეწყვეტის შემდეგ, ამიტომ საჭიროა შემანარჩუნებელი თერაპია და კლინიკური, ენდოსკოპიური და ჰისტოლოგიური მონიტორინგი. ბავშვებში კვების დისფუნქციისას დამატებით — კვების თერაპია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Diagnosis and Management of Eosinophilic Esophagitis (Dellon et al., Am J Gastroenterol 2025;120:31-59)",
+    "year": 2025,
+    "url": "https://doi.org/10.14309/ajg.0000000000003194",
+    "type": "guideline",
+    "supports": "Treatment options: PPI, topical steroids, empiric elimination diet, biologic (dupilumab) and dilation; maintenance therapy emphasised; monitoring combines clinical, endoscopic and histologic assessment; feeding therapy adjunctive in children"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DYSP-012",
+  "cluster": "DYSP",
+  "topics": [
+   104
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "დისფაგია როგორც მყარ, ისე თხევად საკვებზე, რეგურგიტაციით, შესაძლოა მკერდის ტკივილით და წონის კლებით",
+  "recommendation_ka": "ეჭვი მიტანილ იქნეს აქალაზიაზე. დიაგნოსტიკური მინიშნებებია: ენდოსკოპიით საყლაპავში შეკავებული ნერწყვი და კუჭ-საყლაპავის შეერთების „დაჭიმული“ შესახედაობა, ეზოფაგოგრამით გაფართოებული საყლაპავი „ფრინველის ნისკარტის“ ნიშნით. HRM განსაზღვრავს 3 ქვეტიპს; მკურნალობის (პნევმატური დილატაცია, მიოტომია, POEM) არჩევა ეფუძნება ქვეტიპს, პაციენტის სურვილს და დაწესებულების გამოცდილებას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "აქალაზიის მანომეტრიული ქვეტიპები"
+   }
+  ],
+  "red_flags_ka": [
+   "წონის კლება"
+  ],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guidelines: Diagnosis and Management of Achalasia (Vaezi et al., Am J Gastroenterol 2020)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32773454/",
+    "type": "guideline",
+    "supports": "Achalasia presents with dysphagia to solids and liquids, regurgitation, chest pain ± weight loss; retained saliva/puckered GEJ on endoscopy and dilated esophagus with bird-beak on esophagram are clues; HRM defines 3 subtypes; therapy choice depends on subtype, patient preference and institutional expertise"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

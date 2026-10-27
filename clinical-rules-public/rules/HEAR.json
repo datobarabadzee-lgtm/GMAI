@@ -1,0 +1,231 @@
+[
+ {
+  "rule_id": "PUB-HEAR-001", "cluster": "HEAR", "topics": [51], "rule_type": "epidemiology", "population": "adult",
+  "condition_ka": "სმენის დაქვეითების განმარტება და გავრცელება",
+  "recommendation_ka": "სმენის დაქვეითებად ითვლება სმენის ზღურბლი 20 დბ-ზე უარესი ერთ ან ორივე ყურში; ინვალიდიზებელი სმენის დაქვეითება — 35 დბ-ზე მეტი უკეთ მსმენელ ყურში. მსოფლიოში დაახლოებით 430 მილიონ ადამიანს სჭირდება სმენის რეაბილიტაცია; 60 წელზე უფროსებში ინვალიდიზებელი დაქვეითება 25%-ზე მეტს აქვს — ხანდაზმულებში სმენა აქტიურად შეაფასეთ.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 20, "unit": "dB", "meaning_ka": "ნორმალური სმენის ზღურბლი"},
+   {"value": 35, "unit": "dB", "meaning_ka": "ინვალიდიზებელი დაქვეითების ზღვარი უკეთ მსმენელ ყურში"},
+   {"value": 430, "unit": "count", "meaning_ka": "მილიონი ადამიანი, რომელსაც რეაბილიტაცია სჭირდება"},
+   {"value": 60, "unit": "age_years", "meaning_ka": "ასაკობრივი ჯგუფი"},
+   {"value": 25, "unit": "%", "meaning_ka": "ინვალიდიზებელი დაქვეითების გავრცელება 60+ ასაკში"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Deafness and hearing loss — fact sheet", "year": 2026, "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss", "type": "fact_sheet", "supports": "Hearing loss = not hearing as well as someone with thresholds of 20 dB or better in both ears; disabling hearing loss >35 dB in the better ear; 430 million require rehabilitation; among those older than 60 years, over 25% have disabling hearing loss."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-002", "cluster": "HEAR", "topics": [51], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "მოზრდილში სმენის დაქვეითების მიზეზის ძიება",
+  "recommendation_ka": "მოზრდილებში ძირითადი მიზეზებია: ასაკობრივი სენსონევრული დაქვეითება, ხმაურის ზემოქმედება, ოტოტოქსიური მედიკამენტები და სამუშაო ქიმიკატები, გოგირდის საცობი, ქრონიკული შუა ოტიტი, ოტოსკლეროზი, თავის ან ყურის ტრავმა, ვირუსული ინფექციები, უეცარი სენსონევრული დაქვეითება, ქრონიკული დაავადებები და მოწევა, გვიანი გამოვლინების გენეტიკური ფორმები. ანამნეზში მიზანმიმართულად იკითხეთ ხმაურზე, მედიკამენტებზე და ოჯახურ ანამნეზზე.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Deafness and hearing loss — fact sheet", "year": 2026, "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss", "type": "fact_sheet", "supports": "Adulthood/older age causes: chronic diseases, smoking, otosclerosis, age-related SNHL, sudden SNHL; across life span: cerumen impaction, ear/head trauma, loud noise, ototoxic medicines, work-related ototoxic chemicals, nutritional deficiencies, viral infections, delayed-onset genetic hearing loss."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-003", "cluster": "HEAR", "topics": [51, 52], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "უეცარი სენსონევრული სმენის დაქვეითება — განმარტება და ეპიდემიოლოგია",
+  "recommendation_ka": "უეცარი სენსონევრული დაქვეითება ოპერაციულად განისაზღვრება, როგორც ≥30 დბ დაქვეითება ≥3 მეზობელ სიხშირეზე, რომელიც ვითარდება ≤72 საათში; ხშირად თან ახლავს ხმაური ყურში ან თავბრუსხვევა. სიხშირე 100000 მოსახლეზე წელიწადში 5–27 შემთხვევაა; შემთხვევათა 90%-ზე მეტი იდიოპათიურია, თუმცა საჭიროა იშვიათი მიზეზების (რეტროკოხლეარული, ინსულტი, აუტოიმუნური) გამორიცხვა.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 30, "unit": "dB", "meaning_ka": "დაქვეითების მინიმალური სიდიდე"},
+   {"value": 3, "unit": "count", "meaning_ka": "მეზობელი სიხშირეების მინიმალური რაოდენობა"},
+   {"value": 72, "unit": "h", "meaning_ka": "განვითარების მაქსიმალური დრო"},
+   {"value": 100000, "unit": "count", "meaning_ka": "მოსახლეობის მნიშვნელი"},
+   {"value": 5, "unit": "per 100000", "meaning_ka": "წლიური სიხშირის ქვედა ზღვარი"},
+   {"value": 27, "unit": "per 100000", "meaning_ka": "წლიური სიხშირის ზედა ზღვარი"},
+   {"value": 90, "unit": "%", "meaning_ka": "იდიოპათიური შემთხვევების წილი"}
+  ],
+  "red_flags_ka": ["უეცარი ცალმხრივი სმენის დაკარგვა"],
+  "sources": [
+   {"org": "AAO-HNSF", "title": "Clinical Practice Guideline: Sudden Hearing Loss (Update) Executive Summary", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31369349/", "type": "guideline", "supports": "Sudden SNHL affects 5 to 27 per 100,000 people annually; frequently accompanied by tinnitus and/or vertigo; over 90% of SSNHL is idiopathic."},
+   {"org": "Iran J Otorhinolaryngol (peer-reviewed systematic review, PMC)", "title": "Efficacy of Intratympanic versus Systemic Corticosteroids in Sudden Sensorineural Hearing Loss: A Systematic Review", "year": 2026, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13459104/", "type": "systematic_review", "supports": "Idiopathic SSNHL operationally defined as >=30 dB hearing loss in >=3 contiguous frequencies occurring within <=72 hours (standard definition)."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-004", "cluster": "HEAR", "topics": [51], "rule_type": "prevention", "population": "adult",
+  "condition_ka": "სმენის დაქვეითების პრევენცია და მაღალი რისკის ჯგუფების სკრინინგი",
+  "recommendation_ka": "მოზრდილებში სმენის დაქვეითების უმეტესი მიზეზი (ხმაური, ოტოტოქსიური მედიკამენტები) პრევენციადია: სამუშაო ადგილზე სმენის დაცვის პროგრამები ხმაურისა და ქიმიკატების ზემოქმედებისას, რეკრეაციული ხმაურის შეზღუდვა (უსაფრთხო მოსმენა), ოტოტოქსიური წამლების რაციონალური გამოყენება. სისტემური სმენის სკრინინგი ჩაუტარეთ ხმაურის ან ქიმიკატების ზემოქმედების ქვეშ მყოფებს, ოტოტოქსიური მედიკამენტების მიმღებებს და ხანდაზმულებს.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Deafness and hearing loss — fact sheet", "year": 2026, "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss", "type": "fact_sheet", "supports": "Most common adult causes such as loud sounds and ototoxic medicines are preventable; occupational hearing conservation, safe listening, rational use of medicines; systematic screening for people exposed to noise/chemicals at work, receiving ototoxic medicines, and older adults."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-005", "cluster": "HEAR", "topics": [51, 52], "rule_type": "evaluation", "population": "older_adult",
+  "condition_ka": "დემენცია, მსუბუქი კოგნიტური დარღვევა ან ინტელექტუალური შეზღუდვა",
+  "recommendation_ka": "უმკურნალებელი სმენის დაქვეითება ზრდის დემენციის და კოგნიტური დაქვეითების დაჩქარების რისკს. დემენციის ან მსუბუქი კოგნიტური დარღვევის (დადასტურებული ან საეჭვო) მქონე პირები გაგზავნეთ აუდიოლოგიურ შეფასებაზე; თუ სმენის დაქვეითება ადრე არ დადგენილა, განიხილეთ შეფასება ყოველ 2 წელიწადში. ინტელექტუალური შეზღუდვის მქონე პირებს შეფასება ჩაუტარეთ ბავშვთა სერვისებიდან მოზრდილთა სერვისებზე გადასვლისას და შემდეგ ყოველ 2 წელიწადში.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "year", "meaning_ka": "განმეორებითი შეფასების ინტერვალი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.1.8-1.1.10", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Consider referring adults with diagnosed or suspected dementia or MCI to audiology; every 2 years if not previously diagnosed with hearing loss; people with learning disability at transfer to adult services and then every 2 years."},
+   {"org": "WHO", "title": "Deafness and hearing loss — fact sheet", "year": 2026, "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss", "type": "fact_sheet", "supports": "Unaddressed hearing loss increases risk of developing dementia and accelerated cognitive decline."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-006", "cluster": "HEAR", "topics": [52], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "მოზრდილი სმენის პრობლემით პირველადი მიმართვისას",
+  "recommendation_ka": "ოტოსკოპიით გამორიცხეთ გოგირდის საცობი და მწვავე ინფექცია (მაგ., გარეთა ოტიტი), შემდეგ დანიშნეთ აუდიოლოგიური შეფასება (ანამნეზი, კომუნიკაციური საჭიროებები, ოტოსკოპია, წმინდა ტონალური აუდიომეტრია, საჭიროებისას ტიმპანომეტრია). უეცარი დაქვეითებისას პირველივე ვიზიტზე გაარჩიეთ სენსონევრული და გამტარებლობითი დაქვეითება (ოტოსკოპია, კამერტონის სინჯები), გამოიკითხეთ ორმხრივი ან განმეორებითი ეპიზოდები და ჩაატარეთ ნევროლოგიური გასინჯვა.",
+  "doses": [], "numeric_values": [],
+  "red_flags_ka": ["კეროვანი ნევროლოგიური სიმპტომები", "ორმხრივი უეცარი დაქვეითება", "განმეორებითი ეპიზოდები"],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.1.1 and 1.5.1", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Exclude impacted wax and acute infections such as otitis externa, then arrange audiological assessment incl. history, otoscopy, pure tone audiometry, tympanometry if indicated."},
+   {"org": "AAO-HNSF", "title": "Clinical Practice Guideline: Sudden Hearing Loss (Update) Executive Summary", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31369349/", "type": "guideline", "supports": "KAS 1: distinguish SNHL from conductive loss at first presentation (strong); KAS 2: assess for bilateral sudden loss, recurrent episodes and/or focal neurologic findings."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-007", "cluster": "HEAR", "topics": [52], "rule_type": "referral", "population": "adult",
+  "condition_ka": "უეცარი ან სწრაფად პროგრესირებადი სმენის დაქვეითება, რომელიც გარეთა ან შუა ყურის მიზეზით არ აიხსნება",
+  "recommendation_ka": "თუ დაქვეითება განვითარდა უეცრად (≤3 დღეში) ბოლო 30 დღის განმავლობაში — მიმართეთ დაუყოვნებლივ (ნახვა 24 საათში) ყელ-ყურ-ცხვირის სამსახურში ან გადაუდებელ განყოფილებაში. თუ უეცარი დაქვეითება 30 დღეზე მეტი ხნის წინ მოხდა, ან სმენა სწრაფად გაუარესდა 4–90 დღის განმავლობაში — სასწრაფო მიმართვა (ნახვა 2 კვირაში) ყელ-ყურ-ცხვირის ან აუდიოვესტიბულურ სამსახურში.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 3, "unit": "day", "meaning_ka": "„უეცარი“ განვითარების ზღვარი"},
+   {"value": 30, "unit": "day", "meaning_ka": "დაწყებიდან გასული დრო"},
+   {"value": 24, "unit": "h", "meaning_ka": "დაუყოვნებელი ნახვის ვადა"},
+   {"value": 4, "unit": "day", "meaning_ka": "სწრაფი გაუარესების ქვედა ზღვარი"},
+   {"value": 90, "unit": "day", "meaning_ka": "სწრაფი გაუარესების ზედა ზღვარი"},
+   {"value": 2, "unit": "week", "meaning_ka": "სასწრაფო ნახვის ვადა"}
+  ],
+  "red_flags_ka": ["უეცარი სმენის დაკარგვა ბოლო 30 დღეში"],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendation 1.1.2", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Sudden (over 3 days or less) within past 30 days: refer immediately (seen within 24 hours) to ENT or ED; sudden >30 days ago or rapid worsening over 4-90 days: refer urgently (seen within 2 weeks) to ENT or audiovestibular medicine."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-008", "cluster": "HEAR", "topics": [52], "rule_type": "red_flag", "population": "adult",
+  "condition_ka": "სმენის დაქვეითება თანმხლები სპეციფიკური ნიშნებით",
+  "recommendation_ka": "დაუყოვნებლივ (ნახვა 24 საათში) მიმართეთ: შეძენილი ცალმხრივი სმენის დაქვეითება იმავე მხარეს მგრძნობელობის დარღვევით ან სახის დაწევით (ინსულტის ეჭვისას — ინსულტის გზით); იმუნოკომპრომისული პაციენტი ყურის ტკივილით და გამონადენით, რომელიც მკურნალობას 72 საათში არ ემორჩილება. ჩინური ან სამხრეთ-აღმოსავლეთ აზიური წარმოშობის მოზრდილში შუა ყურის ეფუზია ზედა სასუნთქი გზების ინფექციის გარეშე — განიხილეთ კიბოს ეჭვის სწრაფი გზით მიმართვა (ცხვირ-ხახის კიბო).",
+  "doses": [],
+  "numeric_values": [
+   {"value": 24, "unit": "h", "meaning_ka": "დაუყოვნებელი ნახვის ვადა"},
+   {"value": 72, "unit": "h", "meaning_ka": "მკურნალობაზე პასუხის მოლოდინი"}
+  ],
+  "red_flags_ka": ["სახის დაწევა ან მგრძნობელობის დარღვევა", "იმუნოსუპრესია + ოტალგია + ოტორეა (ავთვისებიანი გარეთა ოტიტის ეჭვი)", "ცალმხრივი ეფუზია აზიური წარმოშობის მოზრდილში"],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.1.3-1.1.5", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Refer immediately (within 24 h) acquired unilateral hearing loss with ipsilateral altered sensation or facial droop (or stroke pathway); immunocompromised with otalgia and otorrhoea not responding within 72 h; consider suspected cancer pathway for adults of Chinese or south-east Asian origin with hearing loss and middle ear effusion not associated with URTI."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-009", "cluster": "HEAR", "topics": [52], "rule_type": "referral", "population": "adult",
+  "condition_ka": "სმენის დაქვეითება, რომელიც მწვავე გარეთა/შუა ყურის მიზეზით არ აიხსნება — გეგმიური სპეციალისტური მიმართვა",
+  "recommendation_ka": "განიხილეთ მიმართვა ყელ-ყურ-ცხვირის, აუდიოვესტიბულურ ან სპეციალიზებულ აუდიოლოგიურ სამსახურში, თუ: ცალმხრივი ან ასიმეტრიული დაქვეითება; ფლუქტუირებადი დაქვეითება ინფექციის გარეშე; ჰიპერაკუზია; ცალმხრივი, პულსირებადი ან შეცვლილი ხასიათის ხმაური ყურში; არასრულად გამოსწორებული ან განმეორებადი თავბრუსხვევა; ასაკთან დაუკავშირებელი დაქვეითება. ასევე, ყურის ტკივილი 1 კვირაზე მეტ ხანს მკურნალობის მიუხედავად, მუდმივი გამონადენი, დაფის პერფორაცია, პოლიპი, ძვლოვანი/კანის წარმონაქმნი ან შუა ყურის მუდმივი ეფუზია.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 1, "unit": "week", "meaning_ka": "ყურის ტკივილის ხანგრძლივობა"}
+  ],
+  "red_flags_ka": ["პულსირებადი ხმაური ყურში", "ასიმეტრიული სმენის დაქვეითება"],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.1.6-1.1.7", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Consider referral for unilateral/asymmetric loss, fluctuating loss not associated with URTI, hyperacusis, unilateral/pulsatile/changed tinnitus, unresolved or recurrent vertigo, non-age-related loss; and to ENT for ear pain >=1 week not responding, persistent discharge, abnormal ear/eardrum (perforation, polyp, growths), persistent middle ear effusion."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-010", "cluster": "HEAR", "topics": [52], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "უეცარი სმენის დაქვეითება — დიაგნოსტიკური კვლევები",
+  "recommendation_ka": "აუდიომეტრია ჩაატარეთ (ან მიმართეთ) რაც შეიძლება სწრაფად, სიმპტომების დაწყებიდან არაუგვიანეს 14 დღისა, სენსონევრული დაქვეითების დასადასტურებლად. ნუ დანიშნავთ თავის რუტინულ კომპიუტერულ ტომოგრაფიას საწყის შეფასებაში (საფეთქლის ძვლის მიზანმიმართული კტ ამ აკრძალვაში არ შედის) და ნუ ჩაატარებთ რუტინულ ლაბორატორიულ კვლევებს. რეტროკოხლეარული პათოლოგიის გამოსარიცხად საჭიროა მაგნიტურ-რეზონანსული ტომოგრაფია ან სმენის ღეროვანი გამოწვეული პოტენციალები.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 14, "unit": "day", "meaning_ka": "აუდიომეტრიის მაქსიმალური ვადა"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "AAO-HNSF", "title": "Clinical Practice Guideline: Sudden Hearing Loss (Update) Executive Summary", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31369349/", "type": "guideline", "supports": "KAS 4: audiometry as soon as possible (within 14 days of onset); KAS 3: no routine head CT (targeted temporal bone CT excluded); KAS 5: no routine laboratory tests; KAS 6: evaluate for retrocochlear pathology with MRI or ABR."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-011", "cluster": "HEAR", "topics": [52], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "სენსონევრული სმენის დაქვეითება — შიდა სასმენი არხის მრტ-ის ჩვენებები",
+  "recommendation_ka": "შიდა სასმენი არხების მრტ შესთავაზეთ ლოკალიზებადი ნიშნების (მაგ., სახის ნერვის სისუსტე) არსებობისას, რაც ვესტიბულურ შვანომაზე ან ხიდ-ნათხემის კუთხის წარმონაქმნზე მიუთითებს, ზღურბლების მიუხედავად. ლოკალიზებადი ნიშნების გარეშე მრტ განიხილეთ, თუ წმინდა ტონალურ აუდიომეტრიაზე ყურებს შორის ასიმეტრია ≥15 დბ-ია ნებისმიერ 2 მეზობელ სიხშირეზე (500, 1000, 2000, 4000, 8000 ჰც).",
+  "doses": [],
+  "numeric_values": [
+   {"value": 15, "unit": "dB", "meaning_ka": "ასიმეტრიის ზღვარი"},
+   {"value": 2, "unit": "count", "meaning_ka": "მეზობელი სიხშირეების რაოდენობა"},
+   {"value": 500, "unit": "Hz", "meaning_ka": "ტესტის სიხშირე"},
+   {"value": 1000, "unit": "Hz", "meaning_ka": "ტესტის სიხშირე"},
+   {"value": 2000, "unit": "Hz", "meaning_ka": "ტესტის სიხშირე"},
+   {"value": 4000, "unit": "Hz", "meaning_ka": "ტესტის სიხშირე"},
+   {"value": 8000, "unit": "Hz", "meaning_ka": "ტესტის სიხშირე"}
+  ],
+  "red_flags_ka": ["სახის ნერვის სისუსტე სმენის დაქვეითებით"],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.3.1-1.3.2", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Offer MRI of internal auditory meati with localising symptoms/signs (e.g. facial nerve weakness) irrespective of thresholds; consider MRI for SNHL without localising signs if asymmetry of 15 dB or more at any 2 adjacent frequencies (0.5, 1, 2, 4, 8 kHz)."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-012", "cluster": "HEAR", "topics": [52], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "იდიოპათიური უეცარი სენსონევრული სმენის დაქვეითება",
+  "recommendation_ka": "განიხილეთ კორტიკოსტეროიდი საწყის თერაპიად, დაწყებული სიმპტომებიდან 2 კვირის განმავლობაში, ერთობლივი გადაწყვეტილებით (ეფექტიანობის მტკიცებულება შეზღუდულია). არასრული აღდგენისას 2–6 კვირაში შესთავაზეთ ინტრატიმპანური სტეროიდი. ჰიპერბარიული ოქსიგენაცია სტეროიდთან ერთად შეიძლება განიხილოთ 2 კვირის ფარგლებში საწყისად ან 1 თვის ფარგლებში სამაშველო თერაპიად. რუტინულად ნუ დანიშნავთ ანტივირუსულ, თრომბოლიზურ, ვაზოდილატატორულ ან ვაზოაქტიურ საშუალებებს. სტეროიდის კონკრეტული დოზა გაიდლაინებში ერთიანი არ არის — აირჩიეთ სპეციალისტთან ერთად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "week", "meaning_ka": "საწყისი სტეროიდის/ჰბო-ს დაწყების ვადა; ასევე სამაშველო ფანჯრის დასაწყისი"},
+   {"value": 6, "unit": "week", "meaning_ka": "ინტრატიმპანური სამაშველო თერაპიის ფანჯრის ბოლო"},
+   {"value": 1, "unit": "month", "meaning_ka": "სამაშველო ჰბო-ს ვადა"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "AAO-HNSF", "title": "Clinical Practice Guideline: Sudden Hearing Loss (Update) Executive Summary", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31369349/", "type": "guideline", "supports": "KAS 8 option: corticosteroids within 2 weeks of onset; KAS 9a/9b: HBOT combined with steroids within 2 weeks (initial) or within 1 month (salvage); KAS 10: intratympanic steroid for incomplete recovery 2-6 weeks after onset; KAS 11: do not routinely prescribe antivirals, thrombolytics, vasodilators or vasoactive substances; KAS 7 shared decision making."},
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendation 1.4.1", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Consider a steroid to treat idiopathic sudden sensorineural hearing loss in adults."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-013", "cluster": "HEAR", "topics": [52], "rule_type": "monitoring", "population": "adult",
+  "condition_ka": "უეცარი სენსონევრული დაქვეითების მკურნალობის შემდეგ",
+  "recommendation_ka": "განმეორებითი აუდიომეტრია ჩაატარეთ მკურნალობის დასრულებისას და მკურნალობის დასრულებიდან 6 თვის განმავლობაში. ნარჩენი სმენის დაქვეითების ან ხმაურის შემთხვევაში პაციენტს აუხსენით აუდიოლოგიური რეაბილიტაციის (სასმენი აპარატი, დამხმარე მოწყობილობები) შესაძლო სარგებელი.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 6, "unit": "month", "meaning_ka": "საკონტროლო აუდიომეტრიის ვადა"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "AAO-HNSF", "title": "Clinical Practice Guideline: Sudden Hearing Loss (Update) Executive Summary", "year": 2019, "url": "https://pubmed.ncbi.nlm.nih.gov/31369349/", "type": "guideline", "supports": "KAS 12: follow-up audiometric evaluation at conclusion of treatment and within 6 months of completion; KAS 13 (strong): counsel patients with residual hearing loss and/or tinnitus about audiological rehabilitation."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-014", "cluster": "HEAR", "topics": [51, 52], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "გოგირდის საცობი, რომელიც იწვევს სმენის დაქვეითებას ან ხელს უშლის ყურის გასინჯვას",
+  "recommendation_ka": "მოაშორეთ პირველად ან თემის დონეზე. ნუ გამოიყენებთ ხელით შპრიცით გამორეცხვას; გამოიყენეთ ელექტრონული ირიგატორი, მიკროასპირაცია ან ზონდით მოშორება გაწვრთნილი პერსონალის მიერ, უკუჩვენებების გათვალისწინებით. ირიგაციამდე გამოიყენეთ გოგირდის დამარბილებელი წვეთები (უშუალოდ წინ ან 5 დღემდე). წარუმატებლობისას გაიმეორეთ დამარბილებელი ან ჩაასხით წყალი 15 წუთით ადრე; მეორე წარუმატებელი ცდის შემდეგ მიმართეთ სპეციალიზებულ სამსახურს. ურჩიეთ, არ გამოიყენოს ბამბის ჩხირები.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 5, "unit": "day", "meaning_ka": "დამარბილებლის გამოყენების მაქსიმალური ხანგრძლივობა ირიგაციამდე"},
+   {"value": 15, "unit": "min", "meaning_ka": "წყლის ჩასხმა განმეორებით ირიგაციამდე"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.2.1-1.2.5", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Do not offer manual syringing; consider electronic irrigation, microsuction or manual removal by trained practitioners; wax softeners immediately before or up to 5 days before; if unsuccessful repeat softeners or instil water 15 minutes before repeating; refer after second failed attempt; advise against cotton buds."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAR-015", "cluster": "HEAR", "topics": [52], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "სმენის დაქვეითება, რომელიც ზღუდავს კომუნიკაციას",
+  "recommendation_ka": "შესთავაზეთ სასმენი აპარატი, ხოლო ორმხრივი კორექტირებადი დაქვეითებისას — ორი აპარატი (უკეთესი მეტყველების გარჩევა ხმაურში და ბგერის ლოკალიზაცია). მიაწოდეთ ინფორმაცია დამხმარე მოწყობილობებზე (პერსონალური მარყუჟი, ტელეფონის/ტელევიზორის გამაძლიერებელი, ვიზუალური სიგნალიზაცია). საკონტროლო აუდიოლოგიური ვიზიტი დანიშნეთ მორგებიდან 6–12 კვირაში. მძიმე ან ღრმა სიყრუისას, თუ აპარატი არასაკმარის სარგებელს იძლევა, განიხილეთ კოხლეარული იმპლანტაციისთვის მიმართვა.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 6, "unit": "week", "meaning_ka": "საკონტროლო ვიზიტის ქვედა ზღვარი"},
+   {"value": 12, "unit": "week", "meaning_ka": "საკონტროლო ვიზიტის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Hearing loss in adults: assessment and management (NG98), recommendations 1.6-1.7", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng98/chapter/Recommendations", "type": "guideline", "supports": "Offer hearing aids when hearing loss affects ability to communicate; offer 2 hearing aids for aidable loss in both ears; information on assistive listening devices; follow-up 6 to 12 weeks after fitting; cochlear implants (TA566) for severe to profound deafness without adequate benefit from acoustic hearing aids."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

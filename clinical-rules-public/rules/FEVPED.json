@@ -1,0 +1,574 @@
+[
+ {
+  "rule_id": "PUB-FEVPED-001",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "red_flag",
+  "population": "infant",
+  "condition_ka": "ცხელება 3 თვემდე ასაკის ჩვილში",
+  "recommendation_ka": "3 თვემდე ასაკის ჩვილი, რომლის ტემპერატურაა 38 °C ან მეტი, სერიოზული ინფექციის მაღალი რისკის ჯგუფს მიეკუთვნება: საჭიროა სასწრაფო შეფასება სტაციონარში, მიუხედავად ზოგადი მდგომარეობისა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   },
+   {
+    "value": 38,
+    "unit": "°C",
+    "meaning_ka": "ტემპერატურის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ტემპერატურა 38 °C ან მეტი 3 თვემდე ასაკში"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Fever in under 5s: assessment and initial management (NG143) — recommendations",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng143/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Children <3 months with temperature ≥38 °C are high risk for serious illness; 3–6 months with ≥39 °C at least intermediate risk. Use the traffic light system (red = high, amber = intermediate). Red features include neck stiffness, status epilepticus, focal neurological signs/seizures, pale/mottled/ashen/blue skin, lips or tongue."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-002",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "red_flag",
+  "population": "infant",
+  "condition_ka": "ცხელება 3–6 თვის ჩვილში",
+  "recommendation_ka": "3–6 თვის ასაკში ტემპერატურა 39 °C ან მეტი სერიოზული დაავადების სულ მცირე საშუალო რისკს ნიშნავს: საჭიროა პირისპირ შეფასება ექიმის მიერ და უსაფრთხოების ქსელის (ზუსტი მითითება, როდის დაბრუნდნენ) უზრუნველყოფა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "age_months",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   },
+   {
+    "value": 39,
+    "unit": "°C",
+    "meaning_ka": "ტემპერატურის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Fever in under 5s: assessment and initial management (NG143) — recommendations",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng143/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Children <3 months with temperature ≥38 °C are high risk for serious illness; 3–6 months with ≥39 °C at least intermediate risk. Use the traffic light system (red = high, amber = intermediate). Red features include neck stiffness, status epilepticus, focal neurological signs/seizures, pale/mottled/ashen/blue skin, lips or tongue."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-003",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "აუხსნელი ცხელება 5 წლამდე ბავშვში",
+  "recommendation_ka": "რისკი შეაფასეთ და დააფიქსირეთ „შუქნიშნის“ სისტემით (ფერი, აქტივობა, სუნთქვა, ჰიდრატაცია, სხვა ნიშნები). „წითელი“ ნიშანი — მაღალი რისკი, სასწრაფო შეფასება სტაციონარში; „ქარვისფერი“ — საშუალო რისკი, პირისპირ შეფასება და უსაფრთხოების ქსელი; მხოლოდ „მწვანე“ — სახლში მოვლა მშობლისთვის მკაფიო რჩევებით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "კისრის რიგიდობა",
+   "ეპილეფსიური სტატუსი",
+   "კეროვანი ნევროლოგიური ნიშნები ან კეროვანი კრუნჩხვა",
+   "ფერმკრთალი, მარმარილოსებრი, ნაცრისფერი ან ციანოზური კანი, ტუჩები ან ენა"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Fever in under 5s: assessment and initial management (NG143) — recommendations",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng143/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Children <3 months with temperature ≥38 °C are high risk for serious illness; 3–6 months with ≥39 °C at least intermediate risk. Use the traffic light system (red = high, amber = intermediate). Red features include neck stiffness, status epilepticus, focal neurological signs/seizures, pale/mottled/ashen/blue skin, lips or tongue."
+   },
+   {
+    "org": "NICE",
+    "title": "Fever in under 5s — quality standard QS64, statement 1: risk of serious illness",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/qs64/chapter/quality-statement-1-risk-of-serious-illness",
+    "type": "quality_standard",
+    "supports": "Children under 5 with unexplained fever should have risk of serious illness assessed and recorded with the traffic light system; any red feature = high risk, any amber feature = intermediate risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-004",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ცხელებიანი ბავშვი, სიცხის დამწევის საჭიროების შეფასება",
+  "recommendation_ka": "სიცხის დამწევი (პარაცეტამოლი ან იბუპროფენი) მიეცით მხოლოდ მაშინ, როცა ბავშვი შეწუხებულია, და არა მხოლოდ ტემპერატურის დასაწევად. სიცხის დამწევი ფებრილურ კრუნჩხვას არ აცილებს და ამ მიზნით არ გამოიყენება. ტილოთი გრილი წყლით წმენდა არ არის რეკომენდებული. ორივე პრეპარატი ერთდროულად არ მისცეთ; მონაცვლეობა განიხილეთ მხოლოდ მაშინ, თუ შეწუხება შემდეგ დოზამდე გრძელდება ან ბრუნდება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Fever in under 5s: assessment and initial management (NG143) — antipyretic interventions",
+    "year": 2019,
+    "url": "https://www.nice.org.uk/guidance/ng143",
+    "type": "guideline",
+    "supports": "Antipyretics (paracetamol or ibuprofen) for children who appear distressed, not solely to reduce temperature and not to prevent febrile convulsions; tepid sponging not recommended; do not give both agents simultaneously, consider alternating only if distress persists or recurs before next dose."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-005",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ცხელებით გამოწვეული დისკომფორტი ბავშვში",
+  "recommendation_ka": "პარაცეტამოლი 15 მგ/კგ ერთ დოზაზე პერორალურად ყოველ 6 სთ-ში საჭიროებისამებრ (WHO); ალტერნატივა — იბუპროფენი 10 მგ/კგ ერთ დოზაზე. დოზა გამოთვალეთ წონით და არა ასაკით; გამოიყენეთ საზომი შპრიცი.",
+  "doses": [
+   {
+    "drug": "paracetamol",
+    "amount": 15,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "every 6 h as needed",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ibuprofen",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "every 6-8 h as needed",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "ინტერვალი პარაცეტამოლის დოზებს შორის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Pocket book of hospital care for children, 2nd edition (current edition)",
+    "year": 2013,
+    "url": "https://www.who.int/publications/i/item/978-92-4-154837-3",
+    "type": "guideline",
+    "supports": "Current edition: paracetamol 15 mg/kg every 6 hours for fever causing discomfort in children."
+   },
+   {
+    "org": "BMJ (Hay AD et al.)",
+    "title": "Paracetamol plus ibuprofen for the treatment of fever in children (PITCH): randomised controlled trial",
+    "year": 2008,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2528896/",
+    "type": "rct",
+    "supports": "Remains the current key trial: paracetamol 15 mg/kg and ibuprofen 10 mg/kg per dose; combination gave less time with fever in the first 4 h than paracetamol alone; comparison with ibuprofen alone inconclusive."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-006",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "evaluation",
+  "population": "infant",
+  "condition_ka": "კარგი ზოგადი მდგომარეობის ცხელებიანი ჩვილი 8–28 დღის ასაკში",
+  "recommendation_ka": "8–21 დღის ასაკში: სრული გამოკვლევა — შარდის ანალიზი და კულტურა, სისხლის კულტურა, ლუმბალური პუნქცია — და ემპირიული პარენტერალური ანტიბიოტიკი, სტაციონარში. 22–28 დღის ასაკში: სავალდებულოა შარდის ანალიზი, სისხლის კულტურა და ანთების მარკერები; ლუმბალური პუნქციისა და ჰოსპიტალიზაციის გადაწყვეტილება მარკერების შედეგს ეყრდნობა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "age_days",
+    "meaning_ka": "ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 21,
+    "unit": "age_days",
+    "meaning_ka": "პირველი ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 22,
+    "unit": "age_days",
+    "meaning_ka": "მეორე ჯგუფის ქვედა ზღვარი"
+   },
+   {
+    "value": 28,
+    "unit": "age_days",
+    "meaning_ka": "მეორე ჯგუფის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Clinical Practice Guideline: Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old (Pediatrics 2021;148(2):e2021052228)",
+    "year": 2021,
+    "url": "https://doi.org/10.1542/peds.2021-052228",
+    "type": "guideline",
+    "supports": "Age-stratified approach: 8–21 days full evaluation including CSF and empirical antibiotics; 22–28 days urinalysis, blood culture and inflammatory markers required; 29–60 days LP may be avoided when inflammatory markers normal. Abnormal markers: procalcitonin >0.5 ng/mL, ANC >4000/mm3 (>5200 if procalcitonin unavailable), CRP >20 mg/L, temperature >38.5 °C."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-007",
+  "cluster": "FEVPED",
+  "topics": [
+   39
+  ],
+  "rule_type": "evaluation",
+  "population": "infant",
+  "condition_ka": "კარგი ზოგადი მდგომარეობის ცხელებიანი ჩვილი 29–60 დღის ასაკში; ანთების მარკერების ინტერპრეტაცია",
+  "recommendation_ka": "ანთების მარკერი ანომალიურად ითვლება: პროკალციტონინი 0.5 ნგ/მლ-ზე მეტი, ნეიტროფილების აბსოლუტური რაოდენობა 4000/მმ3-ზე მეტი (პროკალციტონინის არარსებობისას ზღვარი 5200/მმ3), CRP 20 მგ/ლ-ზე მეტი ან ტემპერატურა 38.5 °C-ზე მეტი. 29–60 დღის ჩვილში ნორმალური მარკერებისა და ნორმალური შარდის ანალიზისას ლუმბალური პუნქცია შეიძლება არ ჩატარდეს და შესაძლებელია ამბულატორიული მეთვალყურეობა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 29,
+    "unit": "age_days",
+    "meaning_ka": "ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 60,
+    "unit": "age_days",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   },
+   {
+    "value": 0.5,
+    "unit": "ng/mL",
+    "meaning_ka": "პროკალციტონინის ზღვარი"
+   },
+   {
+    "value": 4000,
+    "unit": "cells/µL",
+    "meaning_ka": "ნეიტროფილების ზღვარი"
+   },
+   {
+    "value": 5200,
+    "unit": "cells/µL",
+    "meaning_ka": "ნეიტროფილების ზღვარი პროკალციტონინის გარეშე"
+   },
+   {
+    "value": 20,
+    "unit": "mg/L",
+    "meaning_ka": "CRP-ის ზღვარი"
+   },
+   {
+    "value": 38.5,
+    "unit": "°C",
+    "meaning_ka": "ტემპერატურის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Clinical Practice Guideline: Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old (Pediatrics 2021;148(2):e2021052228)",
+    "year": 2021,
+    "url": "https://doi.org/10.1542/peds.2021-052228",
+    "type": "guideline",
+    "supports": "Age-stratified approach: 8–21 days full evaluation including CSF and empirical antibiotics; 22–28 days urinalysis, blood culture and inflammatory markers required; 29–60 days LP may be avoided when inflammatory markers normal. Abnormal markers: procalcitonin >0.5 ng/mL, ANC >4000/mm3 (>5200 if procalcitonin unavailable), CRP >20 mg/L, temperature >38.5 °C."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-008",
+  "cluster": "FEVPED",
+  "topics": [
+   40
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "უცნობი წარმოშობის ცხელების მიზეზთა სიხშირე ბავშვებში",
+  "recommendation_ka": "სისტემური მიმოხილვის მიხედვით, მიზეზი ინფექციაა დაახლოებით 51%-ში, შემაერთებელი ქსოვილის (კოლაგენურ-ვასკულური) დაავადება — 9%-ში, სიმსივნე — 6%-ში, სხვადასხვა არაინფექციური მდგომარეობა — 11%-ში, ხოლო 23%-ში დიაგნოზი არ დგინდება. ახალ მიმოხილვებში ინფექციის შემდეგ მეორე ადგილს ანთებითი, მესამეს კი სიმსივნური მიზეზები იკავებს, ხოლო დაუდგენელთა წილი მცირდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 51,
+    "unit": "%",
+    "meaning_ka": "ინფექცია"
+   },
+   {
+    "value": 9,
+    "unit": "%",
+    "meaning_ka": "კოლაგენურ-ვასკულური დაავადება"
+   },
+   {
+    "value": 6,
+    "unit": "%",
+    "meaning_ka": "სიმსივნე"
+   },
+   {
+    "value": 11,
+    "unit": "%",
+    "meaning_ka": "სხვადასხვა"
+   },
+   {
+    "value": 23,
+    "unit": "%",
+    "meaning_ka": "დაუდგენელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "World Journal of Pediatrics (Chow A, Robinson JL)",
+    "title": "Fever of unknown origin in children: a systematic review",
+    "year": 2011,
+    "url": "https://link.springer.com/doi/10.1007/s12519-011-0240-5",
+    "type": "systematic_review",
+    "supports": "Still the current pooled systematic review: 18 case series, 1638 children — infection 51%, collagen vascular 9%, malignancy 6%, miscellaneous 11%, undiagnosed 23%. Most common infections: brucellosis, TB, typhoid in developing countries; osteomyelitis, TB, bartonellosis in developed countries."
+   },
+   {
+    "org": "Children (MDPI; Trapani S et al.)",
+    "title": "Update on Fever of Unknown Origin in Children: Focus on Etiologies and Clinical Approach",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10814770/",
+    "type": "review",
+    "supports": "Infections are the most common cause of pediatric FUO, followed by inflammatory and neoplastic conditions, with a decreasing proportion undiagnosed; no proposed diagnostic/therapeutic approach has been fully validated in children."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-009",
+  "cluster": "FEVPED",
+  "topics": [
+   40
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვის უცნობი წარმოშობის ცხელების ინფექციური მიზეზები გეოგრაფიის მიხედვით",
+  "recommendation_ka": "ბაქტერიული ინფექციები ჭარბობს. განვითარებად ქვეყნებში ყველაზე ხშირია ბრუცელოზი, ტუბერკულოზი და მუცლის ტიფი; განვითარებულ ქვეყნებში — ოსტეომიელიტი, ტუბერკულოზი და ბარტონელოზი. ანამნეზში განსაკუთრებით გაარკვიეთ შინაური ცხოველები და აუდუღარი რძის პროდუქტები, კატასთან კონტაქტი, ტუბერკულოზით დაავადებულთან კონტაქტი და მოგზაურობა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "World Journal of Pediatrics (Chow A, Robinson JL)",
+    "title": "Fever of unknown origin in children: a systematic review",
+    "year": 2011,
+    "url": "https://link.springer.com/doi/10.1007/s12519-011-0240-5",
+    "type": "systematic_review",
+    "supports": "Still the current pooled systematic review: 18 case series, 1638 children — infection 51%, collagen vascular 9%, malignancy 6%, miscellaneous 11%, undiagnosed 23%. Most common infections: brucellosis, TB, typhoid in developing countries; osteomyelitis, TB, bartonellosis in developed countries."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-010",
+  "cluster": "FEVPED",
+  "topics": [
+   40
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "უცნობი წარმოშობის ცხელება ბავშვში, გამოკვლევის დაგეგმვა",
+  "recommendation_ka": "ბავშვებში არცერთი დიაგნოსტიკური ალგორითმი სრულად ვალიდირებული არ არის: გამოკვლევა ეტაპობრივად წარმართეთ დეტალური ანამნეზისა და განმეორებითი გასინჯვის მიხედვით, თავდაპირველად გამორიცხეთ ინფექციები, შემდეგ ანთებითი (მაგ., იუვენილური ართრიტი) და სიმსივნური დაავადებები. ზოგად ცუდ მდგომარეობაში ან ციტოპენიისას მიმართეთ ბავშვთა ინფექციონისტს, რევმატოლოგს ან ჰემატოლოგ-ონკოლოგს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ციტოპენია",
+   "წონის კლება",
+   "ჰეპატოსპლენომეგალია"
+  ],
+  "sources": [
+   {
+    "org": "Children (MDPI; Trapani S et al.)",
+    "title": "Update on Fever of Unknown Origin in Children: Focus on Etiologies and Clinical Approach",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10814770/",
+    "type": "review",
+    "supports": "Infections are the most common cause of pediatric FUO, followed by inflammatory and neoplastic conditions, with a decreasing proportion undiagnosed; no proposed diagnostic/therapeutic approach has been fully validated in children."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-011",
+  "cluster": "FEVPED",
+  "topics": [
+   37
+  ],
+  "rule_type": "diagnosis",
+  "population": "child",
+  "condition_ka": "რეგულარულად განმეორებადი ცხელების ეპიზოდები ბავშვში აფთოზური სტომატიტით, ფარინგიტით ან კისრის ადენიტით",
+  "recommendation_ka": "ეჭვი მიიტანეთ PFAPA სინდრომზე: ცხელების პერიოდული ეპიზოდები, რომლებსაც თან ახლავს აფთოზური სტომატიტი, ფარინგიტი და/ან კისრის ლიმფადენიტი, ხოლო ეპიზოდებს შორის ბავშვი სრულიად ჯანმრთელია და ნორმალურად იზრდება. დიაგნოზი კლინიკურია და გამორიცხვითი: გამორიცხეთ ციკლური ნეიტროპენია (სისხლის ანალიზი ეპიზოდის დროს) და სხვა მემკვიდრეობითი აუტოანთებითი სინდრომები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CARRA PFAPA work group (Pediatric Rheumatology)",
+    "title": "Consensus treatment plans for PFAPA: a framework to evaluate treatment responses",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7157990/",
+    "type": "consensus",
+    "supports": "Considerable heterogeneity in PFAPA management and lack of evidence-based guidelines; consensus treatment plans defined arms including antipyretics, abortive corticosteroids, prophylaxis and tonsillectomy, with standardized response criteria."
+   },
+   {
+    "org": "Pediatric Rheumatology (Vanoni F et al.)",
+    "title": "PFAPA syndrome: a review on treatment and outcome",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4924332",
+    "type": "review",
+    "supports": "Current reference review: single dose prednisone 1–2 mg/kg or betamethasone 0.1–0.2 mg/kg at episode onset aborts fever within hours; steroids do not prevent attacks and the interval may shorten in 25–50%; colchicine for prophylaxis; tonsillectomy option in selected patients."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-012",
+  "cluster": "FEVPED",
+  "topics": [
+   37
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "PFAPA სინდრომის ეპიზოდის დაწყება",
+  "recommendation_ka": "აბორტული თერაპია: პრედნიზონი 1–2 მგ/კგ ერთჯერადად ან ბეტამეთაზონი 0.1–0.2 მგ/კგ ერთჯერადად ეპიზოდის დასაწყისში; ცხელება ჩვეულებრივ რამდენიმე საათში ქრება. გააფრთხილეთ მშობლები, რომ სტეროიდი შემდეგ ეპიზოდს არ აცილებს და 25–50%-ში ეპიზოდებს შორის ინტერვალი შეიძლება შემცირდეს.",
+  "doses": [
+   {
+    "drug": "prednisone",
+    "amount": 1,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "single dose at episode onset",
+    "population": "child",
+    "max_amount": 2,
+    "max_unit": "mg/kg"
+   },
+   {
+    "drug": "betamethasone",
+    "amount": 0.1,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "single dose at episode onset",
+    "population": "child",
+    "max_amount": 0.2,
+    "max_unit": "mg/kg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 25,
+    "unit": "%",
+    "meaning_ka": "ინტერვალის შემცირების სიხშირის ქვედა ზღვარი"
+   },
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "ინტერვალის შემცირების სიხშირის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Pediatric Rheumatology (Vanoni F et al.)",
+    "title": "PFAPA syndrome: a review on treatment and outcome",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4924332",
+    "type": "review",
+    "supports": "Current reference review: single dose prednisone 1–2 mg/kg or betamethasone 0.1–0.2 mg/kg at episode onset aborts fever within hours; steroids do not prevent attacks and the interval may shorten in 25–50%; colchicine for prophylaxis; tonsillectomy option in selected patients."
+   },
+   {
+    "org": "CARRA PFAPA work group (Pediatric Rheumatology)",
+    "title": "Consensus treatment plans for PFAPA: a framework to evaluate treatment responses",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7157990/",
+    "type": "consensus",
+    "supports": "Considerable heterogeneity in PFAPA management and lack of evidence-based guidelines; consensus treatment plans defined arms including antipyretics, abortive corticosteroids, prophylaxis and tonsillectomy, with standardized response criteria."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVPED-013",
+  "cluster": "FEVPED",
+  "topics": [
+   37
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "PFAPA სინდრომი ხშირი ან ცხოვრების ხარისხზე მნიშვნელოვნად მოქმედი ეპიზოდებით",
+  "recommendation_ka": "მკურნალობა ინდივიდუალურია: განიხილეთ პროფილაქტიკა კოლხიცინით (ბავშვთა რევმატოლოგის მეთვალყურეობით) ან, შერჩეულ პაციენტებში, ტონზილექტომია — ბავშვთა ოტორინოლარინგოლოგთან კონსულტაციით. მკურნალობის პასუხი შეაფასეთ სტანდარტიზებული კრიტერიუმებით (ეპიზოდების სიხშირე და ხანგრძლივობა).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Pediatric Rheumatology (Vanoni F et al.)",
+    "title": "PFAPA syndrome: a review on treatment and outcome",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4924332",
+    "type": "review",
+    "supports": "Current reference review: single dose prednisone 1–2 mg/kg or betamethasone 0.1–0.2 mg/kg at episode onset aborts fever within hours; steroids do not prevent attacks and the interval may shorten in 25–50%; colchicine for prophylaxis; tonsillectomy option in selected patients."
+   },
+   {
+    "org": "CARRA PFAPA work group (Pediatric Rheumatology)",
+    "title": "Consensus treatment plans for PFAPA: a framework to evaluate treatment responses",
+    "year": 2020,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7157990/",
+    "type": "consensus",
+    "supports": "Considerable heterogeneity in PFAPA management and lack of evidence-based guidelines; consensus treatment plans defined arms including antipyretics, abortive corticosteroids, prophylaxis and tonsillectomy, with standardized response criteria."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

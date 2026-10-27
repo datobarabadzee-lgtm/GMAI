@@ -1,0 +1,1469 @@
+[
+ {
+  "rule_id": "PUB-OSTEOP-001",
+  "cluster": "OSTEOP",
+  "topics": [
+   101,
+   102
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ოსტეოპოროზის დიაგნოზი პოსტმენოპაუზურ ქალსა და 50 წელზე უფროს მამაკაცში",
+  "recommendation_ka": "DXA-ით: T-ქულა −2.5 ან ნაკლები ბარძაყის ყელში, მთლიან ბარძაყში ან წელის მალებში — ოსტეოპოროზი; −1.0-დან −2.5-მდე — ძვლის დაბალი მასა (ოსტეოპენია). ოსტეოპოროზის დიაგნოზი ასევე ისმება ზრდასრულ ასაკში დაბალი ენერგიის (საკუთარი სიმაღლიდან ან უფრო დაბლიდან დაცემით) მოტეხილობისას და შენარჩუნდება მაშინაც, თუ შემდგომი T-ქულა −2.5-ზე მაღალია. ბარძაყის ყლის T-ქულა ქალებშიც და მამაკაცებშიც გამოითვლება ახალგაზრდა ქალების (NHANES III) ნორმით. ხანდაზმულებში წელის მალების BMD შეიძლება ხელოვნურად მომატებული იყოს დეგენერაციული ცვლილებების გამო. რაოდენობრივი ულტრაბგერა დიაგნოზისთვის არ გამოიყენოთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპოროზის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 1.0,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპენიის ზედა ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "WHO classification: T-score between −1.0 and −2.5 low bone mass, at or below −2.5 osteoporosis; maintain diagnosis of osteoporosis in patients diagnosed by adult fracture or T-score ≤ −2.5 even if subsequent T-score is above −2.5."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Operational definition T-score ≤ −2.5; fragility fracture = low-trauma fracture from standing height or less; femoral neck T-scores in men and women use NHANES III young female reference; spine may be unreliable in older people due to degenerative change; quantitative ultrasound not recommended for diagnosis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-002",
+  "cluster": "OSTEOP",
+  "topics": [
+   101
+  ],
+  "rule_type": "evaluation",
+  "population": "older_adult",
+  "condition_ka": "ოსტეოპოროზის სკრინინგი ქალებში მოტეხილობის ანამნეზის გარეშე",
+  "recommendation_ka": "USPSTF (2025): სკრინინგი (ცენტრალური DXA) ყველა ქალს 65 წლიდან; 65 წლამდე პოსტმენოპაუზურ ქალებში ჯერ შეაფასეთ რისკ-ფაქტორები (დაბალი წონა, მშობლის ბარძაყის მოტეხილობა, მოწევა, ალკოჰოლის ჭარბი მოხმარება), 1 ან მეტი ფაქტორისას — კლინიკური რისკის ინსტრუმენტი (მაგ., FRAX, OST), გაზრდილი რისკისას — DXA. BHOF ასევე გვირჩევს DXA-ს ყველა ქალს 65 წლიდან. NICE (NG259, 2026) ქალებში 65 წლიდან რისკის შეფასების განხილვას გვირჩევს, DXA-ს კი — რისკის ინსტრუმენტის შედეგის მიხედვით, ამიტომ მიდგომები განსხვავდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2025,
+    "unit": "year",
+    "meaning_ka": "USPSTF-ის რეკომენდაციის წელი"
+   },
+   {
+    "value": 65,
+    "unit": "age_years",
+    "meaning_ka": "სკრინინგის ასაკი ქალებში"
+   },
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "რისკ-ფაქტორების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 259,
+    "unit": "label",
+    "meaning_ka": "NICE NG259"
+   },
+   {
+    "value": 2026,
+    "unit": "year",
+    "meaning_ka": "NG259-ის გამოქვეყნების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "USPSTF",
+    "title": "Osteoporosis to Prevent Fractures: Screening — Final Recommendation Statement",
+    "year": 2025,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+    "type": "guideline",
+    "supports": "Screen women 65 years or older (B); screen postmenopausal women younger than 65 at increased risk by clinical risk assessment; 2-step approach: risk factors (low body weight, parental hip fracture, smoking, excess alcohol) then a risk tool (e.g., FRAX, OST, ORAI); screening with central DXA."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Recommends screening densitometry in women ≥65 years and men ≥70 years, and in younger postmenopausal women and men 50–69 with risk factors."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Fragility-fracture-risk-assessment",
+    "type": "guideline",
+    "supports": "Consider assessing fragility fracture risk in all women aged 65 and over and all men aged 75 and over (1.1.2); DXA offered for prior hip/vertebral or recent major fracture (1.4.1) and considered when 10-year MOF risk ≥10% (1.4.2)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-003",
+  "cluster": "OSTEOP",
+  "topics": [
+   101,
+   102
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "მოტეხილობის რისკის შეფასების ჩვენებები (NICE NG259)",
+  "recommendation_ka": "შეაფასეთ მოტეხილობის რისკი 50 წელზე უფროს ყველა პირსა და პოსტმენოპაუზურ ქალში, თუ აქვს წინა დაბალი ენერგიის მოტეხილობა ან სისტემური გლუკოკორტიკოიდების მიმდინარე/ხშირი მიღება (მაგ., პრედნიზოლონი 5 მგ/დღ ან მეტი 3 თვეზე მეტხანს). განიხილეთ შეფასება: ყველა მამაკაცში 75 წლიდან, ყველა ქალში 65 წლიდან და 50–74 წლის პირებში/65 წლამდე პოსტმენოპაუზურ ქალებში, თუ აქვთ: ბოლო წელს 2 ან მეტი დაცემა, პირველი რიგის ნათესავის ბარძაყის მოტეხილობა (განსაკუთრებით 80 წლამდე ასაკში), სხეულის მასის ინდექსი 18.5 კგ/მ²-ზე ნაკლები, მოწევა, ალკოჰოლი კვირაში 14 ერთეულზე მეტი ან სხვა მეორადი მიზეზი (ჰიპოგონადიზმი, არომატაზის ინჰიბიტორები, ანდროგენ-დეპრივაცია, დიაბეტი, რევმატოიდული ართრიტი, ცელიაკია და სხვ.).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი; ასევე 50–74 წლის ჯგუფი"
+   },
+   {
+    "value": 5,
+    "unit": "mg/day",
+    "meaning_ka": "პრედნიზოლონის დოზის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "გლუკოკორტიკოიდის ხანგრძლივობა"
+   },
+   {
+    "value": 75,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკი; ასევე 50–74 ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 74,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 65,
+    "unit": "age_years",
+    "meaning_ka": "ქალების ასაკი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "დაცემების რაოდენობა ბოლო წელს"
+   },
+   {
+    "value": 80,
+    "unit": "age_years",
+    "meaning_ka": "ნათესავის ასაკი ბარძაყის მოტეხილობისას"
+   },
+   {
+    "value": 18.5,
+    "unit": "kg/m2",
+    "meaning_ka": "დაბალი სმი"
+   },
+   {
+    "value": 14,
+    "unit": "units",
+    "meaning_ka": "ალკოჰოლის ერთეულები კვირაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Fragility-fracture-risk-assessment",
+    "type": "guideline",
+    "supports": "Assess risk in people ≥50 and postmenopausal women with previous fragility fracture or systemic glucocorticoids (e.g., ≥5 mg prednisolone daily for over 3 months) (1.1.1); consider assessing all men ≥75, all women ≥65, and people aged 50–74/women under 65 after menopause with ≥2 falls in last year, first-degree relative hip fracture (particularly if relative under 80), BMI <18.5, current smoker, alcohol >14 units/week, or other factors in table 1 (1.1.2)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-004",
+  "cluster": "OSTEOP",
+  "topics": [
+   101,
+   102
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "მოტეხილობის 10-წლიანი რისკის გამოთვლა და DXA-ს ჩვენებები",
+  "recommendation_ka": "კლინიკურ შეფასებასთან ერთად გამოთვალეთ ძირითადი ოსტეოპოროზული მოტეხილობის 10-წლიანი რისკი FRAX-ით ან QFracture-ით (40–90 წლის პირებში; 30–39 წლისებში QFracture) და მთელი მეთვალყურეობის განმავლობაში ერთი და იგივე ინსტრუმენტი გამოიყენეთ. DXA შესთავაზეთ, თუ იყო ბარძაყის ან მალის მოტეხილობა, ბოლო 2 წელში ერთი ძირითადი ოსტეოპოროზული მოტეხილობა ან 2 ან მეტი დაბალი ენერგიის მოტეხილობა; DXA განიხილეთ, თუ 10-წლიანი რისკი 10% ან მეტია. NOGG-ის მიხედვით BMD გაზომეთ FRAX-ით შუალედური რისკისას შეფასების დასაზუსტებლად, მაღალი რისკისას — პრეპარატის შერჩევისა და საბაზისო მონიტორინგისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "ძირითადი მოტეხილობის 10-წლიანი რისკის ზღვარი DXA-სთვის; ასევე 10-წლიანი ჰორიზონტი"
+   },
+   {
+    "value": 40,
+    "unit": "age_years",
+    "meaning_ka": "FRAX/QFracture-ის ქვედა ასაკი"
+   },
+   {
+    "value": 90,
+    "unit": "age_years",
+    "meaning_ka": "ზედა ასაკი"
+   },
+   {
+    "value": 30,
+    "unit": "age_years",
+    "meaning_ka": "QFracture-ის ქვედა ასაკი"
+   },
+   {
+    "value": 39,
+    "unit": "age_years",
+    "meaning_ka": "QFracture-ის ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "მოტეხილობების რაოდენობა; ასევე ბოლო 2 წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Fragility-fracture-risk-assessment",
+    "type": "guideline",
+    "supports": "Use FRAX or QFracture for people aged 40–90 and QFracture for 30–39 to determine 10-year MOF risk (1.3.1); use the same tool throughout care (1.3.3); offer DXA if previous hip or vertebral fragility fracture, a single major osteoporotic fracture in the last 2 years, or ≥2 fragility fractures (1.4.1); consider DXA when 10-year MOF risk ≥10% (1.4.2)."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Conduct FRAX in people with a clinical risk factor; measure BMD in intermediate (amber) risk to refine 10-year risk and in high/very high risk (red) to guide drug choice and provide baseline for monitoring."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-005",
+  "cluster": "OSTEOP",
+  "topics": [
+   101,
+   102
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "დადასტურებული ოსტეოპოროზი ან დაბალი ენერგიის მოტეხილობა — მეორადი მიზეზების გამორიცხვა",
+  "recommendation_ka": "მკურნალობის დაწყებამდე გამოიკვლიეთ მეორადი მიზეზები: სისხლის საერთო ანალიზი, ალბუმინით კორიგირებული კალციუმი, ფოსფორი, მაგნიუმი, თირკმლისა და ღვიძლის ფუნქცია, 25(OH) ვიტამინი D, პარათჰორმონი; მამაკაცებში (განსაკუთრებით 50–69 წლის) — საერთო ტესტოსტერონი და გონადოტროპინები; შარდის 24-საათიანი კალციუმი და კრეატინინი. შერჩეულ პაციენტებში: სისხლის/შარდის ცილების ელექტროფორეზი და თავისუფალი მსუბუქი ჯაჭვები (მიელომა), TSH, ქსოვილოვანი ტრანსგლუტამინაზას ანტისხეულები, პროლაქტინი, კორტიზოლის ტესტები. ოსტეომალაციის ან თირკმლის დაავადების დროს ოსტეოპოროზის ზოგიერთი მკურნალობა შეიძლება მავნე იყოს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 25,
+    "unit": "label",
+    "meaning_ka": "25(OH) ვიტამინი D"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცთა ასაკობრივი ჯგუფის ქვედა ზღვარი"
+   },
+   {
+    "value": 69,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცთა ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "შარდის შეგროვების ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Exclude secondary causes in all patients with fractures, low bone mass or osteoporosis; blood: CBC, albumin, albumin-adjusted calcium, renal function, phosphorus, magnesium, liver tests, 25(OH)D, PTH, total testosterone and gonadotropin (men 50–69); 24-h urinary calcium and creatinine; selectively SPEP/immunofixation/free light chains, TSH, tTG antibodies, prolactin, cortisol tests; some osteoporosis therapies inappropriate in osteomalacia or adynamic bone disease."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Patients with osteoporosis and/or fragility fracture should be investigated for underlying causes including routine blood tests (strong); other procedures if indicated include serum electrophoresis/free light chains, PTH, testosterone/SHBG/FSH/LH, cortisol tests, prolactin, coeliac serology."
+   },
+   {
+    "org": "Endocrine Society (Watts et al., J Clin Endocrinol Metab 2012)",
+    "title": "Osteoporosis in Men: An Endocrine Society Clinical Practice Guideline",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22675062/",
+    "type": "guideline",
+    "supports": "Current edition (2012; erratum 2026). Laboratory testing should be done to detect contributing causes in men."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-006",
+  "cluster": "OSTEOP",
+  "topics": [
+   101,
+   102
+  ],
+  "rule_type": "evaluation",
+  "population": "older_adult",
+  "condition_ka": "ხერხემლის მალების უსიმპტომო მოტეხილობების გამოვლენა DXA-ს დროს",
+  "recommendation_ka": "NICE: DXA-სთან ერთად განიხილეთ ხერხემლის მოტეხილობის შეფასება (VFA) 70 წლის და უფროს მამაკაცებში და 60 წლის და უფროს ქალებში; უფრო ახალგაზრდებში — წინა ძირითადი ოსტეოპოროზული მოტეხილობის, აუხსნელი ზურგის/ნეკნის ტკივილის, სიმაღლის 4 სმ-ზე მეტი დაკარგვის ან კიფოზის, გლუკოკორტიკოიდების ან ასაკისთვის განსაკუთრებით დაბალი BMD-ის (Z-ქულა −2-ზე ნაკლები) დროს. VFA არ გააკეთოთ, თუ ბოლო 3 თვეში ჩატარდა ხერხემლის ვიზუალიზაცია და სიმპტომები არ არის. BHOF VFA-ს გვირჩევს ყველა 65 წლის და უფროს ქალს, თუ T-ქულა −1.0 ან ნაკლებია. დადასტურებული მალის მოტეხილობა მკურნალობის ჩვენებაა BMD-ის მიუხედავად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 70,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკი VFA-სთვის"
+   },
+   {
+    "value": 60,
+    "unit": "age_years",
+    "meaning_ka": "ქალების ასაკი VFA-სთვის"
+   },
+   {
+    "value": 4,
+    "unit": "cm",
+    "meaning_ka": "სიმაღლის დაკარგვა"
+   },
+   {
+    "value": 2,
+    "unit": "Z-score",
+    "meaning_ka": "Z-ქულა −2 (აბსოლუტური სიდიდე; მნიშვნელობა უარყოფითია)"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ხერხემლის ბოლო ვიზუალიზაციის ვადა"
+   },
+   {
+    "value": 65,
+    "unit": "age_years",
+    "meaning_ka": "BHOF-ის ასაკი ქალებისთვის"
+   },
+   {
+    "value": 1.0,
+    "unit": "T-score",
+    "meaning_ka": "BHOF-ის ზღვარი VFA-სთვის (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Identifying-vertebral-fragility-fractures",
+    "type": "guideline",
+    "supports": "Consider VFA with DXA for men ≥70 and women ≥60 (1.5.1); and in younger people with previous major osteoporotic fracture, back or rib pain without cause, height loss over 4 cm or kyphosis, glucocorticoids, or Z-score less than −2 (1.5.2); do not do VFA if spinal imaging in past 3 months and no symptoms (1.5.3)."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Vertebral imaging indicated in all women aged ≥65 and men ≥80 if T-score ≤ −1.0; hip or vertebral fracture is an indication for treatment regardless of BMD."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-007",
+  "cluster": "OSTEOP",
+  "topics": [
+   101
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "რისკის შეფასების შემდეგ მკურნალობის კრიტერიუმები არ დაკმაყოფილდა",
+  "recommendation_ka": "თუ ძირითადი მოტეხილობის 10-წლიანი რისკი 10%-ზე ნაკლებია, ხელახალი შეფასება განიხილეთ იმავე ინსტრუმენტით კლინიკური ცვლილებისას (ახალი მოტეხილობა ან რისკ-ფაქტორი) ან 5 წლის შემდეგ. თუ რისკი 10% ან მეტია, ან DXA ჩატარდა: განმეორებითი DXA განიხილეთ 2–3 წელში, თუ მდგომარეობა მკურნალობის ზღვართან ახლოს იყო ან მოსალოდნელია ძვლის სწრაფი დაკარგვა; სხვა შემთხვევაში — 5 წელში. DXA რუტინულად არ გაიმეოროთ ბოლო კვლევიდან 2 წლის განმავლობაში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "ძირითადი მოტეხილობის 10-წლიანი რისკის ზღვარი; ასევე 10-წლიანი ჰორიზონტი"
+   },
+   {
+    "value": 5,
+    "unit": "year",
+    "meaning_ka": "ხელახალი შეფასების ინტერვალი"
+   },
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "DXA-ს მინიმალური ინტერვალი; ასევე 2–3 წლის ინტერვალის ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "year",
+    "meaning_ka": "განმეორებითი DXA-ს ინტერვალის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Follow-up-for-people-not-having-treatment",
+    "type": "guideline",
+    "supports": "For 10-year MOF risk less than 10%, consider reassessment with the same tool if circumstances change or at 5 years (1.9.1); for risk ≥10% or after DXA not meeting treatment criteria, consider repeat DXA within 2 to 3 years if close to treatment criteria or accelerated bone loss, otherwise at 5 years (1.9.2); do not routinely repeat DXA within 2 years (1.10.1)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-008",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "პოსტმენოპაუზური ქალი ან 50 წელზე უფროსი მამაკაცი — მედიკამენტური მკურნალობის დაწყების კრიტერიუმები",
+  "recommendation_ka": "BHOF: მკურნალობა განიხილეთ ბარძაყის ან მალის მოტეხილობისას (BMD-ის მიუხედავად), T-ქულისას −2.5 ან ნაკლები, ან ოსტეოპენიისას (T −1.0-დან −2.5-მდე), თუ FRAX-ით ბარძაყის მოტეხილობის 10-წლიანი რისკი 3% ან მეტია ან ძირითადი მოტეხილობისა — 20% ან მეტი. NICE (NG259) ფიქსირებულ FRAX-ზღვარს არ იყენებს: მკურნალობა ერთობლივი გადაწყვეტილებით განიხილეთ ბარძაყის/მალის მოტეხილობისას, ძალიან მაღალი დოზით გლუკოკორტიკოიდებისას (პრედნიზოლონი 15 მგ/დღ ან მეტი 3 თვე ან მეტი), T-ქულისას −2.5 ან ნაკლები, ან T-ქულისას −1.5 ან ნაკლები და დამატებით წინა მოტეხილობის, გლუკოკორტიკოიდების ან ძვლის აჩქარებული დაკარგვის ფაქტორის (არომატაზის ინჰიბიტორი, ანდროგენ-დეპრივაცია, არანაოპერირებული პირველადი ჰიპერპარათირეოზი) დროს. NOGG იყენებს ასაკზე დამოკიდებულ FRAX-ზღვრებს. მოტეხილობის შემდეგ მკურნალობა დაიწყეთ დაუყოვნებლივ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპოროზის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 1.0,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპენიის ზედა ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 1.5,
+    "unit": "T-score",
+    "meaning_ka": "NICE-ის ზღვარი დამატებითი რისკით (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 10,
+    "unit": "year",
+    "meaning_ka": "რისკის ჰორიზონტი"
+   },
+   {
+    "value": 3,
+    "unit": "%",
+    "meaning_ka": "ბარძაყის მოტეხილობის 10-წლიანი რისკი"
+   },
+   {
+    "value": 20,
+    "unit": "%",
+    "meaning_ka": "ძირითადი მოტეხილობის 10-წლიანი რისკი"
+   },
+   {
+    "value": 259,
+    "unit": "label",
+    "meaning_ka": "NICE NG259"
+   },
+   {
+    "value": 15,
+    "unit": "mg/day",
+    "meaning_ka": "პრედნიზოლონის ძალიან მაღალი დოზა"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "გლუკოკორტიკოიდის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Consider treatment in postmenopausal women and men ≥50 with hip or vertebral fracture regardless of BMD; T-score ≤ −2.5; or osteopenia (T −1.0 to −2.5) with US-adapted FRAX 10-year hip fracture risk ≥3% or major osteoporotic fracture risk ≥20%."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Deciding-whether-pharmacological-treatment-is-appropriate",
+    "type": "guideline",
+    "supports": "Shared decision based on 10-year MOF risk, BMD, fractures and clinical risk factors (1.7.1); consider treatment for people ≥50/postmenopausal women with previous hip or vertebral fragility fracture, very high-dose glucocorticoids (e.g., ≥15 mg prednisolone daily for ≥3 months), T-score ≤ −2.5, or T-score ≤ −1.5 with previous fragility fracture, glucocorticoid use, or accelerated bone loss factors (aromatase inhibitors, ADT, unoperated primary hyperparathyroidism) (1.7.3)."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Offer drug treatment to people at high and very high risk using FRAX-based NOGG intervention thresholds (up to age 70 set at the risk of a same-age woman with prior fracture, so rising with age); start treatment promptly following a fragility fracture."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-009",
+  "cluster": "OSTEOP",
+  "topics": [
+   103
+  ],
+  "rule_type": "treatment",
+  "population": "older_adult",
+  "condition_ka": "პოსტმენოპაუზური ოსტეოპოროზი, მაღალი (არა ძალიან მაღალი) მოტეხილობის რისკი — პირველი რიგის მკურნალობა",
+  "recommendation_ka": "პირველი რიგი — ბისფოსფონატი: ალენდრონატი 70 მგ კვირაში ერთხელ პერორალურად, რიზედრონატი 35 მგ კვირაში ერთხელ ან ზოლედრონის მჟავა 5 მგ ინტრავენურად წელიწადში ერთხელ (ინფუზია არანაკლებ 15 წუთისა). ბარძაყის მოტეხილობის შემდეგ NOGG პირველი რიგის საშუალებად გვირჩევს ინტრავენურ ზოლედრონატს. ალტერნატივა, თუ ბისფოსფონატი შეუსაბამოა ან არ გადაიტანება — დენოსუმაბი. იბანდრონატი არ არის რეკომენდებული ბარძაყისა და არამალოვანი მოტეხილობების შესამცირებლად (Endocrine Society).",
+  "doses": [
+   {
+    "drug": "alendronate",
+    "amount": 70,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "risedronate",
+    "amount": 35,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "zoledronic acid",
+    "amount": 5,
+    "unit": "mg",
+    "route": "IV",
+    "frequency": "once yearly (infusion ≥15 min)",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 15,
+    "unit": "min",
+    "meaning_ka": "ზოლედრონის მჟავას ინფუზიის მინიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "In patients for whom treatment is indicated (not very high risk), offer oral bisphosphonates (alendronate or risedronate) or IV zoledronate; offer IV zoledronate first-line following hip fracture; alternatives if unsuitable: denosumab, ibandronate, HRT, raloxifene."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Alendronate 70 mg weekly is the most commonly used treatment dose; risedronate 35 mg weekly; zoledronic acid 5 mg in 100 mL once yearly IV over at least 15 min. BHOF summary of the 2019 Endocrine Society algorithm: high risk — initial bisphosphonates (alendronate, risedronate, zoledronic acid), denosumab as alternative; ibandronate not recommended to reduce hip and non-vertebral fractures."
+   },
+   {
+    "org": "Endocrine Society (Eastell et al., J Clin Endocrinol Metab 2019)",
+    "title": "Pharmacological Management of Osteoporosis in Postmenopausal Women: An Endocrine Society Clinical Practice Guideline",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30907953/",
+    "type": "guideline",
+    "supports": "Fracture risk should be determined using country-specific assessment tools; nutritional and lifestyle interventions and fall prevention should accompany all pharmacologic regimens."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-010",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "პერორალური ან ინტრავენური ბისფოსფონატის დანიშვნა — მიღების წესი და უკუჩვენებები",
+  "recommendation_ka": "პერორალური ბისფოსფონატი მიიღეთ დილით უზმოდ, მხოლოდ სუფთა წყლით (სრული ჭიქა), საკვებამდე, სასმელამდე და სხვა წამლამდე არანაკლებ 30 წუთით ადრე (იბანდრონატი — 60 წუთით); ამ დროის განმავლობაში დარჩით ვერტიკალურ მდგომარეობაში. უკუჩვენებებია: ჰიპოკალციემია (კორექცია მკურნალობამდე), საყლაპავის დაცლის შემაფერხებელი პათოლოგია (სტრიქტურა, აქალაზია), ვერტიკალურად 30–60 წუთის განმავლობაში დგომის/ჯდომის შეუძლებლობა, ორსულობა და ლაქტაცია, eGFR 30–35 მლ/წთ-ზე ნაკლები. ზოლედრონის მჟავამდე შეამოწმეთ კრეატინინის კლირენსი (უკუნაჩვენებია 35 მლ/წთ-ზე ნაკლებისას) და გამოასწორეთ D ვიტამინის დეფიციტი; პაციენტი კარგად ჰიდრატირებული უნდა იყოს. გააფრთხილეთ პირველი ინფუზიის შემდეგ გრიპისმაგვარი რეაქციის შესახებ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 30,
+    "unit": "min",
+    "meaning_ka": "ვერტიკალურად დარჩენის/უზმოდ ყოფნის მინიმალური დრო; ასევე 30–60 წუთის დიაპაზონი"
+   },
+   {
+    "value": 60,
+    "unit": "min",
+    "meaning_ka": "იბანდრონატის შემდეგ ლოდინი"
+   },
+   {
+    "value": 30,
+    "unit": "mL/min",
+    "meaning_ka": "eGFR-ის ქვედა ზღვარი"
+   },
+   {
+    "value": 35,
+    "unit": "mL/min",
+    "meaning_ka": "eGFR/კრეატინინის კლირენსის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ჰიპოკალციემია",
+   "თირკმლის მწვავე დაზიანება"
+  ],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Oral alendronate/risedronate taken on empty stomach with plain water, at least 30 min before food, drink or medication, remaining upright; ibandronate wait at least 60 min; bisphosphonates contraindicated with eGFR below 30–35 mL/min; correct hypocalcaemia before treatment; zoledronic acid contraindicated with CrCl <35 mL/min or acute renal impairment, measure CrCl before each dose, correct vitamin D deficiency, hydrate; acute-phase flu-like reactions after first dose."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Bisphosphonates contraindicated in hypocalcaemia, hypersensitivity, pregnancy or lactation; oral bisphosphonates contraindicated with oesophageal abnormalities delaying emptying (stricture, achalasia) and inability to stand or sit upright for at least 30–60 min."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-011",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "დენოსუმაბით მკურნალობა",
+  "recommendation_ka": "დენოსუმაბი 60 მგ კანქვეშ ყოველ 6 თვეში. დაწყებამდე გამოასწორეთ ჰიპოკალციემია (რისკი იზრდება თირკმლის ფუნქციის დაქვეითებასთან ერთად) და შეადგინეთ გრძელვადიანი ინდივიდუალური გეგმა. მკურნალობა არ შეწყვიტოთ ან არ დააყოვნოთ შემდგომი ანტირეზორბციული თერაპიის გეგმის გარეშე: შეწყვეტა იწვევს ძვლის სწრაფ დაკარგვას და მალების მრავლობითი მოტეხილობის რისკს, ამიტომ „სამკურნალო შესვენება“ დაუშვებელია. შეწყვეტისას NOGG გვირჩევს ზოლედრონატის ინფუზიას ბოლო ინექციიდან 6 თვის შემდეგ, შემდგომი დროის განსაზღვრას შრატის CTX-ის მონიტორინგით (თუ შეუძლებელია — განმეორებითი ინფუზია კიდევ 6 თვეში).",
+  "doses": [
+   {
+    "drug": "denosumab",
+    "amount": 60,
+    "unit": "mg",
+    "route": "SC",
+    "frequency": "every 6 months",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "ინექციების ინტერვალი; ასევე ზოლედრონატის დრო შეწყვეტის შემდეგ"
+   }
+  ],
+  "red_flags_ka": [
+   "მკურნალობის დაგეგმილი გაგრძელების გარეშე შეწყვეტა"
+  ],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Denosumab 60 mg SC every 6 months; correct hypocalcaemia before treatment; discontinuation causes rapid bone loss and may result in multiple vertebral fractures, so a drug holiday is not appropriate; consider alternate antiresorptive therapy."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Before starting denosumab ensure a long-term plan; avoid unplanned cessation; if stopped, IV zoledronate 6 months after last injection with serum CTX monitoring guiding further treatment, or a further zoledronate infusion 6 months after the first if CTX not available; hypocalcaemia risk increases with renal impairment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-012",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "referral",
+  "population": "older_adult",
+  "condition_ka": "მოტეხილობის ძალიან მაღალი რისკი",
+  "recommendation_ka": "განიხილეთ მიმართვა ოსტეოპოროზის სპეციალისტთან პარენტერული, მათ შორის პირველი რიგის ანაბოლური, მკურნალობისთვის (NOGG), თუ: ბოლო 2 წელში მალის მოტეხილობა, 2 ან მეტი მალის მოტეხილობა (ნებისმიერ დროს), T-ქულა −3.5 ან ნაკლები, მაღალი დოზით გლუკოკორტიკოიდები (პრედნიზოლონი 7.5 მგ/დღ ან მეტი 3 თვის განმავლობაში), მრავლობითი რისკ-ფაქტორი ბოლოდროინდელი მოტეხილობით. Endocrine Society-ის ალგორითმში (BHOF-ის შეჯამებით) ძალიან მაღალი რისკია მრავლობითი მალის ან ბარძაყის მოტეხილობა T-ქულით −2.5 ან ნაკლები. ბოლოდროინდელი მოტეხილობისას ან ძალიან დაბალი BMD-ისას (მაგ., T-ქულა −3.0-ზე ნაკლები) BHOF გვირჩევს სწრაფად მოქმედ, უფრო აგრესიულ თერაპიას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "ბოლოდროინდელი მალის მოტეხილობის ვადა; ასევე 2 ან მეტი მოტეხილობა"
+   },
+   {
+    "value": 3.5,
+    "unit": "T-score",
+    "meaning_ka": "NOGG-ის მიმართვის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 7.5,
+    "unit": "mg/day",
+    "meaning_ka": "პრედნიზოლონის მაღალი დოზა"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "გლუკოკორტიკოიდის ხანგრძლივობა"
+   },
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპოროზის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 3.0,
+    "unit": "T-score",
+    "meaning_ka": "ძალიან დაბალი BMD (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Consider referral of very high-risk patients to a specialist for parenteral treatment (some need first-line anabolic, especially multiple vertebral fractures): recent vertebral fracture (within 2 years), ≥2 vertebral fractures, T-score ≤ −3.5, high-dose glucocorticoids (≥7.5 mg/day prednisolone over 3 months), multiple risk factors with recent fracture."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Summary of 2019 Endocrine Society algorithm: very high risk = multiple spine fractures/hip fracture and T-score ≤ −2.5 — teriparatide or abaloparatide up to 2 years or romosozumab for 1 year, then antiresorptive; recent fracture and/or very low BMD (e.g., T-score < −3.0) warrants more rapid-acting aggressive therapy."
+   },
+   {
+    "org": "AACE/ACE (Camacho et al., Endocr Pract 2020)",
+    "title": "AACE/ACE Clinical Practice Guidelines for the Diagnosis and Treatment of Postmenopausal Osteoporosis - 2020 Update (Executive Summary)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32427525/",
+    "type": "guideline",
+    "supports": "2020 update stratifies patients into high-risk and very-high-risk categories and adds a dual-action therapy option and guidance on transitions between therapies."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-013",
+  "cluster": "OSTEOP",
+  "topics": [
+   103
+  ],
+  "rule_type": "dosing",
+  "population": "older_adult",
+  "condition_ka": "ანაბოლური მკურნალობა მოტეხილობის ძალიან მაღალი რისკისას",
+  "recommendation_ka": "ტერიპარატიდი 20 მკგ კანქვეშ დღეში ერთხელ (ტრადიციულად 2 წლამდე; მაღალი რისკის შენარჩუნებისას შეიძლება გაგრძელდეს). რომოსოზუმაბი 210 მგ კანქვეშ თვეში ერთხელ (2 ინექცია 105 მგ) 12 თვის განმავლობაში. რომოსოზუმაბი უკუნაჩვენებია მიოკარდიუმის ინფარქტის ან ინსულტის ანამნეზისას (NOGG); BHOF/FDA-ის მიხედვით არ დანიშნოთ, თუ ბოლო 1 წელში იყო ინსულტი ან გულ-სისხლძარღვთა მოვლენა — შეაფასეთ კარდიოვასკულური რისკი. ანაბოლური კურსის დასრულებისთანავე, დაუყოვნებლივ დაიწყეთ ანტირეზორბციული საშუალება (ალენდრონატი, ზოლედრონატი ან დენოსუმაბი).",
+  "doses": [
+   {
+    "drug": "teriparatide",
+    "amount": 20,
+    "unit": "mcg",
+    "route": "SC",
+    "frequency": "once daily",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "romosozumab",
+    "amount": 210,
+    "unit": "mg",
+    "route": "SC",
+    "frequency": "once monthly for 12 months",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "ტერიპარატიდის ტრადიციული ხანგრძლივობა; ასევე 2 ინექცია"
+   },
+   {
+    "value": 105,
+    "unit": "mg",
+    "meaning_ka": "თითო ინექციის დოზა"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "რომოსოზუმაბის კურსი"
+   },
+   {
+    "value": 1,
+    "unit": "year",
+    "meaning_ka": "ბოლოდროინდელი კარდიოვასკულური მოვლენის ვადა"
+   }
+  ],
+  "red_flags_ka": [
+   "მიოკარდიუმის ინფარქტი ან ინსულტი ანამნეზში"
+  ],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Teriparatide 20 μg daily SC; label now allows use beyond 2 years if high risk persists; romosozumab 210 mg monthly SC (two 105 mg injections) for 12 months; boxed warning for MI, stroke and CV death; should not be used in women with stroke or CV event in the previous year; initiate antiresorptive after discontinuation."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Romosozumab contraindicated with history of MI or stroke; consider fracture and CV risk; following teriparatide or romosozumab, start alendronate, zoledronate or denosumab without delay."
+   },
+   {
+    "org": "Endocrine Society (Shoback et al., J Clin Endocrinol Metab 2020)",
+    "title": "Pharmacological Management of Osteoporosis in Postmenopausal Women: An Endocrine Society Guideline Update",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32068863/",
+    "type": "guideline",
+    "supports": "Romosozumab can be considered for postmenopausal women at very high risk of osteoporotic fracture; boxed warning — carefully consider cardiovascular risk profile given imbalance in serious CV events versus alendronate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-014",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "prevention",
+  "population": "older_adult",
+  "condition_ka": "კალციუმი და D ვიტამინი ოსტეოპოროზის ან მოტეხილობის რისკის მქონე პირებში",
+  "recommendation_ka": "კალციუმის საკმარისი მიღება უპირატესად საკვებით, საჭიროებისას დანამატით: NOGG — არანაკლებ 700 მგ/დღ; BHOF — 1200 მგ/დღ 51 წლის და უფროს ქალებსა და 71 წლის და უფროს მამაკაცებში, 1000 მგ/დღ 50–70 წლის მამაკაცებში. დანამატის კალციუმი 1200–1500 მგ/დღ-ზე მეტი ზრდის თირკმლის კენჭის რისკს; ერთჯერადი დოზა უმჯობესია 500 მგ-მდე. D ვიტამინი: NOGG — არანაკლებ 800 სე/დღ უკმარისობისას ან მისი რისკისას; BHOF — 800–1000 სე/დღ 50 წლის და უფროსებში, სამიზნე 25(OH)D 30 ნგ/მლ ან მეტი (არაუმეტეს 50 ნგ/მლ). ბინაზე მიჯაჭვულ და მოვლის დაწესებულებაში მცხოვრებ პირებს უფრო ხშირად სჭირდებათ დანამატი.",
+  "doses": [
+   {
+    "drug": "calcium",
+    "amount": 700,
+    "unit": "mg/day",
+    "route": "PO",
+    "frequency": "daily (minimum, NOGG)",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "calcium",
+    "amount": 1200,
+    "unit": "mg/day",
+    "route": "PO",
+    "frequency": "daily total intake (BHOF, women ≥51, men ≥71)",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "calcium",
+    "amount": 1000,
+    "unit": "mg/day",
+    "route": "PO",
+    "frequency": "daily total intake (BHOF, men 50–70)",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "vitamin D",
+    "amount": 800,
+    "unit": "IU/day",
+    "route": "PO",
+    "frequency": "daily",
+    "population": "older_adult",
+    "max_amount": 1000,
+    "max_unit": "IU/day"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 51,
+    "unit": "age_years",
+    "meaning_ka": "ქალების ასაკი"
+   },
+   {
+    "value": 71,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკი"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ქვედა ზღვარი; ასევე 25(OH)D-ის ზედა ზღვარი 50 ნგ/მლ"
+   },
+   {
+    "value": 70,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 1500,
+    "unit": "mg/day",
+    "meaning_ka": "დანამატის კალციუმი, რომლის ზემოთ იზრდება კენჭის რისკი"
+   },
+   {
+    "value": 500,
+    "unit": "mg",
+    "meaning_ka": "ოპტიმალური ერთჯერადი დოზა"
+   },
+   {
+    "value": 25,
+    "unit": "label",
+    "meaning_ka": "25(OH)D"
+   },
+   {
+    "value": 30,
+    "unit": "ng/mL",
+    "meaning_ka": "სამიზნე 25(OH)D"
+   },
+   {
+    "value": 50,
+    "unit": "ng/mL",
+    "meaning_ka": "25(OH)D-ის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Adequate calcium intake (minimum 700 mg daily) preferably from diet, otherwise supplements; vitamin D supplements of at least 800 IU/day if insufficiency or risk factors; housebound or residential care residents more likely to need supplementation."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Calcium 1000 mg/day men 50–70, 1200 mg/day women ≥51 and men ≥71; supplemental calcium above 1200–1500 mg/day can increase kidney stone risk; absorbed best in doses ~500 mg or less; vitamin D 800–1000 units/day for adults ≥50; maintain 25(OH)D ≥30 ng/mL but ≤50 ng/mL."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-015",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "prevention",
+  "population": "older_adult",
+  "condition_ka": "ოსტეოპოროზი ან დაბალი ენერგიის მოტეხილობა — ცხოვრების წესი და დაცემის პრევენცია",
+  "recommendation_ka": "ურჩიეთ ჯანსაღი დაბალანსებული კვება, ალკოჰოლის შეზღუდვა, მოწევის შეწყვეტა, სხეულის მასის ინდექსის ოპტიმიზაცია და რეგულარული სიმძიმის მზიდი და კუნთების გამაძლიერებელი ვარჯიში. შეაფასეთ დაცემის რისკი (დაცემის ანამნეზი, კუნთების სისუსტე, სიარულისა და წონასწორობის დარღვევა, სედაციური წამლები, მხედველობის დარღვევა) და რისკის მქონეებს შესთავაზეთ წონასწორობისა და ძალის ვარჯიშის პროგრამა. სიმპტომური მალის მოტეხილობისას განიხილეთ პროგრესული კუნთების (მათ შორის ზურგის ექსტენზორების) გამაძლიერებელი პროგრამა. მოტეხილობის მქონე პაციენტს უნდა ჰქონდეს წვდომა მოტეხილობის კოორდინაციის სამსახურზე (FLS).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Recommend healthy balanced diet, moderation of alcohol, avoidance of smoking; encourage regular weight-bearing and muscle-strengthening exercise; assess falls risk and offer exercise programme for balance and muscle strength; symptomatic vertebral fracture: progressive muscle-strengthening including back extensors; fragility fracture patients should have access to a Fracture Liaison Service."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Key fall risk factors: history of falling, muscle weakness, gait and balance disturbances, sedating medications, visual impairment; counsel on calcium, vitamin D, tobacco elimination, alcohol moderation, physical activity and fall prevention."
+   },
+   {
+    "org": "Endocrine Society (Watts et al., J Clin Endocrinol Metab 2012)",
+    "title": "Osteoporosis in Men: An Endocrine Society Clinical Practice Guideline",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22675062/",
+    "type": "guideline",
+    "supports": "Current edition. In men, encourage adequate calcium and vitamin D and weight-bearing exercise; avoid smoking and excessive alcohol."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-016",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "monitoring",
+  "population": "older_adult",
+  "condition_ka": "ბისფოსფონატით მკურნალობის ხანგრძლივობა და დროებითი შესვენება",
+  "recommendation_ka": "დაგეგმეთ პერორალური ბისფოსფონატი არანაკლებ 5 წლით, ინტრავენური — არანაკლებ 3 წლით, შემდეგ ხელახლა შეაფასეთ მოტეხილობის რისკი. უფრო ხანგრძლივი მკურნალობაა საჭირო 70 წლის და უფროსებში, ბარძაყის ან მალის მოტეხილობის შემდეგ, პრედნიზოლონის 7.5 მგ/დღ ან მეტი დოზით მკურნალობისას და მკურნალობის ფონზე ახალი მოტეხილობისას. დაბალი რისკისას (მაგ., T-ქულა −2.5-ზე მაღალი და ახალი მოტეხილობის გარეშე) განიხილეთ 18–36 თვიანი შესვენება; რისკი ხელახლა შეაფასეთ შესვენებიდან 18 თვიდან 3 წლამდე და ნებისმიერი ახალი მოტეხილობისას. დენოსუმაბზე შესვენება დაუშვებელია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "year",
+    "meaning_ka": "პერორალური ბისფოსფონატის მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 3,
+    "unit": "year",
+    "meaning_ka": "ინტრავენურის მინიმალური ხანგრძლივობა; ასევე ხელახალი შეფასების ზედა ვადა"
+   },
+   {
+    "value": 70,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი ხანგრძლივი მკურნალობისთვის"
+   },
+   {
+    "value": 7.5,
+    "unit": "mg/day",
+    "meaning_ka": "პრედნიზოლონის დოზა"
+   },
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "დაბალი რისკის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   },
+   {
+    "value": 18,
+    "unit": "month",
+    "meaning_ka": "შესვენების მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 36,
+    "unit": "month",
+    "meaning_ka": "შესვენების მაქსიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Plan oral bisphosphonates for at least 5 years or IV for at least 3 years then reassess; longer if age ≥70, hip or vertebral fracture, high-dose glucocorticoids (≥7.5 mg/day prednisolone) or further fracture on treatment; in lower-risk patients a pause of 18 to 36 months can be considered; reassess 18 months to 3 years after pausing and after any new fracture."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Reassess for a drug holiday after 5 years of oral and 3 years of IV bisphosphonate in patients no longer at high risk (T-score ≥ −2.5, no new fractures); drug holiday not appropriate with denosumab."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-017",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "monitoring",
+  "population": "older_adult",
+  "condition_ka": "ოსტეოპოროზის მედიკამენტური მკურნალობის მონიტორინგი და უსაფრთხოება",
+  "recommendation_ka": "რეგულარულად შეამოწმეთ ტოლერანტობა და დამყოლობა (განსაკუთრებით პერორალური საშუალებებისას). DXA გაიმეორეთ მკურნალობის დაწყებიდან ან შეცვლიდან 1–2 წელში, შემდეგ კლინიკური საჭიროებით, იმავე აპარატზე. ბისფოსფონატის ან დენოსუმაბის ფონზე ურჩიეთ პირის ღრუს კარგი ჰიგიენა, რეგულარული სტომატოლოგიური კონტროლი და კბილის მოძრაობის, ტკივილის ან შეშუპების დაუყოვნებლივ შეტყობინება (ყბის ოსტეონეკროზის რისკი). ახალი მოტეხილობისას ხელახლა შეაფასეთ რისკი; სთხოვეთ, შეგატყობინონ ბარძაყის, საზარდულის ან თეძოს აუხსნელი ტკივილი — ასეთ დროს გადაიღეთ ბარძაყის ძვალი მთლიანად (ატიპური მოტეხილობის გამოსარიცხად).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "year",
+    "meaning_ka": "DXA-ს განმეორების ქვედა ვადა"
+   },
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "DXA-ს განმეორების ზედა ვადა"
+   }
+  ],
+  "red_flags_ka": [
+   "ყბის ტკივილი ან კბილის მოძრაობა",
+   "ბარძაყის/საზარდულის აუხსნელი ტკივილი"
+  ],
+  "sources": [
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Perform BMD testing 1 to 2 years after initiating or changing therapy and at appropriate intervals thereafter; use same facility/device; rare atypical femur fractures and ONJ with bisphosphonates and denosumab."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Regularly review tolerance of and adherence to oral treatments; repeat fracture risk assessment after any new fracture; during bisphosphonate or denosumab therapy encourage good oral hygiene, routine dental check-ups and reporting of dental mobility, pain or swelling; advise reporting unexplained thigh, groin or hip pain and image the femur (full-length X-ray, isotope scan or MRI) if present."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-018",
+  "cluster": "OSTEOP",
+  "topics": [
+   103
+  ],
+  "rule_type": "treatment",
+  "population": "older_adult",
+  "condition_ka": "პოსტმენოპაუზური ოსტეოპოროზი — ჰორმონული და სელექტიური ესტროგენ-რეცეპტორული ალტერნატივები",
+  "recommendation_ka": "ჰორმონჩანაცვლებითი თერაპიის დაწყება ოსტეოპოროზის სამკურნალოდ შეზღუდეთ 60 წლამდე ქალებით, რომელთაც ავთვისებიანი და თრომბოემბოლიური გართულებების დაბალი საბაზისო რისკი აქვთ. რალოქსიფენი 60 მგ დღეში ერთხელ ამცირებს მხოლოდ მალის მოტეხილობებს: განიხილეთ ღრმა ვენების თრომბოზის დაბალი რისკის მქონე ქალებში, როცა ბისფოსფონატი ან დენოსუმაბი შეუსაბამოა, ან ძუძუს კიბოს მაღალი რისკისას (ამცირებს ინვაზიური ძუძუს კიბოს რისკსაც). ორივე ალტერნატივაა, როცა პირველი რიგის საშუალებები შეუსაბამოა ან არ გადაიტანება.",
+  "doses": [
+   {
+    "drug": "raloxifene",
+    "amount": 60,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 60,
+    "unit": "age_years",
+    "meaning_ka": "HRT-ის დაწყების ასაკის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ვენური თრომბოემბოლიის ანამნეზი"
+  ],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Limit initiation of HRT for postmenopausal osteoporosis to younger postmenopausal women (age ≤60) with low baseline risk of malignant and thromboembolic events; HRT and raloxifene are alternatives if bisphosphonates unsuitable."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Raloxifene 60-mg tablet; reduces vertebral but not non-vertebral fractures; indicated for reduction of invasive breast cancer risk in postmenopausal women with osteoporosis; Endocrine Society recommends raloxifene or CE/bazedoxifene to prevent vertebral fractures in women with low DVT risk for whom bisphosphonates or denosumab are not appropriate or with high breast cancer risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-019",
+  "cluster": "OSTEOP",
+  "topics": [
+   103,
+   102
+  ],
+  "rule_type": "prevention",
+  "population": "adult",
+  "condition_ka": "პერორალური გლუკოკორტიკოიდებით მკურნალობის დაწყება (პრედნიზოლონი 7.5 მგ/დღ ან მეტი, სულ მცირე 3 თვე) პოსტმენოპაუზურ ქალში ან 50 წელზე უფროს მამაკაცში",
+  "recommendation_ka": "ძვლის დამცავი მკურნალობა დაიწყეთ გლუკოკორტიკოიდთან ერთდროულად, DXA-ს მოლოდინის გარეშე (DXA მოგვიანებით). ასევე დაუყოვნებლივ დაიწყეთ წინა დაბალი ენერგიის მოტეხილობის მქონე ნებისმიერ პირსა და 70 წლის და უფროს ქალებში. პირველი რიგი: ალენდრონატი, რიზედრონატი ან ინტრავენური ზოლედრონატი; ალტერნატივა — დენოსუმაბი; მალის მოტეხილობის ძალიან მაღალი რისკისას — მიმართვა ანაბოლური მკურნალობისთვის. უზრუნველყავით კალციუმი და D ვიტამინი. გლუკოკორტიკოიდის შეწყვეტისას შეწყვეტა განიხილეთ, თუ FRAX-ით რისკი ზღვარს ქვემოთაა; ხანგრძლივი გლუკოკორტიკოიდისას დაცვა გააგრძელეთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 7.5,
+    "unit": "mg/day",
+    "meaning_ka": "პრედნიზოლონის ზღვრული დოზა"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ხანგრძლივობა"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკი"
+   },
+   {
+    "value": 70,
+    "unit": "age_years",
+    "meaning_ka": "ქალების ასაკი დაუყოვნებელი დაცვისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Start bone-protective treatment at the same time as glucocorticoids, without waiting for DXA, in anyone with prior fragility fracture, women ≥70, and postmenopausal women/men ≥50 on ≥7.5 mg/day prednisolone over 3 months or above FRAX threshold; first-line alendronate, risedronate or IV zoledronate, denosumab alternative, refer very high vertebral risk for anabolic; adequate calcium and vitamin D; withdrawal may be considered if glucocorticoids stopped and FRAX below threshold; maintain if continued long-term."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-020",
+  "cluster": "OSTEOP",
+  "topics": [
+   102
+  ],
+  "rule_type": "evaluation",
+  "population": "older_adult",
+  "condition_ka": "ოსტეოპოროზის გამოკვლევა მამაკაცებში",
+  "recommendation_ka": "Endocrine Society (2012) და BHOF: ცენტრალური DXA ჩაუტარეთ 70 წლის და უფროს ყველა მამაკაცს და 50–69 წლის მამაკაცებს რისკ-ფაქტორებით (დაბალი სხეულის წონა, ზრდასრულ ასაკში მოტეხილობა, მოწევა და სხვ.), ასევე 50 წლის შემდეგ მოტეხილობის მქონეებს და ძვლის დაკარგვასთან ასოცირებული დაავადების ან მკურნალობის (მაგ., ანდროგენ-დეპრივაცია) მქონეებს. შეუსაბამობა: USPSTF (2025) მამაკაცების სკრინინგისთვის მტკიცებულებას არასაკმარისად მიიჩნევს და კლინიკურ განსჯას ტოვებს; NICE (NG259) ყველა მამაკაცში რისკის შეფასებას 75 წლიდან განიხილავს, უფრო ახალგაზრდებში — მხოლოდ რისკ-ფაქტორებისას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2012,
+    "unit": "year",
+    "meaning_ka": "Endocrine Society-ის გაიდლაინის წელი"
+   },
+   {
+    "value": 70,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი რისკ-ფაქტორების მიუხედავად"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ჯგუფის ქვედა ზღვარი"
+   },
+   {
+    "value": 69,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ჯგუფის ზედა ზღვარი"
+   },
+   {
+    "value": 2025,
+    "unit": "year",
+    "meaning_ka": "USPSTF-ის წელი"
+   },
+   {
+    "value": 259,
+    "unit": "label",
+    "meaning_ka": "NICE NG259"
+   },
+   {
+    "value": 75,
+    "unit": "age_years",
+    "meaning_ka": "NICE-ის ასაკი მამაკაცებისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Endocrine Society (Watts et al., J Clin Endocrinol Metab 2012)",
+    "title": "Osteoporosis in Men: An Endocrine Society Clinical Practice Guideline",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22675062/",
+    "type": "guideline",
+    "supports": "Current edition (2012; erratum 2026). Test higher-risk men — aged ≥70, and 50–69 with risk factors (e.g., low body weight, prior adult fracture, smoking) — using central DXA."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "BMD testing in men aged ≥70 regardless of risk factors, men 50–69 with clinical risk factors, men who have broken a bone at age ≥50, and men with conditions or treatments associated with bone loss."
+   },
+   {
+    "org": "USPSTF",
+    "title": "Osteoporosis to Prevent Fractures: Screening — Final Recommendation Statement",
+    "year": 2025,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+    "type": "guideline",
+    "supports": "Current evidence is insufficient to assess the balance of benefits and harms of screening for osteoporosis in men (I statement); clinicians should use clinical judgment."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Fragility-fracture-risk-assessment",
+    "type": "guideline",
+    "supports": "Consider assessing fragility fracture risk in all men aged 75 and over and in people aged 50–74 with risk factors (1.1.2)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-021",
+  "cluster": "OSTEOP",
+  "topics": [
+   102
+  ],
+  "rule_type": "treatment",
+  "population": "older_adult",
+  "condition_ka": "მამაკაცის ოსტეოპოროზი — მკურნალობის ჩვენებები და პრეპარატები",
+  "recommendation_ka": "მედიკამენტური მკურნალობა რეკომენდებულია 50 წლის და უფროს მამაკაცებში მალის ან ბარძაყის მოტეხილობისას, T-ქულისას −2.5 ან ნაკლები, ან დაბალი BMD-ისა და/ან კლინიკური რისკ-ფაქტორების მიხედვით მაღალი რისკისას. პირველი რიგი, როგორც ქალებში: ალენდრონატი, რიზედრონატი ან ინტრავენური ზოლედრონის მჟავა; ალტერნატივა — დენოსუმაბი; ძალიან მაღალი რისკისას — ტერიპარატიდი (დამტკიცებულია მამაკაცებისთვის). რომოსოზუმაბი მამაკაცებისთვის აშშ-ში დამტკიცებული არ არის (ზოგ ქვეყანაში დამტკიცებულია). მკურნალობამდე გამოიკვლიეთ მეორადი მიზეზები, მათ შორის ჰიპოგონადიზმი (საერთო ტესტოსტერონი და გონადოტროპინები). მკურნალობის ეფექტი აკონტროლეთ სერიული DXA-ით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი"
+   },
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "ოსტეოპოროზის ზღვარი (აბსოლუტური სიდიდე; T-ქულა უარყოფითია)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Endocrine Society (Watts et al., J Clin Endocrinol Metab 2012)",
+    "title": "Osteoporosis in Men: An Endocrine Society Clinical Practice Guideline",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22675062/",
+    "type": "guideline",
+    "supports": "Current edition (2012; erratum 2026). Pharmacological treatment recommended for men aged ≥50 with spine or hip fractures, T-score ≤ −2.5, or high fracture risk based on low BMD and/or clinical risk factors; monitor treatment with serial DXA."
+   },
+   {
+    "org": "Bone Health & Osteoporosis Foundation (LeBoff et al., Osteoporos Int 2022)",
+    "title": "The clinician's guide to prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "type": "guideline",
+    "supports": "Alendronate, risedronate and zoledronic acid approved to increase/improve bone mass in men with osteoporosis; denosumab and teriparatide approved for men at high risk; romosozumab approved for men in some countries but not in the USA; total testosterone and gonadotropins in men 50–69 as part of secondary-cause testing."
+   },
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Recommendations apply to postmenopausal women and men aged ≥50: offer oral bisphosphonates or IV zoledronate, alternatives include denosumab; refer very high-risk patients for anabolic treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTEOP-022",
+  "cluster": "OSTEOP",
+  "topics": [
+   102,
+   101
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "50 წლამდე მამაკაცი ან პრემენოპაუზური ქალი დაბალი ენერგიის მოტეხილობით",
+  "recommendation_ka": "შეაფასეთ მოტეხილობის რისკი, თუ იყო ბარძაყის ან მალის მოტეხილობა ან 2 ან მეტი ძირითადი ოსტეოპოროზული მოტეხილობა; განიხილეთ შეფასება სხვა მოტეხილობისას, სისტემური გლუკოკორტიკოიდებისას ან ადრეული მენოპაუზისას/საკვერცხეების ნაადრევი უკმარისობისას. სპეციალისტის რჩევა მიიღეთ მკურნალობის შესახებ ძირითადი ოსტეოპოროზული მოტეხილობის, სერიულ გაზომვებზე BMD-ის მნიშვნელოვანი კლების ან იდიოპათიური ოსტეოპოროზის ეჭვისას, ასევე 30 წლამდე ასაკში, ორსულობასთან ასოცირებული ოსტეოპოროზისას ან იშვიათი ძვლოვანი დაავადების (არასრულყოფილი ოსტეოგენეზი, ოსტეომალაცია, ჰიპოფოსფატაზია) ეჭვისას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ძირითადი მოტეხილობების რაოდენობა"
+   },
+   {
+    "value": 30,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლის ქვემოთ საჭიროა სპეციალისტის რჩევა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Fragility-fracture-risk-assessment",
+    "type": "guideline",
+    "supports": "Assess risk in men under 50 and premenopausal women with previous hip or vertebral fragility fracture or ≥2 major osteoporotic fractures (1.1.3); consider if other fragility fracture, glucocorticoids, or untreated early menopause/POI (1.1.4); seek specialist advice for people under 30 or with suspected rare bone disease (1.3.5)."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Deciding-whether-pharmacological-treatment-is-appropriate",
+    "type": "guideline",
+    "supports": "Seek specialist advice about treatment for men and premenopausal women under 50 with major osteoporotic fracture, significant decrease in BMD on serial measurements or idiopathic osteoporosis, and for pregnancy-associated osteoporosis or rare bone diseases such as osteogenesis imperfecta, osteomalacia or hypophosphatasia (1.7.5)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

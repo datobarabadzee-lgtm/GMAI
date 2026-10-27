@@ -1,0 +1,774 @@
+[
+ {
+  "rule_id": "PUB-PARA-001",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ონქოცერკოზის („მდინარის სიბრმავე“) გამომწვევი და გავრცელება",
+  "recommendation_ka": "ონქოცერკოზს იწვევს Onchocerca volvulus; გადაეცემა სწრაფად მომდინარე მდინარეებთან მობინადრე Simulium გვარის ინფიცირებული შავი ბუზის განმეორებითი კბენით. ინფიცირებულთა 99%-ზე მეტი ცხოვრობს აფრიკასა და იემენში; მცირე კერები — ბრაზილია-ვენესუელის საზღვარზე. დიაგნოზზე იფიქრეთ ენდემურ ზონაში ხანგრძლივად მცხოვრებ ან მომუშავე პირებში, რომლებსაც აქვთ ქავილი, კანის ცვლილებები, კანქვეშა კვანძები ან თვალის დაზიანება. ზრდასრული ჭიები კანქვეშ კვანძებს წარმოქმნის და მრავალი წელი ცოცხლობს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 99,
+    "unit": "%",
+    "meaning_ka": "ინფიცირებულთა წილი აფრიკასა და იემენში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Onchocerciasis — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/onchocerciasis",
+    "type": "fact_sheet",
+    "supports": "Caused by O. volvulus transmitted by repeated bites of infected Simulium blackflies breeding in fast-flowing rivers; >99% of infected live in Africa and Yemen, remainder on Brazil–Venezuela border; adults form subcutaneous nodules."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-002",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ონქოცერკოზის კლინიკური გამოვლინებები",
+  "recommendation_ka": "სიმპტომებს იწვევს კანქვეშ მოძრავი და მომაკვდავი მიკროფილარიები (ინტენსიური ანთებითი პასუხი): ძლიერი ქავილი, მახინჯი კანის ცვლილებები, კანქვეშა კვანძები, თვალის დაზიანება მხედველობის დაქვეითებით და შესაძლო მუდმივი სიბრმავით. ბავშვებში ადრეული ექსპოზიცია ეპილეფსიასთან ასოცირდება. თვალის ჩივილებისას საჭიროა ოფთალმოლოგის კონსულტაცია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "მხედველობის დაქვეითება",
+   "თვალის ანთება"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Onchocerciasis — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/onchocerciasis",
+    "type": "fact_sheet",
+    "supports": "Symptoms caused by microfilariae inducing inflammation when they die: severe itching, skin changes, eye lesions leading to visual impairment and blindness, subcutaneous nodules; early exposure associated with epilepsy in children."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-003",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "dosing",
+  "population": "all",
+  "condition_ka": "ონქოცერკოზის მკურნალობა ივერმექტინით",
+  "recommendation_ka": "ივერმექტინი ერთჯერადად პერორალურად, დაახლოებით 150 მკგ/კგ, უზმოზე წყლით. ივერმექტინი ზრდასრულ ჭიებს არ კლავს, ამიტომ საჭიროა განმეორებითი დაკვირვება და ხელახალი მკურნალობა: ინდივიდუალურ პაციენტში — სულ მცირე 3 თვის ინტერვალით, მასობრივ პროგრამებში ჩვეულებრივ 12 თვეში ერთხელ. ზრდასრული პარაზიტების ელიმინაციისთვის შეიძლება განიხილოთ კვანძების ქირურგიული ამოკვეთა (ნოდულექტომია).",
+  "doses": [
+   {
+    "drug": "ivermectin",
+    "amount": 150,
+    "unit": "mcg/kg",
+    "route": "PO",
+    "frequency": "single dose; repeat at intervals",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ხელახალი მკურნალობის მინიმალური ინტერვალი"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "მასობრივი პროგრამების ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "STROMECTOL (ivermectin) tablets — prescribing information, Merck",
+    "year": 2025,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=681888c9-af79-4b7d-ae80-c3f4f6f1effd",
+    "type": "drug_label",
+    "supports": "Single oral dose of approximately 150 mcg/kg on an empty stomach with water; no activity against adult O. volvulus, so follow-up and retreatment usually required; retreatment for individual patients at intervals as short as 3 months, 12 months in mass programmes; nodulectomy may be considered."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-004",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "dosing",
+  "population": "all",
+  "condition_ka": "ონქოცერკოზის მკურნალობა მოქსიდექტინით",
+  "recommendation_ka": "მოქსიდექტინი ნაჩვენებია მოზრდილებსა და 4 წლის ან მეტი ასაკის, მინიმუმ 13 კგ წონის ბავშვებში. მოზრდილები: 8 მგ ერთჯერადად პერორალურად (საკვებთან ან მის გარეშე). ბავშვები: 13 კგ-დან 15 კგ-მდე — 4 მგ; 15 კგ-დან 30 კგ-მდე — 6 მგ; 30 კგ და მეტი — 8 მგ. მოქსიდექტინიც არ კლავს ზრდასრულ ჭიებს — საჭიროა დაკვირვება; განმეორებითი დოზირების უსაფრთხოება შესწავლილი არ არის.",
+  "doses": [
+   {
+    "drug": "moxidectin",
+    "amount": 8,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "moxidectin",
+    "amount": 4,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose (13 to <15 kg)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "moxidectin",
+    "amount": 6,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose (15 to <30 kg)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "moxidectin",
+    "amount": 8,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose (≥30 kg)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "age_years",
+    "meaning_ka": "მინიმალური ასაკი"
+   },
+   {
+    "value": 13,
+    "unit": "kg",
+    "meaning_ka": "მინიმალური წონა"
+   },
+   {
+    "value": 15,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი"
+   },
+   {
+    "value": 30,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "Moxidectin tablets — prescribing information, Medicines Development for Global Health",
+    "year": 2026,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eb02ae9-9065-176f-e053-2991aa0ac891",
+    "type": "drug_label",
+    "supports": "Indicated for onchocerciasis in adults and pediatric patients aged 4 years and older weighing at least 13 kg; adults 8 mg single oral dose; pediatric 4 mg (13 to <15 kg), 6 mg (15 to <30 kg), 8 mg (≥30 kg); does not kill adult worms; follow-up advised; safety and efficacy of repeat administration not established."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-005",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "Loa loa-ს თანაინფექცია ონქოცერკოზის მკურნალობამდე",
+  "recommendation_ka": "Loa loa-თი ძლიერად ინფიცირებულ პაციენტებში მიკროფილარიციდული პრეპარატის (ივერმექტინი, მოქსიდექტინი) მიღების შემდეგ შეიძლება განვითარდეს მძიმე, ზოგჯერ ფატალური ენცეფალოპათია. Loa loa-ს ენდემურ ზონაში (ცენტრალური და დასავლეთ აფრიკის ნაწილი: ანგოლა, ეკვატორული გვინეა, გაბონი, კამერუნი, ცენტრალური აფრიკის რესპუბლიკა, ჩადი, კონგო, კონგოს დემოკრატიული რესპუბლიკა, ნიგერია, სამხრეთ სუდანი) მყოფ ან იქიდან დაბრუნებულ პაციენტში მკურნალობამდე შეაფასეთ ლოაოზი; საჭიროა სპეციალისტის (ტროპიკული მედიცინა) ჩართვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცნობიერების დარღვევა მკურნალობის შემდეგ",
+   "ენცეფალოპათიის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "STROMECTOL (ivermectin) tablets — prescribing information, Merck",
+    "year": 2025,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=681888c9-af79-4b7d-ae80-c3f4f6f1effd",
+    "type": "drug_label",
+    "supports": "Patients with onchocerciasis heavily infected with Loa loa may rarely develop serious or fatal encephalopathy after an effective microfilaricide."
+   },
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "Moxidectin tablets — prescribing information, Medicines Development for Global Health",
+    "year": 2026,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eb02ae9-9065-176f-e053-2991aa0ac891",
+    "type": "drug_label",
+    "supports": "Serious or fatal encephalopathy may occur in Loa loa co-infected patients; assess for loiasis in Loa loa endemic areas prior to treatment."
+   },
+   {
+    "org": "WHO",
+    "title": "Onchocerciasis — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/onchocerciasis",
+    "type": "fact_sheet",
+    "supports": "Treatment of individuals with high L. loa levels can cause severe adverse events; lists Loa loa endemic countries (Angola, Equatorial Guinea, Gabon, Cameroon, CAR, Chad, Congo, DRC, Nigeria, South Sudan)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-006",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "მაცოტის რეაქცია და პოსტურალური ჰიპოტენზია მიკროფილარიციდული მკურნალობის შემდეგ",
+  "recommendation_ka": "მკურნალობის შემდეგ პირველ დღეებში შესაძლებელია მაცოტის რეაქცია (ქავილი, გამონაყარი, ართრალგია, ლიმფური კვანძების გადიდება და მტკივნეულობა, ცხელება, თვალის რეაქციები) და სიმპტომური ორთოსტატული ჰიპოტენზია. აუხსენით პაციენტს ეს რისკი და აკონტროლეთ სიმპტომები. მძიმე პოსტურალური ჰიპოტენზიისას გამოიყენება პერორალური ჰიდრატაცია, წოლითი რეჟიმი, ინტრავენური ფიზიოლოგიური ხსნარი და/ან პარენტერალური კორტიკოსტეროიდები; მსუბუქი რეაქციებისას — ანტიჰისტამინები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "დგომის შეუძლებლობა ორთოსტატული ჰიპოტენზიის გამო"
+  ],
+  "sources": [
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "STROMECTOL (ivermectin) tablets — prescribing information, Merck",
+    "year": 2025,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=681888c9-af79-4b7d-ae80-c3f4f6f1effd",
+    "type": "drug_label",
+    "supports": "Mazzotti-type cutaneous, systemic and ophthalmological reactions (arthralgia, lymph node enlargement/tenderness, pruritus, fever) in first days; severe postural hypotension treated with oral hydration, recumbency, IV normal saline and/or parenteral corticosteroids; antihistamines and/or aspirin for mild to moderate cases."
+   },
+   {
+    "org": "FDA (DailyMed label)",
+    "title": "Moxidectin tablets — prescribing information, Medicines Development for Global Health",
+    "year": 2026,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eb02ae9-9065-176f-e053-2991aa0ac891",
+    "type": "drug_label",
+    "supports": "Mazzotti reactions and symptomatic orthostatic hypotension, including inability to stand without support, may occur after moxidectin."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-007",
+  "cluster": "PARA",
+  "topics": [
+   34
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ონქოცერკოზის კონტროლი — ივერმექტინის მასობრივი გამოყენება",
+  "recommendation_ka": "WHO-ს ძირითადი სტრატეგიაა პოპულაციური მკურნალობა ივერმექტინით (მასობრივი მედიკამენტური ადმინისტრირება) წელიწადში მინიმუმ ერთხელ 10–15 წლის განმავლობაში — ზრდასრული ჭიის სიცოცხლის ხანგრძლივობის შესაბამისად, თერაპიული მოცვის მინიმუმ 80%-ით. დამატებითი ღონისძიებაა ვექტორის (შავი ბუზის ლარვების) კონტროლი. Loa loa-ს თანაენდემურ ზონებში სტრატეგია უნდა მოერგოს მძიმე გვერდითი მოვლენების პრევენციის რეკომენდაციებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "year",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 15,
+    "unit": "year",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა — ზედა ზღვარი"
+   },
+   {
+    "value": 80,
+    "unit": "%",
+    "meaning_ka": "მინიმალური თერაპიული მოცვა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Onchocerciasis — fact sheet",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/onchocerciasis",
+    "type": "fact_sheet",
+    "supports": "WHO recommends ivermectin at least once yearly for 10 to 15 years; MDA core strategy with minimum 80% therapeutic coverage; communities treated 10–15 years corresponding to adult worm lifespan; vector control used historically; adjust strategies where Loa loa co-exists."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-008",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ტენიოზის გამომწვევები და გადაცემა",
+  "recommendation_ka": "ტენიოზი ნაწლავის ინფექციაა Taenia solium-ით (ღორის სოლიტერი), T. saginata-ით (ხარის სოლიტერი) ან T. asiatica-თი; ადამიანი ინფიცირდება შესაბამისად ცისტიცერკებით დაინფიცირებული ღორის ხორცის, საქონლის ხორცის ან ღორის ღვიძლის უმი ან ნაკლებად თერმულად დამუშავებული მიღებით. მხოლოდ T. solium იწვევს მძიმე პრობლემებს: მისი კვერცხების ფეკალურ-ორალური გზით მიღება (მათ შორის ტენიოზის მატარებლისგან, დაბინძურებული საკვებითა და წყლით) იწვევს ცისტიცერკოზს, ხოლო ცნს-ის დაზიანებისას — ნეიროცისტიცერკოზს. ენდემურ ზონებში T. solium ეპილეფსიის შემთხვევების დაახლოებით 30%-ის მიზეზია (ზოგ თემში 70%-მდე).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 30,
+    "unit": "%",
+    "meaning_ka": "ეპილეფსიის წილი ენდემურ ზონებში"
+   },
+   {
+    "value": 70,
+    "unit": "%",
+    "meaning_ka": "ეპილეფსიის წილი მაღალი რისკის თემებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Three species (T. solium, T. saginata, T. asiatica) acquired from undercooked pork, beef, pig liver; only T. solium causes major health problems; ingested T. solium eggs (faecal-oral, contaminated food/water) cause cysticercosis/NCC; T. solium causes 30% of epilepsy in many endemic areas, up to 70% in high-risk communities."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-009",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ნაწლავის ტენიოზის კლინიკა და გამოვლენა",
+  "recommendation_ka": "ტენიოზი ჩვეულებრივ მსუბუქი, არასპეციფიკური სიმპტომებით მიმდინარეობს (მუცლის ტკივილი, გულისრევა, დიარეა ან ყაბზობა), რომლებიც ცისტიცერკიანი ხორცის მიღებიდან დაახლოებით 8 კვირაში ჩნდება, როცა ჭია სრულად განვითარდება. მკურნალობის გარეშე T. solium-ის ინფექცია ჩვეულებრივ 2–3 წელი გრძელდება. განავლის კვლევით (მაგ., კატო-კაცის მეთოდი) ვლინდება Taenia-ს კვერცხები, მაგრამ ტესტი სახეობისთვის სპეციფიკური არ არის — T. solium საჭიროებს დადასტურებას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "სიმპტომების გამოჩენის ვადა"
+   },
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "T. solium-ის ინფექციის ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "year",
+    "meaning_ka": "T. solium-ის ინფექციის ხანგრძლივობა — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Taeniasis usually mild, non-specific (abdominal pain, nausea, diarrhoea or constipation) about 8 weeks after ingestion; untreated T. solium infections persist 2–3 years; Kato-Katz detects Taenia eggs but is not species specific, so positives must be confirmed as T. solium."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-010",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "dosing",
+  "population": "all",
+  "condition_ka": "ნაწლავის ტენიოზის მკურნალობა",
+  "recommendation_ka": "პრაზიკვანტელი 10 მგ/კგ ერთჯერადად, ან ნიკლოზამიდი ერთჯერადად: მოზრდილებსა და 6 წელზე უფროს ბავშვებში 2 გ, 2–6 წლის ბავშვებში 1 გ. ალბენდაზოლი 400 მგ 3 დღე ზედიზედ ასევე გამოიყენება. მკურნალობა ჩვეულებრივ ინდივიდუალურად ტარდება ან, ადგილობრივი სიტუაციის მიხედვით, პრევენციული ქიმიოთერაპიის ფარგლებში.",
+  "doses": [
+   {
+    "drug": "praziquantel",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "single dose",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "niclosamide",
+    "amount": 2,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "single dose (adults and children >6 years)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "niclosamide",
+    "amount": 1,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "single dose (children 2–6 years)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "albendazole",
+    "amount": 400,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily for 3 consecutive days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი — ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ალბენდაზოლის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Taeniasis treated with single dose praziquantel 10 mg/kg or niclosamide (adults and children over 6 years 2 g; children 2–6 years 1 g); albendazole 400 mg for 3 consecutive days also used; individual or preventive chemotherapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-011",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ნეიროცისტიცერკოზის (NCC) დიაგნოსტიკა",
+  "recommendation_ka": "ყველაზე ხშირი გამოვლინებებია კრუნჩხვები და ქალასშიდა წნევის მომატება (ასევე ქრონიკული თავის ტკივილი, ჰიდროცეფალია, მხედველობის დაქვეითება). საწყისი შეფასება: დეტალური ანამნეზი, გასინჯვა და ნეიროვიზუალიზაცია — ახალ დიაგნოზში რეკომენდებულია როგორც თავის ტვინის MRI, ისე არაკონტრასტული CT (კალციფიკატების გამოსავლენად). დამადასტურებელ სეროლოგიურ ტესტად გამოიყენეთ EITB (ფერმენტ-დაკავშირებული იმუნოტრანსფერ ბლოტი); ნედლი ანტიგენებით ELISA არ გამოიყენოთ დაბალი მგრძნობელობის და სპეციფიკურობის გამო. ჰიდროცეფალიისას — MRI სამგანზომილებიანი (3D) მოცულობითი სეკვენციებით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "label",
+    "meaning_ka": "3D MRI სეკვენცია"
+   }
+  ],
+  "red_flags_ka": [
+   "ქალასშიდა წნევის მომატების ნიშნები",
+   "ჰიდროცეფალია",
+   "მხედველობის დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "IDSA/ASTMH",
+    "title": "Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by IDSA and ASTMH (White et al., Am J Trop Med Hyg 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5928844/",
+    "type": "guideline",
+    "supports": "Seizures and increased intracranial pressure are the two most common presentations; history, examination and neuroimaging; both brain MRI and non-contrast CT for classification; EITB as confirmatory serology; avoid crude-antigen ELISA; MRI with 3D volumetric sequencing in hydrocephalus."
+   },
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Neuroimaging is the gold standard for NCC diagnosis; symptoms include chronic headaches, blindness, seizures, hydrocephalus."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-012",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "NCC — შეფასება ანტიპარაზიტულ თერაპიამდე",
+  "recommendation_ka": "ანტიჰელმინთურ მკურნალობამდე ყველა პაციენტს ჩაუტარეთ თვალის ფსკერის გამოკვლევა (თვალშიდა ცისტიცერკი და ქალასშიდა წნევის მომატება). ხანგრძლივი კორტიკოსტეროიდული თერაპიის მოსალოდნელობისას — ლატენტური ტუბერკულოზის სკრინინგი და Strongyloides stercoralis-ის სკრინინგი ან ემპირიული მკურნალობა. დიფუზური ცერებრული შეშუპებისას ან მკურნალობაუმიღებელ ჰიდროცეფალიაში ანტიპარაზიტული საშუალებები არ დაიწყოთ — მართეთ მხოლოდ ქალასშიდა წნევა (კორტიკოსტეროიდები/ქირურგია). არაენდემურ ზონაში ინფიცირებულის ოჯახის წევრებში მოძებნეთ სოლიტერის მატარებელი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "დიფუზური ცერებრული შეშუპება",
+   "მკურნალობაუმიღებელი ჰიდროცეფალია"
+  ],
+  "sources": [
+   {
+    "org": "IDSA/ASTMH",
+    "title": "Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by IDSA and ASTMH (White et al., Am J Trop Med Hyg 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5928844/",
+    "type": "guideline",
+    "supports": "Fundoscopic examination before anthelminthic therapy; screen for latent TB and screen/treat Strongyloides if prolonged corticosteroids likely; in untreated hydrocephalus or diffuse cerebral edema manage raised ICP alone, not antiparasitic drugs; screen household members for tapeworm carriage if acquired in non-endemic area."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-013",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "სიცოცხლისუნარიანი პარენქიმული ცისტიცერკები — ანტიპარაზიტული თერაპია",
+  "recommendation_ka": "ქალასშიდა წნევის მომატების გარეშე ანტიპარაზიტული თერაპია ნაჩვენებია ყველა პაციენტში სიცოცხლისუნარიანი პარენქიმული ცისტებით. 1–2 ცისტა: ალბენდაზოლი 15 მგ/კგ/დღეში ორ მიღებად, საკვებთან ერთად, 10–14 დღე (მაქსიმუმ 1200 მგ/დღეში). 2-ზე მეტი ცისტა: ალბენდაზოლი 15 მგ/კგ/დღეში + პრაზიკვანტელი 50 მგ/კგ/დღეში 10–14 დღე. 14 დღეზე ხანგრძლივი ალბენდაზოლით მკურნალობისას აკონტროლეთ ჰეპატოტოქსიკურობა და ლეიკოპენია. მკურნალობის დასრულებიდან 6 თვის შემდეგ შენარჩუნებული ცისტური დაზიანებისას განიხილეთ განმეორებითი კურსი. ბავშვებში მიდგომა იგივეა, დოზირება — წონის მიხედვით.",
+  "doses": [
+   {
+    "drug": "albendazole",
+    "amount": 15,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "divided twice daily with food for 10–14 days",
+    "population": "all",
+    "max_amount": 1200,
+    "max_unit": "mg/day"
+   },
+   {
+    "drug": "praziquantel",
+    "amount": 50,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "daily for 10–14 days (with albendazole if >2 cysts)",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "ცისტების რაოდენობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ცისტების რაოდენობის ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "ხანგრძლივობა — ზედა ზღვარი / მონიტორინგის ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "განმეორებითი კურსის ვადა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA/ASTMH",
+    "title": "Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by IDSA and ASTMH (White et al., Am J Trop Med Hyg 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5928844/",
+    "type": "guideline",
+    "supports": "Antiparasitic drugs for all viable parenchymal NCC without raised ICP; 1–2 cysts: albendazole 15 mg/kg/day in two doses with food for 10–14 days, max 1,200 mg/day; >2 cysts: albendazole 15 mg/kg/day plus praziquantel 50 mg/kg/day for 10–14 days; monitor hepatotoxicity and leucopenia if albendazole >14 days; retreat lesions persisting 6 months; children managed as adults with weight-based dosing."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-014",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "NCC — კორტიკოსტეროიდები და ანტიეპილეფსიური თერაპია",
+  "recommendation_ka": "ანტიპარაზიტული თერაპიის მიმღებ ყველა პაციენტში კორტიკოსტეროიდები დაიწყეთ ანტიპარაზიტულ პრეპარატამდე (ცისტის განადგურებით გამოწვეული ანთების შესამცირებლად). კრუნჩხვების მქონე ყველა პაციენტს დაუნიშნეთ ანტიეპილეფსიური პრეპარატი (არჩევანი — ხელმისაწვდომობის, ფასისა და ურთიერთქმედების მიხედვით). მცირე რაოდენობის კრუნჩხვების, ცისტის რეზოლუციის და 24 თვე უკრუნჩხვოდ ყოფნის შემდეგ შეიძლება განიხილოთ ანტიეპილეფსიური პრეპარატის ეტაპობრივი მოხსნა. MRI გაიმეორეთ მინიმუმ ყოველ 6 თვეში ცისტური კომპონენტის გაქრობამდე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 24,
+    "unit": "month",
+    "meaning_ka": "კრუნჩხვების გარეშე პერიოდი მოხსნამდე"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "MRI-ის განმეორების ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA/ASTMH",
+    "title": "Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by IDSA and ASTMH (White et al., Am J Trop Med Hyg 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5928844/",
+    "type": "guideline",
+    "supports": "Adjunctive corticosteroids begun before antiparasitic drugs in all treated patients; antiepileptic drugs in all NCC patients with seizures; consider tapering after cyst resolution and 24 months seizure-free in patients with few seizures; repeat MRI at least every 6 months until resolution."
+   },
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Cyst destruction may cause inflammatory response; treatment may include corticosteroids and/or antiepileptic drugs."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-015",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "კალციფიცირებული, პარკუჭოვანი და სუბარაქნოიდული NCC; ორსულობა",
+  "recommendation_ka": "მხოლოდ კალციფიცირებული პარენქიმული დაზიანებებისას ანტიპარაზიტული საშუალებები არ არის ნაჩვენები — მხოლოდ სიმპტომური მკურნალობა. გვერდითი და III პარკუჭის ცისტიცერკები — სასურველია ნეიროენდოსკოპიური ამოღება; IV პარკუჭის — ქირურგიული ამოღება; ტექნიკურად რთული ამოღებისას — შუნტირება. სუბარაქნოიდული ცისტები — ანტიპარაზიტული თერაპია მაღალდოზიან კორტიკოსტეროიდებთან ერთად (დაიწყეთ ანტიპარაზიტულამდე), ხშირად 1 წელზე მეტ ხანს, რადიოლოგიურ რეზოლუციამდე; ჰიდროცეფალიისას დამატებით შუნტი. თვალშიდა ცისტიცერკი — ქირურგიული ამოღება. ორსულობისას ანტიჰელმინთური თერაპია, როგორც წესი, გადადეთ მშობიარობის შემდეგ (ქალასშიდა წნევის მომატება კი აქტიურად მართეთ). საჭიროა ნეიროქირურგთან/ინფექციონისტთან კონსულტაცია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "year",
+    "meaning_ka": "სუბარაქნოიდული NCC-ის თერაპიის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [
+   "ჰიდროცეფალია",
+   "IV პარკუჭის ცისტა"
+  ],
+  "sources": [
+   {
+    "org": "IDSA/ASTMH",
+    "title": "Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by IDSA and ASTMH (White et al., Am J Trop Med Hyg 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5928844/",
+    "type": "guideline",
+    "supports": "Calcified lesions: symptomatic therapy without antiparasitics; neuroendoscopic removal for lateral/third ventricle cysts, surgical removal for fourth ventricle, shunt if removal difficult; subarachnoid cysts: antiparasitic drugs with high-dose corticosteroids begun first, often over a year until radiologic resolution, shunt for hydrocephalus; intraocular cysts surgically removed; defer anthelminthic therapy until after pregnancy, manage raised ICP aggressively."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-016",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "T. solium-ის ტენიოზის/ცისტიცერკოზის პრევენცია",
+  "recommendation_ka": "ურჩიეთ: არ მიიღონ უმი ან ნაკლებად მომზადებული ღორის/საქონლის ხორცი; დაიცვან ხელის ჰიგიენა და საკვებისა და წყლის უსაფრთხოება (T. solium-ის კვერცხები ფეკალურ-ორალური გზით გადადის). საზოგადოებრივი ჯანდაცვის ღონისძიებებია ტენიოზის მატარებლების მკურნალობა, ღორების ვაქცინაცია (TSOL18) და ანთელმინთური მკურნალობა (ოქსფენდაზოლი), სანიტარიის გაუმჯობესება (ღია დეფეკაციის აღმოფხვრა), ღორების თავისუფალი ძოვების შეზღუდვა და ხორცის ინსპექცია (ერთიანი ჯანმრთელობის მიდგომა).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 18,
+    "unit": "label",
+    "meaning_ka": "TSOL18 ვაქცინა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Taeniasis/cysticercosis — fact sheet",
+    "year": 2022,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis",
+    "type": "fact_sheet",
+    "supports": "Control interventions: treatment of human taeniasis, pig vaccination plus anthelmintic (TSOL18, oxfendazole), health education on hygiene and food safety, improved sanitation ending open defecation, no free-roaming pigs, improved meat inspection; One Health approach."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PARA-017",
+  "cluster": "PARA",
+  "topics": [
+   35
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ექინოკოკოზი (ექინოკოკის სოლიტერის ლარვული ინფექცია)",
+  "recommendation_ka": "ცისტური ექინოკოკოზი ძირითადად ძაღლი–ცხვარი–ძაღლის ციკლით ვრცელდება, ალვეოლური — მელიებითა და სხვა მტაცებლებით (ძაღლი და კატაც შეიძლება იყოს საბოლოო მასპინძელი). დიაგნოსტიკის არჩევითი მეთოდია ულტრაბგერითი კვლევა, რომელსაც ავსებს CT და/ან MRI; სეროლოგია დიაგნოზს ამყარებს. ცისტური ექინოკოკოზის მართვა სტადიაზე დაფუძნებულია (ულტრაბგერითი კლასიფიკაციით): მედიკამენტური თერაპია, PAIR (პუნქცია, ასპირაცია, ინექცია, რეასპირაცია), ქირურგია ან დაკვირვება. ალვეოლური ექინოკოკოზისას — ადრეული დიაგნოზი და რადიკალური ქირურგია, შემდგომ ალბენდაზოლით პროფილაქტიკა. მიმართეთ სპეციალიზებულ ცენტრს. პრევენცია: ძაღლების რეგულარული დეჰელმინთიზაცია პრაზიკვანტელით (წელიწადში მინიმუმ 4-ჯერ), სასაკლაოს ჰიგიენა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "ძაღლების დეჰელმინთიზაციის მინიმალური სიხშირე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Echinococcosis — fact sheet",
+    "year": 2021,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/echinococcosis",
+    "type": "fact_sheet",
+    "supports": "Cystic echinococcosis maintained in dog–sheep–dog cycle, alveolar in foxes/carnivores with rodents; ultrasonography is technique of choice, complemented by CT/MRI, serology supports; CE options include drugs, PAIR, surgery and watch-and-wait, stage-specific by ultrasound; AE: early diagnosis and radical surgery followed by albendazole; deworm dogs with praziquantel at least 4 times per year, slaughterhouse hygiene."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

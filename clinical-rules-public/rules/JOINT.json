@@ -1,0 +1,554 @@
+[
+ {
+  "rule_id": "PUB-JOINT-001",
+  "cluster": "JOINT",
+  "topics": [
+   32
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "სახსარში სისხლჩაქცევა (ჰემართროზი) — მიზეზების შეფასება",
+  "recommendation_ka": "დაადგინეთ, არის თუ არა მნიშვნელოვანი ტრავმა (იოგის გახევა, სახსარშიდა მოტეხილობა). ჰემართროზი მინიმალური ტრავმის ან სპონტანურად — შეაფასეთ კოაგულოპათია: ჰემოფილია ან სხვა თანდაყოლილი სისხლდენის დარღვევა, ანტიკოაგულანტური თერაპია. სპონტანური ჰემართროზი მძიმე ჰემოფილიის დამახასიათებელი ნიშანია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "World Federation of Hemophilia",
+    "title": "WFH Guidelines for the Management of Hemophilia, 3rd edition (Srivastava et al., Haemophilia 2020;26 Suppl 6)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/hae.14046",
+    "type": "guideline",
+    "supports": "Joint bleeding (haemarthrosis) is the hallmark of severe haemophilia; spontaneous bleeding into joints occurs in severe disease and requires prompt recognition and factor replacement."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-002",
+  "cluster": "JOINT",
+  "topics": [
+   32
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მწვავე ჰემართროზი ცნობილი ჰემოფილიის მქონე პაციენტში",
+  "recommendation_ka": "ფაქტორის ჩანაცვლება დაიწყეთ რაც შეიძლება სწრაფად, პუნქციის მოლოდინის გარეშე; დაამატეთ დასვენება, ყინული, კომპრესია და შემდეგ რეაბილიტაცია. მენჯ-ბარძაყის, „სამიზნე“ სახსრის ან ტრავმასთან დაკავშირებული სისხლჩაქცევისას სამიზნე ფაქტორის აქტივობაა 80–100%. მკურნალობა წარმართეთ ჰემოფილიის ცენტრთან ერთად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 80,
+    "unit": "%",
+    "meaning_ka": "ფაქტორის აქტივობის ქვედა სამიზნე"
+   },
+   {
+    "value": 100,
+    "unit": "%",
+    "meaning_ka": "ფაქტორის აქტივობის ზედა სამიზნე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "World Federation of Hemophilia",
+    "title": "WFH Guidelines for the Management of Hemophilia, 3rd edition (Srivastava et al., Haemophilia 2020;26 Suppl 6)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/hae.14046",
+    "type": "guideline",
+    "supports": "Treat acute joint bleeds promptly with factor replacement plus rest/ice/rehabilitation; higher factor activity levels of 80–100% recommended for hip bleeds, target joints, or trauma-associated haemarthrosis (as summarised from the WFH 2020 guideline)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-003",
+  "cluster": "JOINT",
+  "topics": [
+   32,
+   69
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ჰემოფილიის მქონე პაციენტი შეშუპებული, ცხელი სახსრით, ცხელებით ან ფაქტორზე არასაკმარისი პასუხით",
+  "recommendation_ka": "ჰემოფილიის დროს სახსრის პუნქცია ჰემართროზის დიაგნოზისთვის, როგორც წესი, საჭირო არ არის; ის ტარდება სეპტიური ართრიტის გამოსარიცხად ან დაძაბული სისხლის ევაკუაციისთვის და მხოლოდ ფაქტორის დონის აწევის შემდეგ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელება",
+   "ტკივილის გაძლიერება ფაქტორის მიუხედავად",
+   "ანთების მარკერების მატება"
+  ],
+  "sources": [
+   {
+    "org": "World Federation of Hemophilia",
+    "title": "WFH Guidelines for the Management of Hemophilia, 3rd edition (Srivastava et al., Haemophilia 2020;26 Suppl 6)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/hae.14046",
+    "type": "guideline",
+    "supports": "Joint aspiration usually not required to diagnose a bleed in known haemophilia; if needed to rule out septic arthritis or relieve tense haemarthrosis, perform only after factor replacement has raised factor levels."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-004",
+  "cluster": "JOINT",
+  "topics": [
+   32
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "სპონტანური ჰემართროზი ანტიკოაგულანტის მიმღებ ზრდასრულში",
+  "recommendation_ka": "შეაფასეთ ანტიკოაგულაციის ინტენსივობა და თირკმლის ფუნქცია, გამორიცხეთ ინფექცია; საჭიროებისას ჩაატარეთ სახსრის პუნქცია და ჰემოსტაზის კორექცია. ანტიკოაგულანტის დროებით შეჩერება და განახლების დრო გადაწყვიტეთ მულტიდისციპლინურად (ჰემატოლოგი, ორთოპედი), თრომბოზის რისკის გათვალისწინებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Washington University Orthopaedic Journal Club (summary of retrospective cohort)",
+    "title": "Management of haemarthrosis in patients on oral anticoagulants",
+    "year": 2022,
+    "url": "https://journalclub.wustl.edu/2022/05/16/management-of-haemarthrosis-in-patients-on-oral-anticoagulants/",
+    "type": "review",
+    "supports": "Retrospective London cohort of spontaneous haemarthrosis on oral anticoagulants: most patients had anticoagulant temporarily held; multidisciplinary management."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-005",
+  "cluster": "JOINT",
+  "topics": [
+   33
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "მწვავე პოლიართრიტი — ვირუსული ეტიოლოგიის ალბათობა",
+  "recommendation_ka": "მწვავე ართრიტის შემთხვევების დაახლოებით 1% ვირუსულია. მსოფლიოში მთავარი გამომწვევებია პარვოვირუსი B19, B და C ჰეპატიტის ვირუსები, აივ და ალფავირუსები (ჩიკუნგუნია); რუბელას ართრიტი ვაქცინაციის გამო იშვიათდება. აიღეთ მოგზაურობის, კონტაქტის (ბავშვები გამონაყრით), სქესობრივი და ინექციური რისკის ანამნეზი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "%",
+    "meaning_ka": "ვირუსული ართრიტის წილი მწვავე ართრიტში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Marks & Marks, Clin Med)",
+    "title": "Viral arthritis",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868140",
+    "type": "review",
+    "supports": "A viral aetiology accounts for ~1% of acute arthritis; parvovirus B19, hepatitis B and C, HIV and alphaviruses are the most important causes; rubella arthritis declining with vaccination; travel history important. Still a current reference review."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-006",
+  "cluster": "JOINT",
+  "topics": [
+   33
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "მწვავე სიმეტრიული წვრილი სახსრების პოლიართრიტი ზრდასრულში (რევმატოიდული ართრიტის მსგავსი)",
+  "recommendation_ka": "განიხილეთ პარვოვირუს B19-ის ინფექცია (ინფიცირებულ ზრდასრულთა 60%-მდე აღენიშნება სახსრის სიმპტომები) და დაადასტურეთ B19 IgM-ით მწვავე ფაზაში. ჩაატარეთ HBsAg, ანტი-HBc და ანტი-HCV სკრინინგი; HCV-ის დროს კრიოგლობულინემიის ეჭვისას — კრიოგლობულინები და C4.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 60,
+    "unit": "%",
+    "meaning_ka": "B19-ით ინფიცირებულ ზრდასრულებში სახსრის სიმპტომების სიხშირე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Marks & Marks, Clin Med)",
+    "title": "Viral arthritis",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868140",
+    "type": "review",
+    "supports": "Joint symptoms in up to 60% of parvovirus B19-infected adults, often RA-like; diagnosis by B19 IgM; hepatitis B/C serology; cryoglobulinaemia features with HCV. Current reference review."
+   },
+   {
+    "org": "LSHTM (clinical table, viral arthritis review)",
+    "title": "Clinical features of viral arthritis — table",
+    "year": 2023,
+    "url": "https://lshtm-eprints-repo-prod.lshtm-eprints.cdl.cosector.com/2535826/2/Table%201%20-%20Clinical%20Feature%20-%20Viral%20Arthritis%20Review.docx",
+    "type": "review",
+    "supports": "HBV testing HBsAg, anti-HBc, HBV DNA; HCV anti-HCV and HCV RNA; cryoglobulins and low C4 for cryoglobulinaemic arthritis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-007",
+  "cluster": "JOINT",
+  "topics": [
+   33
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ვირუსული ართრიტის ეჭვი დაბალი ტიტრის რევმატოიდული ფაქტორით ან ANA-თი",
+  "recommendation_ka": "მწვავე ვირუსული ინფექციისას შესაძლოა გამოვლინდეს გარდამავალი დაბალი ტიტრის რევმატოიდული ფაქტორი და ANA; ნაადრევად ნუ დასვამთ რევმატოიდულ ართრიტს ან მგლურას — საჭიროებისას სეროლოგია გაიმეორეთ და შეაფასეთ სიმპტომების ხანგრძლივობა. სეროლოგიური ნიმუში აიღეთ მწვავე ფაზაში, რადგან ინფექციის მარკერები გამოჯანმრთელებისას ქრება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Marks & Marks, Clin Med)",
+    "title": "Viral arthritis",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868140",
+    "type": "review",
+    "supports": "Low-titre RF and ANA can appear transiently in acute viral arthritis; recognise viral syndromes in the acute phase. Current reference review."
+   },
+   {
+    "org": "Oxford University Press (Oxford Textbook of Rheumatology, 4th ed.)",
+    "title": "Viral arthritis chapter",
+    "year": 2013,
+    "url": "https://academic.oup.com/book/25283/chapter/189922637",
+    "type": "textbook",
+    "supports": "Current edition: markers of acute infection may fade during convalescence, so recognition during the acute phase is critical."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-008",
+  "cluster": "JOINT",
+  "topics": [
+   33
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ვირუსული ართრიტი (მაგ., პარვოვირუსი, ჩიკუნგუნია)",
+  "recommendation_ka": "მკურნალობა სიმპტომურია (ასსს, ფიზიკური ღონისძიებები); ინფექციების უმეტესობა თვითშემზღუდავია — ჩიკუნგუნიას ართრალგია ხშირად გადის 6–12 კვირაში, თუმცა შესაძლოა გახდეს ქრონიკული ან მორეციდივე. ხანგრძლივი ართრიტისას გადახედეთ დიაგნოზს და მიმართეთ რევმატოლოგს. HBV ან HCV ინფექციისას მიმართეთ ჰეპატოლოგს ანტივირუსული მკურნალობისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "ჩიკუნგუნიას ართრიტის ტიპური ხანგრძლივობის ქვედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "ჩიკუნგუნიას ართრიტის ტიპური ხანგრძლივობის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Marks & Marks, Clin Med)",
+    "title": "Viral arthritis",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868140",
+    "type": "review",
+    "supports": "Most viral arthritides self-limiting; chikungunya usually lasts <6–12 weeks but recurrent/chronic arthritis possible; management largely supportive. Current reference review."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-009",
+  "cluster": "JOINT",
+  "topics": [
+   68
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ოსტეომიელიტის განვითარების მექანიზმები",
+  "recommendation_ka": "ოსტეომიელიტი ვითარდება ჰემატოგენურად (ძირითადად ბავშვებში, ჩვეულებრივ ერთი გამომწვევით), მეზობელი ქსოვილიდან ან პირდაპირი ინოკულაციით (ტრავმა, ქირურგია, დიაბეტური ტერფი; ხშირად პოლიმიკრობული, ზრდასრულებში) და სისხლის მიმოქცევის უკმარისობის ფონზე. ყველა მექანიზმისას ყველაზე ხშირი გამომწვევია Staphylococcus aureus.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (peer-reviewed review)",
+    "title": "Osteomyelitis pathogenesis and microbiology review (title paraphrased)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5967688",
+    "type": "review",
+    "supports": "Haematogenous osteomyelitis usually monomicrobial and most common in children; contiguous spread (trauma, surgery, adjacent soft tissue) often polymicrobial in adults; S. aureus most common organism across all mechanisms."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-010",
+  "cluster": "JOINT",
+  "topics": [
+   68
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ქრონიკული ან მორეციდივე ოსტეომიელიტი — ანტიბიოტიკის წარუმატებლობის მიზეზები",
+  "recommendation_ka": "S. aureus ეკვრის ძვლის მატრიქსს, ქმნის ბიოფილმს, „მცირე კოლონიის ვარიანტებს“ და პერსისტერ უჯრედებს, ხოლო ანთებით გამოწვეული ძვლის რემოდელირება იზოლირებს კერებს იმუნური უჯრედებისა და სისტემური ანტიბიოტიკისგან. ამიტომ ქრონიკული ინფექციისას მხოლოდ ანტიბიოტიკი ხშირად არასაკმარისია — საჭიროა ქირურგიული დებრიდმენტი (ნეკროზული ძვლის მოცილება) და კულტურაზე დაფუძნებული თერაპია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Frontiers in Immunology (Gimza & Cassat)",
+    "title": "Mechanisms of antibiotic failure during Staphylococcus aureus osteomyelitis",
+    "year": 2021,
+    "url": "https://www.frontiersin.org/articles/10.3389/fimmu.2021.638085/pdf",
+    "type": "review",
+    "supports": "S. aureus osteomyelitis: biofilm formation promotes antibiotic tolerance and persister cells; small colony variants and protected niches in bone contribute to treatment failure."
+   },
+   {
+    "org": "PMC (peer-reviewed review)",
+    "title": "Osteomyelitis pathogenesis and microbiology review (title paraphrased)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5967688",
+    "type": "review",
+    "supports": "Pathological bone remodelling leads to sequestration of infectious foci from immune cells and systemic antibiotics."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-011",
+  "cluster": "JOINT",
+  "topics": [
+   68
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "დიაბეტური ტერფის ინფექცია ოსტეომიელიტის ეჭვით (მეზობელი ქსოვილიდან გავრცელება)",
+  "recommendation_ka": "საწყის კვლევებად გამოიყენეთ ძვალზე ზონდირების ტესტი, ტერფის რენტგენოგრაფია და ანთების მარკერი (ედს, CRP ან პროკალციტონინი). თუ ეჭვი რჩება, ჩაატარეთ მრტ. ანტიბიოტიკის შერჩევისთვის უპირატესობა მიანიჭეთ ძვლის ნიმუშის (ბიოფსია) კულტურას და არა ჭრილობის ნაცხს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IWGDF/IDSA",
+    "title": "IWGDF/IDSA Guidelines on the diagnosis and treatment of diabetes-related foot infections (2023)",
+    "year": 2023,
+    "url": "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-04-Infection-Guideline.pdf",
+    "type": "guideline",
+    "supports": "Consider probe-to-bone, plain X-rays and an inflammatory marker (ESR, CRP or procalcitonin) as initial studies; MRI when doubt persists; bone specimens rather than swabs for culture; conventional microbiology first-line."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-012",
+  "cluster": "JOINT",
+  "topics": [
+   69
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "მწვავე მონოართრიტი (ცხელი, შეშუპებული, მტკივნეული სახსარი) ზრდასრულში",
+  "recommendation_ka": "სეპტიური ართრიტი ჩათვალეთ გადაუდებელ მდგომარეობად. სინოვიური სითხის პუნქცია ჩაატარეთ რაც შეიძლება სწრაფად (უჯრედების რაოდენობა, გრამის შეღებვა, კულტურა, კრისტალები) და აიღეთ სისხლის კულტურები. სეფსისის ნიშნების გარეშე ემპირიული ანტიბიოტიკი დაიწყეთ ნიმუშის აღების შემდეგ, ცრუ-უარყოფითი კულტურის თავიდან ასაცილებლად; სეფსისისას ანტიბიოტიკი არ დააყოვნოთ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სეფსისი ან ჰიპოტენზია",
+   "პროთეზირებული სახსარი",
+   "იმუნოსუპრესია",
+   "ინექციური ნარკოტიკის მოხმარება"
+  ],
+  "sources": [
+   {
+    "org": "EBJIS",
+    "title": "Guideline for management of septic arthritis in native joints (SANJO), J Bone Jt Infect 2023;8:29-37",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901514",
+    "type": "guideline",
+    "supports": "Aspirate synovial fluid as soon as possible when septic arthritis suspected; except in patients with signs of sepsis, empirical antibiotics should await diagnostic sampling of joint fluid."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-013",
+  "cluster": "JOINT",
+  "topics": [
+   69
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "სინოვიური სითხის ლეიკოციტების ინტერპრეტაცია სეპტიური ართრიტის ეჭვისას",
+  "recommendation_ka": "ლეიკოციტები >50000/მკლ მნიშვნელოვნად ზრდის სეპტიური ართრიტის ალბათობას, ხოლო >100000/მკლ — კიდევ უფრო; ნეიტროფილები ≥90% დამატებით ზრდის ალბათობას. დაბალი რიცხვი ინფექციას ვერ გამორიცხავს (>50000 ზღვრის მგრძნობელობა მხოლოდ დაახლოებით 56–61%-ია) — გადამწყვეტია გრამის შეღებვა და კულტურა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50000,
+    "unit": "cells/µL",
+    "meaning_ka": "ლეიკოციტების ზღვარი, რომელიც ზრდის ალბათობას"
+   },
+   {
+    "value": 100000,
+    "unit": "cells/µL",
+    "meaning_ka": "ლეიკოციტების ზღვარი, მაღალი ალბათობა"
+   },
+   {
+    "value": 90,
+    "unit": "%",
+    "meaning_ka": "ნეიტროფილების წილი"
+   },
+   {
+    "value": 56,
+    "unit": "%",
+    "meaning_ka": "მგრძნობელობის ქვედა შეფასება"
+   },
+   {
+    "value": 61,
+    "unit": "%",
+    "meaning_ka": "მგრძნობელობის ზედა შეფასება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "JAMA Rational Clinical Examination (Margaretten et al., JAMA 2007;297:1478-88)",
+    "title": "Does this adult patient have septic arthritis?",
+    "year": 2007,
+    "url": "https://meded.ucsf.edu/node/49036",
+    "type": "systematic_review",
+    "supports": "Synovial WBC >50,000/µL LR+ 7.7, >100,000/µL LR+ 28; PMN ≥90% LR 3.4. Still the reference diagnostic-accuracy review (current edition)."
+   },
+   {
+    "org": "Am J Emerg Med (retrospective diagnostic study)",
+    "title": "How sensitive is the synovial fluid white blood cell count in diagnosing septic arthritis?",
+    "year": 2007,
+    "url": "https://ajemjournal.com/article/S0735-67570600422-0/fulltext",
+    "type": "cohort",
+    "supports": "Sensitivity of the 50,000/mm3 cutoff was 61% — insufficient to exclude septic arthritis; pooled sensitivity ~56% in meta-analysis. Remains current diagnostic evidence."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-014",
+  "cluster": "JOINT",
+  "topics": [
+   69
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "სისხლის ანთების მარკერები სეპტიური ართრიტის დროს",
+  "recommendation_ka": "არც ერთი სისხლის ტესტი (ლეიკოციტები, ედს, CRP, პროკალციტონინი) არ არის საკმარისად მგრძნობიარე ან სპეციფიკური სეპტიური ართრიტის დასადასტურებლად ან გამოსარიცხად. CRP-ის დინამიკა გამოიყენეთ დიაგნოზის მხარდასაჭერად და მკურნალობაზე პასუხის მონიტორინგისთვის.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EBJIS",
+    "title": "Guideline for management of septic arthritis in native joints (SANJO), J Bone Jt Infect 2023;8:29-37",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901514",
+    "type": "guideline",
+    "supports": "No blood test is sensitive or specific enough to confirm or exclude septic arthritis of native joints; CRP kinetics suggested to support diagnosis and monitor treatment response."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-015",
+  "cluster": "JOINT",
+  "topics": [
+   69
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "სეპტიური ართრიტი — ემპირიული ანტიბიოტიკი და სახსრის დრენირება",
+  "recommendation_ka": "ემპირიული თერაპია უნდა მოიცავდეს S. aureus-სა და სტრეპტოკოკებს; MRSA-ს რისკისას (მოხუცთა სახლის ბინადარი, ახლო წარსულში ჰოსპიტალიზაცია) დაამატეთ MRSA-ს საწინააღმდეგო საშუალება, ხოლო გრამუარყოფითი გამომწვევის რისკისას (ხანდაზმული, იმუნოსუპრესია) — გრამუარყოფითი დაფარვა, ადგილობრივი რეზისტენტობის მიხედვით. პრეპარატი შეცვალეთ გრამის შეღებვისა და კულტურის პასუხის მიხედვით. სახსარი დრენირეთ (ნემსით, არტროსკოპიულად ან ღიად); პროთეზირებული სახსრის ეჭვისას დაუყოვნებლივ მიმართეთ ორთოპედს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პროთეზირებული სახსრის ინფექციის ეჭვი"
+  ],
+  "sources": [
+   {
+    "org": "EBJIS",
+    "title": "Guideline for management of septic arthritis in native joints (SANJO), J Bone Jt Infect 2023;8:29-37",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901514",
+    "type": "guideline",
+    "supports": "Interdisciplinary guideline covering empirical therapy, surgical drainage and targeted therapy for native-joint septic arthritis; therapy adjusted to microbiology."
+   },
+   {
+    "org": "Journal of Antimicrobial Chemotherapy",
+    "title": "Management of septic arthritis — UK guidance article (title paraphrased)",
+    "year": 2006,
+    "url": "https://academic.oup.com/jac/article/58/3/492/748748",
+    "type": "guideline",
+    "supports": "Current edition: aspirate before antibiotics; refer possible prosthetic joint infection to orthopaedics; modify empirical therapy for MRSA risk (nursing home residents, recent inpatients) or Gram-negative risk (elderly, immunosuppressed)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-JOINT-016",
+  "cluster": "JOINT",
+  "topics": [
+   69
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "სეპტიური ართრიტი ქირურგიული დრენირების შემდეგ — ანტიბიოტიკის ხანგრძლივობა",
+  "recommendation_ka": "რანდომიზებულ კვლევაში ქირურგიული დრენირების შემდეგ 2-კვირიანი მიზნობრივი ანტიბიოტიკი არ ჩამორჩებოდა 4-კვირიანს რეციდივის თვალსაზრისით, თუმცა შემთხვევების უმეტესობა ხელის და მაჯის სახსრებს ეხებოდა (64%). დიდ სახსრებში, S. aureus-ის ბაქტერიემიისას ან იმუნოსუპრესიისას ხანგრძლივობა ინდივიდუალურად, ინფექციონისტთან ერთად განსაზღვრეთ; შეწყვეტის გადაწყვეტილებაში გამოიყენეთ კლინიკური ნიშნები და CRP.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "მოკლე კურსი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "სტანდარტული შედარებითი კურსი"
+   },
+   {
+    "value": 64,
+    "unit": "%",
+    "meaning_ka": "ხელის/მაჯის შემთხვევების წილი კვლევაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Ann Rheum Dis (Gjika et al., RCT)",
+    "title": "Two weeks versus four weeks of antibiotic therapy after surgical drainage for native joint bacterial arthritis",
+    "year": 2019,
+    "url": "https://doi.org/10.1136/annrheumdis-2019-215116",
+    "type": "rct",
+    "supports": "Unblinded RCT (n=154), adults with native-joint bacterial arthritis after surgical drainage: 2 weeks non-inferior to 4 weeks for recurrence; 64% hand/wrist infections, limited generalisability to large joints."
+   },
+   {
+    "org": "EBJIS",
+    "title": "Guideline for management of septic arthritis in native joints (SANJO), J Bone Jt Infect 2023;8:29-37",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901514",
+    "type": "guideline",
+    "supports": "CRP kinetics used to monitor treatment response."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

@@ -1,0 +1,662 @@
+[
+ {
+  "rule_id": "PUB-RHIN-001",
+  "cluster": "RHIN",
+  "topics": [
+   61,
+   65
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ცხვირის ქავილი, ცემინება, წყლიანი რინორეა და/ან გაჭედვა, რომელიც ალერგენთან კონტაქტისას ან სეზონურად ძლიერდება",
+  "recommendation_ka": "ალერგიული რინიტის დიაგნოზი დაისვით კლინიკურად — ანამნეზით (სიმპტომების ტიპი, ტრიგერები, სეზონურობა, ოჯახური ატოპია) და ფიზიკური გასინჯვით. ალერგენ-სპეციფიკური IgE-ს კანის ან სისხლის ტესტი ჩაატარეთ, როცა ემპირიული მკურნალობა არაეფექტურია, დიაგნოზი გაურკვეველია, ან კონკრეტული ალერგენის იდენტიფიკაცია მკურნალობას (ალერგენის თავიდან აცილება, იმუნოთერაპია) შეცვლის.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "AAO-HNSF Releases Guideline on Allergic Rhinitis (Practice Guidelines summary)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/1115/p942.html",
+    "type": "guideline_summary",
+    "supports": "Clinical diagnosis from history and exam; specific IgE skin or blood testing when treatment fails, diagnosis uncertain, identifying the allergen could change therapy, or to titrate therapy. (summary of the current edition of the AAO-HNSF CPG.)"
+   },
+   {
+    "org": "AAO-HNSF",
+    "title": "Clinical Practice Guideline: Allergic Rhinitis (2015)",
+    "year": 2015,
+    "url": "https://www.entnet.org/resource/aao-hnsf-cpg-allergic-rhinitis/",
+    "type": "guideline",
+    "supports": "14 key action statements covering diagnosis, testing and documentation of comorbidities. (2015 guideline remains the current edition of the AAO-HNSF allergic rhinitis CPG.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-002",
+  "cluster": "RHIN",
+  "topics": [
+   61
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტის ეჭვით პაციენტის შეფასება",
+  "recommendation_ka": "საკვების ალერგიის ტესტირება რინიტის რუტინულ შეფასებაში არ არის რეკომენდებული. გაითვალისწინეთ, რომ ხველა როგორც ალერგიული, ისე არაალერგიული რინიტის ხშირი სიმპტომია (პოსტნაზალური ჩადინება) და ცალკე დიაგნოზად არ შეაფასოთ ცხვირის შეფასების გარეშე.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Food allergy testing is not recommended in the routine evaluation of rhinitis; cough is a common symptom of both AR and NAR."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-003",
+  "cluster": "RHIN",
+  "topics": [
+   61,
+   65
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "დადასტურებული ან სავარაუდო ალერგიული რინიტი",
+  "recommendation_ka": "შეაფასეთ და დოკუმენტირება გაუკეთეთ თანმხლებ მდგომარეობებს: ასთმა, ატოპიური დერმატიტი, ალერგიული კონიუნქტივიტი, ძილის დარღვევა/ძილის დროს სუნთქვის დარღვევა, რინოსინუსიტი და შუა ყურის ანთება. ასთმის სიმპტომების არსებობისას ჩაატარეთ ასთმის სათანადო შეფასება, რადგან ორივე დაავადება ერთიანი სასუნთქი გზების პათოლოგიაა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAO-HNSF",
+    "title": "Clinical Practice Guideline: Allergic Rhinitis (2015)",
+    "year": 2015,
+    "url": "https://www.entnet.org/resource/aao-hnsf-cpg-allergic-rhinitis/",
+    "type": "guideline",
+    "supports": "Recommends assessing and documenting associated conditions such as asthma, atopic dermatitis, sleep-disordered breathing, conjunctivitis, rhinosinusitis and otitis media. (2015 guideline remains the current edition of the AAO-HNSF allergic rhinitis CPG.)"
+   },
+   {
+    "org": "AAFP",
+    "title": "AAO-HNSF Releases Guideline on Allergic Rhinitis (Practice Guidelines summary)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/1115/p942.html",
+    "type": "guideline_summary",
+    "supports": "Guideline addresses assessment and documentation of chronic conditions and comorbidities in AR. (summary of the current edition of the AAO-HNSF CPG.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-004",
+  "cluster": "RHIN",
+  "topics": [
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტი, რომლის სიმპტომები ცხოვრების ხარისხს აუარესებს, განსაკუთრებით პერსისტენტული ფორმა და ცხვირის გაჭედვა",
+  "recommendation_ka": "პირველი რიგის მონოთერაპიად აირჩიეთ ინტრანაზალური კორტიკოსტეროიდი (მაგ., „მომეტაზონი“, „ფლუტიკაზონი“) ყოველდღიური გამოყენებით. მეორე თაობის პერორალური ანტიჰისტამინური საშუალება (მაგ., „ცეტირიზინი“, „ლორატადინი“) ალტერნატივაა, განსაკუთრებით ცემინებისა და ქავილისას, თუმცა გაჭედვაზე ინტრანაზალურ სტეროიდზე ნაკლებად ეფექტურია. ასწავლეთ შესხურების ტექნიკა: საქშენი მიმართეთ ძგიდიდან გვერდით, რათა შემცირდეს გაღიზიანება და სისხლდენა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Intranasal corticosteroids are the preferred monotherapy for persistent allergic rhinitis."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAO-HNSF Releases Guideline on Allergic Rhinitis (Practice Guidelines summary)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/1115/p942.html",
+    "type": "guideline_summary",
+    "supports": "Intranasal steroids and second-generation antihistamines (less effective than intranasal steroids) are strongly recommended for patients whose symptoms affect quality of life. (summary of the current edition of the AAO-HNSF CPG.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-005",
+  "cluster": "RHIN",
+  "topics": [
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტი, არასაკმარისი პასუხი ინტრანაზალურ კორტიკოსტეროიდზე",
+  "recommendation_ka": "ინტრანაზალურ კორტიკოსტეროიდს დაუმატეთ ინტრანაზალური ანტიჰისტამინური საშუალება (მაგ., „აზელასტინი“), შესაძლებელია ფიქსირებული კომბინაციით, დამატებითი ეფექტისთვის. მანამდე შეამოწმეთ დამყოლობა და შესხურების ტექნიკა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Adding an intranasal antihistamine to an intranasal corticosteroid is recommended for additional benefit in AR."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-006",
+  "cluster": "RHIN",
+  "topics": [
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მონტელუკასტის განხილვა ალერგიული რინიტის დროს",
+  "recommendation_ka": "„მონტელუკასტი“ რინიტის სამკურნალოდ გამოიყენეთ მხოლოდ მაშინ, როცა ალტერნატიული საშუალებები (ინტრანაზალური სტეროიდი, ანტიჰისტამინი) არაეფექტური ან აუტანელია. პაციენტს და მშობლებს აუხსენით შესაძლო ნეიროფსიქიატრიული გვერდითი ეფექტები და მიაქციეთ ყურადღება ქცევის ცვლილებებს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "განწყობის ან ქცევის ცვლილება, სუიციდური აზრები მონტელუკასტის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Montelukast should only be used for AR in patients who have an inadequate response or intolerance to alternative therapies."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-007",
+  "cluster": "RHIN",
+  "topics": [
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტი — სისტემური კორტიკოსტეროიდების განხილვა",
+  "recommendation_ka": "დეპო-ფორმის პარენტერალური (ინტრამუსკულური) კორტიკოსტეროიდი ალერგიული რინიტის სამკურნალოდ არ არის რეკომენდებული სისტემური გვერდითი ეფექტების რისკის გამო; ამის ნაცვლად ოპტიმიზაცია გაუკეთეთ ტოპიკურ თერაპიას ან განიხილეთ იმუნოთერაპია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Depot parenteral corticosteroids are not recommended for the treatment of AR."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-008",
+  "cluster": "RHIN",
+  "topics": [
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "pregnancy",
+  "condition_ka": "ალერგიული რინიტი ორსულობის დროს",
+  "recommendation_ka": "ორსულობის პირველ ტრიმესტრში თავი აარიდეთ პერორალურ დეკონგესტანტებს (მაგ., „ფსევდოეფედრინი“). სიმპტომურ მკურნალობად უპირატესობა მიანიჭეთ ტოპიკურ თერაპიას ორსულობაში უსაფრთხოების მონაცემების მქონე პრეპარატებით და მკურნალობა შეათანხმეთ მეანთან.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Oral decongestants should be avoided in the first trimester of pregnancy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-009",
+  "cluster": "RHIN",
+  "topics": [
+   62,
+   61
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტი, რომელიც ფარმაკოთერაპიითა და ალერგენის თავიდან აცილებით არ კონტროლდება, დადასტურებული IgE-სენსიბილიზაციით",
+  "recommendation_ka": "განიხილეთ ალერგენ-სპეციფიკური იმუნოთერაპია (კანქვეშა ან სუბლინგვური ტაბლეტი) ალერგოლოგთან ერთად. აშშ-ის ოტორინოლარინგოლოგთა 2024 წლის გაიდლაინი ეხება 5 წლის და უფროსი ასაკის პაციენტებს; იმუნოთერაპიის დაწყებამდე შეაფასეთ ასთმის კონტროლი — არაკონტროლირებადი ასთმა და ორსულობა თერაპიის დაწყების საწინააღმდეგო ჩვენებაა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2024,
+    "unit": "label",
+    "meaning_ka": "გაიდლაინის წელი"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "იმუნოთერაპიის გაიდლაინის მინიმალური ასაკი"
+   }
+  ],
+  "red_flags_ka": [
+   "არაკონტროლირებადი ასთმა",
+   "ორსულობა (იმუნოთერაპიის დაწყება)"
+  ],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Includes recommendations for subcutaneous and sublingual tablet allergen immunotherapy in AR."
+   },
+   {
+    "org": "AAO-HNSF (via ENT Today)",
+    "title": "AAO-HNS issues clinical practice guideline for immunotherapy use in inhalant allergy (2024)",
+    "year": 2024,
+    "url": "https://www.enttoday.org/article/aao-hns-issues-clinical-practice-guideline-for-immunotherapy-use-in-inhalant-allergy",
+    "type": "guideline_summary",
+    "supports": "2024 CPG on immunotherapy for inhalant allergy covers patients aged 5 years and older; addresses candidacy, who should not receive it (e.g., pregnant patients, uncontrolled asthma) and asthma assessment before starting."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-010",
+  "cluster": "RHIN",
+  "topics": [
+   64
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტის პათოგენეზი — სენსიბილიზაციის ფაზა",
+  "recommendation_ka": "ალერგენს ცხვირის ლორწოვანზე იღებენ ანტიგენმაპრეზენტირებელი უჯრედები და წარუდგენენ T-ჰელპერებს; Th2 უჯრედები გამოყოფენ IL-4 და IL-13 ციტოკინებს, რომლებიც B-ლიმფოციტებში ალერგენ-სპეციფიკური IgE-ს სინთეზს იწვევს. IgE უკავშირდება პოხიერი უჯრედების მაღალაფინურ რეცეპტორს. კლინიკური მნიშვნელობა: დიაგნოზის დასადასტურებლად IgE-სენსიბილიზაცია უნდა შეესაბამებოდეს სიმპტომებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "ინტერლეიკინი IL-4"
+   },
+   {
+    "value": 13,
+    "unit": "label",
+    "meaning_ka": "ინტერლეიკინი IL-13"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Asia Pacific Allergy (PMC)",
+    "title": "Overview on the pathomechanisms of allergic rhinitis",
+    "year": 2011,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3206239/",
+    "type": "review",
+    "supports": "Allergens are taken up by antigen-presenting cells and presented to helper T cells, which release IL-4 and IL-13 to induce allergen-specific IgE that binds the high-affinity IgE receptor on mast cells. (foundational review; mechanisms described remain current.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-011",
+  "cluster": "RHIN",
+  "topics": [
+   64
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ალერგიული რინიტის ადრეული და გვიანი ფაზის რეაქცია",
+  "recommendation_ka": "განმეორებითი ექსპოზიციისას ალერგენი IgE-ს ჯვარედინად აკავშირებს პოხიერ უჯრედებზე: ადრეულ ფაზაში წუთებში გამოიყოფა ჰისტამინი და სხვა მედიატორები — ცემინება, ქავილი, რინორეა, გაჭედვა. საათების შემდეგ ვითარდება გვიანი ფაზა ეოზინოფილების, ბაზოფილების და T-ლიმფოციტების ინფილტრაციით, რაც ქრონიკულ გაჭედვას და ჰიპერრეაქტიულობას განაპირობებს. ამიტომ გაჭედვაზე უფრო ეფექტურია ანთების საწინააღმდეგო ინტრანაზალური სტეროიდი, ვიდრე მხოლოდ ანტიჰისტამინი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Asia Pacific Allergy (PMC)",
+    "title": "Overview on the pathomechanisms of allergic rhinitis",
+    "year": 2011,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3206239/",
+    "type": "review",
+    "supports": "Early-phase response: cross-linking of IgE on mast cells releases histamine causing sneezing, itching, rhinorrhoea and congestion; hours later eosinophils, basophils, monocytes and T lymphocytes infiltrate (late phase). (foundational review; mechanisms described remain current.)"
+   },
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Intranasal corticosteroids are the preferred monotherapy for persistent AR."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-012",
+  "cluster": "RHIN",
+  "topics": [
+   64,
+   65
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ცხვირის ქრონიკული სიმპტომები ალერგოლოგიური ტესტების ფონზე",
+  "recommendation_ka": "რინიტი დაყავით ალერგიულ (IgE-დამოკიდებულ) და არაალერგიულ ფორმებად; შესაძლებელია შერეული რინიტიც. უარყოფითი სისტემური სენსიბილიზაციის ტესტი არ გამორიცხავს ცხვირის ანთებას — ასეთ შემთხვევაში განიხილეთ არაალერგიული რინიტის ქვეტიპები (ვაზომოტორული, NARES, მედიკამენტური და სხვ.).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Parameter addresses both allergic and nonallergic rhinitis, their diagnosis and pharmacologic management."
+   },
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Nonallergic rhinitis is diagnosed by negative allergy testing with chronic nasal symptoms; subtypes include vasomotor, NARES, drug-induced, rhinitis medicamentosa, hormonal, occupational, gustatory and atrophic rhinitis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-013",
+  "cluster": "RHIN",
+  "topics": [
+   65,
+   67
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ცხვირის ქრონიკული სიმპტომები, ალერგიული სენსიბილიზაციის გარეშე",
+  "recommendation_ka": "განასხვავეთ არაალერგიული რინიტის ქვეტიპები: ინფექციური, ეოზინოფილური სინდრომით (NARES), მედიკამენტური, მედიკამენტოზური (rhinitis medicamentosa), ჰორმონული (ორსულობა, ჰიპოთირეოზი), პროფესიული, გუსტატორული, ატროფიული და ვაზომოტორული. ქვეტიპი განსაზღვრავს მკურნალობას (მიზეზის მოხსნა, ინტრანაზალური სტეროიდი, ანტიქოლინერგული საშუალება).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Lists NAR subtypes: infectious, NARES, drug-induced, rhinitis medicamentosa, hormonal, occupational, gustatory, atrophic and vasomotor rhinitis; treatment is directed by subtype."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-014",
+  "cluster": "RHIN",
+  "topics": [
+   65,
+   67
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ტოპიკური დეკონგესტანტის (მაგ., „ოქსიმეტაზოლინი“, „ქსილომეტაზოლინი“) ხანგრძლივი გამოყენება, რიკოშეტული გაჭედვა",
+  "recommendation_ka": "ტოპიკური დეკონგესტანტი 3–5 დღეზე მეტხანს არ გამოიყენოთ, რადგან ვითარდება რიკოშეტული ვასკულური გაჭედვა (მედიკამენტოზური რინიტი). მკურნალობა: პრეპარატის შეწყვეტა; მოხსნის პერიოდში გამოიყენეთ ინტრანაზალური კორტიკოსტეროიდი სიმპტომების შესამსუბუქებლად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ტოპიკური დეკონგესტანტის გამოყენების ზღვარი — ქვედა"
+   },
+   {
+    "value": 5,
+    "unit": "day",
+    "meaning_ka": "ტოპიკური დეკონგესტანტის გამოყენების ზღვარი — ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Use of topical decongestants for longer than three to five days results in rebound nonallergic vascular congestion (rhinitis medicamentosa); treatment is discontinuation of the drug, with intranasal corticosteroids to ease withdrawal."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-015",
+  "cluster": "RHIN",
+  "topics": [
+   67
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ცხვირის გაჭედვა ან რინორეა სისტემური მედიკამენტის ფონზე",
+  "recommendation_ka": "შეაგროვეთ სრული მედიკამენტური ანამნეზი: მედიკამენტურ რინიტს იწვევს ანტიჰიპერტენზიული საშუალებები, არასტეროიდული ანთების საწინააღმდეგო საშუალებები, PDE-5 ინჰიბიტორები, ჰორმონული პრეპარატები და კოკაინის მოხმარება. შესაძლებლობის შემთხვევაში შეცვალეთ ან შეწყვიტეთ გამომწვევი საშუალება; NSAID-ზე რეაქციისას განიხილეთ ასპირინით გამწვავებული რესპირაციული დაავადება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "label",
+    "meaning_ka": "ფოსფოდიესთერაზა-5 (PDE-5) ინჰიბიტორები"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Drug-induced rhinitis can be caused by antihypertensives, NSAIDs, phosphodiesterase-5 inhibitors, hormones and cocaine; management is stopping the offending agent."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-016",
+  "cluster": "RHIN",
+  "topics": [
+   65,
+   67
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "გუსტატორული რინიტი — წყლიანი რინორეა ცხარე ან ცხელი საკვების მიღებისას",
+  "recommendation_ka": "საჭიროებისამებრ გამოიყენეთ ინტრანაზალური „იპრატროპიუმის ბრომიდი“ ჭამამდე; ხანდაზმულებში აკონტროლეთ ანტიქოლინერგული გვერდითი ეფექტები (შარდის შეკავების დარღვევა, სიმშრალე). ასევე ურჩიეთ ტრიგერი საკვების თავიდან აცილება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Gustatory rhinitis is triggered by hot or spicy foods; treatment is intranasal ipratropium bromide as needed, and trigger avoidance."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-017",
+  "cluster": "RHIN",
+  "topics": [
+   67,
+   82
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ცხვირის სიმპტომები ცალმხრივი ან ატიპიური ნიშნებით",
+  "recommendation_ka": "ცალმხრივი ცხვირის გაჭედვა ან გამონადენი, სისხლიანი გამონადენი ან განმეორებითი ცხვირიდან სისხლდენა, ცალმხრივი სახის ან ორბიტის ტკივილი/შეშუპება, პროგრესირებადი თავის ტკივილი, ახალი ანოსმია ცალმხრივ სიმპტომებთან ერთად — ეს ნიშნები არ მიაწეროთ რინიტს; საჭიროა სასწრაფო მიმართვა ოტორინოლარინგოლოგთან (ნეოპლაზიის, უცხო სხეულის ან გართულებული სინუსიტის გამოსარიცხად). ბავშვებში ცალმხრივი სუნიანი გამონადენი უცხო სხეულზე მიუთითებს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცალმხრივი გაჭედვა ან გამონადენი",
+   "სისხლიანი გამონადენი/განმეორებითი სისხლდენა",
+   "ორბიტის ტკივილი ან შეშუპება",
+   "პროგრესირებადი თავის ტკივილი",
+   "ახალი ცალმხრივი ანოსმია"
+  ],
+  "sources": [
+   {
+    "org": "NHS North East London ICB",
+    "title": "London regional guideline and pathway for the management of rhinitis v2.2",
+    "year": 2025,
+    "url": "https://primarycare.northeastlondon.icb.nhs.uk/wp-content/uploads/2025/04/20250331-ENT-for-the-management-of-Rhinitis-v2.2_GUIDE-.docx",
+    "type": "guideline",
+    "supports": "Lists red flags requiring urgent ENT referral: unilateral nasal symptoms/obstruction, blood-stained discharge or recurrent epistaxis, unilateral facial or orbital pain/swelling, progressive headache, new anosmia with unilateral symptoms."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-018",
+  "cluster": "RHIN",
+  "topics": [
+   82
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ცხვირის ქრონიკული ობსტრუქციის ჩივილი მოზრდილში",
+  "recommendation_ka": "გამოიკვლიეთ ანტერიორული რინოსკოპიით და, საჭიროებისას, ცხვირის ენდოსკოპიით: ცხვირის ძგიდის გამრუდება, ქვედა ნიჟარების ჰიპერტროფია, პოლიპები, სარქვლის კოლაფსი, ლორწოვანის ანთება. სიმძიმე შეაფასეთ ვალიდირებული კითხვარით (NOSE სკალა); კვლევებში NOSE ≥30 ქულა მინიმუმ ზომიერ სიმძიმედ ითვლება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 30,
+    "unit": "score",
+    "meaning_ka": "NOSE ქულა — მინიმუმ ზომიერი ობსტრუქცია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Trials (PMC)",
+    "title": "NAIROS: phase III multicentre RCT of septoplasty versus medical management of septal deviation with nasal obstruction (protocol)",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7020359/",
+    "type": "trial_protocol",
+    "supports": "Adults with septal deviation and nasal obstruction of at least moderate severity (NOSE score >=30) randomised to septoplasty vs medical management (nasal steroid plus saline spray); primary outcome SNOT-22 at 6 months."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-019",
+  "cluster": "RHIN",
+  "topics": [
+   82
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ცხვირის ობსტრუქცია ძგიდის გამრუდების გამო, მინიმუმ ზომიერი სიმპტომებით მოზრდილში",
+  "recommendation_ka": "პირველ ეტაპზე შესაძლებელია სამედიცინო მართვა (ინტრანაზალური კორტიკოსტეროიდი და ფიზიოლოგიური ხსნარის სპრეი), თუმცა მინიმუმ ზომიერი სიმპტომების მქონე მოზრდილებს შეიძლება შესთავაზოთ სეპტოპლასტიკა: რანდომიზებულ კვლევაში ის 6 თვეში ცხოვრების ხარისხს (SNOT-22) მნიშვნელოვნად მეტად აუმჯობესებდა, ვიდრე სპრეები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "შედეგის შეფასების დრო"
+   },
+   {
+    "value": 22,
+    "unit": "label",
+    "meaning_ka": "SNOT-22 კითხვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "BMJ Group / NIHR",
+    "title": "Septoplasty vs medical management for nasal airway obstruction (NAIROS), BMJ 2023;383:e075445 - press release",
+    "year": 2023,
+    "url": "https://bmjgroup.com/surgery-more-effective-than-nasal-sprays-for-symptoms-of-a-crooked-septum/",
+    "type": "trial_report",
+    "supports": "In 378 adults with at least moderate symptoms from a deviated septum, septoplasty improved SNOT-22 quality of life at 6 months more than nasal steroid plus saline spray; adults with at least moderate symptoms can reliably be offered surgery."
+   },
+   {
+    "org": "NIHR Evidence",
+    "title": "Surgery for a deviated nasal septum improves quality of life more than non-surgical approaches",
+    "year": 2024,
+    "url": "https://evidence.nihr.ac.uk/alert/surgery-for-a-deviated-nasal-septum-improves-quality-of-life-more-than-non-surgical-approaches",
+    "type": "evidence_summary",
+    "supports": "NIHR summary of NAIROS: septoplasty was more effective than medical management (steroid and saline sprays) for adults with nasal obstruction due to septal deviation."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RHIN-020",
+  "cluster": "RHIN",
+  "topics": [
+   82,
+   62
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ცხვირის ობსტრუქცია ლორწოვანის ანთების (ალერგიული ან არაალერგიული რინიტის) ფონზე",
+  "recommendation_ka": "ქირურგიულ ჩარევამდე ჩაატარეთ ინტრანაზალური კორტიკოსტეროიდის ადეკვატური კურსი სწორი ტექნიკით; პერსისტენტული ალერგიული რინიტის დროს ეს უპირატესი მონოთერაპიაა. ტოპიკური დეკონგესტანტი ქრონიკული ობსტრუქციის სამკურნალოდ არ გამოიყენოთ რიკოშეტული გაჭედვის რისკის გამო.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAAAI/ACAAI Joint Task Force on Practice Parameters",
+    "title": "Rhinitis 2020: A practice parameter update (J Allergy Clin Immunol 2020;146:721-767)",
+    "year": 2020,
+    "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Rhinitis-2020-A-practice-parameter-update.pdf",
+    "type": "guideline",
+    "supports": "Intranasal corticosteroids are the preferred monotherapy for persistent AR."
+   },
+   {
+    "org": "AAFP",
+    "title": "Chronic Nonallergic Rhinitis (Am Fam Physician 2018;98(3):171-176)",
+    "year": 2018,
+    "url": "https://www.aafp.org/pubs/afp/issues/2018/0801/p171.html",
+    "type": "review",
+    "supports": "Prolonged topical decongestant use causes rebound congestion (rhinitis medicamentosa)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

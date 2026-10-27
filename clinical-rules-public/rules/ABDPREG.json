@@ -1,0 +1,265 @@
+[
+ {
+  "rule_id": "PUB-ABDPREG-001",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "evaluation",
+  "population": "pregnancy",
+  "condition_ka": "ორსული ან მშობიარობის შემდგომი პაციენტი მწვავე მუცლის/მენჯის ტკივილით — ვიზუალიზაციის არჩევა",
+  "recommendation_ka": "პირველი რიგის მეთოდია ექოსკოპია; თუ ექოსკოპია არადიაგნოსტიკურია, ორსულობისას უპირატესობა მიანიჭეთ მრტ-ს (იონიზირებელი გამოსხივების გარეშე). მშობიარობის შემდგომ პერიოდში კტ გადაუდებელი გართულებების შესაფასებლად მთავარი მეთოდია. ორსულის გამოკვლევისას გაითვალისწინეთ, რომ მზარდი საშვილოსნო ორგანოებს ანაცვლებს და კლასიკურ ფიზიკალურ ნიშნებს ცვლის.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Diagnostics (MDPI, peer-reviewed review)",
+    "title": "Imaging of acute abdominopelvic pain in pregnancy and puerperium — Part II: non-obstetric complications",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10528125/",
+    "type": "review",
+    "supports": "Ultrasound is first-line in pregnancy and puerperium, MRI is a strong problem-solving option without ionising radiation, and CT is usually avoided in pregnancy but crucial for emergency evaluation of postpartum complications."
+   },
+   {
+    "org": "ACOG",
+    "title": "Committee Opinion No. 723: Guidelines for diagnostic imaging during pregnancy and lactation (endorsed by ACR and AIUM)",
+    "year": 2017,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/10/guidelines-for-diagnostic-imaging-during-pregnancy-and-lactation",
+    "type": "guideline",
+    "supports": "Current edition (replaced CO 656). Ultrasonography and MRI are not associated with risk and are the imaging techniques of choice for the pregnant patient, used prudently."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-002",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "evaluation",
+  "population": "pregnancy",
+  "condition_ka": "ორსული, რომელსაც კლინიკურად სჭირდება კტ ან რენტგენოგრაფია",
+  "recommendation_ka": "თუ კტ, რენტგენოგრაფია ან ბირთვული მედიცინის კვლევა კლინიკურად აუცილებელია ან ყველაზე ხელმისაწვდომია, ორსულობის გამო ნუ შეაყოვნებთ — დიაგნოსტიკური დოზები, იშვიათი გამონაკლისების გარდა, გაცილებით დაბალია ნაყოფისთვის საზიანო დოზაზე. გადოლინიუმი გამოიყენეთ მხოლოდ მაშინ, თუ ის მნიშვნელოვნად აუმჯობესებს დიაგნოსტიკას; ძუძუთი კვება კონტრასტის შემდეგ არ წყდება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACOG",
+    "title": "Committee Opinion No. 723: Guidelines for diagnostic imaging during pregnancy and lactation (endorsed by ACR and AIUM)",
+    "year": 2017,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/10/guidelines-for-diagnostic-imaging-during-pregnancy-and-lactation",
+    "type": "guideline",
+    "supports": "Current edition (replaced CO 656). With few exceptions, radiation exposure through radiography, CT or nuclear medicine is at a dose much lower than that associated with fetal harm; these studies should not be withheld when necessary; gadolinium use should be limited; breastfeeding need not be interrupted after gadolinium."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-003",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "referral",
+  "population": "pregnancy",
+  "condition_ka": "ორსული მწვავე ქირურგიული პათოლოგიით (აპენდიციტი, ქოლეცისტიტი და სხვ.)",
+  "recommendation_ka": "ორსულს ჩვენების მქონე ოპერაცია არ უნდა ეთქვას უარი და არ უნდა გადაიდოს ორსულობის ტრიმესტრის მიუხედავად. ოპერაციამდე (ასევე კოლონოსკოპიის ან კათეტერიზაციის წინ) აუცილებელია მეანის კონსულტაცია; ნაყოფის გულისცემის მონიტორინგი შეარჩიეთ ინდივიდუალურად — ნაყოფის სიცოცხლისუნარიანობის, ჩარევის შესაძლებლობის და დაწესებულების რესურსების გათვალისწინებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACOG",
+    "title": "Committee Opinion No. 775: Nonobstetric surgery during pregnancy (Obstet Gynecol 133(4):e285–6)",
+    "year": 2019,
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/04/nonobstetric-surgery-during-pregnancy",
+    "type": "guideline",
+    "supports": "A pregnant woman should never be denied indicated surgery or have it delayed regardless of trimester; obtain obstetric consultation before nonobstetric surgery and some invasive procedures; fetal monitoring decisions should be individualised."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-004",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "treatment",
+  "population": "pregnancy",
+  "condition_ka": "ორსულობისას მწვავე აპენდიციტი",
+  "recommendation_ka": "რეკომენდებულია აპენდექტომია (და არა არაოპერაციული ანტიბიოტიკოთერაპია); უპირატესობა მიანიჭეთ ლაპაროსკოპიულ აპენდექტომიას ღია ოპერაციასთან შედარებით, ქირურგის გამოცდილების გათვალისწინებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პერიტონიტის ნიშნები",
+   "ნაყოფის დისტრესი"
+  ],
+  "sources": [
+   {
+    "org": "SAGES",
+    "title": "SAGES guidelines for the use of laparoscopy during pregnancy (Surg Endosc 38:2947–63)",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11133165/",
+    "type": "guideline",
+    "supports": "Conditional recommendations favour appendectomy over nonoperative management and laparoscopic over open appendectomy in pregnancy (GRADE methodology)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-005",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "treatment",
+  "population": "pregnancy",
+  "condition_ka": "ორსულობისას სიმპტომური ნაღვლკენჭოვანი დაავადება ან მწვავე ქოლეცისტიტი",
+  "recommendation_ka": "მწვავე ქოლეცისტიტისას და სიმპტომური ბილიარული დაავადებისას რეკომენდებულია ლაპაროსკოპიული ქოლეცისტექტომია და არა კონსერვატიული მართვა; მესამე ტრიმესტრში არამწვავე ბილიარული პათოლოგიისას დასაშვებია ორივე მიდგომა. სიმპტომური ქოლედოქოლითიაზისას უპირატესობა მიანიჭეთ ERCP-ს ნაღვლის საერთო სადინრის ქირურგიულ რევიზიასთან შედარებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სიყვითლე და ცხელება (ქოლანგიტი)",
+   "პანკრეატიტის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "SAGES",
+    "title": "SAGES guidelines for the use of laparoscopy during pregnancy (Surg Endosc 38:2947–63)",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11133165/",
+    "type": "guideline",
+    "supports": "Suggest laparoscopic cholecystectomy over nonoperative treatment for biliary disease and acute cholecystitis; either operative or nonoperative treatment of non-cholecystitis biliary disease in the third trimester; ERCP rather than common bile duct exploration for symptomatic choledocholithiasis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-006",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "red_flag",
+  "population": "pregnancy",
+  "condition_ka": "ადრეული ორსულობა მუცლის ქვედა ნაწილის ტკივილით ან სისხლდენით, ჰემოდინამიკური არასტაბილურობა",
+  "recommendation_ka": "საეჭვოა გასკდომილი ექტოპიური ორსულობა: დაუყოვნებლივ ჩაატარეთ ჰემოდინამიკური რეანიმაცია და გადაუდებელი ქირურგიული მკურნალობა; არასტაბილურ პაციენტს მედიკამენტური მკურნალობა არ შეეფერება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰიპოტენზია და ტაქიკარდია",
+   "მხრის ტკივილი (დიაფრაგმის გაღიზიანება)",
+   "პერიტონეუმის გაღიზიანების ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "ACOG",
+    "title": "Practice Bulletin No. 193: Tubal ectopic pregnancy (Obstet Gynecol 131(3):e91–e103)",
+    "year": 2018,
+    "url": "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2018/03/tubal-ectopic-pregnancy",
+    "type": "guideline",
+    "supports": "A hemodynamically unstable patient with suspected ruptured ectopic pregnancy needs prompt surgical treatment; early tubal ectopic pregnancy can be managed by minimally invasive surgery or methotrexate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-007",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "diagnosis",
+  "population": "pregnancy",
+  "condition_ka": "ორსულობის უცნობი ლოკალიზაცია — ექტოპიური ორსულობის დიაგნოსტიკა",
+  "recommendation_ka": "შრატის hCG ცალკე ექტოპიური ორსულობის დიაგნოზისთვის არ გამოიყენოთ; შეაფასეთ ანამნეზთან, სიმპტომებთან და ტრანსვაგინალურ ექოსკოპიასთან ერთად. თუ „დისკრიმინაციულ ზონას“ იყენებთ, დააწესეთ კონსერვატიულად მაღალი ზღვარი — 3500 მსე/მლ-მდე, რათა შემთხვევით არ შეწყდეს სასურველი საშვილოსნოსშიდა ორსულობა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3500,
+    "unit": "U/L",
+    "meaning_ka": "hCG-ის დისკრიმინაციული ზონის ზედა ზღვარი (მსე/მლ = სე/ლ)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACOG",
+    "title": "Practice Bulletin No. 193: Tubal ectopic pregnancy (Obstet Gynecol 131(3):e91–e103)",
+    "year": 2018,
+    "url": "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2018/03/tubal-ectopic-pregnancy",
+    "type": "guideline",
+    "supports": "Serum hCG should not be used alone to diagnose ectopic pregnancy and should be correlated with history, symptoms and ultrasound; if a discriminatory zone is used it should be conservatively high (as high as 3,500 mIU/mL) to avoid interrupting a desired intrauterine pregnancy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-008",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "treatment",
+  "population": "pregnancy",
+  "condition_ka": "ადრეული, ჰემოდინამიკურად სტაბილური მილისმიერი ორსულობა",
+  "recommendation_ka": "ადრეულ ეტაპზე დიაგნოსტირებული მილისმიერი ორსულობისას განიხილეთ როგორც მინიმალურად ინვაზიური ქირურგია, ისე მეთოტრექსატი; არჩევანი დამოკიდებულია კლინიკურ მდგომარეობაზე, hCG-ის დინამიკაზე, პაციენტის მზაობაზე შემდგომი მონიტორინგისთვის და მის სურვილზე. მეთოტრექსატის შემდეგ hCG-ის სერიული კონტროლი სავალდებულოა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ტკივილის გაძლიერება მეთოტრექსატის შემდეგ"
+  ],
+  "sources": [
+   {
+    "org": "ACOG",
+    "title": "Practice Bulletin No. 193: Tubal ectopic pregnancy (Obstet Gynecol 131(3):e91–e103)",
+    "year": 2018,
+    "url": "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2018/03/tubal-ectopic-pregnancy",
+    "type": "guideline",
+    "supports": "Most early tubal ectopic pregnancies can be treated with minimally invasive surgery or methotrexate; patient selection and hCG follow-up are required for medical treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ABDPREG-009",
+  "cluster": "ABDPREG",
+  "topics": [
+   30
+  ],
+  "rule_type": "red_flag",
+  "population": "pregnancy",
+  "condition_ka": "მშობიარობის შემდგომი მუცლის ტკივილი",
+  "recommendation_ka": "მშობიარობის შემდგომ მუცლის ტკივილის დიფერენციულ დიაგნოზში მეანური მიზეზების (სისხლდენა, ინფექცია) გარდა შეიყვანეთ არამეანური მიზეზებიც — აპენდიციტი, ქოლეცისტიტი, ნაწლავის გაუვალობა, საკვერცხის გადაგრეხა. ექოსკოპიის შემდეგ გადაუდებელი შეფასებისთვის კტ მშობიარობის შემდგომ პერიოდში უპირატესი მეთოდია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰემოდინამიკური არასტაბილურობა",
+   "ცხელება და პერიტონეუმის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "Diagnostics (MDPI, peer-reviewed review)",
+    "title": "Imaging of acute abdominopelvic pain in pregnancy and puerperium — Part II: non-obstetric complications",
+    "year": 2023,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10528125/",
+    "type": "review",
+    "supports": "Review of non-obstetric causes of acute abdominopelvic pain in pregnancy and puerperium; CT crucial for emergency evaluation of postpartum complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

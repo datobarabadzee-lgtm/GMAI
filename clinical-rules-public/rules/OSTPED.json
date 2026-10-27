@@ -1,0 +1,584 @@
+[
+ {
+  "rule_id": "PUB-OSTPED-001",
+  "cluster": "OSTPED",
+  "topics": [
+   43
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვთა მწვავე ჰემატოგენური ოსტეომიელიტი — გამომწვევები ასაკის მიხედვით",
+  "recommendation_ka": "საერთო ჯამში ყველაზე ხშირი გამომწვევია Staphylococcus aureus; 4 წლამდე ბავშვებში წამყვანი გამომწვევი ხშირად Kingella kingae-ა (მრავალცენტრულ კვლევაში მედიანური ასაკი 1.5 წელი, S. aureus-ის დროს 10.4 წელი). სხვა გამომწვევებია Streptococcus pyogenes და Streptococcus pneumoniae. K. kingae ჩვეულებრივ კულტურაზე ცუდად იზრდება — საჭიროა PCR.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლამდეც K. kingae წამყვანია"
+   },
+   {
+    "value": 1.5,
+    "unit": "age_years",
+    "meaning_ka": "K. kingae-ს მედიანური ასაკი"
+   },
+   {
+    "value": 10.4,
+    "unit": "age_years",
+    "meaning_ka": "S. aureus-ის მედიანური ასაკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Roversi et al., Pathogens 2025)",
+    "title": "Multicenter retrospective analysis of 702 pediatric cases of bone and joint infections: K. kingae, S. aureus and other bacteria",
+    "year": 2025,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11858649/",
+    "type": "cohort",
+    "supports": "702 paediatric bone/joint infections: K. kingae 40.9%, S. aureus 36.5%; K. kingae patients younger (median 1.5 vs 10.4 years); K. kingae a leading cause under 4 years."
+   },
+   {
+    "org": "Radiology (RSNA review)",
+    "title": "Pediatric musculoskeletal infection imaging review (title paraphrased)",
+    "year": 2017,
+    "url": "https://pubs.rsna.org/doi/10.1148/radiol.2017151929",
+    "type": "review",
+    "supports": "Remains a current review: S. aureus most common, followed by K. kingae, S. pyogenes and S. pneumoniae."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-002",
+  "cluster": "OSTPED",
+  "topics": [
+   43
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვთა ჰემატოგენური ოსტეომიელიტის პათოგენეზი",
+  "recommendation_ka": "ბავშვებში ოსტეომიელიტი ძირითადად ჰემატოგენურია და ჩვეულებრივ ერთი გამომწვევით ვითარდება; ინფექცია ტიპურად იწყება გრძელი ძვლების მეტაფიზში, რომელსაც მდიდარი სისხლმომარაგება აქვს. პოლიმიკრობული ინფექციისას ეჭვი მიიტანეთ პირდაპირ ინოკულაციაზე (ტრავმა, ქირურგია).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (peer-reviewed review)",
+    "title": "Osteomyelitis pathogenesis and microbiology review (title paraphrased)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5967688",
+    "type": "review",
+    "supports": "Haematogenous osteomyelitis is usually monomicrobial and most common in children; contiguous infection more often polymicrobial."
+   },
+   {
+    "org": "PMC (Roversi et al., Pathogens 2025)",
+    "title": "Multicenter retrospective analysis of 702 pediatric cases of bone and joint infections: K. kingae, S. aureus and other bacteria",
+    "year": 2025,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11858649/",
+    "type": "cohort",
+    "supports": "Review content: metaphysis is the primary site of infection in children owing to abundant vascularity."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-003",
+  "cluster": "OSTPED",
+  "topics": [
+   43,
+   44
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "MRSA ან პანტონ-ვალენტინის ლეიკოციდინის (PVL) მწარმოებელი S. aureus-ით გამოწვეული ოსტეომიელიტი",
+  "recommendation_ka": "PVL-დადებითი და MRSA ინფექცია უფრო მძიმე ადგილობრივი დაზიანებით და გამოხატული სისტემური ანთებით მიმდინარეობს: უფრო ხშირია ძვლისზედა აბსცესი, ქირურგიული ჩარევის საჭიროება, რეციდივი, პათოლოგიური მოტეხილობა და ზრდის ზონის დაზიანება. ემპირიული თერაპიის შერჩევისას გაითვალისწინეთ ადგილობრივი MRSA-ს გავრცელება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სეფსისი",
+   "მრავლობითი კერა",
+   "ძვლისზედა აბსცესი"
+  ],
+  "sources": [
+   {
+    "org": "Swiss Medical Weekly",
+    "title": "Paediatric musculoskeletal infections with Panton-Valentine leucocidin",
+    "year": 2018,
+    "url": "https://smw.ch/index.php/smw/article/view/2519",
+    "type": "cohort",
+    "supports": "PVL-positive musculoskeletal infections in children: more severe local disease and systemic inflammation; recurrences, pathologic fracture and growth arrest reported; MRSA cases had more subperiosteal abscesses and surgery. [publication year not confirmed in search]"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-004",
+  "cluster": "OSTPED",
+  "topics": [
+   44
+  ],
+  "rule_type": "diagnosis",
+  "population": "child",
+  "condition_ka": "ბავშვი ძვლის ლოკალური ტკივილით, კოჭლობით ან კიდურის დატვირთვაზე უარით, ცხელებით ან მის გარეშე",
+  "recommendation_ka": "ეჭვი მიიტანეთ მწვავე ჰემატოგენურ ოსტეომიელიტზე. გაითვალისწინეთ, რომ K. kingae-ს ინფექცია მცირეწლოვნებში ხშირად მიმდინარეობს მსუბუქად — ცხელების გარეშე და დაბალი CRP-ით, ამიტომ ნორმალური ტემპერატურა ან მცირედ მომატებული მარკერები დიაგნოზს არ გამორიცხავს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "კიდურის დატვირთვაზე უარი",
+   "ლოკალური შეშუპება და სიწითლე",
+   "მაღალი ცხელება"
+  ],
+  "sources": [
+   {
+    "org": "PMC (Roversi et al., Pathogens 2025)",
+    "title": "Multicenter retrospective analysis of 702 pediatric cases of bone and joint infections: K. kingae, S. aureus and other bacteria",
+    "year": 2025,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11858649/",
+    "type": "cohort",
+    "supports": "K. kingae infections showed fewer fevers, lower CRP and lower sequelae rates than S. aureus; often mild or afebrile presentation in children under four."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-005",
+  "cluster": "OSTPED",
+  "topics": [
+   44
+  ],
+  "rule_type": "red_flag",
+  "population": "child",
+  "condition_ka": "ოსტეომიელიტი მძიმე მიმდინარეობით, ხანგრძლივი ცხელებით ან ბაქტერიემიით",
+  "recommendation_ka": "აქტიურად მოძებნეთ გართულებები: მეზობელი სახსრის სეპტიური ართრიტი (ჩაატარეთ სახსრის ულტრაბგერა გამონაჟონის ეჭვისას), ძვლისზედა ან რბილი ქსოვილის აბსცესი, ღრმა ვენების თრომბოზი (განსაკუთრებით MRSA-ს დროს), სეპტიური ემბოლია. გრძელვადიან გართულებებს მიეკუთვნება ქრონიკული ოსტეომიელიტი, პათოლოგიური მოტეხილობა და ზრდის დარღვევა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "მუდმივი ბაქტერიემია",
+   "ახალი სახსრის შეშუპება",
+   "კიდურის შეშუპება (თრომბოზი)",
+   "სუნთქვის უკმარისობა (სეპტიური ემბოლია)"
+  ],
+  "sources": [
+   {
+    "org": "Children's Minnesota (institutional pathway based on PIDS/IDSA)",
+    "title": "Musculoskeletal infection clinical guideline",
+    "year": 2023,
+    "url": "https://www.childrensmn.org/references/cds/msk-infection-guideline.pdf",
+    "type": "guideline",
+    "supports": "Obtain plain radiographs plus joint ultrasound if effusion suspected. [publication year not confirmed in search]"
+   },
+   {
+    "org": "Swiss Medical Weekly",
+    "title": "Paediatric musculoskeletal infections with Panton-Valentine leucocidin",
+    "year": 2018,
+    "url": "https://smw.ch/index.php/smw/article/view/2519",
+    "type": "cohort",
+    "supports": "Complications of PVL S. aureus infection: recurrence, pathologic fracture, growth arrest; venous thrombosis reported near infection site, often with USA300 MRSA. [publication year not confirmed in search]"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-006",
+  "cluster": "OSTPED",
+  "topics": [
+   44
+  ],
+  "rule_type": "monitoring",
+  "population": "child",
+  "condition_ka": "ოსტეომიელიტის მკურნალობის შემდეგ — გრძელვადიანი შედეგები",
+  "recommendation_ka": "ზრდის ზონის ახლოს ინფექციის, ძვლისზედა აბსცესის ან ქირურგიული ჩარევის შემდეგ უზრუნველყავით ორთოპედიული დაკვირვება კიდურის სიგრძის ასიმეტრიის, დეფორმაციისა და რეციდივის ადრეული გამოვლენისთვის; ტკივილის განახლება ან CRP-ის ხელახალი მატება ქრონიკული ინფექციის ნიშანი შეიძლება იყოს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Swiss Medical Weekly",
+    "title": "Paediatric musculoskeletal infections with Panton-Valentine leucocidin",
+    "year": 2018,
+    "url": "https://smw.ch/index.php/smw/article/view/2519",
+    "type": "cohort",
+    "supports": "Case series: recurrences, pathologic fracture and growth arrest occurred after paediatric PVL S. aureus osteomyelitis. [publication year not confirmed in search]"
+   },
+   {
+    "org": "PIDS/IDSA",
+    "title": "2021 PIDS/IDSA Clinical Practice Guideline: Diagnosis and Management of Acute Hematogenous Osteomyelitis in Pediatrics (Woods et al., J Pediatric Infect Dis Soc)",
+    "year": 2021,
+    "url": "https://docs.bvsalud.org/biblioref/2021/09/1292051/piab027.pdf",
+    "type": "guideline",
+    "supports": "Guideline suggests serum CRP on initial evaluation primarily as a baseline for monitoring response."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-007",
+  "cluster": "OSTPED",
+  "topics": [
+   45
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ბავშვი (1 თვიდან 18 წლამდე) მწვავე ჰემატოგენური ოსტეომიელიტის ეჭვით — ლაბორატორიული შეფასება",
+  "recommendation_ka": "ანტიბიოტიკის დაწყებამდე აიღეთ სისხლის კულტურა. განსაზღვრეთ CRP (და ედს) საწყის მაჩვენებლად და მონიტორინგისთვის — CRP-ის დიაგნოსტიკური სიზუსტე დაბალია. პროკალციტონინის რუტინული განსაზღვრა არ არის რეკომენდებული. შესაძლებლობისას აიღეთ ძვლის ან სახსრის ნიმუში კულტურისა და K. kingae-ს PCR-ისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "age_months",
+    "meaning_ka": "გაიდლაინის ქვედა ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 18,
+    "unit": "age_years",
+    "meaning_ka": "გაიდლაინის ზედა ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PIDS/IDSA",
+    "title": "2021 PIDS/IDSA Clinical Practice Guideline: Diagnosis and Management of Acute Hematogenous Osteomyelitis in Pediatrics (Woods et al., J Pediatric Infect Dis Soc)",
+    "year": 2021,
+    "url": "https://docs.bvsalud.org/biblioref/2021/09/1292051/piab027.pdf",
+    "type": "guideline",
+    "supports": "Applies to otherwise healthy children 1 month to <18 years; recommend blood culture before antimicrobials (strong, moderate); suggest CRP on initial evaluation (low diagnostic accuracy, baseline for monitoring); suggest against procalcitonin."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-008",
+  "cluster": "OSTPED",
+  "topics": [
+   45
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ოსტეომიელიტის ეჭვი ბავშვში — ვიზუალიზაცია",
+  "recommendation_ka": "საწყისად გადაიღეთ დაზიანებული მიდამოს რენტგენოგრაფია (ტრავმის, სიმსივნის გამოსარიცხად და საბაზისოდ) და ჩაატარეთ სახსრის ულტრაბგერა, თუ გამონაჟონი სავარაუდოა. დიაგნოზის დასადასტურებლად, დაზიანების გავრცელებისა და აბსცესის შესაფასებლად, განსაკუთრებით ბუნდოვანი კლინიკური სურათისას, განიხილეთ ადრეული მრტ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Children's Minnesota (institutional pathway based on PIDS/IDSA)",
+    "title": "Musculoskeletal infection clinical guideline",
+    "year": 2023,
+    "url": "https://www.childrensmn.org/references/cds/msk-infection-guideline.pdf",
+    "type": "guideline",
+    "supports": "Obtain plain radiographs of the affected area and joint ultrasound if effusion suspected; CRP and ESR; procalcitonin not recommended. [publication year not confirmed in search]"
+   },
+   {
+    "org": "PIDS/IDSA",
+    "title": "2021 PIDS/IDSA Clinical Practice Guideline: Diagnosis and Management of Acute Hematogenous Osteomyelitis in Pediatrics (Woods et al., J Pediatric Infect Dis Soc)",
+    "year": 2021,
+    "url": "https://docs.bvsalud.org/biblioref/2021/09/1292051/piab027.pdf",
+    "type": "guideline",
+    "supports": "Guideline addresses imaging modalities for suspected AHO in children (full recommendations in guideline text)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-009",
+  "cluster": "OSTPED",
+  "topics": [
+   45
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ბავშვთა მწვავე ჰემატოგენური ოსტეომიელიტი — ემპირიული ინტრავენური თერაპია",
+  "recommendation_ka": "ემპირიული თერაპია უნდა ფარავდეს MSSA-ს, A ჯგუფის სტრეპტოკოკს და K. kingae-ს: თუ ადგილობრივი MRSA-ს წილი 10%-ზე ნაკლებია, გონივრული არჩევანია ცეფაზოლინი; უფრო მაღალი გავრცელებისას დაამატეთ MRSA-ს დაფარვა — კლინდამიცინი, თუ ადგილობრივი იზოლატების 85%-ზე მეტი მგრძნობიარეა, წინააღმდეგ შემთხვევაში ან მძიმე მდგომარეობისას — ვანკომიცინი. დოზა დააზუსტეთ ადგილობრივი ფორმულარით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "ადგილობრივი MRSA-ს წილის ზღვარი"
+   },
+   {
+    "value": 85,
+    "unit": "%",
+    "meaning_ka": "კლინდამიცინისადმი მგრძნობელობის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "The Hospitalist (meeting report, expert talk)",
+    "title": "Use hospital MRSA rates to guide pediatric osteomyelitis treatment (publication year not confirmed)",
+    "year": 2019,
+    "url": "https://blogs.the-hospitalist.org/content/use-hospital-mrsa-rates-guide-pediatric-osteomyelitis-treatment",
+    "type": "news",
+    "supports": "If hospital MRSA rate <10%, cefazolin is reasonable empiric choice (covers MSSA, GAS, Kingella); above 10% include MRSA coverage: clindamycin if ≥85% isolates susceptible, otherwise vancomycin."
+   },
+   {
+    "org": "SickKids (Hospital for Sick Children) clinical practice guideline",
+    "title": "Musculoskeletal infections — main document",
+    "year": 2023,
+    "url": "https://webfiles.sickkids.ca/files/cpg/CLINH503/Main%20Document.pdf",
+    "type": "guideline",
+    "supports": "Empiric IV cefazolin for uncomplicated osteomyelitis; vancomycin reserved for other situations. [publication year not confirmed in search]"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-010",
+  "cluster": "OSTPED",
+  "topics": [
+   45
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ბავშვთა გაურთულებელი ოსტეომიელიტი — პერორალურ თერაპიაზე გადასვლა",
+  "recommendation_ka": "პერორალურ თერაპიაზე გადასვლა განიხილეთ, როცა: ინტრავენური მკურნალობა ჩატარდა მინიმუმ 72 საათი, CRP მნიშვნელოვნად შემცირდა, ბოლო სისხლის კულტურები უარყოფითია 48 საათის განმავლობაში, ბავშვი უცხელოა 48 საათი და დამატებითი ქირურგია არ იგეგმება. მაგალითები: ცეფალექსინი 30–35 მგ/კგ/დოზა დღეში 3-ჯერ ან კლინდამიცინი 10 მგ/კგ/დოზა დღეში 3-ჯერ (მგრძნობელობის მიხედვით). გაურთულებელი შემთხვევის საერთო ხანგრძლივობა 3–4 კვირაა.",
+  "doses": [
+   {
+    "drug": "cephalexin",
+    "amount": 30,
+    "unit": "mg/kg/dose",
+    "route": "PO",
+    "frequency": "3 times/day",
+    "population": "child",
+    "max_amount": 35,
+    "max_unit": "mg/kg/dose"
+   },
+   {
+    "drug": "clindamycin",
+    "amount": 10,
+    "unit": "mg/kg/dose",
+    "route": "PO",
+    "frequency": "3 times/day",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "IV თერაპიის მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "უარყოფითი კულტურები და უცხელო პერიოდი"
+   },
+   {
+    "value": 3,
+    "unit": "times/day",
+    "meaning_ka": "დოზირების სიხშირე"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "საერთო ხანგრძლივობის ქვედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "საერთო ხანგრძლივობის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Children's Minnesota (institutional pathway based on PIDS/IDSA)",
+    "title": "Musculoskeletal infection clinical guideline",
+    "year": 2023,
+    "url": "https://www.childrensmn.org/references/cds/msk-infection-guideline.pdf",
+    "type": "guideline",
+    "supports": "Oral switch criteria: ≥72 h IV, significant CRP decline, blood cultures negative ×48 h, afebrile ×48 h, no further surgery planned; cephalexin 30–35 mg/kg/dose PO TID; clindamycin 10 mg/kg/dose PO TID. [publication year not confirmed in search]"
+   },
+   {
+    "org": "SickKids (Hospital for Sick Children) clinical practice guideline",
+    "title": "Musculoskeletal infections — main document",
+    "year": 2023,
+    "url": "https://webfiles.sickkids.ca/files/cpg/CLINH503/Main%20Document.pdf",
+    "type": "guideline",
+    "supports": "Uncomplicated osteomyelitis: total antimicrobial duration 3 to 4 weeks; complicated or unusual-site cases referred to ID. [publication year not confirmed in search]"
+   },
+   {
+    "org": "PIDS/IDSA",
+    "title": "2021 PIDS/IDSA Clinical Practice Guideline: Diagnosis and Management of Acute Hematogenous Osteomyelitis in Pediatrics (Woods et al., J Pediatric Infect Dis Soc)",
+    "year": 2021,
+    "url": "https://docs.bvsalud.org/biblioref/2021/09/1292051/piab027.pdf",
+    "type": "guideline",
+    "supports": "Guideline supports early IV-to-oral transition in uncomplicated AHO."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-011",
+  "cluster": "OSTPED",
+  "topics": [
+   50
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "მწვავე მუხლის ტრავმა ბავშვში (2–16 წელი) — რენტგენოგრაფიის საჭიროება",
+  "recommendation_ka": "ოტავის მუხლის წესი გამოიყენება ბავშვებშიც (კანადურ პროსპექტულ კვლევაში მგრძნობელობა 100%): რენტგენი საჭიროა კვირისთავის იზოლირებული მტკივნეულობის, მცირე წვივის ძვლის თავის მტკივნეულობის, 90 გრადუსამდე მოხრის შეუძლებლობის ან 4 ნაბიჯის გადადგმის შეუძლებლობის დროს. მცირეწლოვან ბავშვებში, რომლებიც ვერ თანამშრომლობენ, დაბალი ზღვრით გადაიღეთ რენტგენი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "კვლევის ქვედა ასაკი"
+   },
+   {
+    "value": 16,
+    "unit": "age_years",
+    "meaning_ka": "კვლევის ზედა ასაკი"
+   },
+   {
+    "value": 100,
+    "unit": "%",
+    "meaning_ka": "მგრძნობელობა ბავშვებში"
+   },
+   {
+    "value": 90,
+    "unit": "label",
+    "meaning_ka": "მოხრის კუთხე (გრადუსი)"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "ნაბიჯების რაოდენობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Emergency Medicine Journal (Vijayasankar et al., meta-analysis)",
+    "title": "Can the Ottawa knee rule be applied to children? A systematic review and meta-analysis of observational studies",
+    "year": 2009,
+    "url": "https://emj.bmj.com/content/26/4/250",
+    "type": "systematic_review",
+    "supports": "Systematic review/meta-analysis assessing Ottawa knee rule in children; remains the current pooled evidence. Bulloch et al. 2003 prospective validation in children 2–16 years: sensitivity 100%, specificity 42.8%."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-012",
+  "cluster": "OSTPED",
+  "topics": [
+   50
+  ],
+  "rule_type": "diagnosis",
+  "population": "adolescent",
+  "condition_ka": "მწვავე ტრავმული ჰემართროზი ბავშვში ან მოზარდში",
+  "recommendation_ka": "მწვავე ჰემართროზისას ეჭვი მიიტანეთ წინა ჯვარედინი იოგის გახევაზე (ხშირი მიზეზი), წვივის ძვლის ემინენციის (ქედის) ავულსიურ მოტეხილობაზე, კვირისთავის ლატერალურ ამოვარდნილობაზე (ხშირად სპონტანურად ჩასწორებული) და სახსარშიდა მოტეხილობაზე. ძლიერი ტკივილისას რენტგენი გადაიღეთ გასინჯვამდე, წვივის ძვლის ემინენციის მოტეხილობის გამოსარიცხად; მიმართეთ ორთოპედს და განიხილეთ მრტ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "მუხლის „ჩაკეტვა“",
+   "მწვავე არასტაბილურობა",
+   "დატვირთვის შეუძლებლობა"
+  ],
+  "sources": [
+   {
+    "org": "PMC (peer-reviewed review)",
+    "title": "Pediatric ACL injuries: a review of current concepts",
+    "year": 2017,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5447905/",
+    "type": "review",
+    "supports": "Review of paediatric ACL injuries (still a current concepts review):ACL tears increasingly recognised in skeletally immature patients and are a frequent cause of acute traumatic haemarthrosis; tibial spine (eminence) avulsion is the paediatric equivalent and should be excluded radiographically."
+   },
+   {
+    "org": "PubMed (JAMA Pediatrics review)",
+    "title": "Acute knee injuries in children and adolescents: a review",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33749718/",
+    "type": "review",
+    "supports": "Review for nonspecialists: fractures unique to skeletally immature patients, patellar dislocations, ligament and meniscal tears; diagnosis by thorough history and examination."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-013",
+  "cluster": "OSTPED",
+  "topics": [
+   50
+  ],
+  "rule_type": "red_flag",
+  "population": "adolescent",
+  "condition_ka": "მუხლის ტკივილი ბავშვში ან მოზარდში მუხლის ნორმალური გასინჯვით (განსაკუთრებით ჭარბწონიან მოზარდში ან კოჭლობისას)",
+  "recommendation_ka": "ყოველთვის გასინჯეთ მენჯ-ბარძაყის სახსარი (ტკივილი და შინაგანი როტაციის შეზღუდვა მოხრისას): მუხლის ტკივილი შეიძლება იყოს ბარძაყის ძვლის თავის ეპიფიზიოლიზის არეკლილი ტკივილი. ეჭვისას გადაიღეთ მენჯის რენტგენი (წინა-უკანა და „ბაყაყის“ პროექცია) და არა მხოლოდ მუხლის; დაგვიანებული დიაგნოზი ასოცირებულია უფრო მძიმე ცდომასთან.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "კოჭლობა",
+   "მენჯ-ბარძაყის შინაგანი როტაციის შეზღუდვა",
+   "სიმსუქნე"
+  ],
+  "sources": [
+   {
+    "org": "PubMed (J Pediatr Orthop)",
+    "title": "The delay in diagnosis of slipped capital femoral epiphysis: a review of 102 patients",
+    "year": 2008,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18751817",
+    "type": "cohort",
+    "supports": "Review of 102 children with SCFE: many primary-care visits for hip, groin, thigh or knee pain did not lead to diagnosis or referral; delay associated with slip severity. Remains current evidence on diagnostic delay."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OSTPED-014",
+  "cluster": "OSTPED",
+  "topics": [
+   50
+  ],
+  "rule_type": "red_flag",
+  "population": "child",
+  "condition_ka": "მუხლის ტკივილი ბავშვში ცხელებით, ღამის ტკივილით, სიმსივნისმაგვარი წარმონაქმნით ან ჰემართროზით მინიმალური ტრავმისას",
+  "recommendation_ka": "ცხელებისა და დატვირთვაზე უარის დროს გამორიცხეთ სეპტიური ართრიტი და ოსტეომიელიტი. მუდმივი აუხსნელი ღამის ტკივილი ან წარმონაქმნი საჭიროებს რენტგენს და სპეციალისტთან მიმართვას (სიმსივნის გამორიცხვა). ჰემართროზი მინიმალური ტრავმის შემდეგ — შეაფასეთ სისხლდენის დარღვევა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელება",
+   "ღამის ტკივილი",
+   "წარმონაქმნი",
+   "ჰემართროზი მინიმალური ტრავმისას"
+  ],
+  "sources": [
+   {
+    "org": "PubMed (JAMA Pediatrics review)",
+    "title": "Acute knee injuries in children and adolescents: a review",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33749718/",
+    "type": "review",
+    "supports": "Thorough history and examination identify cause; fractures, effusion and instability warrant specialist evaluation."
+   },
+   {
+    "org": "Newcastle (UK) teaching review",
+    "title": "Paediatric knee injuries",
+    "year": 2012,
+    "url": "https://lists.ncl.ac.uk/wws/d_read/orthnorth/Knee%20term%202012/Paediatric%20Knee%20Injuries%20Kenny%20Rankin.pdf",
+    "type": "review",
+    "supports": "Current teaching guidance: refer for fracture, traumatic effusion, instability, or persistent unexplained nocturnal pain or lump; haemarthrosis after minimal trauma should raise suspicion of a bleeding disorder."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

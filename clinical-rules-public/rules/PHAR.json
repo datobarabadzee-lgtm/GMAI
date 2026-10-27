@@ -1,0 +1,463 @@
+[
+ {
+  "rule_id": "PUB-PHAR-001",
+  "cluster": "PHAR",
+  "topics": [
+   49
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "მწვავე ყელის ტკივილი ბავშვში — ანტიბიოტიკის საჭიროების შეფასება (ევროპული/NICE მიდგომა)",
+  "recommendation_ka": "გამოიყენეთ FeverPAIN ან Centor ქულა. FeverPAIN 0–1 ან Centor 0–2: ანტიბიოტიკი არ ინიშნება. FeverPAIN 2–3: ანტიბიოტიკის გარეშე ან „სარეზერვო“ (გადავადებული) რეცეპტი. FeverPAIN 4–5 ან Centor 3–4: დაუყოვნებელი ან სარეზერვო ანტიბიოტიკი. შენიშვნა: NICE რუტინულ მიკრობიოლოგიურ ტესტირებას არ ითხოვს, განსხვავებით აშშ-ის (IDSA) მიდგომისგან.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 0,
+    "unit": "score",
+    "meaning_ka": "ქულის ქვედა ზღვარი"
+   },
+   {
+    "value": 1,
+    "unit": "score",
+    "meaning_ka": "FeverPAIN — ანტიბიოტიკის გარეშე"
+   },
+   {
+    "value": 2,
+    "unit": "score",
+    "meaning_ka": "FeverPAIN/Centor ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "FeverPAIN/Centor ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "FeverPAIN/Centor ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "score",
+    "meaning_ka": "FeverPAIN მაქსიმუმი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   },
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute) in adults: antimicrobial prescribing — visual summary",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/resources/sore-throat-acute-in-adults-antimicrobial-prescribing-visual-summary-pdf-11315864557",
+    "type": "guideline",
+    "supports": "Summarises NG84 score thresholds, back-up prescribing, and phenoxymethylpenicillin for 5 days as first choice."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-002",
+  "cluster": "PHAR",
+  "topics": [
+   49
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ყელის ტკივილი ბავშვში A ჯგუფის სტრეპტოკოკის (GAS) ეჭვით (აშშ-ის მიდგომა)",
+  "recommendation_ka": "ანტიბიოტიკამდე დაადასტურეთ GAS სწრაფი ანტიგენური ტესტით (RADT) ან ყელის ნაცხის კულტურით. უარყოფითი RADT ბავშვსა და მოზარდში დაადასტურეთ კულტურით (მოზრდილებში რუტინულად საჭირო არ არის). 3 წლამდე ასაკში ტესტირება ჩვეულებრივ არ არის ნაჩვენები, გარდა შემთხვევისა, როცა ოჯახის წევრს დადასტურებული GAS ინფექცია აქვს. ვირუსული ნიშნების (ხველა, სურდო, ხმის ჩახლეჩა, აფთები) არსებობისას ტესტირება საჭირო არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_years",
+    "meaning_ka": "ტესტირების ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA (Shulman ST et al.)",
+    "title": "Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis: 2012 Update",
+    "year": 2012,
+    "url": "https://academic.oup.com/cid/article/55/10/e86/321183",
+    "type": "guideline",
+    "supports": "Current edition: testing (RADT and/or culture) to confirm GAS; negative RADT in children/adolescents should be backed up by culture, not routinely needed in adults; testing generally not indicated under 3 years; penicillin or amoxicillin remain treatments of choice for 10 days."
+   },
+   {
+    "org": "CDC",
+    "title": "Clinical Guidance for Group A Streptococcal Pharyngitis",
+    "year": 2024,
+    "url": "https://cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+    "type": "guideline",
+    "supports": "For children ≥3 years, follow a negative rapid test with throat culture; testing not routinely indicated in children under 3 except special circumstances (e.g., household contact)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-003",
+  "cluster": "PHAR",
+  "topics": [
+   49
+  ],
+  "rule_type": "red_flag",
+  "population": "child",
+  "condition_ka": "ყელის ტკივილი ბავშვში მძიმე სისტემური ან ადგილობრივი გართულების ნიშნებით",
+  "recommendation_ka": "სასწრაფოდ მიმართეთ სტაციონარში, თუ არის მძიმე სისტემური ინფექციის ნიშნები ან ჩირქოვანი გართულების ეჭვი: პარატონზილური აბსცესი (კვინზი), პარაფარინგეალური ან რეტროფარინგეალური აბსცესი, კისრის ცელულიტი, ლემიერის სინდრომი. სასუნთქი გზების ობსტრუქციის ნიშნების დროს ყელი იძულებით არ დაათვალიეროთ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "დორბლდენა და ყლაპვის შეუძლებლობა",
+   "სტრიდორი ან სუნთქვის გაძნელება",
+   "ტრიზმი (პირის გაღების შეზღუდვა)",
+   "„ცხელი კარტოფილის“ ხმა",
+   "კისრის შეშუპება ან მოძრაობის შეზღუდვა",
+   "სეპსისის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-004",
+  "cluster": "PHAR",
+  "topics": [
+   49,
+   16
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "დადასტურებული GAS ფარინგიტი ბავშვში (აშშ-ის რეჟიმი)",
+  "recommendation_ka": "ამოქსიცილინი 50 მგ/კგ პერორალურად დღეში ერთხელ (მაქსიმუმ 1000 მგ დოზაზე) 10 დღის განმავლობაში, ან პენიცილინი 10 დღე. თუ პერორალური კურსის დასრულება ნაკლებად სავარაუდოა: ბენზათინ-ბენზილპენიცილინი ერთჯერადად კუნთში — 27 კგ-მდე 600000 ერთეული, 27 კგ-ზე მეტი წონისას 1200000 ერთეული. მკურნალობის მიზანია რევმატიული ცხელების პრევენცია და გავრცელების შემცირება.",
+  "doses": [
+   {
+    "drug": "amoxicillin",
+    "amount": 50,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily for 10 days",
+    "population": "child",
+    "max_amount": 1000,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "benzathine penicillin G",
+    "amount": 600000,
+    "unit": "units",
+    "route": "IM",
+    "frequency": "single dose (≤27 kg)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "benzathine penicillin G",
+    "amount": 1200000,
+    "unit": "units",
+    "route": "IM",
+    "frequency": "single dose (>27 kg)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "კურსის ხანგრძლივობა"
+   },
+   {
+    "value": 27,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი ბენზათინის დოზისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Stanford Children's Health Antimicrobial Stewardship Program",
+    "title": "Group A Streptococcal Pharyngitis — treatment algorithm (updated July 2025)",
+    "year": 2025,
+    "url": "https://www.stanfordchildrens.org/content/dam/sch/content-public/pdf/antimicrobial-stewardship-program/group-a-streptococcal-pharyngitis.pdf",
+    "type": "institutional_guideline",
+    "supports": "First line amoxicillin 50 mg/kg/dose PO once daily (max 1000 mg/dose) for 10 days, or penicillin; benzathine penicillin G single IM dose 600,000 units for ≤27 kg and 1,200,000 units for >27 kg."
+   },
+   {
+    "org": "IDSA (Shulman ST et al.)",
+    "title": "Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis: 2012 Update",
+    "year": 2012,
+    "url": "https://academic.oup.com/cid/article/55/10/e86/321183",
+    "type": "guideline",
+    "supports": "Current edition: testing (RADT and/or culture) to confirm GAS; negative RADT in children/adolescents should be backed up by culture, not routinely needed in adults; testing generally not indicated under 3 years; penicillin or amoxicillin remain treatments of choice for 10 days."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-005",
+  "cluster": "PHAR",
+  "topics": [
+   49,
+   16
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ბაქტერიული ფარინგიტი, როდესაც ანტიბიოტიკი ინიშნება (NICE/ევროპული რეჟიმი); პენიცილინზე ალერგია",
+  "recommendation_ka": "NICE-ის მიხედვით პირველი არჩევანია ფენოქსიმეთილპენიცილინი 5 დღის კურსით (აშშ-ის 10-დღიანი კურსისგან განსხვავებით); ბავშვის დოზა წონის/ასაკის მიხედვით ეროვნული ფორმულარიდან. პენიცილინზე ალერგიისას — კლარითრომიცინი ან ერითრომიცინი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "day",
+    "meaning_ka": "NICE კურსის ხანგრძლივობა"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "აშშ-ის კურსის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   },
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute) in adults: antimicrobial prescribing — visual summary",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/resources/sore-throat-acute-in-adults-antimicrobial-prescribing-visual-summary-pdf-11315864557",
+    "type": "guideline",
+    "supports": "Summarises NG84 score thresholds, back-up prescribing, and phenoxymethylpenicillin for 5 days as first choice."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-006",
+  "cluster": "PHAR",
+  "topics": [
+   49
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "მწვავე ყელის ტკივილი ბავშვში — ეტიოლოგია და მოსალოდნელი მიმდინარეობა",
+  "recommendation_ka": "მწვავე ყელის ტკივილის უმეტესობა ვირუსულია და თავისით გაივლის; ანტიბიოტიკი ვირუსულ ფარინგიტზე უსარგებლოა და მხოლოდ ოდნავ ამცირებს სიმპტომების ხანგრძლივობას ბაქტერიულ ფორმაშიც. მშობლებს აუხსენით მოსალოდნელი მიმდინარეობა და როდის დაბრუნდნენ (გაუარესება, მაღალი ცხელება, ყლაპვის გაძნელება).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-007",
+  "cluster": "PHAR",
+  "topics": [
+   16
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "მწვავე ფარინგიტის სიმპტომური მკურნალობა ბავშვში",
+  "recommendation_ka": "ტკივილისა და ცხელების შესამსუბუქებლად პირველი რიგია პარაცეტამოლი ან იბუპროფენი, წონაზე დაფუძნებული დოზით; საკმარისი სითხის მიღება. სიმპტომური მკურნალობა ინიშნება GAS-ის სტატუსის მიუხედავად, ანტიბიოტიკის პარალელურად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-008",
+  "cluster": "PHAR",
+  "topics": [
+   16
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ყელის ტკივილის ანალგეზია ბავშვში — დოზირება",
+  "recommendation_ka": "პარაცეტამოლი 15 მგ/კგ ერთ დოზაზე ყოველ 6 სთ-ში საჭიროებისამებრ, ან იბუპროფენი 10 მგ/კგ ერთ დოზაზე; პრეპარატი შეარჩიეთ ბავშვისა და მშობლის უპირატესობით, ორივე ეფექტურია.",
+  "doses": [
+   {
+    "drug": "paracetamol",
+    "amount": 15,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "every 6 h as needed",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ibuprofen",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "every 6-8 h as needed",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დოზებს შორის ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Pocket book of hospital care for children, 2nd edition (current edition)",
+    "year": 2013,
+    "url": "https://www.who.int/publications/i/item/978-92-4-154837-3",
+    "type": "guideline",
+    "supports": "Current edition: paracetamol 15 mg/kg every 6 hours for pain/fever in children."
+   },
+   {
+    "org": "BMJ (Hay AD et al.)",
+    "title": "Paracetamol plus ibuprofen for the treatment of fever in children (PITCH)",
+    "year": 2008,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2528896/",
+    "type": "rct",
+    "supports": "Remains the current key trial using paracetamol 15 mg/kg and ibuprofen 10 mg/kg per dose in children."
+   },
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-009",
+  "cluster": "PHAR",
+  "topics": [
+   16
+  ],
+  "rule_type": "red_flag",
+  "population": "child",
+  "condition_ka": "ადგილობრივი ანესთეტიკის შემცველი პასტილები ან სპრეი პატარა ბავშვში",
+  "recommendation_ka": "ბენზოკაინის შემცველი ურეცეპტო ორალური პრეპარატები 2 წლამდე ბავშვში არ გამოიყენება მეთემოგლობინემიის რისკის გამო; 2 წლის ზემოთ მხოლოდ შესაბამისი გაფრთხილების მქონე პრეპარატები. პასტილები პატარა ბავშვებში ასფიქსიის რისკსაც ქმნის; მედიკამენტური პასტილების მცირე სარგებელი ძირითადად მოზრდილებშია ნაჩვენები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "ბენზოკაინის ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ციანოზი, ქოშინი ან ლეთარგია ბენზოკაინის შემდეგ (მეთემოგლობინემია)"
+  ],
+  "sources": [
+   {
+    "org": "FDA",
+    "title": "FDA Drug Safety Communication: risk of serious and potentially fatal blood disorder (methemoglobinemia) with OTC benzocaine oral products",
+    "year": 2018,
+    "url": "https://fda.gov/media/113261/download",
+    "type": "safety_communication",
+    "supports": "Benzocaine OTC teething/oral products should not be used in infants and children younger than 2 years due to methemoglobinemia; those ≥2 years should use only products with the required warnings."
+   },
+   {
+    "org": "NICE",
+    "title": "Sore throat (acute): antimicrobial prescribing (NG84) — recommendations",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/ng84/chapter/recommendations",
+    "type": "guideline",
+    "supports": "Use FeverPAIN or Centor to identify who may benefit from antibiotics: FeverPAIN 0–1 or Centor 0–2 no antibiotic; FeverPAIN 2–3 no or back-up antibiotic; FeverPAIN 4–5 or Centor 3–4 immediate or back-up antibiotic. Phenoxymethylpenicillin first choice (5 days); clarithromycin or erythromycin if penicillin allergy. Self-care with paracetamol or ibuprofen for pain; refer if severe systemic illness or suppurative complications."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PHAR-010",
+  "cluster": "PHAR",
+  "topics": [
+   16
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "მძიმე ყელის ტკივილი ბავშვში — კორტიკოსტეროიდის საკითხი",
+  "recommendation_ka": "კორტიკოსტეროიდი რუტინულად არ ინიშნება. BMJ Rapid Recommendations (2017) 5 წლის და უფროს ასაკში გვთავაზობს ერთჯერად პერორალურ დოზას (სუსტი რეკომენდაცია) ტკივილის უფრო სწრაფად შესამსუბუქებლად; 5 წლამდე ბავშვებში მონაცემები არ არსებობს. ეს პოზიცია ყველა ეროვნულ გაიდლაინში არ არის გაზიარებული — გადაწყვეტილება მიიღეთ ინდივიდუალურად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 2017,
+    "unit": "year",
+    "meaning_ka": "რეკომენდაციის გამოქვეყნების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "BMJ Rapid Recommendations (Aertgeerts B et al.)",
+    "title": "Corticosteroids for sore throat: a clinical practice guideline",
+    "year": 2017,
+    "url": "https://www.bmj.com/content/358/bmj.j4090",
+    "type": "guideline",
+    "supports": "Current edition: weak recommendation for a single dose of oral corticosteroid in patients aged ≥5 years with severe or non-severe sore throat; children under 5 not studied; steroids unlikely to reduce recurrence or missed school/work days."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

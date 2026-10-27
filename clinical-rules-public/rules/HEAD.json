@@ -1,0 +1,568 @@
+[
+ {
+  "rule_id": "PUB-HEAD-001",
+  "cluster": "HEAD",
+  "topics": [
+   22
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "თავის ტკივილი, რომელსაც იწვევს ხველა, დაძაბვა ან ვალსალვას მანევრი",
+  "recommendation_ka": "პირველადი ხველის თავის ტკივილის დიაგნოზისთვის საჭიროა მინიმუმ 2 ეპიზოდი, რომელიც გამოწვეულია მხოლოდ ხველით, დაძაბვით ან ვალსალვას მანევრით, იწყება უეცრად და გრძელდება წამებიდან 2 საათამდე; სხვა დიაგნოზი უკეთ არ უნდა ხსნიდეს მდგომარეობას. დიაგნოზი გამორიცხვითია — მეორადი მიზეზები ჯერ უნდა გამოირიცხოს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 2,
+    "unit": "h",
+    "meaning_ka": "ეპიზოდის მაქსიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.1 Primary cough headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-1-primary-cough-headache",
+    "type": "classification",
+    "supports": "Criteria: at least two episodes brought on by and occurring only with coughing, straining and/or Valsalva; sudden onset; lasting 1 second to 2 hours; not better accounted for by another ICHD-3 diagnosis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-002",
+  "cluster": "HEAD",
+  "topics": [
+   22
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ხველით გამოწვეული თავის ტკივილის პირველი გამოვლინება",
+  "recommendation_ka": "ხველის თავის ტკივილის დაახლოებით 40% სიმპტომურია, უმეტესად Chiari I ტიპის მალფორმაციით. ყველა პაციენტს ჩაუტარეთ თავის ტვინის მრტ უკანა ფოსოს დაზიანების გამოსარიცხად, სანამ პირველად დიაგნოზს დასვამთ. ეჭვი გაამძაფრეთ, თუ არის უკანა ფოსოს ნიშნები (ატაქსია, თავბრუსხვევა, დისფაგია) ან ტკივილი ხანგრძლივია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 40,
+    "unit": "%",
+    "meaning_ka": "სიმპტომური (მეორადი) შემთხვევების წილი"
+   }
+  ],
+  "red_flags_ka": [
+   "ცერებელარული ან ღეროვანი ნიშნები",
+   "პოზიციური ან ხანგრძლივი ტკივილი"
+  ],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.1 Primary cough headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-1-primary-cough-headache",
+    "type": "classification",
+    "supports": "ICHD-3 comment: approximately 40% of cases are symptomatic, the large majority with Arnold-Chiari malformation type I; diagnosis requires that no other ICHD-3 diagnosis better accounts for the headache (structural lesions must be excluded)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-003",
+  "cluster": "HEAD",
+  "topics": [
+   22
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "დადასტურებული პირველადი ხველის თავის ტკივილი",
+  "recommendation_ka": "პირველი რიგის პრევენციული საშუალებაა ინდომეთაცინი 50–200 მგ/დღეში, პერორალურად (კუჭ-ნაწლავის დაცვით). ინდომეთაცინზე პასუხი პირველად ფორმას არ ადასტურებს — ზოგიერთი სიმპტომური შემთხვევაც პასუხობს, ამიტომ ნეიროვიზუალიზაცია მაინც სავალდებულოა.",
+  "doses": [
+   {
+    "drug": "indomethacin",
+    "amount": 50,
+    "unit": "mg/day",
+    "route": "PO",
+    "frequency": "daily, divided",
+    "population": "adult",
+    "max_amount": 200,
+    "max_unit": "mg/day"
+   }
+  ],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.1 Primary cough headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-1-primary-cough-headache",
+    "type": "classification",
+    "supports": "ICHD-3 comment: indomethacin 50–200 mg/day is usually effective in primary cough headache, although a few symptomatic cases have also been reported to respond."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-004",
+  "cluster": "HEAD",
+  "topics": [
+   22,
+   25
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ფიზიკურ დატვირთვასთან დაკავშირებული თავის ტკივილის დიფერენცირება",
+  "recommendation_ka": "განასხვავეთ ხველის და ფიზიკური დატვირთვის თავის ტკივილი: ხველის ტკივილი მყისიერად იწვევა ხანმოკლე დაძაბვით (ხველა, ვალსალვა), ხოლო დატვირთვის ტკივილი — ხანგრძლივი, ინტენსიური ფიზიკური აქტივობით, და უფრო ხშირია ცხელ ამინდში ან მაღალმთიანეთში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.2 Primary exercise headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-2-primary-exercise-headache/",
+    "type": "classification",
+    "supports": "Exercise headache is precipitated by sustained strenuous exercise, unlike cough headache which is triggered by short-lasting straining/Valsalva; it occurs particularly in hot weather or at high altitude."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-005",
+  "cluster": "HEAD",
+  "topics": [
+   25
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "თავის ტკივილი, რომელიც იწყება ინტენსიური ფიზიკური დატვირთვის დროს ან შემდეგ",
+  "recommendation_ka": "პირველადი დატვირთვის თავის ტკივილის დიაგნოზისთვის საჭიროა მინიმუმ 2 ეპიზოდი, რომელიც იწყება მხოლოდ ინტენსიური ფიზიკური დატვირთვის დროს ან მის შემდეგ და გრძელდება 48 საათზე ნაკლებ ხანს, სხვა უკეთესი ახსნის გარეშე. ერთი ეპიზოდი ითვლება „სავარაუდო“ ფორმად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ეპიზოდის მაქსიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.2 Primary exercise headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-2-primary-exercise-headache/",
+    "type": "classification",
+    "supports": "Criteria: at least two headache episodes brought on by and occurring only during or after strenuous physical exercise, lasting <48 hours, not better accounted for by another ICHD-3 diagnosis; 4.2.1 covers a single episode (probable)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-006",
+  "cluster": "HEAD",
+  "topics": [
+   25
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "დატვირთვის თავის ტკივილის პირველი ეპიზოდი",
+  "recommendation_ka": "პირველი ეპიზოდისას სავალდებულოა სუბარაქნოიდული სისხლჩაქცევის, არტერიის დისექციის და შექცევადი ცერებრული ვაზოკონსტრიქციის სინდრომის (RCVS) გამორიცხვა: არაკონტრასტული კტ, საჭიროებისას ლუმბალური პუნქცია და სისხლძარღვოვანი ვიზუალიზაცია (კტ- ან მრ-ანგიოგრაფია).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "უეცარი, „ჭექა-ქუხილისებრი“ დასაწყისი",
+   "კისრის ტკივილი (დისექცია)",
+   "ნევროლოგიური დეფიციტი"
+  ],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.2 Primary exercise headache",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-2-primary-exercise-headache/",
+    "type": "classification",
+    "supports": "Note: on first occurrence of a headache with these characteristics it is mandatory to exclude subarachnoid haemorrhage, arterial dissection and reversible cerebral vasoconstriction syndrome (RCVS)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-007",
+  "cluster": "HEAD",
+  "topics": [
+   25
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "დადასტურებული პირველადი დატვირთვის თავის ტკივილი",
+  "recommendation_ka": "პირველ რიგში — პროვოცირებადი ფაქტორების მართვა (თანდათანობითი გახურება, სიცხეში/სიმაღლეზე დატვირთვის შეზღუდვა). წინასწარ, დატვირთვამდე — ინდომეთაცინი; ხშირი ან არაპროგნოზირებადი ეპიზოდებისას — ყოველდღიური ბეტა-ბლოკატორი (მაგ. პროპრანოლოლი). მტკიცებულება მხოლოდ შემთხვევათა სერიებს ეფუძნება; დოზა ინდივიდუალურად შეარჩიეთ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Curr Neurol Neurosci Rep (peer-reviewed review)",
+    "title": "Primary Exercise Headache",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7160088/",
+    "type": "review",
+    "supports": "No randomized trials; indomethacin and beta-blockers remain the mainstays of treatment based on case series; secondary causes should be considered especially with older age at onset and longer headache duration."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-008",
+  "cluster": "HEAD",
+  "topics": [
+   25
+  ],
+  "rule_type": "red_flag",
+  "population": "older_adult",
+  "condition_ka": "დატვირთვის თავის ტკივილი ასაკოვან პირთან ან ხანგრძლივი ეპიზოდებით",
+  "recommendation_ka": "მეორადი მიზეზის ალბათობა იზრდება, თუ ტკივილი პირველად გვიან ასაკში დაიწყო ან ეპიზოდები ხანგრძლივია; ასეთ შემთხვევაში გამოიკვლიეთ ინტრაკრანიული პათოლოგია და, დატვირთვით პროვოცირებულ კეფის/კისრის ტკივილისას, განიხილეთ მიოკარდიუმის იშემია („კარდიული ცეფალგია“) კარდიოლოგიური შეფასებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პირველი გამოვლინება გვიან ასაკში",
+   "ეპიზოდის ხანგრძლივობის ზრდა"
+  ],
+  "sources": [
+   {
+    "org": "Curr Neurol Neurosci Rep (peer-reviewed review)",
+    "title": "Primary Exercise Headache",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7160088/",
+    "type": "review",
+    "supports": "Secondary causes are uncommon but should be considered, especially with older age at onset and more prolonged headache duration."
+   },
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: Chapter 4 Other primary headache disorders — general comment",
+    "year": 2018,
+    "url": "https://www.ichd-3.org/other-primary-headache-disorders",
+    "type": "classification",
+    "supports": "ICHD-3 chapter 4 groups headaches associated with physical exertion (4.1–4.4) and requires exclusion of secondary causes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-009",
+  "cluster": "HEAD",
+  "topics": [
+   24
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "თავის ან კისრის ტკივილი, რომელიც ჩნდება მხოლოდ სქესობრივი აქტივობისას",
+  "recommendation_ka": "სქესობრივ აქტივობასთან დაკავშირებული პირველადი თავის ტკივილისთვის საჭიროა მინიმუმ 2 ეპიზოდი: ტკივილი ძლიერდება სექსუალური აგზნების მატებასთან ერთად ან იწყება უეცრად, ფეთქებადად, ორგაზმამდე ცოტა ხნით ადრე ან ორგაზმისას; ძლიერი ტკივილი გრძელდება 1 წუთიდან 24 საათამდე, მსუბუქი — 72 საათამდე. ერთი ეპიზოდი — „სავარაუდო“ ფორმა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 1,
+    "unit": "min",
+    "meaning_ka": "მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "ძლიერი ტკივილის მაქსიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 72,
+    "unit": "h",
+    "meaning_ka": "მსუბუქი ტკივილის მაქსიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.3 Primary headache associated with sexual activity (incl. 4.3.1 probable)",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-3-primary-headache-associated-with-sexual-activity/4-3-1-probable-primary-headache-associated-with-sexual-activity/",
+    "type": "classification",
+    "supports": "ICHD-3 4.3: ≥2 episodes occurring only during sexual activity, increasing with sexual excitement or abrupt explosive at/just before orgasm; severe 1 min–24 h and/or mild up to 72 h; single episode = 4.3.1 probable."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-010",
+  "cluster": "HEAD",
+  "topics": [
+   24
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "სქესობრივი აქტივობით გამოწვეული თავის ტკივილის პირველი ეპიზოდი",
+  "recommendation_ka": "პირველი ეპიზოდისას გამორიცხეთ სუბარაქნოიდული სისხლჩაქცევა, ინტრა- და ექსტრაკრანიული არტერიის დისექცია და RCVS. სქესობრივი აქტივობისას განმეორებითი ფეთქებადი თავის ტკივილი განიხილეთ RCVS-ად, სანამ საწინააღმდეგო არ დამტკიცდება — ჩაატარეთ ანგიოგრაფია (კტ/მრ-ანგიოგრაფია) ან ტრანსკრანიული დოპლეროგრაფია; ადრეულ ეტაპზე ანგიოგრაფია შეიძლება ნორმალური იყოს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ფეთქებადი ტკივილის განმეორება რამდენიმე დღის განმავლობაში",
+   "ნევროლოგიური დეფიციტი ან კრუნჩხვა",
+   "ვაზოაქტიური ნივთიერებების მიღება"
+  ],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.3 Primary headache associated with sexual activity (incl. 4.3.1 probable)",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-3-primary-headache-associated-with-sexual-activity/4-3-1-probable-primary-headache-associated-with-sexual-activity/",
+    "type": "classification",
+    "supports": "At first onset, SAH, intra- and extracranial arterial dissection and RCVS must be excluded; multiple explosive headaches during sexual activity should be considered RCVS until proven otherwise by angiography or transcranial Doppler."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-011",
+  "cluster": "HEAD",
+  "topics": [
+   24
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "სქესობრივი აქტივობის თავის ტკივილი, მეორადი მიზეზები გამორიცხულია",
+  "recommendation_ka": "პირველადი ფორმის დიაგნოზი დაისვით მხოლოდ ნეიროვიზუალიზაციის შემდეგ. ტკივილი, რომელიც ასევე სხვა დროს ჩნდება (მაგ. შაკიკი, რომელიც სექსმაც შეიძლება გამოიწვიოს), ამ დიაგნოზს არ აკმაყოფილებს. აუხსენით პაციენტს, რომ მდგომარეობა ჩვეულებრივ თვითშეზღუდვადია, მაგრამ შესაძლოა განმეორდეს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: 4.3 Primary headache associated with sexual activity (incl. 4.3.1 probable)",
+    "year": 2018,
+    "url": "https://ichd-3.org/other-primary-headache-disorders/4-3-primary-headache-associated-with-sexual-activity/4-3-1-probable-primary-headache-associated-with-sexual-activity/",
+    "type": "classification",
+    "supports": "Headache must occur only during sexual activity and not be better accounted for by another diagnosis; single episode coded as probable."
+   },
+   {
+    "org": "International Headache Society",
+    "title": "ICHD-3: Chapter 4 Other primary headache disorders — general comment",
+    "year": 2018,
+    "url": "https://www.ichd-3.org/other-primary-headache-disorders",
+    "type": "classification",
+    "supports": "Primary exertional/sexual headaches are diagnoses of exclusion within ICHD-3 chapter 4."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-012",
+  "cluster": "HEAD",
+  "topics": [
+   23
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ზრდასრულის თავის ტკივილის პირველადი შეფასება",
+  "recommendation_ka": "გამოიყენეთ SNOOP4 წითელი დროშები: სისტემური ნიშნები (ცხელება, წონის კლება, იმუნოსუპრესია, სიმსივნე), ნევროლოგიური დეფიციტი ან ცნობიერების დარღვევა, უეცარი (ჭექა-ქუხილისებრი) დასაწყისი — მაქსიმუმი 1 წუთზე ნაკლებ დროში, ახალი თავის ტკივილი 50 წლის ზემოთ, პაპილედემა, პოზიციური, ვალსალვით პროვოცირებული ან პროგრესირებადი/ცვლილი ხასიათის ტკივილი. ნებისმიერი დროშა მოითხოვს მიზანმიმართულ გამოკვლევას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "min",
+    "meaning_ka": "ჭექა-ქუხილისებრი დასაწყისის ზღვარი — მაქსიმუმამდე"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ახალი თავის ტკივილის ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ჭექა-ქუხილისებრი დასაწყისი",
+   "პაპილედემა",
+   "კეროვანი ნევროლოგიური ნიშანი",
+   "ცხელება და კისრის რიგიდობა"
+  ],
+  "sources": [
+   {
+    "org": "CMAJ (peer-reviewed clinical review)",
+    "title": "Headache red flags (SNOOP4) table",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9888545/table/t1-195e153",
+    "type": "review",
+    "supports": "SNOOP4 table: thunderclap onset defined as reaching maximal intensity in <60 s (SAH, CVST, RCVS, dissection); new headache after age 50; papilledema; neurological signs; positional, Valsalva-precipitated and progressive headache."
+   },
+   {
+    "org": "Australian Prescriber (peer-reviewed)",
+    "title": "Headache red flags table",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9218397/table/t1",
+    "type": "review",
+    "supports": "Red-flag table listing focal neurological signs, altered consciousness, onset after 50 and other SNOOP features."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-013",
+  "cluster": "HEAD",
+  "topics": [
+   23
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ჭექა-ქუხილისებრი თავის ტკივილი, ნევროლოგიურად სტაბილური პაციენტი",
+  "recommendation_ka": "დაუყოვნებლივ ჩაატარეთ თავის არაკონტრასტული კტ. ტკივილის დაწყებიდან 6 საათის განმავლობაში შესრულებული კტ-ის მგრძნობელობა სუბარაქნოიდული სისხლჩაქცევისთვის დაახლოებით 98.7%-ია; 6 საათის შემდეგ ის 90%-ს ან ნაკლებს შეადგენს, ამიტომ უარყოფითი კტ-ის შემდეგ საჭიროა ლუმბალური პუნქცია ან კტ-ანგიოგრაფია. ანემიისას სისხლი შეიძლება იზოდენსური იყოს და კტ არასანდოა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დასაწყისიდან კტ-ის დროის ზღვარი"
+   },
+   {
+    "value": 98.7,
+    "unit": "%",
+    "meaning_ka": "კტ-ის მგრძნობელობა 6 საათამდე"
+   },
+   {
+    "value": 90,
+    "unit": "%",
+    "meaning_ka": "კტ-ის მგრძნობელობის ზედა ზღვარი 6 საათის შემდეგ"
+   }
+  ],
+  "red_flags_ka": [
+   "ანემია — კტ-ის ცრუ-უარყოფითი შედეგი"
+  ],
+  "sources": [
+   {
+    "org": "Emerg Med J (systematic review & meta-analysis)",
+    "title": "CT within 6 hours and Ottawa SAH rule for subarachnoid haemorrhage",
+    "year": 2022,
+    "url": "https://emj.bmj.com/content/39/11/818",
+    "type": "systematic_review",
+    "supports": "Pooled sensitivity of CT within 6 hours of onset 98.7% (95% CI 96.5–100), specificity 100%; sensitivity beyond 6 hours considerably lower (≤90%); the Ottawa SAH rule has low specificity and may lead to additional unnecessary testing."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-014",
+  "cluster": "HEAD",
+  "topics": [
+   23
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მწვავე თავის ტკივილი სასწრაფო დახმარების განყოფილებაში — სუბარაქნოიდული სისხლჩაქცევის რისკის შეფასება",
+  "recommendation_ka": "ოტავას სუბარაქნოიდული სისხლჩაქცევის წესი გამოიყენეთ მხოლოდ ნევროლოგიურად ინტაქტურ პაციენტებთან, რომელთაც აქვთ ახალი, ძლიერი, უეცარი თავის ტკივილი; წესი ძალიან მგრძნობიარეა, მაგრამ დაბალი სპეციფიკურობით, ამიტომ დადებითი შედეგი ავტომატურად არ ნიშნავს დიაგნოზს — იგი მიუთითებს კტ-ის/შემდგომი გამოკვლევის საჭიროებაზე.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Emerg Med J (systematic review & meta-analysis)",
+    "title": "CT within 6 hours and Ottawa SAH rule for subarachnoid haemorrhage",
+    "year": 2022,
+    "url": "https://emj.bmj.com/content/39/11/818",
+    "type": "systematic_review",
+    "supports": "Meta-analysis: the Ottawa SAH rule had high sensitivity but low specificity and could result in significant additional unnecessary testing."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-015",
+  "cluster": "HEAD",
+  "topics": [
+   23
+  ],
+  "rule_type": "diagnosis",
+  "population": "older_adult",
+  "condition_ka": "50 წლის შემდეგ ახლად დაწყებული თავის ტკივილი",
+  "recommendation_ka": "50 წლის ზემოთ ახალი თავის ტკივილისას გამორიცხეთ გიგანტურუჯრედოვანი არტერიიტი (ედს, CRP, საფეთქლის არტერიის შეფასება, მხედველობის სიმპტომები) და ინტრაკრანიული სიმსივნური ან ინფექციური პროცესი (ნეიროვიზუალიზაცია).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "მხედველობის დაბინდვა ან დაკარგვა",
+   "ყბის კლაუდიკაცია"
+  ],
+  "sources": [
+   {
+    "org": "CMAJ (peer-reviewed clinical review)",
+    "title": "Headache red flags (SNOOP4) table",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9888545/table/t1-195e153",
+    "type": "review",
+    "supports": "Onset after age 50 is a red flag associated with giant cell arteritis and neoplastic or infectious CNS disease."
+   },
+   {
+    "org": "Australian Prescriber (peer-reviewed)",
+    "title": "Headache red flags table",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9218397/table/t1",
+    "type": "review",
+    "supports": "Older age at onset listed as a red flag requiring further investigation."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-HEAD-016",
+  "cluster": "HEAD",
+  "topics": [
+   23
+  ],
+  "rule_type": "evaluation",
+  "population": "adolescent",
+  "condition_ka": "ტიპური პირველადი თავის ტკივილი (შაკიკი, დაძაბულობის ტიპის) წითელი დროშების გარეშე",
+  "recommendation_ka": "წითელი დროშების არარსებობისას დიაგნოზი დასვით კლინიკურად და არ მიმართოთ ნეიროვიზუალიზაციას მხოლოდ პაციენტის დასამშვიდებლად; შეაფასეთ მედიკამენტების ჭარბი მოხმარებით გამოწვეული თავის ტკივილის შესაძლებლობა. ეს მიდგომა ეხება მოზარდებსაც და ზრდასრულებსაც.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Headaches in over 12s: diagnosis and management (CG150, last updated 2025)",
+    "year": 2025,
+    "url": "https://www.nice.org.uk/guidance/cg150",
+    "type": "guideline",
+    "supports": "Guideline covers diagnosis and management of tension-type headache, migraine, cluster headache and medication overuse headache in people aged 12 and over, aiming to improve recognition and reduce unnecessary investigations."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

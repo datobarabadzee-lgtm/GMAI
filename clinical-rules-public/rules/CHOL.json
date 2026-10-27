@@ -1,0 +1,180 @@
+[
+ {
+  "rule_id": "PUB-CHOL-001", "cluster": "CHOL", "topics": [4, 7], "rule_type": "epidemiology", "population": "all",
+  "condition_ka": "ქოლერის გამომწვევი და გავრცელება",
+  "recommendation_ka": "ქოლერას იწვევს Vibrio cholerae-ს ტოქსიგენური სეროჯგუფები O1 და O139; გადაეცემა დაბინძურებული წყლით და საკვებით. ეჭვი მიიტანეთ ჭარბი წყლიანი დიარეის დროს ენდემურ ან აფეთქების ზონაში ყოფნისას ან იქიდან დაბრუნებისას.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 1, "unit": "label", "meaning_ka": "სეროჯგუფი O1"},
+   {"value": 139, "unit": "label", "meaning_ka": "სეროჯგუფი O139"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "Cholera is an acute diarrhoeal infection caused by ingestion of food or water contaminated with toxigenic Vibrio cholerae (serogroups O1/O139)."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-002", "cluster": "CHOL", "topics": [7], "rule_type": "diagnosis", "population": "all",
+  "condition_ka": "უხვი წყლიანი დიარეა („ბრინჯის ნახარშის“ მსგავსი), ღებინებით ან მის გარეშე, სწრაფი დეჰიდრატაციით",
+  "recommendation_ka": "აფეთქების დროს მკურნალობა დაიწყეთ კლინიკური დიაგნოზით, ლაბორატორიული პასუხის მოლოდინის გარეშე. დაადასტურეთ განავლის კულტურით ან PCR-ით; სწრაფი დიაგნოსტიკური ტესტი გამოიყენება აფეთქების გამოსავლენად და არა ინდივიდუალური დიაგნოზისთვის.",
+  "doses": [], "numeric_values": [],
+  "red_flags_ka": ["შოკი", "ცნობიერების დაქვეითება", "შარდის არარსებობა"],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "Disease can progress rapidly; prompt treatment vital. RDTs used for early detection of outbreaks; confirmation by culture or PCR."},
+   {"org": "GTFCC", "title": "Public health surveillance for cholera — guidance document", "year": 2024, "url": "https://www.gtfcc.org/resources/public-health-surveillance-for-cholera-guidance-document-2024/", "type": "guideline", "supports": "RDTs for outbreak detection/testing strategy; culture/PCR for confirmation."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-003", "cluster": "CHOL", "topics": [7], "rule_type": "evaluation", "population": "all",
+  "condition_ka": "ქოლერის ეჭვის მქონე ყველა პაციენტი",
+  "recommendation_ka": "მიღებისთანავე შეაფასეთ დეჰიდრატაციის ხარისხი (ზოგადი მდგომარეობა, თვალები, წყურვილი, კანის ნაოჭი, პულსი) და კლასიფიცირება გაუკეთეთ: დეჰიდრატაციის გარეშე, ზომიერი ან მძიმე. მკურნალობის გეგმა (A, B ან C) ამ კლასიფიკაციას ეყრდნობა.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "MSF", "title": "Clinical guidelines — Cholera, principles of case management", "year": 2024, "url": "https://medicalguidelines.msf.org/en/viewport/cholera/english/5-1-principles-of-case-management-16689584.html", "type": "guideline", "supports": "Assess dehydration at triage (WHO classification) and treat per Plan A/B/C."},
+   {"org": "GTFCC", "title": "Cholera case management — training material", "year": 2020, "url": "https://www.gtfcc.org/wp-content/uploads/2020/08/gtfcc-case-management-tahmeed-ahmed.pdf", "type": "guideline", "supports": "Dehydration assessment drives Plans A, B, C."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-004", "cluster": "CHOL", "topics": [7], "rule_type": "treatment", "population": "all",
+  "condition_ka": "ქოლერა, მძიმე დეჰიდრატაცია (გეგმა C)",
+  "recommendation_ka": "დაუყოვნებლივ დაიწყეთ ინტრავენური რინგერ-ლაქტატი, სულ 100 მლ/კგ. 1 წელზე უფროსებში: 30 მლ/კგ პირველ 30 წუთში, დანარჩენი 70 მლ/კგ მომდევნო 2.5 საათში. ჩვილებში (12 თვემდე): 30 მლ/კგ პირველ 1 საათში, 70 მლ/კგ მომდევნო 5 საათში. თუ რადიალური პულსი კვლავ ძალიან სუსტია, პირველი 30 მლ/კგ გაიმეორეთ. ORS დაიწყეთ, როგორც კი პაციენტი დალევას შეძლებს.",
+  "doses": [
+   {"drug": "Ringer lactate", "amount": 100, "unit": "mL/kg", "route": "IV", "frequency": "total over 3–6 h", "population": "all", "max_amount": null, "max_unit": null}
+  ],
+  "numeric_values": [
+   {"value": 30, "unit": "mL/kg", "meaning_ka": "პირველი ბოლუსის მოცულობა"},
+   {"value": 70, "unit": "mL/kg", "meaning_ka": "დარჩენილი მოცულობა"},
+   {"value": 1, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი; ასევე 1 საათი ჩვილებში"},
+   {"value": 30, "unit": "min", "meaning_ka": "პირველი ფაზის ხანგრძლივობა 1 წელზე უფროსებში"},
+   {"value": 2.5, "unit": "h", "meaning_ka": "მეორე ფაზა 1 წელზე უფროსებში"},
+   {"value": 12, "unit": "age_months", "meaning_ka": "ჩვილის ასაკის ზღვარი"},
+   {"value": 5, "unit": "h", "meaning_ka": "მეორე ფაზა ჩვილებში"}
+  ],
+  "red_flags_ka": ["პულსი არ ისინჯება", "შოკი"],
+  "sources": [
+   {"org": "CDC", "title": "Cholera treatment — rehydration protocol (CDC stacks)", "year": 2018, "url": "https://stacks.cdc.gov/view/cdc/51224/cdc_51224_DS1.pdf", "type": "guideline", "supports": "100 mL/kg Ringer's lactate: infants 30 mL/kg in 1 h then 70 mL/kg in 5 h; >1 y 30 mL/kg in 30 min then 70 mL/kg in 2.5 h; repeat first 30 mL/kg if radial pulse very weak."},
+   {"org": "MSF", "title": "Clinical guidelines — Cholera, principles of case management", "year": 2024, "url": "https://medicalguidelines.msf.org/en/viewport/cholera/english/5-1-principles-of-case-management-16689584.html", "type": "guideline", "supports": "Plan C: start IV fluid immediately, preferably Ringer's lactate 100 mL/kg."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-005", "cluster": "CHOL", "topics": [7], "rule_type": "treatment", "population": "all",
+  "condition_ka": "ქოლერა, დეჰიდრატაციის გარეშე ან ზომიერი დეჰიდრატაცია",
+  "recommendation_ka": "პერორალური რეჰიდრატაციის ხსნარი (ORS) არის ძირითადი მკურნალობა. ზომიერი დეჰიდრატაციისას ORS მიეცით ზედამხედველობით (გეგმა B) და ხელახლა შეაფასეთ; დეჰიდრატაციის გარეშე ORS მიეცით ყოველი თხიერი განავლის შემდეგ (გეგმა A). კვება გააგრძელეთ, ძუძუთი კვება არ შეწყვიტოთ.",
+  "doses": [], "numeric_values": [], "red_flags_ka": ["ღებინება, რომელიც ORS-ის მიღებას შეუძლებელს ხდის"],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "Most people can be treated successfully through prompt administration of ORS."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-006", "cluster": "CHOL", "topics": [7], "rule_type": "dosing", "population": "adult",
+  "condition_ka": "ქოლერა მოზრდილში ან 12 წელზე უფროს ბავშვში, ზომიერი ან მძიმე დეჰიდრატაცია",
+  "recommendation_ka": "ანტიბიოტიკი: დოქსიციკლინი 300 მგ ერთჯერადად პერორალურად (პირველი რიგი, ორსულობის ჩათვლით GTFCC-ის მიხედვით). ალტერნატივა: აზითრომიცინი 1000 მგ ერთჯერადად. ანტიბიოტიკი ამოკლებს დიარეას და ამცირებს სითხის საჭიროებას; რეჰიდრატაციას არ ანაცვლებს.",
+  "doses": [
+   {"drug": "doxycycline", "amount": 300, "unit": "mg", "route": "PO", "frequency": "single dose", "population": "adult", "max_amount": null, "max_unit": null},
+   {"drug": "azithromycin", "amount": 1000, "unit": "mg", "route": "PO", "frequency": "single dose", "population": "adult", "max_amount": null, "max_unit": null}
+  ],
+  "numeric_values": [{"value": 12, "unit": "age_years", "meaning_ka": "ასაკის ზღვარი მოზრდილის დოზისთვის"}],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "GTFCC", "title": "Technical note: use of antibiotics for the treatment and control of cholera", "year": 2024, "url": "https://www.gtfcc.org/wp-content/uploads/2025/02/gtfcc-technical-note-on-use-of-antibiotics-for-the-treatment-of-cholera.pdf", "type": "guideline", "supports": "Antibiotics for moderate/severe dehydration; single-dose doxycycline first line for adults incl. pregnant women; azithromycin alternative."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-007", "cluster": "CHOL", "topics": [7], "rule_type": "dosing", "population": "child",
+  "condition_ka": "ქოლერა 12 წლამდე ბავშვში, ზომიერი ან მძიმე დეჰიდრატაცია",
+  "recommendation_ka": "დოქსიციკლინი 2–4 მგ/კგ ერთჯერადად პერორალურად, ან აზითრომიცინი 20 მგ/კგ ერთჯერადად (მაქსიმუმ 1000 მგ). ერთჯერადი დოქსიციკლინი კბილის შეფერილობის მნიშვნელოვან რისკს არ უკავშირდება.",
+  "doses": [
+   {"drug": "doxycycline", "amount": 2, "unit": "mg/kg", "route": "PO", "frequency": "single dose", "population": "child", "max_amount": 4, "max_unit": "mg/kg"},
+   {"drug": "azithromycin", "amount": 20, "unit": "mg/kg", "route": "PO", "frequency": "single dose", "population": "child", "max_amount": 1000, "max_unit": "mg"}
+  ],
+  "numeric_values": [{"value": 12, "unit": "age_years", "meaning_ka": "ასაკის ზღვარი"}],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "GTFCC", "title": "Technical note: use of antibiotics for the treatment and control of cholera", "year": 2024, "url": "https://www.gtfcc.org/wp-content/uploads/2025/02/gtfcc-technical-note-on-use-of-antibiotics-for-the-treatment-of-cholera.pdf", "type": "guideline", "supports": "Children: doxycycline 2–4 mg/kg single dose or azithromycin 20 mg/kg single dose (max 1 g); doxycycline not associated with tooth staining in review cited."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-008", "cluster": "CHOL", "topics": [7], "rule_type": "dosing", "population": "child",
+  "condition_ka": "ქოლერა ან მწვავე დიარეა 5 წლამდე ბავშვში",
+  "recommendation_ka": "თუთია (ცინკი): 6 თვიდან 20 მგ დღეში, 6 თვემდე 10 მგ დღეში, 10–14 დღის განმავლობაში, ORS-თან ერთად.",
+  "doses": [
+   {"drug": "zinc", "amount": 20, "unit": "mg", "route": "PO", "frequency": "once daily for 10–14 days", "population": "child", "max_amount": null, "max_unit": null},
+   {"drug": "zinc", "amount": 10, "unit": "mg", "route": "PO", "frequency": "once daily for 10–14 days", "population": "infant", "max_amount": null, "max_unit": null}
+  ],
+  "numeric_values": [
+   {"value": 5, "unit": "age_years", "meaning_ka": "ასაკის ზედა ზღვარი"},
+   {"value": 6, "unit": "age_months", "meaning_ka": "დოზის ასაკობრივი ზღვარი"},
+   {"value": 14, "unit": "day", "meaning_ka": "მაქსიმალური ხანგრძლივობა"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO/UNICEF", "title": "Clinical management of acute diarrhoea — joint statement (current edition)", "year": 2004, "url": "https://www.who.int/publications/i/item/WHO_FCH_CAH_04.7", "type": "guideline", "supports": "Zinc 20 mg/day (10 mg under 6 months) for 10–14 days in children with diarrhoea; still the current WHO recommendation."},
+   {"org": "GTFCC", "title": "Cholera case management — training material", "year": 2020, "url": "https://www.gtfcc.org/wp-content/uploads/2020/08/gtfcc-case-management-tahmeed-ahmed.pdf", "type": "guideline", "supports": "≥6 months one 20 mg tablet daily 10–14 days; <6 months half tablet."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-009", "cluster": "CHOL", "topics": [7], "rule_type": "prevention", "population": "all",
+  "condition_ka": "ქოლერის აფეთქება, საზოგადოებრივი ჯანმრთელობა",
+  "recommendation_ka": "ანტიბიოტიკების მასობრივი პროფილაქტიკური გამოყენება არ არის რეკომენდებული: გავრცელებას არ ამცირებს და ზრდის რეზისტენტობას. პრევენცია: უსაფრთხო წყალი, სანიტარია, ხელის ჰიგიენა და პერორალური ქოლერის ვაქცინა WHO-ს მიერ ხარისხობრივად შეფასებული პრეპარატით.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "Mass administration of antibiotics not recommended; no proven effect on spread and contributes to AMR. Prevention: WASH and oral cholera vaccines."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-010", "cluster": "CHOL", "topics": [7], "rule_type": "monitoring", "population": "all",
+  "condition_ka": "ქოლერის მკურნალობის ხარისხის მაჩვენებელი",
+  "recommendation_ka": "ადრეული და სწორი მკურნალობისას ლეტალობა 1%-ზე ნაკლები უნდა იყოს. უფრო მაღალი ლეტალობა საჭიროებს მკურნალობის ხელმისაწვდომობისა და ხარისხის გადახედვას.",
+  "doses": [], "numeric_values": [{"value": 1, "unit": "%", "meaning_ka": "მისაღები ლეტალობის ზედა ზღვარი"}], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "With early and proper treatment, the case fatality rate should remain below 1%."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-012", "cluster": "CHOL", "topics": [4], "rule_type": "epidemiology", "population": "all",
+  "condition_ka": "ქოლერის ინკუბაციური პერიოდი",
+  "recommendation_ka": "ინკუბაციური პერიოდი 12 საათიდან 5 დღემდეა. ეჭვის შეფასებისას გაითვალისწინეთ ექსპოზიცია (წყალი, საკვები, აფეთქების ზონა) ბოლო 5 დღის განმავლობაში.",
+  "doses": [], "numeric_values": [
+   {"value": 12, "unit": "h", "meaning_ka": "ინკუბაციის მინიმუმი"},
+   {"value": 5, "unit": "day", "meaning_ka": "ინკუბაციის მაქსიმუმი"}
+  ], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "It takes between 12 hours and 5 days for a person to show symptoms after ingesting contaminated food or water."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-013", "cluster": "CHOL", "topics": [4], "rule_type": "epidemiology", "population": "all",
+  "condition_ka": "უსიმპტომო ინფექცია და ბაქტერიის გამოყოფა",
+  "recommendation_ka": "ინფიცირებულთა უმეტესობას სიმპტომები არ უვითარდება, თუმცა ბაქტერია განავალში 1–10 დღე გამოიყოფა და სხვების დაინფიცირება შეუძლია. აფეთქების დროს ჰიგიენისა და სანიტარიის ზომები ოჯახის უსიმპტომო წევრებზეც ვრცელდება.",
+  "doses": [], "numeric_values": [
+   {"value": 1, "unit": "day", "meaning_ka": "გამოყოფის მინიმალური ხანგრძლივობა"},
+   {"value": 10, "unit": "day", "meaning_ka": "გამოყოფის მაქსიმალური ხანგრძლივობა"}
+  ], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "Cholera — fact sheet", "year": 2024, "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "fact_sheet", "supports": "Most people infected do not develop symptoms, although the bacteria are present in their faeces for 1–10 days after infection and are shed back into the environment."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHOL-011", "cluster": "CHOL", "topics": [7], "rule_type": "referral", "population": "all",
+  "condition_ka": "ქოლერის შემთხვევის ეჭვი საქართველოში",
+  "recommendation_ka": "ქოლერა საერთაშორისო მნიშვნელობის საანგარიშგებო ინფექციაა: ეჭვი დაუყოვნებლივ შეატყობინეთ დაავადებათა კონტროლის ეროვნულ ცენტრს (NCDC) და დაიცავით ინფექციის კონტროლის ზომები.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "WHO", "title": "International Health Regulations (2005), third edition (current)", "year": 2016, "url": "https://www.who.int/publications/i/item/9789241580496", "type": "regulatory", "supports": "Current edition: cholera is listed among diseases that always require assessment under the IHR decision instrument."},
+   {"org": "NCDC Georgia", "title": "National Center for Disease Control and Public Health", "year": 2024, "url": "https://www.ncdc.ge/", "type": "national_protocol", "supports": "National authority for notifiable infectious disease surveillance in Georgia."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

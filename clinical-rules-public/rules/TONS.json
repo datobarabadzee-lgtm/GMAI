@@ -1,0 +1,504 @@
+[
+ {
+  "rule_id": "PUB-TONS-001",
+  "cluster": "TONS",
+  "topics": [
+   46
+  ],
+  "rule_type": "referral",
+  "population": "child",
+  "condition_ka": "განმეორებითი ყელის ინფექცია ბავშვში — ტონზილექტომიის ჩვენების შეფასება",
+  "recommendation_ka": "აქტიური დაკვირვება უპირატესია ტონზილექტომიაზე, თუ ეპიზოდების სიხშირე არ აღწევს: 7 ან მეტს ბოლო 1 წელიწადში, 5 ან მეტს წელიწადში ბოლო 2 წლის განმავლობაში, ან 3 ან მეტს წელიწადში ბოლო 3 წლის განმავლობაში. თითოეული ეპიზოდი დოკუმენტირებული უნდა იყოს (ცხელება, კისრის ლიმფადენოპათია, ტონზილური ექსუდატი ან დადებითი GAS ტესტი).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 7,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდები ბოლო წელიწადში"
+   },
+   {
+    "value": 1,
+    "unit": "year",
+    "meaning_ka": "დაკვირვების პერიოდი"
+   },
+   {
+    "value": 5,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდები წელიწადში"
+   },
+   {
+    "value": 2,
+    "unit": "year",
+    "meaning_ka": "დაკვირვების პერიოდი"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "ეპიზოდები წელიწადში / დაკვირვების წლები"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAO-HNSF (summarised by AAFP)",
+    "title": "Clinical Practice Guideline: Tonsillectomy in Children (Update) — Otolaryngol Head Neck Surg 2019;160(1S):S1-S42",
+    "year": 2019,
+    "url": "https://www.aafp.org/pubs/afp/issues/2019/0901/p316.html",
+    "type": "guideline",
+    "supports": "Covers children 1–18 years. Watchful waiting for recurrent throat infection unless ≥7 episodes in past year, ≥5/year for 2 years or ≥3/year for 3 years. Ask about growth retardation, enuresis, asthma, poor school performance, behavioural problems in SDB. PSG before tonsillectomy for SDB in children <2 years or with obesity, Down syndrome, craniofacial abnormalities and similar comorbidities. Strong recommendation against perioperative antibiotics."
+   },
+   {
+    "org": "AAO-HNSF",
+    "title": "Updated clinical practice guideline: Tonsillectomy in Children — press release and fact sheet",
+    "year": 2019,
+    "url": "https://www.entnet.org/resource/aao-hnsf-updated-cpg-tonsillectomy-press-release-fact-sheet/",
+    "type": "guideline",
+    "supports": "2019 update replaces 2011 guideline; 15 key action statements; five statements changed and seven new ones added."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-002",
+  "cluster": "TONS",
+  "topics": [
+   46
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ძილთან დაკავშირებული სუნთქვის დარღვევა (ხვრინვა, აპნოე) და გადიდებული ნუშურა ჯირკვლები ბავშვში",
+  "recommendation_ka": "ტონზილექტომიამდე მშობელს ჰკითხეთ თანმხლებ მდგომარეობებზე, რომლებიც ოპერაციის შემდეგ შეიძლება გაუმჯობესდეს: ზრდის შეფერხება, ენურეზი, ასთმა, ცუდი სასკოლო მოსწრება, ქცევითი პრობლემები. ეს მონაცემები ოპერაციის გადაწყვეტილებაში გაითვალისწინეთ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAO-HNSF (summarised by AAFP)",
+    "title": "Clinical Practice Guideline: Tonsillectomy in Children (Update) — Otolaryngol Head Neck Surg 2019;160(1S):S1-S42",
+    "year": 2019,
+    "url": "https://www.aafp.org/pubs/afp/issues/2019/0901/p316.html",
+    "type": "guideline",
+    "supports": "Covers children 1–18 years. Watchful waiting for recurrent throat infection unless ≥7 episodes in past year, ≥5/year for 2 years or ≥3/year for 3 years. Ask about growth retardation, enuresis, asthma, poor school performance, behavioural problems in SDB. PSG before tonsillectomy for SDB in children <2 years or with obesity, Down syndrome, craniofacial abnormalities and similar comorbidities. Strong recommendation against perioperative antibiotics."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-003",
+  "cluster": "TONS",
+  "topics": [
+   46,
+   87
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ტონზილექტომიის დაგეგმვა ძილის დროს სუნთქვის დარღვევის გამო მაღალი რისკის ბავშვში",
+  "recommendation_ka": "ოპერაციამდე ჩაატარეთ პოლისომნოგრაფია, თუ ბავშვი 2 წლამდეა ან აქვს სიმსუქნე, დაუნის სინდრომი, კრანიოფაციური ანომალია, ნეირომუსკულური დაავადება ან სხვა მძიმე თანმხლები მდგომარეობა; ასევე, როდესაც ოპერაციის საჭიროება გაურკვეველია ან კლინიკური სურათი და გასინჯვა ერთმანეთს არ ემთხვევა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი პოლისომნოგრაფიისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAO-HNSF (summarised by AAFP)",
+    "title": "Clinical Practice Guideline: Tonsillectomy in Children (Update) — Otolaryngol Head Neck Surg 2019;160(1S):S1-S42",
+    "year": 2019,
+    "url": "https://www.aafp.org/pubs/afp/issues/2019/0901/p316.html",
+    "type": "guideline",
+    "supports": "Covers children 1–18 years. Watchful waiting for recurrent throat infection unless ≥7 episodes in past year, ≥5/year for 2 years or ≥3/year for 3 years. Ask about growth retardation, enuresis, asthma, poor school performance, behavioural problems in SDB. PSG before tonsillectomy for SDB in children <2 years or with obesity, Down syndrome, craniofacial abnormalities and similar comorbidities. Strong recommendation against perioperative antibiotics."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-004",
+  "cluster": "TONS",
+  "topics": [
+   46,
+   87
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ტონზილექტომიის პერიოპერაციული მართვა ბავშვში",
+  "recommendation_ka": "პერიოპერაციული ანტიბიოტიკი არ დანიშნოთ (ძლიერი რეკომენდაცია). ოპერაციის შემდგომი ტკივილისთვის გამოიყენეთ იბუპროფენი და/ან პარაცეტამოლი; კოდეინი ბავშვებში ტონზილექტომიის შემდეგ არ გამოიყენება (FDA-ს ყველაზე მკაცრი გაფრთხილება — სუნთქვის დათრგუნვის და სიკვდილის რისკი).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAO-HNSF (summarised by AAFP)",
+    "title": "Clinical Practice Guideline: Tonsillectomy in Children (Update) — Otolaryngol Head Neck Surg 2019;160(1S):S1-S42",
+    "year": 2019,
+    "url": "https://www.aafp.org/pubs/afp/issues/2019/0901/p316.html",
+    "type": "guideline",
+    "supports": "Covers children 1–18 years. Watchful waiting for recurrent throat infection unless ≥7 episodes in past year, ≥5/year for 2 years or ≥3/year for 3 years. Ask about growth retardation, enuresis, asthma, poor school performance, behavioural problems in SDB. PSG before tonsillectomy for SDB in children <2 years or with obesity, Down syndrome, craniofacial abnormalities and similar comorbidities. Strong recommendation against perioperative antibiotics."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAFP Endorses AAO-HNS Tonsillectomy in Children Guideline",
+    "year": 2019,
+    "url": "https://www.aafp.org/about/news/20190227aao-hnstonsillectomygdln",
+    "type": "news",
+    "supports": "Summarises the updated guideline, including attention to the FDA boxed warning against codeine in children after tonsillectomy and against perioperative antibiotics."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-005",
+  "cluster": "TONS",
+  "topics": [
+   47
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ობსტრუქციული ძილის აპნოეს გავრცელება და ფენოტიპები ბავშვებში",
+  "recommendation_ka": "ობსტრუქციული ძილის აპნოე ზოგად პედიატრიულ პოპულაციაში დაახლოებით 2–5%-ს აღენიშნება. სკოლამდელ ასაკში ძირითადი მიზეზია ადენოტონზილური ჰიპერტროფია, მოზარდობაში — სიმსუქნე; ცალკე გამოიყოფა თანდაყოლილ-სტრუქტურული ფენოტიპი (მაგ., დაუნის სინდრომი, კრანიოფაციური ანომალიები), რომელიც ადრეული ასაკიდან ვლინდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "%",
+    "meaning_ka": "გავრცელების ქვედა ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "%",
+    "meaning_ka": "გავრცელების ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Children (MDPI)",
+    "title": "Review of pediatric obstructive sleep apnea phenotypes (Children 2023;10(6):955)",
+    "year": 2023,
+    "url": "https://www.mdpi.com/2227-9067/10/6/955",
+    "type": "review",
+    "supports": "OSA affects about 2–5% of the general pediatric population; adenotonsillar hypertrophy dominates in preschoolers, obesity in adolescents; a congenital-structural phenotype (e.g., Down syndrome) is present from early life."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-006",
+  "cluster": "TONS",
+  "topics": [
+   47
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "დაუნის სინდრომის მქონე ბავშვი",
+  "recommendation_ka": "დაუნის სინდრომისას ობსტრუქციული ძილის აპნოეს რისკი ძალიან მაღალია (ერთ კოჰორტაში 81%) შუა სახის ჰიპოპლაზიის, მაკროგლოსიის, ზედა სასუნთქი გზების დაქვეითებული ტონუსისა და სიმსუქნის გამო; სხეულის მასის ინდექსი და ხვრინვის/აპნოეს სიმპტომები უფრო მძიმე ფორმას წინასწარმეტყველებს. ასეთ ბავშვებში დაბალია ზღურბლი პოლისომნოგრაფიისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 81,
+    "unit": "%",
+    "meaning_ka": "OSA-ს სიხშირე კოჰორტაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Peer-reviewed cohort (PMC)",
+    "title": "Prevalence, Severity, and Treatment of Obstructive Sleep Apnea in Children with Down Syndrome in Qatar",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11227032/",
+    "type": "cohort",
+    "supports": "OSA found in 81% of children with Down syndrome; BMI and snoring/apnoea symptoms predicted higher AHI."
+   },
+   {
+    "org": "Children (MDPI)",
+    "title": "Review of pediatric obstructive sleep apnea phenotypes (Children 2023;10(6):955)",
+    "year": 2023,
+    "url": "https://www.mdpi.com/2227-9067/10/6/955",
+    "type": "review",
+    "supports": "OSA affects about 2–5% of the general pediatric population; adenotonsillar hypertrophy dominates in preschoolers, obesity in adolescents; a congenital-structural phenotype (e.g., Down syndrome) is present from early life."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-007",
+  "cluster": "TONS",
+  "topics": [
+   47
+  ],
+  "rule_type": "epidemiology",
+  "population": "infant",
+  "condition_ka": "ძილის დროს სუნთქვის ობსტრუქციული დარღვევა 1–23 თვის ჩვილში",
+  "recommendation_ka": "ჩვილებში დარღვევა მრავალფაქტორულია: მაპროვოცირებელი მდგომარეობებია ქვედა ყბის ჰიპოპლაზია და სხვა კრანიოფაციური ანომალიები, დაუნის და პრადერ-ვილის სინდრომები, ნეირომუსკულური დაავადებები. ასეთი ჩვილები საჭიროებენ სპეციალიზებულ შეფასებას (ბავშვთა პულმონოლოგი/ძილის სპეციალისტი, ოტორინოლარინგოლოგი).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "age_months",
+    "meaning_ka": "ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 23,
+    "unit": "age_months",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "European Respiratory Society Task Force",
+    "title": "ERS statement on obstructive sleep disordered breathing in 1- to 23-month-old children",
+    "year": 2017,
+    "url": "https://repositorio.unesp.br/handle/11449/175629",
+    "type": "guideline",
+    "supports": "Current edition: based on systematic review of 159 articles; oSDB in infants is multifactorial; predisposing conditions include mandibular hypoplasia; complex conditions such as Down syndrome and Prader-Willi syndrome benefit from treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-008",
+  "cluster": "TONS",
+  "topics": [
+   47
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "რუტინული პედიატრიული ვიზიტი",
+  "recommendation_ka": "ყველა ბავშვსა და მოზარდში ჰკითხეთ ხვრინვაზე. ხვრინვის და ობსტრუქციული ძილის აპნოეს ნიშნების (ღამის აპნოე/ხროტინი, მოუსვენარი ძილი, დღის ძილიანობა ან ჰიპერაქტიურობა, პირით სუნთქვა) არსებობისას საჭიროა პოლისომნოგრაფია ან სპეციალისტთან მიმართვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Diagnosis and management of childhood obstructive sleep apnea syndrome (Pediatrics 2012)",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22926173/",
+    "type": "guideline",
+    "supports": "Current edition: for uncomplicated OSAS (adenotonsillar hypertrophy and/or obesity in otherwise healthy child). Screen for snoring; adenotonsillectomy first line when adenotonsillar hypertrophy; high-risk patients monitored as inpatients postoperatively; objective testing after therapy in high-risk or persistent symptoms; CPAP if AT not performed or OSAS persists; intranasal steroids an option for mild OSAS when AT contraindicated or mild postoperative OSAS."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAP Releases Guideline on Diagnosis and Management of Obstructive Sleep Apnea Syndrome in Children",
+    "year": 2013,
+    "url": "https://www.aafp.org/afp/2013/0615/p889",
+    "type": "guideline_summary",
+    "supports": "Practice summary of the 2012 AAP OSAS guideline (still the current edition) recommendations (screening, polysomnography, adenotonsillectomy, CPAP, intranasal steroids, postoperative monitoring)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-009",
+  "cluster": "TONS",
+  "topics": [
+   87
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ობსტრუქციული ძილის აპნოე ადენოტონზილური ჰიპერტროფიით, სხვაგვარად ჯანმრთელ ბავშვში",
+  "recommendation_ka": "პირველი რიგის მკურნალობაა ადენოტონზილექტომია. გაიდლაინი ეხება „გაურთულებელ“ OSA-ს (ადენოტონზილური ჰიპერტროფია და/ან სიმსუქნე); სინდრომული, კრანიოფაციური ან ნეირომუსკულური პაციენტები სპეციალიზებულ ცენტრში იმართება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Diagnosis and management of childhood obstructive sleep apnea syndrome (Pediatrics 2012)",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22926173/",
+    "type": "guideline",
+    "supports": "Current edition: for uncomplicated OSAS (adenotonsillar hypertrophy and/or obesity in otherwise healthy child). Screen for snoring; adenotonsillectomy first line when adenotonsillar hypertrophy; high-risk patients monitored as inpatients postoperatively; objective testing after therapy in high-risk or persistent symptoms; CPAP if AT not performed or OSAS persists; intranasal steroids an option for mild OSAS when AT contraindicated or mild postoperative OSAS."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAP Releases Guideline on Diagnosis and Management of Obstructive Sleep Apnea Syndrome in Children",
+    "year": 2013,
+    "url": "https://www.aafp.org/afp/2013/0615/p889",
+    "type": "guideline_summary",
+    "supports": "Practice summary of the 2012 AAP OSAS guideline (still the current edition) recommendations (screening, polysomnography, adenotonsillectomy, CPAP, intranasal steroids, postoperative monitoring)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-010",
+  "cluster": "TONS",
+  "topics": [
+   87
+  ],
+  "rule_type": "monitoring",
+  "population": "child",
+  "condition_ka": "ადენოტონზილექტომიის შემდგომი პერიოდი მაღალი რისკის ბავშვში",
+  "recommendation_ka": "მაღალი რისკის პაციენტები (მაგ., მცირე ასაკი, მძიმე OSA, გულის გართულებები, ზრდის შეფერხება, სიმსუქნე, კრანიოფაციური ან ნეირომუსკულური დაავადება) ოპერაციის შემდეგ სტაციონარში უნდა იყვნენ მონიტორინგზე. ოპერაციის შემდეგ ხელახალი ობიექტური შეფასება (პოლისომნოგრაფია) ჩაატარეთ მაღალი რისკის ან მუდმივი სიმპტომების მქონე ბავშვებში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ოპერაციის შემდგომი დესატურაცია ან აპნოე",
+   "სისხლდენა ოპერაციის შემდეგ"
+  ],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Diagnosis and management of childhood obstructive sleep apnea syndrome (Pediatrics 2012)",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22926173/",
+    "type": "guideline",
+    "supports": "Current edition: for uncomplicated OSAS (adenotonsillar hypertrophy and/or obesity in otherwise healthy child). Screen for snoring; adenotonsillectomy first line when adenotonsillar hypertrophy; high-risk patients monitored as inpatients postoperatively; objective testing after therapy in high-risk or persistent symptoms; CPAP if AT not performed or OSAS persists; intranasal steroids an option for mild OSAS when AT contraindicated or mild postoperative OSAS."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAP Releases Guideline on Diagnosis and Management of Obstructive Sleep Apnea Syndrome in Children",
+    "year": 2013,
+    "url": "https://www.aafp.org/afp/2013/0615/p889",
+    "type": "guideline_summary",
+    "supports": "Practice summary of the 2012 AAP OSAS guideline (still the current edition) recommendations (screening, polysomnography, adenotonsillectomy, CPAP, intranasal steroids, postoperative monitoring)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-011",
+  "cluster": "TONS",
+  "topics": [
+   87
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "მუდმივი OSA ადენოტონზილექტომიის შემდეგ, ან როცა ოპერაცია არ ტარდება",
+  "recommendation_ka": "რეკომენდებულია CPAP (ჰაერის მუდმივი დადებითი წნევა). მსუბუქი OSA-ს დროს, როცა ადენოტონზილექტომია უკუნაჩვენებია, ან მსუბუქი ოპერაციის შემდგომი OSA-სას, ალტერნატივაა ინტრანაზალური კორტიკოსტეროიდი. სიმსუქნისას აუცილებელია წონის კორექცია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAP",
+    "title": "Diagnosis and management of childhood obstructive sleep apnea syndrome (Pediatrics 2012)",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22926173/",
+    "type": "guideline",
+    "supports": "Current edition: for uncomplicated OSAS (adenotonsillar hypertrophy and/or obesity in otherwise healthy child). Screen for snoring; adenotonsillectomy first line when adenotonsillar hypertrophy; high-risk patients monitored as inpatients postoperatively; objective testing after therapy in high-risk or persistent symptoms; CPAP if AT not performed or OSAS persists; intranasal steroids an option for mild OSAS when AT contraindicated or mild postoperative OSAS."
+   },
+   {
+    "org": "AAFP",
+    "title": "AAP Releases Guideline on Diagnosis and Management of Obstructive Sleep Apnea Syndrome in Children",
+    "year": 2013,
+    "url": "https://www.aafp.org/afp/2013/0615/p889",
+    "type": "guideline_summary",
+    "supports": "Practice summary of the 2012 AAP OSAS guideline (still the current edition) recommendations (screening, polysomnography, adenotonsillectomy, CPAP, intranasal steroids, postoperative monitoring)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-012",
+  "cluster": "TONS",
+  "topics": [
+   87
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ობსტრუქციული ძილის აპნოე 5–9 წლის ბავშვში, ადრეული ოპერაცია თუ დაკვირვება",
+  "recommendation_ka": "CHAT-ის რანდომიზებულ კვლევაში 7 თვის შემდეგ ყურადღების/აღმასრულებელი ფუნქციის ძირითადი გამოსავალი არ განსხვავდებოდა, თუმცა ადენოტონზილექტომიამ გააუმჯობესა ქცევა, ცხოვრების ხარისხი და სიმპტომები; პოლისომნოგრაფია ნორმალიზდა 79%-ში ოპერაციის შემდეგ და 46%-ში დაკვირვებისას. მსუბუქი ფორმის შერჩეულ ბავშვებში აქტიური დაკვირვებაც მისაღები ვარიანტია ოჯახთან ერთობლივი გადაწყვეტილებით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "კვლევის ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 9,
+    "unit": "age_years",
+    "meaning_ka": "კვლევის ასაკის ზედა ზღვარი"
+   },
+   {
+    "value": 7,
+    "unit": "month",
+    "meaning_ka": "დაკვირვების ხანგრძლივობა"
+   },
+   {
+    "value": 79,
+    "unit": "%",
+    "meaning_ka": "ნორმალიზაცია ოპერაციის შემდეგ"
+   },
+   {
+    "value": 46,
+    "unit": "%",
+    "meaning_ka": "ნორმალიზაცია დაკვირვებისას"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NEJM (Marcus CL et al., CHAT)",
+    "title": "A randomized trial of adenotonsillectomy for childhood sleep apnea",
+    "year": 2013,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3756808",
+    "type": "rct",
+    "supports": "Remains the current pivotal RCT: 464 children aged 5–9 years; no difference in primary attention/executive outcome at 7 months; AT improved behaviour, quality of life, symptoms and PSG; PSG normalised in 79% after AT vs 46% with watchful waiting; lower normalisation in Black and obese children."
+   },
+   {
+    "org": "AAFP",
+    "title": "Adenotonsillectomy vs watchful waiting for childhood OSA — CHAT commentary",
+    "year": 2013,
+    "url": "https://www.aafp.org/afp/2013/1001/p468",
+    "type": "commentary",
+    "supports": "Commentary on the current pivotal CHAT trial: AHI changes after AT vs watchful waiting were modest; either approach considered a reasonable option in the studied population."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TONS-013",
+  "cluster": "TONS",
+  "topics": [
+   47,
+   87
+  ],
+  "rule_type": "monitoring",
+  "population": "child",
+  "condition_ka": "სიმსუქნე ან სხვა რისკ-ფაქტორი OSA-ს მქონე ბავშვში, რომელსაც ადენოტონზილექტომია ჩაუტარდა",
+  "recommendation_ka": "სიმსუქნის მქონე ბავშვებში ოპერაციის შემდეგ პოლისომნოგრაფიის ნორმალიზაცია ნაკლებად ხშირია (თუმცა გაუმჯობესება დაკვირვებაზე მეტია); ამიტომ დაგეგმეთ ოპერაციის შემდგომი სიმპტომების ხელახალი შეფასება, საჭიროებისას პოლისომნოგრაფია, და პარალელურად წონის მართვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NEJM (Marcus CL et al., CHAT)",
+    "title": "A randomized trial of adenotonsillectomy for childhood sleep apnea",
+    "year": 2013,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3756808",
+    "type": "rct",
+    "supports": "Remains the current pivotal RCT: 464 children aged 5–9 years; no difference in primary attention/executive outcome at 7 months; AT improved behaviour, quality of life, symptoms and PSG; PSG normalised in 79% after AT vs 46% with watchful waiting; lower normalisation in Black and obese children."
+   },
+   {
+    "org": "AAP",
+    "title": "Diagnosis and management of childhood obstructive sleep apnea syndrome (Pediatrics 2012)",
+    "year": 2012,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22926173/",
+    "type": "guideline",
+    "supports": "Current edition: for uncomplicated OSAS (adenotonsillar hypertrophy and/or obesity in otherwise healthy child). Screen for snoring; adenotonsillectomy first line when adenotonsillar hypertrophy; high-risk patients monitored as inpatients postoperatively; objective testing after therapy in high-risk or persistent symptoms; CPAP if AT not performed or OSAS persists; intranasal steroids an option for mild OSAS when AT contraindicated or mild postoperative OSAS."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

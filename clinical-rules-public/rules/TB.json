@@ -1,0 +1,1779 @@
+[
+ {
+  "rule_id": "PUB-TB-001",
+  "cluster": "TB",
+  "topics": [
+   74
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ტუბერკულოზის გლობალური ტვირთი და დაავადების რისკ-ფაქტორები",
+  "recommendation_ka": "2024 წელს ტუბერკულოზით დაავადდა დაახლოებით 10,7 მილიონი ადამიანი და გარდაიცვალა 1,23 მილიონი; ის ერთი ინფექციური აგენტით გამოწვეული სიკვდილის წამყვანი მიზეზია. დედამიწის მოსახლეობის დაახლოებით მეოთხედი ინფიცირებულია; ინფიცირებულთა 5–10%-ს უვითარდება აქტიური დაავადება. აქტიური დაავადების რისკს ზრდის HIV, შაქრიანი დიაბეტი, კვებითი უკმარისობა, თამბაქოს მოხმარება და ალკოჰოლის მავნე მოხმარება; ჩვილები და მცირეწლოვანი ბავშვები ინფიცირების შემთხვევაში მეტად არიან რისკის ქვეშ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10.7,
+    "unit": "count",
+    "meaning_ka": "ახალი შემთხვევები 2024 წელს (მილიონი)"
+   },
+   {
+    "value": 1.23,
+    "unit": "count",
+    "meaning_ka": "სიკვდილი 2024 წელს (მილიონი)"
+   },
+   {
+    "value": 2024,
+    "unit": "year",
+    "meaning_ka": "მონაცემების წელი"
+   },
+   {
+    "value": 5,
+    "unit": "%",
+    "meaning_ka": "ინფიცირებულთა წილი, რომლებსაც უვითარდებათ დაავადება — ქვედა ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "In 2024 an estimated 10.7 million people fell ill with TB and 1.23 million died; TB is the leading single-agent infectious killer. About a quarter of the global population has been infected; about 5-10% develop TB disease. Risk factors: diabetes, HIV, undernutrition, tobacco, harmful alcohol use; babies and children at higher risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-002",
+  "cluster": "TB",
+  "topics": [
+   74,
+   75
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ტუბერკულოზის გამომწვევი, გადაცემა და ინფექციიდან დაავადებამდე მიმდინარეობა",
+  "recommendation_ka": "ტუბერკულოზს იწვევს M. tuberculosis-ის კომპლექსი (მათ შორის M. bovis, M. africanum; ადამიანში მთავარი აგენტია M. tuberculosis). გადაეცემა ჰაერწვეთოვანი გზით ხველის, ცემინების ან ნერწყვის გამოფრქვევისას. ტუბერკულოზური ინფექცია არის M. tuberculosis-ის ანტიგენებზე მდგრადი იმუნური პასუხი კლინიკური დაავადების გარეშე — ასეთი პირი არ არის გადამდები. დაავადება, როგორც წესი, ვითარდება ინფიცირებიდან პირველი 5 წლის განმავლობაში; რისკის მთავარი განმსაზღვრელი იმუნური სტატუსია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "year",
+    "meaning_ka": "პერიოდი, რომელშიც დაავადება ყველაზე ხშირად ვითარდება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "TB disease is caused by the M. tuberculosis complex (M. bovis, M. caprae, M. africanum, M. microti, M. pinnipedii, M. mungi, M. orygis, M. canetti); M. tuberculosis is the most common agent."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "TB infection is a state of persistent immune response to M. tuberculosis antigens without clinically manifest disease; 5-10% of infected people develop disease, usually within the first 5 years; risk depends most on immunological status."
+   },
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "TB spreads through the air when people with TB cough, sneeze or spit; people with TB infection are not contagious."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-003",
+  "cluster": "TB",
+  "topics": [
+   74,
+   91
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ლატენტური ტუბერკულოზის მქონე პირები აქტიურ დაავადებაში პროგრესირების მაღალი რისკით",
+  "recommendation_ka": "პროგრესირების მომატებული რისკი აქვთ: HIV-ით მცხოვრებთ, 5 წლამდე ბავშვებს, ალკოჰოლის ჭარბ მომხმარებლებს, ინექციური ნარკოტიკების მომხმარებლებს, მყარი ორგანოს ტრანსპლანტაციის შემდეგ, ჰემატოლოგიური ავთვისებიანი სიმსივნისა და ქიმიოთერაპიის დროს, ეიუნოილეალური შუნტის ან გასტრექტომიის შემდეგ, დიაბეტის, ქრონიკული თირკმლის დაავადების ან ჰემოდიალიზის, სილიკოზისა და ფნო-ალფას ინჰიბიტორებით ან სხვა ბიოლოგიური პრეპარატებით მკურნალობის დროს. ამ ჯგუფებში პრიორიტეტულად ჩაატარეთ ტესტირება და პრევენციული მკურნალობა; მკურნალობაზე უარის შემთხვევაში აუხსენით სიმპტომები და რისკები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლამდეც რისკი მომატებულია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Groups at increased risk of progression from latent to active TB: HIV, age <5 years, excessive alcohol, injecting drug use, solid organ transplant, haematological malignancy, chemotherapy, jejunoileal bypass, diabetes, CKD/haemodialysis, gastrectomy, anti-TNF or other biologics, silicosis; those not treated should be given 'inform and advise' information."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-004",
+  "cluster": "TB",
+  "topics": [
+   57
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ფილტვის ტუბერკულოზის კლინიკური გამოვლინებები",
+  "recommendation_ka": "ფილტვის ტუბერკულოზზე იეჭვეთ ხანგრძლივი ხველისას (ზოგჯერ ჰემოპტიზით), გულმკერდის ტკივილის, სისუსტის, დაღლილობის, წონის კლების, ცხელებისა და ღამის ოფლიანობის დროს. სიმპტომები შეიძლება თვეობით მსუბუქი იყოს, ამიტომ დაავადება ხშირად გვიან დიაგნოსტირდება და ვრცელდება; ზოგ პაციენტს სიმპტომები საერთოდ არ აქვს, მაგრამ მაინც გადამდებია. ეჭვის შემთხვევაში დაუყოვნებლივ დაიწყეთ დიაგნოსტიკა და ინფექციის კონტროლის ზომები (ხველის ჰიგიენა, ნიღაბი).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰემოპტიზი",
+   "პროგრესირებადი წონის კლება ცხელებითა და ღამის ოფლიანობით",
+   "სუნთქვის უკმარისობა ან ფართო დაზიანება რენტგენოგრამაზე"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "Common symptoms: prolonged cough (sometimes with blood), chest pain, weakness, fatigue, weight loss, fever and night sweats; symptoms may be mild for many months; some people with TB disease have no symptoms but can still spread TB; cough hygiene and masks reduce spread."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-005",
+  "cluster": "TB",
+  "topics": [
+   57
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ფილტვის (ან ხორხის) ტუბერკულოზის ეჭვი მოზრდილში",
+  "recommendation_ka": "WHO-ს რეკომენდაციით ყველა სიმპტომურ პირში საწყის ტესტად გამოიყენეთ სწრაფი დიაგნოსტიკური (მოლეკულური) ტესტი, რომელიც შედეგს იძლევა 48 საათში და ავლენს რიფამპიცინის რეზისტენტობასაც. გადაიღეთ გულმკერდის რენტგენოგრამა და აიღეთ 3 ღრმა ხველით მიღებული ნახველის ნიმუში (სასურველია 1 დილის) მიკროსკოპიისა და კულტურისთვის — მკურნალობის დაწყებამდე, ან სიცოცხლისთვის საშიში დაავადებისას მკურნალობის დაწყებიდან 7 დღეში. ნახველის არარსებობისას გამოიყენეთ ინდუცირებული ნახველი ან ბრონქოსკოპია ლავაჟით. კლინიკური სურათის შესაბამისობისას მკურნალობა დაიწყეთ კულტურის პასუხის მოლოდინის გარეშე და განიხილეთ სრული კურსის დასრულება უარყოფითი კულტურის შემთხვევაშიც. დიაგნოზის შემდეგ გადაამისამართეთ ტუბერკულოზის სპეციალისტთან.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "სწრაფი ტესტის შედეგის ვადა"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "ნახველის ნიმუშების რაოდენობა"
+   },
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "დილის ნიმუში"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "ნიმუშის აღების ვადა მკურნალობის დაწყებიდან სიცოცხლისთვის საშიშ შემთხვევაში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "WHO recommends rapid diagnostic tests (molecular assays, biomarker-based tests) as initial tests in all persons with signs and symptoms of TB; results within 48 hours."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Take a chest X-ray; send 3 deep cough sputum samples (preferably 1 early morning) for microscopy and culture before treatment or within 7 days in life-threatening disease; induced sputum or bronchoscopy if needed; request NAAT if HIV or rapid result would change care; start treatment without waiting for culture if clinical features consistent; consider completing regimen even if culture negative; refer to TB specialist."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-006",
+  "cluster": "TB",
+  "topics": [
+   57
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ფილტვის ტუბერკულოზის ეჭვი 15 წლამდე ბავშვში",
+  "recommendation_ka": "15 წლამდე ბავშვში შესთავაზეთ ნუკლეინის მჟავის ამპლიფიკაციის სწრაფი ტესტი (ჩვეულებრივ 1 ტესტი ნიმუშის ტიპზე) და მიკროსკოპია/კულტურა 3 ნიმუშიდან: სპონტანური ან ინდუცირებული ნახველი, ან კუჭის ამონარეცხი. გადაიღეთ გულმკერდის რენტგენოგრამა; ინტერფერონ-გამა გამოთავისუფლების ტესტი და ტუბერკულინის კანის ტესტი გამოიყენეთ მხოლოდ ექსპერტის ჩართულობით, კლინიკასა და გამოსახულებასთან ერთად. დიაგნოსტიკა და მკურნალობა უნდა უხელმძღვანელოს ტუბერკულოზში გამოცდილმა პედიატრმა. 16–18 წლის მოზარდებში გამოიყენეთ მოზრდილთა კრიტერიუმები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 15,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზედა ზღვარი ბავშვთა ალგორითმისთვის"
+   },
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "NAAT ნიმუშის ტიპზე"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "რესპირაციული ნიმუშების რაოდენობა"
+   },
+   {
+    "value": 16,
+    "unit": "age_years",
+    "meaning_ka": "მოზარდთა ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 18,
+    "unit": "age_years",
+    "meaning_ka": "მოზარდთა ასაკის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "In children aged 15 or younger with suspected pulmonary TB offer rapid NAAT (usually 1 per specimen type); 3 respiratory samples (sputum, induced sputum or gastric lavage) for microscopy and culture; IGRA/TST with expert input; managed by paediatrician with TB experience; young people 16-18 use adult criteria."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-007",
+  "cluster": "TB",
+  "topics": [
+   57,
+   77
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მგრძნობიარე ტუბერკულოზი (ფილტვის ან ექსტრაპულმონური, ცენტრალური ნერვული სისტემის გარეშე), სტანდარტული 6-თვიანი რეჟიმი",
+  "recommendation_ka": "დანიშნეთ 2 თვე იზონიაზიდი, რიფამპიცინი, პირაზინამიდი და ეთამბუტოლი, შემდეგ 4 თვე იზონიაზიდი და რიფამპიცინი (სულ 6 თვე), ფიქსირებული დოზების კომბინირებული ტაბლეტებით; იზონიაზიდს დაურთეთ პირიდოქსინი (NICE). რეჟიმი შეცვალეთ მედიკამენტებისადმი მგრძნობელობის ტესტის მიხედვით. დოზირება ყოველდღიური უნდა იყოს. შეუსაბამობა: WHO-ს მიხედვით კვირაში 3-ჯერადი დოზირება არ არის რეკომენდებული არც ინტენსიურ და არც გაგრძელების ფაზაში, ხოლო NICE დასაშვებად მიიჩნევს კვირაში 3-ჯერ დოზირებას მხოლოდ მაშინ, როცა საჭიროა უშუალოდ დაკვირვებული თერაპია და ყოველდღიური დაკვირვება შეუძლებელია. ინტენსიური ფაზის ბოლოს დადებითი ნაცხის გამო ინტენსიური ფაზის გახანგრძლივება WHO-ს მიხედვით არ არის რეკომენდებული.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "ინტენსიური ფაზა"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "გაგრძელების ფაზა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "საერთო ხანგრძლივობა"
+   },
+   {
+    "value": 3,
+    "unit": "times/week",
+    "meaning_ka": "ინტერმიტენტული დოზირება (NICE-ის გამონაკლისი)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "New patients with pulmonary TB should receive 2HRZE/4HR (also applies to extrapulmonary TB except CNS, bone or joint TB where some expert groups suggest longer); daily dosing optimal; thrice-weekly dosing not recommended in intensive or continuation phase; extension of intensive phase for positive smear at end of intensive phase not recommended."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Without CNS involvement offer isoniazid (with pyridoxine), rifampicin, pyrazinamide and ethambutol for 2 months then isoniazid and rifampicin for 4 months; modify per DST; use fixed-dose combinations; consider 3 times weekly dosing only if DOT needed and daily DOT not possible."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-008",
+  "cluster": "TB",
+  "topics": [
+   57
+  ],
+  "rule_type": "treatment",
+  "population": "adolescent",
+  "condition_ka": "მგრძნობიარე ფილტვის ტუბერკულოზი, 12 წლის ან უფროსი ასაკი: 4-თვიანი რეჟიმი",
+  "recommendation_ka": "ალტერნატივად შეიძლება გამოიყენოთ 4-თვიანი რეჟიმი: 2 თვე იზონიაზიდი, რიფაპენტინი, მოქსიფლოქსაცინი და პირაზინამიდი, შემდეგ 2 თვე იზონიაზიდი, რიფაპენტინი და მოქსიფლოქსაცინი; რიფაპენტინი 1200 მგ ყოველდღიურად საკვებთან ერთად. რეჟიმი არ არის ნაჩვენები: წონა 40 კგ-ზე ნაკლები, ტუბერკულოზური მენინგიტი, დისემინირებული, ოსტეოარტიკულური ან აბდომინური ტუბერკულოზი, HIV CD4 100 უჯრედი/მმ³-ზე ნაკლებით, ორსულობა, ლაქტაცია და მშობიარობის შემდგომი პერიოდი, 12 წლამდე ასაკი. რეჟიმის არჩევისას გაითვალისწინეთ პაციენტის სურვილი და რიფაპენტინის ხელმისაწვდომობა; ღვიძლის ფუნქციის მონიტორინგი იგივეა, რაც 6-თვიანი რეჟიმისას.",
+  "doses": [
+   {
+    "drug": "rifapentine",
+    "amount": 1200,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily with food",
+    "population": "adolescent",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "რეჟიმის ხანგრძლივობა"
+   },
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "თითოეული ფაზის ხანგრძლივობა"
+   },
+   {
+    "value": 12,
+    "unit": "age_years",
+    "meaning_ka": "მინიმალური ასაკი"
+   },
+   {
+    "value": 40,
+    "unit": "kg",
+    "meaning_ka": "მინიმალური წონა"
+   },
+   {
+    "value": 100,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი HIV-ის დროს"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "სტანდარტული რეჟიმის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "People aged 12 years or older with drug-susceptible pulmonary TB may receive 2HPMZ/2HPM (conditional); rifapentine 1200 mg daily with food in Study 31. Not indicated for people <40 kg, TB meningitis, disseminated, osteoarticular or abdominal TB, PLHIV with CD4 <100 cells/mm3, children <12, pregnant/breastfeeding/postpartum women; liver monitoring same as standard regimen; consider patient preference and rifapentine availability."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-009",
+  "cluster": "TB",
+  "topics": [
+   57,
+   77
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ბავშვი 3 თვიდან 16 წლამდე, არამძიმე მგრძნობიარე ტუბერკულოზი",
+  "recommendation_ka": "არამძიმე ტუბერკულოზის (პერიფერიული ლიმფური კვანძები; ინტრათორაკალური ლიმფური კვანძები სასუნთქი გზების ობსტრუქციის გარეშე; გაურთულებელი პლევრიტი; პაუციბაცილარული, არაკავერნული დაზიანება ერთი წილის ფარგლებში, მილიარული სურათის გარეშე) დროს გამოიყენეთ 4-თვიანი რეჟიმი: 2 თვე იზონიაზიდი, რიფამპიცინი, პირაზინამიდი (± ეთამბუტოლი), შემდეგ 2 თვე იზონიაზიდი და რიფამპიცინი. მძიმე ფორმებისას — სტანდარტული 6-თვიანი რეჟიმი. ყოველდღიური დოზები: იზონიაზიდი 10 მგ/კგ (7–15; მაქს. 300 მგ/დღ), რიფამპიცინი 15 მგ/კგ (10–20; მაქს. 600 მგ/დღ), პირაზინამიდი 35 მგ/კგ (30–40), ეთამბუტოლი 20 მგ/კგ (15–25).",
+  "doses": [
+   {
+    "drug": "isoniazid",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "child",
+    "max_amount": 300,
+    "max_unit": "mg/day"
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 15,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "child",
+    "max_amount": 600,
+    "max_unit": "mg/day"
+   },
+   {
+    "drug": "pyrazinamide",
+    "amount": 35,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ethambutol",
+    "amount": 20,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "მინიმალური ასაკი"
+   },
+   {
+    "value": 16,
+    "unit": "age_years",
+    "meaning_ka": "მაქსიმალური ასაკი"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "რეჟიმის ხანგრძლივობა"
+   },
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "ფაზის ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "სტანდარტული რეჟიმი მძიმე ფორმისას"
+   },
+   {
+    "value": 7,
+    "unit": "mg/kg",
+    "meaning_ka": "იზონიაზიდის დიაპაზონის ქვედა ზღვარი"
+   },
+   {
+    "value": 15,
+    "unit": "mg/kg",
+    "meaning_ka": "იზონიაზიდის ზედა / ეთამბუტოლის ქვედა ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "mg/kg",
+    "meaning_ka": "რიფამპიცინის ქვედა ზღვარი"
+   },
+   {
+    "value": 20,
+    "unit": "mg/kg",
+    "meaning_ka": "რიფამპიცინის ზედა ზღვარი"
+   },
+   {
+    "value": 30,
+    "unit": "mg/kg",
+    "meaning_ka": "პირაზინამიდის ქვედა ზღვარი"
+   },
+   {
+    "value": 40,
+    "unit": "mg/kg",
+    "meaning_ka": "პირაზინამიდის ზედა ზღვარი"
+   },
+   {
+    "value": 25,
+    "unit": "mg/kg",
+    "meaning_ka": "ეთამბუტოლის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "Children and adolescents 3 months to 16 years with non-severe TB (defined as peripheral lymph node TB, intrathoracic lymph node TB without airway obstruction, uncomplicated pleural effusion, or paucibacillary non-cavitary disease confined to one lobe without miliary pattern) should receive 2HRZ(E)/2HR; others receive 2HRZE/4HR. Annex 1 retains paediatric daily doses: H 10 (7-15) mg/kg max 300 mg/day; R 15 (10-20) mg/kg max 600 mg/day; Z 35 (30-40) mg/kg; E 20 (15-25) mg/kg."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-010",
+  "cluster": "TB",
+  "topics": [
+   77
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ცენტრალური ნერვული სისტემის ტუბერკულოზი (მენინგიტი, ტუბერკულომა)",
+  "recommendation_ka": "NICE: 2 თვე იზონიაზიდი (პირიდოქსინით), რიფამპიცინი, პირაზინამიდი, ეთამბუტოლი, შემდეგ 10 თვე იზონიაზიდი და რიფამპიცინი (სულ 12 თვე); WHO-ს სტანდარტული 6-თვიანი რეკომენდაცია ცენტრალური ნერვული სისტემის ტუბერკულოზზე არ ვრცელდება. მკურნალობის დასაწყისში დანიშნეთ დექსამეთაზონი ან პრედნიზოლონი მაღალი დოზით და თანდათანობითი შემცირებით (WHO: 6–8 კვირა; NICE: 4–8 კვირა). NICE-ის მაგალითი მოზრდილებში: დექსამეთაზონი 0,4 მგ/კგ/დღ ინტრავენურად II–III სტადიაზე და 0,3 მგ/კგ/დღ I სტადიაზე პირველ კვირას, შემდეგ კლებით. დისემინირებული (მილიარული) ან ხერხემლის ტუბერკულოზის დროს ნევროლოგიური ნიშნებისას გამოიკვლიეთ ცენტრალური ნერვული სისტემის ჩართულობაზე.",
+  "doses": [
+   {
+    "drug": "dexamethasone",
+    "amount": 0.4,
+    "unit": "mg/kg/day",
+    "route": "IV",
+    "frequency": "daily, week 1, stage II-III, then taper",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "dexamethasone",
+    "amount": 0.3,
+    "unit": "mg/kg/day",
+    "route": "IV",
+    "frequency": "daily, week 1, stage I, then taper",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "ინტენსიური ფაზა"
+   },
+   {
+    "value": 10,
+    "unit": "month",
+    "meaning_ka": "გაგრძელების ფაზა"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "საერთო ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "სტანდარტული 6-თვიანი რეჟიმი"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "სტეროიდის კლების ზედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "NICE-ის სტეროიდის კლების ქვედა ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "WHO-ს სტეროიდის კლების ქვედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ცნობიერების დაქვეითება, კეფის კუნთების რიგიდობა ან კეროვანი ნევროლოგიური დეფიციტი",
+   "ქალასშიდა წნევის მომატების ნიშნები — ნეიროქირურგიული კონსულტაცია"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "CNS TB: HRZE (with pyridoxine) for 2 months then HR for a further 10 months; dexamethasone or prednisolone at high dose with gradual withdrawal over 4-8 weeks (example adult regimen: dexamethasone 0.4 mg/kg/day IV week 1 for stage 2-3, 0.3 mg/kg/day for stage 1, then taper); test disseminated/miliary or spinal TB with neurological signs for CNS involvement; consider surgery only if raised intracranial pressure."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "Recommendation 1.1 applies to extrapulmonary TB except CNS, bone or joint TB; in TB meningitis initial adjuvant dexamethasone or prednisolone tapered over 6-8 weeks should be used."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-011",
+  "cluster": "TB",
+  "topics": [
+   77
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ტუბერკულოზური პერიკარდიტი მოზრდილში",
+  "recommendation_ka": "ანტიტუბერკულოზური მკურნალობის დაწყებისას NICE გირჩევთ პერორალურ პრედნიზოლონს საწყისი დოზით 60 მგ/დღ, თანდათანობითი მოხსნით მკურნალობის დაწყებიდან 2–3 კვირაში. WHO-ს რეკომენდაცია კორტიკოსტეროიდზე პერიკარდიტის დროს პირობითია (ძალიან დაბალი სარწმუნოობის მტკიცებულება). პერიკარდიული ტუბერკულოზი მძიმე ექსტრაპულმონურ ფორმად ითვლება.",
+  "doses": [
+   {
+    "drug": "prednisolone",
+    "amount": 60,
+    "unit": "mg/day",
+    "route": "PO",
+    "frequency": "once daily, tapered",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სტეროიდის მოხსნის დაწყების ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ჰიპოტენზია, ტაქიკარდია და კისრის ვენების შებერილობა (ტამპონადა)"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Offer adults with active pericardial TB oral prednisolone starting at 60 mg/day, gradually withdrawn 2 to 3 weeks after starting treatment."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "In tuberculous pericarditis an initial adjuvant corticosteroid may be used (conditional, very low certainty); severe extrapulmonary TB includes miliary, meningitis, osteoarticular and pericardial TB."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-012",
+  "cluster": "TB",
+  "topics": [
+   77
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ექსტრაპულმონური ტუბერკულოზის ეჭვი (ლიმფური კვანძი, პლევრა, ძვალი/სახსარი, მუცლის ღრუ, შარდ-სასქესო სისტემა, მენინგები)",
+  "recommendation_ka": "ბიოფსია ან ასპირაცია განახორციელეთ ისე, რომ საკმარისი მასალა მიიღოთ; კულტურისთვის განკუთვნილი ნიმუში არ მოათავსოთ ფორმალინში. ექსტრაპულმონური ტუბერკულოზი არ გამორიცხოთ ლიქვორში, პლევრულ ან ასციტურ სითხეში სწრაფი ტესტის უარყოფითი შედეგის გამო. ყველა პაციენტს გადაუღეთ გულმკერდის რენტგენოგრამა და, შესაძლებლობისას, ნახველის კულტურა თანმხლები ფილტვის ტუბერკულოზის გამოსარიცხად. პლევრული ტუბერკულოზისას: პლევრის ბიოფსია (ჰისტოლოგია, კულტურა), პლევრული სითხის მიკროსკოპია, კულტურა, ციტოლოგია და ადენოზინდეამინაზა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Discuss biopsy vs needle aspiration; do not place samples for TB culture in formalin; think about extrapulmonary TB even if rapid tests in CSF, pleural or ascitic fluid are negative; offer all with extrapulmonary TB a chest X-ray and respiratory culture; pleural TB: pleural biopsy and pleural fluid microscopy, culture, cytology, adenosine deaminase."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "Extrapulmonary TB refers to TB involving organs other than the lungs, e.g. pleura, lymph nodes, abdomen, genitourinary tract, skin, joints and bones, meninges."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-013",
+  "cluster": "TB",
+  "topics": [
+   77
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "მძიმე ექსტრაპულმონური ფორმები და მკურნალობის ხანგრძლივობა ლიმფური კვანძებისა და ხერხემლის ტუბერკულოზისას",
+  "recommendation_ka": "მძიმე ექსტრაპულმონურ ტუბერკულოზად ითვლება მილიარული, მენინგეალური, ოსტეოარტიკულური და პერიკარდიული ფორმები; 15 წლამდე ბავშვებში მძიმედ ითვლება ყველა ექსტრაპულმონური ფორმა, გარდა პერიფერიული ლიმფადენოპათიისა ან კომპრესიის გარეშე იზოლირებული შუასაყრის მასისა. ლიმფური კვანძების ტუბერკულოზის დროს მკურნალობა რუტინულად არ გაახანგრძლივოთ 6 თვეზე მეტად ახალი კვანძების, ფისტულის ან ნარჩენი გადიდების გამო; ხერხემლის ტუბერკულოზისას ცენტრალური ნერვული სისტემის ჩართულობის გარეშე არ გაახანგრძლივოთ 6 თვეზე მეტად ნარჩენი დეფორმაციის გამო. ხერხემლის ქირურგია განიხილეთ მხოლოდ არასტაბილურობის ან ზურგის ტვინის კომპრესიისას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 15,
+    "unit": "age_years",
+    "meaning_ka": "ბავშვთა ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა, რომელსაც რუტინულად არ აგრძელებენ"
+   }
+  ],
+  "red_flags_ka": [
+   "ზურგის ტვინის კომპრესიის ნიშნები ხერხემლის ტუბერკულოზისას",
+   "მილიარული სურათი რენტგენოგრამაზე ნევროლოგიური სიმპტომებით"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "Severe extrapulmonary TB: miliary TB, TB meningitis, osteoarticular or pericardial TB; in children <15 years extrapulmonary forms other than lymphadenopathy (peripheral nodes or isolated mediastinal mass without compression) are severe."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not routinely extend treatment beyond 6 months for lymph node TB with new nodes, sinus formation or residual enlargement, nor for spinal TB without CNS involvement for residual effects; consider spinal surgery if instability or cord compression."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-014",
+  "cluster": "TB",
+  "topics": [
+   57,
+   77
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "აქტიური ტუბერკულოზი HIV-ით მცხოვრებ პირში",
+  "recommendation_ka": "ტუბერკულოზის მკურნალობის ხანგრძლივობა უნდა იყოს არანაკლები, ვიდრე HIV-უარყოფით პაციენტებში (ყოველდღიური დოზირებით); NICE: ცენტრალური ნერვული სისტემის ჩართულობის გარეშე რუტინულად არ გააგრძელოთ 6 თვეზე მეტად, ჩართულობისას — 12 თვეზე მეტად. ანტირეტროვირუსული თერაპია დაიწყეთ რაც შეიძლება მალე, ტუბერკულოზის მკურნალობის დაწყებიდან 2 კვირაში, CD4-ის მიუხედავად; ტუბერკულოზური მენინგიტის დროს ადრეული თერაპია მძიმე გვერდით მოვლენებთან ასოცირდება და შეიძლება განიხილოთ მისი გადავადება 4–8 კვირით. გაითვალისწინეთ რიფამპიცინის წამალთაშორისი ურთიერთქმედება ანტირეტროვირუსულ პრეპარატებთან და მიეცით კო-ტრიმოქსაზოლით პროფილაქტიკა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "მაქსიმალური რუტინული ხანგრძლივობა ცენტრალური ნერვული სისტემის გარეშე"
+   },
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "მაქსიმალური რუტინული ხანგრძლივობა ცენტრალური ნერვული სისტემის ჩართულობისას"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "ART-ის დაწყების ვადა"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "ART-ის გადავადების ქვედა ზღვარი მენინგიტისას"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "ART-ის გადავადების ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "PLHIV should receive at least the same duration of daily TB treatment as HIV-negative patients; ART as soon as possible within two weeks of TB treatment regardless of CD4, except with meningitis where immediate ART is associated with more severe adverse events and delaying ART 4-8 weeks may be considered."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "For HIV and active TB do not routinely extend treatment beyond 6 months without CNS involvement or beyond 12 months with CNS involvement; take into account drug interactions between antiretroviral and anti-TB drugs."
+   },
+   {
+    "org": "WHO",
+    "title": "Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach",
+    "year": 2021,
+    "url": "https://www.who.int/publications/i/item/9789240031593",
+    "type": "guideline",
+    "supports": "Routine co-trimoxazole prophylaxis for all people living with HIV with active TB regardless of CD4."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-015",
+  "cluster": "TB",
+  "topics": [
+   76
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "წამლისადმი რეზისტენტული ტუბერკულოზის განსაზღვრებები და ეპიდემიოლოგია",
+  "recommendation_ka": "რიფამპიცინრეზისტენტული ტუბერკულოზი: რეზისტენტობა რიფამპიცინის მიმართ; მულტირეზისტენტული: რიფამპიცინისა და იზონიაზიდის მიმართ; პრე-ფართორეზისტენტული: რიფამპიცინრეზისტენტული + რეზისტენტობა ლევოფლოქსაცინის ან მოქსიფლოქსაცინის მიმართ; ფართორეზისტენტული: ამას დამატებული რეზისტენტობა ბედაკვილინის ან ლინეზოლიდის მიმართ. რეზისტენტობა ვითარდება მედიკამენტების არასწორი გამოყენებით: არასწორი დანიშნულება, დაბალი ხარისხის პრეპარატები, მკურნალობის ნაადრევი შეწყვეტა; გადაეცემა რეზისტენტული შტამის მქონე კონტაქტიდანაც. 2024 წელს რეზისტენტული ტუბერკულოზის მქონეთა მხოლოდ დაახლოებით 2/5 მიიღო მკურნალობა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2024,
+    "unit": "year",
+    "meaning_ka": "მონაცემების წელი"
+   },
+   {
+    "value": 2,
+    "unit": "ratio",
+    "meaning_ka": "მკურნალობის მიმღებთა წილის მრიცხველი (2/5)"
+   },
+   {
+    "value": 5,
+    "unit": "ratio",
+    "meaning_ka": "წილის მნიშვნელი (2/5)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "Definitions: RR-TB (resistant to rifampicin), MDR-TB (rifampicin and isoniazid), pre-XDR-TB (RR plus resistance to at least one fluoroquinolone), XDR-TB (pre-XDR plus at least one other Group A drug: bedaquiline or linezolid)."
+   },
+   {
+    "org": "WHO",
+    "title": "Tuberculosis — fact sheet",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+    "type": "fact_sheet",
+    "supports": "Drug resistance emerges from inappropriate use: incorrect prescription, poor-quality drugs, stopping treatment prematurely; only about 2 in 5 people with drug-resistant TB accessed treatment in 2024."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-016",
+  "cluster": "TB",
+  "topics": [
+   76
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "იზონიაზიდის რეზისტენტობის მოლეკულური მექანიზმები (inhA და katG მუტაციები)",
+  "recommendation_ka": "გენოტიპური ტესტით (ხაზოვანი ზონდის ანალიზი ან მოლეკულური ტესტი) განსაზღვრეთ მუტაციის ტიპი. მხოლოდ inhA პრომოტორის მუტაცია იწვევს იზონიაზიდის მიმართ დაბალი დონის რეზისტენტობას და ჯვარედინ რეზისტენტობას ეთიონამიდისა და პროთიონამიდის მიმართ; ასეთ დროს იზონიაზიდის დოზის გაზრდა მაქსიმუმ 15 მგ/კგ/დღ-მდე შეიძლება ეფექტური იყოს. katG მუტაცია (ან inhA და katG ერთად) იწვევს მაღალი დონის რეზისტენტობას — იზონიაზიდი მაღალი დოზითაც ნაკლებად ეფექტურია. რიფამპიცინის რეზისტენტობის აღმოჩენა მოლეკულური ტესტით რეზისტენტული რეჟიმის დაწყების საფუძველია.",
+  "doses": [
+   {
+    "drug": "isoniazid",
+    "amount": 15,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "once daily (maximum, inhA-only mutation)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "inhA mutations alone confer low-level isoniazid resistance and are associated with ethionamide/prothionamide resistance; katG mutations alone or with inhA confer high-level resistance; with inhA-only mutations additional isoniazid up to a maximum of 15 mg/kg/day could be considered; with katG mutations higher-dose isoniazid is less likely to be effective. Detection of MDR-TB requires testing for drug resistance using rapid molecular tests or culture."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-017",
+  "cluster": "TB",
+  "topics": [
+   76
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ტუბერკულოზის ეჭვი მულტირეზისტენტობის რისკ-ფაქტორებით",
+  "recommendation_ka": "რისკ-ფაქტორებია: ადრე ჩატარებული ანტიტუბერკულოზური მკურნალობა (განსაკუთრებით ცუდი ერთგულებით), კონტაქტი მულტირეზისტენტული ტუბერკულოზის მქონე პირთან, დაბადება ან ცხოვრება ქვეყანაში, სადაც ახალი შემთხვევების 5% ან მეტი მულტირეზისტენტულია. ასეთ დროს პირველად ნიმუშზე მოითხოვეთ რიფამპიცინის რეზისტენტობის სწრაფი მოლეკულური ტესტი და დაიწყეთ ინფექციის კონტროლის ზომები. დადებითი შედეგისას: მართვა გამოცდილ მულტიდისციპლინურ გუნდთან ერთად და მეორე რიგის პრეპარატებისადმი მგრძნობელობის ტესტი; რეზისტენტობის აღმოუჩენლობისას — სტანდარტული რეჟიმი. მაღალი რისკისა და უარყოფითი ტესტისას აიღეთ დამატებითი ნიმუშები და, თუ მკურნალობა სასწრაფოა, განიხილეთ მართვა როგორც მულტირეზისტენტულის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "%",
+    "meaning_ka": "მულტირეზისტენტობის წილი ახალ შემთხვევებში, რომელიც რისკ-ქვეყანას განსაზღვრავს"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Request rapid NAAT for rifampicin resistance if risk factors: previous TB treatment (especially poor adherence), contact with known MDR-TB, birth or residence in a country where WHO reports 5% or more of new cases are MDR; start infection control; if positive manage with MDR-experienced MDT and test second-line resistance; if rifampicin resistance not detected treat as drug-susceptible; if NAAT negative in high-risk person obtain further specimens and if urgent consider managing as MDR-TB."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-018",
+  "cluster": "TB",
+  "topics": [
+   76
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მულტი- ან რიფამპიცინრეზისტენტული ტუბერკულოზი (ფტორქინოლონზე რეზისტენტობით ან მის გარეშე), 14 წლის ან უფროსი ასაკი",
+  "recommendation_ka": "WHO გირჩევთ 6-თვიან სრულად პერორალურ რეჟიმს: ბედაკვილინი, პრეტომანიდი, ლინეზოლიდი (600 მგ დღეში ერთხელ) და მოქსიფლოქსაცინი; ფტორქინოლონზე დადასტურებული რეზისტენტობისას მოქსიფლოქსაცინი ამოიღეთ (ბედაკვილინი, პრეტომანიდი, ლინეზოლიდი). ფტორქინოლონებისადმი მგრძნობელობის ტესტი სასურველია, მაგრამ მკურნალობის დაწყებას არ უნდა დააყოვნოს. რეჟიმი არ ვრცელდება ცენტრალური ნერვული სისტემის, ოსტეოარტიკულურ და მრავალორგანულ დისემინირებულ ფორმებზე, ორსულებსა და მეძუძურ ქალებზე; ეხება HIV-ის სტატუსის მიუხედავად და პირებს, რომლებსაც ამ პრეპარატებით 1 თვეზე ნაკლები ექსპოზიცია აქვთ. ალტერნატივაა 6-თვიანი რეჟიმი ბედაკვილინით, დელამანიდით, ლინეზოლიდით, ლევოფლოქსაცინით და კლოფაზიმინით, ან 9-თვიანი რეჟიმები ფტორქინოლონის რეზისტენტობის გამორიცხვისას. შეუსაბამობა: NICE-ის (2016 წლის) რეკომენდაცია მინიმუმ 6 მედიკამენტის რეჟიმზე WHO-ს უფრო ახალ მოკლე რეჟიმებს არ ასახავს.",
+  "doses": [
+   {
+    "drug": "linezolid",
+    "amount": 600,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "რეჟიმის ხანგრძლივობა / NICE-ის მინიმალური მედიკამენტების რაოდენობა"
+   },
+   {
+    "value": 14,
+    "unit": "age_years",
+    "meaning_ka": "მინიმალური ასაკი"
+   },
+   {
+    "value": 1,
+    "unit": "month",
+    "meaning_ka": "დასაშვები წინა ექსპოზიციის ზღვარი"
+   },
+   {
+    "value": 9,
+    "unit": "month",
+    "meaning_ka": "ალტერნატიული რეჟიმის ხანგრძლივობა"
+   },
+   {
+    "value": 2016,
+    "unit": "year",
+    "meaning_ka": "NICE-ის რეკომენდაციის წელი"
+   }
+  ],
+  "red_flags_ka": [
+   "ძვლის ტვინის სუპრესია, პერიფერიული ან მხედველობის ნერვის ნეიროპათია ლინეზოლიდზე",
+   "QT ინტერვალის გახანგრძლივება"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "WHO suggests the 6-month BPaLM regimen (bedaquiline, pretomanid, linezolid 600 mg once daily, moxifloxacin) rather than 9-month or longer regimens in MDR/RR-TB; FQ DST should not delay initiation, BPaL if FQ resistance documented; applies to age >=14 years regardless of HIV status, confirmed pulmonary and extrapulmonary TB except CNS, osteoarticular or disseminated multiorgan TB, <1 month prior exposure; not for pregnant/breastfeeding women. Also 6-month BDLLfxC and 9-month regimens when FQ resistance excluded. Linezolid toxicities of concern include peripheral neuropathy, optic neuritis and myelosuppression; QTcF monitoring."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "If rifampicin resistance detected offer a regimen with at least 6 drugs to which the mycobacterium is likely to be sensitive (2016 recommendation)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-019",
+  "cluster": "TB",
+  "topics": [
+   76
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "რიფამპიცინზე მგრძნობიარე, იზონიაზიდზე რეზისტენტული ტუბერკულოზი",
+  "recommendation_ka": "WHO: რიფამპიცინი, ეთამბუტოლი, პირაზინამიდი და ლევოფლოქსაცინი 6 თვის განმავლობაში, ყოველდღიურად (შეიძლება გამოიყენოთ ოთხკომპონენტიანი ფიქსირებული კომბინაცია ლევოფლოქსაცინთან ერთად); სტრეპტომიცინის ან სხვა ინექციური პრეპარატის დამატება არ არის რეკომენდებული. შეუსაბამობა: NICE გთავაზობთ 2 თვე რიფამპიცინს, პირაზინამიდს და ეთამბუტოლს, შემდეგ 7 თვე (ფართო დაზიანებისას 10 თვემდე) რიფამპიცინს და ეთამბუტოლს, ლევოფლოქსაცინის გარეშე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "WHO-ს რეჟიმის ხანგრძლივობა"
+   },
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "NICE-ის საწყისი ფაზა"
+   },
+   {
+    "value": 7,
+    "unit": "month",
+    "meaning_ka": "NICE-ის გაგრძელების ფაზა"
+   },
+   {
+    "value": 10,
+    "unit": "month",
+    "meaning_ka": "NICE-ის გაგრძელების ფაზის მაქსიმუმი ფართო დაზიანებისას"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 4: treatment and care",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240107243",
+    "type": "guideline",
+    "supports": "In confirmed rifampicin-susceptible, isoniazid-resistant TB, rifampicin, ethambutol, pyrazinamide and levofloxacin for 6 months; HREZ FDCs may be used with levofloxacin; adding streptomycin or other injectables not recommended."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Isoniazid resistance: rifampicin, pyrazinamide and ethambutol for 2 months then rifampicin and ethambutol for 7 months (up to 10 months for extensive disease)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-020",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ლატენტური ტუბერკულოზური ინფექციის ტესტირება",
+  "recommendation_ka": "ინფექციის გამოსავლენად გამოიყენეთ ტუბერკულინის კანის ტესტი (მანტუ) ან ინტერფერონ-გამა გამოთავისუფლების ტესტი; WHO დამატებით უშვებს M. tuberculosis-ის ანტიგენზე დაფუძნებულ კანის ტესტებს. NICE: მანტუს ტესტი დადებითია ინდურაციისას 5 მმ ან მეტი, BCG-ის ანამნეზის მიუხედავად; დადებითი შედეგისას ჯერ გამორიცხეთ აქტიური ტუბერკულოზი, შემდეგ შესთავაზეთ პრევენციული მკურნალობა. მძიმე იმუნოსუპრესიისას (HIV CD4 200 უჯრედი/მმ³-ზე ნაკლებით, მყარი ორგანოს ან ალოგენური ღეროვანი უჯრედების ტრანსპლანტაცია) ჩაატარეთ ორივე ტესტი ერთდროულად და დადებითად ჩათვალეთ რომელიმე დადებითი შედეგი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "mm",
+    "meaning_ka": "მანტუს დადებითი ინდურაციის ზღვარი (NICE)"
+   },
+   {
+    "value": 200,
+    "unit": "cells/µL",
+    "meaning_ka": "CD4 ზღვარი მძიმე იმუნოსუპრესიისთვის"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "Either TST or IGRA can be used to test for TB infection; M. tuberculosis antigen-based skin tests (TBST) may be used; TB infection test results identify who benefits from TPT; no gold standard test."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Mantoux positive = induration 5 mm or larger regardless of BCG history; assess for active TB before treating latent TB; for severely immunocompromised adults (HIV with CD4 <200 cells/mm3, solid organ or allogeneic stem cell transplant) offer IGRA and concurrent Mantoux, either positive -> assess for active TB then treat."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-021",
+  "cluster": "TB",
+  "topics": [
+   75,
+   91
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "BCG ვაქცინაციის გავლენა ტუბერკულოზური ინფექციის ტესტების ინტერპრეტაციაზე",
+  "recommendation_ka": "ტუბერკულინის კანის ტესტი და ინტერფერონ-გამა გამოთავისუფლების ტესტი აფასებს უჯრედულ იმუნურ პასუხს M. tuberculosis-ის ანტიგენებზე; ინფექციის ოქროს სტანდარტი არ არსებობს. BCG ვაქცინაცია ამცირებს კანის ტესტის სპეციფიკურობას (ეფექტი დამოკიდებულია შტამზე, ვაქცინაციის ასაკსა და დოზების რაოდენობაზე), თუმცა ჩვილობაში ჩატარებული BCG ცხოვრების გვიან ეტაპზე ტესტის ინტერპრეტაციაზე მცირე გავლენას ახდენს და ტესტის არჩევის განმსაზღვრელი არ უნდა იყოს. NICE-ის მიხედვით მანტუს ზღვარი 5 მმ გამოიყენება BCG-ის ანამნეზის მიუხედავად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "mm",
+    "meaning_ka": "მანტუს დადებითი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "There is no gold standard test for TB infection; BCG vaccination reduces TST specificity, depending on strain, age at vaccination and number of doses, but a history of BCG has limited effect on TST interpretation later in life and should not be a determining factor in test choice."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Mantoux positive at 5 mm or larger regardless of BCG history."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-022",
+  "cluster": "TB",
+  "topics": [
+   75,
+   91
+  ],
+  "rule_type": "evaluation",
+  "population": "immunocompromised",
+  "condition_ka": "იმუნოსუპრესიის დაწყების წინ (ფნო-ალფას ინჰიბიტორი, დიალიზი, ტრანსპლანტაცია) ან სილიკოზი",
+  "recommendation_ka": "ფნო-ალფას ინჰიბიტორებით მკურნალობის დაწყებამდე, დიალიზზე მყოფ, ორგანოს ან ჰემატოლოგიური ტრანსპლანტაციისთვის მომზადებულ და სილიკოზის მქონე პირებში სისტემურად ჩაატარეთ ტუბერკულოზური ინფექციის ტესტირება და მკურნალობა. იმუნოსუპრესიის დროს ტესტების მგრძნობელობა შეიძლება დაქვეითდეს, ამიტომ NICE მძიმე იმუნოსუპრესიისას ორივე ტესტს ერთად იყენებს, სხვა იმუნოკომპრომისულ მოზრდილებში კი — ინტერფერონ-გამა ტესტს ცალკე ან მანტუსთან ერთად. იმუნოკომპრომისული ბავშვი ლატენტური ინფექციის ეჭვით გადაამისამართეთ ტუბერკულოზის სპეციალისტთან.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "People initiating anti-TNF treatment, receiving dialysis, preparing for organ or haematological transplant or with silicosis should be systematically tested and treated for TB infection; risk of disease depends most on immunological status."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "For other immunocompromised adults consider IGRA alone or IGRA with concurrent Mantoux; severely immunocompromised get both tests; refer immunocompromised children with suspected latent TB to a TB specialist."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-023",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ტუბერკულოზის პრევენციული მკურნალობის კანდიდატები",
+  "recommendation_ka": "აქტიური დაავადების გამორიცხვის შემდეგ პრევენციული მკურნალობა მიეცით: HIV-ით მცხოვრებ მოზრდილებსა და მოზარდებს (ორსულების, ანტირეტროვირუსულ თერაპიაზე მყოფებისა და ადრე ნამკურნალების ჩათვლით), ინფექციის ტესტის ხელმისაწვდომობის მიუხედავად; ბაქტერიოლოგიურად დადასტურებული ფილტვის ტუბერკულოზის მქონე პირის ოჯახურ კონტაქტ 5 წლამდე ბავშვებს — ტესტირების გარეშეც; 5 წლის და უფროს ოჯახურ კონტაქტებს შეიძლება მიეცეთ. სისტემური ტესტირება და მკურნალობა შეიძლება განიხილოთ პატიმრებში, სამედიცინო მუშაკებში, მაღალი ტვირთის ქვეყნებიდან ემიგრანტებში, უსახლკაროებსა და ნარკოტიკების მომხმარებლებში. NICE: კონტაქტებში მკურნალობა შესთავაზეთ 65 წლამდე ასაკში; 35–65 წლის ასაკში მხოლოდ მაშინ, თუ ჰეპატოტოქსიკურობა პრობლემას არ წარმოადგენს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი ოჯახური კონტაქტებისთვის"
+   },
+   {
+    "value": 65,
+    "unit": "age_years",
+    "meaning_ka": "NICE-ის ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 35,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლიდანაც ჰეპატოტოქსიკურობის შეფასება გადამწყვეტია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "PLHIV unlikely to have TB disease should receive TPT including those on ART, pregnant women and previously treated, even if TB infection testing unavailable; household contacts <5 years of bacteriologically confirmed pulmonary TB should receive TPT even without testing; contacts >=5 may be given TPT; systematic testing may be considered for prisoners, health workers, immigrants from high-burden countries, homeless people and people who use drugs."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "For people younger than 65 with latent TB who are close contacts offer TPT; for adults 35-65 offer only if hepatotoxicity is not a concern."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-024",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ლატენტური ტუბერკულოზური ინფექცია (მგრძნობიარე შტამის კონტაქტი): პრევენციული რეჟიმის არჩევა",
+  "recommendation_ka": "WHO-ს რეკომენდებული ვარიანტები (HIV-ის სტატუსის მიუხედავად): 6 ან 9 თვე იზონიაზიდი ყოველდღიურად; 3 თვე რიფაპენტინი + იზონიაზიდი კვირაში ერთხელ (სულ 12 დოზა); 3 თვე იზონიაზიდი + რიფამპიცინი ყოველდღიურად; ალტერნატივები: 1 თვე რიფაპენტინი + იზონიაზიდი ყოველდღიურად ან 4 თვე რიფამპიცინი ყოველდღიურად. შეუსაბამობა: CDC სასურველად მიიჩნევს რიფამიცინზე დაფუძნებულ მოკლე რეჟიმებს (3 თვე კვირეული რიფაპენტინი + იზონიაზიდი, 4 თვე რიფამპიცინი, 3 თვე იზონიაზიდი + რიფამპიცინი), ხოლო 6 ან 9 თვე იზონიაზიდს — ალტერნატივად; NICE გთავაზობს 3 თვე იზონიაზიდს + რიფამპიცინს ან 6 თვე იზონიაზიდს (პირიდოქსინით), ხოლო 6-თვიან იზონიაზიდს ამჯობინებს რიფამიცინების ურთიერთქმედების რისკისას (HIV, ტრანსპლანტაცია). რიფამპიცინი და რიფაპენტინი ურთიერთშემცვლელი არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "იზონიაზიდის მონოთერაპია"
+   },
+   {
+    "value": 9,
+    "unit": "month",
+    "meaning_ka": "იზონიაზიდის მონოთერაპია — ხანგრძლივი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "სამთვიანი რეჟიმები"
+   },
+   {
+    "value": 12,
+    "unit": "doses",
+    "meaning_ka": "კვირეული დოზების რაოდენობა"
+   },
+   {
+    "value": 1,
+    "unit": "month",
+    "meaning_ka": "ერთთვიანი რეჟიმი"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "რიფამპიცინის რეჟიმი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "Recommended TPT regardless of HIV status: 6 or 9 months daily isoniazid, 3 months weekly rifapentine plus isoniazid, or 3 months daily isoniazid plus rifampicin; alternatives: 1 month daily rifapentine plus isoniazid or 4 months daily rifampicin."
+   },
+   {
+    "org": "CDC/NTCA",
+    "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020 (MMWR Recomm Rep 2020;69(1))",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041302/",
+    "type": "guideline",
+    "supports": "Preferred rifamycin-based regimens: 3HP once weekly (12 doses), 4R daily, 3HR daily; alternative: 6 or 9 months daily isoniazid; rifampin and rifapentine are not interchangeable."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Offer 3 months isoniazid (with pyridoxine) and rifampicin or 6 months isoniazid (with pyridoxine); 6 months isoniazid if interactions with rifamycins are a concern, e.g. HIV or transplant."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-025",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ტუბერკულოზის პრევენციული რეჟიმების დოზები მოზრდილებში",
+  "recommendation_ka": "CDC: 3 თვე კვირაში ერთხელ — იზონიაზიდი 15 მგ/კგ (მაქს. 900 მგ) + რიფაპენტინი წონის მიხედვით (≥50 კგ — 900 მგ), უშუალო დაკვირვებით ან თვითადმინისტრირებით; 4 თვე რიფამპიცინი 10 მგ/კგ (მაქს. 600 მგ) ყოველდღიურად; 3 თვე ყოველდღიურად იზონიაზიდი 5 მგ/კგ (მაქს. 300 მგ) + რიფამპიცინი 10 მგ/კგ (მაქს. 600 მგ); 6 ან 9 თვე იზონიაზიდი 5 მგ/კგ (მაქს. 300 მგ) ყოველდღიურად. WHO: 1-თვიანი რეჟიმი 13 წლიდან — იზონიაზიდი 300 მგ + რიფაპენტინი 600 მგ ყოველდღიურად, წონის მიუხედავად. კვირეული რეჟიმის დროს შესაძლოა გრიპისმაგვარი სისტემური რეაქცია (იშვიათად სინკოპე, ჰიპოტენზია).",
+  "doses": [
+   {
+    "drug": "isoniazid",
+    "amount": 15,
+    "unit": "mg/kg/dose",
+    "route": "PO",
+    "frequency": "once weekly x 12 doses",
+    "population": "adult",
+    "max_amount": 900,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 900,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly x 12 doses (>=50 kg)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily x 4 months",
+    "population": "adult",
+    "max_amount": 600,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "isoniazid",
+    "amount": 5,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily (3HR, 6H, 9H)",
+    "population": "adult",
+    "max_amount": 300,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "isoniazid",
+    "amount": 300,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily x 1 month (1HP)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 600,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily x 1 month (1HP)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი რიფაპენტინის მაქსიმალური დოზისთვის"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "რიფამპიცინის რეჟიმი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "სამთვიანი რეჟიმები"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "იზონიაზიდი"
+   },
+   {
+    "value": 9,
+    "unit": "month",
+    "meaning_ka": "იზონიაზიდი ხანგრძლივი"
+   },
+   {
+    "value": 1,
+    "unit": "month",
+    "meaning_ka": "ერთთვიანი რეჟიმი"
+   },
+   {
+    "value": 13,
+    "unit": "age_years",
+    "meaning_ka": "1-თვიანი რეჟიმის მინიმალური ასაკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC/NTCA",
+    "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020 (MMWR Recomm Rep 2020;69(1))",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041302/",
+    "type": "guideline",
+    "supports": "Table 4: 3HP adults/children >=12 y isoniazid 15 mg/kg (max 900 mg) + weight-banded rifapentine (>=50 kg 900 mg max) weekly x12; 4R adults 10 mg/kg max 600 mg daily; 3HR adults isoniazid 5 mg/kg max 300 mg + rifampin 10 mg/kg max 600 mg; 6H/9H adults 5 mg/kg daily max 300 mg. 3HP may cause a systemic drug reaction/flu-like syndrome including syncope and hypotension."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "1HP dosage as in the trial: isoniazid 300 mg/day and rifapentine 600 mg/day in individuals aged >=13 years regardless of weight band."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-026",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ტუბერკულოზის პრევენციული რეჟიმების დოზები ბავშვებში",
+  "recommendation_ka": "CDC: 3 თვე კვირაში ერთხელ (2–11 წელი) — იზონიაზიდი 25 მგ/კგ (მაქს. 900 მგ) + რიფაპენტინი წონის მიხედვით (10–14 კგ — 300 მგ; 14,1–25 კგ — 450 მგ; 25,1–32 კგ — 600 მგ; 32,1–49,9 კგ — 750 მგ); 4 თვე რიფამპიცინი 15–20 მგ/კგ (მაქს. 600 მგ) ყოველდღიურად; 3 თვე ყოველდღიურად იზონიაზიდი 10–20 მგ/კგ (მაქს. 300 მგ) + რიფამპიცინი 15–20 მგ/კგ (მაქს. 600 მგ). კვირეული რიფაპენტინის რეჟიმი რეკომენდებულია 2 წლის ზემოთ.",
+  "doses": [
+   {
+    "drug": "isoniazid",
+    "amount": 25,
+    "unit": "mg/kg/dose",
+    "route": "PO",
+    "frequency": "once weekly x 12 doses (age 2-11 y)",
+    "population": "child",
+    "max_amount": 900,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 300,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly, 10-14 kg",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 450,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly, 14.1-25 kg",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 600,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly, 25.1-32 kg",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifapentine",
+    "amount": 750,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once weekly, 32.1-49.9 kg",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 15,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily (4R or 3HR)",
+    "population": "child",
+    "max_amount": 600,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "isoniazid",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily (3HR)",
+    "population": "child",
+    "max_amount": 300,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "სამთვიანი რეჟიმები"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "რიფამპიცინის რეჟიმი"
+   },
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "მინიმალური ასაკი კვირეული რეჟიმისთვის"
+   },
+   {
+    "value": 11,
+    "unit": "age_years",
+    "meaning_ka": "ბავშვთა დოზირების ზედა ასაკი"
+   },
+   {
+    "value": 10,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 14,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 14.1,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 25,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 25.1,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 32,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 32.1,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 49.9,
+    "unit": "kg",
+    "meaning_ka": "წონის ზოლი"
+   },
+   {
+    "value": 20,
+    "unit": "mg/kg",
+    "meaning_ka": "დოზის დიაპაზონის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC/NTCA",
+    "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020 (MMWR Recomm Rep 2020;69(1))",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041302/",
+    "type": "guideline",
+    "supports": "Table 4: 3HP children 2-11 y isoniazid 25 mg/kg max 900 mg weekly with rifapentine 10-14.0 kg 300 mg, 14.1-25.0 kg 450 mg, 25.1-32.0 kg 600 mg, 32.1-49.9 kg 750 mg; 4R children 15-20 mg/kg max 600 mg; 3HR children isoniazid 10-20 mg/kg max 300 mg + rifampin 15-20 mg/kg max 600 mg; 3HP strongly recommended for children aged >2 years."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-027",
+  "cluster": "TB",
+  "topics": [
+   91,
+   76
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "მულტი- ან რიფამპიცინრეზისტენტული ტუბერკულოზის მქონე პირის კონტაქტი",
+  "recommendation_ka": "აქტიური დაავადების გამორიცხვის შემდეგ პრევენციულად დანიშნეთ ლევოფლოქსაცინი ყოველდღიურად 6 თვის განმავლობაში. კვლევებში გამოყენებული დოზები: მოზრდილებში 10–15 მგ/კგ, ბავშვებში 15–20 მგ/კგ, მაქსიმუმ 750 მგ დღეში. რეზისტენტობის პროფილი დააზუსტეთ საწყისი შემთხვევის მიხედვით; ფტორქინოლონრეზისტენტული წყაროს კონტაქტი გადაამისამართეთ სპეციალისტთან.",
+  "doses": [
+   {
+    "drug": "levofloxacin",
+    "amount": 10,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily x 6 months",
+    "population": "adult",
+    "max_amount": 750,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "levofloxacin",
+    "amount": 15,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "once daily x 6 months",
+    "population": "child",
+    "max_amount": 750,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "ხანგრძლივობა"
+   },
+   {
+    "value": 15,
+    "unit": "mg/kg",
+    "meaning_ka": "მოზრდილთა დიაპაზონის ზედა ზღვარი"
+   },
+   {
+    "value": 20,
+    "unit": "mg/kg",
+    "meaning_ka": "ბავშვთა დიაპაზონის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "In contacts exposed to MDR/RR-TB, 6 months of daily levofloxacin should be used as TPT (strong recommendation, new in 2024). Trials (TB CHAMP, V-QUIN) dosed levofloxacin 10-15 mg/kg in adults and 15-20 mg/kg in children, maximum 750 mg."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-028",
+  "cluster": "TB",
+  "topics": [
+   91
+  ],
+  "rule_type": "evaluation",
+  "population": "infant",
+  "condition_ka": "ახალშობილი ან 2 წლამდე ბავშვი — ნაცხ-დადებითი ფილტვის ტუბერკულოზის მქონე პირის ახლო კონტაქტი (წყაროს მკურნალობა 2 კვირაზე ნაკლები)",
+  "recommendation_ka": "NICE: შეაფასეთ აქტიურ ტუბერკულოზზე და დაიწყეთ პრევენციული მკურნალობა (ახალშობილში — იზონიაზიდი პირიდოქსინით). ჩაატარეთ მანტუს ტესტი (ახალშობილში 6 კვირიანი მკურნალობის შემდეგ). დადებითი ტესტისას (5 მმ ან მეტი) ხელახლა გამორიცხეთ აქტიური დაავადება და დაასრულეთ კურსი (ახალშობილში იზონიაზიდი სულ 6 თვე). უარყოფითი ტესტისას განიხილეთ ინტერფერონ-გამა ტესტი; თუ ისიც უარყოფითია, მკურნალობა შეიძლება შეწყდეს და გაკეთდეს BCG ვაქცინაცია, თუ ბავშვი არ არის აცრილი. 2 წლამდე ბავშვი ნაცხ-უარყოფითი წყაროს კონტაქტისას გადაამისამართეთ პედიატრ-სპეციალისტთან.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "წყაროს ანტიტუბერკულოზური მკურნალობის მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "მანტუს ტესტის ვადა ახალშობილში"
+   },
+   {
+    "value": 5,
+    "unit": "mm",
+    "meaning_ka": "მანტუს დადებითი ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "იზონიაზიდის კურსის ხანგრძლივობა ახალშობილში"
+   },
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ცხელება, წონაში მატების შეფერხება ან ხველა კონტაქტ ჩვილში — აქტიური ტუბერკულოზის გამორიცხვა"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Neonates in close contact with smear-positive pulmonary TB (source <2 weeks treatment): assess for active TB, start isoniazid with pyridoxine, Mantoux after 6 weeks; if positive (>=5 mm) continue isoniazid for a total of 6 months; if negative consider IGRA, and if negative stop and give BCG. Children 4 weeks-2 years: start latent TB treatment and Mantoux; similar algorithm. Refer children <2 years in contact with smear-negative TB to a specialist."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-TB-029",
+  "cluster": "TB",
+  "topics": [
+   91,
+   57
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "კონტაქტების სკრინინგი და პრევენციული მკურნალობის წინა შეფასება",
+  "recommendation_ka": "15 წლამდე ახლო კონტაქტებში აქტიური ტუბერკულოზის სკრინინგი ჩაატარეთ სიმპტომებით (ხველა, ცხელება ან წონაში მატების შეფერხება), გულმკერდის რენტგენოგრაფიით ან ორივეთი; HIV-უარყოფით 5 წლის და უფროს კონტაქტებში სიმპტომებისა და რენტგენოლოგიური ცვლილებების არარსებობა საკმარისია აქტიური დაავადების გამოსარიცხად. მკურნალობამდე მოზრდილებს შესთავაზეთ HIV-ის, B და C ჰეპატიტის ტესტირება და შეაფასეთ ღვიძლის ფუნქცია; არამძიმე ღვიძლის დაავადების, დარღვეული ტრანსამინაზების ან ალკოჰოლის/ნარკოტიკების მოხმარებისას აკონტროლეთ ღვიძლის ფუნქცია, მძიმე ღვიძლის დაავადებისას (ჩაილდ-პიუს B ან C კლასი) იმუშავეთ სპეციალიზებულ გუნდთან.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 15,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი ბავშვთა სკრინინგისთვის"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "ასაკი, რომლიდანაც სიმპტომი+რენტგენი საკმარისია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO consolidated guidelines on tuberculosis. Module 1: prevention – tuberculosis preventive treatment, second edition",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/9789240096196",
+    "type": "guideline",
+    "supports": "Among individuals <15 years who are close contacts, screen with a symptom screen (cough, fever or poor weight gain), chest radiography or both; among HIV-negative household contacts >=5 years absence of symptoms and of abnormal chest radiographic findings may be used to rule out TB disease before TPT."
+   },
+   {
+    "org": "NICE",
+    "title": "Tuberculosis (NG33)",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng33/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Offer HIV and hepatitis B and C testing to adults before latent TB treatment; monitor liver function carefully in non-severe liver disease, abnormal transaminases or alcohol/drug misuse; Child-Pugh B or C liver disease managed with specialist MDT."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

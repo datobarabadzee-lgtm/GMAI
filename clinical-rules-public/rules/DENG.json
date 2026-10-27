@@ -1,0 +1,553 @@
+[
+ {
+  "rule_id": "PUB-DENG-001",
+  "cluster": "DENG",
+  "topics": [
+   18
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "დენგეს გამომწვევი და გადაცემის გზა",
+  "recommendation_ka": "დენგეს იწვევს დენგეს ვირუსის ოთხი სეროტიპი (DENV-1 – DENV-4); გადაეცემა Aedes-ის გვარის კოღოს (ძირითადად Aedes aegypti) ნაკბენით. ეჭვი მიიტანეთ ცხელების დროს ტროპიკულ ან სუბტროპიკულ ენდემურ ზონაში ყოფნისას ან იქიდან დაბრუნებიდან მოკლე ხანში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "სეროტიპი DENV-1"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "სეროტიპი DENV-4 (სულ ოთხი სეროტიპი)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Dengue and severe dengue — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "type": "fact_sheet",
+    "supports": "Dengue is caused by four closely related serotypes (DENV-1 to DENV-4) transmitted by Aedes mosquitoes; recovery gives lifelong immunity to that serotype, cross-immunity to others is partial and temporary; subsequent infection with another serotype increases the risk of severe dengue; no specific treatment, early detection and proper care lower fatality below 1%."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-002",
+  "cluster": "DENG",
+  "topics": [
+   18,
+   19
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "დენგეს განმეორებითი ინფექცია სხვა სეროტიპით",
+  "recommendation_ka": "ერთი სეროტიპით გადატანილი ინფექცია იძლევა მუდმივ იმუნიტეტს იმავე სეროტიპის მიმართ, ხოლო სხვა სეროტიპების მიმართ ჯვარედინი დაცვა ნაწილობრივი და დროებითია. სხვა სეროტიპით მეორადი ინფექცია ზრდის მძიმე დენგეს რისკს — ანამნეზში დენგეს არსებობა მიიჩნიეთ რისკის ფაქტორად და გააძლიერეთ მონიტორინგი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Dengue and severe dengue — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "type": "fact_sheet",
+    "supports": "Dengue is caused by four closely related serotypes (DENV-1 to DENV-4) transmitted by Aedes mosquitoes; recovery gives lifelong immunity to that serotype, cross-immunity to others is partial and temporary; subsequent infection with another serotype increases the risk of severe dengue; no specific treatment, early detection and proper care lower fatality below 1%."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-003",
+  "cluster": "DENG",
+  "topics": [
+   18
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "დენგეს პროგნოზი და სიკვდილობა",
+  "recommendation_ka": "სპეციფიკური ანტივირუსული მკურნალობა არ არსებობს; ადრეული გამოვლენა და ადეკვატური კლინიკური მართვა (სითხის კონტროლი, გამაფრთხილებელი ნიშნების მონიტორინგი) ამცირებს მძიმე დენგეს ლეტალობას 1%-ზე ქვემოთ. ამიტომ ყველა ეჭვის შემთხვევა აღრიცხეთ და უზრუნველყავით დაკვირვება კრიტიკული ფაზის ბოლომდე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "%",
+    "meaning_ka": "ლეტალობა ადეკვატური მართვისას"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Dengue and severe dengue — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "type": "fact_sheet",
+    "supports": "Dengue is caused by four closely related serotypes (DENV-1 to DENV-4) transmitted by Aedes mosquitoes; recovery gives lifelong immunity to that serotype, cross-immunity to others is partial and temporary; subsequent infection with another serotype increases the risk of severe dengue; no specific treatment, early detection and proper care lower fatality below 1%."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-004",
+  "cluster": "DENG",
+  "topics": [
+   17
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "დენგეს კლინიკური მიმდინარეობის ფაზები",
+  "recommendation_ka": "დენგე მიმდინარეობს სამ ფაზად: ცხელების, კრიტიკული და გამოჯანმრთელების. კრიტიკული ფაზა იწყება ტემპერატურის დაწევისას (დეფერვესცენცია) და ჩვეულებრივ გრძელდება 24–48 საათს; ამ დროს პლაზმის გაჟონვის მქონე პაციენტი შეიძლება რამდენიმე საათში გადავიდეს მძიმე დენგეში. ტემპერატურის დაწევა არ ნიშნავს გაუმჯობესებას — გააგრძელეთ დაკვირვება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "კრიტიკული ფაზის ქვედა ხანგრძლივობა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "კრიტიკული ფაზის ზედა ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [
+   "მდგომარეობის გაუარესება ტემპერატურის დაწევისას"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Features of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-signs",
+    "type": "guideline",
+    "supports": "Three phases (febrile, critical, convalescent); critical phase begins around defervescence and typically lasts 24-48 hours; patients with substantial plasma leakage can deteriorate to severe dengue within hours; compensated early shock may look well; haematocrit rises with platelet decline during leakage; in recovery extravasated fluid is reabsorbed and haematocrit may fall by dilution."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-005",
+  "cluster": "DENG",
+  "topics": [
+   17
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "დენგე გამაფრთხილებელი ნიშნებით",
+  "recommendation_ka": "გამაფრთხილებელი ნიშნებია: ძლიერი ტკივილი ან მტკივნეულობა მუცელში; მუდმივი ღებინება (≥3 ეპიზოდი 1 საათში ან ≥4 ეპიზოდი 6 საათში); სითხის კლინიკური დაგროვება (ასციტი, პლევრული გამონაჟონი); ლორწოვანი გარსებიდან სისხლდენა; ლეთარგია ან მოუსვენრობა; ღვიძლის გადიდება; ჰემატოკრიტის პროგრესული მატება. ნებისმიერი ამ ნიშნის ან მძიმე დენგეს არსებობისას პაციენტი ჰოსპიტალიზაციას საჭიროებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "ღებინების ეპიზოდები"
+   },
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "დროის ინტერვალი"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "ღებინების ეპიზოდები"
+   },
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დროის ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [
+   "ძლიერი მუცლის ტკივილი",
+   "მუდმივი ღებინება",
+   "ლორწოვანიდან სისხლდენა",
+   "ცნობიერების ცვლილება",
+   "ჰემატოკრიტის მატება"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Care of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-care/index.html",
+    "type": "guideline",
+    "supports": "Warning signs include severe abdominal pain/tenderness, persistent vomiting (>=3 episodes in 1 h or >=4 in 6 h), fluid accumulation, mucosal bleeding, altered mental status, liver enlargement, rising haematocrit; patients with warning signs or severe dengue should be managed in hospital; oral hydration usually sufficient without warning signs; avoid aspirin and other NSAIDs; treat fever with acetaminophen and tepid sponging; prophylactic platelet transfusion does not reduce severe bleeding and can cause fluid overload."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-006",
+  "cluster": "DENG",
+  "topics": [
+   17
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "დენგეს ლაბორატორიული დადასტურება",
+  "recommendation_ka": "დაავადების პირველ 7 დღეში აიღეთ შრატი და ჩაატარეთ მოლეკულური ტესტი (RT-PCR) ან NS1 ანტიგენი, IgM-თან ერთად; 7 დღის შემდეგ — IgM სეროლოგია. IgM ჩვეულებრივ ვლინდება დაავადების 4–5 დღიდან, ამიტომ ადრეული უარყოფითი IgM, NS1 ან PCR დენგეს არ გამორიცხავს — საჭიროებისას გამოიკვლიეთ რეკონვალესცენციის ნიმუში. სეროტიპის განსაზღვრა მკურნალობისთვის საჭირო არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "მოლეკულური/NS1 ტესტის ფანჯარა"
+   },
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "IgM-ის გამოჩენის ადრეული დღე"
+   },
+   {
+    "value": 5,
+    "unit": "day",
+    "meaning_ka": "IgM-ის გამოჩენის დღე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Dengue: testing guidance for healthcare providers",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/healthcare-providers/testing/testing-guidance.html",
+    "type": "guideline",
+    "supports": "During days 1-7 of illness test with a molecular test (RT-PCR/NAAT) or NS1 together with IgM; after day 7 use IgM serology; a negative NS1 or molecular result does not exclude dengue."
+   },
+   {
+    "org": "CDC",
+    "title": "Dengue virus antigen detection (NS1)",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/diagnosis-testing/dengue-virus-antigen-detection.html",
+    "type": "guideline",
+    "supports": "NS1 testing recommended through day 7; positive NS1 confirms infection but does not give serotype, which is not needed for patient care; if NS1 and IgM negative, test a convalescent sample for IgM."
+   },
+   {
+    "org": "CDC",
+    "title": "Serologic tests for dengue virus",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/diagnosis-testing/serologic-tests-for-dengue-virus.html",
+    "type": "guideline",
+    "supports": "IgM generally becomes detectable around days 4-5 after illness onset; an early negative IgM does not exclude dengue."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-007",
+  "cluster": "DENG",
+  "topics": [
+   17,
+   19
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "დენგე კრიტიკულ ფაზაში — ლაბორატორიული დინამიკა",
+  "recommendation_ka": "პლაზმის გაჟონვაზე მიუთითებს ჰემატოკრიტის მატება თრომბოციტების სწრაფ კლებასთან ერთად (ლეიკოპენიას ხშირად მოსდევს). ჰემატოკრიტი და თრომბოციტები განმეორებით განსაზღვრეთ კრიტიკულ ფაზაში. გამოჯანმრთელების ფაზაში ექსტრავაზირებული სითხე უკან შეიწოვება და ჰემატოკრიტი დილუციის გამო ეცემა — ამ დროს შეამცირეთ ინფუზია სითხით გადატვირთვის თავიდან ასაცილებლად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰემატოკრიტის მატება თრომბოციტების კლებასთან ერთად"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Features of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-signs",
+    "type": "guideline",
+    "supports": "Three phases (febrile, critical, convalescent); critical phase begins around defervescence and typically lasts 24-48 hours; patients with substantial plasma leakage can deteriorate to severe dengue within hours; compensated early shock may look well; haematocrit rises with platelet decline during leakage; in recovery extravasated fluid is reabsorbed and haematocrit may fall by dilution."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-008",
+  "cluster": "DENG",
+  "topics": [
+   17,
+   20
+  ],
+  "rule_type": "referral",
+  "population": "all",
+  "condition_ka": "დენგე გამაფრთხილებელი ნიშნების გარეშე",
+  "recommendation_ka": "პაციენტი გამაფრთხილებელი ნიშნების გარეშე, რომელიც საკმარისად სვამს სითხეს და შარდავს, შეიძლება იმკურნალოს ამბულატორიულად: პერორალური ჰიდრატაცია, დასვენება და განმეორებითი შეფასება, განსაკუთრებით ტემპერატურის დაწევის დღეებში. მიეცით მკაფიო ინსტრუქცია: გამაფრთხილებელი ნიშნის გაჩენისას დაუყოვნებლივ მიმართოს საავადმყოფოს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Care of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-care/index.html",
+    "type": "guideline",
+    "supports": "Warning signs include severe abdominal pain/tenderness, persistent vomiting (>=3 episodes in 1 h or >=4 in 6 h), fluid accumulation, mucosal bleeding, altered mental status, liver enlargement, rising haematocrit; patients with warning signs or severe dengue should be managed in hospital; oral hydration usually sufficient without warning signs; avoid aspirin and other NSAIDs; treat fever with acetaminophen and tepid sponging; prophylactic platelet transfusion does not reduce severe bleeding and can cause fluid overload."
+   },
+   {
+    "org": "WHO",
+    "title": "Clinical management of arboviral diseases: dengue, chikungunya, Zika and yellow fever",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240111110",
+    "type": "guideline",
+    "supports": "2025 WHO guideline: groups patients into non-severe and severe; crystalloids preferred over colloids when IV fluids are needed; management guided by clinical monitoring (capillary refill, lactate, fluid responsiveness, passive leg raise); systemic corticosteroids and prophylactic platelet transfusion in the absence of bleeding are not recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-009",
+  "cluster": "DENG",
+  "topics": [
+   20
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "დენგე — ცხელება და ტკივილი",
+  "recommendation_ka": "სიცხის დამწევად და ტკივილგამაყუჩებლად გამოიყენეთ პარაცეტამოლი და თბილი წყლით გაწმენდა. მოერიდეთ ასპირინს და სხვა არასტეროიდულ ანთების საწინააღმდეგო საშუალებებს (მაგ. იბუპროფენი) მათი ანტიკოაგულაციური მოქმედების და სისხლდენის რისკის გამო.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Care of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-care/index.html",
+    "type": "guideline",
+    "supports": "Warning signs include severe abdominal pain/tenderness, persistent vomiting (>=3 episodes in 1 h or >=4 in 6 h), fluid accumulation, mucosal bleeding, altered mental status, liver enlargement, rising haematocrit; patients with warning signs or severe dengue should be managed in hospital; oral hydration usually sufficient without warning signs; avoid aspirin and other NSAIDs; treat fever with acetaminophen and tepid sponging; prophylactic platelet transfusion does not reduce severe bleeding and can cause fluid overload."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-010",
+  "cluster": "DENG",
+  "topics": [
+   20
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მძიმე დენგე ან გამაფრთხილებელი ნიშნები, ინტრავენური სითხის საჭიროება",
+  "recommendation_ka": "ინტრავენური რეჰიდრატაციისთვის უპირატესობა მიანიჭეთ კრისტალოიდებს კოლოიდებთან შედარებით. სითხის მოცულობა და სიჩქარე ტიტრეთ კლინიკური მონიტორინგით (კაპილარული შევსების დრო, პულსი, არტერიული წნევა, დიურეზი, ლაქტატი, სითხეზე პასუხი; შოკისას გაურკვევლობის დროს — ფეხების პასიური აწევის ტესტი). ინფუზიის საფეხურებრივი სიჩქარეები CDC-ის სხვადასხვა დოკუმენტში განსხვავდება — იხელმძღვანელეთ მოქმედი ადგილობრივი პროტოკოლით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "შოკი",
+   "სითხით გადატვირთვა"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Clinical management of arboviral diseases: dengue, chikungunya, Zika and yellow fever",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240111110",
+    "type": "guideline",
+    "supports": "2025 WHO guideline: groups patients into non-severe and severe; crystalloids preferred over colloids when IV fluids are needed; management guided by clinical monitoring (capillary refill, lactate, fluid responsiveness, passive leg raise); systemic corticosteroids and prophylactic platelet transfusion in the absence of bleeding are not recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-011",
+  "cluster": "DENG",
+  "topics": [
+   20
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "დენგე — არაეფექტური ან საზიანო ჩარევები",
+  "recommendation_ka": "არ გამოიყენოთ სისტემური კორტიკოსტეროიდები და იმუნოგლობულინი. სისხლდენის არარსებობისას თრომბოციტების პროფილაქტიკური ტრანსფუზია არ არის რეკომენდებული: დაბალი თრომბოციტები თავისთავად ტრანსფუზიის ჩვენება არ არის, ტრანსფუზია არ ამცირებს მძიმე სისხლდენას და იწვევს სითხით გადატვირთვას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Clinical management of arboviral diseases: dengue, chikungunya, Zika and yellow fever",
+    "year": 2025,
+    "url": "https://www.who.int/publications/i/item/9789240111110",
+    "type": "guideline",
+    "supports": "2025 WHO guideline: groups patients into non-severe and severe; crystalloids preferred over colloids when IV fluids are needed; management guided by clinical monitoring (capillary refill, lactate, fluid responsiveness, passive leg raise); systemic corticosteroids and prophylactic platelet transfusion in the absence of bleeding are not recommended."
+   },
+   {
+    "org": "CDC",
+    "title": "Clinical Care of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-care/index.html",
+    "type": "guideline",
+    "supports": "Warning signs include severe abdominal pain/tenderness, persistent vomiting (>=3 episodes in 1 h or >=4 in 6 h), fluid accumulation, mucosal bleeding, altered mental status, liver enlargement, rising haematocrit; patients with warning signs or severe dengue should be managed in hospital; oral hydration usually sufficient without warning signs; avoid aspirin and other NSAIDs; treat fever with acetaminophen and tepid sponging; prophylactic platelet transfusion does not reduce severe bleeding and can cause fluid overload."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-012",
+  "cluster": "DENG",
+  "topics": [
+   19
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "დენგეს პათოგენეზი — პლაზმის გაჟონვის მექანიზმი",
+  "recommendation_ka": "მძიმე დენგეს ძირითადი მექანიზმია ენდოთელიუმის დისფუნქციით გამოწვეული პლაზმის გარდამავალი გაჟონვა. მასში მონაწილეობს ვირუსული NS1 ცილა (შრატში მისი დონე კორელირებს სიმძიმესთან) და იმუნური პასუხი, მათ შორის ანტისხეულებით დამოკიდებული გაძლიერება მეორადი ჰეტეროლოგიური ინფექციისას. რადგან გაჟონვა გარდამავალია, სითხე მიეცით მიზანმიმართულად და შეამცირეთ გაჟონვის დასრულებისას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Journal of Biomedical Science (Springer)",
+    "title": "Review of dengue pathogenesis: NS1, antibody-dependent enhancement and vascular leakage (J Biomed Sci 2018, s12929-018-0462-0)",
+    "year": 2018,
+    "url": "https://link.springer.com/article/10.1186/s12929-018-0462-0",
+    "type": "review",
+    "supports": "Serum NS1 levels track disease severity; NS1 contributes to endothelial dysfunction; antibody-dependent enhancement alone does not explain vascular leakage, which is multifactorial and immune-mediated."
+   },
+   {
+    "org": "WHO",
+    "title": "Dengue and severe dengue — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "type": "fact_sheet",
+    "supports": "Dengue is caused by four closely related serotypes (DENV-1 to DENV-4) transmitted by Aedes mosquitoes; recovery gives lifelong immunity to that serotype, cross-immunity to others is partial and temporary; subsequent infection with another serotype increases the risk of severe dengue; no specific treatment, early detection and proper care lower fatality below 1%."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-013",
+  "cluster": "DENG",
+  "topics": [
+   20
+  ],
+  "rule_type": "prevention",
+  "population": "child",
+  "condition_ka": "დენგეს ვაქცინაცია მაღალი გადაცემის რეგიონში",
+  "recommendation_ka": "ჯანმო რეკომენდაციას უწევს TAK-003 ვაქცინას 6–16 წლის ბავშვებში დენგეს მაღალი ინტენსივობის გადაცემის რეგიონებში, 2 დოზით 3 თვის ინტერვალით. ვაქცინა ყველა შემთხვევას არ აცილებს თავიდან; ვექტორის კონტროლი რჩება ძირითად ღონისძიებად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ქვედა ზღვარი"
+   },
+   {
+    "value": 16,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზედა ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "doses",
+    "meaning_ka": "დოზების რაოდენობა"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "დოზებს შორის ინტერვალი"
+   },
+   {
+    "value": 3,
+    "unit": "label",
+    "meaning_ka": "TAK-003 (სახელწოდება)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "WHO position paper on dengue vaccines — May 2024 (WER 99/18)",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/who-wer-9918-203-224",
+    "type": "position_paper",
+    "supports": "WHO recommends TAK-003 for children aged 6-16 years in settings with high dengue transmission intensity, 2 doses given 3 months apart; vaccine does not prevent all cases and comprehensive vector control remains critical."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-014",
+  "cluster": "DENG",
+  "topics": [
+   20,
+   18
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "დენგეს პრევენცია ენდემურ ზონაში ან მოგზაურებში",
+  "recommendation_ka": "პრევენციის საფუძველია კოღოს ნაკბენისგან დაცვა (რეპელენტები, დახურული ტანსაცმელი, ბადეები; Aedes ძირითადად დღისით კბენს) და კოღოს გამრავლების ადგილების — წყლით სავსე ჭურჭლის — მოსპობა. დაავადებული პირი ცხელების პერიოდში დაიცავით ნაკბენისგან ადგილობრივი გადაცემის თავიდან ასაცილებლად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Dengue and severe dengue — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "type": "fact_sheet",
+    "supports": "Dengue is caused by four closely related serotypes (DENV-1 to DENV-4) transmitted by Aedes mosquitoes; recovery gives lifelong immunity to that serotype, cross-immunity to others is partial and temporary; subsequent infection with another serotype increases the risk of severe dengue; no specific treatment, early detection and proper care lower fatality below 1%."
+   },
+   {
+    "org": "WHO",
+    "title": "WHO position paper on dengue vaccines — May 2024 (WER 99/18)",
+    "year": 2024,
+    "url": "https://www.who.int/publications/i/item/who-wer-9918-203-224",
+    "type": "position_paper",
+    "supports": "WHO recommends TAK-003 for children aged 6-16 years in settings with high dengue transmission intensity, 2 doses given 3 months apart; vaccine does not prevent all cases and comprehensive vector control remains critical."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DENG-015",
+  "cluster": "DENG",
+  "topics": [
+   17,
+   20
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "დენგე — შოკის ადრეული ნიშნები",
+  "recommendation_ka": "კომპენსირებული შოკის დროს პაციენტი შეიძლება კარგად გამოიყურებოდეს. ადრეული ნიშნებია: პულსური წნევის შევიწროება, მზარდი ტაქიკარდია, კაპილარული შევსების დაყოვნება და ცივი კიდურები. ჰიპოტენზია გვიანი ნიშანია და შეუქცევადი შოკის რისკს მიუთითებს — დაიწყეთ დაუყოვნებლივი რეანიმაცია და გადაიყვანეთ ინტენსიურ თერაპიაში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პულსური წნევის შევიწროება",
+   "ცივი კიდურები",
+   "ჰიპოტენზია"
+  ],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "Clinical Features of Dengue",
+    "year": 2024,
+    "url": "https://www.cdc.gov/dengue/hcp/clinical-signs",
+    "type": "guideline",
+    "supports": "Three phases (febrile, critical, convalescent); critical phase begins around defervescence and typically lasts 24-48 hours; patients with substantial plasma leakage can deteriorate to severe dengue within hours; compensated early shock may look well; haematocrit rises with platelet decline during leakage; in recovery extravasated fluid is reabsorbed and haematocrit may fall by dilution."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

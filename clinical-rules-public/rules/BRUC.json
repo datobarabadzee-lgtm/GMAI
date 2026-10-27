@@ -1,0 +1,882 @@
+[
+ {
+  "rule_id": "PUB-BRUC-001",
+  "cluster": "BRUC",
+  "topics": [
+   21
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "ბრუცელოზის გამომწვევი და გადაცემის გზები",
+  "recommendation_ka": "ბრუცელოზი ზოონოზია, რომელსაც იწვევს Brucella-ს სახეობები (ძირითადად მსხვილფეხა საქონელი, ღორი, თხა, ცხვარი, ძაღლი). ადამიანში ყველაზე ხშირი გამომწვევია B. melitensis. ზოგად პოპულაციაში შემთხვევების უმეტესობა უკავშირდება თხის ან ცხვრის არაპასტერიზებული რძის ან ახალი ყველის მიღებას; სხვა გზებია ინფიცირებულ ცხოველთან პირდაპირი კონტაქტი და აეროზოლის ინჰალაცია. ადამიანიდან ადამიანზე გადაცემა ძალიან იშვიათია (იშვიათად აღწერილია სისხლის გადასხმით, ქსოვილის/ძვლის ტვინის გადანერგვით და სქესობრივი გზით).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Brucellosis is caused by Brucella spp. infecting cattle, swine, goats, sheep and dogs; most human cases from unpasteurized milk or cheese from goats/sheep; B. melitensis most prevalent worldwide; human-to-human transmission very rare."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Transfusion, tissue transplantation and sexual transmission are possible but rare routes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-002",
+  "cluster": "BRUC",
+  "topics": [
+   21,
+   92
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "პროფესიული რისკის ჯგუფები და დონორები",
+  "recommendation_ka": "მაღალი რისკის ჯგუფია ფერმერები, ყასბები, მონადირეები, ვეტერინარები და ლაბორატორიის პერსონალი — განსაკუთრებით ცხოველის სისხლთან, პლაცენტასთან, ნაყოფთან და საშვილოსნოს სეკრეტთან კონტაქტისას. ცხელების მქონე პაციენტთან ამ ანამნეზის არსებობისას ჩართეთ ბრუცელოზი დიფერენციულ დიაგნოზში. სისხლის და ქსოვილის დონორებში რეკომენდებულია სკრინინგი და ბოლოდროინდელი ინფექციის მქონეთა გამორიცხვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Occupational hazard for those in contact with animal blood, placenta, foetuses, uterine secretions: farmers, butchers, hunters, veterinarians, laboratory personnel."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Advises screening blood and tissue donors and excluding positive reactors with recent infection; laboratory workers processing samples run much greater risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-003",
+  "cluster": "BRUC",
+  "topics": [
+   21
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ბრუცელოზის კლინიკური სურათი",
+  "recommendation_ka": "ინკუბაციური პერიოდი 1 კვირიდან 2 თვემდე მერყეობს, ჩვეულებრივ 2–4 კვირა. დაახლოებით ნახევარ შემთხვევაში დაწყება მწვავეა, დანარჩენში — თანდათანობითი. ტიპურია ცხელება (ტალღოვანი, საღამოს მატებით), ოფლიანობა, სისუსტე, ანორექსია, წონის კლება, თავის ტკივილი, ართრალგია და წელის ტკივილი. ოსტეოართიკულური გართულებები (საკრალური ილეიტი, სპონდილიტი, პერიფერიული ართრიტი) ზოგ სერიაში შემთხვევების 40%-მდე გვხვდება. დაავადება შეიძლება გამოვლინდეს რეციდივით, ქრონიკული ლოკალიზებული ინფექციით ან გახანგრძლივებული გამოჯანმრთელებით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "ინკუბაციის მინიმუმი"
+   },
+   {
+    "value": 2,
+    "unit": "month",
+    "meaning_ka": "ინკუბაციის მაქსიმუმი"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "ტიპური ინკუბაცია — ქვედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "ტიპური ინკუბაცია — ზედა ზღვარი"
+   },
+   {
+    "value": 40,
+    "unit": "%",
+    "meaning_ka": "ოსტეოართიკული გართულებების სიხშირე ზოგ სერიაში"
+   }
+  ],
+  "red_flags_ka": [
+   "ზურგის ტკივილი ცხელებით (სპონდილიტი/ეპიდურული აბსცესი)",
+   "ნევროლოგიური სიმპტომები",
+   "ახალი გულის შუილი"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Flu-like illness with fever, weakness, malaise, weight loss; incubation 1 week to 2 months, usually 2–4 weeks."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Acute in about half of cases; undulant fever, sweats, arthralgia, back pain; osteo-articular complications in up to 40% in some series; may persist as relapse, chronic localized infection or delayed convalescence."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-004",
+  "cluster": "BRUC",
+  "topics": [
+   21
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ბრუცელოზის ეჭვი — ლაბორატორიული დადასტურება: კულტურა",
+  "recommendation_ka": "აიღეთ სისხლის კულტურა ანტიბიოტიკის დაწყებამდე; Brucella-ს გამოყოფა სისხლიდან ან ქსოვილიდან დიაგნოზის საბოლოო დადასტურებაა. აუცილებლად აცნობეთ ლაბორატორიას ბრუცელოზის ეჭვის შესახებ (ლაბორატორიული ინფიცირების მაღალი რისკი). კლასიკური ბიფაზური (Castaneda) კულტურა იშვიათად დადებითდება მე-4 დღემდე და ნეგატიურად ჩათვლამდე უნდა ინკუბირდეს მინიმუმ 45 დღე; ავტომატიზებული სისტემები ზრდას უფრო სწრაფად ავლენს. ქრონიკულ დაავადებაში კულტურა ხშირად უარყოფითია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "day",
+    "meaning_ka": "კულტურა იშვიათად დადებითია ამ დღემდე"
+   },
+   {
+    "value": 45,
+    "unit": "day",
+    "meaning_ka": "Castaneda კულტურის მინიმალური ინკუბაცია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Isolation from blood or tissues is definitive; Castaneda cultures seldom positive before day 4, incubate at least 45 days before reporting negative; automated systems detect growth earlier; culture often negative in long-standing disease; laboratory workers at high risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-005",
+  "cluster": "BRUC",
+  "topics": [
+   21
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ბრუცელოზის სეროლოგიური დიაგნოსტიკა",
+  "recommendation_ka": "სეროლოგია ყველაზე პრაქტიკული დიაგნოსტიკური მიდგომაა: რეკომენდებულია ვარდისფერი ბენგალის ტესტი (RBT), სტანდარტული სინჯარის აგლუტინაცია (SAT) და ELISA. SAT ტიტრი 1:160 (200 IU) ან მეტი, შესაბამისი კლინიკური სურათის არსებობისას, დიაგნოსტიკურად მნიშვნელოვანია; ენდემურ რეგიონებში ზღვარი შეიძლება უფრო მაღალი იყოს, რადგან უსიმპტომო პირებსაც აქვთ ამ დონის ტიტრები. IgM-ის გამოსარიცხად SAT პარალელურად ჩაატარეთ 2-მერკაპტოეთანოლით; IgM/IgG-ის დიფერენცირება აქტიურ და გადატანილ ინფექციას ასხვავებს. კუმბსის ტესტი და IgG ELISA დიდხანს რჩება დადებითი. კანის ტესტი მხოლოდ წარსულ ექსპოზიციაზე მიუთითებს; შესაძლებელია ცრუდადებითი რეაქციები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "ratio",
+    "meaning_ka": "ტიტრის მრიცხველი (1:160)"
+   },
+   {
+    "value": 160,
+    "unit": "ratio",
+    "meaning_ka": "SAT დიაგნოსტიკური ტიტრის მნიშვნელი"
+   },
+   {
+    "value": 200,
+    "unit": "IU",
+    "meaning_ka": "SAT ტიტრის ეკვივალენტი"
+   },
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "2-მერკაპტოეთანოლი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Serology is the most generally useful approach (RBT, tube agglutination, ELISA); SAT titres of 160 (200 IU) or more have clear diagnostic value with compatible signs; higher cut-off may be needed in endemic areas; 2-ME/DTT removes IgM agglutination; skin test indicates past exposure only; false positives occur."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-006",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "გაურთულებელი ბრუცელოზი მოზრდილებში და 8 წელზე უფროს ბავშვებში — პირველი რიგი",
+  "recommendation_ka": "დოქსიციკლინი 100 მგ პერორალურად დღეში ორჯერ 6 კვირა (45 დღე) + სტრეპტომიცინი 1 გ კუნთში დღეში ერთხელ. სტრეპტომიცინის ხანგრძლივობა: WHO-ს ფაქტების ფურცელი — 15 დღე, WHO-ს 2006 წლის სახელმძღვანელო — 2–3 კვირა (წყაროები ოდნავ განსხვავდება). ეს კომბინაცია ითვლება ყველაზე ეფექტურ რეჟიმად, განსაკუთრებით გართულებული ფორმების რისკისას.",
+  "doses": [
+   {
+    "drug": "doxycycline",
+    "amount": 100,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily for 6 weeks (45 days)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "streptomycin",
+    "amount": 1,
+    "unit": "g",
+    "route": "IM",
+    "frequency": "once daily for 15 days (2–3 weeks)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "დოქსიციკლინის ხანგრძლივობა"
+   },
+   {
+    "value": 45,
+    "unit": "day",
+    "meaning_ka": "დოქსიციკლინის ხანგრძლივობა დღეებში"
+   },
+   {
+    "value": 15,
+    "unit": "day",
+    "meaning_ka": "სტრეპტომიცინის ხანგრძლივობა (ფაქტების ფურცელი)"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სტრეპტომიცინის ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "სტრეპტომიცინის ხანგრძლივობა — ზედა ზღვარი"
+   },
+   {
+    "value": 2006,
+    "unit": "label",
+    "meaning_ka": "სახელმძღვანელოს წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Doxycycline 100 mg twice a day for 45 days plus streptomycin 1 g daily for 15 days."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Uncomplicated cases in adults and children ≥8 years: doxycycline 100 mg twice a day for six weeks + streptomycin 1 g daily for two to three weeks; doxycycline-streptomycin likely the most effective regimen."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-007",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "გაურთულებელი ბრუცელოზი — სრულად პერორალური ალტერნატივა",
+  "recommendation_ka": "დოქსიციკლინი 100 მგ დღეში ორჯერ + რიფამპიცინი 15 მგ/კგ/დღეში (600–900 მგ დღეში ერთხელ), ორივე 45 დღე (6 კვირა). ეფექტურობა გაურთულებელ შემთხვევებში მსგავსია დოქსიციკლინ-სტრეპტომიცინისა, მაგრამ სიფრთხილეა საჭირო გართულებებისას (მაგ., სპონდილიტი); რიფამპიცინი აჩქარებს დოქსიციკლინის კლირენსს და შესაძლოა სუბთერაპიული დონე გამოიწვიოს.",
+  "doses": [
+   {
+    "drug": "doxycycline",
+    "amount": 100,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily for 45 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 15,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "once daily for 45 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 600,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily (600–900 mg)",
+    "population": "adult",
+    "max_amount": 900,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 45,
+    "unit": "day",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა კვირებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Main alternative: doxycycline 100 mg twice a day for 45 days plus rifampicin 15 mg/kg/day (600–900 mg) for 45 days."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Doxycycline 200 mg/day + rifampicin 600–900 mg/day for six weeks; similar efficacy in uncomplicated disease; caution in complications such as spondylitis; rifampicin may enhance doxycycline clearance."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-008",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "სტრეპტომიცინის ჩანაცვლება გენტამიცინით",
+  "recommendation_ka": "სტრეპტომიცინის ნაცვლად შეიძლება გამოყენებულ იქნას გენტამიცინი 5 მგ/კგ/დღეში ერთჯერადად (ვენაში ან კუნთში) 7–10 დღე, დოქსიციკლინთან (100 მგ დღეში ორჯერ, 6 კვირა) ერთად. WHO აღნიშნავს, რომ პირდაპირი შედარებითი კვლევები არ არის; Ioannina-ს კონსენსუსი დოქსიციკლინ-გენტამიცინს ადეკვატურ რეჟიმად მიიჩნევს (გენტამიცინის ოპტიმალური ხანგრძლივობა დაუზუსტებელია).",
+  "doses": [
+   {
+    "drug": "gentamicin",
+    "amount": 5,
+    "unit": "mg/kg/day",
+    "route": "IV/IM",
+    "frequency": "once daily for 7–10 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "doxycycline",
+    "amount": 100,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily for 6 weeks",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "გენტამიცინის ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "გენტამიცინის ხანგრძლივობა — ზედა ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "დოქსიციკლინის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Streptomycin may be substituted with gentamicin 5 mg/kg daily for 7–10 days; no direct comparative study."
+   },
+   {
+    "org": "PLoS Medicine (international expert consensus)",
+    "title": "Perspectives for the treatment of brucellosis in the 21st century: the Ioannina recommendations",
+    "year": 2007,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2222927/",
+    "type": "guideline",
+    "supports": "Most recent international treatment consensus, still current edition. Doxycycline 6 weeks plus gentamicin 7 days: relapse rates comparable to WHO regimens; authors consider DOX-GENT adequate; gentamicin duration still to be defined."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-009",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მონოთერაპიის და ფტორქინოლონების/კო-ტრიმოქსაზოლის ადგილი",
+  "recommendation_ka": "ბრუცელოზი მკურნალობს კომბინირებული თერაპიით. ტეტრაციკლინის/დოქსიციკლინის მონოთერაპიისას რეციდივი 10–20%-ს აღწევს, ამიტომ პირველ კვირებში ემატება ამინოგლიკოზიდი. ფტორქინოლონები და ტრიმეთოპრიმ-სულფამეთოქსაზოლი (კო-ტრიმოქსაზოლი) მონოთერაპიად მიუღებლად მაღალი რეციდივის გამო არ გამოიყენება — მხოლოდ სხვა პრეპარატთან (დოქსიციკლინი, რიფამპიცინი ან სტრეპტომიცინი) კომბინაციაში. Ioannina-ს კონსენსუსი ფტორქინოლონიან რეჟიმებს მისაღებ ალტერნატივად, მაგრამ არა პირველი რიგის საშუალებად მიიჩნევს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "რეციდივის სიხშირე მონოთერაპიისას — ქვედა ზღვარი"
+   },
+   {
+    "value": 20,
+    "unit": "%",
+    "meaning_ka": "რეციდივის სიხშირე მონოთერაპიისას — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Relapse 10–20% with tetracycline/doxycycline alone, hence aminoglycoside added; quinolones and TMP/SMZ must always be combined with another agent."
+   },
+   {
+    "org": "PLoS Medicine (international expert consensus)",
+    "title": "Perspectives for the treatment of brucellosis in the 21st century: the Ioannina recommendations",
+    "year": 2007,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2222927/",
+    "type": "guideline",
+    "supports": "Most recent international treatment consensus, still current edition. Fluoroquinolone combinations are acceptable alternatives but not recommended as first-line; monotherapy generally inadequate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-010",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ბრუცელოზი 8 წლამდე ბავშვებში",
+  "recommendation_ka": "ტეტრაციკლინები უკუნაჩვენებია (კბილის შეფერილობა, ძვლის ზრდის დათრგუნვა); ოპტიმალური რეჟიმი დადგენილი არ არის. ვარიანტები: ტრიმეთოპრიმ-სულფამეთოქსაზოლი 8/40 მგ/კგ/დღეში, ორ მიღებად, პერორალურად 6 კვირა + სტრეპტომიცინი 30 მგ/კგ/დღეში კუნთში 3 კვირა, ან გენტამიცინი 5 მგ/კგ/დღეში 7–10 დღე. ალტერნატივა: ტრიმეთოპრიმ-სულფამეთოქსაზოლი + რიფამპიცინი 15 მგ/კგ/დღეში, ორივე 6 კვირა. მონოთერაპია მაღალ რეციდივს იძლევა.",
+  "doses": [
+   {
+    "drug": "trimethoprim (as TMP/SMX)",
+    "amount": 8,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "divided twice daily for 6 weeks",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "sulfamethoxazole (as TMP/SMX)",
+    "amount": 40,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "divided twice daily for 6 weeks",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "streptomycin",
+    "amount": 30,
+    "unit": "mg/kg/day",
+    "route": "IM",
+    "frequency": "once daily for 3 weeks",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "gentamicin",
+    "amount": 5,
+    "unit": "mg/kg/day",
+    "route": "IV/IM",
+    "frequency": "once daily for 7–10 days",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifampicin",
+    "amount": 15,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "once daily for 6 weeks",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "TMP/SMX და რიფამპიცინის ხანგრძლივობა"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "სტრეპტომიცინის ხანგრძლივობა"
+   },
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "გენტამიცინი — ქვედა ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "გენტამიცინი — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Children <8 y: TMP/SMZ 8/40 mg/kg/day twice daily for six weeks plus streptomycin 30 mg/kg/day for three weeks or gentamicin 5 mg/kg/day for 7–10 days; alternatives TMP/SMZ plus rifampicin 15 mg/kg/day for six weeks; tetracyclines contraindicated."
+   },
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Optimal treatment for children under 8 not determined; options include co-trimoxazole with an aminoglycoside or rifampicin."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-011",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "pregnancy",
+  "condition_ka": "ბრუცელოზი ორსულობისას",
+  "recommendation_ka": "დროული მკურნალობა შეიძლება ნაყოფის სიცოცხლის გადამრჩენი იყოს (ორსულობისას ბრუცელოზი სპონტანური აბორტის რისკს ზრდის). ტეტრაციკლინები უკუნაჩვენებია; სტრეპტომიცინით აღწერილია ნაყოფის ტოქსიკურობა. ოპტიმალური რეჟიმი დადგენილი არ არის: ვარიანტებია რიფამპიცინი მინიმუმ 45 დღე ან კო-ტრიმოქსაზოლი (ცალკეული შემთხვევების გამოცდილება). Ioannina-ს კონსენსუსის მიხედვით, რეციდივის რისკფაქტორებისა და კეროვანი დაავადების გარეშე შესაძლებელია რიფამპიცინის მონოთერაპია მშობიარობამდე. მართეთ ინფექციონისტთან და მეან-გინეკოლოგთან ერთად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 45,
+    "unit": "day",
+    "meaning_ka": "რიფამპიცინის მინიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Brucellosis in pregnancy carries a risk of spontaneous abortion and prompt treatment can be lifesaving for the fetus; tetracyclines contraindicated in pregnancy; fetal toxicity reported with streptomycin; optimal therapy undetermined; co-trimoxazole used in individual cases; alternative rifampicin for at least 45 days."
+   },
+   {
+    "org": "PLoS Medicine (international expert consensus)",
+    "title": "Perspectives for the treatment of brucellosis in the 21st century: the Ioannina recommendations",
+    "year": 2007,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2222927/",
+    "type": "guideline",
+    "supports": "Most recent international treatment consensus, still current edition. Patients without relapse risk factors or focal disease may be treated with rifampicin monotherapy until delivery."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-012",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ბრუცელოზური სპონდილიტი და ოსტეომიელიტი",
+  "recommendation_ka": "საკრალური ილეიტი ჩვეულებრივ სპეციალურ მკურნალობას არ საჭიროებს. სპონდილიტისა და ოსტეომიელიტის (მათ შორის პარავერტებრული/ეპიდურული აბსცესის) დროს საჭიროა გახანგრძლივებული თერაპია — მაგ., დოქსიციკლინის გაგრძელება 8 კვირა ან მეტი, სასურველია ამინოგლიკოზიდთან კომბინაციაში; ქირურგიული დრენაჟი იშვიათად არის საჭირო. სრულად პერორალური დოქსიციკლინ-რიფამპიცინი სპონდილიტისას სიფრთხილით გამოიყენეთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "დოქსიციკლინის მინიმალური ხანგრძლივობა სპონდილიტისას"
+   }
+  ],
+  "red_flags_ka": [
+   "ნევროლოგიური დეფიციტი ზურგის ტკივილით (ეპიდურული აბსცესი)"
+  ],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Spondylitis and osteomyelitis with paravertebral/epidural abscess may require prolonged therapy, e.g. doxycycline for eight weeks or more; surgical drainage rarely necessary; sacroiliitis does not appear to need special treatment; caution with doxycycline-rifampicin in spondylitis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-013",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ნეირობრუცელოზი",
+  "recommendation_ka": "ცენტრალური ნერვული სისტემის დაზიანებისას ტეტრაციკლინები და ამინოგლიკოზიდები ცუდად აღწევს ლიქვორში, ამიტომ დოქსიციკლინ-სტრეპტომიცინის სტანდარტულ რეჟიმს დაამატეთ ჰემატოენცეფალურ ბარიერში შეღწევადი პრეპარატი — რიფამპიცინი ან კო-ტრიმოქსაზოლი. ხანგრძლივობა მინიმუმ 6–8 კვირა, კლინიკური პასუხის მიხედვით შესაძლოა მეტი. საჭიროა ჰოსპიტალიზაცია და ინფექციონისტის/ნევროლოგის კონსულტაცია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "მინიმალური ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "მინიმალური ხანგრძლივობა — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "მენინგიზმი",
+   "ცნობიერების დარღვევა",
+   "კეროვანი ნევროლოგიური ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Neurobrucellosis: add rifampicin or co-trimoxazole to doxycycline plus streptomycin because tetracyclines and aminoglycosides penetrate CSF poorly; most authorities recommend a minimum of six to eight weeks."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-014",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ბრუცელოზური ენდოკარდიტი",
+  "recommendation_ka": "ბრუცელოზით სიკვდილობა 1%-ზე ნაკლებია, მაგრამ სიკვდილის ყველაზე ხშირი მიზეზი ინფექციური ენდოკარდიტია. მკურნალობა: დოქსიციკლინი + ამინოგლიკოზიდი, დამატებით რიფამპიცინი ან კო-ტრიმოქსაზოლი, მინიმუმ 8 კვირა; ხშირად საჭიროა სარქვლის ქირურგიული ჩანაცვლება, რის შემდეგაც თერაპია რამდენიმე კვირა გრძელდება. გადაუდებლად მიმართეთ კარდიოლოგს/კარდიოქირურგს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "%",
+    "meaning_ka": "ბრუცელოზით სიკვდილობის ზედა ზღვარი"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "თერაპიის მინიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [
+   "ახალი გულის შუილი",
+   "გულის უკმარისობა",
+   "ემბოლიური მოვლენები"
+  ],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Death occurs in less than 1% of cases, most often from endocarditis; doxycycline plus aminoglycoside with rifampicin or co-trimoxazole; prolonged therapy at least eight weeks; valve replacement often necessary with therapy continued several weeks after surgery."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-015",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "მკურნალობის შემდეგ მეთვალყურეობა და რეციდივი",
+  "recommendation_ka": "WHO-ს რეკომენდებული რეჟიმების შემდეგაც გაურთულებელ შემთხვევებში რეციდივი 5–15%-ში ვითარდება, ჩვეულებრივ მსუბუქი სახით. მკურნალობის დასრულების შემდეგ დააკვირდით ცხელების და სიმპტომების დაბრუნებას. რეციდივი, როგორც წესი, წარმატებით იმკურნალება იმავე რეჟიმით; მკურნალობის ხანგრძლივობის შემცირება რეციდივის რისკს ზრდის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "%",
+    "meaning_ka": "რეციდივის სიხშირე — ქვედა ზღვარი"
+   },
+   {
+    "value": 15,
+    "unit": "%",
+    "meaning_ka": "რეციდივის სიხშირე — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PLoS Medicine (international expert consensus)",
+    "title": "Perspectives for the treatment of brucellosis in the 21st century: the Ioannina recommendations",
+    "year": 2007,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2222927/",
+    "type": "guideline",
+    "supports": "Most recent international treatment consensus, still current edition. Relapses occur in 5–15% of uncomplicated cases with standard regimens, are usually mild and can be treated successfully with the same regimens; longer treatment progressively lowers relapse risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-016",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "prevention",
+  "population": "all",
+  "condition_ka": "ბრუცელოზის პრევენცია — კვება და პროფესიული ჰიგიენა",
+  "recommendation_ka": "ურჩიეთ: მოერიდონ არაპასტერიზებულ (ნედლ) რძეს და მისგან დამზადებულ პროდუქტებს, განსაკუთრებით ახალ ყველს; რძის პროდუქტები მზადდებოდეს თერმულად დამუშავებული რძისგან; ხორცი კარგად იყოს მომზადებული. მეცხოველეობასა და ხორცის გადამუშავებაში გამოიყენონ დამცავი ბარიერები (ხელთათმანები და სხვ.), მოლი, ცხოველის გვამები და შინაგანი ორგანოები სწორად მოიმართოს და განადგურდეს. ლაბორატორიის პერსონალი იცავდეს სპეციალურ უსაფრთხოების ზომებს. ადამიანის ვაქცინაცია რეკომენდებული არ არის; ყველაზე ეფექტური სტრატეგიაა ცხოველებში ინფექციის ელიმინაცია (ვაქცინაცია ენდემურ ზონებში). ბრუცელოზი შეტყობინებას დაქვემდებარებული დაავადებაა უმეტეს ქვეყანაში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Brucellosis — fact sheet",
+    "year": 2020,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/brucellosis",
+    "type": "fact_sheet",
+    "supports": "Pasteurization of milk and derivatives is key; education on avoiding unpasteurized milk products; protective barriers and correct disposal of afterbirths, carcasses and organs; elimination of infection in animals most effective; reportable in most countries."
+   },
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). All dairy products from heat-treated milk; avoid raw milk products; cook meat adequately; laboratory precautions; vaccination of humans not generally recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-BRUC-017",
+  "cluster": "BRUC",
+  "topics": [
+   92
+  ],
+  "rule_type": "prevention",
+  "population": "adult",
+  "condition_ka": "ცოცხალი ბრუცელოზური ვაქცინის შემთხვევითი ექსპოზიცია (ვეტერინარები)",
+  "recommendation_ka": "ნემსის ჩხვლეტისას: ჭრილობის ადგილობრივი დამუშავება, საჭიროებისას ტეტანუსის ტოქსოიდი და დოქსიციკლინის 6-კვირიანი კურსი. B. abortus RB51 რეზისტენტულია რიფამპიცინის მიმართ — ამ შტამით ექსპოზიციისას რიფამპიცინს ნუ დაეყრდნობით. კონიუნქტივური ექსპოზიციისას (გადაცემის ძალიან ეფექტური გზა): თვალის ადგილობრივი მოვლა და 1–2 პრეპარატი სრული 6-კვირიანი კურსით. რაც შეიძლება მალე აიღეთ შრატი ბრუცელოზის ანტისხეულებზე საბაზისო დონისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "პროფილაქტიკის ხანგრძლივობა"
+   },
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "პრეპარატების რაოდენობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "პრეპარატების რაოდენობა — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO/FAO/OIE",
+    "title": "Brucellosis in humans and animals (WHO/CDS/EPR/2006.7)",
+    "year": 2006,
+    "url": "https://iris.who.int/handle/10665/43597",
+    "type": "guideline",
+    "supports": "Current edition of the WHO reference manual (no newer WHO clinical guideline). Vaccine needle-stick: local wound care, tetanus toxoid when indicated and a six-week course of doxycycline; B. abortus RB51 is rifampicin resistant; conjunctival exposure: eye care and one or two drugs for the full six weeks; baseline serology as soon as possible."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

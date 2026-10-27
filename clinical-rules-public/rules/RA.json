@@ -1,0 +1,305 @@
+[
+ {
+  "rule_id": "PUB-RA-001",
+  "cluster": "RA",
+  "topics": [
+   59
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ზრდასრული მინიმუმ ერთი სახსრის კლინიკური სინოვიტით, რომელიც სხვა დაავადებით (მგლურა, პოდაგრა, ფსორიაზული ართრიტი და სხვ.) არ აიხსნება",
+  "recommendation_ka": "რევმატოიდული ართრიტის 2010 წლის ACR/EULAR კლასიფიკაციის კრიტერიუმები ოთხ დომენს აფასებს: დაზიანებული სახსრების რაოდენობა და ტიპი (დიდი და წვრილი სახსრები), სეროლოგია (რევმატოიდული ფაქტორი და/ან ACPA), ანთების მწვავე ფაზის მარკერები (CRP და/ან ედს) და სიმპტომების ხანგრძლივობა (6 კვირაზე ნაკლები თუ მეტი). ჯამური ქულა 10-დან 6 ან მეტი აკმაყოფილებს რევმატოიდული ართრიტის კლასიფიკაციას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2010,
+    "unit": "label",
+    "meaning_ka": "კრიტერიუმების წელი"
+   },
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "სიმპტომების ხანგრძლივობის ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "points",
+    "meaning_ka": "მაქსიმალური ქულა"
+   },
+   {
+    "value": 6,
+    "unit": "points",
+    "meaning_ka": "კლასიფიკაციის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR/EULAR (Aletaha et al., Ann Rheum Dis 2010)",
+    "title": "2010 Rheumatoid arthritis classification criteria: an ACR/EULAR collaborative initiative",
+    "year": 2010,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20699241/",
+    "type": "guideline",
+    "supports": "Entry: ≥1 joint with definite clinical synovitis not better explained by another disease; four domains (joint involvement, serology RF/ACPA, acute-phase reactants CRP/ESR, symptom duration <6 vs ≥6 weeks); score ≥6/10 classifies definite RA. Still the current edition of the criteria."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-002",
+  "cluster": "RA",
+  "topics": [
+   59
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "2010 წლის კრიტერიუმების გამოყენება კლინიკურ პრაქტიკაში",
+  "recommendation_ka": "კრიტერიუმები კლასიფიკაციისთვისაა შექმნილი და არა ინდივიდუალური დიაგნოზისთვის: ზღვარი 6 ქულა შეირჩა მგრძნობელობის გასაზრდელად. სერონეგატიურ ან ადრეულ ართრიტში, როცა ქულა ზღვარს ქვემოთაა, დიაგნოზი არ გამორიცხოთ — დასკვნა რევმატოლოგის კლინიკურ შეფასებას ეფუძნება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "points",
+    "meaning_ka": "კლასიფიკაციის ზღვარი"
+   },
+   {
+    "value": 2010,
+    "unit": "label",
+    "meaning_ka": "კრიტერიუმების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (systematic review and meta-analysis)",
+    "title": "Performance of the 2010 classification criteria for rheumatoid arthritis: a systematic literature review and a meta-analysis",
+    "year": 2014,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3577909/",
+    "type": "systematic_review",
+    "supports": "Current reference meta-analysis of 2010 criteria performance (Ann Rheum Dis); optimal discrimination at a score between 6 and 7, cut-off 6 chosen to improve sensitivity; lower sensitivity in seronegative/early disease."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-003",
+  "cluster": "RA",
+  "topics": [
+   59
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "ზრდასრული გაურკვეველი მიზეზის მქონე სავარაუდო მუდმივი სინოვიტით",
+  "recommendation_ka": "მიმართეთ რევმატოლოგს. მიმართეთ სასწრაფოდ (სეროლოგიის უარყოფითი შედეგის შემთხვევაშიც), თუ დაზიანებულია ხელის ან ტერფის წვრილი სახსრები, ერთზე მეტი სახსარი, ან სიმპტომების დაწყებიდან მიმართვამდე გავიდა 3 თვე ან მეტი. NICE-ის ხარისხის სტანდარტით მიმართვა უნდა მოხდეს პირველადი ჯანდაცვიდან 3 სამუშაო დღეში.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "დაყოვნება, რომელიც სასწრაფო მიმართვას მოითხოვს"
+   },
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "მიმართვის ვადა სამუშაო დღეებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Rheumatoid arthritis in adults: management (NG100) — recommendations",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/ng100/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Refer any adult with suspected persistent synovitis of undetermined cause; refer urgently even with normal acute-phase response or negative RF if small joints of hands or feet affected, more than one joint affected, or ≥3 months between symptom onset and seeking advice."
+   },
+   {
+    "org": "NICE",
+    "title": "Rheumatoid arthritis in over 16s — Quality statement 1: Referral (QS33)",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/QS33/chapter/quality-statement-1-referral",
+    "type": "guideline",
+    "supports": "Adults with suspected persistent synovitis affecting more than 1 joint or small joints of hands/feet are referred to rheumatology within 3 working days of presenting in primary care."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-004",
+  "cluster": "RA",
+  "topics": [
+   59
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "სავარაუდო რევმატოიდული ართრიტი კლინიკურად დადასტურებული სინოვიტით",
+  "recommendation_ka": "განსაზღვრეთ რევმატოიდული ფაქტორი; თუ უარყოფითია, განიხილეთ ანტი-CCP ანტისხეულები. მუდმივი სინოვიტისას გადაიღეთ ხელისა და ტერფის რენტგენოგრაფია (ეროზიების საბაზისო შეფასება). ეს კვლევები რევმატოლოგთან მიმართვას არ უნდა აყოვნებდეს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Rheumatoid arthritis in adults: management (NG100) — recommendations",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/ng100/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Offer RF test to adults with suspected RA and synovitis on examination; consider anti-CCP if RF-negative; X-ray hands and feet in suspected RA with persistent synovitis; investigations in primary care should not delay referral."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-005",
+  "cluster": "RA",
+  "topics": [
+   59
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მწვავე პოლიართრიტი დაბალი ტიტრის რევმატოიდული ფაქტორით — დიფერენციული დიაგნოზი",
+  "recommendation_ka": "რევმატოიდული ართრიტის დიაგნოზამდე გამორიცხეთ ვირუსული ართრიტი (პარვოვირუსი B19, B და C ჰეპატიტი, აივ, ჩიკუნგუნია), რომელსაც შეიძლება თან ახლდეს გარდამავალი დაბალი ტიტრის რევმატოიდული ფაქტორი ან ANA. HCV-ის დროს რევმატოიდული ფაქტორი ხშირია კრიოგლობულინემიის გამო. თუ სინოვიტი გრძელდება 6 კვირაზე მეტ ხანს, ვირუსული მიზეზის ალბათობა მცირდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "სინოვიტის ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Marks & Marks, Clin Med)",
+    "title": "Viral arthritis",
+    "year": 2016,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868140",
+    "type": "review",
+    "supports": "Viral arthritis (parvovirus B19, HBV, HCV, HIV, alphaviruses) can mimic RA with transient low-titre RF/ANA; most viral arthritides are self-limiting. Current reference review."
+   },
+   {
+    "org": "ACR/EULAR (Aletaha et al., Ann Rheum Dis 2010)",
+    "title": "2010 Rheumatoid arthritis classification criteria: an ACR/EULAR collaborative initiative",
+    "year": 2010,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20699241/",
+    "type": "guideline",
+    "supports": "Symptom duration domain distinguishes <6 weeks from ≥6 weeks; synovitis must not be better explained by another disease (current edition)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-006",
+  "cluster": "RA",
+  "topics": [
+   60
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "რევმატოიდული ართრიტის პრეკლინიკური ფაზა",
+  "recommendation_ka": "რევმატოიდული ართრიტის კლინიკურ დაწყებამდე რამდენიმე წლით ადრე ვითარდება პრეკლინიკური ფაზა, როცა გენეტიკური და გარემო ფაქტორების ურთიერთქმედებით ჩნდება აუტოანტისხეულები (რევმატოიდული ფაქტორი, ACPA). ართრალგიის მქონე ACPA-დადებით პირებს ართრიტის განვითარების მომატებული რისკი აქვთ და საჭიროებენ დაკვირვებას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Frontiers in Immunology (review)",
+    "title": "Review of rheumatoid arthritis pathogenesis (title paraphrased; article 10.3389/fimmu.2025.1588419)",
+    "year": 2025,
+    "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1588419/full",
+    "type": "review",
+    "supports": "Preclinical phase typically occurs several years prior to arthritis onset, during which genetic and environmental factors interact and autoantibodies such as RF and ACPA emerge."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-007",
+  "cluster": "RA",
+  "topics": [
+   60
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "ACPA-დადებითი რევმატოიდული ართრიტის გენეტიკური და გარემო რისკი",
+  "recommendation_ka": "მთავარი გენეტიკური რისკია HLA-DRB1-ის „საერთო ეპიტოპის“ ალელები (განსაკუთრებით HLA-DRB1*04), ხოლო ყველაზე კარგად შესწავლილი მოდიფიცირებადი გარემო რისკი — თამბაქოს მოწევა. მოწევა ფილტვებში ააქტიურებს პეპტიდილარგინინ-დეიმინაზებს (PAD), რაც იწვევს ცილების ციტრულინაციას და გენეტიკურად მიდრეკილ პირებში ACPA-ს წარმოქმნას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "HLA-DRB1*04 ალელის აღნიშვნა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PubMed (Klareskog et al.)",
+    "title": "Rheumatoid arthritis and smoking: putting the pieces together",
+    "year": 2009,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19678909",
+    "type": "review",
+    "supports": "HLA-DRB1 shared-epitope alleles and smoking together establish a significant risk for ACPA-positive RA; still a current reference review."
+   },
+   {
+    "org": "PMC (Ishikawa & Terao, Cells)",
+    "title": "The impact of cigarette smoking on risk of rheumatoid arthritis: a narrative review",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7072747/",
+    "type": "review",
+    "supports": "Smoking and HLA-DRB1 are the well-established environmental and genetic risks; PADs released from smoke-activated pulmonary phagocytes mediate citrullination."
+   },
+   {
+    "org": "Frontiers in Immunology (review)",
+    "title": "Review of rheumatoid arthritis pathogenesis (title paraphrased; article 10.3389/fimmu.2025.1588419)",
+    "year": 2025,
+    "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1588419/full",
+    "type": "review",
+    "supports": "HLA-DRB1*04 a significant risk factor for ACPA+ RA; shared epitope enhances citrullinated peptide–MHC affinity; PAD enzymes convert arginine to citrulline."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-RA-008",
+  "cluster": "RA",
+  "topics": [
+   60
+  ],
+  "rule_type": "prevention",
+  "population": "adult",
+  "condition_ka": "მწეველი რევმატოიდული ართრიტის რისკით (ოჯახური ანამნეზი, ACPA-დადებითობა) ან დადგენილი დაავადებით",
+  "recommendation_ka": "ურჩიეთ და შესთავაზეთ თამბაქოს მოწევის შეწყვეტის დახმარება: მოწევა რევმატოიდული ართრიტის მთავარი მოდიფიცირებადი რისკ-ფაქტორია, განსაკუთრებით საერთო ეპიტოპის მატარებლებში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (Ishikawa & Terao, Cells)",
+    "title": "The impact of cigarette smoking on risk of rheumatoid arthritis: a narrative review",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7072747/",
+    "type": "review",
+    "supports": "Smoking is the most extensively described modifiable risk factor for RA."
+   },
+   {
+    "org": "PubMed (Klareskog et al.)",
+    "title": "Rheumatoid arthritis and smoking: putting the pieces together",
+    "year": 2009,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19678909",
+    "type": "review",
+    "supports": "Gene–environment interaction between shared epitope and smoking for ACPA-positive RA (current reference review)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

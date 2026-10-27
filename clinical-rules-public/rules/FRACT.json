@@ -1,0 +1,232 @@
+[
+ {
+  "rule_id": "PUB-FRACT-001", "cluster": "FRACT", "topics": [93], "rule_type": "diagnosis", "population": "all",
+  "condition_ka": "კოჭის მწვავე ტრავმა, მოტეხილობის ეჭვი 5 წელზე უფროს პაციენტში",
+  "recommendation_ka": "რენტგენოგრაფიის საჭიროება განსაზღვრეთ ოტავას კოჭისა და ტერფის წესებით. წესი დადებითია, თუ არის: დაყრდნობის შეუძლებლობა ტრავმისთანავე; ან მტკივნეულობა შიგნითა ტერფ-კოჭის, გარეთა ტერფ-კოჭის უკანა კიდის ან ქვედა წვერის, კოჭის ძვლის ან ქუსლის ძვლის პალპაციით; ან გადაუდებელ განყოფილებაში 4 ნაბიჯის გადადგმის შეუძლებლობა. დადებითი წესისას საწყის კვლევად ჩვეულებრივ მიზანშეწონილია კოჭის რენტგენოგრაფია; ულტრაბგერა, კტ და მრტ საწყის ეტაპზე მიზანშეწონილი არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 5, "unit": "age_years", "meaning_ka": "ასაკი, რომლის ზემოთაც ოტავას წესები გამოიყენება"},
+   {"value": 4, "unit": "count", "meaning_ka": "ნაბიჯების რაოდენობა დაყრდნობის შესაფასებლად"}
+  ],
+  "red_flags_ka": ["ღია ჭრილობა მოტეხილობის ზემოთ", "ნეიროვასკულური დეფიციტი", "აშკარა დეფორმაცია ან ამოვარდნილობა"],
+  "sources": [
+   {"org": "NICE", "title": "Fractures (non-complex): assessment and management (NG38)", "year": 2016, "url": "https://www.nice.org.uk/guidance/ng38/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.2.2: use the Ottawa ankle and foot rules to determine whether an X-ray is needed in people over 5 years with suspected ankle fractures."},
+   {"org": "ACR", "title": "ACR Appropriateness Criteria: Acute Trauma to the Ankle (2020)", "year": 2020, "url": "https://acsearch.acr.org/docs/69436/Narrative/", "type": "guideline", "supports": "Variant 1 (adult or child ≥5 y, Ottawa positive: inability to bear weight immediately after injury, point tenderness over medial malleolus, posterior edge or inferior tip of lateral malleolus, talus or calcaneus, or inability to ambulate 4 steps in ED): ankle radiography usually appropriate; US, CT, MRI, bone scan usually not appropriate."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-002", "cluster": "FRACT", "topics": [93], "rule_type": "evaluation", "population": "all",
+  "condition_ka": "კოჭის მწვავე ტრავმა, ოტავას წესები უარყოფითია (პალპაციით მტკივნეულობა არ არის, სიარული შეუძლია), გამომრიცხავი კრიტერიუმების გარეშე",
+  "recommendation_ka": "ვიზუალიზაცია (მათ შორის რენტგენოგრაფია) ჩვეულებრივ მიზანშეწონილი არ არის. წესი გამოიყენება მხოლოდ ნევროლოგიურად ინტაქტურ პაციენტში — პერიფერიული ნეიროპათიის ან სხვა ნევროლოგიური დარღვევისას, როცა ოტავას წესით შეფასება შეუძლებელია, ჩაატარეთ კოჭის რენტგენოგრაფია (კტ კონტრასტის გარეშე შეიძლება მიზანშეწონილი იყოს).",
+  "doses": [], "numeric_values": [], "red_flags_ka": ["პერიფერიული ნეიროპათია (მაგ., დიაბეტური) — შეფასება წესით არასანდოა"],
+  "sources": [
+   {"org": "ACR", "title": "ACR Appropriateness Criteria: Acute Trauma to the Ankle (2020)", "year": 2020, "url": "https://acsearch.acr.org/docs/69436/Narrative/", "type": "guideline", "supports": "Variant 2 (Ottawa negative, no exclusionary criteria, neurologically intact): all imaging including radiography usually not appropriate. Variant 3 (exclusionary criteria such as neuropathy present): ankle radiography usually appropriate; CT without contrast may be appropriate."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-003", "cluster": "FRACT", "topics": [93], "rule_type": "evaluation", "population": "all",
+  "condition_ka": "კოჭის ტრავმა: შემდგომი ვიზუალიზაციის არჩევა საწყისი რენტგენოგრაფიის შემდეგ",
+  "recommendation_ka": "ტკივილი 1 კვირაზე მეტი, მაგრამ 3 კვირაზე ნაკლები, უარყოფითი რენტგენოგრამით — მრტ ან კტ კონტრასტის გარეშე (შეიძლება განმეორებითი ან სტრეს-რენტგენოგრამა). რენტგენოგრამაზე მოტეხილობა ან ოსტეოქონდრული დაზიანების ეჭვი — კტ ან მრტ კონტრასტის გარეშე. ძვლოვანი დაზიანების გარეშე, მაგრამ სინდესმოზის/იოგების დაზიანების ან ამოვარდნილობის მიმანიშნებელი გასწორების დარღვევისას — სტრეს-რენტგენოგრამა, წვივის რენტგენოგრაფია (პროქსიმალური მცირე წვივის მოტეხილობის გამოსარიცხად), მრტ ან კტ.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 1, "unit": "week", "meaning_ka": "მდგრადი ტკივილის ქვედა ზღვარი"},
+   {"value": 3, "unit": "week", "meaning_ka": "მდგრადი ტკივილის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": ["სინდესმოზის დაზიანება", "ამოვარდნილობა"],
+  "sources": [
+   {"org": "ACR", "title": "ACR Appropriateness Criteria: Acute Trauma to the Ankle (2020)", "year": 2020, "url": "https://acsearch.acr.org/docs/69436/Narrative/", "type": "guideline", "supports": "Variant 4 (persistent pain >1 week <3 weeks, negative radiographs): MRI or CT without contrast usually appropriate; radiography/stress views may be appropriate. Variant 5 (fracture or potential osteochondral injury): MRI or CT without contrast usually appropriate. Variant 6 (alignment abnormality suggesting syndesmotic/ligamentous injury or dislocation): stress views, leg radiography, MRI, CT usually appropriate."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-004", "cluster": "FRACT", "topics": [93], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "ერთი ტერფ-კოჭის (უნიმალეოლარული) მოტეხილობა, არაოპერაციული ორთოპედიული მართვა",
+  "recommendation_ka": "ურჩიეთ დაუყოვნებელი, შეუზღუდავი დაყრდნობა ტოლერანტობის ფარგლებში. თუ სტაბილურობა საეჭვოა, ორთოპედიული კონტროლი დანიშნეთ 2 კვირის განმავლობაში. ყველა პაციენტს ურჩიეთ განმეორებით მიმართვა, თუ ტრავმიდან 6 კვირაში სიმპტომები არ უმჯობესდება. თუ ოპერაციული მკურნალობა იგეგმება, ოპერაცია განიხილეთ ტრავმის დღეს ან მომდევნო დღეს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "week", "meaning_ka": "ორთოპედიული კონტროლის ვადა საეჭვო სტაბილურობისას"},
+   {"value": 6, "unit": "week", "meaning_ka": "ვადა, რომლის შემდეგაც გაუმჯობესების არარსებობა გადასინჯვას მოითხოვს"}
+  ],
+  "red_flags_ka": ["ბიმალეოლარული ან ტრიმალეოლარული მოტეხილობა", "ტერფ-კოჭის სახსრის არასტაბილურობა"],
+  "sources": [
+   {"org": "NICE", "title": "Fractures (non-complex): assessment and management (NG38)", "year": 2016, "url": "https://www.nice.org.uk/guidance/ng38/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.4.1: unimalleolar ankle fractures managed non-surgically—immediate unrestricted weight-bearing as tolerated; orthopaedic follow-up within 2 weeks if stability uncertain; return if not improving 6 weeks after injury. Rec 1.4.2: if surgery, consider operating on day of injury or next day."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-005", "cluster": "FRACT", "topics": [93], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "წვივის გრძელი ძვლების (დიდი ან მცირე წვივის ძვალი) მოტეხილობის ეჭვი მოზრდილში (16 წელი და მეტი), საწყისი ტკივილგამაყუჩება",
+  "recommendation_ka": "ტკივილი რეგულარულად შეაფასეთ ასაკისა და კოგნიტური მდგომარეობის შესაბამისი შკალით. მსუბუქი ტკივილი: პერორალური „პარაცეტამოლი“; საშუალო: „პარაცეტამოლი“ და „კოდეინი“; ძლიერი: ინტრავენური „პარაცეტამოლი“ და ეფექტამდე ტიტრირებული ინტრავენური „მორფინი“. დამატებით შეიძლება არასტეროიდული ანთების საწინააღმდეგო საშუალება, გარდა ხანდაზმული ან სუსტი პაციენტებისა — მათ NSAID არ დაუნიშნოთ, ხოლო ინტრავენური ოპიოიდი სიფრთხილით გამოიყენეთ.",
+  "doses": [],
+  "numeric_values": [{"value": 16, "unit": "age_years", "meaning_ka": "მოზრდილის ასაკობრივი ზღვარი NICE-ში"}],
+  "red_flags_ka": ["კომპარტმენტ-სინდრომის ნიშნები (არაპროპორციული ტკივილი)"],
+  "sources": [
+   {"org": "NICE", "title": "Fractures (non-complex): assessment and management (NG38)", "year": 2016, "url": "https://www.nice.org.uk/guidance/ng38/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Rec 1.1.2: assess pain regularly with age-appropriate scale. 1.1.4: adults (16 or over) with suspected leg long bone fractures (tibia, fibula): oral paracetamol mild; paracetamol and codeine moderate; IV paracetamol plus titrated IV morphine severe. 1.1.5–1.1.7: caution IV opioids in frail/older; no NSAIDs in frail/older; consider NSAIDs otherwise. Doses not specified."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-006", "cluster": "FRACT", "topics": [96], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "თავის ტრავმა: თავის ქალას ფუძის, ღია ან ჩაჭყლეტილი მოტეხილობის ან შემავალი დაზიანების კლინიკური ნიშნები",
+  "recommendation_ka": "ეჭვი მიიტანეთ რთულ მოტეხილობაზე, თუ არის: გამჭვირვალე სითხის დენა ყურიდან ან ცხვირიდან (ლიქვორეა), ჰემოტიმპანუმი, „პანდას თვალები“ (თვალის გარშემო სისხლჩაქცევა თვალის უშუალო დაზიანების გარეშე), სისხლდენა ერთი ან ორივე ყურიდან, სისხლჩაქცევა ყურის უკან (ბეტლის ნიშანი), შემავალი დაზიანების ნიშნები ან თავის ქალას/სკალპის შემაშფოთებელი ხილული ტრავმა. ნებისმიერი ასეთი ნიშანი თავის კტ-ის გადაუდებელი ჩვენებაა.",
+  "doses": [], "numeric_values": [],
+  "red_flags_ka": ["ლიქვორეა", "ჰემოტიმპანუმი", "ბეტლის ნიშანი", "„პანდას თვალები“"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Terms used: signs of basal, open or depressed skull fracture or penetrating injury include clear fluid from ears or nose, black eye without associated eye damage, bleeding from ears, bruising behind ears, penetrating injury signs, visible scalp/skull trauma of concern. Rec 1.5.8 lists haemotympanum, panda eyes, CSF leak, Battle's sign as CT-within-1-hour criteria."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-007", "cluster": "FRACT", "topics": [96], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "თავის ტრავმა 16 წელზე უფროს პაციენტში: თავის კტ 1 საათის განმავლობაში",
+  "recommendation_ka": "თავის კტ ჩაატარეთ რისკ-ფაქტორის გამოვლენიდან 1 საათში, თუ არის: GCS 12 ან ნაკლები გადაუდებელ განყოფილებაში საწყისი შეფასებისას; GCS 15-ზე ნაკლები ტრავმიდან 2 საათზე; ღია ან ჩაჭყლეტილი მოტეხილობის ეჭვი; თავის ქალას ფუძის მოტეხილობის ნებისმიერი ნიშანი; პოსტტრავმული კრუნჩხვა; კეროვანი ნევროლოგიური დეფიციტი; ღებინების 1-ზე მეტი ეპიზოდი. გამოსახულების წინასწარი წერილობითი დასკვნა ხელმისაწვდომი უნდა იყოს კტ-დან 1 საათში.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 16, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი"},
+   {"value": 1, "unit": "h", "meaning_ka": "კტ-ის ჩატარების ვადა; ასევე ღებინების ეპიზოდების ზღვარი (1-ზე მეტი)"},
+   {"value": 12, "unit": "score", "meaning_ka": "GCS-ის ზღვარი საწყისი შეფასებისას"},
+   {"value": 15, "unit": "score", "meaning_ka": "GCS-ის ნორმა"},
+   {"value": 2, "unit": "h", "meaning_ka": "ტრავმიდან განმეორებითი GCS შეფასების დრო"}
+  ],
+  "red_flags_ka": ["GCS-ის დაქვეითება", "კრუნჩხვა", "კეროვანი დეფიციტი", "განმეორებითი ღებინება"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.5.8: people 16 and over—CT head within 1 hour if GCS ≤12 on initial ED assessment, GCS <15 at 2 hours, suspected open/depressed skull fracture, any sign of basal skull fracture, post-traumatic seizure, focal neurological deficit, more than 1 episode of vomiting. Rec 1.5.14: provisional written radiology report within 1 hour."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-008", "cluster": "FRACT", "topics": [96], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "თავის ტრავმა 16 წელზე უფროს პაციენტში ცნობიერების დაკარგვით ან ამნეზიით, 1-საათიანი კრიტერიუმების გარეშე",
+  "recommendation_ka": "თავის კტ ჩაატარეთ ტრავმიდან 8 საათის განმავლობაში (ან 1 საათში, თუ პაციენტი 8 საათზე გვიან მოვიდა), თუ არის: ასაკი 65 წელი ან მეტი; სისხლდენის ან შედედების დარღვევა; საშიში მექანიზმი (ავტომობილის მიერ დაჯახებული ფეხით მოსიარულე ან ველოსიპედისტი, მანქანიდან გადმოვარდნა, ვარდნა 1 მ-ზე მეტი სიმაღლიდან ან 5 საფეხურიდან); ტრავმამდელი მოვლენების რეტროგრადული ამნეზია 30 წუთზე მეტი.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 16, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი"},
+   {"value": 1, "unit": "h", "meaning_ka": "კტ-ის ვადა გვიან მოსვლისას"},
+   {"value": 8, "unit": "h", "meaning_ka": "კტ-ის ვადა ტრავმიდან"},
+   {"value": 65, "unit": "age_years", "meaning_ka": "ასაკობრივი რისკ-ფაქტორი"},
+   {"value": 1, "unit": "label", "meaning_ka": "ვარდნის სიმაღლე 1 მ-ზე მეტი"},
+   {"value": 5, "unit": "count", "meaning_ka": "საფეხურების რაოდენობა"},
+   {"value": 30, "unit": "min", "meaning_ka": "რეტროგრადული ამნეზიის ხანგრძლივობა"}
+  ],
+  "red_flags_ka": ["ასაკი 65 წელი ან მეტი", "კოაგულოპათია"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.5.9: people 16 and over with loss of consciousness or amnesia—CT within 8 hours (or within the hour if presenting after 8 hours) if age ≥65, bleeding/clotting disorder, dangerous mechanism (pedestrian/cyclist struck, ejection, fall >1 m or 5 stairs), >30 minutes retrograde amnesia."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-009", "cluster": "FRACT", "topics": [96], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "თავის ტრავმა ანტიკოაგულანტის ან ანტიაგრეგანტის (ასპირინის მონოთერაპიის გარდა) მიმღებ პაციენტში, კტ-ის სხვა ჩვენების გარეშე",
+  "recommendation_ka": "განიხილეთ თავის კტ ტრავმიდან 8 საათის განმავლობაში (მაგ., თუ რისკის შეფასება რთულია ან პაციენტი გაუარესებისას შეიძლება არ დაბრუნდეს), ან 1 საათში, თუ 8 საათზე გვიან მოვიდა. ეხება ვიტამინ K-ს ანტაგონისტებს, პირდაპირ პერორალურ ანტიკოაგულანტებს, ჰეპარინს და დაბალმოლეკულურ ჰეპარინს. იზოლირებული მარტივი ხაზოვანი მოტეხილობაც კი ამ პაციენტებში კლინიკურად მნიშვნელოვანად ითვლება ჰოსპიტალიზაციის გადაწყვეტისას. ტრავმული ინტრაკრანიული სისხლჩაქცევისას განიხილეთ ანტიკოაგულაციის რევერსია.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 8, "unit": "h", "meaning_ka": "კტ-ის ვადა ტრავმიდან"},
+   {"value": 1, "unit": "h", "meaning_ka": "კტ-ის ვადა გვიან მოსვლისას"}
+  ],
+  "red_flags_ka": ["ანტიკოაგულაცია", "მზარდი თავის ტკივილი"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.5.13: on anticoagulant (VKA, DOACs, heparin, LMWH) or antiplatelet (excluding aspirin monotherapy) with no other CT indication, consider CT within 8 hours, or within the hour if presenting after 8 hours; refers to reversal guidance. Rec 1.9.1: isolated simple linear non-displaced skull fracture unlikely clinically important unless on anticoagulant/antiplatelet."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-010", "cluster": "FRACT", "topics": [96], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "თავის მწვავე ტრავმა: ვიზუალიზაციის მეთოდის არჩევა (თავის ქალას მოტეხილობის ეჭვი)",
+  "recommendation_ka": "თავის ქალას რენტგენოგრაფია ჩვეულებრივ მიზანშეწონილი არ არის — არჩევის მეთოდია თავის კტ კონტრასტის გარეშე. მსუბუქი ტრავმისას (GCS 13–15) კტ ჩვეულებრივ მიზანშეწონილია, თუ ის ნაჩვენებია ვალიდირებული კლინიკური გადაწყვეტილების წესით, ხოლო წესის უარყოფითობისას ვიზუალიზაცია მიზანშეწონილი არ არის. საშუალო (GCS 9–12), მძიმე (GCS 3–8) ან შემავალი ტრავმისას საწყისი კვლევაა კტ კონტრასტის გარეშე. შენიშვნა: ACR ამერიკულ გადაწყვეტილების წესებს ეყრდნობა, ხოლო NICE-ს საკუთარი კრიტერიუმები აქვს (მაგ., ასაკი 65 წელი და მეტი, ღებინება 1-ზე მეტჯერ).",
+  "doses": [],
+  "numeric_values": [
+   {"value": 13, "unit": "score", "meaning_ka": "მსუბუქი ტრავმის GCS ქვედა ზღვარი"},
+   {"value": 15, "unit": "score", "meaning_ka": "GCS მაქსიმუმი"},
+   {"value": 9, "unit": "score", "meaning_ka": "საშუალო ტრავმის GCS ქვედა ზღვარი"},
+   {"value": 12, "unit": "score", "meaning_ka": "საშუალო ტრავმის GCS ზედა ზღვარი"},
+   {"value": 3, "unit": "score", "meaning_ka": "GCS მინიმუმი"},
+   {"value": 8, "unit": "score", "meaning_ka": "მძიმე ტრავმის GCS ზედა ზღვარი"},
+   {"value": 65, "unit": "age_years", "meaning_ka": "NICE-ის ასაკობრივი კრიტერიუმი"},
+   {"value": 1, "unit": "count", "meaning_ka": "ღებინების ეპიზოდების ზღვარი NICE-ით"}
+  ],
+  "red_flags_ka": ["შემავალი ტრავმა", "GCS 8 ან ნაკლები"],
+  "sources": [
+   {"org": "ACR", "title": "ACR Appropriateness Criteria: Head Trauma (2020)", "year": 2020, "url": "https://acsearch.acr.org/docs/69481/Narrative/", "type": "guideline", "supports": "Variant 1 (mild GCS 13–15, imaging not indicated by clinical decision rule): all imaging incl. skull radiography and CT usually not appropriate. Variant 2 (mild, imaging indicated by decision rule): CT head without IV contrast usually appropriate; skull radiography usually not appropriate. Variant 3 covers moderate (GCS 9–12), severe (GCS 3–8) or penetrating trauma, initial imaging."},
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.5.8–1.5.9 define NICE CT criteria (e.g. >1 vomiting episode, age 65 or over with LOC/amnesia)."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-011", "cluster": "FRACT", "topics": [96], "rule_type": "referral", "population": "adult",
+  "condition_ka": "თავის ქალას მოტეხილობა ან თავის ტრავმა: ნეიროქირურგიული კონსულტაციის ჩვენებები",
+  "recommendation_ka": "ნეიროქირურგთან განიხილეთ ყველა ახალი, ქირურგიულად მნიშვნელოვანი ცვლილება ვიზუალიზაციაზე. ვიზუალიზაციის მიუხედავად დაუკავშირდით ნეიროქირურგს: მდგრადი კომა (GCS 8 ან ნაკლები რეანიმაციის შემდეგ); აუხსნელი დაბნეულობა 4 საათზე მეტი; GCS-ის გაუარესება მიღების შემდეგ (განსაკუთრებით მოტორული პასუხის); პროგრესირებადი კეროვანი ნიშნები; კრუნჩხვა სრული აღდგენის გარეშე; შემავალი დაზიანება (დადასტურებული ან საეჭვო); ცერებროსპინალური სითხის გაჟონვა.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 8, "unit": "score", "meaning_ka": "მდგრადი კომის GCS ზღვარი"},
+   {"value": 4, "unit": "h", "meaning_ka": "აუხსნელი დაბნეულობის ხანგრძლივობა"}
+  ],
+  "red_flags_ka": ["ლიქვორეა", "შემავალი დაზიანება", "პროგრესირებადი კეროვანი ნიშნები"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.4.15: discuss new surgically significant imaging abnormalities with a neurosurgeon. Rec 1.4.16: regardless of imaging, discuss if persisting coma (GCS ≤8) after resuscitation, unexplained confusion >4 hours, GCS deterioration after admission, progressive focal signs, seizure without full recovery, definite or suspected penetrating injury, CSF leak."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-012", "cluster": "FRACT", "topics": [96], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "თავის ქალას ფუძის მოტეხილობა, რომელიც შესაძლოა მოიცავდეს შიგნითა საძილე ან ხერხემლის არტერიას, ან მაღალი ხარისხის/რთული სახის მოტეხილობა",
+  "recommendation_ka": "სისხლძარღვის დაზიანების ეჭვისას ჩაატარეთ კისრის სისხლძარღვების კტ- ან მრ-ანგიოგრაფია. სხვა ჩვენებებია ხერხემლის მალების გასწორების დარღვევა და უკანა ცირკულაციის სინდრომი.",
+  "doses": [], "numeric_values": [], "red_flags_ka": ["ახალი კეროვანი ნევროლოგიური დეფიციტი", "უკანა ცირკულაციის სინდრომი"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.6.10: do CT or MRI angiography of the neck vessels if suspicion of vascular injury, e.g. vertebral malalignment, high-risk fracture (high-grade or complex facial fracture or base of skull fracture likely to involve internal carotid or vertebral artery), posterior circulation syndrome."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-013", "cluster": "FRACT", "topics": [96], "rule_type": "referral", "population": "adult",
+  "condition_ka": "თავის ტრავმა: ჰოსპიტალიზაციის გადაწყვეტა, მათ შორის იზოლირებული მარტივი ხაზოვანი თავის ქალას მოტეხილობა",
+  "recommendation_ka": "ჰოსპიტალიზაცია საჭიროა: ვიზუალიზაციაზე ახალი კლინიკურად მნიშვნელოვანი ცვლილებისას (იზოლირებული, მარტივი, ხაზოვანი, აუცდენელი მოტეხილობა, რომელიც ნაკერებს არ კვეთს, ჩვეულებრივ ასეთად არ ითვლება, თუ პაციენტი ანტიკოაგულანტს ან ანტიაგრეგანტს არ ღებულობს); თუ ვიზუალიზაციის შემდეგ GCS 15-მდე (ან ტრავმამდელ დონემდე) არ დაბრუნდა; როცა ნაჩვენები კტ დროულად ვერ ტარდება; მდგრადი ღებინების, ძლიერი თავის ტკივილის, კრუნჩხვის, ლიქვორის გაჟონვის, ინტოქსიკაციის ან ძალადობის ეჭვისას. GCS 15-მდე დაბრუნებამდე პაციენტი არ გაწეროთ.",
+  "doses": [],
+  "numeric_values": [{"value": 15, "unit": "score", "meaning_ka": "GCS-ის ნორმა გაწერისთვის"}],
+  "red_flags_ka": ["ლიქვორის გაჟონვა", "მდგრადი ღებინება", "ძალადობის ეჭვი"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.9.1 admission criteria: new clinically important imaging abnormalities (isolated simple linear non-displaced skull fracture unlikely clinically important unless on anticoagulant/antiplatelet), GCS not returned to 15/baseline, CT indicated but not done in time, persistent vomiting/severe headache/seizures, intoxication, CSF leak, suspected non-accidental injury. Terms: definition of isolated simple linear non-displaced fracture. Rec 1.10: do not discharge until GCS 15."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-014", "cluster": "FRACT", "topics": [96], "rule_type": "dosing", "population": "adult",
+  "condition_ka": "თავის ტრავმა GCS 12 ან ნაკლებით, აქტიური ექსტრაკრანიული სისხლდენის ეჭვის გარეშე",
+  "recommendation_ka": "განიხილეთ „ტრანექსამის მჟავა“ ინტრავენური ბოლუსით: 16 წელი და მეტი — 2 გ; 16 წლამდე — 15–30 მგ/კგ (მაქსიმუმ 2 გ). დაიწყეთ რაც შეიძლება სწრაფად, ტრავმიდან 2 საათის განმავლობაში, ჰოსპიტალამდელ ან ჰოსპიტალურ ეტაპზე და ვიზუალიზაციამდე (ამ ჩვენებით გამოყენება ოფ-ლეიბლია).",
+  "doses": [
+   {"drug": "tranexamic acid", "amount": 2, "unit": "g", "route": "IV", "frequency": "single bolus", "population": "adult", "max_amount": null, "max_unit": null},
+   {"drug": "tranexamic acid", "amount": 15, "unit": "mg/kg", "route": "IV", "frequency": "single bolus (15–30 mg/kg)", "population": "child", "max_amount": 30, "max_unit": "mg/kg"}
+  ],
+  "numeric_values": [
+   {"value": 12, "unit": "score", "meaning_ka": "GCS-ის ზღვარი"},
+   {"value": 16, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი დოზირებისთვის"},
+   {"value": 2, "unit": "h", "meaning_ka": "მიღების ვადა ტრავმიდან; ასევე მაქსიმალური დოზა 2 გ"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.3.17: GCS ≤12 without suspected active extracranial bleeding—consider 2 g IV bolus TXA for 16 and over; 15–30 mg/kg (max 2 g) for under 16; give as soon as possible within 2 hours of injury, before imaging; off-label in March 2023."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FRACT-015", "cluster": "FRACT", "topics": [96], "rule_type": "monitoring", "population": "adult",
+  "condition_ka": "თავის ტრავმით ჰოსპიტალიზებული პაციენტის ნევროლოგიური მონიტორინგი",
+  "recommendation_ka": "მინიმალური დაკვირვება: GCS (სამივე კომპონენტით), გუგების ზომა და რეაქცია, კიდურების მოძრაობა, სუნთქვის სიხშირე, პულსი, არტერიული წნევა, ტემპერატურა, სატურაცია. GCS 15-მდე — ყოველ 30 წუთში; GCS 15-ის შემდეგ — ყოველ 30 წუთში 2 საათის განმავლობაში, შემდეგ საათში ერთხელ 4 საათის განმავლობაში, შემდეგ ყოველ 2 საათში. სასწრაფოდ გადაამოწმეთ (და განიხილეთ დაუყოვნებელი კტ): აგზნება, GCS-ის 1 ქულით დაქვეითება 30 წუთზე მეტხანს, თვალის ან ვერბალური პასუხის 3 ქულით ან მოტორულის 2 ქულით დაქვეითება, მზარდი თავის ტკივილი, მდგრადი ღებინება, გუგების ასიმეტრია. თუ ნორმალური კტ-ის მიუხედავად GCS 24 საათში 15 არ გახდა, განიხილეთ განმეორებითი კტ ან მრტ.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 15, "unit": "score", "meaning_ka": "GCS-ის ნორმა"},
+   {"value": 30, "unit": "min", "meaning_ka": "დაკვირვების ინტერვალი; GCS-ის დაქვეითების ხანგრძლივობა"},
+   {"value": 2, "unit": "h", "meaning_ka": "ნახევარსაათიანი დაკვირვების ხანგრძლივობა; შემდგომი ინტერვალი; მოტორული პასუხის 2 ქულა"},
+   {"value": 4, "unit": "h", "meaning_ka": "საათობრივი დაკვირვების ხანგრძლივობა"},
+   {"value": 1, "unit": "points", "meaning_ka": "GCS-ის მდგრადი დაქვეითება"},
+   {"value": 3, "unit": "points", "meaning_ka": "თვალის/ვერბალური პასუხის დაქვეითება"},
+   {"value": 24, "unit": "h", "meaning_ka": "დაკვირვების პერიოდი განმეორებითი ვიზუალიზაციის გადაწყვეტამდე"}
+  ],
+  "red_flags_ka": ["გუგების ასიმეტრია", "GCS-ის დაქვეითება", "მზარდი თავის ტკივილი"],
+  "sources": [
+   {"org": "NICE", "title": "Head injury: assessment and early management (NG232)", "year": 2023, "url": "https://www.nice.org.uk/guidance/ng232/chapter/Recommendations", "type": "guideline", "supports": "Rec 1.9.10–1.9.11: minimum observations; half-hourly until GCS 15, then half-hourly for 2 hours, 1-hourly for 4 hours, then 2-hourly. 1.9.13: reassess for agitation, sustained (≥30 min) drop of 1 GCS point, drop of ≥3 in eye/verbal or ≥2 in motor, severe/increasing headache, persistent vomiting, new neurological signs. 1.9.15: consider immediate CT. 1.9.16: normal CT but GCS not 15 after 24 hours—consider further CT or MRI."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

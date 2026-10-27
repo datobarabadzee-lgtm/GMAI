@@ -1,0 +1,448 @@
+[
+ {
+  "rule_id": "PUB-PE-001",
+  "cluster": "PE",
+  "topics": [
+   79
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "არაორსული მოზრდილი ფილტვის არტერიის თრომბოემბოლიის (ფათე) ეჭვით, ჰემოდინამიკურად სტაბილური",
+  "recommendation_ka": "დიაგნოსტიკა დაიწყეთ კლინიკური ალბათობის სტრუქტურირებული შეფასებით (Wells-ის ან შესწორებული ჟენევის შკალა, ან კლინიკური შეფასება). დაბალი ან საშუალო ალბათობისას პირველი ტესტია D-დიმერი (მაღალმგრძნობიარე მეთოდით); უარყოფითი შედეგისას ანტიკოაგულაცია და გამოსახვა საჭირო არ არის. მაღალი კლინიკური ალბათობისას D-დიმერი არ გამოიყენოთ — პირდაპირ ჩაატარეთ კომპიუტერულ-ტომოგრაფიული ფილტვის ანგიოგრაფია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Diagnostic strategy based on clinical (pre-test) probability; D-dimer recommended first in low/intermediate probability, negative result means no treatment needed; D-dimer not used in high probability (proceed to CTPA). (2019 ESC/ERS guideline is the current ESC edition.)"
+   },
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "D-dimer is recommended as the first test for patients with low-to-intermediate clinical probability; a negative result means no treatment is needed."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-002",
+  "cluster": "PE",
+  "topics": [
+   79
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "გადაუდებელ განყოფილებაში ფათე-ს ძალიან დაბალი კლინიკური ალბათობა",
+  "recommendation_ka": "გამოიყენეთ PERC წესი: თუ შესრულებულია ყველა 8 კრიტერიუმი — ასაკი <50 წელი, გულისცემა <100/წთ, ჟანგბადით სატურაცია >94%, წარსულში ვენური თრომბოემბოლიის არარსებობა, ბოლოდროინდელი ტრავმის ან ოპერაციის არარსებობა, ჰემოპტიზის არარსებობა, ეგზოგენური ესტროგენის არარსებობა და ცალმხრივი ფეხის შეშუპების არარსებობა — ფათე-ზე დამატებითი ტესტირება (D-დიმერიც) საჭირო არ არის. PERC არ გამოიყენოთ, თუ კლინიკური ალბათობა დაბალზე მაღალია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 8,
+    "unit": "count",
+    "meaning_ka": "PERC კრიტერიუმების რაოდენობა"
+   },
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი"
+   },
+   {
+    "value": 100,
+    "unit": "bpm",
+    "meaning_ka": "გულისცემის ზღვარი"
+   },
+   {
+    "value": 94,
+    "unit": "%",
+    "meaning_ka": "SpO2 ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "PERC is intended for ED patients whose pretest probability is so low that testing should not be started; its eight criteria include age <50, heart rate <100, oxygen saturation >94%, and no prior VTE or recent trauma/surgery."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "PERC rule may be considered in the emergency department setting to exclude PE without further testing in patients with low clinical probability. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-003",
+  "cluster": "PE",
+  "topics": [
+   79
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "D-დიმერის ინტერპრეტაცია ფათე-ს ეჭვისას",
+  "recommendation_ka": "ფიქსირებული ზღვრის ნაცვლად განიხილეთ ასაკზე ან კლინიკურ ალბათობაზე მორგებული D-დიმერის ზღვარი (ESC, კლასი IIa), რაც ხანდაზმულებში ზედმეტი გამოსახვის რაოდენობას ამცირებს. სწრაფი (point-of-care) D-დიმერის ტესტი ნაკლებად მგრძნობიარეა (დაახლ. 88% სტანდარტული ლაბორატორიული მეთოდის 95%-თან შედარებით), ამიტომ ის მხოლოდ დაბალი წინასწარი ალბათობისას გამოიყენეთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 88,
+    "unit": "%",
+    "meaning_ka": "სწრაფი D-დიმერის მგრძნობელობა"
+   },
+   {
+    "value": 95,
+    "unit": "%",
+    "meaning_ka": "ლაბორატორიული D-დიმერის მგრძნობელობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "Age- and clinical-probability-adjusted D-dimer cut-offs should be considered instead of fixed values (class IIa); point-of-care D-dimer assays are less sensitive (88%) than laboratory assays (95%) and should be used only in low pretest probability."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Age-adjusted or clinical-probability-adapted D-dimer cut-off should be considered as an alternative to the fixed cut-off. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-004",
+  "cluster": "PE",
+  "topics": [
+   79,
+   78
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ფათე-ს ეჭვი ჰემოდინამიკური არასტაბილურობით (შოკი, მუდმივი ჰიპოტენზია, გულის გაჩერება)",
+  "recommendation_ka": "ეს მაღალი რისკის ფათე-ა: დაუყოვნებლივ დაიწყეთ არაფრაქციული ჰეპარინი ინტრავენურად, ჰემოდინამიკური და რესპირაციული მხარდაჭერა. თუ კომპიუტერული ტომოგრაფია დაუყოვნებლივ ხელმისაწვდომი არ არის ან პაციენტი გადაყვანისთვის არასტაბილურია, ჩაატარეთ საწოლთან ტრანსთორაკალური ექოკარდიოგრაფია — მარჯვენა პარკუჭის დისფუნქცია ამართლებს რეპერფუზიული თერაპიის დაწყებას. გამოიძახეთ ფათე-ს რეაგირების მულტიდისციპლინური გუნდი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "შოკი ან სისტოლური წნევის მუდმივი დაქვეითება",
+   "გულის გაჩერება",
+   "სინკოპე",
+   "მძიმე ჰიპოქსემია"
+  ],
+  "sources": [
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "In suspected high-risk PE (haemodynamic instability), bedside echocardiography or emergency CTPA; immediate UFH anticoagulation and systemic thrombolysis for confirmed high-risk PE; rescue thrombolysis for haemodynamic deterioration is class I. (2019 ESC/ERS guideline is the current ESC edition.)"
+   },
+   {
+    "org": "AHA/ACC",
+    "title": "2026 AHA/ACC Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults - Top things to know",
+    "year": 2026,
+    "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults/top-things-to-know",
+    "type": "guideline",
+    "supports": "Recommends multidisciplinary PE response teams (Class 1) for triage and escalation of care."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-005",
+  "cluster": "PE",
+  "topics": [
+   78
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "დადასტურებული მწვავე ფათე, ჰემოდინამიკურად სტაბილური პაციენტი — რისკის სტრატიფიკაცია (ESC)",
+  "recommendation_ka": "შეაფასეთ ადრეული სიკვდილობის რისკი: კლინიკური ქულა (PESI ან გამარტივებული sPESI) და მარჯვენა პარკუჭის მდგომარეობა (ექოკარდიოგრაფია ან კომპიუტერული ტომოგრაფია) და ბიომარკერები (ტროპონინი). მარჯვენა პარკუჭის ფუნქცია შეაფასეთ მაშინაც კი, როცა PESI დაბალია ან sPESI = 0 (კლასი IIa). საშუალო-მაღალი რისკი (მარჯვენა პარკუჭის დისფუნქცია + მომატებული ტროპონინი) საჭიროებს მონიტორინგს გაუარესების ადრეული გამოვლენისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 0,
+    "unit": "score",
+    "meaning_ka": "sPESI დაბალი რისკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "Right ventricular function should be assessed by imaging or laboratory biomarkers even in the presence of a low PESI or sPESI of 0 (IIa)."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Risk stratification integrates haemodynamic status, PESI/sPESI, RV imaging and troponin into low, intermediate-low, intermediate-high and high risk. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-006",
+  "cluster": "PE",
+  "topics": [
+   78,
+   80
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "დადასტურებული მწვავე ფათე — აშშ-ის 2026 წლის კლასიფიკაცია (AHA/ACC)",
+  "recommendation_ka": "AHA/ACC-ის 2026 წლის გაიდლაინი „მასიური/სუბმასიური“ ტერმინების ნაცვლად 5 კლინიკურ კატეგორიას (A–E) იყენებს: A — შემთხვევით აღმოჩენილი ასიმპტომური ფათე; B — სიმპტომური, დაბალი სიმძიმის ქულით; C — სიმპტომური, მომატებული ქულით, ქვეკატეგორიებით მარჯვენა პარკუჭის დისფუნქციისა და ბიომარკერების მიხედვით; D — დაწყებითი კარდიოპულმონური უკმარისობა (ნორმოტენზიური შოკი); E — კარდიოპულმონური უკმარისობა. A კატეგორია შეიძლება გაეწეროს გადაუდებელი განყოფილებიდან, B — ადრეული გაწერის კანდიდატია, C–E ჩვეულებრივ ჰოსპიტალიზაციას საჭიროებს. ევროპული (ESC 2019) სისტემა რისკს ოთხ დონედ ყოფს — დაწესებულებაში ერთი სისტემა გამოიყენეთ თანმიმდევრულად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2026,
+    "unit": "label",
+    "meaning_ka": "გაიდლაინის წელი"
+   },
+   {
+    "value": 5,
+    "unit": "count",
+    "meaning_ka": "კლინიკური კატეგორიების რაოდენობა"
+   },
+   {
+    "value": 2019,
+    "unit": "label",
+    "meaning_ka": "ESC გაიდლაინის წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AHA/ACC",
+    "title": "2026 AHA/ACC Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults - Top things to know",
+    "year": 2026,
+    "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults/top-things-to-know",
+    "type": "guideline",
+    "supports": "Introduces 'Acute Pulmonary Embolism Clinical Categories' A-E replacing massive/submassive; asymptomatic incidental PE (category A) can be discharged home from the emergency department; low-severity symptomatic patients are candidates for early discharge."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "ESC 2019 classifies PE into high, intermediate-high, intermediate-low and low risk. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-007",
+  "cluster": "PE",
+  "topics": [
+   78,
+   80
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "დაბალი რისკის მწვავე ფათე (ESC: დაბალი რისკი; AHA/ACC: კატეგორია A ან B), სტაბილური, ადეკვატური სოციალური მხარდაჭერით",
+  "recommendation_ka": "განიხილეთ ადრეული გაწერა ან ამბულატორიული მკურნალობა პერორალური ანტიკოაგულანტით, თუ არ არის სისხლდენის მაღალი რისკი, ჰიპოქსემია, ძლიერი ტკივილი ან სხვა ჰოსპიტალიზაციის მიზეზი, და უზრუნველყოფილია მკურნალობის ხელმისაწვდომობა და მეთვალყურეობა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AHA/ACC",
+    "title": "2026 AHA/ACC Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults - Top things to know",
+    "year": 2026,
+    "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults/top-things-to-know",
+    "type": "guideline",
+    "supports": "Asymptomatic patients with incidental PE can safely be discharged from the emergency department; category B patients are generally candidates for early discharge."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Early discharge and home treatment should be considered for carefully selected low-risk PE patients if proper outpatient care and anticoagulation can be provided. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-008",
+  "cluster": "PE",
+  "topics": [
+   80
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მწვავე ფათე, ანტიკოაგულანტის შერჩევა (არამაღალი რისკი)",
+  "recommendation_ka": "მაღალი ან საშუალო კლინიკური ალბათობისას ანტიკოაგულაცია დაიწყეთ დიაგნოსტიკის პარალელურად. საწყის პარენტერალურ თერაპიად უპირატესია დაბალმოლეკულური ჰეპარინი (მაგ., „ენოქსაპარინი“) არაფრაქციულ ჰეპარინთან შედარებით. ხელსაყრელ პაციენტებში პერორალური პირდაპირი ანტიკოაგულანტი („აპიქსაბანი“, „რივაროქსაბანი“, „დაბიგატრანი“, „ედოქსაბანი“) უპირატესია ვიტამინ K-ს ანტაგონისტთან („ვარფარინი“) შედარებით (AHA/ACC კლასი 1). პირდაპირი ანტიკოაგულანტი არ გამოიყენოთ თირკმლის მძიმე უკმარისობის, ორსულობის, ლაქტაციის ან ანტიფოსფოლიპიდური სინდრომის დროს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "AHA/ACC რეკომენდაციის კლასი 1"
+   }
+  ],
+  "red_flags_ka": [
+   "აქტიური სისხლდენა",
+   "თირკმლის მძიმე უკმარისობა",
+   "ანტიფოსფოლიპიდური სინდრომი"
+  ],
+  "sources": [
+   {
+    "org": "AHA/ACC",
+    "title": "2026 AHA/ACC Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults - Top things to know",
+    "year": 2026,
+    "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults/top-things-to-know",
+    "type": "guideline",
+    "supports": "Direct oral anticoagulants receive a Class 1 recommendation over vitamin K antagonists for eligible patients; LMWH is preferred over unfractionated heparin for initial treatment."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Anticoagulation should be initiated without delay in patients with high or intermediate clinical probability while diagnostic workup is in progress; LMWH or fondaparinux preferred over UFH; NOACs recommended in preference to VKA; NOACs not recommended in severe renal impairment, pregnancy/lactation or antiphospholipid syndrome. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-009",
+  "cluster": "PE",
+  "topics": [
+   80
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მაღალი რისკის ფათე ან ჰემოდინამიკური გაუარესება ანტიკოაგულაციის ფონზე",
+  "recommendation_ka": "დადასტურებული მაღალი რისკის ფათე-ს დროს ჩაატარეთ სისტემური თრომბოლიზისი, თუ აბსოლუტური უკუჩვენება არ არის. საშუალო-მაღალი რისკის პაციენტში ჰემოდინამიკური გაუარესებისას ჩაატარეთ სამაშველო თრომბოლიზისი (ESC, კლასი I). თრომბოლიზისის უკუჩვენების ან წარუმატებლობისას განიხილეთ ქირურგიული ემბოლექტომია ან კათეტერული მკურნალობა გამოცდილ ცენტრში. დაბალი რისკის პაციენტებში სისტემური თრომბოლიზისი რუტინულად არ ტარდება — ამ საკითხში ევროპული და აშშ-ის რეკომენდაციები ახლა ძირითადად თანხვედრილია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "შოკი",
+   "გაუარესებადი ჰიპოქსემია",
+   "ახალი ჰიპოტენზია ანტიკოაგულაციის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "Rescue thrombolytic therapy for haemodynamic deterioration on anticoagulation upgraded to class I; systemic thrombolysis for high-risk PE."
+   },
+   {
+    "org": "AHA/ACC",
+    "title": "2026 AHA/ACC Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults - Top things to know",
+    "year": 2026,
+    "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults/top-things-to-know",
+    "type": "guideline",
+    "supports": "Systemic thrombolysis no longer holds primacy for the lower-risk group, largely mirroring ESC recommendations; PERTs recommended (Class 1)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-010",
+  "cluster": "PE",
+  "topics": [
+   80
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ფათე-ს მკურნალობის ხანგრძლივობა ძირითადი კურსის შემდეგ",
+  "recommendation_ka": "ხანგრძლივობა განსაზღვრეთ რეციდივის რისკით: ძირითადი/გარდამავალი რისკ-ფაქტორით (მაგ., ოპერაცია) განვითარებული ფათე-ს შემდეგ ძირითადი კურსის შემდეგ ანტიკოაგულაცია შეწყვიტეთ. გაურკვეველი (იდენტიფიცირებადი რისკ-ფაქტორის გარეშე) ან მუდმივი რისკ-ფაქტორის მქონე ფათე-ს დროს განიხილეთ ხანგრძლივი (განუსაზღვრელი) ანტიკოაგულაცია პერიოდული სისხლდენის რისკის გადაფასებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACC (summary of ESC/ERS guideline)",
+    "title": "2019 ESC Guidelines for the Diagnosis and Management of Acute PE - key points",
+    "year": 2020,
+    "url": "https://www.acc.org/latest-in-cardiology/articles/2020/07/10/08/44/2019-esc-guidelines-for-the-diagnosis-and-management-of-acute-pe",
+    "type": "guideline_summary",
+    "supports": "Extended anticoagulation should be considered for patients with no identifiable risk factor for the index PE event and for those with a persistent risk factor."
+   },
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Therapeutic anticoagulation for at least 3 months for all PE; discontinue after 3 months for first PE secondary to a major transient/reversible risk factor; extended anticoagulation for no identifiable or persistent risk factors with periodic reassessment of bleeding risk. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-PE-011",
+  "cluster": "PE",
+  "topics": [
+   80,
+   78
+  ],
+  "rule_type": "monitoring",
+  "population": "adult",
+  "condition_ka": "ფათე-ს შემდეგ მეთვალყურეობა",
+  "recommendation_ka": "მკურნალობის შემდეგ ყველა პაციენტი რუტინულად ხელახლა შეაფასეთ: სისხლდენა, დამყოლობა, ანტიკოაგულაციის გაგრძელების საჭიროება. პერსისტენტული ან ახალი ქოშინის ან ფიზიკური დატვირთვის შეზღუდვისას გამოიკვლიეთ ქრონიკული თრომბოემბოლიური ფილტვის ჰიპერტენზია (ექოკარდიოგრაფია, ვენტილაციურ-პერფუზიული სცინტიგრაფია) და მიმართეთ სპეციალიზებულ ცენტრში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პროგრესირებადი ქოშინი",
+   "მარჯვენა გულის უკმარისობის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "ESC/ERS",
+    "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism - pocket guidelines",
+    "year": 2019,
+    "url": "https://escardio.org/Guidelines/Clinical-Practice-Guidelines/Guidelines-derivative-products/Pocket-Guidelines/Acute-Pulmonary-Embolism",
+    "type": "guideline",
+    "supports": "Routine clinical evaluation after acute PE; patients with persistent dyspnoea or functional limitation should be evaluated for CTEPH/CTEPD with echocardiography and V/Q scan and referred to an expert centre. (2019 ESC/ERS guideline is the current ESC edition.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

@@ -1,0 +1,402 @@
+[
+ {
+  "rule_id": "PUB-AXSPA-001",
+  "cluster": "AXSPA",
+  "topics": [
+   72
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ქრონიკული ზურგის ტკივილი — ანთებითი ზურგის ტკივილის ნიშნები (ASAS)",
+  "recommendation_ka": "ანთებითი ზურგის ტკივილი სავარაუდოა, თუ არის 5 ნიშნიდან მინიმუმ 4: დაწყება 40 წლამდე; თანდათანობითი დაწყება; გაუმჯობესება ვარჯიშით; გაუმჯობესების არარსებობა მოსვენებისას; ღამის ტკივილი, რომელიც ადგომისას მსუბუქდება. ეს ნიშნები გამოიყენეთ რევმატოლოგთან მიმართვისთვის; ცალკე ისინი ღერძულ სპონდილოართრიტს ვერ ადასტურებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "count",
+    "meaning_ka": "ნიშნების საერთო რაოდენობა"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "საჭირო ნიშნების მინიმუმი"
+   },
+   {
+    "value": 40,
+    "unit": "age_years",
+    "meaning_ka": "დაწყების ასაკის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ASAS (Sieper et al., Ann Rheum Dis 2009)",
+    "title": "New criteria for inflammatory back pain in patients with chronic back pain: a real patient exercise by experts from ASAS",
+    "year": 2009,
+    "url": "https://ard.bmj.com/content/68/6/784",
+    "type": "guideline",
+    "supports": "ASAS inflammatory back pain: ≥4 of 5 features (age at onset <40, insidious onset, improvement with exercise, no improvement with rest, pain at night with improvement upon getting up); sensitivity ~80%, specificity ~72–74%. Still the current definition."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-002",
+  "cluster": "AXSPA",
+  "topics": [
+   72
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "ღერძული სპონდილოართრიტის ძვალ-კუნთოვანი სისტემის გარეთა გამოვლინებები",
+  "recommendation_ka": "აქტიურად იკითხეთ წინა უვეიტზე, ფსორიაზზე და ნაწლავის ანთებით დაავადებაზე: ანკილოზური სპონდილიტის კოჰორტაში უვეიტი აღინიშნა 22.9%-ში, ნაწლავის ანთებითი დაავადება 8.1%-ში. დიაგნოზის დაგვიანება ასოცირებულია უვეიტისა და ნაწლავის ანთებითი დაავადების მეტ სიხშირესთან. მწვავე ცალმხრივი წითელი მტკივნეული თვალი — სასწრაფოდ მიმართეთ ოფთალმოლოგს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 22.9,
+    "unit": "%",
+    "meaning_ka": "უვეიტის სიხშირე ანკილოზურ სპონდილიტში"
+   },
+   {
+    "value": 8.1,
+    "unit": "%",
+    "meaning_ka": "ნაწლავის ანთებითი დაავადების სიხშირე"
+   }
+  ],
+  "red_flags_ka": [
+   "მწვავე მტკივნეული წითელი თვალი, ფოტოფობია",
+   "სისხლიანი დიარეა"
+  ],
+  "sources": [
+   {
+    "org": "PMC (Rheumatology, cohort of 3,553 patients)",
+    "title": "Diagnostic delay is associated with uveitis and inflammatory bowel disease in AS: a study of extra-musculoskeletal manifestations in SpA",
+    "year": 2024,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10836992/",
+    "type": "cohort",
+    "supports": "Cohort of 3,553 AS and PsA patients: uveitis 22.9% and IBD 8.1% in AS; longer diagnostic delay associated with higher probability of uveitis and IBD."
+   },
+   {
+    "org": "Ann Rheum Dis (systematic review, Stolwijk et al.)",
+    "title": "Prevalence of extra-articular manifestations in patients with ankylosing spondylitis: a systematic review and meta-analysis",
+    "year": 2015,
+    "url": "https://ard.bmj.com/content/74/1/65",
+    "type": "systematic_review",
+    "supports": "Systematic review of EAMs in AS (156 articles): uveitis the most common EAM, with psoriasis and IBD; still the current reference meta-analysis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-003",
+  "cluster": "AXSPA",
+  "topics": [
+   72
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ღერძული სპონდილოართრიტის პერიფერიული და კლინიკური ნიშნები",
+  "recommendation_ka": "ზურგის ანთებით ტკივილთან ერთად შეაფასეთ სპონდილოართრიტის სხვა ნიშნები: ართრიტი (ხშირად ქვედა კიდურების ასიმეტრიული), ენთეზიტი (განსაკუთრებით აქილევსის მყესის), დაქტილიტი, უვეიტი, ფსორიაზი, ნაწლავის ანთებითი დაავადება, სპონდილოართრიტის ოჯახური ანამნეზი, ასსს-ზე კარგი პასუხი, მომატებული CRP და HLA-B27.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 27,
+    "unit": "label",
+    "meaning_ka": "HLA-B27"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Spondyloarthritis in over 16s: diagnosis and management (NG65) — recommendations",
+    "year": 2017,
+    "url": "https://www.nice.org.uk/guidance/ng65/chapter/Recommendation",
+    "type": "guideline",
+    "supports": "Current edition. Additional SpA criteria include NSAID response within 48 hours, first-degree relative with SpA, current or past arthritis, enthesitis, psoriasis."
+   },
+   {
+    "org": "ASAS (Rudwaleit et al., Ann Rheum Dis 2009)",
+    "title": "The development of ASAS classification criteria for axial spondyloarthritis (part II): validation and final selection",
+    "year": 2009,
+    "url": "https://ard.bmj.com/content/68/6/777.long",
+    "type": "guideline",
+    "supports": "Current edition. SpA features are used in the ASAS classification arms."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-004",
+  "cluster": "AXSPA",
+  "topics": [
+   72
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "დადასტურებული ღერძული სპონდილოართრიტი — საწყისი მკურნალობა",
+  "recommendation_ka": "ყველა პაციენტს შესთავაზეთ განათლება, რეგულარული ვარჯიში და ფიზიოთერაპია, მოწევის შეწყვეტა. პირველი რიგის მედიკამენტია ასსს. სუფთა ღერძული ფორმისას ხანგრძლივი სისტემური გლუკოკორტიკოიდები და კონვენციური სინთეზური DMARD-ები (მაგ., სულფასალაზინი, მეთოტრექსატი) არ გამოიყენება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ASAS-EULAR",
+    "title": "ASAS-EULAR recommendations for the management of axial spondyloarthritis: 2022 update (Ann Rheum Dis 2023;82:19-34)",
+    "year": 2023,
+    "url": "https://ard.bmj.com/content/82/1/19",
+    "type": "guideline",
+    "supports": "Non-pharmacological management and NSAIDs as first-choice pharmacological treatment; long-term systemic glucocorticoids and csDMARDs should not be used in pure axial disease."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-005",
+  "cluster": "AXSPA",
+  "topics": [
+   72
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ღერძული სპონდილოართრიტი მაღალი აქტივობით (ASDAS 2.1 ან მეტი) მინიმუმ 2 ასსს-ის წარუმატებლობის შემდეგ",
+  "recommendation_ka": "თუ ასევე არის მომატებული CRP, ან საკრალურ-თეძოს სახსრების ანთება მრტ-ზე, ან რენტგენოლოგიური საკროილეიტი, დაიწყეთ ბიოლოგიური ან სამიზნე სინთეზური DMARD: TNF ინჰიბიტორი ან IL-17 ინჰიბიტორი (ჩვეულ პრაქტიკაში პირველი არჩევანი), ალტერნატივად JAK ინჰიბიტორი. მორეციდივე უვეიტის ან ნაწლავის ანთებითი დაავადებისას უპირატესია TNF-ის მონოკლონური ანტისხეული, მნიშვნელოვანი ფსორიაზისას — IL-17 ინჰიბიტორი. წარუმატებლობისას გადახედეთ დიაგნოზს და თანმხლებ დაავადებებს, შემდეგ შეცვალეთ პრეპარატი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2.1,
+    "unit": "score",
+    "meaning_ka": "ASDAS-ის ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "წარუმატებელი ასსს-ების მინიმუმი"
+   },
+   {
+    "value": 17,
+    "unit": "label",
+    "meaning_ka": "IL-17"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ASAS-EULAR",
+    "title": "ASAS-EULAR recommendations for the management of axial spondyloarthritis: 2022 update (Ann Rheum Dis 2023;82:19-34)",
+    "year": 2023,
+    "url": "https://ard.bmj.com/content/82/1/19",
+    "type": "guideline",
+    "supports": "b/tsDMARDs (TNFi, IL-17i, JAKi) for ASDAS ≥2.1 after failure of ≥2 NSAIDs plus elevated CRP, MRI SIJ inflammation or radiographic sacroiliitis; current practice start TNFi or IL-17i; TNF mAb preferred for recurrent uveitis/IBD, IL-17i for significant psoriasis; on failure re-evaluate diagnosis/comorbidities then switch."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-006",
+  "cluster": "AXSPA",
+  "topics": [
+   73
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ზურგის ქრონიკული (3 თვე ან მეტი) ტკივილი, დაწყებული 45 წლამდე — ASAS კლასიფიკაცია",
+  "recommendation_ka": "ღერძული სპონდილოართრიტის ASAS კლასიფიკაცია სრულდება ორი გზით: ვიზუალიზაციის გზა — საკროილეიტი რენტგენზე ან მრტ-ზე და სპონდილოართრიტის მინიმუმ 1 ნიშანი; კლინიკური გზა — HLA-B27 და სპონდილოართრიტის მინიმუმ 2 ნიშანი. კრიტერიუმები კლასიფიკაციისთვისაა; დიაგნოზს რევმატოლოგი სვამს კლინიკური სურათის მთლიანი შეფასებით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ზურგის ტკივილის მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 45,
+    "unit": "age_years",
+    "meaning_ka": "დაწყების ასაკის ზღვარი"
+   },
+   {
+    "value": 1,
+    "unit": "count",
+    "meaning_ka": "SpA ნიშანი ვიზუალიზაციის გზაზე"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "SpA ნიშნები კლინიკურ გზაზე"
+   },
+   {
+    "value": 27,
+    "unit": "label",
+    "meaning_ka": "HLA-B27"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ASAS (Rudwaleit et al., Ann Rheum Dis 2009)",
+    "title": "The development of ASAS classification criteria for axial spondyloarthritis (part II): validation and final selection",
+    "year": 2009,
+    "url": "https://ard.bmj.com/content/68/6/777.long",
+    "type": "guideline",
+    "supports": "Current edition. Patients with back pain ≥3 months and onset <45 years: sacroiliitis on imaging plus ≥1 SpA feature, or HLA-B27 plus ≥2 other SpA features; sensitivity 82.9%, specificity 84.4%. Still the current classification criteria (current edition)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-007",
+  "cluster": "AXSPA",
+  "topics": [
+   73
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი, დაწყებული 45 წლამდე და 3 თვეზე მეტი ხანგრძლივობით — სპონდილოართრიტის სკრინინგი პირველად ჯანდაცვაში",
+  "recommendation_ka": "შეაფასეთ დამატებითი კრიტერიუმები (მაგ., ტკივილის დაწყება 35 წლამდე, ღამით გაღვიძება, დუნდულოს ტკივილი, მოძრაობით გაუმჯობესება, ასსს-ზე პასუხი 48 საათში, ოჯახური ანამნეზი, ართრიტი, ენთეზიტი, ფსორიაზი). 4 ან მეტი კრიტერიუმისას მიმართეთ რევმატოლოგს HLA-B27-ის გარეშე; ზუსტად 3 კრიტერიუმისას განსაზღვრეთ HLA-B27 და დადებითი შედეგისას მიმართეთ. სისხლის ნორმალური ანთების მარკერები სპონდილოართრიტს არ გამორიცხავს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 45,
+    "unit": "age_years",
+    "meaning_ka": "ტკივილის დაწყების ასაკის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ტკივილის ხანგრძლივობა"
+   },
+   {
+    "value": 35,
+    "unit": "age_years",
+    "meaning_ka": "დაწყების ასაკი, როგორც დამატებითი კრიტერიუმი"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ასსს-ზე პასუხის დრო"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "კრიტერიუმები პირდაპირი მიმართვისთვის"
+   },
+   {
+    "value": 27,
+    "unit": "label",
+    "meaning_ka": "HLA-B27"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Spondyloarthritis in over 16s: diagnosis and management (NG65) — recommendations",
+    "year": 2017,
+    "url": "https://www.nice.org.uk/guidance/ng65/chapter/Recommendation",
+    "type": "guideline",
+    "supports": "Current edition. Low back pain starting before age 45 and lasting >3 months: refer to rheumatology if 4 or more additional criteria; if exactly 3 criteria, perform HLA-B27 test and refer if positive; criteria include onset before 35, waking in second half of night, buttock pain, improvement with movement, NSAID response within 48 hours, family history, arthritis, enthesitis, psoriasis."
+   },
+   {
+    "org": "NICE",
+    "title": "Spondyloarthritis — Quality statement 1: Referral (QS170)",
+    "year": 2018,
+    "url": "https://www.nice.org.uk/guidance/qs170/chapter/Quality-statement-1-Referral",
+    "type": "guideline",
+    "supports": "Quality statement: people with suspected axial SpA (LBP >3 months, onset <45) and 4 or more additional criteria are referred to a rheumatologist."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-008",
+  "cluster": "AXSPA",
+  "topics": [
+   73
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ღერძული სპონდილოართრიტის ეჭვი — საკრალურ-თეძოს სახსრების ვიზუალიზაცია (რეკომენდაციებს შორის ცვლილება)",
+  "recommendation_ka": "EULAR-ის 2015 წლის რეკომენდაციით პირველი კვლევაა საკრალურ-თეძოს სახსრების რენტგენოგრაფია (ახალგაზრდებში და სიმპტომების ხანმოკლე ხანგრძლივობისას — ალტერნატივად მრტ), ხოლო არადიაგნოსტიკური რენტგენისას და შენარჩუნებული ეჭვისას — მრტ. EULAR-ის 2026 წლის განახლებით (ანგარიშების მიხედვით) პირველი რიგის კვლევად რეკომენდებულია საკრალურ-თეძოს სახსრების მრტ, ხოლო მისი შეუძლებლობისას — რენტგენი ან, უმჯობესია, დაბალდოზიანი კტ. ულტრაბგერა და სცინტიგრაფია საკროილეიტის დიაგნოსტიკისთვის არ გამოიყენება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2015,
+    "unit": "label",
+    "meaning_ka": "EULAR-ის რეკომენდაციის წელი"
+   },
+   {
+    "value": 2026,
+    "unit": "label",
+    "meaning_ka": "EULAR-ის განახლების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EULAR (ACR Meeting abstract of EULAR imaging recommendations)",
+    "title": "EULAR recommendations for the use of imaging in spondyloarthritis in clinical practice",
+    "year": 2015,
+    "url": "https://acrabstracts.org/abstract/eular-recommendations-for-the-use-of-imaging-in-spondyloarthritis-in-clinical-practice/",
+    "type": "guideline",
+    "supports": "Current until replaced: conventional radiography of SIJ as first imaging method; MRI alternative first method in young patients/short symptom duration; MRI SIJ if radiography non-diagnostic and axSpA still suspected; sonography and scintigraphy not recommended."
+   },
+   {
+    "org": "The Limbic (news report on EULAR 2026 imaging update)",
+    "title": "MRI replaces X-ray as first test for axSpA",
+    "year": 2026,
+    "url": "https://thelimbic.com/rheumatology/mri-replaces-x-ray-as-first-test-for-axspa/",
+    "type": "news",
+    "supports": "News report (secondary) on 2026 EULAR update: MRI of SIJ recommended first-line; when unavailable/contraindicated, radiography or preferably low-dose CT; verify against primary publication."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-AXSPA-009",
+  "cluster": "AXSPA",
+  "topics": [
+   73
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "საკრალურ-თეძოს სახსრის მრტ ცვლილებების ინტერპრეტაცია და დიფერენციული დიაგნოზი",
+  "recommendation_ka": "ASAS კრიტერიუმების სპეციფიკურობა შეზღუდულია და რადიოგრაფიული და არარადიოგრაფიული ფორმები ჰეტეროგენულია; ამიტომ ვიზუალიზაციის მონაცემი ან HLA-B27 ცალკე დიაგნოზს არ ადასტურებს — შეაფასეთ კლინიკურ სურათთან ერთად და გამორიცხეთ ზურგის ტკივილის სხვა მიზეზები. ბიოლოგიური თერაპიის წარუმატებლობისას ხელახლა გადახედეთ დიაგნოზს და თანმხლებ დაავადებებს (მაგ., ფიბრომიალგია, მექანიკური ტკივილი).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 27,
+    "unit": "label",
+    "meaning_ka": "HLA-B27"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ASAS-EULAR",
+    "title": "ASAS-EULAR recommendations for the management of axial spondyloarthritis: 2022 update (Ann Rheum Dis 2023;82:19-34)",
+    "year": 2023,
+    "url": "https://ard.bmj.com/content/82/1/19",
+    "type": "guideline",
+    "supports": "Treatment failure should prompt re-evaluation of the diagnosis and consideration of comorbidities."
+   },
+   {
+    "org": "ASAS (Rudwaleit et al., Ann Rheum Dis 2009)",
+    "title": "The development of ASAS classification criteria for axial spondyloarthritis (part II): validation and final selection",
+    "year": 2009,
+    "url": "https://ard.bmj.com/content/68/6/777.long",
+    "type": "guideline",
+    "supports": "Current edition. Concerns about specificity of classification criteria; heterogeneity between radiographic and non-radiographic axSpA (current edition of criteria)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

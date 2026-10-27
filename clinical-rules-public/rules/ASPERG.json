@@ -1,0 +1,776 @@
+[
+ {
+  "rule_id": "PUB-ASPERG-001",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "evaluation",
+  "population": "immunocompromised",
+  "condition_ka": "ინვაზიური ფილტვის ასპერგილოზის (IPA) ეჭვი მაღალი რისკის პაციენტში",
+  "recommendation_ka": "რისკის ჯგუფებია: გახანგრძლივებული ნეიტროპენია, ალოგენური ჰემოპოეზური ღეროვანი უჯრედების გადანერგვა (HSCT), სოლიდური ორგანოს ტრანსპლანტაცია, თანდაყოლილი ან შეძენილი იმუნოდეფიციტი და კორტიკოსტეროიდების გამოყენება. IPA-ს კლინიკური ეჭვისას ჩაატარეთ გულმკერდის კომპიუტერული ტომოგრაფია (CT) მიუხედავად რენტგენოგრაფიის შედეგისა; კონტრასტი რუტინულად არ არის საჭირო — მხოლოდ მაშინ, როცა კვანძი/მასა მსხვილ სისხლძარღვთან ახლოსაა. რეკომენდებულია ბრონქოსკოპია ბრონქოალვეოლური ლავაჟით (BAL) — კულტურა, ციტოლოგია და გალაქტომანანი (GM); პერიფერიული კვანძებისას განიხილეთ პერკუტანული ან ენდობრონქული ბიოფსია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Chest CT whenever IPA is suspected regardless of chest radiograph; no routine contrast unless nodule near a large vessel; bronchoscopy with BAL with culture, cytology and GM; biopsy for peripheral nodules; lists at-risk groups (prolonged neutropenia, allogeneic HSCT, SOT, immunodeficiency, corticosteroids)."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Chest CT and bronchoscopy with BAL strongly recommended in suspected pulmonary IA."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-002",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "diagnosis",
+  "population": "immunocompromised",
+  "condition_ka": "ასპერგილოზის მიკოლოგიური და ბიომარკერული დიაგნოსტიკა",
+  "recommendation_ka": "ქსოვილი და სითხე გააგზავნეთ ერთდროულად ჰისტოპათოლოგიურ/ციტოლოგიურ და კულტურალურ კვლევაზე (პირდაპირი მიკროსკოპია, სასურველია ოპტიკური გამაღიავებლით). შრატისა და BAL-ის GM ზუსტი მარკერია ჰემატოლოგიური ავთვისებიანი სიმსივნის და HSCT-ის პაციენტებში; შრატის GM-ით რუტინული სკრინინგი არ არის რეკომენდებული ობის საწინააღმდეგო პროფილაქტიკის/თერაპიის ფონზე (BAL-ში გამოყენება შესაძლებელია), ასევე სოლიდური ორგანოს რეციპიენტებსა და ქრონიკული გრანულომატოზური დაავადების დროს. (1→3)-β-D-გლუკანი გამოიყენება მაღალი რისკის პაციენტებში, მაგრამ Aspergillus-ისთვის სპეციფიკური არ არის. PCR შეაფასეთ მხოლოდ სხვა ტესტებთან ერთად. კლინიკურად მნიშვნელოვანი იზოლატები იდენტიფიცირდეს სახეობის კომპლექსის დონემდე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "(1→3)-β-D-გლუკანი"
+   },
+   {
+    "value": 3,
+    "unit": "label",
+    "meaning_ka": "(1→3)-β-D-გლუკანი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Submit specimens for simultaneous histopathology and culture; serum and BAL GM accurate in hematologic malignancy/HSCT; no routine blood GM screening on mold-active prophylaxis/therapy, nor in SOT or CGD; β-D-glucan recommended in high-risk patients but not Aspergillus-specific; PCR results interpreted with other tests."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Direct microscopy (preferably optical brighteners), histopathology and culture strongly recommended; serum and BAL GM recommended; PCR considered with other tests; identification to species complex level."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-003",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "ინვაზიური ფილტვის ასპერგილოზი — პირველი რიგის თერაპია",
+  "recommendation_ka": "ძლიერი ეჭვისას დაიწყეთ ანტიფუნგური თერაპია დაუყოვნებლივ, დიაგნოსტიკური შეფასების პარალელურად. IDSA (2016): პირველადი პრეპარატია ვორიკონაზოლი; ალტერნატივებია ლიპოსომური ამფოტერიცინ B, იზავუკონაზოლი ან ამფოტერიცინ B-ს სხვა ლიპიდური ფორმები. ESCMID-ECMM-ERS (2017): იზავუკონაზოლი და ვორიკონაზოლი თანაბრად სასურველი პირველი რიგის საშუალებებია, ლიპოსომურ ამფოტერიცინ B-ს ზომიერი მხარდაჭერა აქვს — ანუ ევროპული გაიდლაინი იზავუკონაზოლს ვორიკონაზოლის თანაბრად აყენებს, ამერიკული კი ალტერნატივად. ექინოკანდინით პირველადი მონოთერაპია არ არის რეკომენდებული.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2016,
+    "unit": "label",
+    "meaning_ka": "IDSA გაიდლაინის წელი"
+   },
+   {
+    "value": 2017,
+    "unit": "label",
+    "meaning_ka": "ESCMID-ECMM-ERS გაიდლაინის წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Primary treatment with voriconazole; early therapy while diagnostic evaluation is conducted; alternatives liposomal AmB, isavuconazole or other lipid AmB; primary echinocandin therapy not recommended."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Isavuconazole and voriconazole preferred first-line for pulmonary IA; liposomal amphotericin B moderately supported."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-004",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ვორიკონაზოლის დოზირება მოზრდილებში",
+  "recommendation_ka": "ვორიკონაზოლი: დამტვირთავი დოზა 6 მგ/კგ ინტრავენურად ყოველ 12 საათში, შემდეგ შემანარჩუნებელი 4 მგ/კგ ყოველ 12 საათში; პერორალური შემანარჩუნებელი დოზა 200 მგ დღეში ორჯერ. რეკომენდებულია წონაზე დაფუძნებული დოზირება და თერაპიული წამლის მონიტორინგი (იხ. TDM).",
+  "doses": [
+   {
+    "drug": "voriconazole",
+    "amount": 6,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "every 12 h (loading)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "voriconazole",
+    "amount": 4,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "every 12 h (maintenance)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "voriconazole",
+    "amount": 200,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily (maintenance)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "h",
+    "meaning_ka": "დოზირების ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Voriconazole in adults is loaded at 6 mg/kg/dose twice daily followed by 4 mg/kg/dose twice daily; 200 mg oral twice daily used as adult oral comparator; weight-based dosing recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-005",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "dosing",
+  "population": "child",
+  "condition_ka": "ვორიკონაზოლის დოზირება ბავშვებში",
+  "recommendation_ka": "ბავშვებში მკურნალობის არჩევანი იგივეა, რაც მოზრდილებში, მაგრამ დოზები განსხვავდება და ხშირია არასაკმარისი დოზირება. ვორიკონაზოლი: ინტრავენური დამტვირთავი 9 მგ/კგ დღეში ორჯერ, შემანარჩუნებელი 8 მგ/კგ დღეში ორჯერ; პერორალური 9 მგ/კგ დღეში ორჯერ. მოზარდთა უმეტესობა დოზირდება როგორც მოზრდილი, მაგრამ 12–14 წლის მოზარდები 50 კგ-ზე ნაკლები წონით დოზირდებიან როგორც ბავშვები, 50 კგ და მეტი — როგორც მოზრდილები. აუცილებელია TDM. ESCMID-ECMM-ს 2019 წლის ცალკე პედიატრიული გაიდლაინი ნეონატალურ და პედიატრიულ თავისებურებებს მიმოიხილავს.",
+  "doses": [
+   {
+    "drug": "voriconazole",
+    "amount": 9,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "twice daily (loading)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "voriconazole",
+    "amount": 8,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "twice daily (maintenance)",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "voriconazole",
+    "amount": 9,
+    "unit": "mg/kg",
+    "route": "PO",
+    "frequency": "twice daily",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "age_years",
+    "meaning_ka": "მოზარდთა ასაკი — ქვედა ზღვარი"
+   },
+   {
+    "value": 14,
+    "unit": "age_years",
+    "meaning_ka": "მოზარდთა ასაკი — ზედა ზღვარი"
+   },
+   {
+    "value": 50,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი"
+   },
+   {
+    "value": 2019,
+    "unit": "label",
+    "meaning_ka": "პედიატრიული გაიდლაინის წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Children: IV 9 mg/kg loading twice daily, 8 mg/kg maintenance, oral 9 mg/kg/dose; adolescents 12–14 dosed as children if <50 kg and as adults if ≥50 kg; same agents as adults but different dosing."
+   },
+   {
+    "org": "ESCMID/ECMM",
+    "title": "ESCMID-ECMM guideline: diagnosis and management of invasive aspergillosis in neonates and children (Warris et al., Clin Microbiol Infect 2019)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31158517/",
+    "type": "guideline",
+    "supports": "Paediatric-specific recommendations on diagnosis, prophylaxis, treatment and TDM of IA in neonates and children."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-006",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "dosing",
+  "population": "immunocompromised",
+  "condition_ka": "ამფოტერიცინ B-ს ფორმები ასპერგილოზისას",
+  "recommendation_ka": "ამფოტერიცინ B-ს ლიპიდური ფორმები გამოიყენება, როცა აზოლები უკუნაჩვენებია ან ვერ იტანს პაციენტი. დამტკიცებული დოზები: ლიპოსომური ამფოტერიცინ B 3–5 მგ/კგ/დღეში; ამფოტერიცინ B-ს ლიპიდური კომპლექსი 5 მგ/კგ/დღეში. 10 მგ/კგ/დღეში მაღალმა დოზამ 3 მგ/კგ/დღეზე უკეთესი შედეგი არ აჩვენა. ამფოტერიცინ B-დეოქსიქოლატი დაიტოვეთ მხოლოდ რესურსშეზღუდული პირობებისთვის, სადაც ალტერნატივა არ არის.",
+  "doses": [
+   {
+    "drug": "liposomal amphotericin B",
+    "amount": 3,
+    "unit": "mg/kg/day",
+    "route": "IV",
+    "frequency": "once daily (3–5 mg/kg/day)",
+    "population": "all",
+    "max_amount": 5,
+    "max_unit": "mg/kg/day"
+   },
+   {
+    "drug": "amphotericin B lipid complex",
+    "amount": 5,
+    "unit": "mg/kg/day",
+    "route": "IV",
+    "frequency": "once daily",
+    "population": "all",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "mg/kg/day",
+    "meaning_ka": "მაღალი დოზა უპირატესობის გარეშე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Approved doses: ABLC 5 mg/kg/day and liposomal AmB 3–5 mg/kg/day; trial of 10 vs 3 mg/kg/day liposomal AmB showed similar outcomes; AmB deoxycholate reserved for resource-limited settings; lipid AmB when azoles contraindicated or not tolerated."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-007",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "კომბინირებული ანტიფუნგური თერაპია და ექინოკანდინები",
+  "recommendation_ka": "IDSA: ვორიკონაზოლის და ექინოკანდინის კომბინაცია შეიძლება განიხილოთ შერჩეულ პაციენტებში დოკუმენტირებული IPA-ით (სუსტი რეკომენდაცია); ექინოკანდინები (მიკაფუნგინი, კასპოფუნგინი) პირველად თერაპიად მხოლოდ მაშინ, როცა აზოლები და პოლიენები უკუნაჩვენებია. ESCMID-ECMM-ERS: კომბინირებული ანტიფუნგური თერაპია პირველადი მკურნალობისთვის რეკომენდებული არ არის. ორი გაიდლაინი ამ საკითხში განსხვავდება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Combination of voriconazole and an echinocandin may be considered in select patients with documented IPA (weak); echinocandins can be used when azoles and polyenes are contraindicated; primary echinocandin monotherapy not recommended."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Combinations of antifungals as primary treatment are not recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-008",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "monitoring",
+  "population": "immunocompromised",
+  "condition_ka": "მკურნალობის ხანგრძლივობა და პასუხის შეფასება",
+  "recommendation_ka": "IPA-ს მკურნალობა გააგრძელეთ მინიმუმ 6–12 კვირა, იმუნოსუპრესიის ხარისხის და ხანგრძლივობის, დაზიანების ლოკალიზაციის და გაუმჯობესების ნიშნების მიხედვით (ESCMID-იც ხანგრძლივობას კლინიკური გაუმჯობესების, იმუნოსუპრესიის და გამოსახულების პასუხის მიხედვით განსაზღვრავს). განმეორებითი გულმკერდის CT — მკურნალობის მინიმუმ 2 კვირის შემდეგ, უფრო ადრე კლინიკური გაუარესებისას. საწყისად მომატებული GM-ის მქონე ჰემატოლოგიურ/HSCT პაციენტებში შრატის GM-ის სერიული მონიტორინგი პასუხის და პროგნოზის შესაფასებლად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "week",
+    "meaning_ka": "მინიმალური ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "მინიმალური ხანგრძლივობა — ზედა ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "განმეორებითი CT-ის ვადა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Treat IPA for a minimum of 6–12 weeks depending on immunosuppression, site and improvement; follow-up chest CT after a minimum of 2 weeks, earlier if deterioration; serial serum GM monitoring in patients with elevated baseline GM."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Treatment duration based on clinical improvement, degree of immunosuppression and response on imaging."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-009",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "monitoring",
+  "population": "immunocompromised",
+  "condition_ka": "ტრიაზოლების თერაპიული წამლის მონიტორინგი (TDM)",
+  "recommendation_ka": "აზოლით მკურნალობისას ან ხანგრძლივი პროფილაქტიკისას განსაზღვრეთ შრატის მინიმალური (trough) კონცენტრაცია წონასწორული მდგომარეობის მიღწევის შემდეგ; ESCMID-ECMM-ERS ძლიერად რეკომენდებს TDM-ს ვორიკონაზოლის ნებისმიერ ფორმასა და პოზაკონაზოლის სუსპენზიაზე. ვორიკონაზოლის სამიზნე: >1–1.5 მგ/ლ ეფექტურობისთვის და <5–6 მგ/ლ ტოქსიკურობის (ძირითადად ცნს) თავიდან ასაცილებლად; 1 მგ/ლ-ზე დაბალი დონისას დღიური დოზა გაზარდეთ 50%-ით და გაიმეორეთ განსაზღვრა. აკონტროლეთ ურთიერთქმედი პრეპარატების (ციკლოსპორინი, ტაკროლიმუსი, სიროლიმუსი, CYP3A4-ის სუბსტრატები) დონეებიც.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "mg/L",
+    "meaning_ka": "ვორიკონაზოლის trough — მინიმალური ეფექტური ქვედა ზღვარი"
+   },
+   {
+    "value": 1.5,
+    "unit": "mg/L",
+    "meaning_ka": "ვორიკონაზოლის trough — ეფექტურობის ზედა მიზნობრივი ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "mg/L",
+    "meaning_ka": "ტოქსიკურობის ზღვარი — ქვედა"
+   },
+   {
+    "value": 6,
+    "unit": "mg/L",
+    "meaning_ka": "ტოქსიკურობის ზღვარი — ზედა"
+   },
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "დოზის მატება დაბალი დონისას"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. TDM once steady state reached for triazole therapy; most experts aim for voriconazole trough >1–1.5 µg/mL (=mg/L) for efficacy and <5–6 µg/mL to limit CNS toxicity; 50% dose increase for trough <1 µg/mL; monitor interacting drugs such as cyclosporine, tacrolimus, sirolimus and CYP3A4 substrates."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "TDM strongly recommended for posaconazole suspension or any form of voriconazole for IA treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-010",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "დამხმარე ღონისძიებები: იმუნოსუპრესიის შემცირება და ქირურგია",
+  "recommendation_ka": "შესაძლებლობისას შეამცირეთ ან შეწყვიტეთ იმუნოსუპრესიული პრეპარატები. ნეიტროპენიურ პაციენტებში შეიძლება განიხილოთ კოლონიის მასტიმულირებელი ფაქტორები; რეფრაქტერული ინფექციისას და ნეიტროპენიის მოსალოდნელი ხანგრძლივობით 1 კვირაზე მეტი — გრანულოციტების ტრანსფუზია. ქირურგია განიხილეთ ადვილად ხელმისაწვდომი ლოკალიზებული დაზიანებისას (ინვაზიური სინუსიტი, კანის ლოკალური დაზიანება). ასპერგილოზი არ არის აბსოლუტური უკუჩვენება შემდგომი ქიმიოთერაპიის ან HSCT-ისთვის — გადაწყვეტილება ინფექციონისტთან და ჰემატოლოგთან ერთად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "ნეიტროპენიის მოსალოდნელი ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Reduce or eliminate immunosuppressive agents when feasible; colony-stimulating factors may be considered in neutropenia; granulocyte transfusions for refractory IA with neutropenia anticipated >1 week; surgery for localized accessible disease; IA not an absolute contraindication to further chemotherapy or HSCT, decide jointly."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-011",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "რეფრაქტერული/პროგრესირებადი ასპერგილოზი (სალვაჟ თერაპია)",
+  "recommendation_ka": "ინდივიდუალური მიდგომა: გამორიცხეთ ახალი გამომწვევი, შეცვალეთ ანტიფუნგური კლასი, შეამცირეთ იმუნოსუპრესია და შერჩეულ შემთხვევებში მოახდინეთ ნეკროზული კერების რეზექცია. სალვაჟ საშუალებებია ამფოტერიცინ B-ს ლიპიდური ფორმები, მიკაფუნგინი, კასპოფუნგინი, პოზაკონაზოლი ან ითრაკონაზოლი; შესაძლებელია სხვა კლასის პრეპარატის დამატება. ანტიფუნგური მგრძნობელობის ტესტირება (AFST) ჩაატარეთ აზოლრეზისტენტობის ეჭვისას ან თერაპიაზე პასუხის არარსებობისას; ESCMID-ის მიხედვით, ინვაზიური დაავადებისას — იმ რეგიონებში, სადაც რეზისტენტობა სურვეილანსით დადასტურებულია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Salvage: individualized approach, exclude new pathogen, change antifungal class, reduce immunosuppression, resect necrotic lesions; agents include lipid AmB, micafungin, caspofungin, posaconazole, itraconazole; AFST reserved for suspected azole resistance or non-response."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "In refractory disease a personalized approach with reversal of predisposing factors, switching drug class and surgery is strongly recommended; susceptibility testing in invasive disease in regions with documented resistance."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-012",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "პირველადი ანტიფუნგური პროფილაქტიკა ჰემატოლოგიურ პაციენტებში",
+  "recommendation_ka": "გახანგრძლივებული ნეიტროპენიის მქონე მაღალი რისკის პაციენტებში (მაგ., მწვავე მიელოიდური ლეიკემიის ან მიელოდისპლაზიური სინდრომის ინდუქციური ქიმიოთერაპია) რეკომენდებულია პოზაკონაზოლი (ძლიერი რეკომენდაცია; ESCMID-იც ძლიერად რეკომენდებს AML/MDS-ის ინდუქციისას), ალტერნატივად ვორიკონაზოლი ან მიკაფუნგინი. ალოგენური HSCT-ის მქონე პაციენტებში ტრანსპლანტი-მასპინძლის წინააღმდეგ დაავადებით (GVHD) — პოზაკონაზოლი; პროფილაქტიკა გააგრძელეთ იმუნოსუპრესიის მთელი პერიოდის განმავლობაში (პრედნიზოლონის ეკვივალენტი >1 მგ/კგ/დღეში >2 კვირა, ლიმფოციტების დამაქვეითებელი აგენტები ან TNF-α ინჰიბიტორები).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "mg/kg/day",
+    "meaning_ka": "კორტიკოსტეროიდის დოზის ზღვარი"
+   },
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "კორტიკოსტეროიდის ხანგრძლივობის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Prophylaxis with posaconazole (strong), voriconazole and/or micafungin during prolonged neutropenia at high risk; posaconazole for allogeneic HSCT with GVHD; continue throughout immunosuppression (prednisone equivalent >1 mg/kg/day for >2 weeks, lymphocyte-depleting agents, TNF-α inhibition)."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Primary prophylaxis with posaconazole strongly recommended in AML or MDS receiving induction chemotherapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-013",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "პროფილაქტიკა ფილტვის და სხვა სოლიდური ორგანოს ტრანსპლანტაციისას",
+  "recommendation_ka": "ფილტვის ტრანსპლანტაციის შემდეგ ანტიფუნგური პროფილაქტიკა 3–4 თვე სისტემური ტრიაზოლით (ვორიკონაზოლი ან ითრაკონაზოლი) ან ინჰალაციური ამფოტერიცინ B-თი; სისტემური ტრიაზოლი სასურველია ობით კოლონიზაციისას (ტრანსპლანტაციამდე ან შემდეგ), ამოკვეთილ ფილტვში ობის ინფექციისას, სინუსების სოკოვანი ინფექციისას და ცალი ფილტვის ტრანსპლანტაციისას. პროფილაქტიკა განაახლეთ იმუნოსუპრესიის გაძლიერებისას (თიმოგლობულინი, ალემტუზუმაბი, მაღალდოზიანი კორტიკოსტეროიდები). სხვა სოლიდური ორგანოს რეციპიენტებში სტრატეგია ეფუძნება ინსტიტუციურ ეპიდემიოლოგიას და ინდივიდუალურ რისკფაქტორებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "პროფილაქტიკის ხანგრძლივობა — ქვედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "month",
+    "meaning_ka": "პროფილაქტიკის ხანგრძლივობა — ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Lung transplant: systemic triazole (voriconazole or itraconazole) or inhaled AmB for 3 to 4 months; systemic azole preferred with mold colonization, mold in explanted lungs, sinus fungal infection, single-lung transplant; reinitiate with thymoglobulin, alemtuzumab or high-dose steroids; nonlung SOT based on institutional epidemiology and individual risk."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-014",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "მეორადი პროფილაქტიკა",
+  "recommendation_ka": "წარმატებით ნამკურნალევი IPA-ს მქონე პაციენტებში, რომლებსაც შემდგომში კვლავ იმუნოსუპრესია (ქიმიოთერაპია, HSCT) ესაჭიროებათ, დაიწყეთ მეორადი ანტიფუნგური პროფილაქტიკა რეციდივის თავიდან ასაცილებლად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. For patients with successfully treated IPA who require subsequent immunosuppression, secondary prophylaxis should be initiated (strong recommendation)."
+   },
+   {
+    "org": "ESCMID/ECMM/ERS",
+    "title": "Diagnosis and management of Aspergillus diseases: executive summary of the 2017 ESCMID-ECMM-ERS guideline (Ullmann et al., Clin Microbiol Infect 2018)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29544767/",
+    "type": "guideline",
+    "supports": "Secondary prophylaxis strongly recommended in high-risk patients."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-015",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "prevention",
+  "population": "immunocompromised",
+  "condition_ka": "ობის ექსპოზიციის შემცირება",
+  "recommendation_ka": "ჰოსპიტალიზებული ალოგენური HSCT-ის რეციპიენტები მოათავსეთ დაცულ გარემოში; იგივე მიდგომა მიზანშეწონილია მწვავე ლეიკემიის ინდუქციის/რეინდუქციის დროს. დაცული გარემოს არარსებობისას — ცალკე პალატა, დაშორება სამშენებლო სამუშაოებისგან, პალატაში მცენარეებისა და მოჭრილი ყვავილების აკრძალვა. მაღალი რისკის ამბულატორიულმა პაციენტებმა მოერიდონ მებაღეობას, კომპოსტის/მულჩის გაშლას და მშენებლობასთან ან რემონტთან ახლო კონტაქტს. ლეიკემიისა და ტრანსპლანტაციის ცენტრებმა აწარმოონ ინვაზიური ობის ინფექციების სურვეილანსი; შემთხვევების მატება საავადმყოფოს წყაროს მოძიებას მოითხოვს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Protected environment for hospitalized allogeneic HSCT recipients and reasonably for acute leukemia induction; otherwise private room, no construction connection, no plants or cut flowers; outpatients at high risk avoid gardening, spreading mulch, construction/renovation; centres should perform surveillance of invasive mold infections."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-016",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "ემპირიული და პრეემპტიული ანტიფუნგური თერაპია ნეიტროპენიისას",
+  "recommendation_ka": "ემპირიული ანტიფუნგური თერაპია რეკომენდებულია გახანგრძლივებული ნეიტროპენიის მქონე მაღალი რისკის პაციენტებში, რომლებიც ფართო სპექტრის ანტიბიოტიკების მიუხედავად ცხელებით რჩებიან: ამფოტერიცინ B-ს ლიპიდური ფორმა, ექინოკანდინი (კასპოფუნგინი ან მიკაფუნგინი) ან ვორიკონაზოლი. მოსალოდნელი ხანმოკლე ნეიტროპენიისას (<10 დღე) ემპირიული თერაპია არ არის რეკომენდებული, თუ სხვა ნიშნები სოკოვან ინფექციაზე არ მიუთითებს. ალტერნატივაა ბიომარკერებზე (GM, β-D-გლუკანი) დაფუძნებული პრეემპტიული მიდგომა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "ხანმოკლე ნეიტროპენიის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Empiric therapy for high-risk patients with prolonged neutropenia persistently febrile on broad-spectrum antibiotics: lipid AmB, caspofungin/micafungin or voriconazole; not recommended when neutropenia anticipated <10 days; biomarker-driven preemptive approach acceptable alternative."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-017",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "ფილტვგარეშე ინვაზიური ასპერგილოზი",
+  "recommendation_ka": "ცნს-ის ასპერგილოზი — ვორიკონაზოლი (ლიპიდური ამფოტერიცინ B — აუტანლობის/რეფრაქტერობისას). ენდოფთალმიტი — სისტემური ვორიკონაზოლი + ინტრავიტრეული ვორიკონაზოლი ან ამფოტერიცინ B-დეოქსიქოლატი. ინვაზიური სინუსიტი — ქირურგიული დებრიდმენტი + ვორიკონაზოლი ან ლიპიდური ამფოტერიცინ B. ენდოკარდიტი — ადრეული ქირურგია + ვორიკონაზოლი ან ლიპიდური ამფოტერიცინ B; სარქვლის ჩანაცვლების შემდეგ განიხილეთ უვადო ანტიფუნგური თერაპია. ოსტეომიელიტი/ართრიტი — ქირურგია შესაძლებლობისას + ვორიკონაზოლი. კანის დაზიანებისას მოძებნეთ პირველადი კერა (შესაძლოა დისემინაცია).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცნობიერების ან ნევროლოგიური ცვლილება",
+   "პროპტოზი ან ორბიტული ჩართულობა",
+   "მხედველობის დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Voriconazole primary for CNS aspergillosis, lipid AmB if intolerant/refractory; endophthalmitis: systemic plus intravitreal voriconazole or intravitreal AmB deoxycholate; invasive sinusitis: surgery plus voriconazole or lipid AmB; endocarditis: early surgery, voriconazole or lipid AmB, consider lifelong therapy after valve replacement; osteomyelitis: surgery plus voriconazole; cutaneous lesions may reflect dissemination."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-ASPERG-018",
+  "cluster": "ASPERG",
+  "topics": [
+   106
+  ],
+  "rule_type": "evaluation",
+  "population": "immunocompromised",
+  "condition_ka": "გარღვევითი (breakthrough) ასპერგილოზი აზოლური პროფილაქტიკის ფონზე",
+  "recommendation_ka": "აგრესიულად დაადგინეთ სპეციფიკური დიაგნოზი (ბრონქოსკოპია და/ან CT-მართვით ბიოფსია პერიფერიული დაზიანებისას), შეამოწმეთ შრატის აზოლის დონე და ემპირიულად გადადით სხვა კლასის ანტიფუნგურ პრეპარატზე. ვორიკონაზოლის ადეკვატური ექსპოზიციის ფონზე (ბოლო trough >1 მგ/ლ) განვითარებული გარღვევითი ინფექცია მეტად მიუთითებს მუკორმიკოზზე, ვიდრე ასპერგილოზზე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "mg/L",
+    "meaning_ka": "ვორიკონაზოლის trough ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "ახალი ინფილტრატი ობის საწინააღმდეგო პროფილაქტიკის ფონზე"
+  ],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "Practice Guidelines for the Diagnosis and Management of Aspergillosis: 2016 Update (Patterson et al., Clin Infect Dis 2016;63:e1–e60)",
+    "year": 2016,
+    "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+    "type": "guideline",
+    "supports": "Current IDSA edition. Breakthrough IA: individualized approach, establish diagnosis by bronchoscopy and/or CT-guided biopsy, verify serum azole levels, switch empirically to alternative antifungal class; breakthrough despite voriconazole trough >1 µg/mL (=mg/L) may favour mucormycosis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

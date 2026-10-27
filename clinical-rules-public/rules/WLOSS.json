@@ -1,0 +1,213 @@
+[
+ {
+  "rule_id": "PUB-WLOSS-001", "cluster": "WLOSS", "topics": [14], "rule_type": "epidemiology", "population": "older_adult",
+  "condition_ka": "უნებლიე წონის კლება 65 წელზე უფროს პაციენტში",
+  "recommendation_ka": "უნებლიე წონის კლება ხანდაზმულებში ასოცირებულია ავადობისა და სიკვდილობის ზრდასთან და ყოველთვის საჭიროებს შეფასებას. არაავთვისებიანი მიზეზები (ფსიქიატრიული, გასტროენტეროლოგიური, ენდოკრინული, მედიკამენტური, სოციალური) უფრო ხშირია, თუმცა ავთვისებიანი სიმსივნე შემთხვევების მესამედამდე შეადგენს. საწყისი შეფასების შემდეგ მიზეზი არ დგინდება შემთხვევათა 6–28%-ში.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 65, "unit": "age_years", "meaning_ka": "ხანდაზმული ასაკის ზღვარი"},
+   {"value": 6, "unit": "%", "meaning_ka": "დაუდგენელი მიზეზის სიხშირის ქვედა ზღვარი"},
+   {"value": 28, "unit": "%", "meaning_ka": "დაუდგენელი მიზეზის სიხშირის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "American Academy of Family Physicians (Am Fam Physician)", "title": "Unintentional Weight Loss in Older Adults (Gaddey HL, Holder KK)", "year": 2021, "url": "https://pubmed.ncbi.nlm.nih.gov/34264616/", "type": "review", "supports": "Unintentional weight loss in people >65 y is associated with increased morbidity and mortality; nonmalignant causes are more common, but malignancy accounts for up to one-third of cases; no identifiable cause in 6%-28%."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-002", "cluster": "WLOSS", "topics": [14], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "დადასტურებული უნებლიე წონის კლება, საწყისი ანამნეზი",
+  "recommendation_ka": "დაადასტურეთ წონის კლება ობიექტურად (წინა გაზომვები, ტანსაცმლის ზომის ცვლილება) და შეაფასეთ საკვების მიღების შემცირება და მისი მიზეზები: მედიკამენტები და პოლიფარმაცია (გემოს შეცვლა, გულისრევა), პირის ღრუს და კბილების მდგომარეობა, დისფაგია, გასტროინტესტინური ჩივილები, დეპრესია, კოგნიტური დარღვევა, სოციალური იზოლაცია და ფინანსური შეზღუდვები. შეაფასეთ ანთებითი ან ქრონიკული დაავადების ნიშნები.",
+  "doses": [], "numeric_values": [],
+  "red_flags_ka": ["დისფაგია", "ღამის ოფლიანობა ან ცხელება", "ახალი კვანძი ან ლიმფადენოპათია"],
+  "sources": [
+   {"org": "American Academy of Family Physicians (Am Fam Physician)", "title": "Unintentional Weight Loss in Older Adults", "year": 2021, "url": "https://pubmed.ncbi.nlm.nih.gov/34264616/", "type": "review", "supports": "Medication use and polypharmacy can interfere with taste or induce nausea and should not be overlooked; social factors such as isolation and financial constraints may contribute."},
+   {"org": "GLIM (ESPEN/ASPEN and global nutrition societies)", "title": "GLIM criteria for the diagnosis of malnutrition - A consensus report from the global clinical nutrition community", "year": 2019, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6438340/", "type": "consensus", "supports": "Reduced food intake may result from poor oral health, medication side effects, depression, dysphagia, GI complaints; GI symptoms are supportive indicators of impaired intake or absorption."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-003", "cluster": "WLOSS", "topics": [14], "rule_type": "evaluation", "population": "older_adult",
+  "condition_ka": "უნებლიე წონის კლება, რომლის მიზეზი ანამნეზითა და გასინჯვით არ დგინდება",
+  "recommendation_ka": "საწყისი გამოკვლევები: სისხლის საერთო ანალიზი, ძირითადი მეტაბოლური პანელი, ღვიძლის ფუნქციური სინჯები, ფარისებრი ჯირკვლის ფუნქცია, C-რეაქტიული ცილა, ედსი, ლაქტატდეჰიდროგენაზა, ფერიტინი, ცილების ელექტროფორეზი, შარდის საერთო ანალიზი, გულმკერდის რენტგენოგრაფია და განავალში ფარული სისხლის გამოკვლევა, ასევე ასაკის შესაბამისი კიბოს სკრინინგის განახლება. დამატებითი ვიზუალიზაცია და ინვაზიური კვლევები დანიშნეთ მხოლოდ საწყისი შეფასების მონაცემების მიხედვით.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "American Academy of Family Physicians (Am Fam Physician)", "title": "Unintentional Weight Loss in Older Adults", "year": 2021, "url": "https://pubmed.ncbi.nlm.nih.gov/34264616/", "type": "review", "supports": "Recommended tests: age-appropriate cancer screenings, CBC, basic metabolic panel, LFTs, thyroid function, CRP, ESR, LDH, ferritin, protein electrophoresis, urinalysis; chest radiography and fecal occult blood testing; further imaging/invasive testing based on initial evaluation."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-004", "cluster": "WLOSS", "topics": [14], "rule_type": "monitoring", "population": "older_adult",
+  "condition_ka": "უნებლიე წონის კლება, საწყისი შეფასება და გამოკვლევები ნორმაშია",
+  "recommendation_ka": "„ბრმა“ ფართო გამოკვლევების ნაცვლად რეკომენდებულია 3–6 თვიანი დაკვირვების პერიოდი წონის რეგულარული კონტროლით; განმეორებითი ვიზიტების სიხშირე განსაზღვრეთ ექიმისა და პაციენტის შეთანხმებით. ახალი სიმპტომის ან წონის კლების გაგრძელების შემთხვევაში განაახლეთ შეფასება.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 3, "unit": "month", "meaning_ka": "დაკვირვების პერიოდის მინიმუმი"},
+   {"value": 6, "unit": "month", "meaning_ka": "დაკვირვების პერიოდის მაქსიმუმი"}
+  ],
+  "red_flags_ka": ["წონის კლების გაგრძელება დაკვირვების პერიოდში", "ახალი ლოკალური სიმპტომი"],
+  "sources": [
+   {"org": "American Academy of Family Physicians (Am Fam Physician)", "title": "Unintentional Weight Loss in Older Adults", "year": 2021, "url": "https://pubmed.ncbi.nlm.nih.gov/34264616/", "type": "review", "supports": "When the initial evaluation is unremarkable, a three- to six-month observation period is recommended with follow-up based on clinician and patient preferences."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-005", "cluster": "WLOSS", "topics": [14], "rule_type": "red_flag", "population": "older_adult",
+  "condition_ka": "60 წლის ან უფროსი ასაკი და აუხსნელი წონის კლება — სხეულის მასის 5%-ზე მეტი 6 თვის განმავლობაში",
+  "recommendation_ka": "ეს არის რამდენიმე კიბოს (კოლორექტული, საყლაპავ-კუჭის, ფილტვის, პროსტატის, პანკრეასის, საშარდე გზების) არასპეციფიკური ნიშანი. მოძებნეთ დამატებითი სიმპტომები და ნიშნები, რომლებიც სავარაუდო ლოკალიზაციას დააზუსტებს, და შესთავაზეთ სასწრაფო გამოკვლევა ან კიბოს ეჭვის სწრაფი გზით / არასპეციფიკური სიმპტომების გზით მიმართვა. იგივე მიდგომა გამოიყენეთ აუხსნელი მადის დაკარგვისას.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 60, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი"},
+   {"value": 5, "unit": "%", "meaning_ka": "წონის კლების ზღვარი"},
+   {"value": 6, "unit": "month", "meaning_ka": "დროის ფანჯარა"}
+  ],
+  "red_flags_ka": ["აუხსნელი წონის კლება >5% 6 თვეში 60+ ასაკში", "აუხსნელი მადის დაკარგვა"],
+  "sources": [
+   {"org": "NICE", "title": "Suspected cancer: recognition and referral (NG12), recommendations 1.13.2-1.13.3", "year": 2026, "url": "https://www.nice.org.uk/guidance/ng12/chapter/Recommendations-organised-by-site-of-cancer", "type": "guideline", "supports": "For people aged 60 and over with unexplained weight loss (>5% mean weight loss within 6 months), a symptom of several cancers, assess for additional symptoms and offer urgent investigation or suspected cancer / non-specific symptoms pathway referral [2026]; similar for unexplained appetite loss."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-006", "cluster": "WLOSS", "topics": [14], "rule_type": "referral", "population": "adult",
+  "condition_ka": "წონის კლება ზედა გასტროინტესტინური სიმპტომებით",
+  "recommendation_ka": "55 წლის ან უფროსი ასაკი, წონის კლება და ეპიგასტრიუმის ტკივილი, რეფლუქსი ან დისპეფსია — მიმართეთ საყლაპავის/კუჭის კიბოს ეჭვის სწრაფი გზით; დისფაგია ნებისმიერ ასაკში — იგივე. 60 წლის ან უფროსი ასაკი, წონის კლება და დიარეა, ზურგის ან მუცლის ტკივილი, გულისრევა, ღებინება, ყაბზობა ან ახლად გამოვლენილი დიაბეტი — განიხილეთ სასწრაფო კომპიუტერული ტომოგრაფია (ან ულტრაბგერა, თუ კტ ხელმიუწვდომელია) პანკრეასის კიბოს გამოსარიცხად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 55, "unit": "age_years", "meaning_ka": "საყლაპავის/კუჭის კიბოს მიმართვის ასაკობრივი ზღვარი"},
+   {"value": 60, "unit": "age_years", "meaning_ka": "პანკრეასის კიბოს კტ-ის ასაკობრივი ზღვარი"}
+  ],
+  "red_flags_ka": ["დისფაგია", "სიყვითლე", "ახლად გამოვლენილი დიაბეტი წონის კლებით"],
+  "sources": [
+   {"org": "NICE", "title": "Suspected cancer: recognition and referral (NG12), recommendations 1.2.1, 1.2.5, 1.2.7", "year": 2026, "url": "https://www.nice.org.uk/guidance/ng12/chapter/Recommendations-organised-by-site-of-cancer", "type": "guideline", "supports": "Suspected cancer pathway referral for oesophageal/stomach cancer if dysphagia, or aged 55+ with weight loss and upper abdominal pain, reflux or dyspepsia; consider urgent direct-access CT (or US) for pancreatic cancer in people 60+ with weight loss and diarrhoea, back pain, abdominal pain, nausea, vomiting, constipation or new-onset diabetes."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-007", "cluster": "WLOSS", "topics": [14], "rule_type": "referral", "population": "adult",
+  "condition_ka": "წონის კლება რესპირაციული ან ქვედა გასტროინტესტინური სიმპტომებით",
+  "recommendation_ka": "40 წლის ან უფროს პირს 2 ან მეტი აუხსნელი სიმპტომით (ხველა, დაღლილობა, ქოშინი, გულმკერდის ტკივილი, წონის კლება, მადის დაკარგვა), ან ოდესმე მწეველს 1 ან მეტი ასეთი სიმპტომით, შესთავაზეთ სასწრაფო გულმკერდის რენტგენოგრაფია ფილტვის კიბოს გამოსარიცხად. კოლორექტული კიბოს ეჭვის მიმართვის გადასაწყვეტად შესთავაზეთ განავლის რაოდენობრივი იმუნოქიმიური ტესტი (FIT): 40 წლის ან უფროსს აუხსნელი წონის კლებით და მუცლის ტკივილით, ან 50 წლის ან უფროსს აუხსნელი წონის კლებით.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 40, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი (ფილტვი; FIT მუცლის ტკივილით)"},
+   {"value": 2, "unit": "count", "meaning_ka": "სიმპტომების რაოდენობა არამწეველში"},
+   {"value": 1, "unit": "count", "meaning_ka": "სიმპტომების რაოდენობა ოდესმე მწეველში"},
+   {"value": 50, "unit": "age_years", "meaning_ka": "FIT-ის ასაკობრივი ზღვარი იზოლირებული წონის კლებისას"}
+  ],
+  "red_flags_ka": ["ჰემოპტიზი 40+ ასაკში", "რექტალური სისხლდენა"],
+  "sources": [
+   {"org": "NICE", "title": "Suspected cancer: recognition and referral (NG12), recommendations 1.1.2 and 1.3.1", "year": 2026, "url": "https://www.nice.org.uk/guidance/ng12/chapter/Recommendations-organised-by-site-of-cancer", "type": "guideline", "supports": "Urgent direct-access chest X-ray in people 40+ with 2 or more unexplained symptoms (cough, fatigue, SOB, chest pain, weight loss, appetite loss) or ever-smokers with 1 or more; offer quantitative FIT to guide colorectal referral in adults 40+ with unexplained weight loss and abdominal pain, or 50+ with unexplained weight loss."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-008", "cluster": "WLOSS", "topics": [14], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "წონის კლება — მალნუტრიციის დიაგნოზი GLIM კრიტერიუმებით",
+  "recommendation_ka": "ჯერ ჩაატარეთ ვალიდირებული სკრინინგი, შემდეგ დიაგნოზისთვის საჭიროა მინიმუმ ერთი ფენოტიპური და ერთი ეტიოლოგიური კრიტერიუმი. ფენოტიპური: წონის კლება >5% ბოლო 6 თვეში ან >10% 6 თვეზე მეტ პერიოდში; სმი <20 კგ/მ² (70 წლამდე) ან <22 კგ/მ² (70 წელი და მეტი); კუნთოვანი მასის შემცირება. ეტიოლოგიური: საკვების მიღება ენერგეტიკული მოთხოვნილების ≤50% 1 კვირაზე მეტ ხანს, ან ნებისმიერი შემცირება 2 კვირაზე მეტ ხანს, ან შეწოვის დარღვევა; ანთება/დაავადების ტვირთი.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 5, "unit": "%", "meaning_ka": "წონის კლება 6 თვეში"},
+   {"value": 6, "unit": "month", "meaning_ka": "დროის ფანჯარა"},
+   {"value": 10, "unit": "%", "meaning_ka": "წონის კლება 6 თვეზე მეტ პერიოდში"},
+   {"value": 20, "unit": "kg/m2", "meaning_ka": "სმი-ის ზღვარი 70 წლამდე"},
+   {"value": 70, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი სმი-სთვის"},
+   {"value": 22, "unit": "kg/m2", "meaning_ka": "სმი-ის ზღვარი 70+ ასაკში"},
+   {"value": 50, "unit": "%", "meaning_ka": "ენერგეტიკული მოთხოვნილების წილი"},
+   {"value": 1, "unit": "week", "meaning_ka": "მიღების შემცირების ხანგრძლივობა ≤50%-ისას"},
+   {"value": 2, "unit": "week", "meaning_ka": "ნებისმიერი შემცირების ხანგრძლივობა"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "GLIM (ESPEN/ASPEN and global nutrition societies)", "title": "GLIM criteria for the diagnosis of malnutrition - A consensus report from the global clinical nutrition community", "year": 2019, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6438340/", "type": "consensus", "supports": "Table 3: weight loss >5% within past 6 months or >10% beyond 6 months; BMI <20 if <70 y or <22 if >70 y (Asia <18.5/<20); reduced muscle mass; reduced intake <=50% of ER >1 week or any reduction >2 weeks, or chronic GI malabsorption; inflammation. Requires >=1 phenotypic and >=1 etiologic criterion."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-009", "cluster": "WLOSS", "topics": [14], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "GLIM-ით დადასტურებული მალნუტრიციის სიმძიმის განსაზღვრა",
+  "recommendation_ka": "I სტადია (ზომიერი): წონის კლება 5–10% ბოლო 6 თვეში ან 10–20% 6 თვეზე მეტ პერიოდში, ან სმი <20 კგ/მ² (70 წლამდე) / <22 კგ/მ² (70 წელი და მეტი). II სტადია (მძიმე): წონის კლება >10% ბოლო 6 თვეში ან >20% 6 თვეზე მეტ პერიოდში, ან სმი <18.5 კგ/მ² (70 წლამდე) / <20 კგ/მ² (70 წელი და მეტი). აზიური პოპულაციისთვის სმი-ის ზღვრები დაბალია. ეტიოლოგიური კრიტერიუმი წარმართავს მკურნალობას.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 5, "unit": "%", "meaning_ka": "ზომიერი სტადიის ქვედა ზღვარი 6 თვეში"},
+   {"value": 10, "unit": "%", "meaning_ka": "ზომიერი/მძიმე ზღვარი"},
+   {"value": 20, "unit": "%", "meaning_ka": "ზღვარი 6 თვეზე მეტ პერიოდში; ასევე სმი 20 კგ/მ²"},
+   {"value": 6, "unit": "month", "meaning_ka": "დროის ფანჯარა"},
+   {"value": 22, "unit": "kg/m2", "meaning_ka": "სმი ზომიერი სტადია 70+"},
+   {"value": 18.5, "unit": "kg/m2", "meaning_ka": "სმი მძიმე სტადია 70 წლამდე"},
+   {"value": 70, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი"}
+  ],
+  "red_flags_ka": ["მძიმე (II სტადიის) მალნუტრიცია"],
+  "sources": [
+   {"org": "GLIM (ESPEN/ASPEN and global nutrition societies)", "title": "GLIM criteria for the diagnosis of malnutrition (Table 4, severity grading)", "year": 2019, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6438340/", "type": "consensus", "supports": "Stage 1 (moderate): 5-10% within 6 mo or 10-20% beyond 6 mo; BMI <20 if <70 y, <22 if >=70 y. Stage 2 (severe): >10% within 6 mo or >20% beyond 6 mo; BMI <18.5 if <70 y, <20 if >=70 y."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-010", "cluster": "WLOSS", "topics": [14], "rule_type": "evaluation", "population": "adult",
+  "condition_ka": "მალნუტრიციის სკრინინგი და კვებითი მხარდაჭერის ჩვენება",
+  "recommendation_ka": "მალნუტრიციის სკრინინგი (მაგ., MUST: სმი, უნებლიე წონის კლების პროცენტი, საკვების მიღების შემცირების ხანგრძლივობა) ჩაატარეთ ოჯახის ექიმთან რეგისტრაციისას, ჰოსპიტალიზაციისას (შემდეგ ყოველკვირეულად) და კლინიკური ეჭვისას. კვებითი მხარდაჭერა განიხილეთ, თუ: სმი <18.5 კგ/მ²; უნებლიე წონის კლება >10% ბოლო 3–6 თვეში; ან სმი <20 კგ/მ² და წონის კლება >5% ბოლო 3–6 თვეში; ასევე თუ პაციენტი თითქმის არ იკვებება 5 დღეზე მეტ ხანს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 18.5, "unit": "kg/m2", "meaning_ka": "სმი-ის ზღვარი"},
+   {"value": 10, "unit": "%", "meaning_ka": "წონის კლების ზღვარი"},
+   {"value": 3, "unit": "month", "meaning_ka": "დროის ფანჯრის ქვედა ზღვარი"},
+   {"value": 6, "unit": "month", "meaning_ka": "დროის ფანჯრის ზედა ზღვარი"},
+   {"value": 20, "unit": "kg/m2", "meaning_ka": "სმი-ის ზღვარი წონის კლებასთან ერთად"},
+   {"value": 5, "unit": "%", "meaning_ka": "წონის კლება სმი <20-ისას; ასევე 5 დღე შიმშილი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Nutrition support for adults: oral nutrition support, enteral tube feeding and parenteral nutrition (CG32), recommendations 1.2-1.3", "year": 2017, "url": "https://www.nice.org.uk/guidance/cg32/chapter/Recommendations", "type": "guideline", "supports": "Current edition (published 2006, last updated 2017). Screen at GP registration and with clinical concern, inpatients on admission and weekly (e.g. MUST). Consider nutrition support if BMI <18.5, unintentional weight loss >10% in 3-6 months, or BMI <20 and weight loss >5% in 3-6 months; or eaten little/nothing >5 days."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-011", "cluster": "WLOSS", "topics": [14], "rule_type": "red_flag", "population": "adult",
+  "condition_ka": "მნიშვნელოვანი წონის კლება — რეფიდინგ-სინდრომის რისკი კვებითი მხარდაჭერის დაწყებისას",
+  "recommendation_ka": "მაღალი რისკი: ერთ-ერთი — სმი <16 კგ/მ², წონის კლება >15% 3–6 თვეში, 10 დღეზე მეტი თითქმის ნულოვანი კვება, დაბალი კალიუმი/ფოსფატი/მაგნიუმი; ან ორი — სმი <18.5 კგ/მ², წონის კლება >10%, 5 დღეზე მეტი მინიმალური კვება, ალკოჰოლის ავადმოხმარება ან ინსულინი/ქიმიოთერაპია/ანტაციდები/შარდმდენები. ასეთ პაციენტში კვება დაიწყეთ დაბალი ენერგიით, გაზარდეთ ნელა 4–7 დღის განმავლობაში, მიეცით თიამინი 200–300 მგ დღეში კვების დაწყებამდე და პირველი 10 დღის განმავლობაში, აკონტროლეთ ელექტროლიტები.",
+  "doses": [
+   {"drug": "thiamine", "amount": 200, "unit": "mg", "route": "PO", "frequency": "daily, before and during first 10 days of feeding", "population": "adult", "max_amount": 300, "max_unit": "mg"}
+  ],
+  "numeric_values": [
+   {"value": 16, "unit": "kg/m2", "meaning_ka": "სმი — ერთი კრიტერიუმი"},
+   {"value": 15, "unit": "%", "meaning_ka": "წონის კლება — ერთი კრიტერიუმი"},
+   {"value": 3, "unit": "month", "meaning_ka": "დროის ფანჯრის ქვედა ზღვარი"},
+   {"value": 6, "unit": "month", "meaning_ka": "დროის ფანჯრის ზედა ზღვარი"},
+   {"value": 10, "unit": "day", "meaning_ka": "მინიმალური კვების ხანგრძლივობა; ასევე 10% წონის კლება და თიამინის 10 დღე"},
+   {"value": 18.5, "unit": "kg/m2", "meaning_ka": "სმი — ორი კრიტერიუმიდან"},
+   {"value": 5, "unit": "day", "meaning_ka": "მინიმალური კვება — ორი კრიტერიუმიდან"},
+   {"value": 4, "unit": "day", "meaning_ka": "სრულ მოთხოვნილებამდე გაზრდის ქვედა ზღვარი"},
+   {"value": 7, "unit": "day", "meaning_ka": "სრულ მოთხოვნილებამდე გაზრდის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": ["ჰიპოფოსფატემია", "ჰიპოკალიემია", "არითმია კვების დაწყებისას"],
+  "sources": [
+   {"org": "NICE", "title": "Nutrition support for adults (CG32), recommendations 1.4.6-1.4.8 (box 1)", "year": 2017, "url": "https://www.nice.org.uk/guidance/cg32/chapter/Recommendations", "type": "guideline", "supports": "Current edition (last updated 2017). High refeeding risk criteria (BMI <16, weight loss >15% in 3-6 months, little intake >10 days, low K/PO4/Mg; or 2 of BMI <18.5, >10% loss, little intake >5 days, alcohol abuse or insulin/chemotherapy/antacids/diuretics). Start at max 10 kcal/kg/day, increase slowly to full needs by 4-7 days; oral thiamin 200-300 mg daily before and during first 10 days."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-012", "cluster": "WLOSS", "topics": [14], "rule_type": "treatment", "population": "older_adult",
+  "condition_ka": "უნებლიე წონის კლება ხანდაზმულში — მართვა",
+  "recommendation_ka": "მკურნალობა მიმართეთ ძირითადი მიზეზისკენ, თუ ის დადგენილია. ჩაატარეთ დიეტის მოდიფიკაცია პაციენტის გემოვნების და ღეჭვის/ყლაპვის შესაძლებლობების გათვალისწინებით, უზრუნველყავით კვებაში დახმარება, გადახედეთ წონის კლების გამომწვევ მედიკამენტებს და გააძლიერეთ სოციალური მხარდაჭერა. AAFP-ის მიმოხილვით მადის სტიმულატორები და მაღალკალორიული დანამატები რუტინულად არ არის რეკომენდებული; NICE კი მალნუტრიციის კრიტერიუმების შემთხვევაში პერორალური კვებითი მხარდაჭერის (მათ შორის დანამატების) განხილვას ურჩევს — მიდგომა ინდივიდუალურად შეარჩიეთ.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "American Academy of Family Physicians (Am Fam Physician)", "title": "Unintentional Weight Loss in Older Adults", "year": 2021, "url": "https://pubmed.ncbi.nlm.nih.gov/34264616/", "type": "review", "supports": "Treat underlying cause; dietary modifications considering preferences and chewing/swallowing; appetite stimulants and high-calorie supplements are not recommended; focus on feeding assistance, addressing medications, appealing foods, social support."},
+   {"org": "NICE", "title": "Nutrition support for adults (CG32), recommendation 1.3.3", "year": 2017, "url": "https://www.nice.org.uk/guidance/cg32/chapter/Recommendations", "type": "guideline", "supports": "Current edition. Consider oral, enteral or parenteral nutrition support for people who are malnourished or at risk of malnutrition."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-WLOSS-013", "cluster": "WLOSS", "topics": [14], "rule_type": "treatment", "population": "older_adult",
+  "condition_ka": "წონის კლება 65 წელზე უფროს პაციენტში — მადის მასტიმულირებელი წამლის განხილვა",
+  "recommendation_ka": "მოერიდეთ მეგესტროლს: წონაზე მისი ეფექტი მინიმალურია, ხოლო ზრდის თრომბოზული მოვლენების და, შესაძლოა, სიკვდილის რისკს ხანდაზმულებში (Beers-ის კრიტერიუმები, ძლიერი რეკომენდაცია). ასევე მოერიდეთ ზრდის ჰორმონს, გარდა დადასტურებული დეფიციტისა.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 65, "unit": "age_years", "meaning_ka": "Beers-ის კრიტერიუმების გამოყენების ასაკი"}
+  ],
+  "red_flags_ka": ["თრომბოემბოლიის ანამნეზი მეგესტროლის ფონზე"],
+  "sources": [
+   {"org": "American Geriatrics Society", "title": "American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults", "year": 2023, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12478568/", "type": "guideline", "supports": "Applies to adults 65+. Megestrol: minimal effect on weight; increases risk of thrombotic events and possibly death in older adults - Avoid (moderate quality, strong). Growth hormone: avoid except rigorously diagnosed deficiency."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

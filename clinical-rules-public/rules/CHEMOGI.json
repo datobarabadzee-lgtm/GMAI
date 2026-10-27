@@ -1,0 +1,1084 @@
+[
+ {
+  "rule_id": "PUB-CHEMOGI-001",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "ქიმიოთერაპიით გამოწვეული დიარეის რისკის ფაქტორები",
+  "recommendation_ka": "ფტორპირიმიდინების (5-ფტორურაცილი, კაპეციტაბინი) ან ირინოტეკანის შემცველი რეჟიმები დიარეას 50–80%-მდე სიხშირით იწვევს; დიარეა ხშირია ასევე ტიროზინკინაზას ინჰიბიტორებით და იმუნური საგუშაგო წერტილების ინჰიბიტორებით (განსაკუთრებით anti-CTLA-4 და კომბინირებული რეჟიმებით). დიჰიდროპირიმიდინ დეჰიდროგენაზას (DPD) დეფიციტი (ევროპული წარმოშობის პოპულაციაში 3–5%) 5-ფტორურაცილით სიცოცხლისთვის საშიშ დიარეას, მუკოზიტსა და პანციტოპენიას იწვევს – ნაწილობრივი დეფიციტისას საწყისი დოზა შეამცირეთ არანაკლებ 50%-ით. UGT1A1 ჰომოზიგოტური დაქვეითებული აქტივობის ფენოტიპი ზრდის ირინოტეკანის ტოქსიკურობას. ირინოტეკანი და მაღალდოზიანი 5-ფტორურაცილი/ლეიკოვორინი ადრეულ სიკვდილობასთან (2.2–4.8%) იყო დაკავშირებული, ძირითადად კუჭ-ნაწლავის ტოქსიკურობის გამო.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "label",
+    "meaning_ka": "5-ფტორურაცილი (სახელწოდება); ასევე DPD დეფიციტის ზედა სიხშირე 5%"
+   },
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "დიარეის სიხშირე – ქვედა; ასევე დოზის შემცირება ≥50%"
+   },
+   {
+    "value": 80,
+    "unit": "%",
+    "meaning_ka": "დიარეის სიხშირე – ზედა"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "anti-CTLA-4 (სახელწოდება)"
+   },
+   {
+    "value": 3,
+    "unit": "%",
+    "meaning_ka": "DPD დეფიციტის სიხშირე – ქვედა"
+   },
+   {
+    "value": 2.2,
+    "unit": "%",
+    "meaning_ka": "ადრეული სიკვდილობა – ქვედა"
+   },
+   {
+    "value": 4.8,
+    "unit": "%",
+    "meaning_ka": "ადრეული სიკვდილობა – ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Fluoropyrimidine- or irinotecan-containing regimens associated with diarrhea rates 50–80%; ICI-associated diarrhea higher with anti-CTLA-4 and dual regimens; irinotecan + high-dose 5-FU/LV early death rates 2.2–4.8%, mainly GI toxicity."
+   },
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "DPD deficiency (3–5% of Caucasians) causes life-threatening diarrhoea, mucositis, pancytopaenia with 5-FU; dose reduction of at least 50% recommended in partial deficiency; homozygous UGT1A1*28 increases irinotecan toxicity (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-002",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქიმიოთერაპიის ფონზე დიარეა – სიმძიმის შეფასება (NCI CTCAE)",
+  "recommendation_ka": "დიარეის ხარისხი განსაზღვრეთ საწყისთან შედარებით განავლის სიხშირის მატებით: 1 ხარისხი – დღეში 4-ზე ნაკლები; 2 ხარისხი – 4–6, ყოველდღიური ინსტრუმენტული აქტივობის შეზღუდვით; 3 ხარისხი – ≥7, ჰოსპიტალიზაციის ჩვენებით და თვითმოვლის შეზღუდვით; 4 ხარისხი – სიცოცხლისთვის საშიში შედეგები, სასწრაფო ჩარევა. სტომის შემთხვევაში შეაფასეთ გამონადენის მატება. გამოკითხეთ ბოლო 24 საათის სიხშირე, კონსისტენცია, თავბრუსხვევა, ორთოსტატული სიმპტომები, ცხელება, რექტალური სისხლდენა; ფიზიკალურად შეაფასეთ ჰემოდინამიკა და დეჰიდრატაცია. დიარეოგენული ქიმიოთერაპიის დროს მონიტორინგი – სულ მცირე კვირაში ერთხელ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "score",
+    "meaning_ka": "CTCAE 1 ხარისხი"
+   },
+   {
+    "value": 2,
+    "unit": "score",
+    "meaning_ka": "CTCAE 2 ხარისხი"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "CTCAE 3 ხარისხი"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "CTCAE 4 ხარისხი; ასევე 4 განავალი/დღე – ზღვარი"
+   },
+   {
+    "value": 6,
+    "unit": "count",
+    "meaning_ka": "2 ხარისხის ზედა ზღვარი (განავალი/დღე)"
+   },
+   {
+    "value": 7,
+    "unit": "count",
+    "meaning_ka": "3 ხარისხის ზღვარი (განავალი/დღე)"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "ანამნეზის პერიოდი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "CTCAE diarrhea: grade 1 increase <4 stools/day over baseline; grade 2 4–6 limiting instrumental ADL; grade 3 ≥7, hospitalization indicated, limiting self-care ADL; grade 4 life-threatening; history of stool frequency in past 24 h, dizziness, orthostasis, fever, rectal bleeding; at least weekly monitoring during diarrheagenic chemotherapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-003",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "გართულებული ქიმიოთერაპიული დიარეა – ჰოსპიტალიზაციის კრიტერიუმები",
+  "recommendation_ka": "1–2 ხარისხის დიარეა გართულებულად ითვლება, თუ თან ახლავს ზომიერი ან ძლიერი სპაზმური ტკივილი, ≥2 ხარისხის გულისრევა/ღებინება, ფუნქციური სტატუსის დაქვეითება, ცხელება, სეფსისი, ნეიტროპენია, აშკარა სისხლდენა ან დეჰიდრატაცია; 3–4 ხარისხის დიარეა ყოველთვის გართულებულია. ასეთი პაციენტები ჰოსპიტალიზაციას, მჭიდრო მონიტორინგს, ინტენსიურ მკურნალობას და მულტიდისციპლინურ (გასტროენტეროლოგის მონაწილეობით) შეფასებას საჭიროებს. გაურთულებელი 1–2 ხარისხის დიარეა კონსერვატიულად იმართება – პერორალური ჰიდრატაცია და ლოპერამიდი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "score",
+    "meaning_ka": "CTCAE 1 ხარისხი"
+   },
+   {
+    "value": 2,
+    "unit": "score",
+    "meaning_ka": "CTCAE 2 ხარისხი; ასევე ≥2 ხარისხის ღებინება"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "CTCAE 3 ხარისხი"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "CTCAE 4 ხარისხი"
+   }
+  ],
+  "red_flags_ka": [
+   "ცხელება ან სეფსისი",
+   "ნეიტროპენია",
+   "აშკარა სისხლი განავალში",
+   "დეჰიდრატაცია",
+   "3–4 ხარისხის დიარეა"
+  ],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Grade 1–2 diarrhoea without complicating features managed conservatively with oral hydration and loperamide; mild-moderate diarrhoea with cramping, nausea/vomiting, diminished PS, fever, sepsis, neutropaenia, bleeding or dehydration, and severe diarrhoea should be hospitalised, monitored and treated intensively by a multidisciplinary team (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Complicated diarrhea: grade 1–2 with moderate-severe cramping, grade ≥2 nausea/vomiting, decreased PS, fever, sepsis, neutropenia, frank bleeding, dehydration; grade 3–4 always complicated."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-004",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქიმიოთერაპიის ფონზე დიარეა – კვლევების შერჩევა",
+  "recommendation_ka": "კარგი ფუნქციური სტატუსისა და აშკარა მიზეზის (მაგ., ბოლო დღეებში 5-ფტორურაცილი ან ირინოტეკანი) შემთხვევაში მიკრობიოლოგიური კვლევა შეიძლება გადაიდოს, თუ საწყისი მკურნალობა შედეგს იძლევა. მძიმე ან ხანგრძლივი მიმდინარეობისას, ცხელების, ნეიტროპენიის, ჰემატოქეზიის ან სტეატორეის დროს ჩაატარეთ: განავლის ანალიზი (სისხლი, C. difficile, Salmonella, E. coli, Campylobacter), სისხლის საერთო ანალიზი, ელექტროლიტები და თირკმლის ფუნქცია, შარდის ხვედრითი წონა. ილეუსის, ობსტრუქციის ან პერფორაციის ეჭვისას – გამოსახულებითი კვლევა. გამორიცხეთ სხვა მიზეზები: საფაღარათო საშუალებები, ფეკალური გაჭედვა გადინებით, ნაწილობრივი ობსტრუქცია, მალაბსორბცია. ნეიტროპენიის ან თრომბოციტოპენიის დროს რექტალური გასინჯვა სიფრთხილით ჩაატარეთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "label",
+    "meaning_ka": "5-ფტორურაცილი (სახელწოდება)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "In good PS with highly suggestive aetiology (5-FU/irinotecan in previous days) microbiological tests may be deferred; further work-up if severe or persistent, with fever, neutropaenia, haematochezia, steatorrhoea (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Complicated diarrhea work-up: stool testing (blood, fecal leukocytes, C. difficile, Salmonella, E. coli, Campylobacter), CBC, electrolytes; urinalysis specific gravity; imaging for ileus/obstruction; rectal exam judiciously in neutropenic/thrombocytopenic patients."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-005",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ქიმიოთერაპიული დიარეა – ლოპერამიდი",
+  "recommendation_ka": "ლოპერამიდი დაიწყეთ 4 მგ საწყისი დოზით, შემდეგ 2 მგ ყოველ 2–4 საათში ან ყოველი უფორმო განავლის შემდეგ; მაქსიმალური დღიური დოზა ESMO-ს მიხედვით 16 მგ (NCI PDQ-ში აღწერილი ჩვეული მაქსიმუმი დაახლოებით 12 მგ/დღეა – წყაროები განსხვავდება). მაღალი დოზის ფონზე პაციენტი აკონტროლეთ. ლოპერამიდი ნაკლებად ეფექტიანია 3–4 ხარისხის დიარეისას. ალტერნატივა – სხვა ოპიოიდები (ოპიუმის ნაყენი, მორფინი, კოდეინი). ლოპერამიდი არ გამოიყენოთ იმუნოთერაპიით გამოწვეული 3–4 ხარისხის კოლიტისა და ნეიტროპენიური ენტეროკოლიტის დროს.",
+  "doses": [
+   {
+    "drug": "loperamide",
+    "amount": 4,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "initial dose",
+    "population": "adult",
+    "max_amount": 16,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "loperamide",
+    "amount": 2,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "every 2–4 h or after each unformed stool",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "h",
+    "meaning_ka": "დოზის ინტერვალი – ქვედა"
+   },
+   {
+    "value": 4,
+    "unit": "h",
+    "meaning_ka": "დოზის ინტერვალი – ზედა"
+   },
+   {
+    "value": 12,
+    "unit": "mg/day",
+    "meaning_ka": "PDQ-ის ჩვეული მაქსიმუმი"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "CTCAE 3 ხარისხი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Loperamide initial 4 mg followed by 2 mg every 2–4 h or after every unformed stool; maximum daily dose 16 mg; monitor on high-dose; other opioids (tincture of opium, morphine, codeine) can be used; avoid loperamide in grade 3–4 immunotherapy colitis and in neutropaenic enterocolitis (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Common loperamide doses begin with 4 mg then 2 mg after each unformed stool, maximum approximately 12 mg/day; may be less effective in grade 3–4 diarrhea."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-006",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ლოპერამიდზე რეფრაქტერული ან მძიმე ქიმიოთერაპიული დიარეა – ოქტრეოტიდი",
+  "recommendation_ka": "მძიმე ან ლოპერამიდზე რეზისტენტული დიარეისას დაამატეთ ოქტრეოტიდი 100–150 მკგ კანქვეშ ან IV დღეში სამჯერ (პირველ 48 საათში ლოპერამიდის გაგრძელებით); საჭიროებისას დოზა გაზარდეთ 500 მკგ-მდე დღეში სამჯერ ან უწყვეტ IV ინფუზიად 25–50 მკგ/სთ. NCI PDQ-ის მიხედვით, 3–4 ხარისხის დიარეისას ოქტრეოტიდი (500–1500 მკგ ყოველ 8 საათში) შეიძლება პირველი რიგის იყოს. გააგრძელეთ, სანამ პაციენტი 24 საათის განმავლობაში დიარეის გარეშე არ იქნება. გართულებულ დიარეაში დამატებით – IV სითხეები და, ჩვენებისას, ანტიბიოტიკები. ლოპერამიდზე რეფრაქტერულ შემთხვევაში შეიძლება განიხილოთ პერორალური ბუდესონიდი; პროფილაქტიკური ბუდესონიდი არ არის რეკომენდებული.",
+  "doses": [
+   {
+    "drug": "octreotide",
+    "amount": 100,
+    "unit": "mcg",
+    "route": "SC/IV",
+    "frequency": "three times daily",
+    "population": "adult",
+    "max_amount": 500,
+    "max_unit": "mcg"
+   },
+   {
+    "drug": "octreotide",
+    "amount": 25,
+    "unit": "mcg",
+    "route": "IV infusion",
+    "frequency": "continuous, 25–50 mcg/h",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 150,
+    "unit": "mcg",
+    "meaning_ka": "საწყისი დოზის ზედა ზღვარი"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ლოპერამიდის გაგრძელება"
+   },
+   {
+    "value": 50,
+    "unit": "mcg",
+    "meaning_ka": "ინფუზიის ზედა სიჩქარე (მკგ/სთ)"
+   },
+   {
+    "value": 3,
+    "unit": "score",
+    "meaning_ka": "CTCAE 3 ხარისხი"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "CTCAE 4 ხარისხი"
+   },
+   {
+    "value": 1500,
+    "unit": "mcg",
+    "meaning_ka": "PDQ-ის მაღალი დოზის ზედა ზღვარი"
+   },
+   {
+    "value": 8,
+    "unit": "h",
+    "meaning_ka": "დოზის ინტერვალი"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "დიარეის გარეშე პერიოდი შეწყვეტამდე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Octreotide should be considered for severe or persistent diarrhoea, continuing loperamide in the first 48 h; usual starting dose 100–150 µg s.c./i.v. tid, titrated up to 500 µg tid or 25–50 µg/h continuous i.v.; oral budesonide may be suggested for loperamide-refractory ChT diarrhoea, prophylactic budesonide not recommended (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Octreotide 100–150 µg SC tid or 25–50 µg/h IV, escalating to 500 µg tid, continued until diarrhea-free for 24 h; for grade 3–4, octreotide 500–1,500 µg SC/IV q8h may be first-line; IV fluids and antibiotics for complicated diarrhea."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-007",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქიმიოთერაპიული დიარეა – რეჰიდრატაცია და დიეტა",
+  "recommendation_ka": "მსუბუქ დიარეაში გამოიყენეთ პერორალური რეჰიდრატაცია (უფრო მძიმე შემთხვევაში – სტანდარტული WHO ან კომერციული ORS); პაციენტს ურჩიეთ სუფთა სითხეების მიღება დღეში სულ მცირე 3 ლ. 3–4 ხარისხის დიარეისას ან ჰიპოვოლემიისას – IV რეჰიდრატაცია: ინფუზიის სიჩქარე უნდა აღემატებოდეს მიმდინარე დანაკარგს (დიურეზი + შეუმჩნეველი დანაკარგი, ჩვეულებრივ 30–50 მლ/სთ, + კუჭ-ნაწლავის დანაკარგი); ტაქიკარდიისა და შესაძლო სეფსისისას – საწყისი ბოლუსი 20 მლ/კგ. მიზანი: დიურეზი >0.5 მლ/კგ/სთ; ოლიგურიისას ადექვატური რეჰიდრატაციის მიუხედავად სასწრაფოდ ჩართეთ ინტენსიური თერაპიის ან ნეფროლოგიის სპეციალისტი. დიეტა: მცირე ულუფები; მოერიდეთ ალკოჰოლს, ყავას, ცხარე საკვებს, უხსნად ბოჭკოს და რძის პროდუქტებს (გარდა იოგურტისა და მყარი ყველისა).",
+  "doses": [
+   {
+    "drug": "crystalloid IV fluid bolus",
+    "amount": 20,
+    "unit": "mL/kg",
+    "route": "IV",
+    "frequency": "initial bolus if tachycardic/possibly septic",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "L/day",
+    "meaning_ka": "სითხის მინიმალური მიღება"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "CTCAE 4 ხარისხი"
+   },
+   {
+    "value": 30,
+    "unit": "mL/h",
+    "meaning_ka": "შეუმჩნეველი დანაკარგი – ქვედა"
+   },
+   {
+    "value": 50,
+    "unit": "mL/h",
+    "meaning_ka": "შეუმჩნეველი დანაკარგი – ზედა"
+   },
+   {
+    "value": 0.5,
+    "unit": "mL/kg/h",
+    "meaning_ka": "სამიზნე დიურეზი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "ORT for mild diarrhoea, ORS for more severe; fluid rate must exceed ongoing losses (urine output + insensible 30–50 mL/h + GI losses); initial 20 mL/kg bolus if tachycardic and potentially septic; target urine output >0.5 mL/kg/h; oliguric AKI despite resuscitation → urgent ICU/nephrology advice; avoid spices, coffee, alcohol, insoluble fibre, milk/dairy apart from yogurt and firm cheeses (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Patients encouraged to increase clear liquids to at least 3 L per day; small frequent meals; avoid lactose, spicy foods, alcohol, caffeine, high-fiber, high-fat foods."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-008",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ირინოტეკანით გამოწვეული ადრეული (ქოლინერგული) და დაგვიანებული დიარეა",
+  "recommendation_ka": "ადრეული დიარეა ვითარდება ინფუზიისთანავე, ქოლინერგული სიმპტომებით (სპაზმი, რინიტი, ცრემლდენა, ნერწყვდენა), საშუალოდ 30 წუთს გრძელდება და სწრაფად პასუხობს ატროპინს 0.25–1 მგ კანქვეშ ან IV; პრემედიკაცია ატროპინით 0.5 მგ კანქვეშ შეიძლება მის პრევენციას ახდენდეს. დაგვიანებული დიარეა ვითარდება 24 საათის შემდეგ, შეიძლება სიცოცხლისთვის საშიში იყოს (განსაკუთრებით ნეიტროპენიასთან ერთად) – ირინოტეკანის ფონზე ნებისმიერი დიარეა მკურნალეთ დაუყოვნებლივ, ლოპერამიდით და ზემოთ აღწერილი ალგორითმით.",
+  "doses": [
+   {
+    "drug": "atropine",
+    "amount": 0.25,
+    "unit": "mg",
+    "route": "SC/IV",
+    "frequency": "as needed for acute cholinergic diarrhoea",
+    "population": "adult",
+    "max_amount": 1,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "atropine",
+    "amount": 0.5,
+    "unit": "mg",
+    "route": "SC",
+    "frequency": "premedication before irinotecan",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 30,
+    "unit": "min",
+    "meaning_ka": "ადრეული დიარეის საშუალო ხანგრძლივობა"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "დაგვიანებული დიარეის დაწყება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Irinotecan immediate-onset cholinergic diarrhoea lasts mean 30 minutes, responds to atropine 0.25–1 mg s.c./i.v.; premedication 0.5 mg atropine s.c. may prevent; delayed diarrhoea occurs at least 24 h after and can be life-threatening especially with neutropaenia (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Irinotecan causes acute diarrhea (cholinergic, responds to atropine) and delayed diarrhea >24 hours managed with antidiarrheals."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-009",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "5-ფტორურაცილის ან კაპეციტაბინის ზედოზირება ან ადრეული მძიმე ტოქსიკურობა",
+  "recommendation_ka": "ურიდინის ტრიაცეტატი 10 გ პერორალურად ყოველ 6 საათში, სულ 20 დოზა, ნაჩვენებია 5-ფტორურაცილის ან კაპეციტაბინის მიღების დასრულებიდან 96 საათის განმავლობაში განვითარებული ადრეული, მძიმე ან სიცოცხლისთვის საშიში ტოქსიკურობისას (მათ შორის დიარეისას) და ზედოზირებისას. შეაჩერეთ ფტორპირიმიდინი და შეაფასეთ DPD დეფიციტის შესაძლებლობა.",
+  "doses": [
+   {
+    "drug": "uridine triacetate",
+    "amount": 10,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "every 6 h for 20 doses",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "label",
+    "meaning_ka": "5-ფტორურაცილი (სახელწოდება)"
+   },
+   {
+    "value": 6,
+    "unit": "h",
+    "meaning_ka": "დოზის ინტერვალი"
+   },
+   {
+    "value": 20,
+    "unit": "doses",
+    "meaning_ka": "დოზების რაოდენობა"
+   },
+   {
+    "value": 96,
+    "unit": "h",
+    "meaning_ka": "დაწყების ვადა ფტორპირიმიდინის შემდეგ"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Uridine triacetate 10 g orally every 6 h for 20 doses indicated for early-onset, severe or life-threatening toxicity including diarrhoea within 96 h following end of 5-FU or capecitabine; potentially life-saving in overdoses (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-010",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "იმუნური საგუშაგო წერტილების ინჰიბიტორებით გამოწვეული დიარეა/კოლიტი",
+  "recommendation_ka": "1 ხარისხი: სიმპტომური მკურნალობა – პერორალური რეჰიდრატაცია, რაცეკადოტრილი ან ლოპერამიდი. 2 ხარისხი: სისხლიანი დიარეის გარეშე შეიძლება დაემატოს ბუდესონიდი 9 მგ დღეში ერთხელ; დიფუზური წყლულების, სისხლდენის ან 3 დღეზე მეტი ხნის სიმპტომების შენარჩუნებისას – პერორალური კორტიკოსტეროიდი 0.5–1 მგ/კგ/დღე (პრედნიზოლონის ეკვივალენტი). 3–4 ხარისხი: 1–2 მგ/კგ/დღე პრედნიზოლონის ეკვივალენტი, თავდაპირველად IV; ლოპერამიდი და ოპიოიდები არ გამოიყენოთ; თუ სიმპტომები 3–5 დღეზე მეტხანს გრძელდება – ინფლიქსიმაბი 5 მგ/კგ ყოველ 2 კვირაში გამოსწორებამდე (ალტერნატივა – ვედოლიზუმაბი). მკურნალობის ადრეული დაწყება (სიმპტომებიდან 5 დღეში) უფრო სწრაფ გამოსწორებას იძლევა. მძიმე შემთხვევებში შეიძლება საჭირო გახდეს ინჰიბიტორის მუდმივი შეწყვეტა.",
+  "doses": [
+   {
+    "drug": "budesonide",
+    "amount": 9,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "prednisone equivalent",
+    "amount": 0.5,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "daily (grade 2)",
+    "population": "adult",
+    "max_amount": 1,
+    "max_unit": "mg/kg/day"
+   },
+   {
+    "drug": "prednisone equivalent",
+    "amount": 1,
+    "unit": "mg/kg/day",
+    "route": "IV then PO",
+    "frequency": "daily (grade 3–4)",
+    "population": "adult",
+    "max_amount": 2,
+    "max_unit": "mg/kg/day"
+   },
+   {
+    "drug": "infliximab",
+    "amount": 5,
+    "unit": "mg/kg",
+    "route": "IV",
+    "frequency": "every 2 weeks until resolution",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "score",
+    "meaning_ka": "1 ხარისხი"
+   },
+   {
+    "value": 2,
+    "unit": "score",
+    "meaning_ka": "2 ხარისხი; ასევე 2 კვირის ინტერვალი"
+   },
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "სიმპტომების ხანგრძლივობა – ესკალაციის ზღვარი; ასევე 3 ხარისხი"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "4 ხარისხი"
+   },
+   {
+    "value": 5,
+    "unit": "day",
+    "meaning_ka": "სიმპტომების ხანგრძლივობა ინფლიქსიმაბამდე; ასევე მკურნალობის დაწყების ვადა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Immunotherapy diarrhoea: grade 1 symptomatic (oral rehydration, racecadotril or loperamide); grade 2 budesonide 9 mg once daily if no bloody diarrhoea, oral corticosteroids 0.5–1 mg/kg/day if diffuse ulceration, bleeding or persistent >3 days; grade 3–4 1–2 mg/kg/day prednisone equivalent i.v. first, avoid loperamide/opioids; infliximab 5 mg/kg every 2 weeks if persisting >3–5 days; vedolizumab alternative; treatment within 5 days leads to faster resolution (current edition)"
+   },
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Severe ICI diarrhea/colitis may need systemic steroids and permanent discontinuation of ICI therapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-011",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "diagnosis",
+  "population": "immunocompromised",
+  "condition_ka": "ნეიტროპენიური ენტეროკოლიტი (ტიფლიტი) – დიაგნოზი",
+  "recommendation_ka": "ეჭვი მიიტანეთ ნეიტროფილების აბსოლუტური რაოდენობის <500/მკლ დროს ცხელების, მუცლის ტკივილის (დიფუზური ან მარჯვენა ქვედა კვადრანტში; სტეროიდების ფონზე შეიძლება არ იყოს), გულისრევის, ღებინების, დიარეის ან სეფსისის არსებობისას. კრიტერიუმები: ნეიტროპენია, ნაწლავის კედლის გასქელება >4 მმ გამოსახულებით კვლევაზე და სხვა დიაგნოზების (C. difficile კოლიტი, GvHD) გამორიცხვა. არჩევის მეთოდია კტ; ულტრაბგერა გამოიყენება დინამიკური კონტროლისთვის – კედლის სისქე >10 მმ მაღალ სიკვდილობასთანაა დაკავშირებული (60% vs 4.2%). კოლონოსკოპია არ არის რეკომენდებული პერფორაციის რისკის გამო. პნევმატოზი, პერიკოლური სითხე ან თავისუფალი ჰაერი პერფორაციაზე მიუთითებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 500,
+    "unit": "cells/µL",
+    "meaning_ka": "ANC ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "mm",
+    "meaning_ka": "კედლის სისქის დიაგნოსტიკური ზღვარი"
+   },
+   {
+    "value": 10,
+    "unit": "mm",
+    "meaning_ka": "მაღალი სიკვდილობის კედლის სისქე"
+   },
+   {
+    "value": 60,
+    "unit": "%",
+    "meaning_ka": "სიკვდილობა კედლით >10 მმ"
+   },
+   {
+    "value": 4.2,
+    "unit": "%",
+    "meaning_ka": "სიკვდილობა კედლით ≤10 მმ"
+   }
+  ],
+  "red_flags_ka": [
+   "პნევმატოზი ან თავისუფალი ჰაერი მუცლის ღრუში",
+   "კედლის სისქე >10 მმ",
+   "სეფსისი"
+  ],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Neutropaenic enterocolitis when ANC <500; fever, abdominal pain (diffuse or RLQ; may be absent with steroids), nausea, vomiting, diarrhoea, sepsis; criteria: neutropaenia, bowel wall thickening >4 mm, exclusion of C. difficile/GvHD; CT preferred; wall >10 mm mortality 60% vs 4.2%; ultrasound for follow-up; colonoscopy not recommended due to perforation risk; free air indicates perforation (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-012",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "ნეიტროპენიური ენტეროკოლიტი – მკურნალობა და ქირურგიული ჩვენებები",
+  "recommendation_ka": "საწყისი მკურნალობა კონსერვატიულია: ფართო სპექტრის ანტიბიოტიკი (გრამუარყოფითი ენტერული, გრამდადებითი და ანაერობული ფლორის დაფარვით – მონოთერაპია პიპერაცილინ-ტაზობაქტამით ან იმიპენემ-ცილასტატინით, ან ცეფეპიმი/ცეფტაზიდიმი მეტრონიდაზოლთან ერთად), G-CSF, ნაზოგასტრული დეკომპრესია, IV სითხეები, ნაწლავის დასვენება და სერიული აბდომინური გასინჯვა; ანტიბიოტიკზე პასუხის არარსებობისას განიხილეთ ამფოტერიცინი (ხშირია ფუნგემია); საჭიროებისას – ტრანსფუზია. ანტიქოლინერგული, ანტიდიარეული და ოპიოიდური საშუალებები არ გამოიყენოთ (ილეუსის გაღრმავება). ქირურგიის ჩვენებები: მუდმივი სისხლდენა თრომბოციტოპენიისა და კოაგულოპათიის კორექციის შემდეგ, თავისუფალი პერფორაცია, აბსცესი, გაუარესება ინტენსიური თერაპიის მიუხედავად; ნეკროზული კერის მოუშორებლობა ხშირად ფატალურია, პირველადი ანასტომოზი არ არის რეკომენდებული.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "თავისუფალი ინტრაპერიტონეული პერფორაცია",
+   "მუდმივი სისხლდენა",
+   "კლინიკური გაუარესება"
+  ],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diarrhoea in adult cancer patients: ESMO Clinical Practice Guidelines (Bossi et al., Ann Oncol 2018;29 Suppl 4:iv126–iv142)",
+    "year": 2018,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29931177/",
+    "type": "guideline",
+    "supports": "Neutropaenic enterocolitis: broad-spectrum antibiotics covering enteric gram-negatives, gram-positives, anaerobes (piperacillin-tazobactam or imipenem-cilastatin monotherapy, or cefepime/ceftazidime + metronidazole), G-CSF, NG decompression, i.v. fluids, bowel rest, serial exams; amphotericin if no response; avoid anticholinergic, antidiarrhoeal, opioid agents; surgery for persistent bleeding after correction, free perforation, abscess, clinical deterioration; primary anastomosis not recommended (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-013",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ბევაციზუმაბის (ანტი-VEGF) ფონზე მუცლის მწვავე ტკივილი – კუჭ-ნაწლავის პერფორაცია",
+  "recommendation_ka": "ბევაციზუმაბი ზრდის კუჭ-ნაწლავის პერფორაციისა და ფისტულის რისკს (პერფორაცია 0.3–3%, მაღალი – წინა მენჯის დასხივების შემდეგ); პერფორაციების უმეტესობა პირველი დოზიდან 50 დღეში ვითარდება და შეიძლება გართულდეს აბსცესით ან ფისტულით. მაღალი ცხელების, შემცივნების, მუდმივი ან ძლიერი მუცლის ტკივილის, მძიმე ყაბზობის ან ღებინებისას – სასწრაფო შეფასება (კტ, ქირურგიული კონსულტაცია). პერფორაციის, ტრაქეოეზოფაგური ან 4 ხარისხის ფისტულის განვითარებისას ბევაციზუმაბი სამუდამოდ შეწყვიტეთ. გეგმიურ ოპერაციამდე შეაჩერეთ არანაკლებ 28 დღით ადრე და არ განაახლოთ დიდი ოპერაციიდან 28 დღის განმავლობაში და ჭრილობის შეხორცებამდე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 0.3,
+    "unit": "%",
+    "meaning_ka": "პერფორაციის სიხშირე – ქვედა"
+   },
+   {
+    "value": 3,
+    "unit": "%",
+    "meaning_ka": "პერფორაციის სიხშირე – ზედა"
+   },
+   {
+    "value": 50,
+    "unit": "day",
+    "meaning_ka": "პერფორაციების უმეტესობის დრო"
+   },
+   {
+    "value": 4,
+    "unit": "score",
+    "meaning_ka": "ფისტულის 4 ხარისხი"
+   },
+   {
+    "value": 28,
+    "unit": "day",
+    "meaning_ka": "ოპერაციასთან ინტერვალი"
+   }
+  ],
+  "red_flags_ka": [
+   "ძლიერი ან მუდმივი მუცლის ტკივილი ბევაციზუმაბის ფონზე",
+   "ცხელება და შემცივნება",
+   "მძიმე ყაბზობა ან ღებინება"
+  ],
+  "sources": [
+   {
+    "org": "FDA",
+    "title": "AVASTIN (bevacizumab) prescribing information (DailyMed)",
+    "year": 2022,
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=939b5d1f-9fb2-4499-80ef-0607aa6b114e",
+    "type": "label",
+    "supports": "GI perforation incidence 0.3% to 3%, highest with prior pelvic radiation; majority within 50 days of first dose; discontinue for GI perforation, TE fistula or grade 4 fistula; withhold ≥28 days before elective surgery and ≥28 days after major surgery; advise patients to report high fever, rigors, persistent/severe abdominal pain, severe constipation, vomiting."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-014",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ყაბზობა ონკოლოგიურ პაციენტში – მიზეზები და შეფასება",
+  "recommendation_ka": "ქიმიოთერაპიით გამოწვეული ყაბზობის ხშირი მიზეზია ავტონომიური ნეიროპათია ვინკა-ალკალოიდების, ოქსალიპლატინის, ტაქსანებისა და თალიდომიდის ფონზე; ასევე ოპიოიდები, ანტიქოლინერგული საშუალებები, ანტიემეტიკები, დეჰიდრატაცია, ჰიპერკალციემია, ჰიპოკალიემია, იმობილობა. ნორმად ითვლება კვირაში სულ მცირე 3 და დღეში არაუმეტეს 3 დეფეკაცია, თუმცა მთავარია ინდივიდუალური ნორმიდან გადახრა. შეაფასეთ ბოლო დეფეკაციის დრო, კონსისტენცია, სისხლი, მუცლის შებერილობა, გულისრევა/ღებინება, აირების გასვლა, მედიკამენტები. ჩაატარეთ რექტალური გასინჯვა ფეკალური გაჭედვის გამოსარიცხად – გარდა ნეიტროპენიის/თრომბოციტოპენიის შემთხვევისა, როცა რექტუმისა და ანუსის მანიპულაცია (გასინჯვა, სანთლები, ოყნა) თავიდან უნდა აიცილოთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "დეფეკაციის ნორმის ზღვარი (კვირაში მინიმუმ/დღეში მაქსიმუმ)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Constipation frequently results from autonomic neuropathy caused by vinca alkaloids, oxaliplatin, taxanes and thalidomide; opioids, anticholinergics, metabolic disorders; normal pattern at least three stools per week and no more than three per day; digital rectal exam to rule out impaction; avoid rectal agents and manipulation in patients at risk of thrombocytopenia, leukopenia, mucositis and in immunocompromised."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-015",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ყაბზობის მკურნალობა და პროფილაქტიკა ონკოლოგიურ პაციენტში",
+  "recommendation_ka": "ოპიოიდის დანიშვნისას პარალელურად დაიწყეთ ნაწლავის რეჟიმი და გააგრძელეთ მთელი მიღების განმავლობაში, საფაღარათო საშუალება ტიტრირეთ ნაწლავის ფუნქციის (და არა ოპიოიდის დოზის) მიხედვით. არაფარმაკოლოგიური ზომები: სითხე (თუ უკუნაჩვენები არ არის), აქტივობა, კონფიდენციალურობა და ტუალეტზე წვდომა. ოსმოსური/სტიმულატორი საშუალებები: პოლიეთილენგლიკოლი 17 გ დღეში ერთხელ; სენოზიდები 17.2–34.4 მგ დღეში 1–2-ჯერ; ბისაკოდილი 5–15 მგ პერორალურად ან 10 მგ სანთელი; ლაქტულოზა 10–20 გ დღეში (40 გ-მდე). ბოჭკოვანი (მოცულობითი) საშუალებები ოპიოიდური ყაბზობისას არ არის რეკომენდებული და თავიდან აიცილეთ ობსტრუქციის ეჭვისას; ობსტრუქციის ეჭვისას ოსმოსური საშუალებებიც (პოლიეთილენგლიკოლი, ლაქტულოზა) უკუნაჩვენებია.",
+  "doses": [
+   {
+    "drug": "polyethylene glycol",
+    "amount": 17,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "sennosides",
+    "amount": 17.2,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once or twice daily",
+    "population": "adult",
+    "max_amount": 34.4,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "bisacodyl",
+    "amount": 5,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": 15,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "bisacodyl",
+    "amount": 10,
+    "unit": "mg",
+    "route": "PR",
+    "frequency": "suppository once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "lactulose",
+    "amount": 10,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "daily",
+    "population": "adult",
+    "max_amount": 40,
+    "max_unit": "g"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "times/day",
+    "meaning_ka": "სენოზიდების სიხშირე – ქვედა"
+   },
+   {
+    "value": 2,
+    "unit": "times/day",
+    "meaning_ka": "სენოზიდების სიხშირე – ზედა"
+   },
+   {
+    "value": 20,
+    "unit": "g",
+    "meaning_ka": "ლაქტულოზის ჩვეული ზედა დოზა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Bowel regimen initiated when opioids prescribed and continued; titrate laxative to bowel function not opioid dose; PEG 17 g once daily; sennosides 17.2–34.4 mg once or twice daily; bisacodyl 5–15 mg PO or 10 mg suppository; lactulose 10–20 g daily up to 40 g; bulk producers not advised for opioid-induced constipation and avoided if obstruction suspected."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-016",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ოპიოიდით გამოწვეული ყაბზობა, რეფრაქტერული სტანდარტული საფაღარათო საშუალებების მიმართ",
+  "recommendation_ka": "თუ ჩვეულებრივი საფაღარათო რეჟიმი არაეფექტიანია, გამოიყენეთ პერიფერიული μ-ოპიოიდური ანტაგონისტი: მეთილნალტრექსონი 0.15 მგ/კგ კანქვეშ დღეში ერთხელ ან დღეგამოშვებით (კვლევებში პაციენტთა დაახლოებით 50%-ს დეფეკაცია 4 საათში ჰქონდა), ნალდემედინი 0.2 მგ პერორალურად დღეში ერთხელ, ან ნალოქსეგოლი 12.5–25 მგ დღეში ერთხელ; ალტერნატივაა ოქსიკოდონ-ნალოქსონის კომბინაცია. ეს პრეპარატები ტკივილის კონტროლს არ აუარესებს, მაგრამ უკუნაჩვენებია ნაწლავის ობსტრუქციისას – დანიშვნამდე გამორიცხეთ ობსტრუქცია.",
+  "doses": [
+   {
+    "drug": "methylnaltrexone",
+    "amount": 0.15,
+    "unit": "mg/kg",
+    "route": "SC",
+    "frequency": "once daily or every other day",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "naldemedine",
+    "amount": 0.2,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "naloxegol",
+    "amount": 12.5,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": 25,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "დეფეკაცია 4 საათში მეთილნალტრექსონის შემდეგ"
+   },
+   {
+    "value": 4,
+    "unit": "h",
+    "meaning_ka": "დეფეკაციამდე დრო"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "Opioid antagonists given only if other drugs have failed; contraindicated in bowel obstruction; ~50% defecated within 4 h of methylnaltrexone injection; methylnaltrexone 0.15 mg/kg SC daily or every other day; naldemedine 0.2 mg PO daily; naloxegol 12.5–25 mg PO daily; oxycodone:naloxone 2:1; pain scores unchanged."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CHEMOGI-017",
+  "cluster": "CHEMOGI",
+  "topics": [
+   15
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ავთვისებიანი ნაწლავის ობსტრუქცია ან ფეკალური გაჭედვა ონკოლოგიურ პაციენტში",
+  "recommendation_ka": "ობსტრუქციის ნიშნებია მუცლის ტკივილი, სპაზმები, შებერილობა, გულისრევა, ღებინება, აირებისა და განავლის შეწყვეტა (იშვიათად – გადინებითი დიარეა); ფეკალური გაჭედვა შეიძლება გამოვლინდეს ფეკალური გაჟონვით, შარდის შეკავებით, დელირიუმით ან ტაქიკარდიით. გამოიკვლიეთ სისხლის საერთო ანალიზი, ელექტროლიტები, შარდი; ლეიკოციტოზი 15–20 ათასი/მმ³ ნაწლავის ნეკროზზე მიუთითებს. დიაგნოსტიკისთვის უპირატესია მუცლისა და მენჯის კტ IV კონტრასტით (რენტგენოგრაფია ნაკლებად მგრძნობიარეა). მწვავე ობსტრუქციისას: ნაწლავის დასვენება, მოცულობის აღდგენა, ელექტროლიტების კორექცია, ნაწილობრივი ობსტრუქციისას ნაზოგასტრული დეკომპრესია; სრული მწვავე ობსტრუქციისას შესაძლოა 24 საათში ქირურგია დასჭირდეს – სასწრაფო ქირურგიული კონსულტაცია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 15,
+    "unit": "label",
+    "meaning_ka": "ლეიკოციტები 15 ათასი/მმ³ – ქვედა"
+   },
+   {
+    "value": 20,
+    "unit": "label",
+    "meaning_ka": "ლეიკოციტები 20 ათასი/მმ³ – ზედა"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "ქირურგიის ვადა სრული ობსტრუქციისას"
+   }
+  ],
+  "red_flags_ka": [
+   "აირებისა და განავლის შეწყვეტა ღებინებით",
+   "ლეიკოციტოზი (ნეკროზის ეჭვი)",
+   "პერიტონეული ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "NCI",
+    "title": "Gastrointestinal Complications (PDQ®) — Health Professional Version",
+    "year": 2025,
+    "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/constipation/gi-complications-hp-pdq",
+    "type": "guideline",
+    "supports": "MBO symptoms: pain, cramps, distention, nausea, vomiting, absence of gas/stool, rarely overflow diarrhea; WBC 15,000–20,000/mm3 suggests necrosis; contrast CT preferred over x-ray; bowel rest, volume resuscitation, electrolyte correction, NGT decompression for partial obstruction; surgery may be necessary within 24 hours for complete acute obstruction; impaction may present with leakage, urinary retention, confusion, tachycardia."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

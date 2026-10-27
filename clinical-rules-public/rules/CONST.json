@@ -1,0 +1,480 @@
+[
+ {
+  "rule_id": "PUB-CONST-001",
+  "cluster": "CONST",
+  "topics": [
+   3
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ქრონიკული ყაბზობის ეჭვი",
+  "recommendation_ka": "ფუნქციური ყაბზობა (Rome IV) დაისვას, თუ დეფეკაციების 25%-ზე მეტში არსებობს 2 ან მეტი ნიშანი: ჭინთვა, მკვრივი/ბელტოვანი განავალი (ბრისტოლის ტიპი 1–2), არასრული დაცლის შეგრძნება, ანორექტული დაბრკოლების შეგრძნება, ხელით დახმარება, ან კვირაში 3-ზე ნაკლები სპონტანური დეფეკაცია. კრიტერიუმები უნდა სრულდებოდეს ბოლო 3 თვე, დაწყებით მინიმუმ 6 თვით ადრე; თხელი განავალი იშვიათია საფაღარათოს გარეშე და არ სრულდება გაღიზიანებული ნაწლავის სინდრომის კრიტერიუმები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 25,
+    "unit": "%",
+    "meaning_ka": "დეფეკაციების წილი"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ნიშნების მინიმალური რაოდენობა"
+   },
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "ბრისტოლის ტიპი 1"
+   },
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "ბრისტოლის ტიპი 2"
+   },
+   {
+    "value": 3,
+    "unit": "times/week",
+    "meaning_ka": "სპონტანური დეფეკაციების ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "კრიტერიუმების ხანგრძლივობა"
+   },
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "დაწყებიდან მინიმალური პერიოდი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Rome Foundation",
+    "title": "Rome IV Diagnostic Criteria for Disorders of Gut-Brain Interaction — criteria booklet",
+    "year": 2019,
+    "url": "https://theromefoundation.org/wp-content/uploads/Rome-Foundation-Diagnostic-Criteria-Booklet-2019.pdf",
+    "type": "diagnostic_criteria",
+    "supports": "Functional constipation: ≥2 of straining, lumpy/hard stools (Bristol 1–2), incomplete evacuation, anorectal obstruction, manual manoeuvres in >25% of defecations, or <3 SBM/week; criteria for last 3 months with onset ≥6 months; loose stools rare without laxatives; IBS criteria not met."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-002",
+  "cluster": "CONST",
+  "topics": [
+   3
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ყაბზობა განგაშის ნიშნებით",
+  "recommendation_ka": "განგაშის ნიშნებისას ფუნქციური დიაგნოზის დასმამდე საჭიროა ორგანული მიზეზის (მათ შორის კოლორექტული კიბოს) გამორიცხვა: სისხლდენა, აუხსნელი რკინადეფიციტური ანემია, უნებლიე წონის კლება, მუცლის წარმონაქმნი ან ლიმფადენოპათია, მსხვილი ნაწლავის კიბოს ოჯახური ანამნეზი, ნაწლავის მოქმედების უეცარი ცვლილება, სიმპტომების დაწყება 50 წლის ზემოთ ასაკობრივი სკრინინგის გარეშე. ასეთ შემთხვევაში განიხილეთ კოლონოსკოპია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "Rome IV ასაკობრივი ზღვარი სკრინინგის არარსებობისას"
+   }
+  ],
+  "red_flags_ka": [
+   "რექტალური სისხლდენა",
+   "რკინადეფიციტური ანემია",
+   "წონის კლება",
+   "მუცლის წარმონაქმნი",
+   "ნაწლავის მოქმედების უეცარი ცვლილება"
+  ],
+  "sources": [
+   {
+    "org": "Rome Foundation",
+    "title": "Rome IV Diagnostic Criteria for Disorders of Gut-Brain Interaction — criteria booklet",
+    "year": 2019,
+    "url": "https://theromefoundation.org/wp-content/uploads/Rome-Foundation-Diagnostic-Criteria-Booklet-2019.pdf",
+    "type": "diagnostic_criteria",
+    "supports": "Alarm features requiring evaluation for other diagnoses: GI bleeding, unexplained iron-deficiency anaemia, unintentional weight loss, palpable mass or lymphadenopathy, family history of colon cancer, sudden change in bowel habit, onset ≥50 years without age-appropriate colon cancer screening."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-003",
+  "cluster": "CONST",
+  "topics": [
+   3
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული ყაბზობის საწყისი შეფასება",
+  "recommendation_ka": "გამოირიცხოს მეორადი ყაბზობა: გადაიხედოს მედიკამენტები (ოპიოიდები, ანტიქოლინერგული და ანტიჰისტამინური საშუალებები), შეფასდეს ქრონიკული დაავადებები და ფსიქოსოციალური ფაქტორები; შეკრიბეთ ანამნეზი განგაშის ნიშნებზე და ჩაატარეთ ფიზიკური გასინჯვა, მათ შორის რექტალური.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Constipation in Older Adults (Am Fam Physician 2015;92:500-504)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/0915/p500",
+    "type": "review",
+    "supports": "Secondary constipation is associated with chronic disease, medication use (opioids, anticholinergics, antihistamines) and psychosocial issues; review medications first (2015 review; most recent AAFP review on this topic, cited as current edition — reviewer to confirm)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-004",
+  "cluster": "CONST",
+  "topics": [
+   3,
+   2
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ყაბზობა, რომელიც არ პასუხობს საფაღარათო საშუალებებს",
+  "recommendation_ka": "ჩატარდეს ანორექტული მანომეტრია და რექტალური ბალონის გამოდევნის ტესტი დისინერგიული დეფეკაციის (დეფეკაციის დარღვევის) გამოსავლენად; დეფეკოგრაფია — მხოლოდ თუ ეს ტესტები არადამაჯერებელია. მსხვილი ნაწლავის ტრანზიტის კვლევა განიხილება ნელი ტრანზიტის ეჭვისას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESNM",
+    "title": "European Society of Neurogastroenterology and Motility guidelines on functional constipation in adults (Serra et al., Neurogastroenterol Motil 2020)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31756783/",
+    "type": "guideline",
+    "supports": "Anorectal manometry has the strongest evidence as a comprehensive evaluation of anorectal function; reserved with transit studies/defecography for patients failing treatment"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-005",
+  "cluster": "CONST",
+  "topics": [
+   2
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული იდიოპათიური ყაბზობა — პირველი რიგი",
+  "recommendation_ka": "დაიწყეთ ურეცეპტო საშუალებებით: ბოჭკო (პირობითი რეკომენდაცია) და/ან ოსმოსური საფაღარათო პოლიეთილენგლიკოლი 17 გ დღეში (ძლიერი რეკომენდაცია; პასუხი შენარჩუნებულია 6 თვის განმავლობაში; გვერდითი ეფექტები — შებერილობა, სპაზმი). ალტერნატივებია ლაქტულოზა და მაგნიუმის ოქსიდი 400–500 მგ დღეში (პირობითი); მაგნიუმის ოქსიდი თავიდან იქნეს აცილებული თირკმლის უკმარისობისას.",
+  "doses": [
+   {
+    "drug": "polyethylene glycol",
+    "amount": 17,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "magnesium oxide",
+    "amount": 400,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "daily",
+    "population": "adult",
+    "max_amount": 500,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "month",
+    "meaning_ka": "PEG-ის ეფექტის შენარჩუნების ხანგრძლივობა კვლევებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AGA/ACG",
+    "title": "AGA–ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (Chang et al., Gastroenterology 2023;164:1086-1106; Am J Gastroenterol 2023;118:936-954)",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10542656/",
+    "type": "guideline",
+    "supports": "Strong recommendations for PEG, sodium picosulfate, linaclotide, plecanatide, prucalopride; conditional for fiber, lactulose, senna, magnesium oxide, lubiprostone; PEG 17 g daily with durable response over 6 months; magnesium oxide 400–500 mg daily, avoid in renal insufficiency"
+   },
+   {
+    "org": "ACG",
+    "title": "Joint AGA-ACG Clinical Practice Guideline on Chronic Idiopathic Constipation Treatments: Parsing Benefits and Risks (Evidence-Based GI)",
+    "year": 2023,
+    "url": "https://gi.org/journals-publications/ebgi/schoenfeld2_june2023/",
+    "type": "guideline_commentary",
+    "supports": "Prescription therapies should be used only after OTC agents; shared decision-making on cost and availability"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-006",
+  "cluster": "CONST",
+  "topics": [
+   2
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული ყაბზობა — სტიმულატორული საფაღარათოები",
+  "recommendation_ka": "სენა 8.6–17.2 მგ დღეში (პირობითი რეკომენდაცია), ბისაკოდილი 5–10 მგ დღეში პერორალურად ან ნატრიუმის პიკოსულფატი (ძლიერი რეკომენდაცია) გამოიყენება ყოველდღიურად 4 კვირამდე ან როგორც „სამაშველო“ თერაპია. ხანგრძლივი გამოყენება სავარაუდოდ მისაღებია, თუმცა ტოლერანტობის და უსაფრთხოების მონაცემები შეზღუდულია.",
+  "doses": [
+   {
+    "drug": "senna",
+    "amount": 8.6,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "daily",
+    "population": "adult",
+    "max_amount": 17.2,
+    "max_unit": "mg"
+   },
+   {
+    "drug": "bisacodyl",
+    "amount": 5,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "daily",
+    "population": "adult",
+    "max_amount": 10,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "ყოველდღიური გამოყენების ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AGA/ACG",
+    "title": "AGA–ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (Chang et al., Gastroenterology 2023;164:1086-1106; Am J Gastroenterol 2023;118:936-954)",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10542656/",
+    "type": "guideline",
+    "supports": "Senna 8.6–17.2 mg daily (conditional); bisacodyl 5–10 mg orally daily and sodium picosulfate (strong) for daily use up to 4 weeks or as rescue; long-term use probably appropriate but more data needed"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-007",
+  "cluster": "CONST",
+  "topics": [
+   2
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული ყაბზობა, ურეცეპტო საშუალებების უეფექტობა",
+  "recommendation_ka": "დაინიშნოს რეცეპტით გაცემული საშუალება: ლინაკლოტიდი, პლეკანატიდი ან პრუკალოპრიდი (ძლიერი რეკომენდაცია), ან ლუბიპროსტონი (პირობითი). არჩევანი გაკეთდეს პაციენტთან ერთად ფასის, ხელმისაწვდომობის და გვერდითი ეფექტების გათვალისწინებით. ეს საშუალებები საქართველოში შესაძლოა ყველა არ იყოს რეგისტრირებული.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AGA/ACG",
+    "title": "AGA–ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (Chang et al., Gastroenterology 2023;164:1086-1106; Am J Gastroenterol 2023;118:936-954)",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10542656/",
+    "type": "guideline",
+    "supports": "Strong recommendations for linaclotide, plecanatide and prucalopride; conditional for lubiprostone"
+   },
+   {
+    "org": "ACG",
+    "title": "Joint AGA-ACG Clinical Practice Guideline on Chronic Idiopathic Constipation Treatments: Parsing Benefits and Risks (Evidence-Based GI)",
+    "year": 2023,
+    "url": "https://gi.org/journals-publications/ebgi/schoenfeld2_june2023/",
+    "type": "guideline_commentary",
+    "supports": "Prescription therapies after OTC agents fail; shared decision-making based on preferences, cost and availability"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-008",
+  "cluster": "CONST",
+  "topics": [
+   83
+  ],
+  "rule_type": "evaluation",
+  "population": "older_adult",
+  "condition_ka": "ხანდაზმული პაციენტი ყაბზობით",
+  "recommendation_ka": "პირველ რიგში გადაიხედოს მედიკამენტების სია: ოპიოიდები, ანტიქოლინერგული საშუალებები, ანტიჰისტამინური და სხვა ხშირად გამოყენებული წამლები ყაბზობის ხშირი მიზეზია; შესაძლებლობისას შეწყდეს ან შეიცვალოს. შეფასდეს თანმხლები ქრონიკული დაავადებები, მობილობა, სითხის მიღება და ფსიქოსოციალური ფაქტორები. ახლად დაწყებული ყაბზობა ხანდაზმულში განგაშის ნიშნად განიხილება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ახლად დაწყებული ყაბზობა",
+   "წონის კლება",
+   "ანემია"
+  ],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Constipation in Older Adults (Am Fam Physician 2015;92:500-504)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/0915/p500",
+    "type": "review",
+    "supports": "Secondary constipation in older adults is associated with chronic disease, medications (opioids, anticholinergics, antihistamines) and psychosocial issues; review the medication list first (2015 review; most recent AAFP review on this topic, cited as current edition — reviewer to confirm)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-009",
+  "cluster": "CONST",
+  "topics": [
+   83
+  ],
+  "rule_type": "red_flag",
+  "population": "older_adult",
+  "condition_ka": "ხანდაზმული პაციენტი „დიარეით“, განავლის შეუკავებლობით, ანორექსიით ან ფუნქციური გაუარესებით",
+  "recommendation_ka": "გამოირიცხოს განავლით გადატვირთვა (ფეკალური იმპაქცია) ციფრული რექტალური გასინჯვით: განავლის გადინება (overflow) შეიძლება დიარეა ან შეუკავებლობა ეგონოთ. ასეთ დროს ანტიდიარეული საშუალება (მაგ. ლოპერამიდი) უკუნაჩვენებია. იმპაქციისას — რექტალური საშუალებები (სანთლები, ოყნა) ან ხელით დაცლა, შემდეგ შემანარჩუნებელი საფაღარათო რეჟიმი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ფეკალური იმპაქცია",
+   "განავლის გადინება (overflow)",
+   "მუცლის შებერილობა და ღებინება — ობსტრუქციის ეჭვი"
+  ],
+  "sources": [
+   {
+    "org": "CMAJ",
+    "title": "Treatment of constipation in older people (Gandell et al., CMAJ 2013)",
+    "year": 2013,
+    "url": "https://www.schulich.uwo.ca/geriatrics/docs/Gandell%202013%20-%20CMAJ%20Constipation.pdf",
+    "type": "review",
+    "supports": "Constipation in older people can present with overflow incontinence; case of seepage on loperamide due to faecal loading (2013 practice article; cited as current edition — reviewer to confirm)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-010",
+  "cluster": "CONST",
+  "topics": [
+   83
+  ],
+  "rule_type": "treatment",
+  "population": "older_adult",
+  "condition_ka": "ხანდაზმულის ქრონიკული ყაბზობის მედიკამენტური მკურნალობა",
+  "recommendation_ka": "ოსმოსური საფაღარათოებიდან უპირატესობა მიენიჭოს პოლიეთილენგლიკოლს 17 გ დღეში ლაქტულოზასთან შედარებით (უფრო ეფექტურია, ნაკლები შებერილობით). მაგნიუმის ოქსიდი თავიდან იქნეს აცილებული თირკმლის ფუნქციის დაქვეითებისას ჰიპერმაგნიემიის რისკის გამო; გამოყენებისას აკონტროლეთ სისხლის მაგნიუმი და თირკმლის ფუნქცია.",
+  "doses": [
+   {
+    "drug": "polyethylene glycol",
+    "amount": 17,
+    "unit": "g",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "older_adult",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰიპერმაგნიემია (სისუსტე, ბრადიკარდია, ჰიპოტენზია)"
+  ],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Constipation in Older Adults (Am Fam Physician 2015;92:500-504)",
+    "year": 2015,
+    "url": "https://www.aafp.org/afp/2015/0915/p500",
+    "type": "review",
+    "supports": "Polyethylene glycol is preferred over lactulose because it is more effective and has fewer adverse effects (2015 review; most recent AAFP review on this topic, cited as current edition — reviewer to confirm)."
+   },
+   {
+    "org": "AGA/ACG",
+    "title": "AGA–ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (Chang et al., Gastroenterology 2023;164:1086-1106; Am J Gastroenterol 2023;118:936-954)",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10542656/",
+    "type": "guideline",
+    "supports": "PEG 17 g daily; magnesium oxide should be avoided in renal insufficiency due to hypermagnesaemia risk"
+   },
+   {
+    "org": "PMC / peer-reviewed study",
+    "title": "Clinical features of hypermagnesemia in patients with functional constipation taking daily magnesium oxide",
+    "year": 2019,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6667383/",
+    "type": "cohort_study",
+    "supports": "Daily magnesium oxide: CKD (advanced) and higher MgO dose associated with hypermagnesaemia; concomitant stimulant laxatives linked to higher serum magnesium"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-011",
+  "cluster": "CONST",
+  "topics": [
+   83
+  ],
+  "rule_type": "monitoring",
+  "population": "older_adult",
+  "condition_ka": "ხანდაზმული, რომელიც იღებს მაგნიუმის ოქსიდს ყაბზობის გამო",
+  "recommendation_ka": "პერიოდულად შემოწმდეს შრატის მაგნიუმი და თირკმლის ფუნქცია, განსაკუთრებით ქრონიკული თირკმლის დაავადებისას, დოზის მატებისას ან სტიმულატორულ საფაღარათოსთან კომბინაციისას; ჰიპერმაგნიემიის ნიშნებისას საშუალება შეწყდეს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰიპერმაგნიემია"
+  ],
+  "sources": [
+   {
+    "org": "PMC / peer-reviewed study",
+    "title": "Clinical features of hypermagnesemia in patients with functional constipation taking daily magnesium oxide",
+    "year": 2019,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6667383/",
+    "type": "cohort_study",
+    "supports": "Retrospective study of 193 patients on daily magnesium oxide: CKD and MgO dose associated with hypermagnesaemia; stimulant laxative co-use associated with high serum magnesium"
+   },
+   {
+    "org": "AGA/ACG",
+    "title": "AGA–ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (Chang et al., Gastroenterology 2023;164:1086-1106; Am J Gastroenterol 2023;118:936-954)",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10542656/",
+    "type": "guideline",
+    "supports": "Patients with renal insufficiency should avoid magnesium oxide due to risk of hypermagnesaemia"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CONST-012",
+  "cluster": "CONST",
+  "topics": [
+   83
+  ],
+  "rule_type": "treatment",
+  "population": "older_adult",
+  "condition_ka": "ოპიოიდით გამოწვეული რეფრაქტერული ყაბზობა ხანდაზმულში პალიატიური მზრუნველობისას",
+  "recommendation_ka": "ჩვეულებრივი საფაღარათოების უეფექტობისას განიხილეთ პერიფერიული მოქმედების μ-ოპიოიდური რეცეპტორის ანტაგონისტი (PAMORA, მაგ. მეთილნალტრექსონი) — განსაკუთრებით მოწინავე (მაგ. ონკოლოგიური) დაავადების ან პალიატიური მზრუნველობის პაციენტებში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ESMO",
+    "title": "Diagnosis, assessment and management of constipation in advanced cancer: ESMO Clinical Practice Guidelines (Larkin et al., Ann Oncol 2018)",
+    "year": 2018,
+    "url": "https://esmo.org/guidelines/supportive-and-palliative-care/constipation-in-advanced-cancer",
+    "type": "guideline",
+    "supports": "Recommends PAMORAs, including prolonged-release formulations, for refractory (opioid-induced) constipation"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

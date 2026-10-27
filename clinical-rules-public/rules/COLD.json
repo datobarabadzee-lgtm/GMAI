@@ -1,0 +1,347 @@
+[
+ {
+  "rule_id": "PUB-COLD-001", "cluster": "COLD", "topics": [38, 55], "rule_type": "epidemiology", "population": "all",
+  "condition_ka": "გაციება (ზედა სასუნთქი გზების ვირუსული ინფექცია) — გამომწვევები და გადაცემა",
+  "recommendation_ka": "გაციებას იწვევს 200-ზე მეტი რესპირაციული ვირუსი; ყველაზე ხშირია რინოვირუსი, ასევე ადამიანის სეზონური კორონავირუსები, პარაგრიპის ვირუსები, ადენოვირუსები, ენტეროვირუსები და მეტაპნევმოვირუსი. მოზრდილს წელიწადში საშუალოდ 2–3 გაციება აქვს, ბავშვებს — მეტი. გადაეცემა წვეთებით, დაბინძურებული ზედაპირებითა და ხელის კონტაქტით; შეიძლება განვითარდეს წლის ნებისმიერ დროს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 200, "unit": "count", "meaning_ka": "გამომწვევი ვირუსების რაოდენობა"},
+   {"value": 2, "unit": "count", "meaning_ka": "მოზრდილის წლიური გაციებების ქვედა ზღვარი"},
+   {"value": 3, "unit": "count", "meaning_ka": "მოზრდილის წლიური გაციებების ზედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "CDC", "title": "About Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/about/index.html", "type": "fact_sheet", "supports": "More than 200 respiratory viruses can cause colds; rhinoviruses most frequent; adults average two to three colds per year, children more; spread through droplets, contaminated surfaces and close contact; any time of year."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-002", "cluster": "COLD", "topics": [55], "rule_type": "diagnosis", "population": "adult",
+  "condition_ka": "მოზრდილი ცხვირის გამონადენით, ცხვირის გაჭედვით, ცემინებით, ყელის ტკივილით, ხველით",
+  "recommendation_ka": "გაციების დიაგნოზი კლინიკურია; რუტინული ლაბორატორიული ან ვირუსოლოგიური კვლევა საჭირო არ არის. სიმპტომები პიკს აღწევს ინფიცირებიდან 2–3 დღეში და ჩვეულებრივ 1 კვირაზე ნაკლებ ხანს გრძელდება; ცხელება მოზრდილში, როგორც წესი, დაბალია. ხველა შეიძლება 3–4 კვირამდე გაგრძელდეს — ეს თავისთავად ბაქტერიულ ინფექციაზე არ მიუთითებს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "day", "meaning_ka": "სიმპტომების პიკის ქვედა ზღვარი"},
+   {"value": 3, "unit": "day", "meaning_ka": "სიმპტომების პიკის ზედა ზღვარი"},
+   {"value": 3, "unit": "week", "meaning_ka": "მწვავე ხველის ხანგრძლივობის ქვედა ზღვარი"},
+   {"value": 1, "unit": "week", "meaning_ka": "გაციების ტიპური ხანგრძლივობა"},
+   {"value": 4, "unit": "week", "meaning_ka": "მწვავე ხველის ხანგრძლივობის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "CDC", "title": "About Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/about/index.html", "type": "fact_sheet", "supports": "Signs and symptoms usually peak within 2 to 3 days; colds usually last less than a week; fever usually low grade in older children and adults."},
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendation 1.1.1", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Acute cough is usually self-limiting and gets better within 3 to 4 weeks without antibiotics; most commonly caused by viral URTI such as a cold."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-003", "cluster": "COLD", "topics": [55, 56], "rule_type": "evaluation", "population": "all",
+  "condition_ka": "გაციების მსგავსი სიმპტომები — გრიპის ან COVID-19-ის ეჭვი",
+  "recommendation_ka": "გრიპი, COVID-19 და რესპირაციულ-სინციტიური ვირუსი გაციების მსგავს სიმპტომებს იწვევს, მაგრამ მძიმე მიმდინარეობის რისკი მეტია. მაღალი რისკის პირებში (ჩვილები, ხანდაზმულები, ქრონიკული დაავადება, იმუნოსუპრესია) ჩაატარეთ ტესტირება: გრიპის ანტივირუსული მკურნალობა უნდა დაიწყოს სიმპტომებიდან 2 დღეში, COVID-19-ის — 5–7 დღეში. სხვა გაციების ვირუსების საწინააღმდეგო ანტივირუსული საშუალება არ არსებობს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 19, "unit": "label", "meaning_ka": "COVID-19 (დაავადების სახელწოდება)"},
+   {"value": 2, "unit": "day", "meaning_ka": "გრიპის ანტივირუსული მკურნალობის დაწყების ვადა"},
+   {"value": 5, "unit": "day", "meaning_ka": "COVID-19-ის მკურნალობის ვადის ქვედა ზღვარი"},
+   {"value": 7, "unit": "day", "meaning_ka": "COVID-19-ის მკურნალობის ვადის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": ["მაღალი რისკის ჯგუფი რესპირაციული სიმპტომებით"],
+  "sources": [
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "If cold-like symptoms and suspected COVID-19 or flu, get tested, especially if higher risk; start COVID-19 treatment within 5-7 days or flu treatment within 2 days of symptom onset; no antivirals for other cold viruses."},
+   {"org": "CDC", "title": "About Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/about/index.html", "type": "fact_sheet", "supports": "SARS-CoV-2, influenza and RSV can cause cold-like symptoms but are more likely to cause severe illness, especially in infants, older adults, people with underlying conditions or weakened immune systems."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-004", "cluster": "COLD", "topics": [55, 56], "rule_type": "red_flag", "population": "all",
+  "condition_ka": "გაციება — როდის არის საჭირო ექიმთან მიმართვა ან ხელახალი შეფასება",
+  "recommendation_ka": "შეაფასეთ ხელახლა, თუ: სუნთქვის გაძნელება ან ტაქიპნოე; დეჰიდრატაცია; ცხელება 4 დღეზე მეტ ხანს; სიმპტომები 10 დღეზე მეტ ხანს გაუმჯობესების გარეშე; ორფაზიანი მიმდინარეობა (გაუმჯობესების შემდეგ ცხელების ან ხველის დაბრუნება/გაუარესება); ქრონიკული დაავადების გამწვავება; სიმპტომების სწრაფი ან მნიშვნელოვანი გაუარესება, ან ზოგადი მდგომარეობის მძიმე დარღვევა. ასეთ დროს გამორიცხეთ პნევმონია, სინუსიტი, სეფსისი.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 4, "unit": "day", "meaning_ka": "ცხელების ხანგრძლივობის ზღვარი"},
+   {"value": 10, "unit": "day", "meaning_ka": "სიმპტომების ხანგრძლივობის ზღვარი გაუმჯობესების გარეშე"}
+  ],
+  "red_flags_ka": ["სუნთქვის უკმარისობა", "დეჰიდრატაცია", "ცხელება >4 დღე", "ორფაზიანი გაუარესება"],
+  "sources": [
+   {"org": "CDC", "title": "Manage Common Cold — When to seek medical care", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Seek care for trouble/fast breathing, dehydration, fever longer than 4 days, symptoms >10 days without improvement, symptoms that improve then return or worsen, worsening chronic conditions."},
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendations 1.1.4-1.1.5, 1.1.19", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Seek help if symptoms worsen rapidly or significantly or person becomes systemically very unwell; reassess considering pneumonia, sepsis; refer if signs of more serious illness."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-005", "cluster": "COLD", "topics": [38, 55], "rule_type": "diagnosis", "population": "all",
+  "condition_ka": "გაციების გართულებები",
+  "recommendation_ka": "მსუბუქი-ზომიერი გართულებები: შუა ოტიტი, სინუსიტი. პოტენციურად მძიმე: ასთმის გამწვავება, ბრონქიოლიტი (განსაკუთრებით ჩვილებში), ბრონქიტი, პნევმონია, ქრონიკული დაავადებების (ფილტვის ქრონიკული ობსტრუქციული დაავადება, გულის უკმარისობა) გაუარესება. ჩვილებში გაციება შეიძლება სწრაფად გადავიდეს ბრონქიოლიტში, კრუპში ან პნევმონიაში.",
+  "doses": [], "numeric_values": [],
+  "red_flags_ka": ["ხიხინი და სუნთქვის გაძნელება", "ყურის ტკივილი"],
+  "sources": [
+   {"org": "CDC", "title": "About Common Cold — Complications", "year": 2026, "url": "https://www.cdc.gov/common-cold/about/index.html", "type": "fact_sheet", "supports": "Mild to moderate: middle ear infections, sinus infections; potentially severe: asthma attacks, bronchiolitis, bronchitis, pneumonia, worsening of COPD or heart failure."},
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "In young babies colds can quickly become dangerous problems such as bronchiolitis, croup or pneumonia."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-006", "cluster": "COLD", "topics": [56], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "გაუსწრებელი გაციება ან ზედა სასუნთქი გზების ინფექციასთან დაკავშირებული მწვავე ხველა",
+  "recommendation_ka": "ანტიბიოტიკი არ დანიშნოთ — ის ვირუსზე არ მოქმედებს, სიმპტომებს არ ამსუბუქებს და იწვევს გვერდით ეფექტებს (გამონაყარი, დიარეა, Clostridioides difficile, რეზისტენტობა); აუხსენით პაციენტს მიზეზი. ანტიბიოტიკი განიხილეთ მხოლოდ სისტემურად მძიმე მდგომარეობისას ან გართულების მაღალი რისკისას: გულის, ფილტვის, თირკმლის, ღვიძლის ან ნეირომუსკულური მძიმე დაავადება, იმუნოსუპრესია, ცისტური ფიბროზი; 65 წელზე უფროსი 2 ან მეტი კრიტერიუმით, ან 80 წელზე უფროსი 1 ან მეტი კრიტერიუმით (ჰოსპიტალიზაცია ბოლო წელს, დიაბეტი, გულის შეგუბებითი უკმარისობა, პერორალური კორტიკოსტეროიდები).",
+  "doses": [],
+  "numeric_values": [
+   {"value": 65, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი 2 კრიტერიუმით"},
+   {"value": 2, "unit": "count", "meaning_ka": "კრიტერიუმების რაოდენობა 65+ ასაკში"},
+   {"value": 80, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი 1 კრიტერიუმით"},
+   {"value": 1, "unit": "count", "meaning_ka": "კრიტერიუმების რაოდენობა 80+ ასაკში"}
+  ],
+  "red_flags_ka": ["სისტემურად მძიმე მდგომარეობა"],
+  "sources": [
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendations 1.1.8, 1.1.14-1.1.16", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Do not offer an antibiotic for acute cough associated with URTI in people not systemically very unwell or at higher risk; higher risk = significant heart/lung/renal/liver/neuromuscular disease, immunosuppression, CF, premature young children, >65 y with 2+ or >80 y with 1+ of: hospitalisation in previous year, diabetes, CHF, oral corticosteroids."},
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Antibiotics don't work against viruses; side effects include rash, severe allergic reactions, antimicrobial-resistant infections and C. diff infection."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-007", "cluster": "COLD", "topics": [56], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "გაციება მოზრდილში — სიმპტომური მკურნალობა",
+  "recommendation_ka": "სიმპტომური მკურნალობა: დასვენება, საკმარისი სითხე, ფიზიოლოგიური ხსნარის ცხვირის სპრეი/წვეთები, სუფთა დამატენიანებელი, ყელის პასტილები; ტკივილისა და ცხელებისთვის პარაცეტამოლი ან იბუპროფენი ინსტრუქციის მიხედვით. ხველისთვის შეიძლება სცადონ თაფლი, პელარგონიუმი, გუაიფენეზინი ან ხველის დამთრგუნველი (კოდეინის გარდა) — 12 წლიდან. NICE-ის მიხედვით ანტიჰისტამინები, დეკონგესტანტები და კოდეინიანი სიროფები ხველას არ ამსუბუქებს; IOC-ის კონსენსუსი კი აღნიშნავს ცხვირის დეკონგესტანტის მცირე ეფექტს გაჭედვაზე და კომბინირებული (ანტიჰისტამინი-დეკონგესტანტი-ანალგეტიკი) პრეპარატების გარკვეულ სარგებელს მოზრდილებში — აწონეთ გვერდით ეფექტებთან.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 12, "unit": "age_years", "meaning_ka": "პელარგონიუმის, გუაიფენეზინის და ხველის დამთრგუნველების მინიმალური ასაკი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendations 1.2.1-1.2.2", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Self-care with limited evidence of benefit: honey (over 1 year), pelargonium (12+), guaifenesin (12+), cough suppressants except codeine (12+); antihistamines, decongestants and codeine-containing cough medicines do not help cough."},
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Adults: OTC pain relievers/fever reducers as directed; rest, fluids, clean humidifier, saline spray, lozenges, honey."},
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1: acute respiratory infections (Table 5)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Multiple doses of nasal decongestants may have a small positive effect on nasal congestion in adults; antihistamine-decongestant-analgesic combinations have some general benefit in adults/adolescents, weigh against adverse effects; not for children."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-008", "cluster": "COLD", "topics": [56], "rule_type": "treatment", "population": "all",
+  "condition_ka": "გაციებასთან დაკავშირებული მწვავე ხველა — არაეფექტიანი მედიკამენტები",
+  "recommendation_ka": "ბრონქოდილატატორი (მაგ., სალბუტამოლი) ან პერორალური/საინჰალაციო კორტიკოსტეროიდი არ დანიშნოთ, თუ პაციენტს არ აქვს სასუნთქი გზების ქრონიკული დაავადება (მაგ., ასთმა). მუკოლიზური საშუალებები (აცეტილცისტეინი, კარბოცისტეინი) არ დანიშნოთ. ინტრანაზალური კორტიკოსტეროიდები გაციების სიმპტომების შესამსუბუქებლად მტკიცებულებით არ არის მხარდაჭერილი.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendations 1.1.6-1.1.7", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Do not offer oral/inhaled bronchodilator or corticosteroid for acute cough with URTI unless underlying airways disease such as asthma; do not offer a mucolytic."},
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1 (Table 5)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Current evidence does not support nasal corticosteroids for symptomatic relief in upper ARinf; mucolytics limited efficacy."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-009", "cluster": "COLD", "topics": [56], "rule_type": "treatment", "population": "adult",
+  "condition_ka": "თუთია გაციების პრევენციისა და მკურნალობისთვის",
+  "recommendation_ka": "Cochrane-ის 2024 წლის მიმოხილვით თუთია გაციების პრევენციაზე მცირე ან არანაირ გავლენას ახდენს; მკურნალობისას შესაძლოა ამოკლოს ხანგრძლივობა (საშუალოდ დაახლოებით 2.37 დღით, დაბალი სანდოობის მტკიცებულება, მაღალი ჰეტეროგენულობა), მაგრამ ზრდის არასერიოზულ გვერდით ეფექტებს (უსიამოვნო გემო, გულისრევა). IOC-ის კონსენსუსი სპორტსმენებისთვის უფრო დადებითად აფასებს თუთიის პასტილებს (იხ. სპორტსმენების წესი). რუტინულად არ არის აუცილებელი; გადაწყვეტილება მიიღეთ ინდივიდუალურად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2024, "unit": "label", "meaning_ka": "მიმოხილვის წელი"},
+   {"value": 2.37, "unit": "day", "meaning_ka": "ხანგრძლივობის საშუალო შემცირება მკურნალობისას"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "Cochrane", "title": "Zinc for prevention and treatment of the common cold (Nault D et al., CD014914.pub2)", "year": 2024, "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/", "type": "systematic_review", "supports": "Little or no reduction in risk of developing a cold (RR 0.93); for treatment may reduce mean duration (MD -2.37 days, low certainty, I2 97%); probably increased non-serious adverse events with treatment (RR 1.34)."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-010", "cluster": "COLD", "topics": [56, 84], "rule_type": "prevention", "population": "all",
+  "condition_ka": "გაციების გავრცელების პრევენცია ოჯახში, სკოლაში, სამსახურში",
+  "recommendation_ka": "ხელების ხშირი დაბანა საპნით და წყლით ან ალკოჰოლიანი ანტისეპტიკით; ხველისა და ცემინებისას იდაყვის მოხრილ ნაწილში ან ერთჯერად ცხვირსახოცში (შემდეგ დაუყოვნებლივ გადაყარეთ); თვალების, ცხვირის და პირის შეხების თავიდან აცილება დაუბანელი ხელებით; ხშირად შეხებადი ზედაპირებისა და სათამაშოების წმენდა; ავადმყოფობისას სხვებთან კონტაქტის შეზღუდვა.",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "Sneeze or cough into crook of elbow or tissue; everyone should wash hands with soap and water or use alcohol-based sanitizer to stop spread; spread via contaminated hands and surfaces such as toys."},
+   {"org": "CDC", "title": "About Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/about/index.html", "type": "fact_sheet", "supports": "Viruses spread via droplets, touching contaminated surfaces then eyes/nose/mouth, and close personal contact such as shaking hands."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-011", "cluster": "COLD", "topics": [38], "rule_type": "diagnosis", "population": "child",
+  "condition_ka": "ბავშვი ცხვირის გამონადენით, ცემინებით, ხველით, ყელის ტკივილით",
+  "recommendation_ka": "ბავშვებს სიცოცხლის პირველ 2 წელიწადში საშუალოდ 8–10 გაციება აქვთ, ბაგა-ბაღში სიარულისას ან სკოლის ასაკის და-ძმების ყოლისას — მეტიც. ტიპური ნიშნებია: ჯერ გამჭვირვალე, შემდეგ უფრო სქელი და ხშირად შეფერილი ცხვირის გამონადენი (ეს ბუნებრივი მიმდინარეობაა და თავისთავად ბაქტერიულ ინფექციაზე არ მიუთითებს), ცემინება, დაბალი ცხელება (38.3–38.9 °C, ხშირად ღამით), მადის დაქვეითება, ყელის ტკივილი, ხველა, გაღიზიანებადობა, კისრის ლიმფური კვანძების მცირე გადიდება. სიმპტომები თანდათან ქრება 7–10 დღეში.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "year", "meaning_ka": "ასაკობრივი პერიოდი"},
+   {"value": 8, "unit": "count", "meaning_ka": "წლიური გაციებების ქვედა ზღვარი"},
+   {"value": 10, "unit": "count", "meaning_ka": "წლიური გაციებების ზედა ზღვარი; ასევე 10 დღე"},
+   {"value": 38.3, "unit": "°C", "meaning_ka": "ტიპური ტემპერატურის ქვედა ზღვარი"},
+   {"value": 38.9, "unit": "°C", "meaning_ka": "ტიპური ტემპერატურის ზედა ზღვარი"},
+   {"value": 7, "unit": "day", "meaning_ka": "გამოჯანმრთელების ვადის ქვედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "Most children have around 8 to 10 colds in first two years, more in childcare; runny nose clear then thicker often colored mucus, sneezing, low fever (101-102 F, 38.3-38.9 C) particularly at night, poor appetite, sore throat, cough, fussiness, slightly swollen glands; symptoms go away slowly after 7 to 10 days."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-012", "cluster": "COLD", "topics": [38, 84], "rule_type": "red_flag", "population": "child",
+  "condition_ka": "გაციება ჩვილში ან ბავშვში — განგაშის ნიშნები",
+  "recommendation_ka": "3 თვის ან უმცროსი ჩვილი — ექიმმა უნდა შეაფასოს დაავადების პირველივე ნიშნისას. 3 თვეზე უფროსი ბავშვი — სასწრაფო შეფასება, თუ: ცხვირის ფრთების მოძრაობა, ნეკნთაშუა ჩაზნექვა, ტაქიპნოე ან სუნთქვის გაძნელება; ტუჩების ან ფრჩხილების ციანოზი; ტემპერატურა 38.9 °C-ზე მეტი; ყურის ტკივილი ან მუდმივი ტირილი; ზედმეტი ძილიანობა; დეჰიდრატაცია. ექიმთან მიმართვა ასევე საჭიროა, თუ ცხვირის გამონადენი 10–14 დღეზე მეტ ხანს გრძელდება ან დღის ხველა 10 დღეზე მეტ ხანს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 3, "unit": "age_months", "meaning_ka": "ჩვილის ასაკის ზღვარი"},
+   {"value": 38.9, "unit": "°C", "meaning_ka": "ტემპერატურის ზღვარი"},
+   {"value": 10, "unit": "day", "meaning_ka": "გამონადენის/ხველის ხანგრძლივობის ზღვარი"},
+   {"value": 14, "unit": "day", "meaning_ka": "გამონადენის ხანგრძლივობის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": ["ნეკნთაშუა ჩაზნექვა", "ციანოზი", "ტაქიპნოე", "ჩვილი ≤3 თვე ნებისმიერი ავადობით", "ზედმეტი ძილიანობა"],
+  "sources": [
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds — When to call the pediatrician", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "Infants 3 months or younger: call at first sign of illness. Older: nasal flaring, retractions, fast/difficult breathing, blue lips/nails, nasal mucus >10-14 days, daytime cough >10 days, ear pain, temperature over 102 F (38.9 C), too sleepy or cranky."},
+   {"org": "CDC", "title": "Manage Common Cold — When to seek medical care", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Seek care for trouble breathing or fast breathing, dehydration."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-013", "cluster": "COLD", "topics": [38], "rule_type": "evaluation", "population": "child",
+  "condition_ka": "5 წლამდე ბავშვი მწვავე ხველით და ცხელებით",
+  "recommendation_ka": "5 წლამდე ბავშვში ხველა და ცხელება შეაფასეთ ცხელების მქონე მცირეწლოვანი ბავშვის სტანდარტული პროტოკოლით (სიმძიმის ნიშნების, სუნთქვის სიხშირის, ჰიდრატაციის შეფასება), და არა მხოლოდ როგორც გაციება. დღენაკლულად დაბადებული მცირეწლოვანი ბავშვები გართულებების მაღალი რისკის ჯგუფს მიეკუთვნებიან. პნევმონიის ეჭვისას იმოქმედეთ პნევმონიის გაიდლაინის შესაბამისად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 5, "unit": "age_years", "meaning_ka": "ასაკობრივი ზღვარი"}
+  ],
+  "red_flags_ka": ["დღენაკლულობის ანამნეზი", "პნევმონიის ნიშნები"],
+  "sources": [
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendations 1.1.2-1.1.3, 1.1.15", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "For children under 5 with acute cough and fever, follow NICE guideline on fever in under 5s; suspected pneumonia follow pneumonia guidelines; young children born prematurely are at higher risk of complications."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-014", "cluster": "COLD", "topics": [84], "rule_type": "treatment", "population": "child",
+  "condition_ka": "ურეცეპტო ხველისა და გაციების კომბინირებული პრეპარატები ბავშვებში",
+  "recommendation_ka": "2 წლამდე ბავშვს არ მისცეთ დეკონგესტანტის ან ანტიჰისტამინის შემცველი ხველისა და გაციების პრეპარატი — აღწერილია კრუნჩხვები, ტაქიკარდია და სიკვდილი (FDA); მწარმოებლების ეტიკეტი: „არ გამოიყენოთ 4 წლამდე“. CDC უფრო მკაცრია — ასეთი პრეპარატები არ არის რეკომენდებული 6 წლამდე. NICE ხველის ურეცეპტო საშუალებებს (გუაიფენეზინი, დამთრგუნველები) მხოლოდ 12 წლიდან განიხილავს. უფროს ბავშვებშიც: არ გადააჭარბოთ დოზას, ერთდროულად არ გამოიყენოთ ერთი და იმავე ნივთიერების შემცველი რამდენიმე პრეპარატი, არ მისცეთ მოზრდილისთვის განკუთვნილი წამალი.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 2, "unit": "age_years", "meaning_ka": "FDA-ის აკრძალვის ასაკი"},
+   {"value": 4, "unit": "age_years", "meaning_ka": "ეტიკეტის ასაკობრივი ზღვარი"},
+   {"value": 6, "unit": "age_years", "meaning_ka": "CDC-ის ასაკობრივი ზღვარი"},
+   {"value": 12, "unit": "age_years", "meaning_ka": "NICE-ის ასაკობრივი ზღვარი ხველის საშუალებებისთვის"}
+  ],
+  "red_flags_ka": ["კრუნჩხვა ან ტაქიკარდია ურეცეპტო პრეპარატის შემდეგ", "შემთხვევითი ზედოზირება"],
+  "sources": [
+   {"org": "FDA", "title": "Use Caution When Giving Cough and Cold Products to Kids", "year": 2018, "url": "https://www.fda.gov/drugs/special-features/use-caution-when-giving-cough-and-cold-products-kids", "type": "regulatory", "supports": "Children under 2 should not be given any cough and cold product containing a decongestant or antihistamine (convulsions, rapid heart rates, death reported); products relabeled 'do not use in children under 4'; risks of overdosing with multiple-ingredient products; do not give adult medicines."},
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "OTC cough/cold medicines are not recommended for children younger than 6 years old."},
+   {"org": "NICE", "title": "Cough (acute): antimicrobial prescribing (NG120), recommendation 1.2.1", "year": 2019, "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations", "type": "guideline", "supports": "Guaifenesin and cough suppressants (except codeine) as self-care in people aged 12 and over."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-015", "cluster": "COLD", "topics": [84], "rule_type": "treatment", "population": "child",
+  "condition_ka": "გაციება ბავშვში — უსაფრთხო სიმპტომური მართვა",
+  "recommendation_ka": "ცხელებისა და ტკივილისთვის პარაცეტამოლი ან იბუპროფენი წონის/ასაკის შესაბამისი დოზით ეტიკეტის მიხედვით. ფიზიოლოგიური ხსნარის წვეთები ან სპრეი; 1 წლამდე ჩვილებში ცხვირის ასპირაცია რეზინის ბალონით. ცივი ორთქლის დამატენიანებელი (არა ცხელი ორთქლის). საკმარისი სითხე და დასვენება. ხველისთვის თაფლი მხოლოდ 1 წლიდან — 1 წლამდე თაფლი არ მისცეთ. ყელის პასტილები არ მისცეთ 4 წლამდე.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 1, "unit": "age_years", "meaning_ka": "თაფლის და ბალონით ასპირაციის ასაკობრივი ზღვარი"},
+   {"value": 4, "unit": "age_years", "meaning_ka": "პასტილების მინიმალური ასაკი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Young children can have acetaminophen or ibuprofen for fever; saline drops; rubber suction bulb; do not give lozenges to children younger than 4; honey for cough for those at least 1 year old; babies younger than 1 should not be given honey."},
+   {"org": "FDA", "title": "Use Caution When Giving Cough and Cold Products to Kids", "year": 2018, "url": "https://www.fda.gov/drugs/special-features/use-caution-when-giving-cough-and-cold-products-kids", "type": "regulatory", "supports": "Cool mist humidifier (not warm mist); saline drops; bulb syringe suction works well for infants less than a year; acetaminophen or ibuprofen per Drug Facts label; fluids."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-016", "cluster": "COLD", "topics": [84], "rule_type": "treatment", "population": "child",
+  "condition_ka": "გაუსწრებელი გაციება ბავშვში — ანტიბიოტიკის მოთხოვნა",
+  "recommendation_ka": "ანტიბიოტიკი ვირუსულ გაციებაზე არ მოქმედებს და არ უნდა დაინიშნოს; მშობელს აუხსენით ბუნებრივი მიმდინარეობა, გვერდითი ეფექტები და როდის უნდა მიმართოს ხელახლა. ფოკუსი — ბავშვის კომფორტი, დასვენება და სითხე. ანტიბიოტიკი განიხილეთ მხოლოდ დადასტურებული ან ძლიერ საეჭვო ბაქტერიული გართულებისას (მაგ., პნევმონია, მწვავე ბაქტერიული სინუსიტი, შუა ოტიტი შესაბამისი კრიტერიუმებით).",
+  "doses": [], "numeric_values": [], "red_flags_ka": [],
+  "sources": [
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds — How to treat a cold", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "No cure for the common cold; antibiotics fight bacteria but have no effect on viruses; make the child comfortable with rest and fluids."},
+   {"org": "CDC", "title": "Manage Common Cold", "year": 2026, "url": "https://www.cdc.gov/common-cold/treatment/index.html", "type": "fact_sheet", "supports": "Antibiotics don't work against viruses; rarely viral infection leads to bacterial infection such as pneumonia that requires antibiotics."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-017", "cluster": "COLD", "topics": [84], "rule_type": "prevention", "population": "infant",
+  "condition_ka": "3 თვემდე ჩვილის დაცვა გაციებისგან",
+  "recommendation_ka": "3 თვემდე ჩვილის საუკეთესო დაცვაა მისი იზოლირება გაციებული პირებისგან, განსაკუთრებით ზამთარში — უფროსი ბავშვისთვის ან მოზრდილისთვის მსუბუქი ვირუსი ჩვილში შეიძლება მძიმედ წარიმართოს. ოჯახის წევრებმა ჩვილთან შეხებამდე დაიბანონ ხელები და ხველისას დაიფარონ პირი იდაყვით.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 3, "unit": "age_months", "meaning_ka": "ჩვილის ასაკის ზღვარი"}
+  ],
+  "red_flags_ka": ["ნებისმიერი ცხელება ან სუნთქვის გაძნელება 3 თვემდე ჩვილში"],
+  "sources": [
+   {"org": "AAP (HealthyChildren.org)", "title": "Children and Colds — How to prevent colds", "year": 2025, "url": "https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Children-and-Colds.aspx", "type": "patient_guidance", "supports": "For babies under 3 months, the best way to prevent colds is to keep them away from people who have one, especially in winter; a virus causing mild illness in older child/adult can be more serious in an infant."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-018", "cluster": "COLD", "topics": [81], "rule_type": "epidemiology", "population": "adolescent",
+  "condition_ka": "მწვავე რესპირაციული ინფექცია მოზარდ ან მოზრდილ სპორტსმენში",
+  "recommendation_ka": "სპორტსმენების მწვავე რესპირაციული ინფექციების 80%-ზე მეტი მსუბუქი, თვითშემოფარგლული და ხანმოკლეა; მხოლოდ დაახლოებით 20% იწვევს ვარჯიშის/შეჯიბრის 1 დღეზე მეტ გაცდენას, სიმპტომების საშუალო ხანგრძლივობაა 7 დღე. ვირუსის ყველაზე მაღალი გადამდებლობა პირველ 3–4 დღეშია — გუნდში ინფიცირებული სპორტსმენი სიმპტომების დაწყებიდან 3–4 დღით იზოლირეთ.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 80, "unit": "%", "meaning_ka": "მსუბუქი შემთხვევების წილი"},
+   {"value": 20, "unit": "%", "meaning_ka": "დროის დაკარგვით მიმდინარე შემთხვევები"},
+   {"value": 1, "unit": "day", "meaning_ka": "გაცდენის ზღვარი"},
+   {"value": 7, "unit": "day", "meaning_ka": "სიმპტომების საშუალო ხანგრძლივობა"},
+   {"value": 3, "unit": "day", "meaning_ka": "იზოლაციის ქვედა ზღვარი"},
+   {"value": 4, "unit": "day", "meaning_ka": "იზოლაციის ზედა ზღვარი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1: acute respiratory infections", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Most (>80%) ARinf are mild, self-limiting and short; pooled ~20% of ARill result in >1 day lost; mean symptom duration 7 days; isolation of infected team members from symptom onset for 3-4 days, the most infectious period."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-019", "cluster": "COLD", "topics": [81], "rule_type": "evaluation", "population": "adolescent",
+  "condition_ka": "სპორტსმენი ზედა სასუნთქი გზების ინფექციით — სიმძიმის შეფასება",
+  "recommendation_ka": "მსუბუქი: მხოლოდ ზედა სასუნთქი გზების სიმპტომები (ცხვირის გაჭედვა, გამონადენი, ცემინება, ყელის ტკივილი, ხრინწი), ადრეული გამოსწორება (<3 დღე), სისტემური ნიშნების გარეშე. ზომიერი: ქვედა სასუნთქი გზების ან რეგიონული სიმპტომები, გამოსწორება 3–7 დღეში, ხანმოკლე (<48 საათი) მსუბუქი სისტემური ნიშნები. მძიმე/გართულებული: სისტემური სიმპტომები (ცხელება >38 °C, შემცივნება, მიალგია, გამოფიტვა, მოსვენებისას ტაქიკარდია) 48 საათზე მეტ ხანს, სიმპტომები >7 დღე ან ორფაზიანი მიმდინარეობა, პნევმონია ან სხვა ორგანოს ჩართულობის ნიშნები (გულმკერდის ტკივილი, გულისცემის შეგრძნება, თავბრუსხვევა). ძველ „კისრის წესს“ სამეცნიერო საფუძველი არ აქვს.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 3, "unit": "day", "meaning_ka": "მსუბუქი/ზომიერი ზღვარი"},
+   {"value": 7, "unit": "day", "meaning_ka": "ზომიერი/მძიმე ზღვარი"},
+   {"value": 48, "unit": "h", "meaning_ka": "სისტემური ნიშნების ხანგრძლივობის ზღვარი"},
+   {"value": 38, "unit": "°C", "meaning_ka": "ცხელების ზღვარი"}
+  ],
+  "red_flags_ka": ["გულმკერდის ტკივილი", "გულისცემის შეგრძნება ან მოსვენებისას ტაქიკარდია", "ცხელება >38 °C"],
+  "sources": [
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1 (Table 4)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Severity indicators: mild = upper symptoms without systemic, resolution <3 days; moderate = lower/regional symptoms, 3-7 days, few transient (<48 h) systemic signs; severe = systemic symptoms (fever >38 C, chills, myalgia, fatigue), >7 days or recurrence, >48 h systemic signs, pneumonia, multiorgan (cardiac) involvement; the 'neck check' rule was expert opinion without data."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-020", "cluster": "COLD", "topics": [81], "rule_type": "monitoring", "population": "adolescent",
+  "condition_ka": "სპორტსმენის ვარჯიშში დაბრუნება მწვავე რესპირაციული ინფექციის შემდეგ",
+  "recommendation_ka": "მსუბუქი/ზომიერი: ჩვეულებრივი ყოველდღიური აქტივობა დაშვებულია; ვარჯიშის დაწყებამდე ყოველდღე შეავსეთ საკონტროლო სია (ცხელება, შემცივნება, გამოფიტვა, მიალგია, ქოშინი, გულმკერდის ტკივილი, გულისცემა/თავბრუსხვევა მოსვენებისას, ზომიერი-ძლიერი ხველა, ძლიერი თავის ტკივილი). თუ სია უარყოფითია და ლოკალური სიმპტომები გაქრა ან ძალიან მსუბუქია — ჩაატარეთ საველე სადატვირთვო ტესტი. მძიმე ინფექციისას: წოლითი რეჟიმი სისტემური სიმპტომების გაქრობამდე, შემდეგ სპორტული მედიცინის ექიმის შეფასება და ზედამხედველობით ლაბორატორიული სადატვირთვო ტესტი. ტესტის შემდეგ 24 საათის განმავლობაში აკონტროლეთ სიმპტომები; დატვირთვა გაზარდეთ ეტაპობრივად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 24, "unit": "h", "meaning_ka": "სადატვირთვო ტესტის შემდგომი მონიტორინგი"}
+  ],
+  "red_flags_ka": ["სიმპტომები სადატვირთვო ტესტის დროს ან შემდეგ", "მუქი შარდი დატვირთვიდან 24 საათში", "გულისცემის აღდგენის გახანგრძლივება"],
+  "sources": [
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1 (Table 6, Box 1, Figure 2)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Mild/moderate: normal daily activity, daily checklist before training, then exercise challenge test if no flags; severe: bed rest until regional/systemic symptoms resolve and no multiorgan involvement, SEM clinician checklist, supervised laboratory test; monitor for abnormal responses during, immediately after or for 24 hours after the test; stepwise StARRT-based RTS."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-021", "cluster": "COLD", "topics": [81], "rule_type": "referral", "population": "adolescent",
+  "condition_ka": "სპორტსმენი რესპირაციული ინფექციით და მძიმე მიმდინარეობის რისკ-ფაქტორებით",
+  "recommendation_ka": "თუ სპორტსმენს აქვს გულის, სისხლძარღვების ან ფილტვის დაავადება (მათ შორის ასთმა), სიმსივნე, შაქრიანი დიაბეტი, სხვა ქრონიკული ან იმუნური დაავადება, ან სიმსუქნე (სმი >30 კგ/მ²), ვარჯიშში დაბრუნება დაიშვება მხოლოდ კარგად კონტროლირებადი მდგომარეობისას; წინააღმდეგ შემთხვევაში საჭიროა ექიმის შეფასება და დაშვება. ზომიერ ინფექციაზე განიხილეთ CRP და სისხლის საერთო ანალიზი; მძიმეზე — ორგანოს ჩართულობის მიზანმიმართული კვლევები სპეციალისტთან ერთად.",
+  "doses": [],
+  "numeric_values": [
+   {"value": 30, "unit": "kg/m2", "meaning_ka": "სიმსუქნის სმი-ის ზღვარი"}
+  ],
+  "red_flags_ka": ["უკონტროლო ქრონიკული დაავადება"],
+  "sources": [
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1 (Table 6 and RTS step 2)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Risk factors: heart, blood vessel, lung disease incl. asthma, cancer, diabetes, other chronic or immune disease, obesity (BMI >30); continue only if well controlled or with clearance; basic labs (CRP, FBC) considered for moderate ARinf, more extensive investigations for severe."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-COLD-022", "cluster": "COLD", "topics": [81], "rule_type": "treatment", "population": "adolescent",
+  "condition_ka": "სპორტსმენში ზედა სასუნთქი გზების ინფექციის მედიკამენტური მართვა",
+  "recommendation_ka": "ანტიბიოტიკი მხოლოდ დადასტურებული ან ძლიერ საეჭვო ბაქტერიული ინფექციისას (გაითვალისწინეთ ფტორქინოლონებით ტენდინოპათია, აზითრომიცინით არითმია). არასტეროიდული ანთების საწინააღმდეგო საშუალებები ნიღბავს სიმპტომებს და ართულებს შეფასებას. დეკონგესტანტების, კორტიკოსტეროიდების და საკვები დანამატების (დაბინძურების რისკი) გამოყენებამდე გადაამოწმეთ ანტიდოპინგური წესები. დადასტურებულ გრიპზე ოსელტამივირი ან ზანამივირი რაც შეიძლება ადრე; ახლო კონტაქტში — განიხილეთ პროფილაქტიკა. IOC-ის მიხედვით თუთიის აცეტატის/გლუკონატის პასტილები >75 მგ დღეში, დაწყებული 24 საათში, ამოკლებს ხანგრძლივობას (Cochrane-ის 2024 წლის შეფასება უფრო ფრთხილია); C ვიტამინის რეგულარული მიღება ზომიერად ამოკლებს ხანგრძლივობას, ხოლო დაწყების შემდეგ მაღალ დოზას თანმიმდევრული ეფექტი არ აქვს.",
+  "doses": [
+   {"drug": "zinc acetate/gluconate lozenges", "amount": 75, "unit": "mg/day", "route": "PO (lozenge)", "frequency": "throughout the infection, started within 24 h of onset (IOC; >75 mg/day)", "population": "adolescent", "max_amount": null, "max_unit": null}
+  ],
+  "numeric_values": [
+   {"value": 24, "unit": "h", "meaning_ka": "თუთიის დაწყების ვადა სიმპტომებიდან"},
+   {"value": 2024, "unit": "label", "meaning_ka": "Cochrane-ის მიმოხილვის წელი"}
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {"org": "IOC (Br J Sports Med)", "title": "IOC consensus statement on acute respiratory illness in athletes part 1 (Table 5)", "year": 2022, "url": "https://pubmed.ncbi.nlm.nih.gov/35863871/", "type": "consensus", "supports": "Antibiotics only in confirmed bacterial infections (tendinopathy with fluoroquinolones, arrhythmia with azithromycin); NSAIDs can mask symptoms; consider anti-doping for decongestants, corticosteroids, supplement contamination; oseltamivir/zanamivir soon after onset for confirmed influenza and prophylaxis for exposed athletes; zinc acetate/gluconate lozenges >75 mg/day within 24 h reduces duration; regular vitamin C modest effect, high dose after onset no consistent effect."},
+   {"org": "Cochrane", "title": "Zinc for prevention and treatment of the common cold", "year": 2024, "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/", "type": "systematic_review", "supports": "Low-certainty evidence that zinc may reduce duration of ongoing colds, with more non-serious adverse events; wide heterogeneity."}
+  ],
+  "evidence_checked": "2026-10-27", "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

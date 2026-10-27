@@ -1,0 +1,576 @@
+[
+ {
+  "rule_id": "PUB-LBP-001",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "წელის და/ან ფეხის ტკივილი, ბოლო 2 კვირის განმავლობაში გაჩენილი შარდვის დაწყების გაძნელებით ან შარდის ნაკადის შეგრძნების დაქვეითებით, შორისის/გენიტალიების („უნაგირის“) მგრძნობელობის ცვლილებით, ორივე ფეხის მძიმე ან პროგრესირებადი ნევროლოგიური დეფიციტით, სწორი ნაწლავის ავსების შეგრძნების დაკარგვით ან სქესობრივი ფუნქციის დარღვევით",
+  "recommendation_ka": "ეჭვი მიიტანეთ ცხენის კუდის სინდრომზე: გადაუდებლად მიმართეთ უახლოეს სტაციონარს, სადაც ხელმისაწვდომია გადაუდებელი მრტ (ტელეფონით შეფასების შემდეგაც, თუ პირისპირ ნახვა მიმართვას დააყოვნებს). მრტ უნდა ჩატარდეს რაც შეიძლება სწრაფად და არაუგვიანეს 4 საათისა მოთხოვნიდან; პაციენტი შეინახეთ უზმოდ შესაძლო გადაუდებელი ოპერაციისთვის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სიმპტომების დაწყების ვადა"
+   },
+   {
+    "value": 4,
+    "unit": "h",
+    "meaning_ka": "გადაუდებელი მრტ-ის მაქსიმალური ვადა მოთხოვნიდან"
+   }
+  ],
+  "red_flags_ka": [
+   "შარდვის დაწყების გაძნელება",
+   "უნაგირის ანესთეზია",
+   "ორმხრივი პროგრესირებადი სისუსტე",
+   "სწორი ნაწლავის შეგრძნების დაკარგვა",
+   "სქესობრივი დისფუნქცია"
+  ],
+  "sources": [
+   {
+    "org": "GIRFT / NHS England",
+    "title": "Spinal Surgery: National Suspected Cauda Equina Syndrome (CES) Pathway",
+    "year": 2023,
+    "url": "https://spinal.co.uk/wp-content/uploads/2023/08/National-Suspected-Cauda-Equina-Pathway-February-2023-FINAL-V1-1.pdf",
+    "type": "guideline",
+    "supports": "Emergency referral to nearest facility with emergency MRI for leg and/or back pain with recent onset (within 2 weeks) of urinary hesitancy/altered flow sensation, perianal/perineal/genital sensory change, severe or progressive bilateral leg deficit, loss of rectal fullness sensation or sexual dysfunction; emergency MRI as soon as possible and within four hours of request; keep nil by mouth."
+   },
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Exclude specific causes of low back pain and refer if serious underlying pathology is suspected (rec 1.1.1)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-002",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი სიმსივნის მიმდინარე ან წარსული დიაგნოზის ან სიმსივნის ეჭვის ფონზე",
+  "recommendation_ka": "იფიქრეთ ხერხემლის მეტასტაზებზე, თუ ტკივილი მძიმე და შეუწყვეტელია, პროგრესირებს, ძლიერდება დგომით/ჯდომით/მოძრაობით ან დაძაბვით (ხველა, ცემინება, დეფეკაცია), აღვიძებს ღამით, ან არის ადგილობრივი მტკივნეულობა. ზურგის ტვინის/ცხენის კუდის კომპრესიის ნიშნებისას (შარდის ბუშტის/ნაწლავის დისფუნქცია, სიარულის დარღვევა, კიდურის სისუსტე, მგრძნობელობის დაკარგვა, რადიკულური ტკივილი) დაუყოვნებლივ დაუკავშირდით მეტასტაზური კომპრესიის კოორდინატორს — ეს ონკოლოგიური გადაუდებელი მდგომარეობაა; მრტ არაუგვიანეს 24 საათისა. მხოლოდ ტკივილის ნიშნებისას რჩევა მიიღეთ 24 საათში, მრტ — 1 კვირაში. სიმსივნის ანამნეზის გარეშე, ასეთი ტკივილისა და კიბოს ეჭვისას მიმართეთ სასწრაფო ონკოლოგიურ შეფასებაზე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "მრტ/კოორდინატორის რჩევის ვადა"
+   },
+   {
+    "value": 1,
+    "unit": "week",
+    "meaning_ka": "მრტ-ის ვადა მეტასტაზის ეჭვისას კომპრესიის გარეშე"
+   }
+  ],
+  "red_flags_ka": [
+   "ღამის ტკივილი",
+   "დაძაბვით გაძლიერებული ტკივილი",
+   "კიდურის სისუსტე",
+   "შარდის ბუშტის ან ნაწლავის დისფუნქცია"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Spinal metastases and metastatic spinal cord compression (NG234)",
+    "year": 2023,
+    "url": "https://www.nice.org.uk/guidance/ng234/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Box 1 lists cancer history and pain characteristics (severe unremitting, progressive, mechanical, aggravated by straining, night pain, localised tenderness) and cord-compression signs; immediately contact MSCC coordinator if cord-compression signs (oncological emergency, rec 1.3.2); advice within 24 hours for pain features (1.3.3); MRI within 24 hours for suspected MSCC (1.5.2) and within 1 week for suspected spinal metastases without MSCC (1.5.3); urgent oncology assessment if no cancer history but cancer suspected (1.3.5)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-003",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი (ისიალგიით ან მის გარეშე) — საწყისი შეფასება და ვიზუალიზაცია",
+  "recommendation_ka": "ყოველი შეფასებისას, განსაკუთრებით ახალი ან შეცვლილი სიმპტომებისას, გამორიცხეთ სპეციფიკური მიზეზები: სიმსივნე, ინფექცია, ტრავმა, ანთებითი დაავადება (მაგ., სპონდილოართრიტი). არასპეციალიზებულ დონეზე ვიზუალიზაცია რუტინულად არ დანიშნოთ; აუხსენით, რომ სპეციალისტთან მიმართვისას ვიზუალიზაცია შეიძლება საჭირო არც იყოს. სპეციალიზებულ დონეზე ვიზუალიზაცია განიხილეთ მხოლოდ მაშინ, თუ შედეგი სავარაუდოდ შეცვლის მართვას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Think about alternative diagnoses; exclude cancer, infection, trauma or inflammatory disease such as spondyloarthritis (1.1.1). Do not routinely offer imaging in a non-specialist setting (1.1.4); explain imaging may not be needed if referred (1.1.5); consider imaging in specialist settings only if the result is likely to change management (1.1.6)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-004",
+  "cluster": "LBP",
+  "topics": [
+   71,
+   70
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილის ახალი ეპიზოდი — პირველი კონტაქტი ჯანდაცვის სპეციალისტთან",
+  "recommendation_ka": "განიხილეთ რისკის სტრატიფიკაცია (მაგ., STarT Back ინსტრუმენტი) ცუდი გამოსავლის რისკის შესაფასებლად და მართვის ერთობლივი გადაწყვეტისთვის. სწრაფი გამოჯანმრთელების მაღალი ალბათობისას — მარტივი მხარდაჭერა (დამშვიდება, აქტიურობის რჩევა, თვითმართვის მითითებები); ცუდი გამოსავლის მაღალი რისკისას — უფრო ინტენსიური მხარდაჭერა (მაგ., ვარჯიშის პროგრამა მანუალური თერაპიით ან მის გარეშე).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Consider risk stratification (e.g., STarT Back) at first point of contact for each new episode (1.1.2); simpler support (reassurance, advice to keep active, self-management) for those likely to improve quickly, more intensive support (exercise programmes with or without manual therapy) for those at higher risk of poor outcome (1.1.3)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-005",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი, დაწყებული 45 წლამდე და 3 თვეზე მეტხანს მიმდინარე",
+  "recommendation_ka": "შეაფასეთ ღერძული სპონდილოართრიტის დამატებითი კრიტერიუმები: დაწყება 35 წლამდე, ღამის მეორე ნახევარში გაღვიძება სიმპტომების გამო, დუნდულოს ტკივილი, მოძრაობით გაუმჯობესება, ასსს-ის მიღებიდან 48 საათში გაუმჯობესება, პირველი რიგის ნათესავი სპონდილოართრიტით, მიმდინარე/წარსული ართრიტი, ენთეზიტი ან ფსორიაზი. 4 ან მეტი კრიტერიუმისას მიმართეთ რევმატოლოგს; ზუსტად 3-ისას გამოიკვლიეთ HLA-B27 და დადებითი შედეგისას მიმართეთ. ცალკეული ნიშნის ან ტესტის არარსებობა დიაგნოზს არ გამორიცხავს (HLA-B27-უარყოფით პირებშიც და ნორმალური რენტგენის დროსაც).",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 45,
+    "unit": "age_years",
+    "meaning_ka": "ტკივილის დაწყების ასაკის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ტკივილის ხანგრძლივობა; ასევე ზუსტად 3 კრიტერიუმი → HLA-B27"
+   },
+   {
+    "value": 35,
+    "unit": "age_years",
+    "meaning_ka": "დაწყების ასაკი, როგორც კრიტერიუმი"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ასსს-ზე პასუხის დრო"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "კრიტერიუმების რაოდენობა რევმატოლოგთან მიმართვისთვის"
+   },
+   {
+    "value": 27,
+    "unit": "label",
+    "meaning_ka": "HLA-B27"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Spondyloarthritis in over 16s: diagnosis and management (NG65)",
+    "year": 2017,
+    "url": "https://www.nice.org.uk/guidance/ng65/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Current edition (2017, updated June 2017). Low back pain starting before 45 and lasting >3 months: refer to rheumatology if 4 or more additional criteria (onset before 35, waking in second half of night, buttock pain, improvement with movement, improvement within 48 hours of NSAIDs, first-degree relative with SpA, arthritis, enthesitis, psoriasis); if exactly 3, test HLA-B27 and refer if positive (1.1.5). Do not rule out on any single sign/test; axSpA can occur in HLA-B27-negative people and without sacroiliitis on plain X-ray (1.1.1, 1.1.4)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-006",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "უეცრად დაწყებული ორმხრივი რადიკულური ფეხის ტკივილი (ისიალგია) ან ცალმხრივი, რომელიც ორმხრივად გადაიქცა, ცხენის კუდის სინდრომის სიმპტომების გარეშე",
+  "recommendation_ka": "ეს ცხენის კუდის სინდრომის გამაფრთხილებელი ნიშანია: გაგზავნეთ სასწრაფოდ (2 კვირის ვადაში) კუნთოვან-ჩონჩხოვანი ტრიაჟის სამსახურში და მიეცით უსაფრთხოების ინსტრუქცია (მაგ., გამაფრთხილებელი ბარათი) — შარდვის, ნაწლავის, შორისის მგრძნობელობის ან სქესობრივი ფუნქციის ნებისმიერი ცვლილებისას დაუყოვნებლივ მიმართოს გადაუდებელ დახმარებას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "week",
+    "meaning_ka": "სასწრაფო მიმართვის ვადა"
+   }
+  ],
+  "red_flags_ka": [
+   "ორმხრივი ისიალგია",
+   "შარდვის ცვლილება",
+   "შორისის მგრძნობელობის დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "GIRFT / NHS England",
+    "title": "Spinal Surgery: National Suspected Cauda Equina Syndrome (CES) Pathway",
+    "year": 2023,
+    "url": "https://spinal.co.uk/wp-content/uploads/2023/08/National-Suspected-Cauda-Equina-Pathway-February-2023-FINAL-V1-1.pdf",
+    "type": "guideline",
+    "supports": "Sudden onset bilateral radicular leg pain, or unilateral pain progressing to bilateral, may be a warning symptom of CES; without CES symptoms requires urgent (two-week wait) referral to an MSK triage service; safety netting for patients with back pain is crucial and patients should seek help immediately if CES symptoms develop."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-007",
+  "cluster": "LBP",
+  "topics": [
+   71
+  ],
+  "rule_type": "evaluation",
+  "population": "older_adult",
+  "condition_ka": "მწვავედ დაწყებული ზურგის ტკივილი ოსტეოპოროზის რისკის ფაქტორების მქონე პოსტმენოპაუზურ ქალში ან 50 წელზე უფროს მამაკაცში",
+  "recommendation_ka": "განიხილეთ ხერხემლის მოტეხილობის ვიზუალიზაცია (რენტგენი ან DXA-ზე დაფუძნებული ხერხემლის მოტეხილობის შეფასება), განსაკუთრებით სიმაღლის 4 სმ-ზე მეტი დაკარგვისას, კიფოზისას, ხანგრძლივი პერორალური გლუკოკორტიკოიდებისას ან T-ქულისას −2.5 ან ნაკლები. დადასტურებისას გამოიკვლიეთ მეორადი მიზეზები და დაიწყეთ ოსტეოპოროზის მკურნალობა დაუყოვნებლივ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 50,
+    "unit": "age_years",
+    "meaning_ka": "მამაკაცების ასაკის ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "cm",
+    "meaning_ka": "სიმაღლის დაკარგვის ზღვარი"
+   },
+   {
+    "value": 2.5,
+    "unit": "T-score",
+    "meaning_ka": "T-ქულა −2.5 ან ნაკლები (აბსოლუტური სიდიდე; მნიშვნელობა უარყოფითია)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "National Osteoporosis Guideline Group (NOGG; Gregson et al., Arch Osteoporos 2022)",
+    "title": "UK clinical guideline for the prevention and treatment of osteoporosis",
+    "year": 2022,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979902/",
+    "type": "guideline",
+    "supports": "Consider imaging to look for a vertebral fracture in people with acute onset back pain who have risk factors for osteoporosis and/or history of ≥4 cm height loss, kyphosis, recent or current long-term oral glucocorticoid therapy, or BMD T-score ≤ −2.5; for symptomatic vertebral fracture investigate underlying causes and start treatment promptly."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoporosis: risk assessment (NG259)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng259/chapter/Identifying-vertebral-fragility-fractures",
+    "type": "guideline",
+    "supports": "Consider VFA with DXA in men under 70 and women under 60 with signs or symptoms of vertebral fracture, e.g. back pain with no identified cause or height loss over 4 cm (rec 1.5.2)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-008",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი ისიალგიით ან მის გარეშე — ზოგადი მართვა ყველა ეტაპზე",
+  "recommendation_ka": "მიეცით პაციენტზე მორგებული ინფორმაცია წელის ტკივილის ბუნებაზე, წაახალისეთ ჩვეული აქტივობების გაგრძელება და ხელი შეუწყვეთ სამსახურში/ყოველდღიურ საქმიანობაზე დაბრუნებას. მწვავე/ქვემწვავე ტკივილისას ACP გვირჩევს დაიწყოთ არამედიკამენტური მეთოდით: ზედაპირული სითბო (ზომიერი ხარისხის მტკიცებულება), მასაჟი, აკუპუნქტურა ან ხერხემლის მანიპულაცია, რადგან პაციენტთა უმეტესობა დროთა განმავლობაში მკურნალობის მიუხედავად უმჯობესდება. შეუსაბამობა: NICE აკუპუნქტურას არ გვირჩევს, მანუალურ თერაპიას კი მხოლოდ ვარჯიშთან ერთად.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Provide tailored advice and information to self-manage, including encouragement to continue normal activities, at all steps (1.2.1); promote and facilitate return to work or normal activities (1.2.15); do not offer acupuncture (1.2.8); manual therapy only as part of a package including exercise (1.2.7)."
+   },
+   {
+    "org": "American College of Physicians (Qaseem et al., Ann Intern Med 2017)",
+    "title": "Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline From the American College of Physicians",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/",
+    "type": "guideline",
+    "supports": "Current edition. Recommendation 1: most patients with acute or subacute LBP improve over time regardless of treatment; select nonpharmacologic treatment with superficial heat (moderate-quality evidence), massage, acupuncture, or spinal manipulation (low-quality evidence)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-009",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილის კონკრეტული ეპიზოდი ან გამწვავება, ასევე ქრონიკული ტკივილი (3 თვე ან მეტი)",
+  "recommendation_ka": "განიხილეთ ჯგუფური ვარჯიშის პროგრამა (ბიომექანიკური, აერობული, გონება-სხეულის ან კომბინირებული), პაციენტის საჭიროებების, შესაძლებლობებისა და სურვილის გათვალისწინებით. მანუალური თერაპია (მანიპულაცია, მობილიზაცია, მასაჟი) განიხილეთ მხოლოდ ვარჯიშის შემცველი პაკეტის ნაწილად. ACP ქრონიკული ტკივილისას თავდაპირველად გვირჩევს არამედიკამენტურ მეთოდებს: ვარჯიში, მულტიდისციპლინური რეაბილიტაცია, აკუპუნქტურა, გაცნობიერებულობაზე დაფუძნებული სტრესის შემცირება, ტაი-ჩი, იოგა, მოტორული კონტროლის ვარჯიში, პროგრესული რელაქსაცია, კოგნიტიურ-ქცევითი თერაპია ან ხერხემლის მანიპულაცია. შენიშვნა: NICE-მა 2026 წლის ივლისში ამოიღო ფსიქოლოგიური და კომბინირებული ფიზიკურ-ფსიქოლოგიური პროგრამების რეკომენდაციები, როგორც შესაძლოა მოძველებული.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ქრონიკული ტკივილის განმარტება"
+   },
+   {
+    "value": 2026,
+    "unit": "year",
+    "meaning_ka": "NICE-ის განახლების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Consider a group exercise programme (biomechanical, aerobic, mind–body or combination) for a specific episode or flare-up (1.2.2); manual therapy only as part of a treatment package including exercise (1.2.7, amended 2026); recommendations 1.2.13 (psychological therapy) and 1.2.14 (combined physical and psychological programmes) removed in July 2026 after surveillance; chronic = 3 months or longer."
+   },
+   {
+    "org": "American College of Physicians (Qaseem et al., Ann Intern Med 2017)",
+    "title": "Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline From the American College of Physicians",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/",
+    "type": "guideline",
+    "supports": "Current edition. Recommendation 2: for chronic LBP initially select nonpharmacologic treatment with exercise, multidisciplinary rehabilitation, acupuncture, mindfulness-based stress reduction (moderate-quality), tai chi, yoga, motor control exercise, progressive relaxation, EMG biofeedback, low-level laser therapy, operant therapy, CBT or spinal manipulation (low-quality)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-010",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მწვავე წელის ტკივილი (3 თვეზე ნაკლები), როცა საჭიროა მედიკამენტური მკურნალობა",
+  "recommendation_ka": "განიხილეთ პერორალური ასსს უმცირესი ეფექტური დოზით და უმოკლესი დროით; გაითვალისწინეთ კუჭ-ნაწლავის, ღვიძლისა და გულ-თირკმლის ტოქსიკურობა და პაციენტის რისკ-ფაქტორები (მათ შორის ასაკი), ჩაატარეთ შესაბამისი შეფასება და მონიტორინგი, საჭიროებისას დანიშნეთ კუჭის დამცავი. ACP ალტერნატივად უშვებს ჩონჩხის კუნთების რელაქსანტებს. პარაცეტამოლი მონოთერაპიად არ დანიშნოთ. ოპიოიდები რუტინულად არ დანიშნოთ; სუსტი ოპიოიდი (პარაცეტამოლით ან მის გარეშე) განიხილეთ მხოლოდ თუ ასსს უკუნაჩვენებია, არ გადაიტანება ან არაეფექტურია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "მწვავე ტკივილის ზედა ზღვარი"
+   }
+  ],
+  "red_flags_ka": [
+   "კუჭ-ნაწლავის სისხლდენის ანამნეზი",
+   "თირკმლის ან გულის უკმარისობა"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Consider oral NSAIDs taking into account GI, liver and cardio-renal toxicity and risk factors including age (1.2.22); clinical assessment, monitoring and gastroprotection (1.2.23); lowest effective dose for shortest period (1.2.24); weak opioids with or without paracetamol for acute LBP only if NSAID contraindicated, not tolerated or ineffective (1.2.25); do not offer paracetamol alone (1.2.26); do not routinely offer opioids for acute LBP (1.2.27); acute = less than 3 months."
+   },
+   {
+    "org": "American College of Physicians (Qaseem et al., Ann Intern Med 2017)",
+    "title": "Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline From the American College of Physicians",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/",
+    "type": "guideline",
+    "supports": "Current edition. Recommendation 1: if pharmacologic treatment is desired for acute or subacute LBP, select NSAIDs or skeletal muscle relaxants (moderate-quality evidence)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-011",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული წელის ტკივილი, არამედიკამენტურ მკურნალობაზე არასაკმარისი პასუხით",
+  "recommendation_ka": "ACP: პირველი რიგი — ასსს; მეორე რიგი — ტრამადოლი ან დულოქსეტინი; ოპიოიდები განიხილეთ მხოლოდ ამ საშუალებების წარუმატებლობის შემდეგ, თუ სარგებელი აჭარბებს რისკს და რისკები განხილულია პაციენტთან. NICE-ის პოზიცია განსხვავებულია: ქრონიკული წელის ტკივილისთვის ოპიოიდები არ დანიშნოთ; სეროტონინის უკუმიტაცების ინჰიბიტორები, სეროტონინ-ნორადრენალინის უკუმიტაცების ინჰიბიტორები (მათ შორის დულოქსეტინი) და ტრიციკლური ანტიდეპრესანტები წელის ტკივილისთვის არ დანიშნოთ; ასევე არ დანიშნოთ გაბაპენტინოიდები ან სხვა ანტიეპილეფსიური საშუალებები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "American College of Physicians (Qaseem et al., Ann Intern Med 2017)",
+    "title": "Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline From the American College of Physicians",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/",
+    "type": "guideline",
+    "supports": "Current edition. Recommendation 3: for chronic LBP with inadequate response to nonpharmacologic therapy, consider NSAIDs first-line, or tramadol or duloxetine second-line; consider opioids only in patients who failed these treatments and only if benefits outweigh risks after discussion (weak recommendation)."
+   },
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not offer opioids for chronic LBP (1.2.28); do not offer SSRIs, SNRIs or TCAs for LBP (1.2.29); do not offer gabapentinoids or antiepileptics for LBP (1.2.30)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-012",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი ისიალგიით ან მის გარეშე — მეთოდები, რომლებსაც NICE არ გვირჩევს",
+  "recommendation_ka": "არ შესთავაზოთ: წელის ქამარი ან კორსეტი, ფეხის ორთეზები, „საქანელა“ ძირიანი ფეხსაცმელი, ტრაქცია, აკუპუნქტურა, ულტრაბგერითი თერაპია, კანქვეშა (PENS) ან ტრანსკუტანური (TENS) ელექტრული ნერვის სტიმულაცია, ინტერფერენციული თერაპია. შეუსაბამობა: ACP აკუპუნქტურას როგორც მწვავე, ისე ქრონიკული ტკივილისთვის ერთ-ერთ არჩევით არამედიკამენტურ მეთოდად მიიჩნევს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not offer belts or corsets (1.2.3), foot orthotics (1.2.4), rocker sole shoes (1.2.5), traction (1.2.6), acupuncture (1.2.8), ultrasound (1.2.9), PENS (1.2.10), TENS (1.2.11) or interferential therapy (1.2.12)."
+   },
+   {
+    "org": "American College of Physicians (Qaseem et al., Ann Intern Med 2017)",
+    "title": "Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline From the American College of Physicians",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/",
+    "type": "guideline",
+    "supports": "Current edition. Recommendations 1 and 2 list acupuncture among nonpharmacologic options for acute/subacute and chronic LBP."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-013",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ისიალგია (რადიკულური ფეხის ტკივილი) — მედიკამენტური მართვა",
+  "recommendation_ka": "ისიალგიისთვის არ დანიშნოთ გაბაპენტინოიდები, სხვა ანტიეპილეფსიური საშუალებები, პერორალური გლუკოკორტიკოიდები ან ბენზოდიაზეპინები (სარგებლის მტკიცებულება არ არის, ზიანის მტკიცებულება არსებობს); ქრონიკული ისიალგიისთვის არ დანიშნოთ ოპიოიდები. თუ პაციენტი უკვე იღებს ოპიოიდს, გაბაპენტინოიდს ან ბენზოდიაზეპინს, აუხსენით გაგრძელების რისკები და ერთობლივად განიხილეთ შეწყვეტა და მოხსნის პრობლემები. ასსს-ის სარგებელი ისიალგიისას შეზღუდულია: დანიშვნისას შეაფასეთ კუჭ-ნაწლავის, ღვიძლისა და გულ-თირკმლის რისკი, გამოიყენეთ კუჭის დაცვა საჭიროებისას და უმცირესი ეფექტური დოზა უმოკლესი დროით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not offer gabapentinoids, other antiepileptics, oral corticosteroids or benzodiazepines for sciatica (1.2.16); do not offer opioids for chronic sciatica (1.2.17); explain risks of continuing and discuss withdrawal for those already taking them (1.2.18–1.2.19); be aware of harms and limited benefit of NSAIDs in sciatica and, if prescribing, consider toxicity, monitoring, gastroprotection, lowest effective dose for shortest time (1.2.20–1.2.21)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-014",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "წელის ტკივილი ან ისიალგია — ინექციური და ინვაზიური არაქირურგიული ჩარევები",
+  "recommendation_ka": "წელის ტკივილისთვის ხერხემლის ინექციები არ შესთავაზოთ. მწვავე და მძიმე ისიალგიისას განიხილეთ ეპიდურული ინექცია (ადგილობრივი ანესთეტიკი და სტეროიდი); ცენტრალური არხის სტენოზით გამოწვეული ნეიროგენული კოჭლობისას ეპიდურული ინექცია არ გამოიყენოთ. ქრონიკული ტკივილისას რადიოსიხშირული დენერვაციის შესაფასებლად მიმართვა განიხილეთ, თუ არაქირურგიული მკურნალობა არაეფექტური იყო, ტკივილის მთავარი წყარო მედიალური ტოტის ნერვით ინერვირებული სტრუქტურებია და ლოკალური ტკივილი ზომიერი ან მძიმეა (ვიზუალურ-ანალოგური სკალით 5 ან მეტი). დენერვაცია ჩაატარეთ მხოლოდ დიაგნოსტიკურ მედიალური ტოტის ბლოკადაზე დადებითი პასუხის შემდეგ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "score",
+    "meaning_ka": "ტკივილის მინიმალური ქულა ვიზუალურ-ანალოგურ სკალაზე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not offer spinal injections for LBP (1.3.1); consider referral for radiofrequency denervation in chronic LBP when non-surgical treatment has failed, pain is thought to arise from medial-branch-supplied structures and localised pain is ≥5 on VAS (1.3.2), only after positive diagnostic medial branch block (1.3.3); consider epidural local anaesthetic and steroid in acute and severe sciatica (1.3.5); do not use epidurals for neurogenic claudication in central spinal canal stenosis (1.3.6)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LBP-015",
+  "cluster": "LBP",
+  "topics": [
+   70
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "ისიალგია, როცა არაქირურგიულმა მკურნალობამ ტკივილი ან ფუნქცია არ გააუმჯობესა",
+  "recommendation_ka": "განიხილეთ სპინალური დეკომპრესია, თუ ვიზუალიზაციის მონაცემები შეესაბამება ისიალგიის სიმპტომებს. ქირურგთან მიმართვის გადაწყვეტილებაზე გავლენა არ უნდა მოახდინოს სხეულის მასის ინდექსმა, მოწევამ ან ფსიქოლოგიურმა დისტრესმა. წელის ტკივილისთვის ხერხემლის ფიქსაცია (ფიუჟენი) არ შესთავაზოთ, გარდა რანდომიზებული კვლევის ფარგლებისა; დისკის ენდოპროთეზირება არ შესთავაზოთ. პროგრესირებადი ან მძიმე ნევროლოგიური დეფიციტისას იხილეთ ცხენის კუდის სინდრომის გადაუდებელი გზა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პროგრესირებადი სისუსტე",
+   "ცხენის კუდის სინდრომის ნიშნები"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Low back pain and sciatica in over 16s: assessment and management (NG59)",
+    "year": 2026,
+    "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not allow BMI, smoking status or psychological distress to influence referral for surgical opinion for sciatica (1.3.7); consider spinal decompression for sciatica when non-surgical treatment has not improved pain or function and radiological findings are consistent with symptoms (1.3.8); do not offer spinal fusion for LBP unless part of an RCT (1.3.9); do not offer disc replacement (1.3.10)."
+   },
+   {
+    "org": "GIRFT / NHS England",
+    "title": "Spinal Surgery: National Suspected Cauda Equina Syndrome (CES) Pathway",
+    "year": 2023,
+    "url": "https://spinal.co.uk/wp-content/uploads/2023/08/National-Suspected-Cauda-Equina-Pathway-February-2023-FINAL-V1-1.pdf",
+    "type": "guideline",
+    "supports": "Severe or progressive bilateral neurological deficit with back/leg pain warrants emergency referral for MRI."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

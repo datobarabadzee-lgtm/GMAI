@@ -1,0 +1,663 @@
+[
+ {
+  "rule_id": "PUB-OA-001",
+  "cluster": "OA",
+  "topics": [
+   31
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "ოსტეოართრიტის განვითარების რისკ-ფაქტორები",
+  "recommendation_ka": "ოსტეოართრიტი მთელი სახსრის დაავადებაა (ხრტილი, სუბქონდრული ძვალი, სინოვია, იოგები). მუხლის ოსტეოართრიტის ყველაზე თანმიმდევრული რისკ-ფაქტორებია სიმსუქნე, მუხლის წინა ტრავმა, მდედრობითი სქესი და ასაკი; სიმსუქნე და სახსრის ტრავმა მოდიფიცირებადი ფაქტორებია და პრევენციის მთავარი სამიზნეა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PubMed (Blagojevic et al., Osteoarthritis Cartilage)",
+    "title": "Risk factors for onset of osteoarthritis of the knee in older adults: a systematic review and meta-analysis",
+    "year": 2010,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19751691/",
+    "type": "systematic_review",
+    "supports": "Meta-analysis of knee OA onset in older adults: obesity (pooled OR ~2.6), previous knee trauma (OR ~3.9), female sex and older age are consistent risk factors. Still the reference meta-analysis (current edition)."
+   },
+   {
+    "org": "PMC (Allen & Golightly, Curr Opin Rheumatol)",
+    "title": "Epidemiology of osteoarthritis: state of the evidence",
+    "year": 2015,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/4405030",
+    "type": "review",
+    "supports": "Review: obesity and joint injury are known modifiable/preventable risk factors with strong evidence for incident OA; risk higher in females and with age. Still a current reference review."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-002",
+  "cluster": "OA",
+  "topics": [
+   31,
+   90
+  ],
+  "rule_type": "prevention",
+  "population": "adult",
+  "condition_ka": "ჭარბი წონა ან სიმსუქნე ოსტეოართრიტის რისკით ან დადგენილი ოსტეოართრიტით",
+  "recommendation_ka": "შესთავაზეთ წონის კლების მიზნის დასახვა: ნებისმიერი კლება სასარგებლოა, მაგრამ სხეულის წონის 10%-ით კლება, სავარაუდოდ, უკეთეს შედეგს იძლევა, ვიდრე 5%. სპორტში და სამსახურში სახსრის ტრავმის პრევენცია ამცირებს მეორადი ოსტეოართრიტის რისკს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "%",
+    "meaning_ka": "სასურველი წონის კლება"
+   },
+   {
+    "value": 5,
+    "unit": "%",
+    "meaning_ka": "მინიმალური სარგებლიანი წონის კლება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Support people with OA and overweight/obesity to choose a weight-loss goal; any loss is beneficial but losing 10% of body weight is likely to be better than 5%."
+   },
+   {
+    "org": "PMC (Allen & Golightly, Curr Opin Rheumatol)",
+    "title": "Epidemiology of osteoarthritis: state of the evidence",
+    "year": 2015,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/4405030",
+    "type": "review",
+    "supports": "Obesity and joint injury are modifiable risk factors and targets for prevention (current reference review)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-003",
+  "cluster": "OA",
+  "topics": [
+   31,
+   89,
+   100
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "რადიოლოგიური ცვლილებებისა და სიმპტომების შეუსაბამობა ოსტეოართრიტისას",
+  "recommendation_ka": "პაციენტს აუხსენით, რომ რენტგენზე, მრტ-სა თუ ულტრაბგერაზე ხილული ცვლილებები ხშირად ცუდად შეესაბამება ტკივილისა და ფუნქციის ხარისხს; მკურნალობის გადაწყვეტილება ეფუძნება სიმპტომებს და ფუნქციას და არა მხოლოდ ვიზუალიზაციის მონაცემებს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "There is often a poor link between changes visible on X-ray, MRI or ultrasound and OA symptoms; imaging not needed to confirm a clinical diagnosis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-004",
+  "cluster": "OA",
+  "topics": [
+   89,
+   94,
+   95
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "45 წლის ან მეტი ასაკის ზრდასრული, ფიზიკურ აქტივობასთან დაკავშირებული სახსრის ტკივილით (მუხლი, მენჯ-ბარძაყი და სხვ.)",
+  "recommendation_ka": "ოსტეოართრიტის დიაგნოზი დასვით კლინიკურად, ვიზუალიზაციის გარეშე, თუ დილის სიხისტე არ არის ან გრძელდება არაუმეტეს 30 წუთისა. რუტინული რენტგენოგრაფია ან მრტ დიაგნოზის დასადასტურებლად საჭირო არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 45,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის ზღვარი კლინიკური დიაგნოზისთვის"
+   },
+   {
+    "value": 30,
+    "unit": "min",
+    "meaning_ka": "დილის სიხისტის მაქსიმალური ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Diagnose OA clinically without investigations if a person is 45 or over, has activity-related joint pain and has no morning joint stiffness or stiffness lasting no longer than 30 minutes."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis — Quality statement 1: Diagnosis (QS87)",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/QS87/chapter/quality-statement-1-diagnosis",
+    "type": "guideline",
+    "supports": "Adults aged 45 or over with activity-related joint pain and morning stiffness ≤30 minutes are diagnosed clinically without imaging."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-005",
+  "cluster": "OA",
+  "topics": [
+   89,
+   94,
+   95
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "სავარაუდო ოსტეოართრიტი ატიპური ნიშნებით",
+  "recommendation_ka": "ატიპური ნიშნების დროს განიხილეთ ალტერნატიული დიაგნოზი და ჩაატარეთ დამატებითი გამოკვლევა, ვიზუალიზაციის ჩათვლით: ახლო წარსულის ტრავმა, ხანგრძლივი დილის სიხისტე, სიმპტომების ან დეფორმაციის სწრაფი გაუარესება, ცხელი შეშუპებული სახსარი, ინფექციის ან ავთვისებიანი სიმსივნის ეჭვი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელი, შეშუპებული სახსარი",
+   "სიმპტომების სწრაფი პროგრესირება",
+   "ცხელება ან წონის კლება",
+   "ახლო წარსულის ტრავმა"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Imaging not routinely used unless atypical features (recent trauma, prolonged morning stiffness, rapid worsening of symptoms or deformity, hot swollen joint, concern for infection/malignancy) or an alternative diagnosis is suspected."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-006",
+  "cluster": "OA",
+  "topics": [
+   89,
+   95
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "მწვავედ ცხელი, შეშუპებული მუხლი (ან სხვა სახსარი) ოსტეოართრიტის ფონზე",
+  "recommendation_ka": "ცხელი შეშუპებული სახსარი არ ჩათვალოთ ოსტეოართრიტის გამწვავებად, სანამ არ გამოირიცხება სეპტიური ართრიტი: ჩაატარეთ სახსრის პუნქცია (სინოვიური სითხის უჯრედები, გრამის შეღებვა, კულტურა, კრისტალები) ანტიბიოტიკის დაწყებამდე, თუ არ არის სეფსისის ნიშნები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ცხელება",
+   "სეფსისის ნიშნები",
+   "პროთეზირებული სახსარი"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "A hot swollen joint is an atypical feature requiring consideration of an alternative diagnosis."
+   },
+   {
+    "org": "EBJIS",
+    "title": "Guideline for management of septic arthritis in native joints (SANJO), J Bone Jt Infect 2023",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901514",
+    "type": "guideline",
+    "supports": "Synovial fluid aspiration as soon as possible when septic arthritis suspected; except with sepsis, antibiotics should await joint fluid sampling."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-007",
+  "cluster": "OA",
+  "topics": [
+   90
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მუხლის, მენჯ-ბარძაყის ან პოლიარტიკულური ოსტეოართრიტი — ძირითადი მკურნალობა",
+  "recommendation_ka": "ყველა პაციენტს შესთავაზეთ ძირითადი მკურნალობა: ინფორმაცია და თვითმართვის მხარდაჭერა, ინდივიდუალურად მორგებული თერაპიული ვარჯიში (ადგილობრივი კუნთების გაძლიერება და ზოგადი აერობული ვარჯიში, საჭიროებისას ზედამხედველობით) და, საჭიროებისას, წონის მართვა. მედიკამენტები ძირითადი მკურნალობის დამატებაა და არა ჩანაცვლება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Core treatments: therapeutic exercise tailored to the person (local muscle strengthening, general aerobic fitness; consider supervised sessions) and weight management if appropriate, with information and support; medicines as adjunct."
+   },
+   {
+    "org": "OARSI",
+    "title": "OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis (Bannuru et al., 2019)",
+    "year": 2019,
+    "url": "https://www.esceo.org/sites/esceo/files/pdf/Bannuru_O%26C_OARSIguidelines_2019.pdf",
+    "type": "guideline",
+    "supports": "Core treatments for knee OA: arthritis education and structured land-based exercise with or without dietary weight management; for hip/polyarticular OA: education and exercise."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-008",
+  "cluster": "OA",
+  "topics": [
+   90
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მუხლის ოსტეოართრიტი, როცა ძირითად მკურნალობას ესაჭიროება ანალგეზიური დამატება",
+  "recommendation_ka": "პირველ რიგში შესთავაზეთ ადგილობრივი (ტოპიკური) ასსს. თუ არაეფექტურია ან შეუფერებელია, განიხილეთ პერორალური ასსს უმცირესი ეფექტური დოზით, უმოკლესი დროით, კუჭის დაცვით (პროტონული ტუმბოს ინჰიბიტორი) და თირკმლის, გულ-სისხლძარღვთა და სისხლდენის რისკის შეფასებით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "თირკმლის უკმარისობა",
+   "გულის უკმარისობა",
+   "კუჭ-ნაწლავის სისხლდენის ანამნეზი"
+  ],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "If pharmacological treatment needed, offer a topical NSAID for knee OA; if ineffective or unsuitable, consider an oral NSAID taking into account toxicity and risk factors, with gastroprotection, lowest effective dose, shortest time."
+   },
+   {
+    "org": "OARSI",
+    "title": "OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis (Bannuru et al., 2019)",
+    "year": 2019,
+    "url": "https://www.esceo.org/sites/esceo/files/pdf/Bannuru_O%26C_OARSIguidelines_2019.pdf",
+    "type": "guideline",
+    "supports": "Topical NSAIDs strongly recommended for knee OA (Level 1A)."
+   },
+   {
+    "org": "ACR/Arthritis Foundation",
+    "title": "2019 ACR/AF Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee (Kolasinski et al., Arthritis Rheumatol 2020)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/art.41142",
+    "type": "guideline",
+    "supports": "Strong recommendation for topical NSAIDs in knee OA and for oral NSAIDs in knee and hip OA."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-009",
+  "cluster": "OA",
+  "topics": [
+   90
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ოსტეოართრიტი — პარაცეტამოლისა და ოპიოიდების ადგილი (რეკომენდაციებს შორის შეუსაბამობა)",
+  "recommendation_ka": "NICE (დიდი ბრიტანეთი): პარაცეტამოლი და სუსტი ოპიოიდები რუტინულად არ დანიშნოთ — მხოლოდ იშვიათად, ხანმოკლედ, როცა სხვა საშუალებები უკუნაჩვენებია ან არაეფექტურია; ძლიერი ოპიოიდები არ დანიშნოთ. OARSI პირობითად ეწინააღმდეგება პარაცეტამოლს მუხლისა და მენჯ-ბარძაყის ოსტეოართრიტისას. ACR/AF (აშშ) პირობითად უშვებს პარაცეტამოლს, ტრამადოლს და დულოქსეტინს მათთვის, ვისაც ასსს არ შეუძლია. შეარჩიეთ ინდივიდუალურად და შეაფასეთ სარგებელი-რისკი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Do not routinely offer paracetamol or weak opioids unless used infrequently for short-term relief and all other pharmacological treatments are contraindicated, not tolerated or ineffective; do not offer strong opioids."
+   },
+   {
+    "org": "PMC (peer-reviewed review)",
+    "title": "Comparison of international osteoarthritis guideline recommendations (2021)",
+    "year": 2021,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9718349",
+    "type": "review",
+    "supports": "OARSI: conditional recommendation against paracetamol for knee and hip OA; ACR/AF: conditional recommendation for paracetamol."
+   },
+   {
+    "org": "ACR/Arthritis Foundation",
+    "title": "2019 ACR/AF Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee (Kolasinski et al., Arthritis Rheumatol 2020)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/art.41142",
+    "type": "guideline",
+    "supports": "Acetaminophen, tramadol, duloxetine conditionally recommended as alternatives for patients who cannot use NSAIDs."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-010",
+  "cluster": "OA",
+  "topics": [
+   90
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მუხლის ან მენჯ-ბარძაყის ოსტეოართრიტი, სიმპტომების მწვავე გაძლიერება, როცა სხვა მკურნალობა არასაკმარისია",
+  "recommendation_ka": "სახსარშიდა გლუკოკორტიკოიდის ინექცია ACR/AF-ის მიერ ძლიერად რეკომენდებულია მუხლისა და მენჯ-ბარძაყის ოსტეოართრიტისას; ეფექტი ხანმოკლეა. მენჯ-ბარძაყის ინექცია ვიზუალიზაციის კონტროლით უნდა ჩატარდეს. ინექციამდე გამორიცხეთ სახსრის ინფექცია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR/Arthritis Foundation",
+    "title": "2019 ACR/AF Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee (Kolasinski et al., Arthritis Rheumatol 2020)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/art.41142",
+    "type": "guideline",
+    "supports": "Strong recommendation for intra-articular glucocorticoid injection in knee and hip OA (hip injections image-guided)."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Intra-articular corticosteroid injections may be considered for short-term relief when other pharmacological treatments are ineffective or unsuitable."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-011",
+  "cluster": "OA",
+  "topics": [
+   90
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ოსტეოართრიტი — მკურნალობები, რომლებიც არ არის რეკომენდებული",
+  "recommendation_ka": "არ დანიშნოთ გლუკოზამინი, ქონდროიტინი (მუხლი და მენჯ-ბარძაყი), ჰიდროქსიქლოროქინი, ბისფოსფონატები და ტრანსკუტანური ელექტრული ნერვული სტიმულაცია (TENS) — ACR-ის ძლიერი რეკომენდაციით მათ წინააღმდეგ. ACR-ის განახლებული (2026) გაიდლაინი, ანგარიშების თანახმად, ამ პოზიციებს ინარჩუნებს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2026,
+    "unit": "label",
+    "meaning_ka": "ACR-ის გაიდლაინის განახლების წელი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR/Arthritis Foundation",
+    "title": "2019 ACR/AF Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee (Kolasinski et al., Arthritis Rheumatol 2020)",
+    "year": 2020,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/art.41142",
+    "type": "guideline",
+    "supports": "Strong recommendations against glucosamine and chondroitin (knee/hip), hydroxychloroquine, bisphosphonates and TENS."
+   },
+   {
+    "org": "Healio (news report on ACR 2026 OA guideline update)",
+    "title": "New ACR osteoarthritis guidelines urge shared decision-making, individualized treatment",
+    "year": 2026,
+    "url": "https://www.healio.com/news/rheumatology/20260914/new-acr-osteoarthritis-guidelines-urge-shared-decisionmaking-individualized-treatment",
+    "type": "news",
+    "supports": "News report (secondary) on the 2026 ACR OA guideline update: strong recommendations against hydroxychloroquine, bisphosphonates and glucosamine/chondroitin retained; verify against the primary publication."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-012",
+  "cluster": "OA",
+  "topics": [
+   90,
+   94,
+   95
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "მუხლის ან მენჯ-ბარძაყის ოსტეოართრიტი, მნიშვნელოვანი ტკივილით და ფუნქციის შეზღუდვით, კონსერვატიული მკურნალობის მიუხედავად",
+  "recommendation_ka": "მიმართეთ ორთოპედს სახსრის ენდოპროთეზირების შესაფასებლად, როცა სიმპტომები არსებითად აუარესებს ცხოვრების ხარისხს ძირითადი და მედიკამენტური მკურნალობის მიუხედავად. ვიზუალიზაცია საჭიროა ქირურგიული დაგეგმვისთვის და არა დიაგნოზისთვის.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Consider referral for joint replacement when joint symptoms substantially affect quality of life and non-surgical management is ineffective or unsuitable; imaging not needed for clinical diagnosis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-013",
+  "cluster": "OA",
+  "topics": [
+   94
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული მენჯ-ბარძაყის ტკივილი ზრდასრულში — საწყისი ვიზუალიზაცია",
+  "recommendation_ka": "კლინიკური გასინჯვის შემდეგ საწყის კვლევად აირჩიეთ მენჯისა და დაზიანებული მენჯ-ბარძაყის სახსრის რენტგენოგრაფია. ულტრაბგერა, მრტ, არტროგრაფია, კტ ან ძვლის სკანირება პირველ ეტაპზე, როგორც წესი, არ არის მიზანშეწონილი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Chronic Hip Pain, 2022 update",
+    "year": 2022,
+    "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=84",
+    "type": "guideline",
+    "supports": "Radiography of the pelvis and hip is usually appropriate as the initial imaging test after clinical exam for chronic hip pain; ultrasound, MRI, MR/CT arthrography, CT and bone scan usually not appropriate initially."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-014",
+  "cluster": "OA",
+  "topics": [
+   94
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული მენჯ-ბარძაყის ტკივილი, რენტგენოგრაფია ნორმაში ან მსუბუქი ოსტეოართრიტი",
+  "recommendation_ka": "შემდეგი კვლევა შეარჩიეთ სავარაუდო მიზეზის მიხედვით: სახსრის გარეთა რბილი ქსოვილების პათოლოგიისას (ტენდინოპათია, ბურსიტი) — მრტ ან ულტრაბგერა; ლაბრუმის გახევის ეჭვისას — მრ- ან კტ-არტროგრაფია. გაითვალისწინეთ წელის, მენჯის ან მუხლიდან არეკლილი ტკივილი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Chronic Hip Pain, 2022 update",
+    "year": 2022,
+    "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=84",
+    "type": "guideline",
+    "supports": "If radiographs negative, MRI or ultrasound for suspected extra-articular soft-tissue causes (e.g., tendonitis); MR or CT arthrography for suspected labral tear; consider pain referred from lumbar spine, pelvis or knee."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-015",
+  "cluster": "OA",
+  "topics": [
+   94
+  ],
+  "rule_type": "red_flag",
+  "population": "older_adult",
+  "condition_ka": "მენჯ-ბარძაყის მწვავე ტკივილი დაცემის ან მცირე ტრავმის შემდეგ, ბარძაყის ძვლის მოტეხილობის ეჭვი",
+  "recommendation_ka": "პირველ კვლევად ჩაატარეთ მენჯისა და მენჯ-ბარძაყის რენტგენოგრაფია. თუ რენტგენი უარყოფითი ან განუსაზღვრელია და კლინიკური ეჭვი რჩება, ჩაატარეთ მრტ კონტრასტის გარეშე; კტ — მხოლოდ მრტ-ის უკუჩვენებისას. სიმყიფის მოტეხილობისას დანიშნეთ ძვლის დენსიტომეტრია (DXA).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "დატვირთვის შეუძლებლობა",
+   "კიდურის მოკლება და გარეთა როტაცია"
+  ],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Acute Hip Pain — Suspected Fracture (revised narrative)",
+    "year": 2024,
+    "url": "https://acsearch.acr.org/docs/3082587/Narrative",
+    "type": "guideline",
+    "supports": "Radiography of hip and pelvis is the first test after fall/minor trauma; with negative or indeterminate radiographs MRI hip without contrast is usually appropriate; CT only when MRI contraindicated; DXA for fragility fractures."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-016",
+  "cluster": "OA",
+  "topics": [
+   95
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მუხლის მწვავე ტრავმა ზრდასრულში — რენტგენოგრაფიის საჭიროება (ოტავის წესი)",
+  "recommendation_ka": "მუხლის რენტგენოგრაფია საჭიროა, თუ არის ერთი მაინც: ასაკი 55 წელი ან მეტი; მხოლოდ კვირისთავის იზოლირებული მტკივნეულობა; მცირე წვივის ძვლის თავის მტკივნეულობა; მუხლის 90 გრადუსამდე მოხრის შეუძლებლობა; 4 ნაბიჯის გადადგმის შეუძლებლობა ტრავმისთანავე და გასინჯვისას. თუ არც ერთი ნიშანი არ არის, რენტგენი, როგორც წესი, საჭირო არ არის.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 55,
+    "unit": "age_years",
+    "meaning_ka": "ასაკის კრიტერიუმი"
+   },
+   {
+    "value": 90,
+    "unit": "label",
+    "meaning_ka": "მუხლის მოხრის კუთხე (გრადუსი)"
+   },
+   {
+    "value": 4,
+    "unit": "count",
+    "meaning_ka": "ნაბიჯების რაოდენობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "RACGP (Australian Family Physician)",
+    "title": "The Ottawa knee rules",
+    "year": 2012,
+    "url": "https://www.racgp.org.au/afp/2012/april/the-ottawa-knee-rules",
+    "type": "review",
+    "supports": "Ottawa knee rules (still the current, widely validated decision rule): X-ray if age ≥55, isolated patellar tenderness, fibular head tenderness, inability to flex to 90°, or inability to bear weight for four steps immediately and in the ED; none present → no X-ray needed."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-017",
+  "cluster": "OA",
+  "topics": [
+   95,
+   100
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მუხლის ქრონიკული ტკივილი ზრდასრულში — საწყისი ვიზუალიზაცია",
+  "recommendation_ka": "საწყის კვლევად ჩაატარეთ მუხლის რენტგენოგრაფია. მრტ არ დანიშნოთ ბოლო წლის განმავლობაში ჩატარებული რენტგენის გარეშე; ულტრაბგერა, კტ და ძვლის სკანირება საწყის კვლევად არ გამოიყენება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Chronic Knee Pain",
+    "year": 2023,
+    "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=90",
+    "type": "guideline",
+    "supports": "Radiography is the initial imaging study for chronic pain in a native knee; MRI sometimes ordered prematurely without recent (prior year) radiographs; other modalities not initial tests."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-018",
+  "cluster": "OA",
+  "topics": [
+   100
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მუხლის ქრონიკული ტკივილი, რენტგენოგრაფია ნორმაში ან მხოლოდ სახსრის გამონაჟონით",
+  "recommendation_ka": "თუ ტკივილი გრძელდება, შემდეგ კვლევად ჩვეულებრივ აირჩიეთ მუხლის მრტ კონტრასტის გარეშე (მენისკის, იოგების, ხრტილის ან ძვლის ტვინის პათოლოგიის შესაფასებლად). კტ-არტროგრაფია განიხილება, როცა მრტ შეუძლებელია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Chronic Knee Pain",
+    "year": 2023,
+    "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=90",
+    "type": "guideline",
+    "supports": "When pain persists and initial radiographs are normal or show effusion, MRI knee without IV contrast is usually appropriate as the next study; CT arthrography may be appropriate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-OA-019",
+  "cluster": "OA",
+  "topics": [
+   100
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მუხლის ქრონიკული ტკივილი რენტგენოლოგიურად დადასტურებული ოსტეოართრიტით",
+  "recommendation_ka": "ტიპური ოსტეოართრიტის დროს დამატებითი მრტ მკურნალობას, როგორც წესი, არ ცვლის; დამატებითი ვიზუალიზაცია განიხილეთ ატიპური ნიშნების, სიმპტომების სწრაფი გაუარესების ან ქირურგიული დაგეგმვისას. რენტგენზე აღმოჩენილი ოსტეოქონდრიტი ან თავისუფალი სხეულები ცალკე შეფასებას საჭიროებს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACR",
+    "title": "ACR Appropriateness Criteria: Chronic Knee Pain",
+    "year": 2023,
+    "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=90",
+    "type": "guideline",
+    "supports": "Variants include radiographs showing osteoarthritis and radiographs showing osteochondritis dissecans or loose bodies, each with specific follow-up imaging."
+   },
+   {
+    "org": "NICE",
+    "title": "Osteoarthritis in over 16s: diagnosis and management (NG226) — recommendations",
+    "year": 2022,
+    "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+    "type": "guideline",
+    "supports": "Imaging not routinely needed; consider when atypical features or alternative diagnosis; imaging findings correlate poorly with symptoms."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

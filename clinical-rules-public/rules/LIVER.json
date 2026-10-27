@@ -1,0 +1,399 @@
+[
+ {
+  "rule_id": "PUB-LIVER-001",
+  "cluster": "LIVER",
+  "topics": [
+   26
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ზრდასრულში ALT-ის მომატების შეფასება",
+  "recommendation_ka": "ჯანმრთელი პირის ALT-ის ზედა ზღვრად ჩათვალეთ მამაკაცებში 29–33 ე/ლ, ქალებში 19–25 ე/ლ (და არა ლაბორატორიის ზოგჯერ უფრო მაღალი ზღვარი); ამაზე მაღალი მნიშვნელობა საჭიროებს შეფასებას. შენიშვნა: ბრიტანული გაიდლაინი პათოლოგიად თვლის ლაბორატორიის რეფერენსული დიაპაზონის გარეთ არსებულ მნიშვნელობას — მიდგომები განსხვავდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 29,
+    "unit": "U/L",
+    "meaning_ka": "ALT-ის ზედა ზღვრის ქვედა საზღვარი მამაკაცებში"
+   },
+   {
+    "value": 33,
+    "unit": "U/L",
+    "meaning_ka": "ALT-ის ზედა ზღვარი მამაკაცებში"
+   },
+   {
+    "value": 19,
+    "unit": "U/L",
+    "meaning_ka": "ALT-ის ზედა ზღვრის ქვედა საზღვარი ქალებში"
+   },
+   {
+    "value": 25,
+    "unit": "U/L",
+    "meaning_ka": "ALT-ის ზედა ზღვარი ქალებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Evaluation of Abnormal Liver Chemistries (Kwo, Cohen, Lim; Am J Gastroenterol 112:18–35)",
+    "year": 2017,
+    "url": "https://doi.org/10.1038/ajg.2016.517",
+    "type": "guideline",
+    "supports": "Current edition of the ACG guideline. Current edition: a true healthy normal ALT ranges from 29–33 IU/L for males and 19–25 IU/L for females; levels above this should be assessed."
+   },
+   {
+    "org": "British Society of Gastroenterology",
+    "title": "Guidelines on the management of abnormal liver blood tests (Newsome et al., Gut 67:6–19)",
+    "year": 2018,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754852/",
+    "type": "guideline",
+    "supports": "An analyte is abnormal when outside the laboratory reference range."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-002",
+  "cluster": "LIVER",
+  "topics": [
+   26
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ღვიძლის ბიოქიმიური მაჩვენებლების დარღვევა — დაზიანების ტიპის განსაზღვრა",
+  "recommendation_ka": "განსაზღვრეთ დაზიანების ტიპი R-კოეფიციენტით: (ALT / ALT-ის ზედა ზღვარი) ÷ (ტუტე ფოსფატაზა / მისი ზედა ზღვარი). ჰეპატოცელულურ ტიპზე მიუთითებს AST/ALT-ის არაპროპორციული მატება ტუტე ფოსფატაზასთან შედარებით, ქოლესტაზურზე — პირიქით; შერეული ტიპი შუალედურია. ტიპი განსაზღვრავს შემდგომ დიაგნოსტიკურ ალგორითმს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Evaluation of Abnormal Liver Chemistries (Kwo, Cohen, Lim; Am J Gastroenterol 112:18–35)",
+    "year": 2017,
+    "url": "https://doi.org/10.1038/ajg.2016.517",
+    "type": "guideline",
+    "supports": "Current edition of the ACG guideline. Hepatocellular injury is disproportionate elevation of AST/ALT compared with alkaline phosphatase, cholestatic injury the reverse; R ratio = (ALT/ALT ULN)/(ALP/ALP ULN) classifies hepatocellular, cholestatic or mixed injury."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-003",
+  "cluster": "LIVER",
+  "topics": [
+   26
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ღვიძლის სისხლის ტესტების დარღვევა ზრდასრულში, ნებისმიერი ხარისხისა და ხანგრძლივობის",
+  "recommendation_ka": "ჩაატარეთ სტანდარტული ეტიოლოგიური სკრინინგი, მიუხედავად დარღვევის ხარისხისა და ხანგრძლივობისა: მუცლის ღრუს ექოსკოპია, HBsAg, ანტი-HCV (დადებითისას HCV RNA PCR), ანტიმიტოქონდრიული, ანტი-გლუვკუნთოვანი და ანტინუკლეარული ანტისხეულები, იმუნოგლობულინები, ფერიტინი და ტრანსფერინის გაჯერება ერთდროულად. კლინიკურ მნიშვნელობას განსაზღვრავს რომელი მაჩვენებელია დარღვეული და კლინიკური კონტექსტი, და არა მხოლოდ გადახრის სიდიდე.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "British Society of Gastroenterology",
+    "title": "Guidelines on the management of abnormal liver blood tests (Newsome et al., Gut 67:6–19)",
+    "year": 2018,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754852/",
+    "type": "guideline",
+    "supports": "Investigate with a standard adult liver aetiology screen irrespective of level and duration of abnormality: abdominal ultrasound, HBsAg, anti-HCV with PCR if positive, AMA, ASMA, ANA, serum immunoglobulins, simultaneous ferritin and transferrin saturation; significance is determined by the analyte and clinical context rather than degree of abnormality."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-004",
+  "cluster": "LIVER",
+  "topics": [
+   26
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ღვიძლის სისხლის ტესტების დარღვევა ბავშვში",
+  "recommendation_ka": "ბავშვებში ეტიოლოგიურ სკრინინგში ჩართეთ ანტი-LKM ანტისხეულები (აუტოიმუნური ჰეპატიტის მეორე ტიპი) და ცელიაკიის ანტისხეულები; ფერიტინი და ტრანსფერინის გაჯერება რუტინულად შეიძლება საჭირო არ იყოს. დაგეგმეთ პედიატრ-ჰეპატოლოგთან კონსულტაცია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "British Society of Gastroenterology",
+    "title": "Guidelines on the management of abnormal liver blood tests (Newsome et al., Gut 67:6–19)",
+    "year": 2018,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754852/",
+    "type": "guideline",
+    "supports": "In children, ferritin and transferrin saturation may not be indicated, but the autoantibody panel should include anti-LKM antibody and coeliac antibodies."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-005",
+  "cluster": "LIVER",
+  "topics": [
+   26
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ღვიძლის ტესტების დარღვევა მწვავე ჰეპატიტის გარეშე",
+  "recommendation_ka": "მემკვიდრეობითი ჰემოქრომატოზის გამოსარიცხად ყველა ასეთ პაციენტს განუსაზღვრეთ რკინის მაჩვენებლები, ფერიტინი და ტრანსფერინის გაჯერება; აუტოიმუნური დაავადების ეჭვისას — აუტოიმუნური მარკერები. შეკრიბეთ სრული ანამნეზი: ალკოჰოლი, მედიკამენტები, მცენარეული და დიეტური დანამატები, მეტაბოლური რისკ-ფაქტორები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Evaluation of Abnormal Liver Chemistries (Kwo, Cohen, Lim; Am J Gastroenterol 112:18–35)",
+    "year": 2017,
+    "url": "https://doi.org/10.1038/ajg.2016.517",
+    "type": "guideline",
+    "supports": "Current edition of the ACG guideline. All patients with abnormal liver chemistries in the absence of acute hepatitis should undergo testing for hereditary hemochromatosis (iron, transferrin saturation, ferritin); autoimmune markers when autoimmune disease suspected."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-006",
+  "cluster": "LIVER",
+  "topics": [
+   26,
+   27
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ღვიძლის დაზიანების ეჭვი ახალი მედიკამენტის, მცენარეული ან დიეტური დანამატის ფონზე",
+  "recommendation_ka": "მედიკამენტით გამოწვეული ღვიძლის დაზიანება (DILI) გამორიცხვითი დიაგნოზია: სისტემურად გამორიცხეთ ვირუსული, აუტოიმუნური, ბილიარული და მეტაბოლური მიზეზები, შეაფასეთ მიზეზობრიობა სტრუქტურირებული მეთოდით (RUCAM) და შეწყვიტეთ საეჭვო საშუალება. სიყვითლის განვითარება ჰეპატოცელულური DILI-ის დროს მძიმე პროგნოზის ნიშანია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სიყვითლე ჰეპატოცელულური დაზიანებისას",
+   "INR-ის მატება ან ენცეფალოპათია"
+  ],
+  "sources": [
+   {
+    "org": "EASL",
+    "title": "EASL Clinical Practice Guidelines: Drug-induced liver injury (J Hepatol 70:1222–61)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30926241/",
+    "type": "guideline",
+    "supports": "Diagnosis of DILI is uncertain and requires a high degree of awareness and careful exclusion of alternative aetiologies; RUCAM is the most widely used causality method."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-007",
+  "cluster": "LIVER",
+  "topics": [
+   27
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "იზოლირებული არაკონიუგირებული ჰიპერბილირუბინემია",
+  "recommendation_ka": "ბილირუბინის ფრაქციონირებით განასხვავეთ არაკონიუგირებული და კონიუგირებული ჰიპერბილირუბინემია. იზოლირებული არაკონიუგირებული ფორმისას დიფერენციული დიაგნოზი მოიცავს ჰემოლიზს, ჟილბერის სინდრომს და კრიგლერ-ნაიარის სინდრომს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NHS England Genomics Education Programme (GeNotes)",
+    "title": "Presentation: patient with elevated unconjugated bilirubin (Gilbert syndrome)",
+    "year": 2023,
+    "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/presentation-patient-with-elevated-unconjugated-hyperbilirubin/",
+    "type": "clinical_resource",
+    "supports": "Raised unconjugated bilirubin with normal conjugated bilirubin and liver enzymes; differential includes haemolytic causes and Crigler-Najjar syndrome."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-008",
+  "cluster": "LIVER",
+  "topics": [
+   27,
+   28
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ჟილბერის სინდრომის ეჭვი",
+  "recommendation_ka": "სავარაუდო დიაგნოზი დასვით, თუ: არაკონიუგირებული ჰიპერბილირუბინემია ვლინდება განმეორებით, ნორმალურია სისხლის საერთო ანალიზი, სისხლის ნაცხი და რეტიკულოციტები, ნორმალურია ამინოტრანსფერაზები და ტუტე ფოსფატაზა. დამატებითი გამოკვლევა საჭირო არ არის; გენეტიკური ტესტი — მხოლოდ დიაგნოსტიკური გაურკვევლობისას. ბილირუბინი ფლუქტუირებს და შეიძლება ხანგრძლივად ნორმაში იყოს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NHS England Genomics Education Programme (GeNotes)",
+    "title": "Presentation: patient with elevated unconjugated bilirubin (Gilbert syndrome)",
+    "year": 2023,
+    "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/presentation-patient-with-elevated-unconjugated-hyperbilirubin/",
+    "type": "clinical_resource",
+    "supports": "Presumptive diagnosis of Gilbert syndrome: unconjugated hyperbilirubinaemia on repeated testing, normal full blood count, blood film and reticulocyte count and/or normal aminotransferases and ALP; genomic testing if diagnostic uncertainty; levels fluctuate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-009",
+  "cluster": "LIVER",
+  "topics": [
+   27
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "სიყვითლის მიზეზების კლასიფიკაცია",
+  "recommendation_ka": "მიზეზები დაყავით სამ ჯგუფად: (ა) პრეჰეპატური/არაკონიუგირებული — ჰემოლიზი, ჟილბერის სინდრომი; (ბ) ჰეპატოცელულური — ვირუსული ჰეპატიტი, ალკოჰოლი, მედიკამენტები, აუტოიმუნური ჰეპატიტი, მეტაბოლური დაავადებები; (გ) ქოლესტაზური — ინტრაჰეპატური (პირველადი ბილიარული ქოლანგიტი, მედიკამენტები) ან ექსტრაჰეპატური ობსტრუქცია (ქოლედოქოლითიაზი, სიმსივნე, სტრიქტურა).",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Evaluation of Abnormal Liver Chemistries (Kwo, Cohen, Lim; Am J Gastroenterol 112:18–35)",
+    "year": 2017,
+    "url": "https://doi.org/10.1038/ajg.2016.517",
+    "type": "guideline",
+    "supports": "Current edition of the ACG guideline. Guideline provides algorithms for hepatocellular versus cholestatic patterns and for bilirubin elevation, with serologic and radiologic evaluation."
+   },
+   {
+    "org": "British Society of Gastroenterology",
+    "title": "Guidelines on the management of abnormal liver blood tests (Newsome et al., Gut 67:6–19)",
+    "year": 2018,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754852/",
+    "type": "guideline",
+    "supports": "Aetiology screen covers viral (HBV, HCV), autoimmune (AMA, ASMA, ANA, immunoglobulins) and metabolic (ferritin/transferrin saturation) causes plus ultrasound for structural/biliary disease."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-010",
+  "cluster": "LIVER",
+  "topics": [
+   28
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ზრდასრული კონიუგირებული ჰიპერბილირუბინემიით ან ქოლესტაზური ტიპის დარღვევით",
+  "recommendation_ka": "პირველი ვიზუალიზაციის მეთოდია მუცლის ღრუს ექოსკოპია ბილიარული ობსტრუქციის გამოსარიცხად. ობსტრუქციის დადასტურებისას მიზეზის, დონის და სტადიის დასადგენად გამოიყენეთ კონტრასტული კტ ან მრტ/მრქპ; ენდოსკოპიური ექოსკოპია და ERCP — როცა საჭიროა ჩარევა ან დიაგნოზი გაურკვეველია. არაკონტრასტული კტ ამ ჩვენებით რეკომენდებული არ არის.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "American College of Radiology",
+    "title": "ACR Appropriateness Criteria: Jaundice — narrative and rating table",
+    "year": 2013,
+    "url": "https://acsearch.acr.org/docs/69497/Narrative/",
+    "type": "appropriateness_criteria",
+    "supports": "Current edition as posted on ACR acsearch (original 2013). Ultrasound is the first-line modality to exclude biliary obstruction; CT or MRI/MRCP clarifies aetiology, level, stage and guides intervention; EUS and ERCP rated 'may be appropriate'; CT without contrast usually not appropriate."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-011",
+  "cluster": "LIVER",
+  "topics": [
+   28
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "სიყვითლე ცხელებით და მარჯვენა ზედა კვადრანტის ტკივილით",
+  "recommendation_ka": "ეჭვი მიიტანეთ მწვავე ქოლანგიტზე: აიღეთ სისხლის კულტურა, დაიწყეთ ინტრავენური ანტიბიოტიკი და სითხეები. ქოლანგიტი ან ვიზუალიზაციით ნანახი ნაღვლის სადინრის კენჭი ქოლედოქოლითიაზის მაღალი ალბათობის კრიტერიუმია — დაგეგმეთ გადაუდებელი ERCP.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჰიპოტენზია",
+   "ცნობიერების დარღვევა",
+   "ცხელება და შემცივნება სიყვითლესთან ერთად"
+  ],
+  "sources": [
+   {
+    "org": "Surg Endosc (peer-reviewed validation study)",
+    "title": "Performance of the 2019 ASGE choledocholithiasis risk criteria",
+    "year": 2023,
+    "url": "https://link.springer.com/10.1007/s00464-023-10087-w",
+    "type": "study",
+    "supports": "2019 ASGE criteria stratify suspected choledocholithiasis by liver tests and ultrasound into high, intermediate and low likelihood; high-likelihood criteria include stones on imaging and clinical cholangitis, warranting ERCP."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-012",
+  "cluster": "LIVER",
+  "topics": [
+   28
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "საეჭვო ქოლედოქოლითიაზი, საშუალო ალბათობა",
+  "recommendation_ka": "თუ სადინარში კენჭი არ ჩანს და ქოლანგიტი არ არის, მაგრამ ღვიძლის ტესტები დარღვეულია ან სადინარი გაგანიერებულია, ERCP-მდე ჩაატარეთ ნაკლებად ინვაზიური დადასტურება (მრქპ ან ენდოსკოპიური ექოსკოპია), რადგან ASGE-ს კრიტერიუმების სიზუსტე ზომიერია; ევროპული (ESGE) სტრატიფიკაცია უფრო სპეციფიკური აღმოჩნდა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Surg Endosc (peer-reviewed validation study)",
+    "title": "Performance of the 2019 ASGE choledocholithiasis risk criteria",
+    "year": 2023,
+    "url": "https://link.springer.com/10.1007/s00464-023-10087-w",
+    "type": "study",
+    "supports": "The 2019 ASGE high-risk criterion improves diagnostic performance but still performs suboptimally; a dilated CBD was the strongest individual predictor; ESGE stratification appears more specific than ASGE."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-LIVER-013",
+  "cluster": "LIVER",
+  "topics": [
+   28,
+   26
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "გაურკვეველი სიყვითლე ან ღვიძლის ტესტების მუდმივი დარღვევა სკრინინგის შემდეგ",
+  "recommendation_ka": "თუ ეტიოლოგიური სკრინინგით მიზეზი ვერ დადგინდა, ან არის ღვიძლის სინთეზური ფუნქციის დარღვევა (ალბუმინის დაქვეითება, INR-ის მატება), მიმართეთ ჰეპატოლოგს; ღვიძლის ბიოფსია განიხილება, როცა სეროლოგიური და რადიოლოგიური შეფასება არაინფორმატიულია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "INR-ის მატება",
+   "ენცეფალოპათია",
+   "ასციტი"
+  ],
+  "sources": [
+   {
+    "org": "ACG",
+    "title": "ACG Clinical Guideline: Evaluation of Abnormal Liver Chemistries (Kwo, Cohen, Lim; Am J Gastroenterol 112:18–35)",
+    "year": 2017,
+    "url": "https://doi.org/10.1038/ajg.2016.517",
+    "type": "guideline",
+    "supports": "Current edition of the ACG guideline. Guideline algorithms include when liver biopsy should be considered after serologic and radiologic evaluation."
+   },
+   {
+    "org": "British Society of Gastroenterology",
+    "title": "Guidelines on the management of abnormal liver blood tests (Newsome et al., Gut 67:6–19)",
+    "year": 2018,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754852/",
+    "type": "guideline",
+    "supports": "Standard panel includes bilirubin, albumin, ALT, ALP and GGT with full blood count; guideline addresses response to abnormal results."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

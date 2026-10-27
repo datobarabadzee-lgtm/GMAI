@@ -1,0 +1,972 @@
+[
+ {
+  "rule_id": "PUB-DIAR-001",
+  "cluster": "DIAR",
+  "topics": [
+   5
+  ],
+  "rule_type": "epidemiology",
+  "population": "all",
+  "condition_ka": "მწვავე ინფექციური დიარეა – ექსპოზიციასთან დაკავშირებული გამომწვევები (საკვებით გადაცემა)",
+  "recommendation_ka": "შეკრიბეთ დეტალური ექსპოზიციური ანამნეზი, მათ შორის სხვებში მსგავსი დაავადება. საკვებით აფეთქებები (სასტუმრო, კრუიზი, რესტორანი, ბანკეტი): ნოროვირუსი, არატიფური Salmonella, Clostridium perfringens, Bacillus cereus, Staphylococcus aureus, Campylobacter, ETEC, STEC, Listeria, Shigella, Cyclospora, Cryptosporidium. არაპასტერიზებული რძე/რძის პროდუქტები: Salmonella, Campylobacter, Yersinia enterocolitica, STEC, Cryptosporidium (ასევე Brucella, Listeria). უმი ან ნახევრად მოხარშული ხორცი: STEC (ძროხის ხორცი), Salmonella და Campylobacter (ფრინველი), Yersinia (ღორის ხორცი). ფერმის/საკონტაქტო ზოოპარკის მონახულება – STEC, Cryptosporidium, Campylobacter; ახალგაზრდა ფრინველთან ან რეპტილიასთან კონტაქტი – არატიფური Salmonella; ბოლოდროინდელი ანტიბიოტიკი – C. difficile.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Detailed clinical and exposure history recommended; Table 2 links foodborne outbreaks, unpasteurized dairy, raw/undercooked meat, farm/petting zoo, poultry/reptile contact and recent antimicrobials to specific pathogens (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-002",
+  "cluster": "DIAR",
+  "topics": [
+   5,
+   10
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეის კლინიკური სურათი, რომელიც გამომწვევზე მიუთითებს",
+  "recommendation_ka": "გულისრევა და ღებინება, რომელიც ≤24 საათს გრძელდება – S. aureus-ის ენტეროტოქსინი ან B. cereus (ხანმოკლე ინკუბაციის ემეტიკური სინდრომი); დიარეა და სპაზმური ტკივილი 1–2 დღე – C. perfringens ან B. cereus; ღებინება და არასისხლიანი დიარეა 2–3 დღე – ნოროვირუსი. ხილული სისხლი განავალში – STEC, Shigella, Salmonella, Campylobacter, Entamoeba histolytica, Yersinia; ძლიერი მუცლის ტკივილი სისხლიანი განავლით და მინიმალური ცხელებით – დამახასიათებელია STEC-ისთვის; მუდმივი ტკივილი და ცხელება, აპენდიციტის მიმბაძველი – Yersinia. ხანგრძლივი ან ქრონიკული დიარეა – Cryptosporidium, Giardia, Cyclospora, Cystoisospora, E. histolytica. ცხელება მაღალ დისკრიმინაციულ ნიშანს არ წარმოადგენს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "ემეტიკური ტოქსიკური სინდრომის ხანგრძლივობა"
+   },
+   {
+    "value": 1,
+    "unit": "day",
+    "meaning_ka": "C. perfringens დიარეის ხანგრძლივობა – ქვედა"
+   },
+   {
+    "value": 2,
+    "unit": "day",
+    "meaning_ka": "C. perfringens – ზედა; ასევე ნოროვირუსი – ქვედა"
+   },
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ნოროვირუსის ხანგრძლივობა – ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Table 3: nausea/vomiting ≤24 h – S. aureus enterotoxin or B. cereus; diarrhea and cramping 1–2 days – C. perfringens or B. cereus; vomiting and nonbloody diarrhea 2–3 days – norovirus; visible blood – STEC, Shigella, Salmonella, Campylobacter, E. histolytica; severe pain, bloody stools, minimal fever – STEC; Yersinia mimics appendicitis; fever not highly discriminatory (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-003",
+  "cluster": "DIAR",
+  "topics": [
+   5,
+   10,
+   36
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "სისხლიანი დიარეა – ეჭვი შიგა-ტოქსინის მაპროდუცირებელ E. coli-ზე (STEC) და ჰემოლიზურ-ურემიულ სინდრომზე",
+  "recommendation_ka": "სისხლიანი დიარეისას, განსაკუთრებით ძლიერი ტკივილით და მინიმალური ცხელებით, ჩაატარეთ განავლის კვლევა, რომელიც აღმოაჩენს შიგა-ტოქსინს (ან მის გენებს) და განასხვავებს E. coli O157:H7-ს სხვა STEC-ებისგან. STEC O157-ით ან შიგა-ტოქსინ 2-ის მაპროდუცირებელი (ან უცნობი გენოტიპის) STEC-ით ინფექციისას ანტიბიოტიკი არ დანიშნოთ – ზრდის ჰემოლიზურ-ურემიული სინდრომის რისკს. ბავშვებში სისხლიანი დიარეის ემპირიული ანტიბიოტიკოთერაპია ამ რისკის გათვალისწინებით აწონ-დაწონეთ. აკონტროლეთ ჰემოგლობინი, თრომბოციტები და კრეატინინი; ანემიის, თრომბოციტოპენიის ან დიურეზის შემცირებისას – სასწრაფო ჰოსპიტალიზაცია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "შიგა-ტოქსინი 2"
+   }
+  ],
+  "red_flags_ka": [
+   "სისხლიანი დიარეა ძლიერი ტკივილით, ცხელების გარეშე",
+   "ანემია/თრომბოციტოპენია",
+   "ოლიგურია"
+  ],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "When STEC suspected, use diagnostics detecting Shiga toxin and distinguishing O157:H7; antimicrobial therapy for STEC O157 and other Shiga toxin 2-producing STEC (or unknown genotype) should be avoided; consider HUS (current edition)"
+   },
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Travelers' Diarrhea",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/travelers-diarrhea.html",
+    "type": "guideline",
+    "supports": "In children with bloody diarrhea, empiric antibiotic therapy must be weighed against the risk of HUS associated with STEC."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-004",
+  "cluster": "DIAR",
+  "topics": [
+   5
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეა სპეციფიკური ექსპოზიციით – Vibrio და Yersinia-ზე ტესტირება",
+  "recommendation_ka": "Yersinia enterocolitica-ზე განავლის კვლევა ჩაატარეთ მუცლის მუდმივი ტკივილისას (განსაკუთრებით სკოლის ასაკის ბავშვებში მარჯვენა ქვედა კვადრანტის ტკივილით, აპენდიციტის მიმბაძველი მეზენტერიული ადენიტით) და ცხელებისას ეპიდემიოლოგიური რისკით (უმი ან ნახევრად მოხარშული ღორის ხორცი). Vibrio-ზე – უხვი „ბრინჯის ნახარშისებრი“ განავლისას, მარილიან ან მლაშე წყალთან კონტაქტისას, უმი ზღვის მოლუსკების მიღებისას ან დიარეის დაწყებამდე 3 დღის განმავლობაში ქოლერის ენდემურ რეგიონში ყოფნისას. აფეთქების ეჭვისას (საერთო კვების შემდეგ რამდენიმე შემთხვევა) – გამომწვევთა ფართო პანელი, საზოგადოებრივი ჯანდაცვის სამსახურთან კოორდინაციით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "ქოლერის ენდემურ რეგიონში ყოფნის ფანჯარა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Test for Yersinia in persistent abdominal pain (school-aged children with RLQ pain mimicking appendicitis) and fever with pork exposure; test for Vibrio with rice-water stools, brackish water, raw shellfish, or travel to cholera-endemic regions within 3 days before onset; broader testing in outbreaks with public health (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-005",
+  "cluster": "DIAR",
+  "topics": [
+   10,
+   107
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "დიარეის კლასიფიკაცია ხანგრძლივობის მიხედვით",
+  "recommendation_ka": "IDSA-ის მიხედვით: გახანგრძლივებული დიარეა – 7–13 დღე; პერსისტენტული – 14–29 დღე; ქრონიკული – 30 დღე ან მეტი. BSG-ის პრაგმატული განმარტებით, ქრონიკული დიარეა არის ნორმიდან მუდმივი გადახრა – ბრისტოლის სკალით 5–7 ტიპის კონსისტენცია და გახშირებული განავალი 4 კვირაზე მეტი ხნის განმავლობაში (განავლის წონა, ≥200 გ/დღე, აღარ გამოიყენება). 14 დღეზე მეტი სიმპტომებისას და დაუდგენელი მიზეზისას განიხილეთ არაინფექციური მიზეზები (ანთებითი ნაწლავის დაავადება, გაღიზიანებული ნაწლავის სინდრომი); 30 დღეზე მეტი ხანგრძლივობისას ზოგიერთ პაციენტს აივ-ტესტირება სჭირდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 7,
+    "unit": "day",
+    "meaning_ka": "გახანგრძლივებული – ქვედა; ასევე ბრისტოლის ტიპი 7"
+   },
+   {
+    "value": 13,
+    "unit": "day",
+    "meaning_ka": "გახანგრძლივებული – ზედა"
+   },
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "პერსისტენტული – ქვედა"
+   },
+   {
+    "value": 29,
+    "unit": "day",
+    "meaning_ka": "პერსისტენტული – ზედა"
+   },
+   {
+    "value": 30,
+    "unit": "day",
+    "meaning_ka": "ქრონიკული დიარეის ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "label",
+    "meaning_ka": "ბრისტოლის ტიპი 5"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "ქრონიკული დიარეის ზღვარი BSG-ით"
+   },
+   {
+    "value": 200,
+    "unit": "g/day",
+    "meaning_ka": "ძველი განავლის წონის კრიტერიუმი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Prolonged diarrhea 7–13 days, persistent 14–29 days, chronic ≥30 days; noninfectious conditions (IBD, IBS) considered when symptoms last ≥14 days; HIV testing may be appropriate with diarrhea ≥30 days (current edition)"
+   },
+   {
+    "org": "BSG",
+    "title": "Guidelines for the investigation of chronic diarrhoea in adults: British Society of Gastroenterology, 3rd edition (Arasaradnam et al., Gut 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6204957/",
+    "type": "guideline",
+    "supports": "Chronic diarrhoea: persistent alteration with Bristol types 5–7 and increased frequency for >4 weeks; stool weights (≥200 g/day) not recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-006",
+  "cluster": "DIAR",
+  "topics": [
+   10
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "მწვავე დიარეა მოზრდილში – როდის ჩავატაროთ განავლის კვლევა",
+  "recommendation_ka": "შეაფასეთ დეჰიდრატაცია ყველა ასაკში (განსაკუთრებით ახალგაზრდებსა და ხანდაზმულებში). განავლის კვლევა Salmonella-ზე, Shigella-ზე, Campylobacter-ზე, Yersinia-ზე, C. difficile-სა და STEC-ზე ჩაატარეთ ცხელების, სისხლიანი ან ლორწოვანი განავლის, ძლიერი სპაზმური ტკივილის/მტკივნეულობის ან სეფსისის ნიშნების დროს. ფეკალური ლეიკოციტები და ლაქტოფერინი მიზეზის დასადგენად არ გამოიყენოთ. C. difficile-ზე ტესტირება განიხილეთ 2 წელზე უფროსებში ანტიბიოტიკის შემდგომი ან ჰოსპიტალური დიარეისას – საკმარისია ერთი დიარეული ნიმუში. მულტიპლექს PCR-ის შედეგი კლინიკურად შეაფასეთ (აღმოაჩენს დნმ-ს და არა აუცილებლად სიცოცხლისუნარიან ორგანიზმს). გაურთულებელი მოგზაურის დიარეა, როგორც წესი, კვლევას არ საჭიროებს; 14 დღეზე მეტი ხანგრძლივობისას გამოიკვლიეთ პარაზიტებზე, ბოლო 8–12 კვირაში ანტიბიოტიკის მიღებისას – C. difficile-ზე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "age_years",
+    "meaning_ka": "C. difficile ტესტირების ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "პარაზიტული კვლევის ზღვარი"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "ანტიბიოტიკის მიღების ფანჯარა – ქვედა"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "ანტიბიოტიკის მიღების ფანჯარა – ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Evaluate all ages for dehydration; stool testing for Salmonella, Shigella, Campylobacter, Yersinia, C. difficile, STEC with fever, bloody/mucoid stools, severe cramping/tenderness or sepsis; fecal leukocytes/lactoferrin should not be used; C. difficile testing in >2 years after antimicrobials or healthcare-associated, single specimen; interpret multiplex NAAT clinically; travelers ≥14 days evaluated for parasites, C. difficile if antimicrobials in preceding 8–12 weeks (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-007",
+  "cluster": "DIAR",
+  "topics": [
+   10,
+   36
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეა – სისხლის კულტურის ჩვენებები",
+  "recommendation_ka": "სისხლის კულტურა აიღეთ: 3 თვემდე ასაკის ჩვილებში; ნებისმიერ ასაკში სეპტიცემიის ან სისტემური ინფექციის ნიშნებისას; ენტერული ცხელების ეჭვისას (მათ შორის ენდემური რეგიონიდან დაბრუნებულ ან მოგზაურთან კონტაქტის მქონე მოცხელებულ პაციენტში); იმუნოკომპრომისის დროს; მაღალი რისკის მდგომარეობებში, როგორიცაა ჰემოლიზური ანემია. სეროლოგიური ტესტები ინფექციური დიარეის ან ენტერული ცხელების მიზეზის დასადგენად არ არის რეკომენდებული.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ასაკობრივი ზღვარი ჩვილებისთვის"
+   }
+  ],
+  "red_flags_ka": [
+   "ჩვილი 3 თვემდე",
+   "სეფსისის ნიშნები",
+   "იმუნოკომპრომისი"
+  ],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Blood cultures for infants <3 months, any age with septicemia or suspected enteric fever, systemic manifestations, immunocompromised, high-risk conditions such as hemolytic anemia, febrile travelers from enteric fever-endemic areas; serologic tests not recommended for etiology (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-008",
+  "cluster": "DIAR",
+  "topics": [
+   10
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეა – ემპირიული ანტიბიოტიკოთერაპიის ჩვენებები",
+  "recommendation_ka": "მწვავე წყლიანი დიარეის უმეტეს შემთხვევაში, ბოლოდროინდელი საერთაშორისო მოგზაურობის გარეშე, ემპირიული ანტიბიოტიკი არ არის რეკომენდებული (გამონაკლისი – იმუნოკომპრომისი ან ცუდად მყოფი ჩვილები); 14 დღეზე მეტი ხნის პერსისტენტული წყლიანი დიარეისას ემპირიული მკურნალობა თავიდან აიცილეთ. სისხლიან დიარეაზე ემპირიული ანტიბიოტიკი, როგორც წესი, არ ინიშნება, გარდა: 3 თვემდე ჩვილებისა ბაქტერიული მიზეზის ეჭვით; სამედიცინო დაწესებულებაში დადასტურებული ცხელებით, მუცლის ტკივილითა და ბაცილარული დიზენტერიის (Shigella) სურათით მძიმედ მყოფი პაციენტებისა; ბოლოს საერთაშორისო მოგზაურობიდან დაბრუნებულებისა ტემპერატურით ≥38.5 °C ან სეფსისის ნიშნებით. სეფსისის ნიშნებით ენტერული ცხელების ეჭვისას – ფართო სპექტრის ემპირიული თერაპია კულტურების აღების შემდეგ. გამომწვევის იდენტიფიკაციისას ანტიბიოტიკი შეცვალეთ ან შეწყვიტეთ; უსიმპტომო კონტაქტებს ემპირიული მკურნალობა არ შესთავაზოთ.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "პერსისტენტული დიარეის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "age_months",
+    "meaning_ka": "ჩვილის ასაკი"
+   },
+   {
+    "value": 38.5,
+    "unit": "°C",
+    "meaning_ka": "ტემპერატურის ზღვარი მოგზაურებში"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Empiric antimicrobials not recommended for most acute watery diarrhea without recent travel (exceptions immunocompromised, ill infants); avoid empiric therapy in persistent watery diarrhea ≥14 days; empiric therapy for bloody diarrhea not recommended except infants <3 months, ill people with documented fever and dysentery presumptively Shigella, recent travelers with ≥38.5°C or sepsis; broad-spectrum for suspected enteric fever with sepsis; modify when organism identified; do not treat asymptomatic contacts (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-009",
+  "cluster": "DIAR",
+  "topics": [
+   10
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "მოგზაურის მწვავე დიარეა მოზრდილებში – სიმძიმის მიხედვით მართვა",
+  "recommendation_ka": "მსუბუქი (ასატანი, გეგმებს არ არღვევს): ანტიბიოტიკი არ არის რეკომენდებული – ბისმუტის სუბსალიცილატი ან ლოპერამიდი. საშუალო (შემაწუხებელი, გეგმებს ხელს უშლის): შეიძლება აზითრომიცინი, ფტორქინოლონი ან რიფაქსიმინი (არაინვაზიური დიარეისას). მძიმე (უუნარობა; ყველა დიზენტერია მძიმედ ითვლება): ანტიბიოტიკი რეკომენდებულია, უპირატესად აზითრომიცინი. დოზები: აზითრომიცინი 1000 მგ ერთჯერადად (ან 2 დოზად იმავე დღეს) ან 500 მგ დღეში ერთხელ 3 დღე; ციპროფლოქსაცინი 750 მგ ერთჯერადად ან 500 მგ დღეში ორჯერ 3 დღე; რიფაქსიმინი 200 მგ დღეში სამჯერ 3 დღე (არ გამოიყენოთ ინვაზიური დიარეის ეჭვისას). თუ ერთჯერადი დოზიდან 24 საათში სიმპტომები არ ქრება, გააგრძელეთ 3 დღემდე. აზითრომიცინი უპირატესია დიზენტერიის, ცხელებიანი დიარეისა და სამხრეთ-აღმოსავლეთ აზიის (ფტორქინოლონ-რეზისტენტობა) შემთხვევაში. შესაძლებელია ლოპერამიდის დამატება (4 მგ, შემდეგ 2 მგ ყოველი თხიერი განავლის შემდეგ, არაუმეტეს 16 მგ 24 საათში), მაგრამ არა მონოთერაპიად სისხლიანი ან ცხელებიანი დიარეისას.",
+  "doses": [
+   {
+    "drug": "azithromycin",
+    "amount": 1000,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose (or divided same day)",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "azithromycin",
+    "amount": 500,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "once daily × 3 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ciprofloxacin",
+    "amount": 750,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "single dose",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "ciprofloxacin",
+    "amount": 500,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily × 3 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "rifaximin",
+    "amount": 200,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "three times daily × 3 days",
+    "population": "adult",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "loperamide",
+    "amount": 4,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "initial, then 2 mg after each loose stool",
+    "population": "adult",
+    "max_amount": 16,
+    "max_unit": "mg"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "doses",
+    "meaning_ka": "აზითრომიცინის დაყოფა; ასევე ლოპერამიდის 2 მგ"
+   },
+   {
+    "value": 3,
+    "unit": "day",
+    "meaning_ka": "მკურნალობის ხანგრძლივობა"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "პასუხის შეფასება ერთჯერადი დოზის შემდეგ"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Travelers' Diarrhea",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/travelers-diarrhea.html",
+    "type": "guideline",
+    "supports": "Functional severity: mild – no antibiotics, consider BSS or loperamide; moderate – azithromycin, fluoroquinolones, rifaximin; severe incl. all dysentery – antibiotics advised, azithromycin preferred; azithromycin 1,000 mg single/divided or 500 mg daily 3 days; ciprofloxacin 750 mg single or 500 mg BID 3 days; rifaximin 200 mg TID 3 days (not for invasive); continue up to 3 days if not resolved at 24 h; loperamide 4 mg then 2 mg per loose stool, max 16 mg/24 h; not monotherapy for bloody or febrile diarrhea."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-010",
+  "cluster": "DIAR",
+  "topics": [
+   10,
+   36
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეა დეჰიდრატაციით – რეჰიდრატაცია და კვება",
+  "recommendation_ka": "მსუბუქი და ზომიერი დეჰიდრატაციისას პირველი რიგის მკურნალობაა შემცირებული ოსმოლარობის პერორალური რეჰიდრატაციის ხსნარი (ORS) ყველა ასაკში; ზომიერი დეჰიდრატაციისას, თუ პერორალური მიღება შეუძლებელია, შეიძლება ნაზოგასტრული მიწოდება. იზოტონური ინტრავენური ხსნარი (რინგერ-ლაქტატი ან ფიზიოლოგიური ხსნარი) – მძიმე დეჰიდრატაციის, შოკის, ცნობიერების დარღვევის, ORS-ის წარუმატებლობის ან ილეუსის დროს; IV რეჰიდრატაცია გააგრძელეთ პულსის, პერფუზიისა და ცნობიერების ნორმალიზებამდე, დანარჩენი დეფიციტი შეავსეთ ORS-ით. ძუძუთი კვება მთელი ეპიზოდის განმავლობაში გააგრძელეთ; ასაკის შესაბამისი ჩვეული დიეტა განაახლეთ რეჰიდრატაციის დროს ან დაუყოვნებლივ მის შემდეგ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Reduced osmolarity ORS first-line for mild-moderate dehydration in all ages; NG ORS for moderate dehydration if unable to drink; isotonic IV (lactated Ringer's, normal saline) for severe dehydration, shock, altered mental status, ORS failure or ileus; continue IV until pulse, perfusion, mental status normalize, then ORS; continue human milk feeding; resume age-appropriate diet during or immediately after rehydration (current edition)"
+   },
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "Treat with ORS; IV fluids in severe dehydration or shock; continue nutrient-rich foods including breast milk during episodes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-011",
+  "cluster": "DIAR",
+  "topics": [
+   10,
+   36
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მწვავე დიარეა – დამხმარე მკურნალობა (ანტიმოტორული, ანტიემეტიკური, თუთია, პრობიოტიკი)",
+  "recommendation_ka": "ანტიმოტორული საშუალებები (მაგ., ლოპერამიდი) არ მისცეთ 18 წლამდე ასაკის პაციენტებს მწვავე დიარეისას (IDSA; CDC Yellow Book უშვებს ლოპერამიდს ბავშვებში მოგზაურის დიარეისას, თუმცა 6 წლამდე იშვიათად გამოიყენება – წყაროები განსხვავდება). იმუნოკომპეტენტურ მოზრდილებში წყლიანი დიარეისას ლოპერამიდი დასაშვებია, მაგრამ ნებისმიერ ასაკში თავიდან აიცილეთ ანთებითი ან ცხელებიანი დიარეისას (ტოქსიკური მეგაკოლონის რისკი). ონდანსეტრონი შეიძლება მიეცეს 4 წელზე უფროს ბავშვებს და მოზარდებს ღებინებისას, ORS-ის ტოლერანტობის გასაუმჯობესებლად. პერორალური თუთია ამცირებს დიარეის ხანგრძლივობას 6 თვიდან 5 წლამდე ბავშვებში თუთიის დეფიციტის მაღალი გავრცელების ქვეყნებში ან მალნუტრიციისას. პრობიოტიკები შეიძლება შესთავაზოთ იმუნოკომპეტენტურ პაციენტებს სიმპტომების შესამსუბუქებლად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 18,
+    "unit": "age_years",
+    "meaning_ka": "ანტიმოტორული საშუალებების ასაკობრივი ზღვარი (IDSA)"
+   },
+   {
+    "value": 6,
+    "unit": "age_years",
+    "meaning_ka": "CDC – ლოპერამიდი იშვიათად 6 წლამდე; ასევე 6 თვე – თუთიის ქვედა ასაკი"
+   },
+   {
+    "value": 4,
+    "unit": "age_years",
+    "meaning_ka": "ონდანსეტრონის ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "თუთიის ზედა ასაკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Antimotility drugs should not be given to children <18 years with acute diarrhea; loperamide may be given to immunocompetent adults with acute watery diarrhea but avoided with inflammatory or febrile diarrhea (toxic megacolon); ondansetron may be given to children >4 years and adolescents with vomiting; oral zinc reduces duration in children 6 months to 5 years in zinc-deficient settings or malnutrition; probiotics may be offered to immunocompetent adults and children (current edition)"
+   },
+   {
+    "org": "CDC",
+    "title": "CDC Yellow Book 2026 — Travelers' Diarrhea",
+    "year": 2025,
+    "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/travelers-diarrhea.html",
+    "type": "guideline",
+    "supports": "Loperamide can be used in children with liquid formulations, but rarely given to children aged <6 years; not alone for bloody or febrile diarrhea."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-012",
+  "cluster": "DIAR",
+  "topics": [
+   36
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვთა მწვავე დიარეა – განმარტება, ტიპები და ტვირთი",
+  "recommendation_ka": "დიარეა არის დღეში 3 ან მეტი თხიერი/წყლიანი განავალი (ან ინდივიდუალურ ნორმაზე ხშირი); ფორმიანი განავლის გახშირება ან ძუძუთი კვებაზე მყოფი ჩვილის ფაფისებრი განავალი დიარეა არ არის. კლინიკური ტიპები: მწვავე წყლიანი (საათები–დღეები, მათ შორის ქოლერა), მწვავე სისხლიანი (დიზენტერია) და პერსისტენტული (14 დღე ან მეტი). დიარეა 1–59 თვის ბავშვებში სიკვდილის მესამე წამყვანი მიზეზია (ყოველწლიურად 5 წლამდე დაახლოებით 443 ათასი სიკვდილი) და მალნუტრიციის მთავარი მიზეზია; ყველაზე მაღალი რისკის ქვეშ არიან მალნუტრიციის, დაქვეითებული იმუნიტეტის მქონე და აივ-ინფიცირებული ბავშვები. სიკვდილის მიზეზად დეჰიდრატაციის გარდა სულ უფრო მეტად ფიგურირებს სეპტიური ბაქტერიული ინფექცია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "განავლის რაოდენობა დღეში – განმარტება"
+   },
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "პერსისტენტული დიარეის ზღვარი"
+   },
+   {
+    "value": 1,
+    "unit": "age_months",
+    "meaning_ka": "ასაკობრივი დიაპაზონი – ქვედა"
+   },
+   {
+    "value": 59,
+    "unit": "age_months",
+    "meaning_ka": "ასაკობრივი დიაპაზონი – ზედა"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "5 წლამდე ასაკი"
+   },
+   {
+    "value": 443,
+    "unit": "label",
+    "meaning_ka": "წლიური სიკვდილი 5 წლამდე (ათასი)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "Diarrhoea: ≥3 loose/liquid stools per day; frequent formed stools or pasty stools of breastfed babies are not diarrhoea; types acute watery, acute bloody (dysentery), persistent (≥14 days); third leading cause of death in children 1–59 months; ~443 832 deaths under 5 yearly; leading cause of malnutrition; malnourished, immunocompromised and HIV at most risk; septic bacterial infections increasing share of deaths."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-013",
+  "cluster": "DIAR",
+  "topics": [
+   36,
+   5
+  ],
+  "rule_type": "epidemiology",
+  "population": "child",
+  "condition_ka": "ბავშვთა მწვავე დიარეის გამომწვევები და ასაკობრივი განაწილება",
+  "recommendation_ka": "5 წლამდე ასაკში ყველაზე ხშირი ვირუსული გამომწვევებია როტავირუსი, ნოროვირუსი, ადენოვირუსი და ასტროვირუსი; ბაქტერიული – E. coli, Salmonella, Shigella, Campylobacter; პარაზიტული – Cryptosporidium, Giardia, Entamoeba (უფრო ხშირად 3–5 წლის ასაკში). ასაკობრივი მინიშნებები: როტავირუსი – 6–18 თვე; არატიფური Salmonella – ჩვილები დაბადებიდან 3 თვემდე; Shigella – 1–7 წელი. გადაცემა ხდება ფეკალურ-ორალური გზით – დაბინძურებული წყლით, საკვებით ან ადამიანიდან ადამიანზე ჰიგიენის დარღვევისას; ბაგა-ბაღში რისკია როტავირუსის, Cryptosporidium-ის, Giardia-ს, Shigella-სა და STEC-ის გავრცელება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "5 წლამდე ასაკი; ასევე პარაზიტების ზედა ასაკი"
+   },
+   {
+    "value": 3,
+    "unit": "age_years",
+    "meaning_ka": "პარაზიტული გამომწვევების ასაკი – ქვედა; ასევე 3 თვე – Salmonella"
+   },
+   {
+    "value": 6,
+    "unit": "age_months",
+    "meaning_ka": "როტავირუსის პიკური ასაკი – ქვედა"
+   },
+   {
+    "value": 18,
+    "unit": "age_months",
+    "meaning_ka": "როტავირუსის პიკური ასაკი – ზედა"
+   },
+   {
+    "value": 1,
+    "unit": "age_years",
+    "meaning_ka": "Shigella – ქვედა"
+   },
+   {
+    "value": 7,
+    "unit": "age_years",
+    "meaning_ka": "Shigella – ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "Among children <5 the most common viral pathogens are rotavirus, norovirus, adenovirus, astrovirus; bacterial E. coli, Salmonella, Shigella, Campylobacter; parasitic Cryptosporidium, Giardia, Entamoeba (prevalent at 3–5 years); spread through contaminated food/water or person-to-person."
+   },
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Age associations: rotavirus 6–18 months, nontyphoidal Salmonella birth–3 months, Shigella 1–7 years; child care: rotavirus, Cryptosporidium, Giardia, Shigella, STEC (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-014",
+  "cluster": "DIAR",
+  "topics": [
+   36
+  ],
+  "rule_type": "evaluation",
+  "population": "child",
+  "condition_ka": "ბავშვთა დიარეის პათოფიზიოლოგია – სითხისა და ელექტროლიტების დაკარგვა და დეჰიდრატაციის შეფასება",
+  "recommendation_ka": "დიარეის მთავარი საფრთხე დეჰიდრატაციაა: წყალი და ელექტროლიტები (ნატრიუმი, ქლორიდი, კალიუმი, ბიკარბონატი) იკარგება განავლით, ღებინებით, ოფლით, შარდითა და სუნთქვით და დეჰიდრატაცია ვითარდება, როცა დანაკარგი არ ნაზღაურდება; ყოველი ეპიზოდი მალნუტრიციას აღრმავებს, მალნუტრიცია კი დიარეისადმი მიდრეკილებას ზრდის. WHO შკალით: მძიმე დეჰიდრატაცია – სულ მცირე 2 ნიშანი (ლეთარგია/უგონობა, ჩაცვენილი თვალები, ვერ სვამს ან ცუდად სვამს, კანის ნაოჭი ძალიან ნელა სწორდება – ≥2 წამი); ზომიერი დეჰიდრატაცია – 2 ან მეტი ნიშანი (მოუსვენრობა/გაღიზიანებადობა, ჩაცვენილი თვალები, ხარბად სვამს); სხვა შემთხვევაში – დეჰიდრატაციის გარეშე.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "ნიშნების მინიმალური რაოდენობა; ასევე კანის ნაოჭი ≥2 წამი"
+   }
+  ],
+  "red_flags_ka": [
+   "ლეთარგია ან უგონობა",
+   "სმის უუნარობა",
+   "კანის ნაოჭი ≥2 წამი"
+  ],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "Water and electrolytes (sodium, chloride, potassium, bicarbonate) lost via stools, vomit, sweat, urine, breathing; dehydration when not replaced; severe dehydration ≥2 of lethargy/unconsciousness, sunken eyes, unable to drink/drinks poorly, skin pinch goes back very slowly (≥2 seconds); some dehydration ≥2 of restlessness/irritability, sunken eyes, drinks eagerly; vicious circle with malnutrition."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-015",
+  "cluster": "DIAR",
+  "topics": [
+   36
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ბავშვთა მწვავე დიარეა – ORS, თუთია და კვება (WHO)",
+  "recommendation_ka": "მკურნალობის საფუძველია ORS (სუფთა წყალი, მარილი, შაქარი), რომელიც წვრილ ნაწლავში შეიწოვება და აღადგენს დაკარგულ წყალსა და ელექტროლიტებს; მძიმე დეჰიდრატაციის ან შოკისას – ინტრავენური სითხეები. დამატებით 10–14 დღიანი კურსით დისპერსიული თუთიის ტაბლეტები ამცირებს ეპიზოდის ხანგრძლივობას დაახლოებით 25%-ით და განავლის მოცულობას 30%-ით (IDSA აღნიშნავს სარგებელს 6 თვიდან 5 წლამდე ბავშვებში თუთიის დეფიციტის მაღალი გავრცელების ან მალნუტრიციის პირობებში). გააგრძელეთ ძუძუთი და ნუტრიენტებით მდიდარი კვება. მიმართეთ ექიმს პერსისტენტული დიარეის, განავალში სისხლის ან დეჰიდრატაციის ნიშნების დროს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 10,
+    "unit": "day",
+    "meaning_ka": "თუთიის კურსი – ქვედა"
+   },
+   {
+    "value": 14,
+    "unit": "day",
+    "meaning_ka": "თუთიის კურსი – ზედა"
+   },
+   {
+    "value": 25,
+    "unit": "%",
+    "meaning_ka": "ხანგრძლივობის შემცირება"
+   },
+   {
+    "value": 30,
+    "unit": "%",
+    "meaning_ka": "განავლის მოცულობის შემცირება"
+   },
+   {
+    "value": 6,
+    "unit": "age_months",
+    "meaning_ka": "თუთიის ასაკი – ქვედა (IDSA)"
+   },
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "თუთიის ასაკი – ზედა (IDSA)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "ORS absorbed in small intestine replaces water and electrolytes; IV fluids for severe dehydration or shock; 10–14 day course of dispersible zinc shortens duration; zinc reduces duration by 25% and stool volume by 30%; continue nutrient-rich foods incl. breast milk; consult for persistent diarrhoea, blood in stool, dehydration."
+   },
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Oral zinc reduces duration in children 6 months to 5 years in zinc-deficient settings or with malnutrition (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-016",
+  "cluster": "DIAR",
+  "topics": [
+   36,
+   5
+  ],
+  "rule_type": "prevention",
+  "population": "child",
+  "condition_ka": "ბავშვთა დიარეის პრევენცია",
+  "recommendation_ka": "ძირითადი ზომები: უსაფრთხო სასმელი წყალი, გაუმჯობესებული სანიტარია, ხელების დაბანა საპნით (ტუალეტის, საფენის გამოცვლის შემდეგ, საკვების მომზადებამდე და შემდეგ, ჭამამდე, ცხოველებთან კონტაქტის შემდეგ), ექსკლუზიური ძუძუთი კვება სიცოცხლის პირველი 6 თვის განმავლობაში, პირადი და საკვების ჰიგიენა და როტავირუსის საწინააღმდეგო ვაქცინაცია. დიარეით დაავადებული ბავშვები და ბაგა-ბაღის, კვების ან ჯანდაცვის მუშაკები იმოქმედონ იურისდიქციის ინფექციის კონტროლის წესების შესაბამისად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 6,
+    "unit": "age_months",
+    "meaning_ka": "ექსკლუზიური ძუძუთი კვების ხანგრძლივობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "WHO",
+    "title": "Diarrhoeal disease — fact sheet",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+    "type": "fact_sheet",
+    "supports": "Key prevention: safe drinking-water, improved sanitation, hand washing with soap, exclusive breastfeeding for first 6 months, personal and food hygiene, health education, rotavirus vaccination."
+   },
+   {
+    "org": "IDSA",
+    "title": "2017 IDSA Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea (Shane et al., Clin Infect Dis 2017;65:e45–e80)",
+    "year": 2017,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+    "type": "guideline",
+    "supports": "Hand hygiene after toilet, diaper changes, before/after preparing food, before eating, after animal contact; people with diarrhea in child care, food service, patient care follow jurisdictional infection control (current edition)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-017",
+  "cluster": "DIAR",
+  "topics": [
+   107
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "ქრონიკული დიარეა მოზრდილში – ორგანული დაავადების ნიშნები და მიმართვა",
+  "recommendation_ka": "ორგანულ (და არა ფუნქციურ) მიზეზზე მიუთითებს: დიარეის ხანგრძლივობა 3 თვეზე ნაკლები, ძირითადად ღამის ან უწყვეტი (და არა წყვეტილი) დიარეა და მნიშვნელოვანი წონის კლება. გამაფრთხილებელი ნიშნები – აუხსნელი ცვლილება ნაწლავის მოქმედებაში, მუდმივი სისხლი განავალში, უნებლიე წონის კლება – საჭიროებს მიმართვას შემდგომი გამოკვლევისთვის. ფუნქციური კრიტერიუმები (რომი IV) მარტო ვერ გამორიცხავს ანთებით ნაწლავის დაავადებას, მიკროსკოპულ კოლიტს ან ნაღვლის მჟავების დიარეას. სტეატორეა (მოცულობითი, ცუდი სუნის, ღია ფერის განავალი) მალაბსორბციაზე მიუთითებს; სისხლი ან ლორწო – კოლონურ/ანთებით პროცესზე. ხანდაზმულებში გაითვალისწინეთ ფეკალური გაჭედვა გადინებითი დიარეით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ორგანული მიზეზის მიმანიშნებელი ხანგრძლივობა"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "რომი IV"
+   }
+  ],
+  "red_flags_ka": [
+   "მუდმივი რექტალური სისხლდენა",
+   "უნებლიე წონის კლება",
+   "ღამის დიარეა",
+   "ცვლილება ნაწლავის მოქმედებაში"
+  ],
+  "sources": [
+   {
+    "org": "BSG",
+    "title": "Guidelines for the investigation of chronic diarrhoea in adults: British Society of Gastroenterology, 3rd edition (Arasaradnam et al., Gut 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6204957/",
+    "type": "guideline",
+    "supports": "Organic disease suggested by diarrhoea <3 months, predominantly nocturnal or continuous diarrhoea, significant weight loss; alarm features (unexplained change in bowel habit, persistent blood, unintentional weight loss) prompt referral; Rome IV criteria do not reliably exclude IBD, microscopic colitis, bile acid diarrhoea; steatorrhoea suggests malabsorption; consider faecal impaction with overflow in elderly."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-018",
+  "cluster": "DIAR",
+  "topics": [
+   107
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული დიარეა – საწყისი გამოკვლევა პირველად რგოლში",
+  "recommendation_ka": "ჩაატარეთ დეტალური ანამნეზი და სკრინინგი: სისხლის საერთო ანალიზი, ფერიტინი, ცელიაკიის სეროლოგია (ქსოვილის ტრანსგლუტამინაზა ან ენდომიზიუმის ანტისხეულები; IgA დეფიციტისას – IgG EMA ან IgG tTG), ფარისებრი ჯირკვლის ფუნქცია, ასევე განავლის ანთების მარკერი (ფეკალური კალპროტექტინი). ინფექციის ეჭვისას (განსაკუთრებით იმუნოკომპრომისის ან ხანდაზმულ ასაკში) – განავლის კვლევა, მათ შორის C. difficile კომბინირებული ტესტით (გლუტამატდეჰიდროგენაზა ან PCR და ტოქსინის EIA). ნორმალური საწყისი კვლევებისას, ფუნქციური დარღვევის ტიპური სიმპტომებითა და ნორმალური გასინჯვით შესაძლებელია გაღიზიანებული ნაწლავის სინდრომის პოზიტიური დიაგნოზი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "BSG",
+    "title": "Guidelines for the investigation of chronic diarrhoea in adults: British Society of Gastroenterology, 3rd edition (Arasaradnam et al., Gut 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6204957/",
+    "type": "guideline",
+    "supports": "Initial screening: FBC, ferritin, tTG/EMA, TFT plus faecal calprotectin in primary care; if IgA deficient, IgG EMA or IgG TTG; combination C. difficile testing (GDH EIA or PCR plus toxin EIA); stool tests for infection especially in immunocompromised or elderly; positive IBS diagnosis after normal basic blood and stool screening."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-019",
+  "cluster": "DIAR",
+  "topics": [
+   107
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული დიარეა – კალპროტექტინი, FIT და ენდოსკოპია",
+  "recommendation_ka": "40 წლამდე პაციენტებში, როცა ანთება საეჭვოა და კიბო – არა, გამოიყენეთ ფეკალური კალპროტექტინი: ზღვარი 50 მკგ/გ (ტესტზე დამოკიდებული) განასხვავებს ფუნქციურ დარღვევას ორგანული/ანთებითი დაავადებისგან. კოლორექტული კიბოს ეჭვისას რექტალური სისხლდენის გარეშე შეიძლება ფეკალური იმუნოქიმიური ტესტი (FIT; ოპტიმალური ზღვარი 7–10 მკგ/გ) გამოკვლევის საჭიროების/სიჩქარის განსასაზღვრად. ცვლილება ნაწლავის მოქმედებაში ± რექტალური სისხლდენით – კოლორექტული კიბო გამორიცხეთ კოლონოსკოპიით. ქრონიკული დიარეისას არჩევის კვლევაა კოლონოსკოპია ილეოსკოპიითა და ბიოფსიით (მარჯვენა და მარცხენა კოლინჯიდან, არა რექტუმიდან – მიკროსკოპული კოლიტის გამოსარიცხად); 40 წლამდე ნორმალური კალპროტექტინითა და ფუნქციური დარღვევის ეჭვით საკმარისია მოქნილი სიგმოიდოსკოპია ბიოფსიით.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 40,
+    "unit": "age_years",
+    "meaning_ka": "ასაკობრივი ზღვარი"
+   },
+   {
+    "value": 50,
+    "unit": "label",
+    "meaning_ka": "კალპროტექტინის ზღვარი, მკგ/გ"
+   },
+   {
+    "value": 7,
+    "unit": "label",
+    "meaning_ka": "FIT ზღვარი – ქვედა, მკგ/გ"
+   },
+   {
+    "value": 10,
+    "unit": "label",
+    "meaning_ka": "FIT ზღვარი – ზედა, მკგ/გ"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "BSG",
+    "title": "Guidelines for the investigation of chronic diarrhoea in adults: British Society of Gastroenterology, 3rd edition (Arasaradnam et al., Gut 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6204957/",
+    "type": "guideline",
+    "supports": "Faecal calprotectin in patients <40 years with suspected inflammation, cut-off 50 µg/g (assay dependent); FIT as rule-out test in lower GI symptoms without rectal bleeding, optimal cut-off 7–10 µg/g; colonoscopy for altered bowel habit ± bleeding; colonoscopy with ileoscopy and biopsy preferred; right and left colon (not rectal) biopsies for microscopic colitis; flexible sigmoidoscopy with biopsy in <40 with normal calprotectin and suspected functional disease."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-DIAR-020",
+  "cluster": "DIAR",
+  "topics": [
+   107
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ქრონიკული დიარეა – ნაღვლის მჟავების დიარეა და მალაბსორბცია",
+  "recommendation_ka": "ფუნქციური დიარეის ან დიარეული ტიპის გაღიზიანებული ნაწლავის სინდრომის ეჭვისას გამორიცხეთ ნაღვლის მჟავების დიარეა: 75SeHCAT ტესტით ან უზმოზე შრატის C4-ით („გამოიკვლიე და უმკურნალე“ მიდგომა ემპირიული თერაპიის ნაცვლად); SeHCAT <15%-ის ან მომატებული C4-ის დროს სცადეთ ნაღვლის მჟავების სეკვესტრანტი. ცხიმის მალაბსორბციის ეჭვისას – ფეკალური ელასტაზა (პანკრეასის ფუნქციის უპირატესი არაინვაზიური ტესტი). ლაქტოზის მალდიგესტიის ეჭვისას – წყალბადის სასუნთქი ტესტი ან ლაქტოზის დიეტიდან ამოღება. წვრილი ნაწლავის ბაქტერიული ჭარბზრდის მაღალი ალბათობისას – ანტიბიოტიკის ემპირიული კურსი. წვრილი ნაწლავის ანთების დიაგნოსტიკისთვის უპირატესია MR-ენტეროგრაფია ან ვიდეოკაფსულური ენდოსკოპია (და არა კტ). ჰორმონმაპროდუცირებელ სიმსივნეებზე ტესტირება – მხოლოდ სხვა მიზეზების გამორიცხვის შემდეგ; ფაქტიციური დიარეის ეჭვისას – საფაღარათო საშუალებებზე სკრინინგი.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 75,
+    "unit": "label",
+    "meaning_ka": "75SeHCAT იზოტოპი"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "C4 (7α-ჰიდროქსი-4-ქოლესტენ-3-ონი)"
+   },
+   {
+    "value": 15,
+    "unit": "%",
+    "meaning_ka": "SeHCAT-ის მკურნალობის ზღვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "BSG",
+    "title": "Guidelines for the investigation of chronic diarrhoea in adults: British Society of Gastroenterology, 3rd edition (Arasaradnam et al., Gut 2018)",
+    "year": 2018,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6204957/",
+    "type": "guideline",
+    "supports": "If functional/IBS-D suspected exclude bile acid diarrhoea with 75SeHCAT or fasting serum C4 (test and treat); try bile acid sequestrants if SeHCAT <15% or raised C4; faecal elastase for fat malabsorption; hydrogen breath test or lactose withdrawal; empirical antibiotics for suspected SBBO; MR enterography or VCE rather than CT for small bowel inflammation; hormone-secreting tumour tests only after other causes; stool screen for laxatives if factitious."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

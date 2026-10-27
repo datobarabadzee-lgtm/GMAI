@@ -1,0 +1,540 @@
+[
+ {
+  "rule_id": "PUB-SCD-001",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "prevention",
+  "population": "child",
+  "condition_ka": "ნამგლისებრუჯრედოვანი ანემიით (HbSS) ბავშვი, დაბადებიდან",
+  "recommendation_ka": "დაიწყეთ პროფილაქტიკური პერორალური „პენიცილინი V“ დაბადებიდან (დიაგნოზისთანავე) მინიმუმ 5 წლის ასაკამდე: 3 წლამდე — 125 მგ დღეში ორჯერ, 3 წლიდან — 250 მგ დღეში ორჯერ. პარალელურად უზრუნველყავით სრული ვაქცინაცია, მათ შორის პნევმოკოკური და მენინგოკოკური ვაქცინები. მშობლებს აუხსენით, რომ პროფილაქტიკის ფონზეც ცხელება გადაუდებელი მდგომარეობაა.",
+  "doses": [
+   {
+    "drug": "penicillin V",
+    "amount": 125,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   },
+   {
+    "drug": "penicillin V",
+    "amount": 250,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "twice daily",
+    "population": "child",
+    "max_amount": null,
+    "max_unit": null
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "age_years",
+    "meaning_ka": "პროფილაქტიკის მინიმალური ხანგრძლივობა — ასაკი"
+   },
+   {
+    "value": 3,
+    "unit": "age_years",
+    "meaning_ka": "დოზის ცვლილების ასაკი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Sickle Cell Disease: Recommendations from the 2014 Expert Panel Report (Am Fam Physician 2015;92:1069-1076)",
+    "year": 2015,
+    "url": "https://www.aafp.org/pubs/afp/issues/2015/1215/p1069.html",
+    "type": "guideline_summary",
+    "supports": "Children with sickle cell anemia should receive prophylactic oral penicillin from birth through at least five years of age: 125 mg twice daily under age 3 and 250 mg twice daily from age 3. (Summary of the NHLBI 2014 Expert Panel Report, which remains the current edition.)"
+   },
+   {
+    "org": "NHLBI Expert Panel (JAMA)",
+    "title": "Management of sickle cell disease: summary of the 2014 evidence-based report by expert panel members",
+    "year": 2014,
+    "url": "https://jamanetwork.com/journals/jama/fullarticle/1902235",
+    "type": "guideline",
+    "supports": "Strong recommendation for twice-daily oral penicillin prophylaxis until age 5 in children with HbSS. (current edition of the NHLBI report.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-002",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ნამგლისებრუჯრედოვანი დაავადება, ტემპერატურა ≥38.5 °C",
+  "recommendation_ka": "ცხელება ფუნქციური ასპლენიის გამო ინვაზიური ბაქტერიული ინფექციის (პნევმოკოკური სეფსისი) მაღალ რისკზე მიუთითებს: გადაუდებლად შეაფასეთ ექიმმა, ჩაატარეთ სისხლის საერთო ანალიზი რეტიკულოციტებით და სისხლის კულტურა და შეყვანეთ პარენტერალური ანტიბიოტიკი („ცეფტრიაქსონი“) იდეალურად 1 საათში. ამბულატორიული მართვა დასაშვებია მხოლოდ დაბალი რისკის კრიტერიუმების სრულად შესრულებისას; სხვა შემთხვევაში — ჰოსპიტალიზაცია. ცხელების ზღვარი დაწესებულებებს შორის ოდნავ განსხვავდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 38.5,
+    "unit": "°C",
+    "meaning_ka": "ცხელების ზღვარი"
+   },
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "ანტიბიოტიკის შეყვანის მიზნობრივი დრო"
+   }
+  ],
+  "red_flags_ka": [
+   "ცხელება ≥38.5 °C",
+   "ჰიპოტენზია ან ტაქიკარდია",
+   "ცნობიერების ცვლილება",
+   "ჰემოგლობინის მკვეთრი ვარდნა",
+   "ელენთის მწვავე გადიდება"
+  ],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Sickle Cell Disease: Recommendations from the 2014 Expert Panel Report (Am Fam Physician 2015;92:1069-1076)",
+    "year": 2015,
+    "url": "https://www.aafp.org/pubs/afp/issues/2015/1215/p1069.html",
+    "type": "guideline_summary",
+    "supports": "NHLBI recommends urgent evaluation, CBC with reticulocytes, blood culture and parenteral antibiotics for temperature >=38.5 C (101.3 F) in people with SCD. (Summary of the NHLBI 2014 Expert Panel Report, which remains the current edition.)"
+   },
+   {
+    "org": "UC Davis Children's Hospital",
+    "title": "Fever in sickle cell disease - clinical guideline",
+    "year": 2025,
+    "url": "https://health.ucdavis.edu/media-resources/pediatrics/documents/pdfs/clinical-guidelines/ID-Fever-Sickle-Cell-Guideline-2025.pdf",
+    "type": "guideline",
+    "supports": "Defines fever as >=38.5 C; urgent CBC, reticulocytes, blood culture and parenteral ceftriaxone; outpatient management only if low-risk criteria met; references NHLBI 2014."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-003",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "treatment",
+  "population": "child",
+  "condition_ka": "ნამგლისებრუჯრედოვანი ანემია (HbSS ან HbSβ0-თალასემია), ჩვილი და ბავშვი",
+  "recommendation_ka": "„ჰიდროქსიურეა“ შესთავაზეთ 9 თვის ასაკიდან, კლინიკური სიმძიმის მიუხედავად, ვაზოოკლუზიური გართულებების შესამცირებლად: 9–42 თვის ასაკში ეს ძლიერი რეკომენდაციაა, 42 თვეზე უფროსებში — ზომიერი. მკურნალობა დაიწყეთ ჰემატოლოგთან ერთად და განუმარტეთ მშობლებს მონიტორინგის აუცილებლობა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 9,
+    "unit": "age_months",
+    "meaning_ka": "ჰიდროქსიურეას დაწყების მინიმალური ასაკი"
+   },
+   {
+    "value": 42,
+    "unit": "age_months",
+    "meaning_ka": "ძლიერი რეკომენდაციის ზედა ზღვარი"
+   },
+   {
+    "value": 0,
+    "unit": "label",
+    "meaning_ka": "HbSβ0-თალასემია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Sickle Cell Disease: Recommendations from the 2014 Expert Panel Report (Am Fam Physician 2015;92:1069-1076)",
+    "year": 2015,
+    "url": "https://www.aafp.org/pubs/afp/issues/2015/1215/p1069.html",
+    "type": "guideline_summary",
+    "supports": "Hydroxyurea should be offered to infants and children with sickle cell anemia beginning at 9 months of age regardless of clinical severity. (Summary of the NHLBI 2014 Expert Panel Report, which remains the current edition.)"
+   },
+   {
+    "org": "NHLBI Expert Panel (JAMA)",
+    "title": "Management of sickle cell disease: summary of the 2014 evidence-based report by expert panel members",
+    "year": 2014,
+    "url": "https://jamanetwork.com/journals/jama/fullarticle/1902235",
+    "type": "guideline",
+    "supports": "Strong recommendation for hydroxyurea in infants/children aged 9-42 months and moderate recommendation for those older than 42 months, regardless of clinical severity. (current edition of the NHLBI report.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-004",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "მოზრდილი ნამგლისებრუჯრედოვანი ანემიით, ხშირი ვაზოოკლუზიური კრიზებით ან სხვა მძიმე გართულებებით",
+  "recommendation_ka": "„ჰიდროქსიურეა“ ძლიერად არის რეკომენდებული მოზრდილებში, რომლებსაც 12 თვის განმავლობაში 3 ან მეტი ზომიერი/მძიმე ვაზოოკლუზიური ტკივილის კრიზი აქვთ, ასევე მწვავე გულმკერდის სინდრომის განმეორებისას ან მძიმე სიმპტომური ანემიისას. ორსულობის დაგეგმვისას მკურნალობა განიხილეთ ჰემატოლოგთან.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "month",
+    "meaning_ka": "შეფასების პერიოდი"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "კრიზების მინიმალური რაოდენობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "AAFP",
+    "title": "Management of Sickle Cell Disease: Recommendations from the 2014 Expert Panel Report (Am Fam Physician 2015;92:1069-1076)",
+    "year": 2015,
+    "url": "https://www.aafp.org/pubs/afp/issues/2015/1215/p1069.html",
+    "type": "guideline_summary",
+    "supports": "Hydroxyurea is strongly recommended for adults with sickle cell anemia who have three or more moderate to severe pain crises in a 12-month period, recurrent acute chest syndrome, or severe symptomatic anemia. (Summary of the NHLBI 2014 Expert Panel Report, which remains the current edition.)"
+   },
+   {
+    "org": "NHLBI Expert Panel (JAMA)",
+    "title": "Management of sickle cell disease: summary of the 2014 evidence-based report by expert panel members",
+    "year": 2014,
+    "url": "https://jamanetwork.com/journals/jama/fullarticle/1902235",
+    "type": "guideline",
+    "supports": "Strong recommendation for hydroxyurea in adults with >=3 moderate-to-severe pain crises in 12 months. (current edition of the NHLBI report.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-005",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "dosing",
+  "population": "all",
+  "condition_ka": "ჰიდროქსიურეას დაწყება და დოზის ტიტრაცია ნამგლისებრუჯრედოვანი დაავადებისას",
+  "recommendation_ka": "საწყისი დოზა: ბავშვებში 20 მგ/კგ/დღეში, მოზრდილებში 15 მგ/კგ/დღეში, ერთჯერადად. დოზა გაზარდეთ 5 მგ/კგ/დღეში ყოველ 8 კვირაში (კაფსულის ზოგი ფორმისთვის — ყოველ 12 კვირაში) მხოლოდ მისაღები სისხლის მაჩვენებლებისას, მაქსიმალურად ტოლერანტულ დოზამდე, არაუმეტეს 35 მგ/კგ/დღეში. მიზანია მსუბუქი მიელოსუპრესია: ნეიტროფილები 2000–4000 უჯრედი/მკლ. ტიტრაციისას სისხლის საერთო ანალიზი ფორმულით და რეტიკულოციტებით ჩაატარეთ მინიმუმ ყოველ 4 კვირაში. კრეატინინის კლირენსი <60 მლ/წთ-ისას დოზა შეამცირეთ 50%-ით. ორსულობისას არ გამოიყენოთ.",
+  "doses": [
+   {
+    "drug": "hydroxyurea",
+    "amount": 20,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "child",
+    "max_amount": 35,
+    "max_unit": "mg/kg/day"
+   },
+   {
+    "drug": "hydroxyurea",
+    "amount": 15,
+    "unit": "mg/kg/day",
+    "route": "PO",
+    "frequency": "once daily",
+    "population": "adult",
+    "max_amount": 35,
+    "max_unit": "mg/kg/day"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "mg/kg/day",
+    "meaning_ka": "დოზის ზრდის ნაბიჯი"
+   },
+   {
+    "value": 8,
+    "unit": "week",
+    "meaning_ka": "ტიტრაციის ინტერვალი"
+   },
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "ტიტრაციის ინტერვალი ზოგი კაფსულისთვის"
+   },
+   {
+    "value": 2000,
+    "unit": "cells/µL",
+    "meaning_ka": "ნეიტროფილების მიზნობრივი ქვედა ზღვარი"
+   },
+   {
+    "value": 4000,
+    "unit": "cells/µL",
+    "meaning_ka": "ნეიტროფილების მიზნობრივი ზედა ზღვარი"
+   },
+   {
+    "value": 4,
+    "unit": "week",
+    "meaning_ka": "სისხლის ანალიზის სიხშირე ტიტრაციისას"
+   },
+   {
+    "value": 60,
+    "unit": "mL/min",
+    "meaning_ka": "კრეატინინის კლირენსის ზღვარი"
+   },
+   {
+    "value": 50,
+    "unit": "%",
+    "meaning_ka": "დოზის შემცირება თირკმლის უკმარისობისას"
+   }
+  ],
+  "red_flags_ka": [
+   "ნეიტროფილები ან თრომბოციტები ტოქსიკურ დონეზე",
+   "ორსულობა"
+  ],
+  "sources": [
+   {
+    "org": "American Society of Hematology",
+    "title": "Hydroxyurea for sickle cell disease - clinician pocket guide (based on NHLBI 2014 report)",
+    "year": 2014,
+    "url": "https://www.hematology.org/-/media/hematology/files/education/clinicians/guidelines-quality/documents/sickle-cell-hydroxyurea.pdf",
+    "type": "guideline",
+    "supports": "Monitor CBC with WBC differential and reticulocyte count at least every 4 weeks when adjusting dosage; target absolute neutrophil count >=2,000/uL (lower values tolerated in some young children); escalate to maximum tolerated dose. (current edition.)"
+   },
+   {
+    "org": "FDA (Siklos label via Drugs.com dosing summary)",
+    "title": "Hydroxyurea dosage - sickle cell anemia (Siklos/Droxia labeling)",
+    "year": 2025,
+    "url": "https://www.drugs.com/dosage/hydroxyurea.html",
+    "type": "drug_label",
+    "supports": "Initial dose 15 mg/kg/day in adults and 20 mg/kg/day in children; increase by 5 mg/kg/day every 8 weeks (Siklos) or every 12 weeks (Droxia) if counts acceptable; target ANC 2,000-4,000/uL; maximum 35 mg/kg/day; reduce dose by 50% if CrCl <60 mL/min."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-006",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "ნამგლისებრუჯრედოვანი დაავადება, მწვავე ვაზოოკლუზიური ტკივილი გადაუდებელ განყოფილებაში",
+  "recommendation_ka": "ანალგეზია დაიწყეთ სწრაფად — იდეალურად მისვლიდან 1 საათში — და ტკივილი ხელახლა შეაფასეთ ყოველ 30–60 წუთში, დოზის კორექციით კონტროლის მიღწევამდე. ოპიოიდის დოზა ინდივიდუალურად შეარჩიეთ პაციენტის საბაზისო ოპიოიდური თერაპიისა და წინა ეფექტური მკურნალობის მიხედვით (სასურველია ინდივიდუალური მოვლის გეგმით). ტკივილის კრიზის ფონზე აკონტროლეთ მწვავე გულმკერდის სინდრომის ნიშნები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 1,
+    "unit": "h",
+    "meaning_ka": "ანალგეზიის მიზნობრივი დრო"
+   },
+   {
+    "value": 30,
+    "unit": "min",
+    "meaning_ka": "ხელახალი შეფასების ინტერვალი — ქვედა"
+   },
+   {
+    "value": 60,
+    "unit": "min",
+    "meaning_ka": "ხელახალი შეფასების ინტერვალი — ზედა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "American Society of Hematology",
+    "title": "ASH 2020 guidelines for sickle cell disease: management of acute and chronic pain (Blood Adv 2020)",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7322963/",
+    "type": "guideline",
+    "supports": "Strong recommendation for rapid assessment and analgesia, ideally within 1 hour of emergency department arrival, with reassessment every 30-60 minutes; tailored opioid dosing based on baseline opioid therapy and prior effective therapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-007",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ნამგლისებრუჯრედოვანი დაავადება, ცხელება და/ან რესპირაციული სიმპტომები (ხველა, ქოშინი, გულმკერდის ტკივილი, ჰიპოქსია)",
+  "recommendation_ka": "ეჭვი მიიტანეთ მწვავე გულმკერდის სინდრომზე და ჩაატარეთ გულმკერდის რენტგენოგრაფია: დიაგნოზისთვის საჭიროა ახალი ფილტვის ინფილტრატი ცხელებასთან და/ან რესპირაციულ სიმპტომებთან ერთად. სინდრომი ხშირად ვითარდება ტკივილის კრიზიდან 24–48 საათში და მოზრდილებში სიკვდილის წამყვანი მიზეზია; ჰიპოქსიისას მოზრდილებში განიხილეთ არტერიული სისხლის აირები.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "ტიპური დაწყება ტკივილის კრიზის შემდეგ — ქვედა"
+   },
+   {
+    "value": 48,
+    "unit": "h",
+    "meaning_ka": "ტიპური დაწყება ტკივილის კრიზის შემდეგ — ზედა"
+   }
+  ],
+  "red_flags_ka": [
+   "ჰიპოქსია",
+   "სუნთქვის სიხშირის მატება",
+   "ჰემოგლობინის ვარდნა",
+   "მრავალწილოვანი ინფილტრატი"
+  ],
+  "sources": [
+   {
+    "org": "British Society for Haematology",
+    "title": "Guidelines on the management of acute chest syndrome in sickle cell disease",
+    "year": 2015,
+    "url": "https://b-s-h.org.uk/guidelines/guidelines/management-of-acute-chest-syndrome-in-sickle-cell-disease",
+    "type": "guideline",
+    "supports": "ACS = acute illness with fever and/or respiratory symptoms plus a new pulmonary infiltrate on chest X-ray; management includes prompt analgesia, incentive spirometry, treatment of bacterial/viral infection, oxygen, ABG in hypoxic adults, and transfusion. Current edition of the BSH guideline."
+   },
+   {
+    "org": "NHS Scotland (SPAH network)",
+    "title": "Acute chest syndrome in sickle cell disease - adult guideline",
+    "year": 2023,
+    "url": "https://www.spah.scot.nhs.uk/wp-content/uploads/sites/5/2023/06/NSD610-017.03-SPAH-Acute-Chest-Syndrome-in-Sickle-Cell-Disease.pdf",
+    "type": "guideline",
+    "supports": "ACS often develops 24-48 hours after onset of an acute painful crisis and is the leading cause of mortality in adults with HbSS."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-008",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "მწვავე გულმკერდის სინდრომი ნამგლისებრუჯრედოვანი დაავადებისას",
+  "recommendation_ka": "ჰოსპიტალიზაცია; ჟანგბადი ჰიპოქსიისას, ადეკვატური ანალგეზია, სტიმულირებადი (ინსენტივური) სპირომეტრია, ემპირიული ანტიბიოტიკი, რომელიც ფარავს ტიპურ და ატიპურ გამომწვევებს (მაგ., მესამე თაობის ცეფალოსპორინი და მაკროლიდი), ვირუსული ინფექციის მკურნალობა. ტრანსფუზია ჩაატარეთ ჰემატოლოგთან ერთად — მძიმე ან პროგრესირებად შემთხვევაში უპირატესია გაცვლითი ტრანსფუზია; გაუარესებისას — რესპირაციული მხარდაჭერა ინტენსიურ თერაპიაში.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ჟანგბადზე დამოკიდებულების ზრდა",
+   "სუნთქვის უკმარისობა",
+   "ცნობიერების დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "British Society for Haematology",
+    "title": "Guidelines on the management of acute chest syndrome in sickle cell disease",
+    "year": 2015,
+    "url": "https://b-s-h.org.uk/guidelines/guidelines/management-of-acute-chest-syndrome-in-sickle-cell-disease",
+    "type": "guideline",
+    "supports": "ACS = acute illness with fever and/or respiratory symptoms plus a new pulmonary infiltrate on chest X-ray; management includes prompt analgesia, incentive spirometry, treatment of bacterial/viral infection, oxygen, ABG in hypoxic adults, and transfusion. Current edition of the BSH guideline."
+   },
+   {
+    "org": "NHS Scotland (SPAH network)",
+    "title": "Acute chest syndrome in sickle cell disease - adult guideline",
+    "year": 2023,
+    "url": "https://www.spah.scot.nhs.uk/wp-content/uploads/sites/5/2023/06/NSD610-017.03-SPAH-Acute-Chest-Syndrome-in-Sickle-Cell-Disease.pdf",
+    "type": "guideline",
+    "supports": "ACS often develops 24-48 hours after onset of an acute painful crisis and is the leading cause of mortality in adults with HbSS."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-009",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "prevention",
+  "population": "child",
+  "condition_ka": "ბავშვი HbSS ან HbSβ0-თალასემიით — ინსულტის პირველადი პრევენცია",
+  "recommendation_ka": "ჩაატარეთ ტრანსკრანიული დოპლეროგრაფიით რეგულარული სკრინინგი; პათოლოგიური შედეგისას დაიწყეთ რეგულარული ტრანსფუზიები. ტრანსფუზიის რამდენიმეწლიანი კურსის შემდეგ შერჩეულ პაციენტებში (მაგნიტურ-რეზონანსულ ანგიოგრაფიაზე ვასკულოპათიის გარეშე) შეიძლება გადასვლა ჰიდროქსიურეას მაქსიმალურ ტოლერანტულ დოზაზე. რესურსშეზღუდულ გარემოში რეკომენდებულია დოპლეროგრაფიული სკრინინგი და ჰიდროქსიურეა. ადრეულ სასკოლო ასაკში მინიმუმ ერთხელ (და მოზრდილობაში ერთხელ) ჩაატარეთ თავის ტვინის მაგნიტურ-რეზონანსული ტომოგრაფია სედაციის გარეშე ჩუმი ინფარქტების გამოსავლენად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 0,
+    "unit": "label",
+    "meaning_ka": "HbSβ0-თალასემია"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "American Society of Hematology",
+    "title": "ASH 2020 guidelines for sickle cell disease: prevention, diagnosis, and treatment of cerebrovascular disease in children and adults (Blood Adv 2020;4:1554-1588)",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7189278/",
+    "type": "guideline",
+    "supports": "Recommends TCD screening, regular transfusion for abnormal TCD, option to switch selected patients to hydroxyurea at maximum tolerated dose (TWiTCH non-inferiority); TCD screening plus hydroxyurea in low-middle-income settings; MRI without sedation at least once in early-school-age children and once in adults to detect silent cerebral infarcts."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-010",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "ნამგლისებრუჯრედოვანი დაავადება, ინსულტის მწვავე ნიშნები (კეროვანი დეფიციტი, მეტყველების დარღვევა, კრუნჩხვა, ცნობიერების დაქვეითება)",
+  "recommendation_ka": "დაუყოვნებლივ ჩაატარეთ ტრანსფუზია — გაცვლითი (აფერეზით) ან, თუ გაცვლითი დაყოვნდება, მარტივი ტრანსფუზია — ნეიროვიზუალიზაციასთან ერთად; ტრანსფუზია არ გადადოთ. შემდგომ მეორადი პრევენციისთვის საჭიროა რეგულარული ტრანსფუზიები და ჰემოპოეზური ღეროვანი უჯრედების ტრანსპლანტაციის განხილვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ახალი კეროვანი ნევროლოგიური დეფიციტი",
+   "ძლიერი თავის ტკივილი",
+   "კრუნჩხვა",
+   "ცნობიერების დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "American Society of Hematology",
+    "title": "ASH 2020 guidelines for sickle cell disease: prevention, diagnosis, and treatment of cerebrovascular disease in children and adults (Blood Adv 2020;4:1554-1588)",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7189278/",
+    "type": "guideline",
+    "supports": "For acute stroke, prompt transfusion is recommended (exchange transfusion preferred; simple transfusion if exchange delayed)."
+   },
+   {
+    "org": "American Society of Hematology",
+    "title": "ASH SCD guidelines: cerebrovascular disease - snapshot",
+    "year": 2020,
+    "url": "https://www.hematology.org/-/media/hematology/files/education/ash-scd-guidelines_cerebrovascular-snapshot.pdf",
+    "type": "guideline_summary",
+    "supports": "Children with stroke receive regular blood transfusion to reduce risk of new overt or silent stroke; acute stroke treated with prompt transfusion/apheresis."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-SCD-011",
+  "cluster": "SCD",
+  "topics": [
+   58
+  ],
+  "rule_type": "referral",
+  "population": "all",
+  "condition_ka": "ნამგლისებრუჯრედოვანი დაავადება გადატანილი ინსულტით ან პათოლოგიური ტრანსკრანიული დოპლეროგრაფიით",
+  "recommendation_ka": "მიმართეთ ტრანსპლანტაციის ცენტრში: HLA-თავსებადი მონათესავე დონორიდან ღეროვანი უჯრედების ტრანსპლანტაცია სტანდარტულ თერაპიასთან (ჰიდროქსიურეა/ტრანსფუზიები) შედარებით შემოთავაზებულია (პირობითი რეკომენდაცია, ძალიან დაბალი სარწმუნოობა). გადაწყვეტილება მიიღეთ ოჯახთან ერთად სარგებლისა და რისკის განხილვით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "American Society of Hematology",
+    "title": "ASH 2021 guidelines for sickle cell disease: stem cell transplantation - slide deck",
+    "year": 2022,
+    "url": "https://www.hematology.org/-/media/hematology/files/clinicians/guidelines/ash-slidedeck-scd-hct-01312022.pdf",
+    "type": "guideline_summary",
+    "supports": "HLA-matched related transplant is suggested over standard of care (hydroxyurea/transfusion) for SCD patients with overt stroke or abnormal TCD (conditional recommendation, very low certainty)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

@@ -1,0 +1,108 @@
+topic_order,topic_id,source_topic_id,title,domains,source_start_page,source_end_page,l2_objects,clinical_rules,validation_status
+1,UTD2022_0020,020,Approach to the adult with dyspepsia,gastroenterology,1,20,11,8,HUMAN_REVIEW_REQUIRED
+2,UTD2022_2636,2636,Management of chronic constipation in adults,gastroenterology,563,588,60,22,HUMAN_REVIEW_REQUIRED
+3,UTD2022_2637,2637,Etiology and evaluation of chronic constipation in adults,gastroenterology,589,615,60,50,HUMAN_REVIEW_REQUIRED
+4,UTD2022_2682,2682,Cholera: Microbiology and pathogenesis,gastroenterology,616,627,45,7,HUMAN_REVIEW_REQUIRED
+5,UTD2022_2689,2689,Causes of acute infectious diarrhea and other foodborne illnesses in resource-rich settings,gastroenterology|infectious_disease,628,657,47,26,HUMAN_REVIEW_REQUIRED
+6,UTD2022_2703,2703,Pathogenesis of enteric (typhoid and paratyphoid) fever,gastroenterology|infectious_disease,658,674,45,15,HUMAN_REVIEW_REQUIRED
+7,UTD2022_2704,2704,"Cholera: Clinical features, diagnosis, treatment, and prevention",gastroenterology,675,709,60,34,HUMAN_REVIEW_REQUIRED
+8,UTD2022_2708,2708,"Enteric (typhoid and paratyphoid) fever: Epidemiology, clinical manifestations, and diagnosis",gastroenterology|infectious_disease,710,733,60,26,HUMAN_REVIEW_REQUIRED
+9,UTD2022_2712,2712,Enteric (typhoid and paratyphoid) fever: Treatment and prevention,gastroenterology|infectious_disease,734,762,60,40,HUMAN_REVIEW_REQUIRED
+10,UTD2022_2717,2717,Approach to the adult with acute diarrhea in resource- rich settings,gastroenterology,763,797,60,47,HUMAN_REVIEW_REQUIRED
+11,UTD2022_2734,2734,Pathophysiology and treatment of fever in adults,infectious_disease,798,830,60,21,HUMAN_REVIEW_REQUIRED
+12,UTD2022_2736,2736,Approach to the adult with fever of unknown origin,infectious_disease,831,853,60,48,HUMAN_REVIEW_REQUIRED
+13,UTD2022_2737,2737,Etiologies of fever of unknown origin in adults,infectious_disease,854,872,45,15,HUMAN_REVIEW_REQUIRED
+14,UTD2022_2770,2770,Approach to the patient with unintentional weight loss,general_medicine,873,912,60,38,HUMAN_REVIEW_REQUIRED
+15,UTD2022_2824,2824,"Chemotherapy-associated diarrhea, constipation and intestinal perforation: pathogenesis, risk factors, and clinical presentation",gastroenterology|hematology_oncology,913,1003,60,57,HUMAN_REVIEW_REQUIRED
+16,UTD2022_2875,2875,Acute pharyngitis in children and adolescents: Symptomatic treatment,otolaryngology_allergy|pediatrics,1004,1024,60,39,HUMAN_REVIEW_REQUIRED
+17,UTD2022_3025,3025,Dengue virus infection: Clinical manifestations and diagnosis,infectious_disease,1025,1059,60,26,HUMAN_REVIEW_REQUIRED
+18,UTD2022_3028,3028,Dengue virus infection: Epidemiology,infectious_disease,1060,1078,50,8,HUMAN_REVIEW_REQUIRED
+19,UTD2022_3029,3029,Dengue virus infection: Pathogenesis,infectious_disease,1079,1104,50,5,HUMAN_REVIEW_REQUIRED
+20,UTD2022_3030,3030,Dengue virus infection: Prevention and treatment,infectious_disease,1105,1137,60,54,HUMAN_REVIEW_REQUIRED
+21,UTD2022_3140,3140,"Brucellosis: Epidemiology, microbiology, clinical manifestations, and diagnosis",infectious_disease,1138,1167,60,54,HUMAN_REVIEW_REQUIRED
+22,UTD2022_3325,3325,Primary cough headache,neurology,1168,1175,44,16,HUMAN_REVIEW_REQUIRED
+23,UTD2022_3349,3349,Evaluation of headache in adults,neurology,1176,1214,60,46,HUMAN_REVIEW_REQUIRED
+24,UTD2022_3362,3362,Primary headache associated with sexual activity,neurology,1215,1234,60,35,HUMAN_REVIEW_REQUIRED
+25,UTD2022_3363,3363,Exercise (exertional) headache,neurology,1235,1242,46,19,HUMAN_REVIEW_REQUIRED
+26,UTD2022_3576,3576,Approach to the patient with abnormal liver biochemical and function tests,gastroenterology,1243,1285,60,42,HUMAN_REVIEW_REQUIRED
+27,UTD2022_3615,3615,Classification and causes of jaundice or asymptomatic hyperbilirubinemia,gastroenterology,1286,1314,50,11,HUMAN_REVIEW_REQUIRED
+28,UTD2022_3620,3620,Diagnostic approach to the adult with jaundice or asymptomatic hyperbilirubinemia,gastroenterology,1315,1336,60,40,HUMAN_REVIEW_REQUIRED
+29,UTD2022_3724,3724,The natural history and clinical features of HIV infection in adults and adolescents,infectious_disease|pediatrics,1337,1382,60,20,HUMAN_REVIEW_REQUIRED
+30,UTD2022_4807,4807,Approach to acute abdominal/pelvic pain in pregnant and postpartum patients,gastroenterology|obstetrics,1383,1451,60,38,HUMAN_REVIEW_REQUIRED
+31,UTD2022_5498,5498,Pathogenesis of osteoarthritis,rheumatology,1452,1471,50,18,HUMAN_REVIEW_REQUIRED
+32,UTD2022_5605,5605,Overview of hemarthrosis,rheumatology,1472,1503,60,49,HUMAN_REVIEW_REQUIRED
+33,UTD2022_5614,5614,Viral arthritis: Approach to evaluation and management,rheumatology,1504,1530,60,45,HUMAN_REVIEW_REQUIRED
+34,UTD2022_5683,5683,Onchocerciasis,infectious_disease,1531,1577,60,39,HUMAN_REVIEW_REQUIRED
+35,UTD2022_5685,5685,Tapeworm infections,infectious_disease,1578,1626,49,29,HUMAN_REVIEW_REQUIRED
+36,UTD2022_5860,5860,Pathogenesis of acute diarrhea in children,gastroenterology|pediatrics,1627,1648,50,30,HUMAN_REVIEW_REQUIRED
+37,UTD2022_5953,5953,"Periodic fever with aphthous stomatitis, pharyngitis, and adenitis (PFAPA syndrome)",infectious_disease|otolaryngology_allergy,1649,1678,60,40,HUMAN_REVIEW_REQUIRED
+38,UTD2022_5978,5978,The common cold in children: Clinical features and diagnosis,otolaryngology_allergy|pediatrics,1679,1699,60,23,HUMAN_REVIEW_REQUIRED
+39,UTD2022_5989,5989,Fever in infants and children: Pathophysiology and management,infectious_disease|pediatrics,1700,1730,60,50,HUMAN_REVIEW_REQUIRED
+40,UTD2022_5996,5996,Fever of unknown origin in children: Etiology,infectious_disease|pediatrics,1731,1765,50,30,HUMAN_REVIEW_REQUIRED
+41,UTD2022_6000,6000,Bacterial meningitis in children: Neurologic complications,infectious_disease|pediatrics,1766,1783,60,23,HUMAN_REVIEW_REQUIRED
+42,UTD2022_6028,6028,"Viral meningitis in children: Management, prognosis, and prevention",infectious_disease|pediatrics,1784,1814,60,44,HUMAN_REVIEW_REQUIRED
+43,UTD2022_6063,6063,"Hematogenous osteomyelitis in children: Epidemiology, pathogenesis, and microbiology",infectious_disease|pediatrics,1815,1835,50,7,HUMAN_REVIEW_REQUIRED
+44,UTD2022_6064,6064,Hematogenous osteomyelitis in children: Clinical features and complications,infectious_disease|pediatrics,1836,1877,60,18,HUMAN_REVIEW_REQUIRED
+45,UTD2022_6067,6067,Hematogenous osteomyelitis in children: Evaluation and diagnosis,infectious_disease|pediatrics,1878,1923,60,52,HUMAN_REVIEW_REQUIRED
+46,UTD2022_6296,6296,Tonsillectomy and/or adenoidectomy in children: Indications and contraindications,otolaryngology_allergy|pediatrics,1924,1947,60,44,HUMAN_REVIEW_REQUIRED
+47,UTD2022_6347,6347,Mechanisms and predisposing factors for sleep-related breathing disorders in children,pediatrics|pulmonology,1948,1982,50,7,HUMAN_REVIEW_REQUIRED
+48,UTD2022_6434,6434,Emergency evaluation of the child with acute abdominal pain,gastroenterology|pediatrics,1983,2031,60,51,HUMAN_REVIEW_REQUIRED
+49,UTD2022_6457,6457,Evaluation of sore throat in children,otolaryngology_allergy|pediatrics,2032,2063,60,40,HUMAN_REVIEW_REQUIRED
+50,UTD2022_6514,6514,Approach to acute knee pain and injury in children and skeletally immature adolescents,orthopedics|pediatrics,2064,2128,60,54,HUMAN_REVIEW_REQUIRED
+51,UTD2022_6844,6844,Etiology of hearing loss in adults,otolaryngology_allergy,2129,2167,50,25,HUMAN_REVIEW_REQUIRED
+52,UTD2022_6850,6850,Evaluation of hearing loss in adults,otolaryngology_allergy,2168,2183,50,30,HUMAN_REVIEW_REQUIRED
+53,UTD2022_6860,6860,Causes of abdominal pain in adults,gastroenterology,2184,2237,50,16,HUMAN_REVIEW_REQUIRED
+54,UTD2022_6862,6862,Evaluation of the adult with abdominal pain,gastroenterology,2238,2280,60,48,HUMAN_REVIEW_REQUIRED
+55,UTD2022_6865,6865,The common cold in adults: Diagnosis and clinical features,otolaryngology_allergy,2281,2296,60,20,HUMAN_REVIEW_REQUIRED
+56,UTD2022_6868,6868,The common cold in adults: Treatment and prevention,otolaryngology_allergy,2297,2315,60,33,HUMAN_REVIEW_REQUIRED
+57,UTD2022_7026,7026,Clinical manifestations and complications of pulmonary tuberculosis,infectious_disease,2316,2356,60,16,HUMAN_REVIEW_REQUIRED
+58,UTD2022_7114,7114,Overview of the management and prognosis of sickle cell disease,hematology_oncology,2357,2416,60,49,HUMAN_REVIEW_REQUIRED
+59,UTD2022_7504,7504,Diagnosis and differential diagnosis of rheumatoid arthritis,rheumatology,2417,2444,60,49,HUMAN_REVIEW_REQUIRED
+60,UTD2022_7513,7513,Pathogenesis of rheumatoid arthritis,rheumatology,2445,2476,50,11,HUMAN_REVIEW_REQUIRED
+61,UTD2022_7525,7525,"Allergic rhinitis: Clinical manifestations, epidemiology, and diagnosis",otolaryngology_allergy,2477,2506,60,53,HUMAN_REVIEW_REQUIRED
+62,UTD2022_7526,7526,Pharmacotherapy of allergic rhinitis,otolaryngology_allergy,2507,2554,243,167,HUMAN_REVIEW_REQUIRED
+63,UTD2022_7528,7528,"Chronic rhinosinusitis: Clinical manifestations, pathophysiology, and diagnosis",otolaryngology_allergy,2555,2606,246,132,HUMAN_REVIEW_REQUIRED
+64,UTD2022_7530,7530,Pathogenesis of allergic rhinitis (rhinosinusitis),otolaryngology_allergy,2607,2622,15,9,HUMAN_REVIEW_REQUIRED
+65,UTD2022_7533,7533,An overview of rhinitis,otolaryngology_allergy,2623,2640,41,27,HUMAN_REVIEW_REQUIRED
+66,UTD2022_7534,7534,Chronic rhinosinusitis: Management,otolaryngology_allergy,2641,2693,305,246,HUMAN_REVIEW_REQUIRED
+67,UTD2022_7535,7535,Etiologies of nasal symptoms: An overview,otolaryngology_allergy,2694,2717,35,21,HUMAN_REVIEW_REQUIRED
+68,UTD2022_7660,7660,Pathogenesis of osteomyelitis,infectious_disease,2718,2732,68,13,HUMAN_REVIEW_REQUIRED
+69,UTD2022_7666,7666,Septic arthritis in adults,infectious_disease|rheumatology,2733,2772,195,121,HUMAN_REVIEW_REQUIRED
+70,UTD2022_7780,7780,Treatment of acute low back pain,orthopedics,2773,2798,124,88,HUMAN_REVIEW_REQUIRED
+71,UTD2022_7782,7782,Evaluation of low back pain in adults,orthopedics,2799,2848,155,114,HUMAN_REVIEW_REQUIRED
+72,UTD2022_7785,7785,Clinical manifestations of axial spondyloarthritis (ankylosing spondylitis and nonradiographic axial spondyloarthritis) in adults,rheumatology,2849,2913,141,50,HUMAN_REVIEW_REQUIRED
+73,UTD2022_7786,7786,Diagnosis and differential diagnosis of axial spondyloarthritis (ankylosing spondylitis and nonradiographic axial spondyloarthritis) in adults,rheumatology,2914,2972,292,176,HUMAN_REVIEW_REQUIRED
+74,UTD2022_8023,8023,"Tuberculosis: Natural history, microbiology, and pathogenesis",infectious_disease,2973,3003,195,54,HUMAN_REVIEW_REQUIRED
+75,UTD2022_8026,8026,Immunology of tuberculosis,infectious_disease,3004,3029,43,30,HUMAN_REVIEW_REQUIRED
+76,UTD2022_8027,8027,Epidemiology and molecular mechanisms of drug- resistant tuberculosis,infectious_disease,3030,3054,102,78,HUMAN_REVIEW_REQUIRED
+77,UTD2022_8029,8029,Epidemiology and pathology of miliary and extrapulmonary tuberculosis,infectious_disease,3055,3070,57,21,HUMAN_REVIEW_REQUIRED
+78,UTD2022_8253,8253,Overview of acute pulmonary embolism in adults,pulmonology,3071,3100,141,66,HUMAN_REVIEW_REQUIRED
+79,UTD2022_8261,8261,"Clinical presentation, evaluation, and diagnosis of the nonpregnant adult with suspected acute pulmonary embolism",pulmonology|obstetrics,3101,3168,345,247,HUMAN_REVIEW_REQUIRED
+80,UTD2022_8265,8265,"Treatment, prognosis, and follow-up of acute pulmonary embolism in adults",pulmonology,3169,3235,353,233,HUMAN_REVIEW_REQUIRED
+81,UTD2022_13806,13806,Upper respiratory tract infections: Considerations in adolescent and adult athletes,general_medicine,3236,3258,126,86,HUMAN_REVIEW_REQUIRED
+82,UTD2022_14609,14609,Nasal obstruction: Diagnosis and management,otolaryngology_allergy,3259,3290,142,82,HUMAN_REVIEW_REQUIRED
+83,UTD2022_16133,16133,Constipation in the older adult,gastroenterology,3291,3313,132,70,HUMAN_REVIEW_REQUIRED
+84,UTD2022_16629,16629,The common cold in children: Management and prevention,otolaryngology_allergy|pediatrics,3314,3344,142,116,HUMAN_REVIEW_REQUIRED
+85,UTD2022_16708,16708,Overview of neutropenic fever syndromes,infectious_disease|hematology_oncology,3345,3384,201,111,HUMAN_REVIEW_REQUIRED
+86,UTD2022_86984,86984,Acute and early HIV infection: Clinical manifestations and diagnosis,infectious_disease,3385,3411,215,125,HUMAN_REVIEW_REQUIRED
+87,UTD2022_97855,97855,Adenotonsillectomy for obstructive sleep apnea in children,otolaryngology_allergy|pediatrics|pulmonology,3412,3454,186,132,HUMAN_REVIEW_REQUIRED
+88,UTD2022_101017,101017,Allergic fungal rhinosinusitis,otolaryngology_allergy,3455,3493,304,150,HUMAN_REVIEW_REQUIRED
+89,UTD2022_105723,105723,Clinical manifestations and diagnosis of osteoarthritis,rheumatology,3494,3537,149,58,HUMAN_REVIEW_REQUIRED
+90,UTD2022_106097,106097,Overview of the management of osteoarthritis,rheumatology,3538,3562,162,99,HUMAN_REVIEW_REQUIRED
+91,UTD2022_115049,115049,Approach to diagnosis of latent tuberculosis infection (tuberculosis screening) in adults,infectious_disease,3563,3608,183,170,HUMAN_REVIEW_REQUIRED
+92,UTD2022_121314,121314,Brucellosis: Treatment and prevention,infectious_disease,3609,3639,146,120,HUMAN_REVIEW_REQUIRED
+93,UTD2022_227,227,Ankle fractures in adults,orthopedics,,,52,28,HUMAN_REVIEW_REQUIRED
+94,UTD2022_252,252,Approach to the adult with unspecified hip pain,orthopedics,,,52,22,HUMAN_REVIEW_REQUIRED
+95,UTD2022_253,253,Approach to the adult with unspecified knee pain,orthopedics,,,52,8,HUMAN_REVIEW_REQUIRED
+96,UTD2022_344,344,Skull fractures in adults,neurology,,,52,26,HUMAN_REVIEW_REQUIRED
+97,UTD2022_1287,1287,Clinical features and diagnosis of acute bacterial meningitis in adults,infectious_disease,,,52,23,HUMAN_REVIEW_REQUIRED
+98,UTD2022_1289,1289,Pathogenesis and pathophysiology of bacterial meningitis,infectious_disease,,,21,3,HUMAN_REVIEW_REQUIRED
+99,UTD2022_1290,1290,Initial therapy and prognosis of bacterial meningitis in adults,infectious_disease,,,52,35,HUMAN_REVIEW_REQUIRED
+100,UTD2022_1813,1813,Radiologic evaluation of the chronically painful knee in adults,general_medicine,,,52,6,HUMAN_REVIEW_REQUIRED
+101,UTD2022_2035,2035,"Clinical manifestations, diagnosis, and evaluation of osteoporosis in postmenopausal women",endocrinology_bone,,,52,19,HUMAN_REVIEW_REQUIRED
+102,UTD2022_2059,2059,Treatment of osteoporosis in men,endocrinology_bone,,,52,21,HUMAN_REVIEW_REQUIRED
+103,UTD2022_2064,2064,Overview of the management of osteoporosis in postmenopausal women,endocrinology_bone,,,52,29,HUMAN_REVIEW_REQUIRED
+104,UTD2022_2241,2241,Approach to the evaluation of dysphagia in adults,gastroenterology,,,52,20,HUMAN_REVIEW_REQUIRED
+105,UTD2022_2452,2452,Fungal rhinosinusitis,otolaryngology_allergy,,,52,19,HUMAN_REVIEW_REQUIRED
+106,UTD2022_2459,2459,Treatment and prevention of invasive aspergillosis,infectious_disease,,,52,23,HUMAN_REVIEW_REQUIRED
+107,UTD2022_2591,2591,Approach to the adult with chronic diarrhea in resourceabundant settings,gastroenterology,,,52,20,HUMAN_REVIEW_REQUIRED

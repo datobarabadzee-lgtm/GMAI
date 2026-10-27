@@ -1,0 +1,408 @@
+[
+ {
+  "rule_id": "PUB-FEVAD-001",
+  "cluster": "FEVAD",
+  "topics": [
+   11
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "ცხელების პათოფიზიოლოგია: ცხელება ჰიპერთერმიისგან განსხვავებით",
+  "recommendation_ka": "ცხელება თანდაყოლილი იმუნური პასუხით გამოწვეული თერმორეგულაციური „დადგენილი წერტილის“ რეგულირებადი მატებაა და არა უბრალოდ ტემპერატურა ერთი ფიქსირებული ზღვრის ზემოთ; „ნორმალური“ ტემპერატურა ინდივიდუალურად და დღე-ღამის განმავლობაში იცვლება. ჰიპერთერმია (სითბური დარტყმა, წამლისმიერი ჰიპერთერმია) დადგენილი წერტილის ცვლილების გარეშე სითბოს გაცემის უკმარისობაა და სხვაგვარ მართვას საჭიროებს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-002",
+  "cluster": "FEVAD",
+  "topics": [
+   11
+  ],
+  "rule_type": "dosing",
+  "population": "adult",
+  "condition_ka": "ცხელება მოზრდილში, რომელიც დისკომფორტს იწვევს",
+  "recommendation_ka": "სიცხის დამწევი საშუალება ინიშნება პაციენტის კომფორტისთვის და არა ტემპერატურის ნორმალიზაციისთვის. პარაცეტამოლი 1000 მგ პერორალურად, დღე-ღამეში არაუმეტეს 4-ჯერ, დოზებს შორის მინიმუმ 4 სთ, მაქსიმუმ 4 გ 24 სთ-ში. 50 კგ-ზე ნაკლები წონის, ღვიძლის დაავადების ან ალკოჰოლის ჭარბი მოხმარებისას დოზა შეამცირეთ. გააფრთხილეთ პაციენტი, არ მიიღოს პარაცეტამოლის შემცველი კომბინირებული (გაციების) პრეპარატები ერთდროულად.",
+  "doses": [
+   {
+    "drug": "paracetamol",
+    "amount": 1000,
+    "unit": "mg",
+    "route": "PO",
+    "frequency": "every 4-6 h, up to 4 times/24 h",
+    "population": "adult",
+    "max_amount": 4,
+    "max_unit": "g"
+   }
+  ],
+  "numeric_values": [
+   {
+    "value": 4,
+    "unit": "times/day",
+    "meaning_ka": "მაქსიმალური სიხშირე დღე-ღამეში"
+   },
+   {
+    "value": 4,
+    "unit": "h",
+    "meaning_ka": "მინიმალური ინტერვალი დოზებს შორის"
+   },
+   {
+    "value": 24,
+    "unit": "h",
+    "meaning_ka": "დღიური მაქსიმუმის დროის ფანჯარა"
+   },
+   {
+    "value": 50,
+    "unit": "kg",
+    "meaning_ka": "წონის ზღვარი, რომლის ქვემოთაც დოზა მცირდება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "NHS",
+    "title": "Paracetamol for adults — how and when to take it",
+    "year": 2024,
+    "url": "https://www.nhs.uk/medicines/paracetamol-for-adults/how-and-when-to-take-paracetamol-for-adults/",
+    "type": "patient_guidance",
+    "supports": "Adults: 2×500 mg tablets up to 4 times in 24 h, at least 4 h between doses, no more than 8 tablets (4 g) in 24 h; lower dose may be needed if <50 kg, liver disease or heavy alcohol use; avoid combining with other paracetamol-containing products."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-003",
+  "cluster": "FEVAD",
+  "topics": [
+   11
+  ],
+  "rule_type": "red_flag",
+  "population": "adult",
+  "condition_ka": "მაღალი სხეულის ტემპერატურა სიცხეში ფიზიკური დატვირთვის ან ჰიპერთერმიის გამომწვევი წამლის შემდეგ, ცნობიერების დარღვევით",
+  "recommendation_ka": "ეჭვი მიიტანეთ სითბურ დარტყმაზე ან სხვა ჰიპერთერმიაზე: სიცხის დამწევი საშუალებები (პარაცეტამოლი, არასტეროიდული ანთების საწინააღმდეგო საშუალებები) არაეფექტურია და მათ ნაცვლად დაუყოვნებლივ დაიწყეთ აქტიური გაგრილება; ფიზიკური დატვირთვით გამოწვეული სითბური დარტყმისას არჩევის მეთოდია ცივ წყალში ჩაძირვა. გაგრილება შეწყვიტეთ დაახლოებით 39 °C-ზე, რათა თავიდან აიცილოთ ჰიპოთერმია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 39,
+    "unit": "°C",
+    "meaning_ka": "გაგრილების შეწყვეტის სამიზნე ტემპერატურა"
+   }
+  ],
+  "red_flags_ka": [
+   "ცნობიერების დარღვევა",
+   "კრუნჩხვა",
+   "ცხელება ფიზიკური დატვირთვის შემდეგ ცხელ გარემოში"
+  ],
+  "sources": [
+   {
+    "org": "Wilderness Medical Society",
+    "title": "Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2019 Update (last updated 2023)",
+    "year": 2019,
+    "url": "https://guidelinecentral.com/guideline/40627",
+    "type": "guideline",
+    "supports": "Antipyretics should be avoided in heat illness (weak recommendation); cold-water immersion for exertional heat stroke; cooling target no lower than about 39 °C; dantrolene not recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-004",
+  "cluster": "FEVAD",
+  "topics": [
+   11
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "ახალი ცხელება ინტენსიური თერაპიის განყოფილებაში მყოფ მოზრდილში (მძიმე იმუნოსუპრესიის გარეშე)",
+  "recommendation_ka": "ტემპერატურა გაზომეთ ცენტრალურად (არსებული კათეტერით), ხოლო თუ შეუძლებელია — ორალურად ან რექტალურად; აქსილარული და ტიმპანური გაზომვები ნაკლებად სანდოა. ყველა ცხელების ეპიზოდი სრულ გამოკვლევას არ საჭიროებს: ტესტები შეარჩიეთ ანამნეზისა და გასინჯვის მიხედვით (სისხლის კულტურა, შარდის ანალიზი შარდის კათეტერისას, ვირუსული ტესტები). გულმკერდის, მუცლის ან მენჯის ბოლოდროინდელი ოპერაციის შემდეგ ჩაატარეთ შესაბამისი მიდამოს კომპიუტერული ტომოგრაფია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "SCCM/IDSA",
+    "title": "Guidelines for Evaluating New Fever in Adult Patients in the ICU (O'Grady NP et al., Crit Care Med 2023;51:1570-1586)",
+    "year": 2023,
+    "url": "https://sccm.org/Clinical-Resources/Guidelines/Guidelines/Guidelines-for-Evaluating-New-Fever-Adult-ICU",
+    "type": "guideline",
+    "supports": "Update of 2008 guideline for adult ICU patients without severe immunocompromise: central temperature measurement preferred, otherwise oral or rectal; not every febrile episode needs aggressive testing — history and examination guide tests; imaging, rapid diagnostics and selective biomarker use."
+   },
+   {
+    "org": "Clinical Infectious Diseases",
+    "title": "Correspondence on the 2023 SCCM/IDSA guideline for new fever in the ICU",
+    "year": 2024,
+    "url": "https://academic.oup.com/cid/article/79/6/1537/7619315",
+    "type": "journal_article",
+    "supports": "Restates guideline: site-specific CT should be performed after recent thoracic, abdominal or pelvic surgery and may be considered in others with clinical findings pointing to these sites."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-005",
+  "cluster": "FEVAD",
+  "topics": [
+   12
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "უცნობი წარმოშობის ცხელების (FUO) განსაზღვრება მოზრდილში",
+  "recommendation_ka": "კლასიკური FUO: ტემპერატურა 38.3 °C ან მეტი რამდენიმე გაზომვაზე, 3 კვირაზე მეტი ხანგრძლივობით, და დიაგნოზი დაუდგენელი რჩება 3 ამბულატორიული ვიზიტის ან სტაციონარული გამოკვლევის შემდეგ. ცალკე ქვეჯგუფებად განიხილება ჰოსპიტალური, ნეიტროპენიური და აივ-ასოცირებული FUO — მათი მიზეზები და მართვა განსხვავებულია.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 38.3,
+    "unit": "°C",
+    "meaning_ka": "ტემპერატურის ზღვარი"
+   },
+   {
+    "value": 3,
+    "unit": "week",
+    "meaning_ka": "მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "ამბულატორიული ვიზიტების რაოდენობა დიაგნოზის გარეშე"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Japanese Journal of Radiology (Minamimoto R)",
+    "title": "Optimal use of the FDG-PET/CT in the diagnostic process of fever of unknown origin (FUO): a comprehensive review",
+    "year": 2022,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9616755/",
+    "type": "review",
+    "supports": "Classic FUO definition (Petersdorf-Beeson): fever ≥38.3 °C on several occasions without diagnosis; Durack-Street revision: duration >3 weeks and no diagnosis after 3 outpatient visits or inpatient evaluation. FDG-PET/CT positioned as a second-line modality after the basic workup."
+   },
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-006",
+  "cluster": "FEVAD",
+  "topics": [
+   12
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "კლასიკური FUO-ს საწყისი გამოკვლევა",
+  "recommendation_ka": "სავალდებულოა საფუძვლიანი ანამნეზი (მოგზაურობა, ცხოველებთან კონტაქტი, პროფესია, მედიკამენტები, ოჯახური ანამნეზი) და განმეორებითი ფიზიკალური გასინჯვა, შემდეგ ბაზისური ტესტები: სისხლის საერთო ანალიზი, ანთების მარკერები, სისხლის კულტურები, შარდის ანალიზი, გულმკერდის რენტგენოგრაფია, მუცლის ულტრაბგერა, ტუბერკულოზის სკრინინგი (ტუბერკულინის სინჯი ან IGRA). შემდგომი ტესტები მიმართეთ პოტენციურად დიაგნოსტიკური ნიშნებისკენ და არა არამიზნობრივი „სკრინინგისკენ“.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Japanese Journal of Radiology (Minamimoto R)",
+    "title": "Optimal use of the FDG-PET/CT in the diagnostic process of fever of unknown origin (FUO): a comprehensive review",
+    "year": 2022,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9616755/",
+    "type": "review",
+    "supports": "Classic FUO definition (Petersdorf-Beeson): fever ≥38.3 °C on several occasions without diagnosis; Durack-Street revision: duration >3 weeks and no diagnosis after 3 outpatient visits or inpatient evaluation. FDG-PET/CT positioned as a second-line modality after the basic workup."
+   },
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-007",
+  "cluster": "FEVAD",
+  "topics": [
+   12
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "FUO, როდესაც ბაზისური გამოკვლევა დიაგნოზს ვერ იძლევა",
+  "recommendation_ka": "FDG-PET/CT გამოიყენეთ როგორც მეორე რიგის მეთოდი: იგი აჩვენებს ინფექციურ, ანთებით და სიმსივნურ კერებს და ეხმარება ბიოფსიის ადგილის შერჩევაში. გამოსახულება არ ანაცვლებს კლინიკურ შეფასებას; PET-ის დადებითი კერა ჰისტოლოგიურად ან მიკრობიოლოგიურად უნდა დადასტურდეს.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Japanese Journal of Radiology (Minamimoto R)",
+    "title": "Optimal use of the FDG-PET/CT in the diagnostic process of fever of unknown origin (FUO): a comprehensive review",
+    "year": 2022,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9616755/",
+    "type": "review",
+    "supports": "Classic FUO definition (Petersdorf-Beeson): fever ≥38.3 °C on several occasions without diagnosis; Durack-Street revision: duration >3 weeks and no diagnosis after 3 outpatient visits or inpatient evaluation. FDG-PET/CT positioned as a second-line modality after the basic workup."
+   },
+   {
+    "org": "Peer-reviewed review (PMC)",
+    "title": "Role of 18F FDG-PET-CT in Fever and Inflammation of Unknown Origin",
+    "year": 2025,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12387080/",
+    "type": "review",
+    "supports": "Reviews diagnostic performance of FDG-PET/CT in FUO and inflammation of unknown origin across the literature; supports its use when initial workup is non-diagnostic."
+   },
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-008",
+  "cluster": "FEVAD",
+  "topics": [
+   12,
+   13
+  ],
+  "rule_type": "referral",
+  "population": "immunocompromised",
+  "condition_ka": "ცხელება ნეიტროპენიით, აივ-ინფექციით ან ჰოსპიტალიზაციის დროს განვითარებული",
+  "recommendation_ka": "ეს მდგომარეობები კლასიკური FUO-ს ალგორითმით არ იმართება: მიზეზთა სპექტრი (ოპორტუნისტული და ჰოსპიტალური ინფექციები) და გადაუდებლობა განსხვავებულია. საჭიროა სასწრაფო შეფასება და ინფექციონისტის ან შესაბამისი სპეციალისტის ჩართვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ნეიტროპენია",
+   "ჰემოდინამიკური არასტაბილურობა"
+  ],
+  "sources": [
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-009",
+  "cluster": "FEVAD",
+  "topics": [
+   13
+  ],
+  "rule_type": "epidemiology",
+  "population": "adult",
+  "condition_ka": "FUO-ს მიზეზთა კატეგორიები მოზრდილებში",
+  "recommendation_ka": "მიზეზები ოთხ ძირითად ჯგუფად იყოფა: ინფექციები (მაგ., ტუბერკულოზი, აბსცესები, ენდოკარდიტი), სიმსივნეები (განსაკუთრებით ჰემატოლოგიური), არაინფექციური ანთებითი დაავადებები (ვასკულიტები, სისტემური რევმატული დაავადებები) და სხვადასხვა (მათ შორის წამლისმიერი ცხელება). საფუძვლიანი გამოკვლევის მიუხედავად, შემთხვევათა მნიშვნელოვანი ნაწილი დაუდგენელი რჩება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   },
+   {
+    "org": "5-Minute Clinical Consult (secondary clinical reference)",
+    "title": "Fever of Unknown Origin (FUO)",
+    "year": 2024,
+    "url": "https://www.unboundmedicine.com/5minute/view/5-Minute-Clinical-Consult/1688659/all/Fever_of_Unknown_Origin__FUO_",
+    "type": "clinical_reference",
+    "supports": "FUO categories: infection, malignancy, noninfectious inflammatory disease, miscellaneous, undiagnosed. In patients >65 years noninfectious multisystem diseases (PMR, GCA, vasculitides) are more frequent than infection; intra-abdominal abscess, UTI, TB, endocarditis, haematological malignancy and drug fever are common causes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-010",
+  "cluster": "FEVAD",
+  "topics": [
+   13
+  ],
+  "rule_type": "epidemiology",
+  "population": "older_adult",
+  "condition_ka": "FUO ხანდაზმულ პაციენტში",
+  "recommendation_ka": "ხანდაზმულებში არაინფექციური ანთებითი დაავადებები — რევმატული პოლიმიალგია, გიგანტურუჯრედოვანი არტერიიტი და სხვა ვასკულიტები — ინფექციაზე ხშირია; შეამოწმეთ ედს/CRP, ჰკითხეთ თავის ტკივილზე, მხედველობის დარღვევაზე, ყბის კლაუდიკაციაზე. ინფექციებიდან განიხილეთ მუცლის ღრუს აბსცესი, საშარდე გზების ინფექცია, ტუბერკულოზი და ენდოკარდიტი; ასევე ჰემატოლოგიური სიმსივნე და წამლისმიერი ცხელება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "მხედველობის უეცარი დაქვეითება (გიგანტურუჯრედოვანი არტერიიტის ეჭვი)"
+  ],
+  "sources": [
+   {
+    "org": "5-Minute Clinical Consult (secondary clinical reference)",
+    "title": "Fever of Unknown Origin (FUO)",
+    "year": 2024,
+    "url": "https://www.unboundmedicine.com/5minute/view/5-Minute-Clinical-Consult/1688659/all/Fever_of_Unknown_Origin__FUO_",
+    "type": "clinical_reference",
+    "supports": "FUO categories: infection, malignancy, noninfectious inflammatory disease, miscellaneous, undiagnosed. In patients >65 years noninfectious multisystem diseases (PMR, GCA, vasculitides) are more frequent than infection; intra-abdominal abscess, UTI, TB, endocarditis, haematological malignancy and drug fever are common causes."
+   },
+   {
+    "org": "Open Forum Infectious Diseases (Wright WF, Auwaerter PG)",
+    "title": "Fever and Fever of Unknown Origin: Review, Recent Advances, and Lingering Dogma",
+    "year": 2020,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7237822",
+    "type": "review",
+    "supports": "Fever is a regulated innate-immune response rather than simply a reading above 37.0 °C; 37.0 °C is not a universal normal. FUO subgroups and etiologic classifications unchanged since 1991, but disease spectrum and diagnostic approach are changing; FDG-PET has not replaced clinical judgment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-FEVAD-011",
+  "cluster": "FEVAD",
+  "topics": [
+   13
+  ],
+  "rule_type": "evaluation",
+  "population": "adult",
+  "condition_ka": "FUO და მრავალი მედიკამენტის მიღება",
+  "recommendation_ka": "წამლისმიერი ცხელება ყოველთვის განიხილეთ: შეადგინეთ ყველა მედიკამენტის (მათ შორის ურეცეპტო და მცენარეული) სია და, თუ კლინიკურად უსაფრთხოა, შეწყვიტეთ საეჭვო პრეპარატი და დააკვირდით ტემპერატურის დინამიკას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "5-Minute Clinical Consult (secondary clinical reference)",
+    "title": "Fever of Unknown Origin (FUO)",
+    "year": 2024,
+    "url": "https://www.unboundmedicine.com/5minute/view/5-Minute-Clinical-Consult/1688659/all/Fever_of_Unknown_Origin__FUO_",
+    "type": "clinical_reference",
+    "supports": "FUO categories: infection, malignancy, noninfectious inflammatory disease, miscellaneous, undiagnosed. In patients >65 years noninfectious multisystem diseases (PMR, GCA, vasculitides) are more frequent than infection; intra-abdominal abscess, UTI, TB, endocarditis, haematological malignancy and drug fever are common causes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]

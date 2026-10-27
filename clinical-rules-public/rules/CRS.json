@@ -1,0 +1,702 @@
+[
+ {
+  "rule_id": "PUB-CRS-001",
+  "cluster": "CRS",
+  "topics": [
+   63
+  ],
+  "rule_type": "diagnosis",
+  "population": "adult",
+  "condition_ka": "მოზრდილში ცხვირის სიმპტომები 12 კვირაზე მეტხანს",
+  "recommendation_ka": "ქრონიკული რინოსინუსიტის დიაგნოზისთვის საჭიროა 2 ან მეტი სიმპტომი მინიმუმ 12 კვირის განმავლობაში, რომელთაგან ერთი უნდა იყოს ცხვირის გაჭედვა/ობსტრუქცია ან გამონადენი (წინა ან უკანა), დამატებით — სახის ტკივილი/წნევა და/ან ყნოსვის დაქვეითება. დიაგნოზი დაადასტურეთ ობიექტურად: ცხვირის ენდოსკოპია (პოლიპები, ლორწოჩირქოვანი გამონადენი, შეშუპება) ან კომპიუტერული ტომოგრაფია (ლორწოვანის ცვლილებები). მხოლოდ სიმპტომებზე დაფუძნებული დიაგნოზი გადაჭარბებულ დიაგნოსტიკას იწვევს.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 12,
+    "unit": "week",
+    "meaning_ka": "სიმპტომების მინიმალური ხანგრძლივობა"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "სიმპტომების მინიმალური რაოდენობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "CRS in adults: two or more symptoms for >=12 weeks, one of which is nasal blockage/obstruction/congestion or nasal discharge, +/- facial pain/pressure and reduction/loss of smell, with endoscopic signs and/or CT mucosal changes."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-002",
+  "cluster": "CRS",
+  "topics": [
+   63
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "დადასტურებული ქრონიკული რინოსინუსიტის კლასიფიკაცია",
+  "recommendation_ka": "დაავადება დაყავით პირველად და მეორად (მაგ., ოდონტოგენური, სოკოვანი ბურთი, ციტოფიბროზი, ვასკულიტი) ფორმებად, ანატომიურად — ლოკალიზებულ (ცალმხრივ) და დიფუზურ (ორმხრივ) ფორმებად, ხოლო დიფუზური პირველადი ფორმა — ენდოტიპით: ტიპი 2 (ეოზინოფილური, ხშირად პოლიპებით, ასთმასთან და ასპირინის აუტანლობასთან კავშირით) და არა-ტიპი 2. ენდოტიპი განსაზღვრავს ბიოლოგიური თერაპიის და ქირურგიის სტრატეგიას.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "ტიპი 2 ანთება"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "EPOS 2020 introduced classification into primary and secondary CRS, localized or diffuse disease, and endotype dominance (type 2 vs non-type 2)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-003",
+  "cluster": "CRS",
+  "topics": [
+   63,
+   66
+  ],
+  "rule_type": "red_flag",
+  "population": "all",
+  "condition_ka": "რინოსინუსიტი გართულების ან ნეოპლაზიის ნიშნებით",
+  "recommendation_ka": "სასწრაფოდ მიმართეთ ოტორინოლარინგოლოგთან/მიიღეთ სტაციონარში: პერიორბიტალური შეშუპება ან ერითემა, თვალის კაკლის გადაადგილება, დიპლოპია, ოფთალმოპლეგია, მხედველობის დაქვეითება, ძლიერი შუბლის თავის ტკივილი ან შუბლის შეშუპება, მენინგიტის ან კეროვანი ნევროლოგიური ნიშნები. ცალმხრივი სიმპტომები, სისხლდენა, ქერქები და კაკოსმია ნეოპლაზიის გამოსარიცხად საჭიროებს ენდოსკოპიასა და გამოსახვას.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "პერიორბიტალური შეშუპება",
+   "დიპლოპია ან მხედველობის დაქვეითება",
+   "ძლიერი შუბლის ტკივილი/შეშუპება",
+   "მენინგეალური ან კეროვანი ნიშნები",
+   "ცალმხრივი სიმპტომები სისხლდენით"
+  ],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "EPOS 2020 lists alarm symptoms requiring immediate referral: periorbital oedema/erythema, displaced globe, double vision, ophthalmoplegia, reduced visual acuity, severe frontal headache, frontal swelling, signs of meningitis or focal neurological signs; unilateral symptoms, bleeding, crusting and cacosmia suggest other pathology."
+   },
+   {
+    "org": "NHS North East London ICB",
+    "title": "London regional guideline and pathway for the management of rhinitis v2.2",
+    "year": 2025,
+    "url": "https://primarycare.northeastlondon.icb.nhs.uk/wp-content/uploads/2025/04/20250331-ENT-for-the-management-of-Rhinitis-v2.2_GUIDE-.docx",
+    "type": "guideline",
+    "supports": "Red flags for urgent ENT referral: unilateral symptoms, blood-stained discharge, unilateral facial/orbital pain or swelling, progressive headache."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-004",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული რინოსინუსიტი (პოლიპებით ან მათ გარეშე), საწყისი მართვა",
+  "recommendation_ka": "პირველი რიგის თერაპია: ფიზიოლოგიური ხსნარით ცხვირის ყოველდღიური დიდი მოცულობით ამორეცხვა და ინტრანაზალური კორტიკოსტეროიდი (სპრეი ან, ოპერაციის შემდეგ, ირიგაცია/წვეთები). შეაფასეთ დამყოლობა და ტექნიკა, სანამ თერაპიას არაეფექტურად ჩათვლით. მოკლევადიანი ანტიბიოტიკი ქრონიკული ფორმისას რუტინულად არ არის ნაჩვენები.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "Saline irrigation and intranasal corticosteroids are recommended as first-line treatment for CRS with and without polyps."
+   },
+   {
+    "org": "JAMA (systematic review)",
+    "title": "Medical therapies for adult chronic sinusitis: a systematic review (JAMA 2015;314:926-939)",
+    "year": 2015,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26325561/",
+    "type": "systematic_review",
+    "supports": "Daily high-volume saline irrigation with topical intranasal corticosteroid is first-line therapy for CRS; short systemic steroid courses and macrolides only for selected phenotypes. Still the current reference systematic review cited by guidelines."
+   },
+   {
+    "org": "NIHR Evidence",
+    "title": "Saline irrigation and corticosteroid spray are effective first choice treatments for chronic sinusitis",
+    "year": 2016,
+    "url": "https://evidence.nihr.ac.uk/alert/saline-irrigation-and-corticosteroid-spray-are-effective-first-choice-treatments-for-chronic-sinusitis",
+    "type": "evidence_summary",
+    "supports": "Saline irrigation plus corticosteroid spray are the first-choice treatments for chronic rhinosinusitis (current edition of this summary)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-005",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული რინოსინუსიტი ნაზალური პოლიპებით, სიმპტომების გამწვავება ტოპიკური თერაპიის ფონზე",
+  "recommendation_ka": "სისტემური კორტიკოსტეროიდის მოკლე კურსი („პრედნიზოლონი“) შეიძლება გამოიყენოთ პოლიპების ზომისა და სიმპტომების დროებითი შემცირებისთვის ტოპიკურ თერაპიასთან ერთად. ხანგრძლივი ან ხშირი კურსები არ არის რეკომენდებული — ეს მიუთითებს არაკონტროლირებად დაავადებაზე და ქირურგიის ან ბიოლოგიური თერაპიის განხილვის საჭიროებაზე. შეაფასეთ კუმულაციური სტეროიდის დოზა და ოსტეოპოროზის, დიაბეტის, კატარაქტის რისკი.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "სისტემური სტეროიდის ხშირი კურსების საჭიროება"
+  ],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "Short courses of systemic corticosteroids are recommended for CRSwNP as adjunct; repeated/long courses carry cumulative adverse effects and signal uncontrolled disease."
+   },
+   {
+    "org": "JAMA (systematic review)",
+    "title": "Medical therapies for adult chronic sinusitis: a systematic review (JAMA 2015;314:926-939)",
+    "year": 2015,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26325561/",
+    "type": "systematic_review",
+    "supports": "Daily high-volume saline irrigation with topical intranasal corticosteroid is first-line therapy for CRS; short systemic steroid courses and macrolides only for selected phenotypes. Still the current reference systematic review cited by guidelines."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-006",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ქრონიკული რინოსინუსიტი პოლიპების გარეშე, პერსისტენტული სიმპტომები სტანდარტული თერაპიის მიუხედავად",
+  "recommendation_ka": "ხანგრძლივი დაბალდოზიანი მაკროლიდით თერაპია (მაგ., „კლარითრომიცინი“, „აზითრომიცინი“) შეიძლება განიხილოთ შერჩეულ პაციენტებში (არა-ტიპი 2, დაბალი IgE), თუმცა EPOS-ის მიხედვით მისი ეფექტი გაურკვეველია. დაწყებამდე შეაფასეთ QT ინტერვალი, გულ-სისხლძარღვთა რისკი და ურთიერთქმედებები; არ გამოიყენოთ რუტინულად.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 2,
+    "unit": "label",
+    "meaning_ka": "არა-ტიპი 2 ანთება"
+   }
+  ],
+  "red_flags_ka": [
+   "გახანგრძლივებული QT",
+   "გულის რითმის დარღვევის ანამნეზი"
+  ],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "Steering group uncertain whether long-term antibiotics improve outcomes; long-term low-dose macrolides may be an option in selected CRS patients."
+   },
+   {
+    "org": "JAMA (systematic review)",
+    "title": "Medical therapies for adult chronic sinusitis: a systematic review (JAMA 2015;314:926-939)",
+    "year": 2015,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26325561/",
+    "type": "systematic_review",
+    "supports": "Daily high-volume saline irrigation with topical intranasal corticosteroid is first-line therapy for CRS; short systemic steroid courses and macrolides only for selected phenotypes. Still the current reference systematic review cited by guidelines."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-007",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "referral",
+  "population": "adult",
+  "condition_ka": "ქრონიკული რინოსინუსიტი, სიმპტომები არ კონტროლდება სათანადო სამედიცინო თერაპიით",
+  "recommendation_ka": "მიმართეთ ოტორინოლარინგოლოგთან ენდოსკოპიური სინუსური ქირურგიის განსახილველად, როცა ამორეცხვისა და ინტრანაზალური სტეროიდის ადეკვატური კურსის (და პოლიპების დროს მოკლე სისტემური სტეროიდის) შემდეგ სიმპტომები კვლავ მნიშვნელოვანია. ოპერაციამდე საჭიროა კომპიუტერული ტომოგრაფია. ოპერაციის შემდეგ ტოპიკური სტეროიდი გააგრძელეთ.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "Endoscopic sinus surgery is indicated for CRS patients who fail appropriate medical therapy; CT is required for surgical planning; postoperative topical steroids continue."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-008",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "treatment",
+  "population": "adult",
+  "condition_ka": "ორმხრივი ნაზალური პოლიპები, წინა სინუსური ოპერაციის შემდეგ, არაკონტროლირებადი დაავადება — ბიოლოგიური თერაპიის ჩვენება",
+  "recommendation_ka": "ბიოლოგიური პრეპარატი (მაგ., „დუპილუმაბი“, „ომალიზუმაბი“, „მეპოლიზუმაბი“) განიხილეთ, თუ სრულდება 5 კრიტერიუმიდან მინიმუმ 3: (1) ტიპი 2 ანთება — ქსოვილოვანი ეოზინოფილები ≥10 ხედვის ველში, ან სისხლის ეოზინოფილები ≥150 უჯრედი/მკლ, ან საერთო IgE ≥100 IU/მლ; (2) სისტემური სტეროიდის საჭიროება (>2 კურსი წელიწადში ან >3 თვე) ან მისი უკუჩვენება; (3) ცხოვრების ხარისხის მნიშვნელოვანი დაქვეითება (SNOT-22 ≥40); (4) ანოსმია; (5) თანმხლები ასთმა, რომელიც რეგულარულ ინჰალაციურ სტეროიდს საჭიროებს. 2023 წლის განახლებამდე (EPOS 2020) სისხლის ეოზინოფილების ზღვარი 250 უჯრედი/მკლ იყო; ოპერაციის გარეშე პაციენტებისთვის EUFOREA-ს ადრინდელი კონსენსუსი 4 კრიტერიუმს მოითხოვდა.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "count",
+    "meaning_ka": "კრიტერიუმების საერთო რაოდენობა"
+   },
+   {
+    "value": 3,
+    "unit": "count",
+    "meaning_ka": "საჭირო კრიტერიუმების მინიმუმი"
+   },
+   {
+    "value": 1,
+    "unit": "label",
+    "meaning_ka": "კრიტერიუმი 1"
+   },
+   {
+    "value": 4,
+    "unit": "label",
+    "meaning_ka": "კრიტერიუმი 4 / ოპერაციის გარეშე საჭირო კრიტერიუმები"
+   },
+   {
+    "value": 10,
+    "unit": "count",
+    "meaning_ka": "ქსოვილოვანი ეოზინოფილები ხედვის ველში"
+   },
+   {
+    "value": 150,
+    "unit": "cells/µL",
+    "meaning_ka": "სისხლის ეოზინოფილების ზღვარი (2023)"
+   },
+   {
+    "value": 100,
+    "unit": "IU",
+    "meaning_ka": "საერთო IgE ზღვარი, IU/მლ"
+   },
+   {
+    "value": 2,
+    "unit": "count",
+    "meaning_ka": "სისტემური სტეროიდის კურსები წელიწადში"
+   },
+   {
+    "value": 3,
+    "unit": "month",
+    "meaning_ka": "ხანგრძლივი სისტემური სტეროიდის ზღვარი"
+   },
+   {
+    "value": 22,
+    "unit": "label",
+    "meaning_ka": "SNOT-22 კითხვარი"
+   },
+   {
+    "value": 40,
+    "unit": "score",
+    "meaning_ka": "SNOT-22 ზღვარი"
+   },
+   {
+    "value": 2023,
+    "unit": "label",
+    "meaning_ka": "განახლების წელი"
+   },
+   {
+    "value": 2020,
+    "unit": "label",
+    "meaning_ka": "EPOS 2020"
+   },
+   {
+    "value": 250,
+    "unit": "cells/µL",
+    "meaning_ka": "სისხლის ეოზინოფილების ზღვარი (EPOS 2020)"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS/EUFOREA",
+    "title": "EPOS/EUFOREA update on indication and evaluation of biologics in CRSwNP 2023 (Rhinology 2023;61:194-202)",
+    "year": 2023,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36999780/",
+    "type": "guideline",
+    "supports": "Lowered the blood eosinophil cutoff for type 2 inflammation from 250 to 150 cells/uL versus EPOS 2020; other criteria unchanged; gives guidance on evaluating response and continuing, switching or stopping biologics."
+   },
+   {
+    "org": "EPOS/EUFOREA",
+    "title": "EPOS/EUFOREA update on indication and evaluation of biologics in CRSwNP 2023 - full text",
+    "year": 2023,
+    "url": "https://www.rhinologyjournal.com/Rhinology_issues/manuscript_3069.pdf",
+    "type": "guideline",
+    "supports": "Biologic indication: bilateral polyps, prior sinus surgery (or unfit), and >=3 of 5 criteria; type 2 evidence = tissue eos >=10/hpf or blood eos >=150 cells/uL (lowered from 250 in EPOS 2020) or total IgE >=100; need for systemic steroids (>2 courses/year or long-term >3 months) or contraindication; SNOT-22 >=40; anosmia; comorbid asthma needing regular ICS. Non-responders should stop."
+   },
+   {
+    "org": "EPOS (European Rhinologic Society)",
+    "title": "European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (Rhinology 2020;58 Suppl S29:1-464)",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+    "type": "guideline",
+    "supports": "EPOS 2020 biologic criteria for bilateral CRSwNP after surgery: >=3 of 5 (type 2 evidence: tissue eos >=10/hpf or blood eos >=250 or total IgE >=100; systemic steroid need; SNOT-22 >=40; anosmia; comorbid asthma)."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-009",
+  "cluster": "CRS",
+  "topics": [
+   66
+  ],
+  "rule_type": "monitoring",
+  "population": "adult",
+  "condition_ka": "ქრონიკული რინოსინუსიტი პოლიპებით, ბიოლოგიური თერაპიის ფონზე",
+  "recommendation_ka": "რეგულარულად შეაფასეთ პასუხი: პოლიპების ზომა, სისტემური სტეროიდის საჭიროება, ცხოვრების ხარისხი (SNOT-22), ყნოსვა და ასთმის ეფექტი. პასუხის არარსებობისას შეწყვიტეთ ან შეცვალეთ ბიოლოგიური პრეპარატი, ან განიხილეთ ქირურგია; კარგი პასუხისას გააგრძელეთ ტოპიკური სტეროიდიც.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 22,
+    "unit": "label",
+    "meaning_ka": "SNOT-22 კითხვარი"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "EPOS/EUFOREA",
+    "title": "EPOS/EUFOREA update on indication and evaluation of biologics in CRSwNP 2023 (Rhinology 2023;61:194-202)",
+    "year": 2023,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36999780/",
+    "type": "guideline",
+    "supports": "Provides criteria to evaluate response to biologics (nasal polyp size, need for systemic steroids, quality of life, smell, comorbidities) and to continue, switch or stop; non-responders should discontinue."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-010",
+  "cluster": "CRS",
+  "topics": [
+   88
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "ორმხრივი ან ცალმხრივი პოლიპოზური რინოსინუსიტი სქელი ეოზინოფილური ლორწოთი, ატოპიური ახალგაზრდა პაციენტი",
+  "recommendation_ka": "ალერგიული სოკოვანი რინოსინუსიტის (AFRS) დიაგნოზისთვის გამოიყენეთ Bent-Kuhn-ის 5 ძირითადი კრიტერიუმი (საჭიროა ყველა): სოკოს მიმართ I ტიპის ჰიპერმგრძნობელობა, ნაზალური პოლიპოზი, დამახასიათებელი კომპიუტერულ-ტომოგრაფიული სურათი, ეოზინოფილური მუცინი ქსოვილოვანი ინვაზიის გარეშე, სოკოს დადებითი შეღებვა. მეორადი (დამხმარე) ნიშნებია ასთმა, ცალმხრივი დაავადება, ძვლის ეროზია, სოკოს კულტურა. გაითვალისწინეთ, რომ სოკოს მიმართ IgE არასპეციფიკურია და სოკო ყოველთვის არ ვლინდება.",
+  "doses": [],
+  "numeric_values": [
+   {
+    "value": 5,
+    "unit": "count",
+    "meaning_ka": "ძირითადი კრიტერიუმების რაოდენობა"
+   }
+  ],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Ochsner Journal (PMC)",
+    "title": "Allergic fungal rhinosinusitis: a review",
+    "year": 2011,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179194/",
+    "type": "review",
+    "supports": "All 5 major Bent and Kuhn criteria (type I hypersensitivity to fungi, nasal polyposis, characteristic CT findings, eosinophilic mucin without fungal invasion, positive fungal stain) are needed; minor criteria (asthma, unilateral disease, bone erosion, fungal culture) are supportive only. (Bent-Kuhn criteria remain the current diagnostic standard.)"
+   },
+   {
+    "org": "PMC review",
+    "title": "New developments in allergic fungal rhinosinusitis pathophysiology and treatment",
+    "year": 2025,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11898383/",
+    "type": "review",
+    "supports": "Elevated fungal-specific IgE is not specific to AFRS and fungi are not identified in a proportion of patients meeting criteria, prompting calls to revise the diagnostic criteria."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-011",
+  "cluster": "CRS",
+  "topics": [
+   88,
+   105
+  ],
+  "rule_type": "evaluation",
+  "population": "all",
+  "condition_ka": "ალერგიული სოკოვანი რინოსინუსიტის ეჭვი",
+  "recommendation_ka": "ჩაატარეთ სინუსების კომპიუტერული ტომოგრაფია: დამახასიათებელია ჰეტეროგენული ჰიპერდენსიური შიგთავსი, სინუსის გაფართოება და კედლების ეროზია, რაც შეიძლება ორბიტასა და ქალას ფუძეს მოიცავდეს და სიმსივნის მსგავსი იყოს. ძვლის ეროზიისას ან ორბიტული/ნევროლოგიური სიმპტომებისას განიხილეთ მაგნიტურ-რეზონანსული ტომოგრაფია და ინვაზიური სოკოვანი პროცესის ან ნეოპლაზიის ჰისტოლოგიური გამორიცხვა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "ორბიტის ჩართულობა/პროპტოზი",
+   "ქალას ფუძის ეროზია"
+  ],
+  "sources": [
+   {
+    "org": "PubMed",
+    "title": "Paranasal sinus wall erosion and expansion in allergic fungal rhinosinusitis: an image scoring system",
+    "year": 2020,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31938671/",
+    "type": "study",
+    "supports": "AFRS characteristically causes expansion and erosion of paranasal sinus walls on CT, which can involve the orbit and skull base."
+   },
+   {
+    "org": "Ochsner Journal (PMC)",
+    "title": "Allergic fungal rhinosinusitis: a review",
+    "year": 2011,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179194/",
+    "type": "review",
+    "supports": "Characteristic CT findings (heterogeneous opacification, sinus expansion and bony erosion) are a major diagnostic criterion. (Bent-Kuhn criteria remain the current diagnostic standard.)"
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-012",
+  "cluster": "CRS",
+  "topics": [
+   88
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "დადასტურებული ალერგიული სოკოვანი რინოსინუსიტი",
+  "recommendation_ka": "მკურნალობის საფუძველია ენდოსკოპიური სინუსური ქირურგია ალერგიული მუცინისა და პოლიპების სრული მოცილებით და სინუსების ფართო დრენაჟით, რასაც მოსდევს ხანგრძლივი ტოპიკური კორტიკოსტეროიდი (ირიგაცია/სპრეი) და, საჭიროებისას, სისტემური სტეროიდის მოკლე კურსი; შერჩეულ შემთხვევაში — ალერგენ-სპეციფიკური იმუნოთერაპია. პერორალური აზოლები („იტრაკონაზოლი“) აჩვენებს არაერთგვაროვან შედეგებს და რუტინულად არ გამოიყენება; ბიოლოგიური პრეპარატები („დუპილუმაბი“) კვლევის ეტაპზეა. რეციდივი ხშირია — საჭიროა ხანგრძლივი ენდოსკოპიური მეთვალყურეობა.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "Ochsner Journal (PMC)",
+    "title": "Allergic fungal rhinosinusitis: a review",
+    "year": 2011,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179194/",
+    "type": "review",
+    "supports": "Management is multimodal: surgery is central, combined with corticosteroids and immunotherapy. (Bent-Kuhn criteria remain the current diagnostic standard.)"
+   },
+   {
+    "org": "PMC review",
+    "title": "Emerging therapies in the medical management of allergic fungal rhinosinusitis",
+    "year": 2024,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10909043/",
+    "type": "review",
+    "supports": "Oral antifungals (itraconazole) have inconclusive evidence; biologics such as dupilumab are emerging therapies under investigation for AFRS."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-013",
+  "cluster": "CRS",
+  "topics": [
+   88,
+   105
+  ],
+  "rule_type": "monitoring",
+  "population": "all",
+  "condition_ka": "ალერგიული სოკოვანი რინოსინუსიტი ოპერაციის შემდეგ",
+  "recommendation_ka": "დაგეგმეთ რეგულარული ენდოსკოპიური კონტროლი და ტოპიკური სტეროიდის გაგრძელება, რადგან დაავადების რეციდივი ხშირია; რეციდივის ადრეული ნიშნების (ეოზინოფილური მუცინის დაგროვება, ლორწოვანის შეშუპება) დროს გააძლიერეთ ტოპიკური/სისტემური თერაპია ან განიხილეთ განმეორებითი ქირურგია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC review",
+    "title": "New developments in allergic fungal rhinosinusitis pathophysiology and treatment",
+    "year": 2025,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11898383/",
+    "type": "review",
+    "supports": "AFRS is characterised by frequent recurrence after surgery, requiring long-term postoperative medical management and surveillance."
+   },
+   {
+    "org": "PMC review",
+    "title": "Emerging therapies in the medical management of allergic fungal rhinosinusitis",
+    "year": 2024,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10909043/",
+    "type": "review",
+    "supports": "Postoperative medical management (corticosteroids, emerging therapies) aims to reduce recurrence."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-014",
+  "cluster": "CRS",
+  "topics": [
+   105
+  ],
+  "rule_type": "diagnosis",
+  "population": "all",
+  "condition_ka": "სოკოვანი რინოსინუსიტის ეჭვი",
+  "recommendation_ka": "სოკოვანი რინოსინუსიტი დაყავით ინვაზიურ (მწვავე ფულმინანტური, ქრონიკული ინვაზიური, გრანულომატოზური) და არაინვაზიურ (სოკოვანი ბურთი, ალერგიული სოკოვანი რინოსინუსიტი) ფორმებად. ფორმის განსაზღვრა ჰისტოლოგიით (ლორწოვანის/ძვლის ინვაზია) და იმუნური სტატუსით სასიცოცხლოდ მნიშვნელოვანია, რადგან მართვა რადიკალურად განსხვავდება.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (case series and literature review)",
+    "title": "Endoscopic endonasal surgery for sinus fungus balls: 40 cases and review of the literature",
+    "year": 2019,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6368987/",
+    "type": "review",
+    "supports": "Histopathology confirms the diagnosis of fungus ball and excludes the invasive form of fungal rhinosinusitis; fungus ball is non-invasive accumulation of dense fungal concretions."
+   },
+   {
+    "org": "ECMM / MSG-ERC",
+    "title": "Global guideline for the diagnosis and management of mucormycosis (Lancet Infect Dis 2019;19:e405-e421)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31699664/",
+    "type": "guideline",
+    "supports": "Rhino-orbital-cerebral mucormycosis is an acute invasive fungal infection requiring urgent diagnosis and treatment."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-015",
+  "cluster": "CRS",
+  "topics": [
+   105
+  ],
+  "rule_type": "treatment",
+  "population": "all",
+  "condition_ka": "სოკოვანი ბურთი (ფუნგალური ბურთი) პარანაზალურ სინუსში, ხშირად ცალმხრივ ყბის სინუსში, იმუნოკომპეტენტურ პაციენტში",
+  "recommendation_ka": "მკურნალობა ენდოსკოპიური ენდონაზალური ქირურგიაა: სოკოვანი მასის სრული მოცილება, სინუსის ამორეცხვა და ვენტილაციის აღდგენა. სისტემური ან ადგილობრივი ანტიფუნგალური თერაპია ნაჩვენები არ არის. მასალა გაგზავნეთ ჰისტოლოგიაზე ინვაზიის გამოსარიცხად; რეციდივი იშვიათია.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "PMC (case series and literature review)",
+    "title": "Endoscopic endonasal surgery for sinus fungus balls: 40 cases and review of the literature",
+    "year": 2019,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6368987/",
+    "type": "review",
+    "supports": "Endoscopic endonasal surgery is the treatment of choice; no postoperative antifungal therapy was given and recurrence was rare; histology excludes invasive disease."
+   },
+   {
+    "org": "PubMed",
+    "title": "The endonasal endoscopic approach to different sinonasal fungal balls",
+    "year": 2022,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35360416",
+    "type": "study",
+    "supports": "Endoscopic endonasal surgery with complete removal of fungal material and sinus ventilation is the treatment of sinonasal fungal balls."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-016",
+  "cluster": "CRS",
+  "topics": [
+   105
+  ],
+  "rule_type": "red_flag",
+  "population": "immunocompromised",
+  "condition_ka": "იმუნოკომპრომისული პაციენტი (დიაბეტური კეტოაციდოზი, ნეიტროპენია, ტრანსპლანტაცია, მაღალდოზიანი სტეროიდი) სახის ტკივილით, შეშუპებით, ცხვირის ან სასის შავი ნეკროზული ქერქით, ორბიტული ან ნევროლოგიური სიმპტომებით",
+  "recommendation_ka": "ეჭვი მიიტანეთ მწვავე ინვაზიურ სოკოვან რინოსინუსიტზე (მუკორმიკოზი ან ასპერგილოზი) — ეს გადაუდებელი მდგომარეობაა. დაუყოვნებლივ ჩაატარეთ გამოსახვა (კომპიუტერული/მაგნიტურ-რეზონანსული ტომოგრაფია) გავრცელების დასადგენად, ენდოსკოპია ბიოფსიით და გამოიძახეთ ოტორინოლარინგოლოგი, ინფექციონისტი და ოფთალმოლოგი. მკურნალობა არ გადადოთ კულტურის პასუხამდე.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [
+   "შავი ნეკროზული ქერქი ცხვირში ან სასაზე",
+   "ოფთალმოპლეგია, პროპტოზი, მხედველობის დაკარგვა",
+   "სახის ანესთეზია",
+   "ცნობიერების დაქვეითება"
+  ],
+  "sources": [
+   {
+    "org": "ECMM / MSG-ERC",
+    "title": "Global guideline for the diagnosis and management of mucormycosis (Lancet Infect Dis 2019;19:e405-e421)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31699664/",
+    "type": "guideline",
+    "supports": "Upon suspicion of mucormycosis, imaging is strongly recommended to document the extent of disease, followed by strongly recommended surgical intervention and immediate systemic antifungal therapy."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-017",
+  "cluster": "CRS",
+  "topics": [
+   105
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "მწვავე ინვაზიური სოკოვანი რინოსინუსიტი — მუკორმიკოზის ეჭვი ან დადასტურება",
+  "recommendation_ka": "დაუყოვნებლივ: სასწრაფო და, შესაძლებლობის შემთხვევაში, სრული ქირურგიული დებრიდმენტი და პირველი რიგის მაღალდოზიანი ლიპოსომური „ამფოტერიცინი B“ ინტრავენურად; ალტერნატივაა ინტრავენური „იზავუკონაზოლი“ ან „პოზაკონაზოლი“ (ინტრავენური ან შენელებული გამოთავისუფლების ტაბლეტი). ამფოტერიცინ B-ს დეზოქსიქოლატი ტოქსიკურობის გამო არ არის რეკომენდებული, თუ სხვა ვარიანტი ხელმისაწვდომია. პარალელურად მოახდინეთ ფონური მდგომარეობის კორექცია (კეტოაციდოზი, ნეიტროპენია, იმუნოსუპრესიის შემცირება). დოზირება შეათანხმეთ ინფექციონისტთან.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ECMM / MSG-ERC",
+    "title": "Global guideline for the diagnosis and management of mucormycosis (Lancet Infect Dis 2019;19:e405-e421)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31699664/",
+    "type": "guideline",
+    "supports": "First-line treatment with high-dose liposomal amphotericin B is strongly recommended; IV isavuconazole and IV or delayed-release tablet posaconazole are recommended with moderate strength; amphotericin B deoxycholate is recommended against because of toxicity; surgical intervention strongly recommended."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ },
+ {
+  "rule_id": "PUB-CRS-018",
+  "cluster": "CRS",
+  "topics": [
+   105
+  ],
+  "rule_type": "treatment",
+  "population": "immunocompromised",
+  "condition_ka": "მუკორმიკოზი, პროგრესირება ან აუტანლობა პირველი რიგის თერაპიაზე",
+  "recommendation_ka": "სამაშველო თერაპიად გამოიყენეთ „იზავუკონაზოლი“ ან „პოზაკონაზოლი“; შეაფასეთ დამატებითი ქირურგიული დებრიდმენტის საჭიროება განმეორებითი გამოსახვით.",
+  "doses": [],
+  "numeric_values": [],
+  "red_flags_ka": [],
+  "sources": [
+   {
+    "org": "ECMM / MSG-ERC",
+    "title": "Global guideline for the diagnosis and management of mucormycosis (Lancet Infect Dis 2019;19:e405-e421)",
+    "year": 2019,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31699664/",
+    "type": "guideline",
+    "supports": "Isavuconazole and posaconazole are strongly recommended as salvage treatment; imaging and surgical intervention are strongly recommended components of management."
+   }
+  ],
+  "evidence_checked": "2026-10-27",
+  "status": "CLINICAL_REVIEW_REQUIRED"
+ }
+]
