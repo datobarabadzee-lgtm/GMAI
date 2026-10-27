@@ -17,7 +17,7 @@ import { AGENTS } from '@/agents/registry';
 import type { AgentContext } from '@/agents/context';
 import { recordTrace } from '@/services/agent-stats';
 import { retrieveText } from './retrieval';
-import { routeModel } from './model-router';
+import { routeModel, type RouteDecision } from './model-router';
 import { verifyClaims } from './citation-verifier';
 import { runSafetyGate, sanitize } from './safety-gate';
 import { EMPTY_USAGE, engineStatus, getProviderFor, type TokenUsage } from './ai-provider';
@@ -624,7 +624,7 @@ type Synthesis = {
   failure?: AiFailure;
 };
 
-async function synthesizeBottomLine(context: string, callerKey?: string | null, mode: ClinicalMode = 'quick', clinicalReference = false): Promise<Synthesis> {
+async function synthesizeBottomLine(context: string, callerKey?: string | null, mode: ClinicalMode = 'quick', clinicalReference = false, tier: RouteDecision['tier'] = 'reasoning'): Promise<Synthesis> {
   const { provider } = getProviderFor(callerKey);
   // Clinical reference sections arrive whole (up to ~24K characters), so the
   // input limit is raised for them. Anything over the limit is not cut
@@ -660,7 +660,9 @@ async function synthesizeBottomLine(context: string, callerKey?: string | null, 
     // showing unreadable text would be worse than showing the plain summary.
     for (let attempt = 0; attempt < 2; attempt++) {
       const r = await provider.completeDetailed({
-        tier: 'reasoning',
+        // The router's tier: plain questions on the fast model, high-risk and deep
+        // modes on the reasoning model (AI_MODEL_FAST / AI_MODEL_REASONING).
+        tier,
         // A drifted first attempt is retried on the fallback model when one is
         // configured (measured: gpt-6-luna drifted in 16/30 runs, the tested
         // fallbacks in 0/30). Without AI_MODEL_FALLBACK the retry stays on the
@@ -1049,13 +1051,13 @@ export async function orchestrate(input: OrchestrateInput): Promise<OrchestrateO
       : 'შიდა წესები: ვერ მოიძებნა — ნუ გამოიგონებ წესს ან წყაროს.',
   ].join('\n');
 
-  let synthesized = await synthesizeBottomLine(synthesisContext, input.callerKey, mode, v2Hits.length > 0);
+  let synthesized = await synthesizeBottomLine(synthesisContext, input.callerKey, mode, v2Hits.length > 0, routing.tier);
   // A question about one part of a confirmed product's instruction must be
   // answered from that part's text; a denial of text that exists is retried
   // once, then replaced by a deterministic statement from the source.
   let focusReplaced = false;
   if (focus && synthesized.text && focusMissed(synthesized.text, focus)) {
-    const again = await synthesizeBottomLine(`${synthesisContext}\n${FOCUS_CORRECTION}`, input.callerKey, mode, v2Hits.length > 0);
+    const again = await synthesizeBottomLine(`${synthesisContext}\n${FOCUS_CORRECTION}`, input.callerKey, mode, v2Hits.length > 0, routing.tier);
     const spent = { costUsd: synthesized.costUsd + again.costUsd, models: [...synthesized.models, ...again.models] };
     if (again.text && !focusMissed(again.text, focus)) synthesized = { ...again, ...spent };
     else {
