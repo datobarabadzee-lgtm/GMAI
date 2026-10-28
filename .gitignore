@@ -32,3 +32,4 @@ release-manifest.json
 
 # Local build CA (ops/build-ca/README.md)
 /ops/build-ca/*.pem
+/promo-out
